@@ -1,0 +1,64 @@
+<Type Name="IFont" FullName="Iot.Device.Max7219.IFont">
+  <TypeSignature Language="C#" Value="public interface IFont" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IFont" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Max7219.IFont" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IFont" />
+  <TypeSignature Language="F#" Value="type IFont = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+             A font contains one list of bytes per character which can be written to the matrix to represent the character.
+             </summary>
+    <remarks>
+             Each character consists of a list of bytes where a single byte represents a column of the display.
+             </remarks>
+    <example>
+             This example shows how the 'A' char could by encoded:
+             <code>
+             var aBytes = new byte[] {
+                 0b1111100,
+                 0b1111110,
+                 0b0010011,
+                 0b0010011,
+                 0b1111110,
+                 0b1111100,
+                 0b0000000,
+                 0b0000000
+             };
+             </code></example>
+  </Docs>
+  <Members>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;byte&gt; this[char chr] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;unsigned int8&gt; Item(char)" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Max7219.IFont.Item(System.Char)" />
+      <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(chr As Char) As IReadOnlyList(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.Item(char) : System.Collections.Generic.IReadOnlyList&lt;byte&gt;" Usage="Iot.Device.Max7219.IFont.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chr" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="chr">To be added.</param>
+        <summary>
+            Returns a list of bytes for a given character to be written to a matrix.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

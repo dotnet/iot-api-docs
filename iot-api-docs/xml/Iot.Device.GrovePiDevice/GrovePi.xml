@@ -1,0 +1,371 @@
+<Type Name="GrovePi" FullName="Iot.Device.GrovePiDevice.GrovePi">
+  <TypeSignature Language="C#" Value="public class GrovePi : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GrovePi extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.GrovePiDevice.GrovePi" />
+  <TypeSignature Language="VB.NET" Value="Public Class GrovePi&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type GrovePi = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Create a GrovePi class
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GrovePi (System.Device.I2c.I2cDevice i2cDevice, bool autoDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, bool autoDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GrovePiDevice.GrovePi.#ctor(System.Device.I2c.I2cDevice,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional autoDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.GrovePiDevice.GrovePi : System.Device.I2c.I2cDevice * bool -&gt; Iot.Device.GrovePiDevice.GrovePi" Usage="new Iot.Device.GrovePiDevice.GrovePi (i2cDevice, autoDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="autoDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device. Device address is 0x04</param>
+        <param name="autoDispose">True to dispose the I2C device when disposing GrovePi</param>
+        <summary>
+            GrovePi constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalogRead">
+      <MemberSignature Language="C#" Value="public int AnalogRead (Iot.Device.GrovePiDevice.Models.GrovePort pin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 AnalogRead(valuetype Iot.Device.GrovePiDevice.Models.GrovePort pin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GrovePiDevice.GrovePi.AnalogRead(Iot.Device.GrovePiDevice.Models.GrovePort)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AnalogRead (pin As GrovePort) As Integer" />
+      <MemberSignature Language="F#" Value="member this.AnalogRead : Iot.Device.GrovePiDevice.Models.GrovePort -&gt; int" Usage="grovePi.AnalogRead pin" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pin" Type="Iot.Device.GrovePiDevice.Models.GrovePort" />
+      </Parameters>
+      <Docs>
+        <param name="pin">The GroovePi pin to read</param>
+        <summary>
+            Read an analog value on a pin, equivalent of analogRead on Arduino
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalogWrite">
+      <MemberSignature Language="C#" Value="public void AnalogWrite (Iot.Device.GrovePiDevice.Models.GrovePort pin, byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AnalogWrite(valuetype Iot.Device.GrovePiDevice.Models.GrovePort pin, unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GrovePiDevice.GrovePi.AnalogWrite(Iot.Device.GrovePiDevice.Models.GrovePort,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AnalogWrite (pin As GrovePort, value As Byte)" />
+      <MemberSignature Language="F#" Value="member this.AnalogWrite : Iot.Device.GrovePiDevice.Models.GrovePort * byte -&gt; unit" Usage="grovePi.AnalogWrite (pin, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pin" Type="Iot.Device.GrovePiDevice.Models.GrovePort" />
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="pin">The GroovePi pin to write</param>
+        <param name="value">The value to write between 0 and 255</param>
+        <summary>
+            Write an analog pin (PWM pin), equivalent of analogWrite on Arduino
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte DefaultI2cAddress = 4;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 DefaultI2cAddress = (4)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.GrovePiDevice.GrovePi.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Byte  = 4" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : byte" Usage="Iot.Device.GrovePiDevice.GrovePi.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            The default GrovePi I2C address is 0x04
+            Other addresses can be use, see GrovePi documentation
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DigitalRead">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.PinValue DigitalRead (Iot.Device.GrovePiDevice.Models.GrovePort pin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Device.Gpio.PinValue DigitalRead(valuetype Iot.Device.GrovePiDevice.Models.GrovePort pin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GrovePiDevice.GrovePi.DigitalRead(Iot.Device.GrovePiDevice.Models.GrovePort)" />
+      <MemberSignature Language="VB.NET" Value="Public Function DigitalRead (pin As GrovePort) As PinValue" />
+      <MemberSignature Language="F#" Value="member this.DigitalRead : Iot.Device.GrovePiDevice.Models.GrovePort -&gt; System.Device.Gpio.PinValue" Usage="grovePi.DigitalRead pin" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pin" Type="Iot.Device.GrovePiDevice.Models.GrovePort" />
+      </Parameters>
+      <Docs>
+        <param name="pin">The GroovePi pin to read</param>
+        <summary>
+            Read a digital pin, equivalent of digitalRead on Arduino
+            </summary>
+        <returns>Returns the level either High or Low</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DigitalWrite">
+      <MemberSignature Language="C#" Value="public void DigitalWrite (Iot.Device.GrovePiDevice.Models.GrovePort pin, System.Device.Gpio.PinValue pinLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DigitalWrite(valuetype Iot.Device.GrovePiDevice.Models.GrovePort pin, valuetype System.Device.Gpio.PinValue pinLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GrovePiDevice.GrovePi.DigitalWrite(Iot.Device.GrovePiDevice.Models.GrovePort,System.Device.Gpio.PinValue)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DigitalWrite (pin As GrovePort, pinLevel As PinValue)" />
+      <MemberSignature Language="F#" Value="member this.DigitalWrite : Iot.Device.GrovePiDevice.Models.GrovePort * System.Device.Gpio.PinValue -&gt; unit" Usage="grovePi.DigitalWrite (pin, pinLevel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pin" Type="Iot.Device.GrovePiDevice.Models.GrovePort" />
+        <Parameter Name="pinLevel" Type="System.Device.Gpio.PinValue" />
+      </Parameters>
+      <Docs>
+        <param name="pin">The GroovePi pin to read</param>
+        <param name="pinLevel">High to put the pin high, Low to put the pin low</param>
+        <summary>
+            Write a digital pin, equivalent of digitalWrite on Arduino
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GrovePiDevice.GrovePi.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="grovePi.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetFirmwareVerion">
+      <MemberSignature Language="C#" Value="public Version GetFirmwareVerion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Version GetFirmwareVerion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GrovePiDevice.GrovePi.GetFirmwareVerion" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetFirmwareVerion () As Version" />
+      <MemberSignature Language="F#" Value="member this.GetFirmwareVerion : unit -&gt; Version" Usage="grovePi.GetFirmwareVerion " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the firmware version
+            </summary>
+        <returns>GroovePi firmware version</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GrovePiInfo">
+      <MemberSignature Language="C#" Value="public Iot.Device.GrovePiDevice.Models.Info GrovePiInfo { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.GrovePiDevice.Models.Info GrovePiInfo" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GrovePiDevice.GrovePi.GrovePiInfo" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GrovePiInfo As Info" />
+      <MemberSignature Language="F#" Value="member this.GrovePiInfo : Iot.Device.GrovePiDevice.Models.Info" Usage="Iot.Device.GrovePiDevice.GrovePi.GrovePiInfo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.GrovePiDevice.Models.Info</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Contains the GrovePi key information
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxAdc">
+      <MemberSignature Language="C#" Value="public int MaxAdc { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxAdc" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GrovePiDevice.GrovePi.MaxAdc" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MaxAdc As Integer" />
+      <MemberSignature Language="F#" Value="member this.MaxAdc : int" Usage="Iot.Device.GrovePiDevice.GrovePi.MaxAdc" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The maximum ADC, 10 bit so 1023 on GrovePi
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PinMode">
+      <MemberSignature Language="C#" Value="public void PinMode (Iot.Device.GrovePiDevice.Models.GrovePort pin, System.Device.Gpio.PinMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PinMode(valuetype Iot.Device.GrovePiDevice.Models.GrovePort pin, valuetype System.Device.Gpio.PinMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GrovePiDevice.GrovePi.PinMode(Iot.Device.GrovePiDevice.Models.GrovePort,System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub PinMode (pin As GrovePort, mode As PinMode)" />
+      <MemberSignature Language="F#" Value="member this.PinMode : Iot.Device.GrovePiDevice.Models.GrovePort * System.Device.Gpio.PinMode -&gt; unit" Usage="grovePi.PinMode (pin, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pin" Type="Iot.Device.GrovePiDevice.Models.GrovePort" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pin">The GroovePi pin to setup</param>
+        <param name="mode">THe mode to setup Intput or Output</param>
+        <summary>
+            Setup the pin mode, equivalent of pinMod on Arduino
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadCommand">
+      <MemberSignature Language="C#" Value="public byte[] ReadCommand (Iot.Device.GrovePiDevice.Models.GrovePiCommand command, Iot.Device.GrovePiDevice.Models.GrovePort pin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] ReadCommand(valuetype Iot.Device.GrovePiDevice.Models.GrovePiCommand command, valuetype Iot.Device.GrovePiDevice.Models.GrovePort pin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GrovePiDevice.GrovePi.ReadCommand(Iot.Device.GrovePiDevice.Models.GrovePiCommand,Iot.Device.GrovePiDevice.Models.GrovePort)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadCommand (command As GrovePiCommand, pin As GrovePort) As Byte()" />
+      <MemberSignature Language="F#" Value="member this.ReadCommand : Iot.Device.GrovePiDevice.Models.GrovePiCommand * Iot.Device.GrovePiDevice.Models.GrovePort -&gt; byte[]" Usage="grovePi.ReadCommand (command, pin)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="Iot.Device.GrovePiDevice.Models.GrovePiCommand" />
+        <Parameter Name="pin" Type="Iot.Device.GrovePiDevice.Models.GrovePort" />
+      </Parameters>
+      <Docs>
+        <param name="command">The GrovePi command</param>
+        <param name="pin">The pin to read</param>
+        <summary>
+            Read data from GrovePi
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteCommand">
+      <MemberSignature Language="C#" Value="public void WriteCommand (Iot.Device.GrovePiDevice.Models.GrovePiCommand command, Iot.Device.GrovePiDevice.Models.GrovePort pin, byte param1, byte param2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteCommand(valuetype Iot.Device.GrovePiDevice.Models.GrovePiCommand command, valuetype Iot.Device.GrovePiDevice.Models.GrovePort pin, unsigned int8 param1, unsigned int8 param2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GrovePiDevice.GrovePi.WriteCommand(Iot.Device.GrovePiDevice.Models.GrovePiCommand,Iot.Device.GrovePiDevice.Models.GrovePort,System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteCommand (command As GrovePiCommand, pin As GrovePort, param1 As Byte, param2 As Byte)" />
+      <MemberSignature Language="F#" Value="member this.WriteCommand : Iot.Device.GrovePiDevice.Models.GrovePiCommand * Iot.Device.GrovePiDevice.Models.GrovePort * byte * byte -&gt; unit" Usage="grovePi.WriteCommand (command, pin, param1, param2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="Iot.Device.GrovePiDevice.Models.GrovePiCommand" />
+        <Parameter Name="pin" Type="Iot.Device.GrovePiDevice.Models.GrovePort" />
+        <Parameter Name="param1" Type="System.Byte" />
+        <Parameter Name="param2" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="command">The GrovePi command</param>
+        <param name="pin">The pin to write the command</param>
+        <param name="param1">First parameter</param>
+        <param name="param2">Second parameter</param>
+        <summary>
+            Write a GrovePi command
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,132 @@
+<Type Name="SetContrastControlForBank0" FullName="Iot.Device.Ssd13xx.Commands.SetContrastControlForBank0">
+  <TypeSignature Language="C#" Value="public class SetContrastControlForBank0 : Iot.Device.Ssd13xx.Commands.ISharedCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SetContrastControlForBank0 extends System.Object implements class Iot.Device.Ssd13xx.Commands.ICommand, class Iot.Device.Ssd13xx.Commands.ISharedCommand" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ssd13xx.Commands.SetContrastControlForBank0" />
+  <TypeSignature Language="VB.NET" Value="Public Class SetContrastControlForBank0&#xA;Implements ISharedCommand" />
+  <TypeSignature Language="F#" Value="type SetContrastControlForBank0 = class&#xA;    interface ISharedCommand&#xA;    interface ICommand" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Ssd13xx.Commands.ICommand</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Iot.Device.Ssd13xx.Commands.ISharedCommand</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents SetContrastControlForBank0 command
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SetContrastControlForBank0 (byte contrastSetting = 127);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 contrastSetting) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Commands.SetContrastControlForBank0.#ctor(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional contrastSetting As Byte = 127)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ssd13xx.Commands.SetContrastControlForBank0 : byte -&gt; Iot.Device.Ssd13xx.Commands.SetContrastControlForBank0" Usage="new Iot.Device.Ssd13xx.Commands.SetContrastControlForBank0 contrastSetting" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="contrastSetting" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="contrastSetting">Contrast setting with a range of 0-255.</param>
+        <summary>
+            This command sets the Contrast Setting of the display.
+            The chip has 256 contrast steps from 0 to 255.
+            The segment output current increases as the contrast step value increases.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContrastSetting">
+      <MemberSignature Language="C#" Value="public byte ContrastSetting { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 ContrastSetting" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ssd13xx.Commands.SetContrastControlForBank0.ContrastSetting" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContrastSetting As Byte" />
+      <MemberSignature Language="F#" Value="member this.ContrastSetting : byte" Usage="Iot.Device.Ssd13xx.Commands.SetContrastControlForBank0.ContrastSetting" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Contrast setting with a range of 0-255.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public byte[] GetBytes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GetBytes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Commands.SetContrastControlForBank0.GetBytes" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetBytes () As Byte()" />
+      <MemberSignature Language="F#" Value="abstract member GetBytes : unit -&gt; byte[]&#xA;override this.GetBytes : unit -&gt; byte[]" Usage="setContrastControlForBank0.GetBytes " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Ssd13xx.Commands.ICommand.GetBytes</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the bytes that represent the command.
+            </summary>
+        <returns>The bytes that represent the command.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public byte Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ssd13xx.Commands.SetContrastControlForBank0.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As Byte" />
+      <MemberSignature Language="F#" Value="member this.Id : byte" Usage="Iot.Device.Ssd13xx.Commands.SetContrastControlForBank0.Id" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Ssd13xx.Commands.ICommand.Id</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The value that represents the command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

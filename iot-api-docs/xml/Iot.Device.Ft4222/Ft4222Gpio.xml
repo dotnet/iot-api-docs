@@ -1,0 +1,397 @@
+<Type Name="Ft4222Gpio" FullName="Iot.Device.Ft4222.Ft4222Gpio">
+  <TypeSignature Language="C#" Value="public class Ft4222Gpio : System.Device.Gpio.GpioDriver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Ft4222Gpio extends System.Device.Gpio.GpioDriver" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ft4222.Ft4222Gpio" />
+  <TypeSignature Language="VB.NET" Value="Public Class Ft4222Gpio&#xA;Inherits GpioDriver" />
+  <TypeSignature Language="F#" Value="type Ft4222Gpio = class&#xA;    inherit GpioDriver" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Device.Gpio.GpioDriver</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            GPIO driver for the FT4222
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ft4222Gpio (int deviceNumber = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 deviceNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Gpio.#ctor(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional deviceNumber As Integer = 0)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ft4222.Ft4222Gpio : int -&gt; Iot.Device.Ft4222.Ft4222Gpio" Usage="new Iot.Device.Ft4222.Ft4222Gpio deviceNumber" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="deviceNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="deviceNumber">Number of the device in the device list, default 0</param>
+        <summary>
+            Create a FT4222 GPIO driver
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCallbackForPinValueChangedEvent">
+      <MemberSignature Language="C#" Value="protected override void AddCallbackForPinValueChangedEvent (int pinNumber, System.Device.Gpio.PinEventTypes eventTypes, System.Device.Gpio.PinChangeEventHandler callback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddCallbackForPinValueChangedEvent(int32 pinNumber, valuetype System.Device.Gpio.PinEventTypes eventTypes, class System.Device.Gpio.PinChangeEventHandler callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Gpio.AddCallbackForPinValueChangedEvent(System.Int32,System.Device.Gpio.PinEventTypes,System.Device.Gpio.PinChangeEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub AddCallbackForPinValueChangedEvent (pinNumber As Integer, eventTypes As PinEventTypes, callback As PinChangeEventHandler)" />
+      <MemberSignature Language="F#" Value="override this.AddCallbackForPinValueChangedEvent : int * System.Device.Gpio.PinEventTypes * System.Device.Gpio.PinChangeEventHandler -&gt; unit" Usage="ft4222Gpio.AddCallbackForPinValueChangedEvent (pinNumber, eventTypes, callback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="eventTypes" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="callback" Type="System.Device.Gpio.PinChangeEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="eventTypes">To be added.</param>
+        <param name="callback">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ClosePin">
+      <MemberSignature Language="C#" Value="protected override void ClosePin (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClosePin(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Gpio.ClosePin(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ClosePin (pinNumber As Integer)" />
+      <MemberSignature Language="F#" Value="override this.ClosePin : int -&gt; unit" Usage="ft4222Gpio.ClosePin pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertPinNumberToLogicalNumberingScheme">
+      <MemberSignature Language="C#" Value="protected override int ConvertPinNumberToLogicalNumberingScheme (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ConvertPinNumberToLogicalNumberingScheme(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Gpio.ConvertPinNumberToLogicalNumberingScheme(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function ConvertPinNumberToLogicalNumberingScheme (pinNumber As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="override this.ConvertPinNumberToLogicalNumberingScheme : int -&gt; int" Usage="ft4222Gpio.ConvertPinNumberToLogicalNumberingScheme pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceInformation">
+      <MemberSignature Language="C#" Value="public Iot.Device.Ft4222.DeviceInformation DeviceInformation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Ft4222.DeviceInformation DeviceInformation" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ft4222.Ft4222Gpio.DeviceInformation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeviceInformation As DeviceInformation" />
+      <MemberSignature Language="F#" Value="member this.DeviceInformation : Iot.Device.Ft4222.DeviceInformation" Usage="Iot.Device.Ft4222.Ft4222Gpio.DeviceInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ft4222.DeviceInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Store the FTDI Device Information
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Gpio.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="ft4222Gpio.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetPinMode">
+      <MemberSignature Language="C#" Value="protected override System.Device.Gpio.PinMode GetPinMode (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Device.Gpio.PinMode GetPinMode(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Gpio.GetPinMode(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetPinMode (pinNumber As Integer) As PinMode" />
+      <MemberSignature Language="F#" Value="override this.GetPinMode : int -&gt; System.Device.Gpio.PinMode" Usage="ft4222Gpio.GetPinMode pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="IsPinModeSupported">
+      <MemberSignature Language="C#" Value="protected override bool IsPinModeSupported (int pinNumber, System.Device.Gpio.PinMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsPinModeSupported(int32 pinNumber, valuetype System.Device.Gpio.PinMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Gpio.IsPinModeSupported(System.Int32,System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function IsPinModeSupported (pinNumber As Integer, mode As PinMode) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsPinModeSupported : int * System.Device.Gpio.PinMode -&gt; bool" Usage="ft4222Gpio.IsPinModeSupported (pinNumber, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="mode">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="OpenPin">
+      <MemberSignature Language="C#" Value="protected override void OpenPin (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OpenPin(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Gpio.OpenPin(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OpenPin (pinNumber As Integer)" />
+      <MemberSignature Language="F#" Value="override this.OpenPin : int -&gt; unit" Usage="ft4222Gpio.OpenPin pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="PinCount">
+      <MemberSignature Language="C#" Value="protected override int PinCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PinCount" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ft4222.Ft4222Gpio.PinCount" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property PinCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.PinCount : int" Usage="Iot.Device.Ft4222.Ft4222Gpio.PinCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="protected override System.Device.Gpio.PinValue Read (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Device.Gpio.PinValue Read(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Gpio.Read(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function Read (pinNumber As Integer) As PinValue" />
+      <MemberSignature Language="F#" Value="override this.Read : int -&gt; System.Device.Gpio.PinValue" Usage="ft4222Gpio.Read pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCallbackForPinValueChangedEvent">
+      <MemberSignature Language="C#" Value="protected override void RemoveCallbackForPinValueChangedEvent (int pinNumber, System.Device.Gpio.PinChangeEventHandler callback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveCallbackForPinValueChangedEvent(int32 pinNumber, class System.Device.Gpio.PinChangeEventHandler callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Gpio.RemoveCallbackForPinValueChangedEvent(System.Int32,System.Device.Gpio.PinChangeEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub RemoveCallbackForPinValueChangedEvent (pinNumber As Integer, callback As PinChangeEventHandler)" />
+      <MemberSignature Language="F#" Value="override this.RemoveCallbackForPinValueChangedEvent : int * System.Device.Gpio.PinChangeEventHandler -&gt; unit" Usage="ft4222Gpio.RemoveCallbackForPinValueChangedEvent (pinNumber, callback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.Device.Gpio.PinChangeEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="callback">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="SetPinMode">
+      <MemberSignature Language="C#" Value="protected override void SetPinMode (int pinNumber, System.Device.Gpio.PinMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetPinMode(int32 pinNumber, valuetype System.Device.Gpio.PinMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Gpio.SetPinMode(System.Int32,System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub SetPinMode (pinNumber As Integer, mode As PinMode)" />
+      <MemberSignature Language="F#" Value="override this.SetPinMode : int * System.Device.Gpio.PinMode -&gt; unit" Usage="ft4222Gpio.SetPinMode (pinNumber, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="mode">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForEvent">
+      <MemberSignature Language="C#" Value="protected override System.Device.Gpio.WaitForEventResult WaitForEvent (int pinNumber, System.Device.Gpio.PinEventTypes eventTypes, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Device.Gpio.WaitForEventResult WaitForEvent(int32 pinNumber, valuetype System.Device.Gpio.PinEventTypes eventTypes, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Gpio.WaitForEvent(System.Int32,System.Device.Gpio.PinEventTypes,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function WaitForEvent (pinNumber As Integer, eventTypes As PinEventTypes, cancellationToken As CancellationToken) As WaitForEventResult" />
+      <MemberSignature Language="F#" Value="override this.WaitForEvent : int * System.Device.Gpio.PinEventTypes * System.Threading.CancellationToken -&gt; System.Device.Gpio.WaitForEventResult" Usage="ft4222Gpio.WaitForEvent (pinNumber, eventTypes, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.WaitForEventResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="eventTypes" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="eventTypes">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="protected override void Write (int pinNumber, System.Device.Gpio.PinValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Write(int32 pinNumber, valuetype System.Device.Gpio.PinValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Gpio.Write(System.Int32,System.Device.Gpio.PinValue)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Write (pinNumber As Integer, value As PinValue)" />
+      <MemberSignature Language="F#" Value="override this.Write : int * System.Device.Gpio.PinValue -&gt; unit" Usage="ft4222Gpio.Write (pinNumber, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Device.Gpio.PinValue" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

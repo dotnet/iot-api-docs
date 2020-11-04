@@ -1,0 +1,210 @@
+<Type Name="Bme280" FullName="Iot.Device.Bmxx80.Bme280">
+  <TypeSignature Language="C#" Value="public class Bme280 : Iot.Device.Bmxx80.Bmx280Base" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Bme280 extends Iot.Device.Bmxx80.Bmx280Base" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Bmxx80.Bme280" />
+  <TypeSignature Language="VB.NET" Value="Public Class Bme280&#xA;Inherits Bmx280Base" />
+  <TypeSignature Language="F#" Value="type Bme280 = class&#xA;    inherit Bmx280Base" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Bmxx80.Bmx280Base</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a BME280 temperature, barometric pressure and humidity sensor.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bme280 (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme280.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Bmxx80.Bme280 : System.Device.I2c.I2cDevice -&gt; Iot.Device.Bmxx80.Bme280" Usage="new Iot.Device.Bmxx80.Bme280 i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The <see cref="T:System.Device.I2c.I2cDevice" /> to create with.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Bmxx80.Bme280" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMeasurementDuration">
+      <MemberSignature Language="C#" Value="public override int GetMeasurementDuration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetMeasurementDuration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme280.GetMeasurementDuration" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetMeasurementDuration () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetMeasurementDuration : unit -&gt; int" Usage="bme280.GetMeasurementDuration " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the required time in ms to perform a measurement with the current sampling modes.
+            </summary>
+        <returns>The time it takes for the chip to read data in milliseconds rounded up.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HumiditySampling">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bmxx80.Sampling HumiditySampling { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Bmxx80.Sampling HumiditySampling" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bmxx80.Bme280.HumiditySampling" />
+      <MemberSignature Language="VB.NET" Value="Public Property HumiditySampling As Sampling" />
+      <MemberSignature Language="F#" Value="member this.HumiditySampling : Iot.Device.Bmxx80.Sampling with get, set" Usage="Iot.Device.Bmxx80.Bme280.HumiditySampling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bmxx80.Sampling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the humidity sampling.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <see cref="T:Iot.Device.Bmxx80.Sampling" /> is set to an undefined mode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadHumidityAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;double&gt; ReadHumidityAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;float64&gt; ReadHumidityAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme280.ReadHumidityAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadHumidityAsync () As Task(Of Double)" />
+      <MemberSignature Language="F#" Value="member this.ReadHumidityAsync : unit -&gt; System.Threading.Tasks.Task&lt;double&gt;" Usage="bme280.ReadHumidityAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadHumiditySampling">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bmxx80.Sampling ReadHumiditySampling ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.Bmxx80.Sampling ReadHumiditySampling() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme280.ReadHumiditySampling" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadHumiditySampling () As Sampling" />
+      <MemberSignature Language="F#" Value="member this.ReadHumiditySampling : unit -&gt; Iot.Device.Bmxx80.Sampling" Usage="bme280.ReadHumiditySampling " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bmxx80.Sampling</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDefaultConfiguration">
+      <MemberSignature Language="C#" Value="protected override void SetDefaultConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetDefaultConfiguration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme280.SetDefaultConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub SetDefaultConfiguration ()" />
+      <MemberSignature Language="F#" Value="override this.SetDefaultConfiguration : unit -&gt; unit" Usage="bme280.SetDefaultConfiguration " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Sets the default configuration for the sensor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetHumiditySampling">
+      <MemberSignature Language="C#" Value="public void SetHumiditySampling (Iot.Device.Bmxx80.Sampling sampling);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetHumiditySampling(valuetype Iot.Device.Bmxx80.Sampling sampling) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme280.SetHumiditySampling(Iot.Device.Bmxx80.Sampling)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetHumiditySampling (sampling As Sampling)" />
+      <MemberSignature Language="F#" Value="member this.SetHumiditySampling : Iot.Device.Bmxx80.Sampling -&gt; unit" Usage="bme280.SetHumiditySampling sampling" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sampling" Type="Iot.Device.Bmxx80.Sampling" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="sampling">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadHumidity">
+      <MemberSignature Language="C#" Value="public bool TryReadHumidity (out double humidity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadHumidity([out] float64&amp; humidity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme280.TryReadHumidity(System.Double@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadHumidity (ByRef humidity As Double) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadHumidity : double -&gt; bool" Usage="bme280.TryReadHumidity humidity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="humidity" Type="System.Double" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="humidity">
+            Contains the measured humidity as %rH if the <see cref="P:Iot.Device.Bmxx80.Bme280.HumiditySampling" /> was not set to <see cref="F:Iot.Device.Bmxx80.Sampling.Skipped" />.
+            Contains <see cref="F:System.Double.NaN" /> otherwise.
+            </param>
+        <summary>
+            Reads the humidity. A return value indicates whether the reading succeeded.
+            </summary>
+        <returns>
+          <code>true</code> if measurement was not skipped, otherwise <code>false</code>.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

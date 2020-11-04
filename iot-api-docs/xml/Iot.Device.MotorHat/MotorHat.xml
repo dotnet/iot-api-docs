@@ -1,0 +1,219 @@
+<Type Name="MotorHat" FullName="Iot.Device.MotorHat.MotorHat">
+  <TypeSignature Language="C#" Value="public class MotorHat : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MotorHat extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.MotorHat.MotorHat" />
+  <TypeSignature Language="VB.NET" Value="Public Class MotorHat&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type MotorHat = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Raspberry Pi Motor Hat based on PCA9685 PWM controller
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MotorHat (System.Device.I2c.I2cConnectionSettings settings, double frequency = 1600);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cConnectionSettings settings, float64 frequency) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.MotorHat.MotorHat.#ctor(System.Device.I2c.I2cConnectionSettings,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (settings As I2cConnectionSettings, Optional frequency As Double = 1600)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.MotorHat.MotorHat : System.Device.I2c.I2cConnectionSettings * double -&gt; Iot.Device.MotorHat.MotorHat" Usage="new Iot.Device.MotorHat.MotorHat (settings, frequency)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="System.Device.I2c.I2cConnectionSettings" />
+        <Parameter Name="frequency" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="settings">The I2C settings of the MotorHat.</param>
+        <param name="frequency">The frequency in Hz to set the PWM controller.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.MotorHat.MotorHat" /> class with the specified I2C settings and PWM frequency.
+            </summary>
+        <remarks>
+            The default i2c address is 0x60, but the HAT can be configured in hardware to any address from 0x60 to 0x7f.
+            The PWM hardware used by this HAT is a PCA9685. It has a total possible frequency range of 24 to 1526 Hz.
+            Setting the frequency above or below this range will cause PWM hardware to be set at its maximum or minimum setting.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MotorHat (double frequency = 1600, int selectedAddress = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 frequency, int32 selectedAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.MotorHat.MotorHat.#ctor(System.Double,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional frequency As Double = 1600, Optional selectedAddress As Integer = 0)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.MotorHat.MotorHat : double * int -&gt; Iot.Device.MotorHat.MotorHat" Usage="new Iot.Device.MotorHat.MotorHat (frequency, selectedAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="frequency" Type="System.Double" />
+        <Parameter Name="selectedAddress" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="frequency">The frequency in Hz to set the PWM controller.</param>
+        <param name="selectedAddress">The I2C settings of the MotorHat. 0 by default if jumpers were not changed
+            Use the following code to set an address equivalent to the one configured in your device jumpers
+            var selectedAddress = 0b000000;  // were bits represents jumpers A5 A4 A3 A2 A1 A0</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.MotorHat.MotorHat" /> class with the default I2C address and PWM frequency.
+            </summary>
+        <remarks>
+            The <see cref="T:Iot.Device.MotorHat.MotorHat" /> will be created with the default I2C address of 0x60 and PWM frequency of 1600 Hz.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDCMotor">
+      <MemberSignature Language="C#" Value="public Iot.Device.DCMotor.DCMotor CreateDCMotor (int motorNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.DCMotor.DCMotor CreateDCMotor(int32 motorNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.MotorHat.MotorHat.CreateDCMotor(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateDCMotor (motorNumber As Integer) As DCMotor" />
+      <MemberSignature Language="F#" Value="member this.CreateDCMotor : int -&gt; Iot.Device.DCMotor.DCMotor" Usage="motorHat.CreateDCMotor motorNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DCMotor.DCMotor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="motorNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="motorNumber">A motor number from 1 to 4.</param>
+        <summary>
+            Creates a <see cref="N:Iot.Device.DCMotor" /> object for the specified channel.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            The motorNumber parameter refers to the motor numbers M1, M2, M3 or M4 printed in the device.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePwmChannel">
+      <MemberSignature Language="C#" Value="public System.Device.Pwm.PwmChannel CreatePwmChannel (int channelNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Device.Pwm.PwmChannel CreatePwmChannel(int32 channelNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.MotorHat.MotorHat.CreatePwmChannel(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreatePwmChannel (channelNumber As Integer) As PwmChannel" />
+      <MemberSignature Language="F#" Value="member this.CreatePwmChannel : int -&gt; System.Device.Pwm.PwmChannel" Usage="motorHat.CreatePwmChannel channelNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Pwm.PwmChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channelNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="channelNumber">A valid PWM channel (0, 1, 14 or 15)</param>
+        <summary>
+            Creates a <see cref="T:System.Device.Pwm.PwmChannel" /> from one of the 4 available PWM channels in the MotorHat
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            The channelNumber refers to ont of the available PWM channel numbers available in the Motor Hat (0, 1, 14, 15) printed in the device.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateServoMotor">
+      <MemberSignature Language="C#" Value="public Iot.Device.ServoMotor.ServoMotor CreateServoMotor (int channelNumber, double maximumAngle = 180, double minimumPulseWidthMicroseconds = 1000, double maximumPulseWidthMicroseconds = 2000);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.ServoMotor.ServoMotor CreateServoMotor(int32 channelNumber, float64 maximumAngle, float64 minimumPulseWidthMicroseconds, float64 maximumPulseWidthMicroseconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.MotorHat.MotorHat.CreateServoMotor(System.Int32,System.Double,System.Double,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateServoMotor (channelNumber As Integer, Optional maximumAngle As Double = 180, Optional minimumPulseWidthMicroseconds As Double = 1000, Optional maximumPulseWidthMicroseconds As Double = 2000) As ServoMotor" />
+      <MemberSignature Language="F#" Value="member this.CreateServoMotor : int * double * double * double -&gt; Iot.Device.ServoMotor.ServoMotor" Usage="motorHat.CreateServoMotor (channelNumber, maximumAngle, minimumPulseWidthMicroseconds, maximumPulseWidthMicroseconds)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.ServoMotor.ServoMotor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channelNumber" Type="System.Int32" />
+        <Parameter Name="maximumAngle" Type="System.Double" />
+        <Parameter Name="minimumPulseWidthMicroseconds" Type="System.Double" />
+        <Parameter Name="maximumPulseWidthMicroseconds" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="channelNumber">A valid PWM channel (0, 1, 14 or 15)</param>
+        <param name="maximumAngle">The maximum angle the servo motor can move represented as a value between 0 and 360.</param>
+        <param name="minimumPulseWidthMicroseconds">The minimum pulse width, in microseconds, that represent an angle for 0 degrees.</param>
+        <param name="maximumPulseWidthMicroseconds">The maxnimum pulse width, in microseconds, that represent an angle for maximum angle.</param>
+        <summary>
+            Creates a <see cref="N:Iot.Device.ServoMotor" /> from one of the 4 available PWM channels  in the MotorHat
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            The channelNumber refers to ont of the available PWM channel numbers available in the Motor Hat (0, 1, 14, 15) printed in the device.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.MotorHat.MotorHat.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="motorHat.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="I2cAddressBase">
+      <MemberSignature Language="C#" Value="public const int I2cAddressBase = 96;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 I2cAddressBase = (96)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.MotorHat.MotorHat.I2cAddressBase" />
+      <MemberSignature Language="VB.NET" Value="Public Const I2cAddressBase As Integer  = 96" />
+      <MemberSignature Language="F#" Value="val mutable I2cAddressBase : int" Usage="Iot.Device.MotorHat.MotorHat.I2cAddressBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>96</MemberValue>
+      <Docs>
+        <summary>
+            Default I2C address of Motor Hat
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

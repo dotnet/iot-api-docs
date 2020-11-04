@@ -1,0 +1,420 @@
+<Type Name="HummingBoardDriver" FullName="System.Device.Gpio.Drivers.HummingBoardDriver">
+  <TypeSignature Language="C#" Value="public class HummingBoardDriver : System.Device.Gpio.GpioDriver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HummingBoardDriver extends System.Device.Gpio.GpioDriver" />
+  <TypeSignature Language="DocId" Value="T:System.Device.Gpio.Drivers.HummingBoardDriver" />
+  <TypeSignature Language="VB.NET" Value="Public Class HummingBoardDriver&#xA;Inherits GpioDriver" />
+  <TypeSignature Language="F#" Value="type HummingBoardDriver = class&#xA;    inherit GpioDriver" />
+  <AssemblyInfo>
+    <AssemblyName>System.Device.Gpio</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Device.Gpio.GpioDriver</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A GPIO driver for the HummingBoard.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HummingBoardDriver ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.HummingBoardDriver.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Constructs a new instance of a <see cref="T:System.Device.Gpio.Drivers.HummingBoardDriver" />.
+            This is currently only supported on Windows.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.PlatformNotSupportedException">The current operating system is not Windows</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCallbackForPinValueChangedEvent">
+      <MemberSignature Language="C#" Value="protected internal override void AddCallbackForPinValueChangedEvent (int pinNumber, System.Device.Gpio.PinEventTypes eventTypes, System.Device.Gpio.PinChangeEventHandler callback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void AddCallbackForPinValueChangedEvent(int32 pinNumber, valuetype System.Device.Gpio.PinEventTypes eventTypes, class System.Device.Gpio.PinChangeEventHandler callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.HummingBoardDriver.AddCallbackForPinValueChangedEvent(System.Int32,System.Device.Gpio.PinEventTypes,System.Device.Gpio.PinChangeEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub AddCallbackForPinValueChangedEvent (pinNumber As Integer, eventTypes As PinEventTypes, callback As PinChangeEventHandler)" />
+      <MemberSignature Language="F#" Value="override this.AddCallbackForPinValueChangedEvent : int * System.Device.Gpio.PinEventTypes * System.Device.Gpio.PinChangeEventHandler -&gt; unit" Usage="hummingBoardDriver.AddCallbackForPinValueChangedEvent (pinNumber, eventTypes, callback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="eventTypes" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="callback" Type="System.Device.Gpio.PinChangeEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="eventTypes">To be added.</param>
+        <param name="callback">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ClosePin">
+      <MemberSignature Language="C#" Value="protected internal override void ClosePin (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void ClosePin(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.HummingBoardDriver.ClosePin(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub ClosePin (pinNumber As Integer)" />
+      <MemberSignature Language="F#" Value="override this.ClosePin : int -&gt; unit" Usage="hummingBoardDriver.ClosePin pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertPinNumberToLogicalNumberingScheme">
+      <MemberSignature Language="C#" Value="protected internal override int ConvertPinNumberToLogicalNumberingScheme (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance int32 ConvertPinNumberToLogicalNumberingScheme(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.HummingBoardDriver.ConvertPinNumberToLogicalNumberingScheme(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function ConvertPinNumberToLogicalNumberingScheme (pinNumber As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="override this.ConvertPinNumberToLogicalNumberingScheme : int -&gt; int" Usage="hummingBoardDriver.ConvertPinNumberToLogicalNumberingScheme pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The board pin number to convert.</param>
+        <summary>
+            Converts a board pin number to the driver's logical numbering scheme.
+            </summary>
+        <returns>The pin number in the driver's logical numbering scheme.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.HummingBoardDriver.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="hummingBoardDriver.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetPinMode">
+      <MemberSignature Language="C#" Value="protected internal override System.Device.Gpio.PinMode GetPinMode (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance valuetype System.Device.Gpio.PinMode GetPinMode(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.HummingBoardDriver.GetPinMode(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function GetPinMode (pinNumber As Integer) As PinMode" />
+      <MemberSignature Language="F#" Value="override this.GetPinMode : int -&gt; System.Device.Gpio.PinMode" Usage="hummingBoardDriver.GetPinMode pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the driver's logical numbering scheme.</param>
+        <summary>
+            Gets the mode of a pin.
+            </summary>
+        <returns>The mode of the pin.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPinModeSupported">
+      <MemberSignature Language="C#" Value="protected internal override bool IsPinModeSupported (int pinNumber, System.Device.Gpio.PinMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool IsPinModeSupported(int32 pinNumber, valuetype System.Device.Gpio.PinMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.HummingBoardDriver.IsPinModeSupported(System.Int32,System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function IsPinModeSupported (pinNumber As Integer, mode As PinMode) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsPinModeSupported : int * System.Device.Gpio.PinMode -&gt; bool" Usage="hummingBoardDriver.IsPinModeSupported (pinNumber, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="mode">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="OpenPin">
+      <MemberSignature Language="C#" Value="protected internal override void OpenPin (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OpenPin(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.HummingBoardDriver.OpenPin(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub OpenPin (pinNumber As Integer)" />
+      <MemberSignature Language="F#" Value="override this.OpenPin : int -&gt; unit" Usage="hummingBoardDriver.OpenPin pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="PinCount">
+      <MemberSignature Language="C#" Value="protected internal override int PinCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PinCount" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Gpio.Drivers.HummingBoardDriver.PinCount" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides ReadOnly Property PinCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.PinCount : int" Usage="System.Device.Gpio.Drivers.HummingBoardDriver.PinCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="protected internal override System.Device.Gpio.PinValue Read (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance valuetype System.Device.Gpio.PinValue Read(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.HummingBoardDriver.Read(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function Read (pinNumber As Integer) As PinValue" />
+      <MemberSignature Language="F#" Value="override this.Read : int -&gt; System.Device.Gpio.PinValue" Usage="hummingBoardDriver.Read pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCallbackForPinValueChangedEvent">
+      <MemberSignature Language="C#" Value="protected internal override void RemoveCallbackForPinValueChangedEvent (int pinNumber, System.Device.Gpio.PinChangeEventHandler callback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RemoveCallbackForPinValueChangedEvent(int32 pinNumber, class System.Device.Gpio.PinChangeEventHandler callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.HummingBoardDriver.RemoveCallbackForPinValueChangedEvent(System.Int32,System.Device.Gpio.PinChangeEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub RemoveCallbackForPinValueChangedEvent (pinNumber As Integer, callback As PinChangeEventHandler)" />
+      <MemberSignature Language="F#" Value="override this.RemoveCallbackForPinValueChangedEvent : int * System.Device.Gpio.PinChangeEventHandler -&gt; unit" Usage="hummingBoardDriver.RemoveCallbackForPinValueChangedEvent (pinNumber, callback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.Device.Gpio.PinChangeEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="callback">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="SetPinMode">
+      <MemberSignature Language="C#" Value="protected internal override void SetPinMode (int pinNumber, System.Device.Gpio.PinMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void SetPinMode(int32 pinNumber, valuetype System.Device.Gpio.PinMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.HummingBoardDriver.SetPinMode(System.Int32,System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub SetPinMode (pinNumber As Integer, mode As PinMode)" />
+      <MemberSignature Language="F#" Value="override this.SetPinMode : int * System.Device.Gpio.PinMode -&gt; unit" Usage="hummingBoardDriver.SetPinMode (pinNumber, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="mode">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForEvent">
+      <MemberSignature Language="C#" Value="protected internal override System.Device.Gpio.WaitForEventResult WaitForEvent (int pinNumber, System.Device.Gpio.PinEventTypes eventTypes, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance valuetype System.Device.Gpio.WaitForEventResult WaitForEvent(int32 pinNumber, valuetype System.Device.Gpio.PinEventTypes eventTypes, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.HummingBoardDriver.WaitForEvent(System.Int32,System.Device.Gpio.PinEventTypes,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function WaitForEvent (pinNumber As Integer, eventTypes As PinEventTypes, cancellationToken As CancellationToken) As WaitForEventResult" />
+      <MemberSignature Language="F#" Value="override this.WaitForEvent : int * System.Device.Gpio.PinEventTypes * System.Threading.CancellationToken -&gt; System.Device.Gpio.WaitForEventResult" Usage="hummingBoardDriver.WaitForEvent (pinNumber, eventTypes, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.WaitForEventResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="eventTypes" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="eventTypes">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForEventAsync">
+      <MemberSignature Language="C#" Value="protected internal override System.Threading.Tasks.ValueTask&lt;System.Device.Gpio.WaitForEventResult&gt; WaitForEventAsync (int pinNumber, System.Device.Gpio.PinEventTypes eventTypes, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance valuetype System.Threading.Tasks.ValueTask`1&lt;valuetype System.Device.Gpio.WaitForEventResult&gt; WaitForEventAsync(int32 pinNumber, valuetype System.Device.Gpio.PinEventTypes eventTypes, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.HummingBoardDriver.WaitForEventAsync(System.Int32,System.Device.Gpio.PinEventTypes,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function WaitForEventAsync (pinNumber As Integer, eventTypes As PinEventTypes, cancellationToken As CancellationToken) As ValueTask(Of WaitForEventResult)" />
+      <MemberSignature Language="F#" Value="override this.WaitForEventAsync : int * System.Device.Gpio.PinEventTypes * System.Threading.CancellationToken -&gt; System.Threading.Tasks.ValueTask&lt;System.Device.Gpio.WaitForEventResult&gt;" Usage="hummingBoardDriver.WaitForEventAsync (pinNumber, eventTypes, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask&lt;System.Device.Gpio.WaitForEventResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="eventTypes" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="eventTypes">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="protected internal override void Write (int pinNumber, System.Device.Gpio.PinValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Write(int32 pinNumber, valuetype System.Device.Gpio.PinValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.HummingBoardDriver.Write(System.Int32,System.Device.Gpio.PinValue)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub Write (pinNumber As Integer, value As PinValue)" />
+      <MemberSignature Language="F#" Value="override this.Write : int * System.Device.Gpio.PinValue -&gt; unit" Usage="hummingBoardDriver.Write (pinNumber, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Device.Gpio.PinValue" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

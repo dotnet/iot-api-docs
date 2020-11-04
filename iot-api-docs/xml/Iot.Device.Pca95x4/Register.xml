@@ -1,0 +1,120 @@
+<Type Name="Register" FullName="Iot.Device.Pca95x4.Register">
+  <TypeSignature Language="C#" Value="public enum Register" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Register extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Pca95x4.Register" />
+  <TypeSignature Language="VB.NET" Value="Public Enum Register" />
+  <TypeSignature Language="F#" Value="type Register = " />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            PCA95X4 register
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Configuration">
+      <MemberSignature Language="C#" Value="Configuration" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Pca95x4.Register Configuration = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Pca95x4.Register.Configuration" />
+      <MemberSignature Language="VB.NET" Value="Configuration" />
+      <MemberSignature Language="F#" Value="Configuration = 3" Usage="Iot.Device.Pca95x4.Register.Configuration" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Pca95x4.Register</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            This register configures the directions of the I/O pins. If a bit in this register is set,
+            the corresponding port pin is enabled as an input with high-impedance output driver.
+            If a bit in this register is cleared, the corresponding port pin is enabled as an output.
+            At reset, the I/Os are configured as inputs with a weak pull-up to VDD.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="InputPort">
+      <MemberSignature Language="C#" Value="InputPort" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Pca95x4.Register InputPort = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Pca95x4.Register.InputPort" />
+      <MemberSignature Language="VB.NET" Value="InputPort" />
+      <MemberSignature Language="F#" Value="InputPort = 0" Usage="Iot.Device.Pca95x4.Register.InputPort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Pca95x4.Register</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            This register is a read-only port. It reflects the incoming logic levels of the pins,
+            regardless of whether the pin is defined as an input or an output by Register 3.
+            Writes to this register have no effect.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputPort">
+      <MemberSignature Language="C#" Value="OutputPort" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Pca95x4.Register OutputPort = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Pca95x4.Register.OutputPort" />
+      <MemberSignature Language="VB.NET" Value="OutputPort" />
+      <MemberSignature Language="F#" Value="OutputPort = 1" Usage="Iot.Device.Pca95x4.Register.OutputPort" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Pca95x4.Register</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            This register reflects the outgoing logic levels of the pins defined as outputs by Register 3.
+            Bit values in this register have no effect on pins defined as inputs. Reads from this register
+            return the value that is in the flip-flop controlling the output selection, not the actual pin value.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="PolarityInversion">
+      <MemberSignature Language="C#" Value="PolarityInversion" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Pca95x4.Register PolarityInversion = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Pca95x4.Register.PolarityInversion" />
+      <MemberSignature Language="VB.NET" Value="PolarityInversion" />
+      <MemberSignature Language="F#" Value="PolarityInversion = 2" Usage="Iot.Device.Pca95x4.Register.PolarityInversion" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Pca95x4.Register</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            This register allows the user to invert the polarity of the Input Port register data.
+            If a bit in this register is set (written with ‘1’), the corresponding Input Port data is inverted.
+            If a bit in this register is cleared (written with a '0'), the Input Port data polarity is retained.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

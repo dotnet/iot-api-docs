@@ -1,0 +1,137 @@
+<Type Name="VariousTimingsMode" FullName="Iot.Device.Pn532.RfConfiguration.VariousTimingsMode">
+  <TypeSignature Language="C#" Value="public class VariousTimingsMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit VariousTimingsMode extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Pn532.RfConfiguration.VariousTimingsMode" />
+  <TypeSignature Language="VB.NET" Value="Public Class VariousTimingsMode" />
+  <TypeSignature Language="F#" Value="type VariousTimingsMode = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The radio frequency timing modes
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public VariousTimingsMode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.RfConfiguration.VariousTimingsMode.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnsweToRequestResponseTimeout">
+      <MemberSignature Language="C#" Value="public Iot.Device.Pn532.RfConfiguration.RfTimeout AnsweToRequestResponseTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Pn532.RfConfiguration.RfTimeout AnsweToRequestResponseTimeout" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.RfConfiguration.VariousTimingsMode.AnsweToRequestResponseTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property AnsweToRequestResponseTimeout As RfTimeout" />
+      <MemberSignature Language="F#" Value="member this.AnsweToRequestResponseTimeout : Iot.Device.Pn532.RfConfiguration.RfTimeout with get, set" Usage="Iot.Device.Pn532.RfConfiguration.VariousTimingsMode.AnsweToRequestResponseTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Pn532.RfConfiguration.RfTimeout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The second byte in this item defines the timeout between ATR_REQ and
+            ATR_RES when the PN532 is in initiator mode.A target is considered as mute if no
+            valid ATR_RES is received within this timeout value. In this way, the PN532 can
+            easily detect non TPE target in passive 212-424 kbps mode.
+            The default value for this parameter is 0x0B (102.4 ms).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RetryTimeout">
+      <MemberSignature Language="C#" Value="public Iot.Device.Pn532.RfConfiguration.RfTimeout RetryTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Pn532.RfConfiguration.RfTimeout RetryTimeout" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.RfConfiguration.VariousTimingsMode.RetryTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property RetryTimeout As RfTimeout" />
+      <MemberSignature Language="F#" Value="member this.RetryTimeout : Iot.Device.Pn532.RfConfiguration.RfTimeout with get, set" Usage="Iot.Device.Pn532.RfConfiguration.VariousTimingsMode.RetryTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Pn532.RfConfiguration.RfTimeout</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The third byte defines the timeout value that the PN532 uses in the
+            InCommunicateThru(§7.3.9, p: 136) command to give up reception from the
+            target in case of no answer.
+            The default value for this parameter is 0x0A (51.2 ms).
+            This timeout definition is also used with InDataExchange(§7.3.8, p: 127) when
+            the target is a FeliCa or a Mifare card(Ultralight, Standard…).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RFU">
+      <MemberSignature Language="C#" Value="public const byte RFU = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 RFU = (0)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Pn532.RfConfiguration.VariousTimingsMode.RFU" />
+      <MemberSignature Language="VB.NET" Value="Public Const RFU As Byte  = 0" />
+      <MemberSignature Language="F#" Value="val mutable RFU : byte" Usage="Iot.Device.Pn532.RfConfiguration.VariousTimingsMode.RFU" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Reserved for Further Usage
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public byte[] Serialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] Serialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.RfConfiguration.VariousTimingsMode.Serialize" />
+      <MemberSignature Language="VB.NET" Value="Public Function Serialize () As Byte()" />
+      <MemberSignature Language="F#" Value="member this.Serialize : unit -&gt; byte[]" Usage="variousTimingsMode.Serialize " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the byte array to send
+            </summary>
+        <returns>Serialized value</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

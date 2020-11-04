@@ -1,0 +1,261 @@
+<Type Name="DhtSensor" FullName="Iot.Device.GrovePiDevice.Sensors.DhtSensor">
+  <TypeSignature Language="C#" Value="public class DhtSensor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DhtSensor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.GrovePiDevice.Sensors.DhtSensor" />
+  <TypeSignature Language="VB.NET" Value="Public Class DhtSensor" />
+  <TypeSignature Language="F#" Value="type DhtSensor = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            DhtSensor supports DHT familly sensors
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DhtSensor (Iot.Device.GrovePiDevice.GrovePi grovePi, Iot.Device.GrovePiDevice.Models.GrovePort port, Iot.Device.GrovePiDevice.Models.DhtType dhtType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.GrovePiDevice.GrovePi grovePi, valuetype Iot.Device.GrovePiDevice.Models.GrovePort port, valuetype Iot.Device.GrovePiDevice.Models.DhtType dhtType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GrovePiDevice.Sensors.DhtSensor.#ctor(Iot.Device.GrovePiDevice.GrovePi,Iot.Device.GrovePiDevice.Models.GrovePort,Iot.Device.GrovePiDevice.Models.DhtType)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (grovePi As GrovePi, port As GrovePort, dhtType As DhtType)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.GrovePiDevice.Sensors.DhtSensor : Iot.Device.GrovePiDevice.GrovePi * Iot.Device.GrovePiDevice.Models.GrovePort * Iot.Device.GrovePiDevice.Models.DhtType -&gt; Iot.Device.GrovePiDevice.Sensors.DhtSensor" Usage="new Iot.Device.GrovePiDevice.Sensors.DhtSensor (grovePi, port, dhtType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="grovePi" Type="Iot.Device.GrovePiDevice.GrovePi" />
+        <Parameter Name="port" Type="Iot.Device.GrovePiDevice.Models.GrovePort" />
+        <Parameter Name="dhtType" Type="Iot.Device.GrovePiDevice.Models.DhtType" />
+      </Parameters>
+      <Docs>
+        <param name="grovePi">The GrovePi class</param>
+        <param name="port">The grove Port, need to be in the list of SupportedPorts</param>
+        <param name="dhtType">The DHT type</param>
+        <summary>
+            Initialize the DHT Sensor class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DhtType">
+      <MemberSignature Language="C#" Value="public Iot.Device.GrovePiDevice.Models.DhtType DhtType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.GrovePiDevice.Models.DhtType DhtType" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GrovePiDevice.Sensors.DhtSensor.DhtType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DhtType As DhtType" />
+      <MemberSignature Language="F#" Value="member this.DhtType : Iot.Device.GrovePiDevice.Models.DhtType" Usage="Iot.Device.GrovePiDevice.Sensors.DhtSensor.DhtType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.GrovePiDevice.Models.DhtType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the type of DHT sensor
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastRelativeHumidity">
+      <MemberSignature Language="C#" Value="public double LastRelativeHumidity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LastRelativeHumidity" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GrovePiDevice.Sensors.DhtSensor.LastRelativeHumidity" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LastRelativeHumidity As Double" />
+      <MemberSignature Language="F#" Value="member this.LastRelativeHumidity : double" Usage="Iot.Device.GrovePiDevice.Sensors.DhtSensor.LastRelativeHumidity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the last measured relative humidy from 0.0 to 100.0
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastTemperature">
+      <MemberSignature Language="C#" Value="public double LastTemperature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LastTemperature" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GrovePiDevice.Sensors.DhtSensor.LastTemperature" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LastTemperature As Double" />
+      <MemberSignature Language="F#" Value="member this.LastTemperature : double" Usage="Iot.Device.GrovePiDevice.Sensors.DhtSensor.LastTemperature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the last temperature measured in Celsius
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastTemperatureInFarenheit">
+      <MemberSignature Language="C#" Value="public double LastTemperatureInFarenheit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LastTemperatureInFarenheit" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GrovePiDevice.Sensors.DhtSensor.LastTemperatureInFarenheit" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LastTemperatureInFarenheit As Double" />
+      <MemberSignature Language="F#" Value="member this.LastTemperatureInFarenheit : double" Usage="Iot.Device.GrovePiDevice.Sensors.DhtSensor.LastTemperatureInFarenheit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the last temperature measured in Farenheit
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public void Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GrovePiDevice.Sensors.DhtSensor.Read" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Read ()" />
+      <MemberSignature Language="F#" Value="member this.Read : unit -&gt; unit" Usage="dhtSensor.Read " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            You need to read the sensorbefore getting the value
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SensorName">
+      <MemberSignature Language="C#" Value="public string SensorName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SensorName" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GrovePiDevice.Sensors.DhtSensor.SensorName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SensorName As String" />
+      <MemberSignature Language="F#" Value="member this.SensorName : string" Usage="Iot.Device.GrovePiDevice.Sensors.DhtSensor.SensorName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the name of the DHT sensor
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedPorts">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.List&lt;Iot.Device.GrovePiDevice.Models.GrovePort&gt; SupportedPorts { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property class System.Collections.Generic.List`1&lt;valuetype Iot.Device.GrovePiDevice.Models.GrovePort&gt; SupportedPorts" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GrovePiDevice.Sensors.DhtSensor.SupportedPorts" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property SupportedPorts As List(Of GrovePort)" />
+      <MemberSignature Language="F#" Value="member this.SupportedPorts : System.Collections.Generic.List&lt;Iot.Device.GrovePiDevice.Models.GrovePort&gt;" Usage="Iot.Device.GrovePiDevice.Sensors.DhtSensor.SupportedPorts" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Iot.Device.GrovePiDevice.Models.GrovePort&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Only Digital ports including the analogic sensors (A0 = D14, A1 = D15, A2 = D16)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GrovePiDevice.Sensors.DhtSensor.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="dhtSensor.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the temperature and humidity in a formated way
+            </summary>
+        <returns>Returns the temperature and humidity in a formated way</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public double[] Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64[] Value" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GrovePiDevice.Sensors.DhtSensor.Value" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Value As Double()" />
+      <MemberSignature Language="F#" Value="member this.Value : double[]" Usage="Iot.Device.GrovePiDevice.Sensors.DhtSensor.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get an array of 2 double
+            First is the temperature in degree Celsius
+            Second is the relative humidity from 0.0 to 100.0
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

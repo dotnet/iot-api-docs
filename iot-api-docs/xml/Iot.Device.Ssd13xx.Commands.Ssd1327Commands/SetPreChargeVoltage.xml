@@ -1,0 +1,134 @@
+<Type Name="SetPreChargeVoltage" FullName="Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPreChargeVoltage">
+  <TypeSignature Language="C#" Value="public class SetPreChargeVoltage : Iot.Device.Ssd13xx.Commands.ISsd1327Command" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SetPreChargeVoltage extends System.Object implements class Iot.Device.Ssd13xx.Commands.ICommand, class Iot.Device.Ssd13xx.Commands.ISsd1327Command" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPreChargeVoltage" />
+  <TypeSignature Language="VB.NET" Value="Public Class SetPreChargeVoltage&#xA;Implements ISsd1327Command" />
+  <TypeSignature Language="F#" Value="type SetPreChargeVoltage = class&#xA;    interface ISsd1327Command&#xA;    interface ICommand" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Ssd13xx.Commands.ICommand</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Iot.Device.Ssd13xx.Commands.ISsd1327Command</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents SetPreChargeVoltage command
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SetPreChargeVoltage (byte level = 5);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 level) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPreChargeVoltage.#ctor(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional level As Byte = 5)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPreChargeVoltage : byte -&gt; Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPreChargeVoltage" Usage="new Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPreChargeVoltage level" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="level" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="level">
+            Pre-charge voltage level.
+            Parameter values between 0b_0000 and 0b_0111 leads to voltage values between 0.2 x Vcc and 0.613 x Vcc Volts.
+            Parameter value 0b_1XXX leads to voltage value equals to Vcomh.
+            </param>
+        <summary>
+            This command sets the first pre-charge voltage (phase 2) level of segment pins.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public byte[] GetBytes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GetBytes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPreChargeVoltage.GetBytes" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetBytes () As Byte()" />
+      <MemberSignature Language="F#" Value="abstract member GetBytes : unit -&gt; byte[]&#xA;override this.GetBytes : unit -&gt; byte[]" Usage="setPreChargeVoltage.GetBytes " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Ssd13xx.Commands.ICommand.GetBytes</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the bytes that represent the command.
+            </summary>
+        <returns>The bytes that represent the command.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public byte Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPreChargeVoltage.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As Byte" />
+      <MemberSignature Language="F#" Value="member this.Id : byte" Usage="Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPreChargeVoltage.Id" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Ssd13xx.Commands.ICommand.Id</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The value that represents the command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public byte Level { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Level" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPreChargeVoltage.Level" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Level As Byte" />
+      <MemberSignature Language="F#" Value="member this.Level : byte" Usage="Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPreChargeVoltage.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Pre-charge voltage level.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

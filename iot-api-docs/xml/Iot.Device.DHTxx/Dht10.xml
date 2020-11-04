@@ -1,0 +1,124 @@
+<Type Name="Dht10" FullName="Iot.Device.DHTxx.Dht10">
+  <TypeSignature Language="C#" Value="public class Dht10 : Iot.Device.DHTxx.DhtBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Dht10 extends Iot.Device.DHTxx.DhtBase" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.DHTxx.Dht10" />
+  <TypeSignature Language="VB.NET" Value="Public Class Dht10&#xA;Inherits DhtBase" />
+  <TypeSignature Language="F#" Value="type Dht10 = class&#xA;    inherit DhtBase" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.DHTxx.DhtBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Temperature and Humidity Sensor DHT10
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Dht10 (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DHTxx.Dht10.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.DHTxx.Dht10 : System.Device.I2c.I2cDevice -&gt; Iot.Device.DHTxx.Dht10" Usage="new Iot.Device.DHTxx.Dht10 i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">I2C Device</param>
+        <summary>
+            Create a DHT10 sensor through I2C
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte DefaultI2cAddress = 56;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 DefaultI2cAddress = (56)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.DHTxx.Dht10.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Byte  = 56" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : byte" Usage="Iot.Device.DHTxx.Dht10.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>56</MemberValue>
+      <Docs>
+        <summary>
+            DHT10 Default I2C Address
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Humidity">
+      <MemberSignature Language="C#" Value="public override double Humidity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Humidity" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.DHTxx.Dht10.Humidity" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Humidity As Double" />
+      <MemberSignature Language="F#" Value="member this.Humidity : double" Usage="Iot.Device.DHTxx.Dht10.Humidity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the last read of relative humidity in percentage
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If last read was not successfull, it returns double.NaN
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Temperature">
+      <MemberSignature Language="C#" Value="public override Iot.Units.Temperature Temperature { get; }" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Units.Temperature Temperature" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.DHTxx.Dht10.Temperature" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property Temperature As Temperature" />
+      <MemberSignature Language="F#" Value="member this.Temperature : Iot.Units.Temperature" Usage="Iot.Device.DHTxx.Dht10.Temperature" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="C#" Value="public override UnitsNet.Temperature Temperature { get; }" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature Temperature" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="member this.Temperature : UnitsNet.Temperature" Usage="Iot.Device.DHTxx.Dht10.Temperature" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.0">Iot.Units.Temperature</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.1">UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the last read temperature
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If last read was not successfull, it returns double.NaN
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

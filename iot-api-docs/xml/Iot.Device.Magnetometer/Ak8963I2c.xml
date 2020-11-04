@@ -1,0 +1,125 @@
+<Type Name="Ak8963I2c" FullName="Iot.Device.Magnetometer.Ak8963I2c">
+  <TypeSignature Language="C#" Value="public class Ak8963I2c : Iot.Device.Magnetometer.Ak8963I2cBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Ak8963I2c extends Iot.Device.Magnetometer.Ak8963I2cBase" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Magnetometer.Ak8963I2c" />
+  <TypeSignature Language="VB.NET" Value="Public Class Ak8963I2c&#xA;Inherits Ak8963I2cBase" />
+  <TypeSignature Language="F#" Value="type Ak8963I2c = class&#xA;    inherit Ak8963I2cBase" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Magnetometer.Ak8963I2cBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Default I2C interface for the AK8963
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ak8963I2c ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Magnetometer.Ak8963I2c.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadByte">
+      <MemberSignature Language="C#" Value="public override byte ReadByte (System.Device.I2c.I2cDevice i2cDevice, byte reg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8 ReadByte(class System.Device.I2c.I2cDevice i2cDevice, unsigned int8 reg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Magnetometer.Ak8963I2c.ReadByte(System.Device.I2c.I2cDevice,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ReadByte (i2cDevice As I2cDevice, reg As Byte) As Byte" />
+      <MemberSignature Language="F#" Value="override this.ReadByte : System.Device.I2c.I2cDevice * byte -&gt; byte" Usage="ak8963I2c.ReadByte (i2cDevice, reg)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="reg" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">An I2C device</param>
+        <param name="reg">The register to read</param>
+        <summary>
+            Read a byte
+            </summary>
+        <returns>The register value</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadBytes">
+      <MemberSignature Language="C#" Value="public override void ReadBytes (System.Device.I2c.I2cDevice i2cDevice, byte reg, Span&lt;byte&gt; readBytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void ReadBytes(class System.Device.I2c.I2cDevice i2cDevice, unsigned int8 reg, valuetype System.Span`1&lt;unsigned int8&gt; readBytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Magnetometer.Ak8963I2c.ReadBytes(System.Device.I2c.I2cDevice,System.Byte,System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub ReadBytes (i2cDevice As I2cDevice, reg As Byte, readBytes As Span(Of Byte))" />
+      <MemberSignature Language="F#" Value="override this.ReadBytes : System.Device.I2c.I2cDevice * byte * Span&lt;byte&gt; -&gt; unit" Usage="ak8963I2c.ReadBytes (i2cDevice, reg, readBytes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="reg" Type="System.Byte" />
+        <Parameter Name="readBytes" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">An I2C device</param>
+        <param name="reg">&gt;The register to read</param>
+        <param name="readBytes">A span of bytes with the read values</param>
+        <summary>
+            Read a byte array
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRegister">
+      <MemberSignature Language="C#" Value="public override void WriteRegister (System.Device.I2c.I2cDevice i2cDevice, byte reg, byte data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void WriteRegister(class System.Device.I2c.I2cDevice i2cDevice, unsigned int8 reg, unsigned int8 data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Magnetometer.Ak8963I2c.WriteRegister(System.Device.I2c.I2cDevice,System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub WriteRegister (i2cDevice As I2cDevice, reg As Byte, data As Byte)" />
+      <MemberSignature Language="F#" Value="override this.WriteRegister : System.Device.I2c.I2cDevice * byte * byte -&gt; unit" Usage="ak8963I2c.WriteRegister (i2cDevice, reg, data)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="reg" Type="System.Byte" />
+        <Parameter Name="data" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">&gt;An I2C device</param>
+        <param name="reg">The register to read</param>
+        <param name="data">A byte to write</param>
+        <summary>
+            Write a byte
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

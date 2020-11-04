@@ -1,0 +1,86 @@
+<Type Name="FixedSizeFont" FullName="Iot.Device.Max7219.FixedSizeFont">
+  <TypeSignature Language="C#" Value="public class FixedSizeFont : Iot.Device.Max7219.IFont" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FixedSizeFont extends System.Object implements class Iot.Device.Max7219.IFont" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Max7219.FixedSizeFont" />
+  <TypeSignature Language="VB.NET" Value="Public Class FixedSizeFont&#xA;Implements IFont" />
+  <TypeSignature Language="F#" Value="type FixedSizeFont = class&#xA;    interface IFont" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Max7219.IFont</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Implementation of a <see cref="T:Iot.Device.Max7219.IFont" /> that uses a common array for all characters.
+            The number of bytes per character is constant and zero values between the characters are trimmed.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FixedSizeFont (int bytesPerCharacter, byte[] data, int spaceWidth = 3);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 bytesPerCharacter, unsigned int8[] data, int32 spaceWidth) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Max7219.FixedSizeFont.#ctor(System.Int32,System.Byte[],System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (bytesPerCharacter As Integer, data As Byte(), Optional spaceWidth As Integer = 3)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Max7219.FixedSizeFont : int * byte[] * int -&gt; Iot.Device.Max7219.FixedSizeFont" Usage="new Iot.Device.Max7219.FixedSizeFont (bytesPerCharacter, data, spaceWidth)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bytesPerCharacter" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="spaceWidth" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bytesPerCharacter">number of bytes per character</param>
+        <param name="data">Font data</param>
+        <param name="spaceWidth">Space width</param>
+        <summary>
+            Constructs FixedSizeFont instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;byte&gt; this[char chr] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;unsigned int8&gt; Item(char)" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Max7219.FixedSizeFont.Item(System.Char)" />
+      <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(chr As Char) As IReadOnlyList(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.Item(char) : System.Collections.Generic.IReadOnlyList&lt;byte&gt;" Usage="Iot.Device.Max7219.FixedSizeFont.Item" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Max7219.IFont.Item(System.Char)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chr" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="chr">To be added.</param>
+        <summary>
+            Get character information
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

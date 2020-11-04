@@ -1,0 +1,528 @@
+<Type Name="SeesawGpioDriver" FullName="Iot.Device.Seesaw.SeesawGpioDriver">
+  <TypeSignature Language="C#" Value="public class SeesawGpioDriver : System.Device.Gpio.GpioDriver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SeesawGpioDriver extends System.Device.Gpio.GpioDriver" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Seesaw.SeesawGpioDriver" />
+  <TypeSignature Language="VB.NET" Value="Public Class SeesawGpioDriver&#xA;Inherits GpioDriver" />
+  <TypeSignature Language="F#" Value="type SeesawGpioDriver = class&#xA;    inherit GpioDriver" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Device.Gpio.GpioDriver</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Seesaw GPIO driver
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SeesawGpioDriver (Iot.Device.Seesaw.Seesaw seesawDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Seesaw.Seesaw seesawDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.#ctor(Iot.Device.Seesaw.Seesaw)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (seesawDevice As Seesaw)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Seesaw.SeesawGpioDriver : Iot.Device.Seesaw.Seesaw -&gt; Iot.Device.Seesaw.SeesawGpioDriver" Usage="new Iot.Device.Seesaw.SeesawGpioDriver seesawDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="seesawDevice" Type="Iot.Device.Seesaw.Seesaw" />
+      </Parameters>
+      <Docs>
+        <param name="seesawDevice">The Seesaw device used fir communicating with the Gpio.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Seesaw.SeesawGpioDriver" /> class that will use the specified Seesaw device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SeesawGpioDriver (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Seesaw.SeesawGpioDriver : System.Device.I2c.I2cDevice -&gt; Iot.Device.Seesaw.SeesawGpioDriver" Usage="new Iot.Device.Seesaw.SeesawGpioDriver i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2cDevice used for communicating with the Seesaw device.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Seesaw.SeesawGpioDriver" /> class that will use the specified I2cDevice to communicate with the Seesaw device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCallbackForPinValueChangedEvent">
+      <MemberSignature Language="C#" Value="protected override void AddCallbackForPinValueChangedEvent (int pinNumber, System.Device.Gpio.PinEventTypes eventTypes, System.Device.Gpio.PinChangeEventHandler callback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddCallbackForPinValueChangedEvent(int32 pinNumber, valuetype System.Device.Gpio.PinEventTypes eventTypes, class System.Device.Gpio.PinChangeEventHandler callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.AddCallbackForPinValueChangedEvent(System.Int32,System.Device.Gpio.PinEventTypes,System.Device.Gpio.PinChangeEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub AddCallbackForPinValueChangedEvent (pinNumber As Integer, eventTypes As PinEventTypes, callback As PinChangeEventHandler)" />
+      <MemberSignature Language="F#" Value="override this.AddCallbackForPinValueChangedEvent : int * System.Device.Gpio.PinEventTypes * System.Device.Gpio.PinChangeEventHandler -&gt; unit" Usage="seesawGpioDriver.AddCallbackForPinValueChangedEvent (pinNumber, eventTypes, callback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="eventTypes" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="callback" Type="System.Device.Gpio.PinChangeEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="eventTypes">To be added.</param>
+        <param name="callback">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ClosePin">
+      <MemberSignature Language="C#" Value="protected override void ClosePin (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClosePin(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.ClosePin(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ClosePin (pinNumber As Integer)" />
+      <MemberSignature Language="F#" Value="override this.ClosePin : int -&gt; unit" Usage="seesawGpioDriver.ClosePin pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <summary>
+            Closes an open pin.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertPinNumberToLogicalNumberingScheme">
+      <MemberSignature Language="C#" Value="protected override int ConvertPinNumberToLogicalNumberingScheme (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ConvertPinNumberToLogicalNumberingScheme(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.ConvertPinNumberToLogicalNumberingScheme(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function ConvertPinNumberToLogicalNumberingScheme (pinNumber As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="override this.ConvertPinNumberToLogicalNumberingScheme : int -&gt; int" Usage="seesawGpioDriver.ConvertPinNumberToLogicalNumberingScheme pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="seesawGpioDriver.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetPinMode">
+      <MemberSignature Language="C#" Value="protected override System.Device.Gpio.PinMode GetPinMode (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Device.Gpio.PinMode GetPinMode(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.GetPinMode(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetPinMode (pinNumber As Integer) As PinMode" />
+      <MemberSignature Language="F#" Value="override this.GetPinMode : int -&gt; System.Device.Gpio.PinMode" Usage="seesawGpioDriver.GetPinMode pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <summary>
+            Gets the mode of a pin.
+            </summary>
+        <returns>The mode of the pin.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPinModeSupported">
+      <MemberSignature Language="C#" Value="protected override bool IsPinModeSupported (int pinNumber, System.Device.Gpio.PinMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsPinModeSupported(int32 pinNumber, valuetype System.Device.Gpio.PinMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.IsPinModeSupported(System.Int32,System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function IsPinModeSupported (pinNumber As Integer, mode As PinMode) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsPinModeSupported : int * System.Device.Gpio.PinMode -&gt; bool" Usage="seesawGpioDriver.IsPinModeSupported (pinNumber, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <param name="mode">The mode to check.</param>
+        <summary>
+            Checks if a pin supports a specific mode.
+            </summary>
+        <returns>The status if the pin supports the mode.</returns>
+        <remarks>All standard pin modes are supported</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPinOpen">
+      <MemberSignature Language="C#" Value="public bool IsPinOpen (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsPinOpen(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.IsPinOpen(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsPinOpen (pinNumber As Integer) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsPinOpen : int -&gt; bool" Usage="seesawGpioDriver.IsPinOpen pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <summary>
+            Checks if a specific pin is open.
+            </summary>
+        <returns>The status if the pin is open or closed.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenPin">
+      <MemberSignature Language="C#" Value="protected override void OpenPin (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OpenPin(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.OpenPin(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OpenPin (pinNumber As Integer)" />
+      <MemberSignature Language="F#" Value="override this.OpenPin : int -&gt; unit" Usage="seesawGpioDriver.OpenPin pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <summary>
+            Opens a pin and in Input mode.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenPin">
+      <MemberSignature Language="C#" Value="public void OpenPin (int pinNumber, System.Device.Gpio.PinMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OpenPin(int32 pinNumber, valuetype System.Device.Gpio.PinMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.OpenPin(System.Int32,System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub OpenPin (pinNumber As Integer, mode As PinMode)" />
+      <MemberSignature Language="F#" Value="override this.OpenPin : int * System.Device.Gpio.PinMode -&gt; unit" Usage="seesawGpioDriver.OpenPin (pinNumber, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <param name="mode">The mode to be set.</param>
+        <summary>
+            Opens a pin and sets it to a specific mode.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PinCount">
+      <MemberSignature Language="C#" Value="protected override int PinCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PinCount" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seesaw.SeesawGpioDriver.PinCount" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property PinCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.PinCount : int" Usage="Iot.Device.Seesaw.SeesawGpioDriver.PinCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Number of Gpio pins available.
+            </summary>
+        <value>Number of Gpio pins available</value>
+        <remarks>Hardcoded to 64 pins as the Seesaw devices do not describe the number of pins.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="protected override System.Device.Gpio.PinValue Read (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Device.Gpio.PinValue Read(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.Read(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function Read (pinNumber As Integer) As PinValue" />
+      <MemberSignature Language="F#" Value="override this.Read : int -&gt; System.Device.Gpio.PinValue" Usage="seesawGpioDriver.Read pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <summary>
+            Reads the current value of a pin.
+            </summary>
+        <returns>The value of the pin.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public void Read (Span&lt;System.Device.Gpio.PinValuePair&gt; pinValuePairs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Read(valuetype System.Span`1&lt;valuetype System.Device.Gpio.PinValuePair&gt; pinValuePairs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.Read(System.Span{System.Device.Gpio.PinValuePair})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Read (pinValuePairs As Span(Of PinValuePair))" />
+      <MemberSignature Language="F#" Value="override this.Read : Span&lt;System.Device.Gpio.PinValuePair&gt; -&gt; unit" Usage="seesawGpioDriver.Read pinValuePairs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinValuePairs" Type="System.Span&lt;System.Device.Gpio.PinValuePair&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pinValuePairs">The pin/value pairs to read.</param>
+        <summary>
+            Read the given pins with the given pin numbers.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCallbackForPinValueChangedEvent">
+      <MemberSignature Language="C#" Value="protected override void RemoveCallbackForPinValueChangedEvent (int pinNumber, System.Device.Gpio.PinChangeEventHandler callback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveCallbackForPinValueChangedEvent(int32 pinNumber, class System.Device.Gpio.PinChangeEventHandler callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.RemoveCallbackForPinValueChangedEvent(System.Int32,System.Device.Gpio.PinChangeEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub RemoveCallbackForPinValueChangedEvent (pinNumber As Integer, callback As PinChangeEventHandler)" />
+      <MemberSignature Language="F#" Value="override this.RemoveCallbackForPinValueChangedEvent : int * System.Device.Gpio.PinChangeEventHandler -&gt; unit" Usage="seesawGpioDriver.RemoveCallbackForPinValueChangedEvent (pinNumber, callback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.Device.Gpio.PinChangeEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="callback">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="SetPinMode">
+      <MemberSignature Language="C#" Value="protected override void SetPinMode (int pinNumber, System.Device.Gpio.PinMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetPinMode(int32 pinNumber, valuetype System.Device.Gpio.PinMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.SetPinMode(System.Int32,System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub SetPinMode (pinNumber As Integer, mode As PinMode)" />
+      <MemberSignature Language="F#" Value="override this.SetPinMode : int * System.Device.Gpio.PinMode -&gt; unit" Usage="seesawGpioDriver.SetPinMode (pinNumber, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <param name="mode">The mode to be set.</param>
+        <summary>
+            Sets the mode to a pin.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForEvent">
+      <MemberSignature Language="C#" Value="protected override System.Device.Gpio.WaitForEventResult WaitForEvent (int pinNumber, System.Device.Gpio.PinEventTypes eventTypes, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Device.Gpio.WaitForEventResult WaitForEvent(int32 pinNumber, valuetype System.Device.Gpio.PinEventTypes eventTypes, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.WaitForEvent(System.Int32,System.Device.Gpio.PinEventTypes,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function WaitForEvent (pinNumber As Integer, eventTypes As PinEventTypes, cancellationToken As CancellationToken) As WaitForEventResult" />
+      <MemberSignature Language="F#" Value="override this.WaitForEvent : int * System.Device.Gpio.PinEventTypes * System.Threading.CancellationToken -&gt; System.Device.Gpio.WaitForEventResult" Usage="seesawGpioDriver.WaitForEvent (pinNumber, eventTypes, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.WaitForEventResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="eventTypes" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="eventTypes">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (ReadOnlySpan&lt;System.Device.Gpio.PinValuePair&gt; pinValuePairs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(valuetype System.ReadOnlySpan`1&lt;valuetype System.Device.Gpio.PinValuePair&gt; pinValuePairs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.Write(System.ReadOnlySpan{System.Device.Gpio.PinValuePair})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (pinValuePairs As ReadOnlySpan(Of PinValuePair))" />
+      <MemberSignature Language="F#" Value="override this.Write : ReadOnlySpan&lt;System.Device.Gpio.PinValuePair&gt; -&gt; unit" Usage="seesawGpioDriver.Write pinValuePairs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinValuePairs" Type="System.ReadOnlySpan&lt;System.Device.Gpio.PinValuePair&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pinValuePairs">The pin/value pairs to write.</param>
+        <summary>
+            Write the given pins with the given values.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="protected override void Write (int pinNumber, System.Device.Gpio.PinValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Write(int32 pinNumber, valuetype System.Device.Gpio.PinValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.SeesawGpioDriver.Write(System.Int32,System.Device.Gpio.PinValue)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Write (pinNumber As Integer, value As PinValue)" />
+      <MemberSignature Language="F#" Value="override this.Write : int * System.Device.Gpio.PinValue -&gt; unit" Usage="seesawGpioDriver.Write (pinNumber, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Device.Gpio.PinValue" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <param name="value">The value to be written to the pin.</param>
+        <summary>
+            Writes a value to a pin.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

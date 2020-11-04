@@ -1,0 +1,463 @@
+<Type Name="RaspberryPi3Driver" FullName="System.Device.Gpio.Drivers.RaspberryPi3Driver">
+  <TypeSignature Language="C#" Value="public class RaspberryPi3Driver : System.Device.Gpio.GpioDriver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RaspberryPi3Driver extends System.Device.Gpio.GpioDriver" />
+  <TypeSignature Language="DocId" Value="T:System.Device.Gpio.Drivers.RaspberryPi3Driver" />
+  <TypeSignature Language="VB.NET" Value="Public Class RaspberryPi3Driver&#xA;Inherits GpioDriver" />
+  <TypeSignature Language="F#" Value="type RaspberryPi3Driver = class&#xA;    inherit GpioDriver" />
+  <AssemblyInfo>
+    <AssemblyName>System.Device.Gpio</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Device.Gpio.GpioDriver</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A GPIO driver for the Raspberry Pi 3 or 4, running Raspbian (or, with some limitations, ubuntu)
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RaspberryPi3Driver ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.RaspberryPi3Driver.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an instance of the RaspberryPi3Driver.
+            This driver works on Raspberry 3 or 4, both on Linux and on Windows
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCallbackForPinValueChangedEvent">
+      <MemberSignature Language="C#" Value="protected internal override void AddCallbackForPinValueChangedEvent (int pinNumber, System.Device.Gpio.PinEventTypes eventTypes, System.Device.Gpio.PinChangeEventHandler callback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void AddCallbackForPinValueChangedEvent(int32 pinNumber, valuetype System.Device.Gpio.PinEventTypes eventTypes, class System.Device.Gpio.PinChangeEventHandler callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.RaspberryPi3Driver.AddCallbackForPinValueChangedEvent(System.Int32,System.Device.Gpio.PinEventTypes,System.Device.Gpio.PinChangeEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub AddCallbackForPinValueChangedEvent (pinNumber As Integer, eventTypes As PinEventTypes, callback As PinChangeEventHandler)" />
+      <MemberSignature Language="F#" Value="override this.AddCallbackForPinValueChangedEvent : int * System.Device.Gpio.PinEventTypes * System.Device.Gpio.PinChangeEventHandler -&gt; unit" Usage="raspberryPi3Driver.AddCallbackForPinValueChangedEvent (pinNumber, eventTypes, callback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="eventTypes" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="callback" Type="System.Device.Gpio.PinChangeEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="eventTypes">To be added.</param>
+        <param name="callback">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ClearRegister">
+      <MemberSignature Language="C#" Value="protected ulong ClearRegister { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int64 ClearRegister" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Gpio.Drivers.RaspberryPi3Driver.ClearRegister" />
+      <MemberSignature Language="VB.NET" Value="Protected Property ClearRegister As ULong" />
+      <MemberSignature Language="F#" Value="member this.ClearRegister : uint64 with get, set" Usage="System.Device.Gpio.Drivers.RaspberryPi3Driver.ClearRegister" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Allows directly setting the "Set pin low" register. Used for special applications only
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClosePin">
+      <MemberSignature Language="C#" Value="protected internal override void ClosePin (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void ClosePin(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.RaspberryPi3Driver.ClosePin(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub ClosePin (pinNumber As Integer)" />
+      <MemberSignature Language="F#" Value="override this.ClosePin : int -&gt; unit" Usage="raspberryPi3Driver.ClosePin pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertPinNumberToLogicalNumberingScheme">
+      <MemberSignature Language="C#" Value="protected internal override int ConvertPinNumberToLogicalNumberingScheme (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance int32 ConvertPinNumberToLogicalNumberingScheme(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.RaspberryPi3Driver.ConvertPinNumberToLogicalNumberingScheme(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function ConvertPinNumberToLogicalNumberingScheme (pinNumber As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="override this.ConvertPinNumberToLogicalNumberingScheme : int -&gt; int" Usage="raspberryPi3Driver.ConvertPinNumberToLogicalNumberingScheme pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.RaspberryPi3Driver.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="raspberryPi3Driver.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetPinMode">
+      <MemberSignature Language="C#" Value="protected internal override System.Device.Gpio.PinMode GetPinMode (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance valuetype System.Device.Gpio.PinMode GetPinMode(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.RaspberryPi3Driver.GetPinMode(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function GetPinMode (pinNumber As Integer) As PinMode" />
+      <MemberSignature Language="F#" Value="override this.GetPinMode : int -&gt; System.Device.Gpio.PinMode" Usage="raspberryPi3Driver.GetPinMode pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="IsPinModeSupported">
+      <MemberSignature Language="C#" Value="protected internal override bool IsPinModeSupported (int pinNumber, System.Device.Gpio.PinMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance bool IsPinModeSupported(int32 pinNumber, valuetype System.Device.Gpio.PinMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.RaspberryPi3Driver.IsPinModeSupported(System.Int32,System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function IsPinModeSupported (pinNumber As Integer, mode As PinMode) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsPinModeSupported : int * System.Device.Gpio.PinMode -&gt; bool" Usage="raspberryPi3Driver.IsPinModeSupported (pinNumber, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="mode">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="OpenPin">
+      <MemberSignature Language="C#" Value="protected internal override void OpenPin (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void OpenPin(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.RaspberryPi3Driver.OpenPin(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub OpenPin (pinNumber As Integer)" />
+      <MemberSignature Language="F#" Value="override this.OpenPin : int -&gt; unit" Usage="raspberryPi3Driver.OpenPin pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="PinCount">
+      <MemberSignature Language="C#" Value="protected internal override int PinCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PinCount" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Gpio.Drivers.RaspberryPi3Driver.PinCount" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides ReadOnly Property PinCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.PinCount : int" Usage="System.Device.Gpio.Drivers.RaspberryPi3Driver.PinCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="protected internal override System.Device.Gpio.PinValue Read (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance valuetype System.Device.Gpio.PinValue Read(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.RaspberryPi3Driver.Read(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function Read (pinNumber As Integer) As PinValue" />
+      <MemberSignature Language="F#" Value="override this.Read : int -&gt; System.Device.Gpio.PinValue" Usage="raspberryPi3Driver.Read pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCallbackForPinValueChangedEvent">
+      <MemberSignature Language="C#" Value="protected internal override void RemoveCallbackForPinValueChangedEvent (int pinNumber, System.Device.Gpio.PinChangeEventHandler callback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void RemoveCallbackForPinValueChangedEvent(int32 pinNumber, class System.Device.Gpio.PinChangeEventHandler callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.RaspberryPi3Driver.RemoveCallbackForPinValueChangedEvent(System.Int32,System.Device.Gpio.PinChangeEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub RemoveCallbackForPinValueChangedEvent (pinNumber As Integer, callback As PinChangeEventHandler)" />
+      <MemberSignature Language="F#" Value="override this.RemoveCallbackForPinValueChangedEvent : int * System.Device.Gpio.PinChangeEventHandler -&gt; unit" Usage="raspberryPi3Driver.RemoveCallbackForPinValueChangedEvent (pinNumber, callback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.Device.Gpio.PinChangeEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="callback">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="SetPinMode">
+      <MemberSignature Language="C#" Value="protected internal override void SetPinMode (int pinNumber, System.Device.Gpio.PinMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void SetPinMode(int32 pinNumber, valuetype System.Device.Gpio.PinMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.RaspberryPi3Driver.SetPinMode(System.Int32,System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub SetPinMode (pinNumber As Integer, mode As PinMode)" />
+      <MemberSignature Language="F#" Value="override this.SetPinMode : int * System.Device.Gpio.PinMode -&gt; unit" Usage="raspberryPi3Driver.SetPinMode (pinNumber, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="mode">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="SetRegister">
+      <MemberSignature Language="C#" Value="protected ulong SetRegister { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int64 SetRegister" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Gpio.Drivers.RaspberryPi3Driver.SetRegister" />
+      <MemberSignature Language="VB.NET" Value="Protected Property SetRegister As ULong" />
+      <MemberSignature Language="F#" Value="member this.SetRegister : uint64 with get, set" Usage="System.Device.Gpio.Drivers.RaspberryPi3Driver.SetRegister" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Allows directly setting the "Set pin high" register. Used for special applications only
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForEvent">
+      <MemberSignature Language="C#" Value="protected internal override System.Device.Gpio.WaitForEventResult WaitForEvent (int pinNumber, System.Device.Gpio.PinEventTypes eventTypes, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance valuetype System.Device.Gpio.WaitForEventResult WaitForEvent(int32 pinNumber, valuetype System.Device.Gpio.PinEventTypes eventTypes, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.RaspberryPi3Driver.WaitForEvent(System.Int32,System.Device.Gpio.PinEventTypes,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function WaitForEvent (pinNumber As Integer, eventTypes As PinEventTypes, cancellationToken As CancellationToken) As WaitForEventResult" />
+      <MemberSignature Language="F#" Value="override this.WaitForEvent : int * System.Device.Gpio.PinEventTypes * System.Threading.CancellationToken -&gt; System.Device.Gpio.WaitForEventResult" Usage="raspberryPi3Driver.WaitForEvent (pinNumber, eventTypes, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.WaitForEventResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="eventTypes" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="eventTypes">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForEventAsync">
+      <MemberSignature Language="C#" Value="protected internal override System.Threading.Tasks.ValueTask&lt;System.Device.Gpio.WaitForEventResult&gt; WaitForEventAsync (int pinNumber, System.Device.Gpio.PinEventTypes eventTypes, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance valuetype System.Threading.Tasks.ValueTask`1&lt;valuetype System.Device.Gpio.WaitForEventResult&gt; WaitForEventAsync(int32 pinNumber, valuetype System.Device.Gpio.PinEventTypes eventTypes, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.RaspberryPi3Driver.WaitForEventAsync(System.Int32,System.Device.Gpio.PinEventTypes,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Function WaitForEventAsync (pinNumber As Integer, eventTypes As PinEventTypes, cancellationToken As CancellationToken) As ValueTask(Of WaitForEventResult)" />
+      <MemberSignature Language="F#" Value="override this.WaitForEventAsync : int * System.Device.Gpio.PinEventTypes * System.Threading.CancellationToken -&gt; System.Threading.Tasks.ValueTask&lt;System.Device.Gpio.WaitForEventResult&gt;" Usage="raspberryPi3Driver.WaitForEventAsync (pinNumber, eventTypes, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask&lt;System.Device.Gpio.WaitForEventResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="eventTypes" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="eventTypes">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="protected internal override void Write (int pinNumber, System.Device.Gpio.PinValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig virtual instance void Write(int32 pinNumber, valuetype System.Device.Gpio.PinValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.RaspberryPi3Driver.Write(System.Int32,System.Device.Gpio.PinValue)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overrides Sub Write (pinNumber As Integer, value As PinValue)" />
+      <MemberSignature Language="F#" Value="override this.Write : int * System.Device.Gpio.PinValue -&gt; unit" Usage="raspberryPi3Driver.Write (pinNumber, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Device.Gpio.PinValue" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

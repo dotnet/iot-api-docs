@@ -1,0 +1,285 @@
+<Type Name="SenseHatLedMatrix" FullName="Iot.Device.SenseHat.SenseHatLedMatrix">
+  <TypeSignature Language="C#" Value="public abstract class SenseHatLedMatrix : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SenseHatLedMatrix extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.SenseHat.SenseHatLedMatrix" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SenseHatLedMatrix&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type SenseHatLedMatrix = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Base class for SenseHAT LED matrix
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SenseHatLedMatrix ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SenseHat.SenseHatLedMatrix.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Constructs SenseHatLedMatrix instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public abstract void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SenseHat.SenseHatLedMatrix.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit" Usage="senseHatLedMatrix.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="public abstract void Fill (System.Drawing.Color color = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Fill(valuetype System.Drawing.Color color) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SenseHat.SenseHatLedMatrix.Fill(System.Drawing.Color)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Fill (Optional color As Color = Nothing)" />
+      <MemberSignature Language="F#" Value="abstract member Fill : System.Drawing.Color -&gt; unit" Usage="senseHatLedMatrix.Fill color" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="color" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="color">Color to fill the device with</param>
+        <summary>
+            Fill LED matrix with a specific color
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexToPosition">
+      <MemberSignature Language="C#" Value="public static (int,int) IndexToPosition (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.ValueTuple`2&lt;int32, int32&gt; IndexToPosition(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SenseHat.SenseHatLedMatrix.IndexToPosition(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function IndexToPosition (index As Integer) As ValueTuple(Of Integer, Integer)" />
+      <MemberSignature Language="F#" Value="static member IndexToPosition : int -&gt; ValueTuple&lt;int, int&gt;" Usage="Iot.Device.SenseHat.SenseHatLedMatrix.IndexToPosition index" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;System.Int32,System.Int32&gt;</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="iot-dotnet-1.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "x", "y" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "x", "y" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">Index</param>
+        <summary>
+            Translates position in the buffer to X, Y coordinates
+            </summary>
+        <returns>Tuple of X and Y coordinates</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfPixels">
+      <MemberSignature Language="C#" Value="public const int NumberOfPixels = 64;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 NumberOfPixels = (64)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.SenseHat.SenseHatLedMatrix.NumberOfPixels" />
+      <MemberSignature Language="VB.NET" Value="Public Const NumberOfPixels As Integer  = 64" />
+      <MemberSignature Language="F#" Value="val mutable NumberOfPixels : int" Usage="Iot.Device.SenseHat.SenseHatLedMatrix.NumberOfPixels" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>64</MemberValue>
+      <Docs>
+        <summary>
+            Total number of pixels
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfPixelsPerColumn">
+      <MemberSignature Language="C#" Value="protected const int NumberOfPixelsPerColumn = 8;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal int32 NumberOfPixelsPerColumn = (8)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.SenseHat.SenseHatLedMatrix.NumberOfPixelsPerColumn" />
+      <MemberSignature Language="VB.NET" Value="Protected Const NumberOfPixelsPerColumn As Integer  = 8" />
+      <MemberSignature Language="F#" Value="val mutable NumberOfPixelsPerColumn : int" Usage="Iot.Device.SenseHat.SenseHatLedMatrix.NumberOfPixelsPerColumn" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>
+            Number of pixels per column
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfPixelsPerRow">
+      <MemberSignature Language="C#" Value="public const int NumberOfPixelsPerRow = 8;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 NumberOfPixelsPerRow = (8)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.SenseHat.SenseHatLedMatrix.NumberOfPixelsPerRow" />
+      <MemberSignature Language="VB.NET" Value="Public Const NumberOfPixelsPerRow As Integer  = 8" />
+      <MemberSignature Language="F#" Value="val mutable NumberOfPixelsPerRow : int" Usage="Iot.Device.SenseHat.SenseHatLedMatrix.NumberOfPixelsPerRow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>
+            Number of pixels per row
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionToIndex">
+      <MemberSignature Language="C#" Value="public static int PositionToIndex (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 PositionToIndex(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SenseHat.SenseHatLedMatrix.PositionToIndex(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function PositionToIndex (x As Integer, y As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="static member PositionToIndex : int * int -&gt; int" Usage="Iot.Device.SenseHat.SenseHatLedMatrix.PositionToIndex (x, y)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">X coordinate</param>
+        <param name="y">Y coordinate</param>
+        <summary>
+            Translate X and Y coordinates to position in the buffer
+            </summary>
+        <returns>Position in the buffer</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPixel">
+      <MemberSignature Language="C#" Value="public abstract void SetPixel (int x, int y, System.Drawing.Color color);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetPixel(int32 x, int32 y, valuetype System.Drawing.Color color) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SenseHat.SenseHatLedMatrix.SetPixel(System.Int32,System.Int32,System.Drawing.Color)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetPixel (x As Integer, y As Integer, color As Color)" />
+      <MemberSignature Language="F#" Value="abstract member SetPixel : int * int * System.Drawing.Color -&gt; unit" Usage="senseHatLedMatrix.SetPixel (x, y, color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="color" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="x">X coordinate</param>
+        <param name="y">Y coordinate</param>
+        <param name="color">Color to be set in the specified position</param>
+        <summary>
+            Sets color on specific position of the LED matrix
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (ReadOnlySpan&lt;System.Drawing.Color&gt; colors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(valuetype System.ReadOnlySpan`1&lt;valuetype System.Drawing.Color&gt; colors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SenseHat.SenseHatLedMatrix.Write(System.ReadOnlySpan{System.Drawing.Color})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Write (colors As ReadOnlySpan(Of Color))" />
+      <MemberSignature Language="F#" Value="abstract member Write : ReadOnlySpan&lt;System.Drawing.Color&gt; -&gt; unit" Usage="senseHatLedMatrix.Write colors" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="colors" Type="System.ReadOnlySpan&lt;System.Drawing.Color&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="colors">Array of colors</param>
+        <summary>
+            Write colors to the device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

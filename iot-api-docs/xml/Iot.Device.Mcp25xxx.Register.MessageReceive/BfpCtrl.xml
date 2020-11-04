@@ -1,0 +1,307 @@
+<Type Name="BfpCtrl" FullName="Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl">
+  <TypeSignature Language="C#" Value="public class BfpCtrl : Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BfpCtrl extends System.Object implements class Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl" />
+  <TypeSignature Language="VB.NET" Value="Public Class BfpCtrl&#xA;Implements IRegister" />
+  <TypeSignature Language="F#" Value="type BfpCtrl = class&#xA;    interface IRegister" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Mcp25xxx.Register.IRegister</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            RxnBF Pin Control and Status Register.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BfpCtrl (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl.#ctor(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (value As Byte)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl : byte -&gt; Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl" Usage="new Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl value" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">The value that represents the register contents.</param>
+        <summary>
+            Initializes a new instance of the BfpCtrl class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BfpCtrl (bool rx0bfPinOperationMode, bool rx1bfPinOperationMode, bool rx0bfPinFunctionEnable, bool rx1bfPinFunctionEnable, bool rx0bfPinState, bool rx1bfPinState);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool rx0bfPinOperationMode, bool rx1bfPinOperationMode, bool rx0bfPinFunctionEnable, bool rx1bfPinFunctionEnable, bool rx0bfPinState, bool rx1bfPinState) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl.#ctor(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (rx0bfPinOperationMode As Boolean, rx1bfPinOperationMode As Boolean, rx0bfPinFunctionEnable As Boolean, rx1bfPinFunctionEnable As Boolean, rx0bfPinState As Boolean, rx1bfPinState As Boolean)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl : bool * bool * bool * bool * bool * bool -&gt; Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl" Usage="new Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl (rx0bfPinOperationMode, rx1bfPinOperationMode, rx0bfPinFunctionEnable, rx1bfPinFunctionEnable, rx0bfPinState, rx1bfPinState)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rx0bfPinOperationMode" Type="System.Boolean" />
+        <Parameter Name="rx1bfPinOperationMode" Type="System.Boolean" />
+        <Parameter Name="rx0bfPinFunctionEnable" Type="System.Boolean" />
+        <Parameter Name="rx1bfPinFunctionEnable" Type="System.Boolean" />
+        <Parameter Name="rx0bfPinState" Type="System.Boolean" />
+        <Parameter Name="rx1bfPinState" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="rx0bfPinOperationMode">
+            B0BFM: Rx0BF Pin Operation mode bit.
+            True = Pin is used as an interrupt when a valid message is loaded into RXB0.
+            False = Digital Output mode.
+            </param>
+        <param name="rx1bfPinOperationMode">
+            B1BFM: Rx1BF Pin Operation mode bit.
+            True = Pin is used as an interrupt when a valid message is loaded into RXB1.
+            False = Digital Output mode.
+            </param>
+        <param name="rx0bfPinFunctionEnable">
+            B0BFE: Rx0BF Pin Function Enable bit.
+            True = Pin function is enabled, operation mode is determined by the B0BFM bit.
+            False = Pin function is disabled, pin goes to the high-impedance state.
+            </param>
+        <param name="rx1bfPinFunctionEnable">
+            B1BFE: Rx1BF Pin Function Enable bit.
+            True = Pin function is enabled, operation mode is determined by the B1BFM bit.
+            False = Pin function is disabled, pin goes to the high-impedance state.
+            </param>
+        <param name="rx0bfPinState">
+            B0BFS: Rx0BF Pin State bit (Digital Output mode only).
+            Reads as '0' when Rx0BF is configured as an interrupt pin.
+            </param>
+        <param name="rx1bfPinState">
+            B1BFS: Rx1BF Pin State bit (Digital Output mode only).
+            Reads as '0' when Rx1BF is configured as an interrupt pin.
+            </param>
+        <summary>
+            Initializes a new instance of the BfpCtrl class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mcp25xxx.Register.Address Address { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Mcp25xxx.Register.Address Address" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl.Address" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Address As Address" />
+      <MemberSignature Language="F#" Value="member this.Address : Iot.Device.Mcp25xxx.Register.Address" Usage="Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl.Address" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Mcp25xxx.Register.IRegister.Address</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp25xxx.Register.Address</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the address of the register.
+            </summary>
+        <value>The address of the register.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rx0bfPinFunctionEnable">
+      <MemberSignature Language="C#" Value="public bool Rx0bfPinFunctionEnable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Rx0bfPinFunctionEnable" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl.Rx0bfPinFunctionEnable" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Rx0bfPinFunctionEnable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Rx0bfPinFunctionEnable : bool" Usage="Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl.Rx0bfPinFunctionEnable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            B0BFE: Rx0BF Pin Function Enable bit.
+            True = Pin function is enabled, operation mode is determined by the B0BFM bit.
+            False = Pin function is disabled, pin goes to the high-impedance state.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rx0bfPinOperationMode">
+      <MemberSignature Language="C#" Value="public bool Rx0bfPinOperationMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Rx0bfPinOperationMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl.Rx0bfPinOperationMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Rx0bfPinOperationMode As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Rx0bfPinOperationMode : bool" Usage="Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl.Rx0bfPinOperationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            B0BFM: Rx0BF Pin Operation mode bit.
+            True = Pin is used as an interrupt when a valid message is loaded into RXB0.
+            False = Digital Output mode.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rx0bfPinState">
+      <MemberSignature Language="C#" Value="public bool Rx0bfPinState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Rx0bfPinState" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl.Rx0bfPinState" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Rx0bfPinState As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Rx0bfPinState : bool" Usage="Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl.Rx0bfPinState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            B0BFS: Rx0BF Pin State bit (Digital Output mode only).
+            Reads as '0' when Rx0BF is configured as an interrupt pin.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rx1bfPinFunctionEnable">
+      <MemberSignature Language="C#" Value="public bool Rx1bfPinFunctionEnable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Rx1bfPinFunctionEnable" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl.Rx1bfPinFunctionEnable" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Rx1bfPinFunctionEnable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Rx1bfPinFunctionEnable : bool" Usage="Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl.Rx1bfPinFunctionEnable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            B1BFE: Rx1BF Pin Function Enable bit.
+            True = Pin function is enabled, operation mode is determined by the B1BFM bit.
+            False = Pin function is disabled, pin goes to the high-impedance state.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rx1bfPinOperationMode">
+      <MemberSignature Language="C#" Value="public bool Rx1bfPinOperationMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Rx1bfPinOperationMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl.Rx1bfPinOperationMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Rx1bfPinOperationMode As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Rx1bfPinOperationMode : bool" Usage="Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl.Rx1bfPinOperationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            B1BFM: Rx1BF Pin Operation mode bit.
+            True = Pin is used as an interrupt when a valid message is loaded into RXB1.
+            False = Digital Output mode.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rx1bfPinState">
+      <MemberSignature Language="C#" Value="public bool Rx1bfPinState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Rx1bfPinState" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl.Rx1bfPinState" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Rx1bfPinState As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Rx1bfPinState : bool" Usage="Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl.Rx1bfPinState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            B1BFS: Rx1BF Pin State bit (Digital Output mode only).
+            Reads as '0' when Rx1BF is configured as an interrupt pin.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToByte">
+      <MemberSignature Language="C#" Value="public byte ToByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8 ToByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.MessageReceive.BfpCtrl.ToByte" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToByte () As Byte" />
+      <MemberSignature Language="F#" Value="abstract member ToByte : unit -&gt; byte&#xA;override this.ToByte : unit -&gt; byte" Usage="bfpCtrl.ToByte " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Mcp25xxx.Register.IRegister.ToByte</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Converts register contents to a byte.
+            </summary>
+        <returns>The byte that represent the register contents.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

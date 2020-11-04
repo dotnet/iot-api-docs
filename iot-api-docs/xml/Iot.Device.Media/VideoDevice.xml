@@ -1,0 +1,450 @@
+<Type Name="VideoDevice" FullName="Iot.Device.Media.VideoDevice">
+  <TypeSignature Language="C#" Value="public abstract class VideoDevice : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit VideoDevice extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Media.VideoDevice" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class VideoDevice&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type VideoDevice = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            The communications channel to a video device.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected VideoDevice ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.VideoDevice.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Capture">
+      <MemberSignature Language="C#" Value="public abstract System.IO.Stream Capture ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.IO.Stream Capture() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.VideoDevice.Capture" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Capture () As Stream" />
+      <MemberSignature Language="F#" Value="abstract member Capture : unit -&gt; System.IO.Stream" Usage="videoDevice.Capture " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.IO.Stream</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Capture a picture from the video device.
+            </summary>
+        <returns>Picture stream.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Capture">
+      <MemberSignature Language="C#" Value="public abstract void Capture (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Capture(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.VideoDevice.Capture(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Capture (path As String)" />
+      <MemberSignature Language="F#" Value="abstract member Capture : string -&gt; unit" Usage="videoDevice.Capture path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path">Picture save path.</param>
+        <summary>
+            Capture a picture from the video device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Media.VideoDevice Create (Iot.Device.Media.VideoConnectionSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Media.VideoDevice Create(class Iot.Device.Media.VideoConnectionSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.VideoDevice.Create(Iot.Device.Media.VideoConnectionSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (settings As VideoConnectionSettings) As VideoDevice" />
+      <MemberSignature Language="F#" Value="static member Create : Iot.Device.Media.VideoConnectionSettings -&gt; Iot.Device.Media.VideoDevice" Usage="Iot.Device.Media.VideoDevice.Create settings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Media.VideoDevice</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="settings" Type="Iot.Device.Media.VideoConnectionSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings">The connection settings of a video device.</param>
+        <summary>
+            Create a communications channel to a video device running on Unix.
+            </summary>
+        <returns>A communications channel to a video device running on Unix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DevicePath">
+      <MemberSignature Language="C#" Value="public abstract string DevicePath { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DevicePath" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Media.VideoDevice.DevicePath" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property DevicePath As String" />
+      <MemberSignature Language="F#" Value="member this.DevicePath : string with get, set" Usage="Iot.Device.Media.VideoDevice.DevicePath" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Path to video resources located on the platform.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.VideoDevice.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="videoDevice.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.VideoDevice.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="videoDevice.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">True to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+        <summary>
+            Releases the unmanaged resources used by the VideoDevice and optionally releases the managed resources.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPixelFormatResolutions">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;ValueTuple&lt;uint,uint&gt;&gt; GetPixelFormatResolutions (Iot.Device.Media.PixelFormat format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;valuetype System.ValueTuple`2&lt;unsigned int32, unsigned int32&gt;&gt; GetPixelFormatResolutions(valuetype Iot.Device.Media.PixelFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.VideoDevice.GetPixelFormatResolutions(Iot.Device.Media.PixelFormat)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetPixelFormatResolutions (format As PixelFormat) As IEnumerable(Of ValueTuple(Of UInteger, UInteger))" />
+      <MemberSignature Language="F#" Value="abstract member GetPixelFormatResolutions : Iot.Device.Media.PixelFormat -&gt; seq&lt;ValueTuple&lt;uint32, uint32&gt;&gt;" Usage="videoDevice.GetPixelFormatResolutions format" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.ValueTuple&lt;System.UInt32,System.UInt32&gt;&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "Width", "Height" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "Width", "Height" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="format" Type="Iot.Device.Media.PixelFormat" />
+      </Parameters>
+      <Docs>
+        <param name="format">Pixel format.</param>
+        <summary>
+            Get all the resolutions supported by the specified pixel format.
+            </summary>
+        <returns>Supported resolution.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSupportedPixelFormats">
+      <MemberSignature Language="C#" Value="public abstract System.Collections.Generic.IEnumerable&lt;Iot.Device.Media.PixelFormat&gt; GetSupportedPixelFormats ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerable`1&lt;valuetype Iot.Device.Media.PixelFormat&gt; GetSupportedPixelFormats() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.VideoDevice.GetSupportedPixelFormats" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetSupportedPixelFormats () As IEnumerable(Of PixelFormat)" />
+      <MemberSignature Language="F#" Value="abstract member GetSupportedPixelFormats : unit -&gt; seq&lt;Iot.Device.Media.PixelFormat&gt;" Usage="videoDevice.GetSupportedPixelFormats " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Iot.Device.Media.PixelFormat&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get all the pixel formats supported by the device.
+            </summary>
+        <returns>Supported pixel formats.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVideoDeviceValue">
+      <MemberSignature Language="C#" Value="public abstract Iot.Device.Media.VideoDeviceValue GetVideoDeviceValue (Iot.Device.Media.VideoDeviceValueType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Iot.Device.Media.VideoDeviceValue GetVideoDeviceValue(valuetype Iot.Device.Media.VideoDeviceValueType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.VideoDevice.GetVideoDeviceValue(Iot.Device.Media.VideoDeviceValueType)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetVideoDeviceValue (type As VideoDeviceValueType) As VideoDeviceValue" />
+      <MemberSignature Language="F#" Value="abstract member GetVideoDeviceValue : Iot.Device.Media.VideoDeviceValueType -&gt; Iot.Device.Media.VideoDeviceValue" Usage="videoDevice.GetVideoDeviceValue type" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Media.VideoDeviceValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="Iot.Device.Media.VideoDeviceValueType" />
+      </Parameters>
+      <Docs>
+        <param name="type">The type of a video device's control.</param>
+        <summary>
+            Query controls value from the video device.
+            </summary>
+        <returns>The default and current values of a video device's control.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Nv12ToRgb">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Color[] Nv12ToRgb (System.IO.Stream stream, (uint,uint) size);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Color[] Nv12ToRgb(class System.IO.Stream stream, valuetype System.ValueTuple`2&lt;unsigned int32, unsigned int32&gt; size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.VideoDevice.Nv12ToRgb(System.IO.Stream,System.ValueTuple{System.UInt32,System.UInt32})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Nv12ToRgb (stream As Stream, size As ValueTuple(Of UInteger, UInteger)) As Color()" />
+      <MemberSignature Language="F#" Value="static member Nv12ToRgb : System.IO.Stream * ValueTuple&lt;uint32, uint32&gt; -&gt; System.Drawing.Color[]" Usage="Iot.Device.Media.VideoDevice.Nv12ToRgb (stream, size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="size" Type="System.ValueTuple&lt;System.UInt32,System.UInt32&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "Width", "Height" })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "Width", "Height" })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="stream">NV12 stream.</param>
+        <param name="size">Image size in the stream.</param>
+        <summary>
+            Convert NV12(YUV420) to RGB format.
+            </summary>
+        <returns>RGB format colors.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RgbToBitmap">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Bitmap RgbToBitmap ((uint,uint) size, System.Drawing.Color[] colors, System.Drawing.Imaging.PixelFormat format = System.Drawing.Imaging.PixelFormat.Format24bppRgb);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Drawing.Bitmap RgbToBitmap(valuetype System.ValueTuple`2&lt;unsigned int32, unsigned int32&gt; size, valuetype System.Drawing.Color[] colors, valuetype System.Drawing.Imaging.PixelFormat format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.VideoDevice.RgbToBitmap(System.ValueTuple{System.UInt32,System.UInt32},System.Drawing.Color[],System.Drawing.Imaging.PixelFormat)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RgbToBitmap (size As ValueTuple(Of UInteger, UInteger), colors As Color(), Optional format As PixelFormat = System.Drawing.Imaging.PixelFormat.Format24bppRgb) As Bitmap" />
+      <MemberSignature Language="F#" Value="static member RgbToBitmap : ValueTuple&lt;uint32, uint32&gt; * System.Drawing.Color[] * System.Drawing.Imaging.PixelFormat -&gt; System.Drawing.Bitmap" Usage="Iot.Device.Media.VideoDevice.RgbToBitmap (size, colors, format)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Bitmap</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="size" Type="System.ValueTuple&lt;System.UInt32,System.UInt32&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "Width", "Height" })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "Width", "Height" })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+        <Parameter Name="colors" Type="System.Drawing.Color[]" />
+        <Parameter Name="format" Type="System.Drawing.Imaging.PixelFormat" />
+      </Parameters>
+      <Docs>
+        <param name="size">Image size in the RGB data.</param>
+        <param name="colors">RGB data.</param>
+        <param name="format">Bitmap pixel format</param>
+        <summary>
+            Convert RGB format to bitmap
+            </summary>
+        <returns>Bitmap</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Settings">
+      <MemberSignature Language="C#" Value="public abstract Iot.Device.Media.VideoConnectionSettings Settings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Media.VideoConnectionSettings Settings" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Media.VideoDevice.Settings" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Settings As VideoConnectionSettings" />
+      <MemberSignature Language="F#" Value="member this.Settings : Iot.Device.Media.VideoConnectionSettings" Usage="Iot.Device.Media.VideoDevice.Settings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Media.VideoConnectionSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The connection settings of the video device.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="YuvToRgb">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Color[] YuvToRgb (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Color[] YuvToRgb(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.VideoDevice.YuvToRgb(System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function YuvToRgb (stream As Stream) As Color()" />
+      <MemberSignature Language="F#" Value="static member YuvToRgb : System.IO.Stream -&gt; System.Drawing.Color[]" Usage="Iot.Device.Media.VideoDevice.YuvToRgb stream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">YUV stream.</param>
+        <summary>
+            Convert YUV(YUV444) to RGB format.
+            </summary>
+        <returns>RGB format colors.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="YuyvToRgb">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Color[] YuyvToRgb (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Color[] YuyvToRgb(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.VideoDevice.YuyvToRgb(System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function YuyvToRgb (stream As Stream) As Color()" />
+      <MemberSignature Language="F#" Value="static member YuyvToRgb : System.IO.Stream -&gt; System.Drawing.Color[]" Usage="Iot.Device.Media.VideoDevice.YuyvToRgb stream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="stream">YUYV stream.</param>
+        <summary>
+            Convert YUYV(YUV422) to RGB format.
+            </summary>
+        <returns>RGB format colors.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Yv12ToRgb">
+      <MemberSignature Language="C#" Value="public static System.Drawing.Color[] Yv12ToRgb (System.IO.Stream stream, (uint,uint) size);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Drawing.Color[] Yv12ToRgb(class System.IO.Stream stream, valuetype System.ValueTuple`2&lt;unsigned int32, unsigned int32&gt; size) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.VideoDevice.Yv12ToRgb(System.IO.Stream,System.ValueTuple{System.UInt32,System.UInt32})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Yv12ToRgb (stream As Stream, size As ValueTuple(Of UInteger, UInteger)) As Color()" />
+      <MemberSignature Language="F#" Value="static member Yv12ToRgb : System.IO.Stream * ValueTuple&lt;uint32, uint32&gt; -&gt; System.Drawing.Color[]" Usage="Iot.Device.Media.VideoDevice.Yv12ToRgb (stream, size)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="size" Type="System.ValueTuple&lt;System.UInt32,System.UInt32&gt;">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "Width", "Height" })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "Width", "Height" })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="stream">YV12 stream.</param>
+        <param name="size">Image size in the stream.</param>
+        <summary>
+            Convert YV12(YUV420) to RGB format.
+            </summary>
+        <returns>RGB format colors.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,162 @@
+<Type Name="CanRaw" FullName="Iot.Device.SocketCan.CanRaw">
+  <TypeSignature Language="C#" Value="public class CanRaw : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CanRaw extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.SocketCan.CanRaw" />
+  <TypeSignature Language="VB.NET" Value="Public Class CanRaw&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type CanRaw = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Allows reading and writing raw frames to CAN Bus
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CanRaw (string networkInterface = &quot;can0&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string networkInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SocketCan.CanRaw.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional networkInterface As String = &quot;can0&quot;)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.SocketCan.CanRaw : string -&gt; Iot.Device.SocketCan.CanRaw" Usage="new Iot.Device.SocketCan.CanRaw networkInterface" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="networkInterface" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="networkInterface">Name of the network interface</param>
+        <summary>
+            Constructs CanRaw instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SocketCan.CanRaw.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="canRaw.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Filter">
+      <MemberSignature Language="C#" Value="public void Filter (Iot.Device.SocketCan.CanId id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Filter(valuetype Iot.Device.SocketCan.CanId id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SocketCan.CanRaw.Filter(Iot.Device.SocketCan.CanId)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Filter (id As CanId)" />
+      <MemberSignature Language="F#" Value="member this.Filter : Iot.Device.SocketCan.CanId -&gt; unit" Usage="canRaw.Filter id" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="Iot.Device.SocketCan.CanId" />
+      </Parameters>
+      <Docs>
+        <param name="id">Recipient identifier</param>
+        <summary>
+            Set filter on the bus to read only from specified recipient.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadFrame">
+      <MemberSignature Language="C#" Value="public bool TryReadFrame (Span&lt;byte&gt; data, out int frameLength, out Iot.Device.SocketCan.CanId id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadFrame(valuetype System.Span`1&lt;unsigned int8&gt; data, [out] int32&amp; frameLength, [out] valuetype Iot.Device.SocketCan.CanId&amp; id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SocketCan.CanRaw.TryReadFrame(System.Span{System.Byte},System.Int32@,Iot.Device.SocketCan.CanId@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadFrame (data As Span(Of Byte), ByRef frameLength As Integer, ByRef id As CanId) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadFrame : Span&lt;byte&gt; * int * CanId -&gt; bool" Usage="canRaw.TryReadFrame (data, frameLength, id)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Span&lt;System.Byte&gt;" />
+        <Parameter Name="frameLength" Type="System.Int32" RefType="out" />
+        <Parameter Name="id" Type="Iot.Device.SocketCan.CanId" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="data">Data where output data should be written to</param>
+        <param name="frameLength">Length of the data read</param>
+        <param name="id">Recipient identifier</param>
+        <summary>
+            Reads frame from the bus
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteFrame">
+      <MemberSignature Language="C#" Value="public void WriteFrame (ReadOnlySpan&lt;byte&gt; data, Iot.Device.SocketCan.CanId id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteFrame(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; data, valuetype Iot.Device.SocketCan.CanId id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SocketCan.CanRaw.WriteFrame(System.ReadOnlySpan{System.Byte},Iot.Device.SocketCan.CanId)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteFrame (data As ReadOnlySpan(Of Byte), id As CanId)" />
+      <MemberSignature Language="F#" Value="member this.WriteFrame : ReadOnlySpan&lt;byte&gt; * Iot.Device.SocketCan.CanId -&gt; unit" Usage="canRaw.WriteFrame (data, id)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="id" Type="Iot.Device.SocketCan.CanId" />
+      </Parameters>
+      <Docs>
+        <param name="data">Data to write (at most 8 bytes)</param>
+        <param name="id">Recipient identifier</param>
+        <summary>
+            Writes frame to the CAN Bus
+            </summary>
+        <remarks>
+          <paramref name="id" /> can be ignored by recipient - anyone connected to the bus can read or write any frames</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

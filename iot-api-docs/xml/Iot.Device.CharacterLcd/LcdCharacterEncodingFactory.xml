@@ -1,0 +1,245 @@
+<Type Name="LcdCharacterEncodingFactory" FullName="Iot.Device.CharacterLcd.LcdCharacterEncodingFactory">
+  <TypeSignature Language="C#" Value="public class LcdCharacterEncodingFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi LcdCharacterEncodingFactory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.CharacterLcd.LcdCharacterEncodingFactory" />
+  <TypeSignature Language="VB.NET" Value="Public Class LcdCharacterEncodingFactory" />
+  <TypeSignature Language="F#" Value="type LcdCharacterEncodingFactory = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Factory for creating Encodings that support different cultures on different LCD Displays.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LcdCharacterEncodingFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdCharacterEncodingFactory.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public Iot.Device.CharacterLcd.LcdCharacterEncoding Create (System.Globalization.CultureInfo culture, string romName, char unknownLetter, int maxNumberOfCustomCharacters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.CharacterLcd.LcdCharacterEncoding Create(class System.Globalization.CultureInfo culture, string romName, char unknownLetter, int32 maxNumberOfCustomCharacters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdCharacterEncodingFactory.Create(System.Globalization.CultureInfo,System.String,System.Char,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Create (culture As CultureInfo, romName As String, unknownLetter As Char, maxNumberOfCustomCharacters As Integer) As LcdCharacterEncoding" />
+      <MemberSignature Language="F#" Value="member this.Create : System.Globalization.CultureInfo * string * char * int -&gt; Iot.Device.CharacterLcd.LcdCharacterEncoding" Usage="lcdCharacterEncodingFactory.Create (culture, romName, unknownLetter, maxNumberOfCustomCharacters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.CharacterLcd.LcdCharacterEncoding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="romName" Type="System.String" />
+        <Parameter Name="unknownLetter" Type="System.Char" />
+        <Parameter Name="maxNumberOfCustomCharacters" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Culture for which support is required</param>
+        <param name="romName">ROM type of attached chip. Supported values: "A00" and "A02"</param>
+        <param name="unknownLetter">Letter that is printed when an unknown character is encountered. This letter must be part of the
+            default rom set</param>
+        <param name="maxNumberOfCustomCharacters">Maximum number of custom characters supported on the hardware. Should be 8 for Hd44780-controlled displays.</param>
+        <summary>
+            Creates the character mapping optimized for the given culture.
+            Checks whether the characters required for a given culture are available in the installed character map and tries
+            to add them as user-defined characters, if possible.
+            </summary>
+        <returns>The newly created encoding. Whether the encoding can be loaded to a certain display will be decided later.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">The character specified as unknownLetter must be part of the mapping.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCustomCharacter">
+      <MemberSignature Language="C#" Value="protected byte[] CreateCustomCharacter (byte byte0, byte byte1, byte byte2, byte byte3, byte byte4, byte byte5, byte byte6, byte byte7);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance unsigned int8[] CreateCustomCharacter(unsigned int8 byte0, unsigned int8 byte1, unsigned int8 byte2, unsigned int8 byte3, unsigned int8 byte4, unsigned int8 byte5, unsigned int8 byte6, unsigned int8 byte7) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdCharacterEncodingFactory.CreateCustomCharacter(System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function CreateCustomCharacter (byte0 As Byte, byte1 As Byte, byte2 As Byte, byte3 As Byte, byte4 As Byte, byte5 As Byte, byte6 As Byte, byte7 As Byte) As Byte()" />
+      <MemberSignature Language="F#" Value="member this.CreateCustomCharacter : byte * byte * byte * byte * byte * byte * byte * byte -&gt; byte[]" Usage="lcdCharacterEncodingFactory.CreateCustomCharacter (byte0, byte1, byte2, byte3, byte4, byte5, byte6, byte7)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="byte0" Type="System.Byte" />
+        <Parameter Name="byte1" Type="System.Byte" />
+        <Parameter Name="byte2" Type="System.Byte" />
+        <Parameter Name="byte3" Type="System.Byte" />
+        <Parameter Name="byte4" Type="System.Byte" />
+        <Parameter Name="byte5" Type="System.Byte" />
+        <Parameter Name="byte6" Type="System.Byte" />
+        <Parameter Name="byte7" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="byte0">To be added.</param>
+        <param name="byte1">To be added.</param>
+        <param name="byte2">To be added.</param>
+        <param name="byte3">To be added.</param>
+        <param name="byte4">To be added.</param>
+        <param name="byte5">To be added.</param>
+        <param name="byte6">To be added.</param>
+        <param name="byte7">To be added.</param>
+        <summary>
+            Combines a set of bytes into a pixel map
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <example>
+            Use as follows to create letter 'ü':
+            <code>
+            CreateCustomCharacter(
+                       0b_01010,
+                       0b_00000,
+                       0b_10001,
+                       0b_10001,
+                       0b_10001,
+                       0b_10011,
+                       0b_01101,
+                       0b_00000)
+            </code></example>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLetter">
+      <MemberSignature Language="C#" Value="protected virtual byte[] CreateLetter (char character, string romName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance unsigned int8[] CreateLetter(char character, string romName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdCharacterEncodingFactory.CreateLetter(System.Char,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function CreateLetter (character As Char, romName As String) As Byte()" />
+      <MemberSignature Language="F#" Value="abstract member CreateLetter : char * string -&gt; byte[]&#xA;override this.CreateLetter : char * string -&gt; byte[]" Usage="lcdCharacterEncodingFactory.CreateLetter (character, romName)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="character" Type="System.Char" />
+        <Parameter Name="romName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="character">To be added.</param>
+        <param name="romName">To be added.</param>
+        <summary>
+            Creates the given letter for the given ROM type.
+            Overwrite this only if an alternate ROM is used.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLetterA00">
+      <MemberSignature Language="C#" Value="protected virtual byte[] CreateLetterA00 (char character);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance unsigned int8[] CreateLetterA00(char character) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdCharacterEncodingFactory.CreateLetterA00(System.Char)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function CreateLetterA00 (character As Char) As Byte()" />
+      <MemberSignature Language="F#" Value="abstract member CreateLetterA00 : char -&gt; byte[]&#xA;override this.CreateLetterA00 : char -&gt; byte[]" Usage="lcdCharacterEncodingFactory.CreateLetterA00 character" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="character" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="character">Character to create</param>
+        <summary>
+            Creates the given letter from a pixel map for Rom Type A00 (7-pixel high letters, bottom row empty)
+            </summary>
+        <returns>An 8-Byte array of the pixel map for the created letter.</returns>
+        <remarks>
+            Currently requires the characters to be hardcoded here. Would be nice if we could generate the pixel maps from an existing font, such as Consolas
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLetterA02">
+      <MemberSignature Language="C#" Value="protected virtual byte[] CreateLetterA02 (char character);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance unsigned int8[] CreateLetterA02(char character) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdCharacterEncodingFactory.CreateLetterA02(System.Char)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function CreateLetterA02 (character As Char) As Byte()" />
+      <MemberSignature Language="F#" Value="abstract member CreateLetterA02 : char -&gt; byte[]&#xA;override this.CreateLetterA02 : char -&gt; byte[]" Usage="lcdCharacterEncodingFactory.CreateLetterA02 character" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="character" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="character">Character to create</param>
+        <summary>
+            Creates the given letter from a pixel map for Rom Type A02 (7 or 8 Pixel high letters, bottom row filled)
+            </summary>
+        <returns>An 8-Byte array of the pixel map for the created letter.</returns>
+        <remarks>
+            Currently requires the characters to be hardcoded here. Would be nice if we could generate the pixel maps from an existing font, such as Consolas
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpecialLettersForCulture">
+      <MemberSignature Language="C#" Value="protected virtual string SpecialLettersForCulture (System.Globalization.CultureInfo culture, System.Collections.Generic.Dictionary&lt;char,byte&gt; characterMapping);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance string SpecialLettersForCulture(class System.Globalization.CultureInfo culture, class System.Collections.Generic.Dictionary`2&lt;char, unsigned int8&gt; characterMapping) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdCharacterEncodingFactory.SpecialLettersForCulture(System.Globalization.CultureInfo,System.Collections.Generic.Dictionary{System.Char,System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function SpecialLettersForCulture (culture As CultureInfo, characterMapping As Dictionary(Of Char, Byte)) As String" />
+      <MemberSignature Language="F#" Value="abstract member SpecialLettersForCulture : System.Globalization.CultureInfo * System.Collections.Generic.Dictionary&lt;char, byte&gt; -&gt; string&#xA;override this.SpecialLettersForCulture : System.Globalization.CultureInfo * System.Collections.Generic.Dictionary&lt;char, byte&gt; -&gt; string" Usage="lcdCharacterEncodingFactory.SpecialLettersForCulture (culture, characterMapping)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="characterMapping" Type="System.Collections.Generic.Dictionary&lt;System.Char,System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Culture to support</param>
+        <param name="characterMapping">The character map, pre-loaded with the characters from the character ROM. This may be extended by explicitly adding direct mappings
+            where an alternative is allowed (i.e. mapping capital diacritics to normal capital letters É -&gt; E, when there's not enough room to put É into character RAM.</param>
+        <summary>
+            Returns the set of special characters required for a given culture/language.
+            This may include diacritics (ä, ö, ø), currency signs (€) or similar chars.
+            If any of the returned characters are not found in the ROM map, <see cref="M:Iot.Device.CharacterLcd.LcdCharacterEncodingFactory.CreateLetter(System.Char,System.String)" /> is called to obtain the pixel representation of the given character.
+            A maximum of 8 extra characters can be added to the ones in the ROM.
+            </summary>
+        <returns>A string with the set of special characters for a language, i.e. "äöüß€ÄÖÜ" for German</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

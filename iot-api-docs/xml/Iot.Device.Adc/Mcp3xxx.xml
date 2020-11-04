@@ -1,0 +1,252 @@
+<Type Name="Mcp3xxx" FullName="Iot.Device.Adc.Mcp3xxx">
+  <TypeSignature Language="C#" Value="public abstract class Mcp3xxx : Iot.Device.Adc.Mcp3Base" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Mcp3xxx extends Iot.Device.Adc.Mcp3Base" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Adc.Mcp3xxx" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Mcp3xxx&#xA;Inherits Mcp3Base" />
+  <TypeSignature Language="F#" Value="type Mcp3xxx = class&#xA;    inherit Mcp3Base" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Adc.Mcp3Base</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            MCP family of ADC devices
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Mcp3xxx (System.Device.Spi.SpiDevice spiDevice, byte channelCount, byte adcResolutionBits);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, unsigned int8 channelCount, unsigned int8 adcResolutionBits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Mcp3xxx.#ctor(System.Device.Spi.SpiDevice,System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (spiDevice As SpiDevice, channelCount As Byte, adcResolutionBits As Byte)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Adc.Mcp3xxx : System.Device.Spi.SpiDevice * byte * byte -&gt; Iot.Device.Adc.Mcp3xxx" Usage="new Iot.Device.Adc.Mcp3xxx (spiDevice, channelCount, adcResolutionBits)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" />
+        <Parameter Name="channelCount" Type="System.Byte" />
+        <Parameter Name="adcResolutionBits" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="spiDevice">Device used for SPI communication</param>
+        <param name="channelCount">Value representing the number of single ended input channels available on the device.</param>
+        <param name="adcResolutionBits">The number of bits of resolution for the ADC.</param>
+        <summary>
+            Constructs Mcp3xxx instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelCount">
+      <MemberSignature Language="C#" Value="protected byte ChannelCount;" />
+      <MemberSignature Language="ILAsm" Value=".field family unsigned int8 ChannelCount" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Adc.Mcp3xxx.ChannelCount" />
+      <MemberSignature Language="VB.NET" Value="Protected ChannelCount As Byte " />
+      <MemberSignature Language="F#" Value="val mutable ChannelCount : byte" Usage="Iot.Device.Adc.Mcp3xxx.ChannelCount" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            the number of single ended input channel on the ADC
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckChannelPairing">
+      <MemberSignature Language="C#" Value="protected void CheckChannelPairing (int valueChannel, int referenceChannel);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckChannelPairing(int32 valueChannel, int32 referenceChannel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Mcp3xxx.CheckChannelPairing(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub CheckChannelPairing (valueChannel As Integer, referenceChannel As Integer)" />
+      <MemberSignature Language="F#" Value="member this.CheckChannelPairing : int * int -&gt; unit" Usage="mcp3xxx.CheckChannelPairing (valueChannel, referenceChannel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueChannel" Type="System.Int32" />
+        <Parameter Name="referenceChannel" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="valueChannel">Value channel to be checked</param>
+        <param name="referenceChannel">Reference channel to be checked</param>
+        <summary>
+            Checks that the channel is in range of the available input channels and that both channels are part of a valid pairing of input channels.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CheckChannelRange">
+      <MemberSignature Language="C#" Value="protected void CheckChannelRange (int channel, int channelCount);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void CheckChannelRange(int32 channel, int32 channelCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Mcp3xxx.CheckChannelRange(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub CheckChannelRange (channel As Integer, channelCount As Integer)" />
+      <MemberSignature Language="F#" Value="member this.CheckChannelRange : int * int -&gt; unit" Usage="mcp3xxx.CheckChannelRange (channel, channelCount)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel" Type="System.Int32" />
+        <Parameter Name="channelCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="channel">Channel to be checked</param>
+        <param name="channelCount">Value representing the number of channels on the device which may vary depending on the configuration.</param>
+        <summary>
+            Checks that the channel is in range of the available channels channels and throws an exception if not.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public virtual int Read (int channel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Read(int32 channel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Mcp3xxx.Read(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Read (channel As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member Read : int -&gt; int&#xA;override this.Read : int -&gt; int" Usage="mcp3xxx.Read channel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="channel">Channel which value should be read from (valid values: 0 to channelcount - 1)</param>
+        <summary>
+            Reads a value from the device
+            </summary>
+        <returns>A value corresponding to relative voltage level on specified device channel</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadDifferential">
+      <MemberSignature Language="C#" Value="public virtual int ReadDifferential (int valueChannel, int referenceChannel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 ReadDifferential(int32 valueChannel, int32 referenceChannel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Mcp3xxx.ReadDifferential(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReadDifferential (valueChannel As Integer, referenceChannel As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member ReadDifferential : int * int -&gt; int&#xA;override this.ReadDifferential : int * int -&gt; int" Usage="mcp3xxx.ReadDifferential (valueChannel, referenceChannel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueChannel" Type="System.Int32" />
+        <Parameter Name="referenceChannel" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="valueChannel">Channel which represents the signal driving the value in a positive direction (valid values: 0 to channelcount - 1).</param>
+        <param name="referenceChannel">Channel which represents the signal driving the value in a negative direction (valid values: 0 to channelcount - 1).</param>
+        <summary>
+            Reads a value from the device using differential inputs
+            </summary>
+        <returns>A value corresponding to relative voltage level on specified device channels</returns>
+        <remarks>
+            The value that is read respresents the difference between the voltage on the value channel and the voltage on the reference channel (valueChannel Reading - referenceChannel Reading).
+            This subtraction is performed in software which may mean that errors are introduced with rapidly changing signals.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadInternal">
+      <MemberSignature Language="C#" Value="protected int ReadInternal (int channel, Iot.Device.Adc.Mcp3Base.InputType inputType, int adcResolutionBits);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance int32 ReadInternal(int32 channel, valuetype Iot.Device.Adc.Mcp3Base/InputType inputType, int32 adcResolutionBits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Mcp3xxx.ReadInternal(System.Int32,Iot.Device.Adc.Mcp3Base.InputType,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function ReadInternal (channel As Integer, inputType As Mcp3Base.InputType, adcResolutionBits As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="override this.ReadInternal : int * Iot.Device.Adc.Mcp3Base.InputType * int -&gt; int" Usage="mcp3xxx.ReadInternal (channel, inputType, adcResolutionBits)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel" Type="System.Int32" />
+        <Parameter Name="inputType" Type="Iot.Device.Adc.Mcp3Base+InputType" />
+        <Parameter Name="adcResolutionBits" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="channel">Channel which value should be read from. For diffential inputs this represents a channel pair (valid values: 0 - channelcount - 1 or 0 - channelcount / 2 - 1  with differential inputs)</param>
+        <param name="inputType">The type of input channel to read.</param>
+        <param name="adcResolutionBits">The number of bits in the returned value</param>
+        <summary>
+            Reads a value from the device
+            </summary>
+        <returns>A value corresponding to relative voltage level on specified device channel</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadPseudoDifferential">
+      <MemberSignature Language="C#" Value="public virtual int ReadPseudoDifferential (int valueChannel, int referenceChannel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 ReadPseudoDifferential(int32 valueChannel, int32 referenceChannel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Mcp3xxx.ReadPseudoDifferential(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReadPseudoDifferential (valueChannel As Integer, referenceChannel As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member ReadPseudoDifferential : int * int -&gt; int&#xA;override this.ReadPseudoDifferential : int * int -&gt; int" Usage="mcp3xxx.ReadPseudoDifferential (valueChannel, referenceChannel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="valueChannel" Type="System.Int32" />
+        <Parameter Name="referenceChannel" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="valueChannel">Channel which represents the signal (valid values: 0 to channelcount - 1).</param>
+        <param name="referenceChannel">Channel which represents the signal ground (valid values: 0 to channelcount - 1).</param>
+        <summary>
+            Reads a  value from the device using pseudo-differential inputs
+            </summary>
+        <returns>A value corresponding to relative voltage level on specified device channels</returns>
+        <remarks>
+            Like a normal differential input the value that is read respresents the difference between the voltage on the value channel and the voltage on the reference channel (valueChannel Reading - referenceChannel Reading).
+            However the reference signal in a pseudo-differential input is expected to be connected to the signal ground. This is used to reduce the effect of external electrical noise on the on the inputs. If there is noise where
+            the noise is likey to impact both the value input and the reference input and the action of subtracting the values helps to cancel it out.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

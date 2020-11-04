@@ -1,0 +1,437 @@
+<Type Name="LcdInterface" FullName="Iot.Device.CharacterLcd.LcdInterface">
+  <TypeSignature Language="C#" Value="public abstract class LcdInterface : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit LcdInterface extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.CharacterLcd.LcdInterface" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class LcdInterface&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type LcdInterface = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Abstraction layer for accessing the lcd IC.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected LcdInterface ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdInterface.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BacklightOn">
+      <MemberSignature Language="C#" Value="public abstract bool BacklightOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BacklightOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.LcdInterface.BacklightOn" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property BacklightOn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.BacklightOn : bool with get, set" Usage="Iot.Device.CharacterLcd.LcdInterface.BacklightOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enable/disable the backlight. (Will always return false if no backlight pin was provided.)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateGpio">
+      <MemberSignature Language="C#" Value="public static Iot.Device.CharacterLcd.LcdInterface CreateGpio (int registerSelectPin, int enablePin, int[] dataPins, int backlightPin = -1, float backlightBrightness = 1, int readWritePin = -1, System.Device.Gpio.GpioController controller = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.CharacterLcd.LcdInterface CreateGpio(int32 registerSelectPin, int32 enablePin, int32[] dataPins, int32 backlightPin, float32 backlightBrightness, int32 readWritePin, class System.Device.Gpio.GpioController controller) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdInterface.CreateGpio(System.Int32,System.Int32,System.Int32[],System.Int32,System.Single,System.Int32,System.Device.Gpio.GpioController)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateGpio (registerSelectPin As Integer, enablePin As Integer, dataPins As Integer(), Optional backlightPin As Integer = -1, Optional backlightBrightness As Single = 1, Optional readWritePin As Integer = -1, Optional controller As GpioController = Nothing) As LcdInterface" />
+      <MemberSignature Language="F#" Value="static member CreateGpio : int * int * int[] * int * single * int * System.Device.Gpio.GpioController -&gt; Iot.Device.CharacterLcd.LcdInterface" Usage="Iot.Device.CharacterLcd.LcdInterface.CreateGpio (registerSelectPin, enablePin, dataPins, backlightPin, backlightBrightness, readWritePin, controller)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.CharacterLcd.LcdInterface</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="registerSelectPin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="enablePin" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="dataPins" Type="System.Int32[]" Index="2" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="backlightPin" Type="System.Int32" Index="3" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="backlightBrightness" Type="System.Single" Index="4" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="readWritePin" Type="System.Int32" Index="5" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="6" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="registerSelectPin">To be added.</param>
+        <param name="enablePin">To be added.</param>
+        <param name="dataPins">To be added.</param>
+        <param name="backlightPin">To be added.</param>
+        <param name="backlightBrightness">To be added.</param>
+        <param name="readWritePin">To be added.</param>
+        <param name="controller">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateGpio">
+      <MemberSignature Language="C#" Value="public static Iot.Device.CharacterLcd.LcdInterface CreateGpio (int registerSelectPin, int enablePin, int[] dataPins, int backlightPin = -1, float backlightBrightness = 1, int readWritePin = -1, System.Device.Gpio.GpioController controller = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.CharacterLcd.LcdInterface CreateGpio(int32 registerSelectPin, int32 enablePin, int32[] dataPins, int32 backlightPin, float32 backlightBrightness, int32 readWritePin, class System.Device.Gpio.GpioController controller, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdInterface.CreateGpio(System.Int32,System.Int32,System.Int32[],System.Int32,System.Single,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateGpio (registerSelectPin As Integer, enablePin As Integer, dataPins As Integer(), Optional backlightPin As Integer = -1, Optional backlightBrightness As Single = 1, Optional readWritePin As Integer = -1, Optional controller As GpioController = Nothing, Optional shouldDispose As Boolean = true) As LcdInterface" />
+      <MemberSignature Language="F#" Value="static member CreateGpio : int * int * int[] * int * single * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.CharacterLcd.LcdInterface" Usage="Iot.Device.CharacterLcd.LcdInterface.CreateGpio (registerSelectPin, enablePin, dataPins, backlightPin, backlightBrightness, readWritePin, controller, shouldDispose)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.CharacterLcd.LcdInterface</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="registerSelectPin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="enablePin" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="dataPins" Type="System.Int32[]" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="backlightPin" Type="System.Int32" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="backlightBrightness" Type="System.Single" Index="4" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="readWritePin" Type="System.Int32" Index="5" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="6" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="7" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="registerSelectPin">The pin that controls the regsiter select.</param>
+        <param name="enablePin">The pin that controls the enable switch.</param>
+        <param name="dataPins">Collection of pins holding the data that will be printed on the screen.</param>
+        <param name="backlightPin">The optional pin that controls the backlight of the display.</param>
+        <param name="backlightBrightness">The brightness of the backlight. 0.0 for off, 1.0 for on.</param>
+        <param name="readWritePin">The optional pin that controls the read and write switch.</param>
+        <param name="controller">The controller to use with the LCD. If not specified, uses the platform default.</param>
+        <param name="shouldDispose">True to dispose the Gpio Controller</param>
+        <summary>
+            Creates a GPIO based interface for the LCD.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateI2c">
+      <MemberSignature Language="C#" Value="public static Iot.Device.CharacterLcd.LcdInterface CreateI2c (System.Device.I2c.I2cDevice device);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.CharacterLcd.LcdInterface CreateI2c(class System.Device.I2c.I2cDevice device) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdInterface.CreateI2c(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateI2c (device As I2cDevice) As LcdInterface" />
+      <MemberSignature Language="F#" Value="static member CreateI2c : System.Device.I2c.I2cDevice -&gt; Iot.Device.CharacterLcd.LcdInterface" Usage="Iot.Device.CharacterLcd.LcdInterface.CreateI2c device" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.CharacterLcd.LcdInterface</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="device" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="device">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateI2c">
+      <MemberSignature Language="C#" Value="public static Iot.Device.CharacterLcd.LcdInterface CreateI2c (System.Device.I2c.I2cDevice device, bool uses8Bit = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.CharacterLcd.LcdInterface CreateI2c(class System.Device.I2c.I2cDevice device, bool uses8Bit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdInterface.CreateI2c(System.Device.I2c.I2cDevice,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateI2c (device As I2cDevice, Optional uses8Bit As Boolean = true) As LcdInterface" />
+      <MemberSignature Language="F#" Value="static member CreateI2c : System.Device.I2c.I2cDevice * bool -&gt; Iot.Device.CharacterLcd.LcdInterface" Usage="Iot.Device.CharacterLcd.LcdInterface.CreateI2c (device, uses8Bit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.CharacterLcd.LcdInterface</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="device" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="uses8Bit" Type="System.Boolean" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="device">The I2c device for the LCD.</param>
+        <param name="uses8Bit">True if the device uses 8 Bit commands, false if it handles only 4 bit commands.</param>
+        <summary>
+            Create an integrated I2c based interface for the LCD.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            This is for on-chip I2c support. For connecting via I2c GPIO expanders, use the GPIO interface <see cref="M:Iot.Device.CharacterLcd.LcdInterface.CreateGpio(System.Int32,System.Int32,System.Int32[],System.Int32,System.Single,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdInterface.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="lcdInterface.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdInterface.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="lcdInterface.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> to release both managed and unmanaged resources; <see langword="false" /> to release only unmanaged resources.</param>
+        <summary>
+            Releases unmanaged resources used by LcdInterface
+            and optionally release managed resources
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EightBitMode">
+      <MemberSignature Language="C#" Value="public abstract bool EightBitMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EightBitMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.LcdInterface.EightBitMode" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property EightBitMode As Boolean" />
+      <MemberSignature Language="F#" Value="member this.EightBitMode : bool" Usage="Iot.Device.CharacterLcd.LcdInterface.EightBitMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if device uses 8-bits for communication, false if device uses 4-bits
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendCommand">
+      <MemberSignature Language="C#" Value="public abstract void SendCommand (byte command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SendCommand(unsigned int8 command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdInterface.SendCommand(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SendCommand (command As Byte)" />
+      <MemberSignature Language="F#" Value="abstract member SendCommand : byte -&gt; unit" Usage="lcdInterface.SendCommand command" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="command">Byte representing the command</param>
+        <summary>
+            Sends command to the LCD device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendCommands">
+      <MemberSignature Language="C#" Value="public abstract void SendCommands (ReadOnlySpan&lt;byte&gt; values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SendCommands(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdInterface.SendCommands(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SendCommands (values As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="abstract member SendCommands : ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="lcdInterface.SendCommands values" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="values">Each byte represents command to be send</param>
+        <summary>
+            Send commands to the LCD device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendData">
+      <MemberSignature Language="C#" Value="public abstract void SendData (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SendData(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdInterface.SendData(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SendData (value As Byte)" />
+      <MemberSignature Language="F#" Value="abstract member SendData : byte -&gt; unit" Usage="lcdInterface.SendData value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Byte value to be sed</param>
+        <summary>
+            Sends byte to LCD device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendData">
+      <MemberSignature Language="C#" Value="public abstract void SendData (ReadOnlySpan&lt;byte&gt; values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SendData(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdInterface.SendData(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SendData (values As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="abstract member SendData : ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="lcdInterface.SendData values" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="values">Bytes to be send to the device</param>
+        <summary>
+            Sends data to the LCD device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForNotBusy">
+      <MemberSignature Language="C#" Value="public virtual void WaitForNotBusy (int microseconds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WaitForNotBusy(int32 microseconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdInterface.WaitForNotBusy(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub WaitForNotBusy (microseconds As Integer)" />
+      <MemberSignature Language="F#" Value="abstract member WaitForNotBusy : int -&gt; unit&#xA;override this.WaitForNotBusy : int -&gt; unit" Usage="lcdInterface.WaitForNotBusy microseconds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="microseconds" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="microseconds">Time to wait if checking busy state isn't possible/practical.</param>
+        <summary>
+            Wait for the device to not be busy.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitMultiplier">
+      <MemberSignature Language="C#" Value="public double WaitMultiplier { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 WaitMultiplier" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.LcdInterface.WaitMultiplier" />
+      <MemberSignature Language="VB.NET" Value="Public Property WaitMultiplier As Double" />
+      <MemberSignature Language="F#" Value="member this.WaitMultiplier : double with get, set" Usage="Iot.Device.CharacterLcd.LcdInterface.WaitMultiplier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             The command wait time multiplier for the LCD.
+             </summary>
+        <value>To be added.</value>
+        <remarks>
+             In order to handle controllers that might be running at a much slower clock
+             we're exposing a multiplier for any "hard coded" waits. This can also be
+             used to reduce the wait time when the clock runs faster or other overhead
+             (time spent in other code) allows for more aggressive timing.
+            
+             There is a busy signal that can be checked that could make this moot, but
+             currently we are unable to check the signal fast enough to make gains (or
+             even equal) going off hard timings. The busy signal also requires having a
+             r/w pin attached.
+             </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

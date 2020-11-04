@@ -1,0 +1,1258 @@
+<Type Name="GoPiGo" FullName="Iot.Device.GoPiGo3.GoPiGo">
+  <TypeSignature Language="C#" Value="public class GoPiGo : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GoPiGo extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.GoPiGo3.GoPiGo" />
+  <TypeSignature Language="VB.NET" Value="Public Class GoPiGo&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type GoPiGo = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            A GoPiGo3 class for a GoPiGo3 Dexter Industries robot kit
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GoPiGo (System.Device.Spi.SpiDevice spiDevice, byte spiAddress = 8, bool autoDetect = true, bool autoDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, unsigned int8 spiAddress, bool autoDetect, bool autoDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.#ctor(System.Device.Spi.SpiDevice,System.Byte,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (spiDevice As SpiDevice, Optional spiAddress As Byte = 8, Optional autoDetect As Boolean = true, Optional autoDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.GoPiGo3.GoPiGo : System.Device.Spi.SpiDevice * byte * bool * bool -&gt; Iot.Device.GoPiGo3.GoPiGo" Usage="new Iot.Device.GoPiGo3.GoPiGo (spiDevice, spiAddress, autoDetect, autoDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" />
+        <Parameter Name="spiAddress" Type="System.Byte" />
+        <Parameter Name="autoDetect" Type="System.Boolean" />
+        <Parameter Name="autoDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="spiDevice">The SpiDevice</param>
+        <param name="spiAddress">The SPI address, by default 8</param>
+        <param name="autoDetect">Try to autodetect the board</param>
+        <param name="autoDispose">True to dispose the SpiDevice when disposing the class</param>
+        <summary>
+            Create a GoPiGo class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="goPiGo.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reset everything
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncoderTicksPerRotation">
+      <MemberSignature Language="C#" Value="public int EncoderTicksPerRotation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 EncoderTicksPerRotation" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GoPiGo3.GoPiGo.EncoderTicksPerRotation" />
+      <MemberSignature Language="VB.NET" Value="Public Property EncoderTicksPerRotation As Integer" />
+      <MemberSignature Language="F#" Value="member this.EncoderTicksPerRotation : int with get, set" Usage="Iot.Device.GoPiGo3.GoPiGo.EncoderTicksPerRotation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set or get a specific ticks per rotation for the encoder
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoard">
+      <MemberSignature Language="C#" Value="public string GetBoard ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetBoard() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.GetBoard" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetBoard () As String" />
+      <MemberSignature Language="F#" Value="member this.GetBoard : unit -&gt; string" Usage="goPiGo.GetBoard " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read the 20 characters of GoPiGo3 board name
+            </summary>
+        <returns>Returns the GoPiGo3 board name string</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFirmwareVersion">
+      <MemberSignature Language="C#" Value="public Version GetFirmwareVersion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Version GetFirmwareVersion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.GetFirmwareVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetFirmwareVersion () As Version" />
+      <MemberSignature Language="F#" Value="member this.GetFirmwareVersion : unit -&gt; Version" Usage="goPiGo.GetFirmwareVersion " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read the firmware version
+            </summary>
+        <returns>Returns the firmware version</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGroveAnalog">
+      <MemberSignature Language="C#" Value="public int GetGroveAnalog (Iot.Device.GoPiGo3.Models.GrovePort port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetGroveAnalog(valuetype Iot.Device.GoPiGo3.Models.GrovePort port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.GetGroveAnalog(Iot.Device.GoPiGo3.Models.GrovePort)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetGroveAnalog (port As GrovePort) As Integer" />
+      <MemberSignature Language="F#" Value="member this.GetGroveAnalog : Iot.Device.GoPiGo3.Models.GrovePort -&gt; int" Usage="goPiGo.GetGroveAnalog port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.GrovePort" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Grove Pin, one at the time Grove1Pin1, Grove1Pin2, Grove2Pin1 or Grove2Pin2</param>
+        <summary>
+            Get a grove input pin 12-bit raw ADC reading
+            </summary>
+        <returns>Returns the analogic read</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGrovePwmFrequency">
+      <MemberSignature Language="C#" Value="public void GetGrovePwmFrequency (Iot.Device.GoPiGo3.Models.GrovePort port, uint freq = 24000);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetGrovePwmFrequency(valuetype Iot.Device.GoPiGo3.Models.GrovePort port, unsigned int32 freq) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.GetGrovePwmFrequency(Iot.Device.GoPiGo3.Models.GrovePort,System.UInt32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub GetGrovePwmFrequency (port As GrovePort, Optional freq As UInteger = 24000)" />
+      <MemberSignature Language="F#" Value="member this.GetGrovePwmFrequency : Iot.Device.GoPiGo3.Models.GrovePort * uint32 -&gt; unit" Usage="goPiGo.GetGrovePwmFrequency (port, freq)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.GrovePort" />
+        <Parameter Name="freq" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="port">The grove port(s).GROVE_1 and / or GROVE_2.</param>
+        <param name="freq">The PWM frequency.Range is 3 through 48000Hz.Default is 24000(24kHz). Limit to 48000, which is the highest frequency supported for 0.1% resolution.</param>
+        <summary>
+            Set grove PWM frequency
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGroveState">
+      <MemberSignature Language="C#" Value="public byte GetGroveState (Iot.Device.GoPiGo3.Models.GrovePort port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8 GetGroveState(valuetype Iot.Device.GoPiGo3.Models.GrovePort port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.GetGroveState(Iot.Device.GoPiGo3.Models.GrovePort)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetGroveState (port As GrovePort) As Byte" />
+      <MemberSignature Language="F#" Value="member this.GetGroveState : Iot.Device.GoPiGo3.Models.GrovePort -&gt; byte" Usage="goPiGo.GetGroveState port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.GrovePort" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Grove Pin, one at the time Grove1Pin1, Grove1Pin2, Grove2Pin1 or Grove2Pin2</param>
+        <summary>
+            Get a grove input pin state
+            </summary>
+        <returns>Returns the pin state</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGroveValue">
+      <MemberSignature Language="C#" Value="public byte[] GetGroveValue (Iot.Device.GoPiGo3.Models.GrovePort port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetGroveValue(valuetype Iot.Device.GoPiGo3.Models.GrovePort port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.GetGroveValue(Iot.Device.GoPiGo3.Models.GrovePort)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetGroveValue (port As GrovePort) As Byte()" />
+      <MemberSignature Language="F#" Value="member this.GetGroveValue : Iot.Device.GoPiGo3.Models.GrovePort -&gt; byte[]" Usage="goPiGo.GetGroveValue port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.GrovePort" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Grove Port, one at the time Grove1 or Grove2</param>
+        <summary>
+            Get a grove port value
+            </summary>
+        <returns>Returns a byte array containing the read data</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGroveVoltage">
+      <MemberSignature Language="C#" Value="public double GetGroveVoltage (Iot.Device.GoPiGo3.Models.GrovePort port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 GetGroveVoltage(valuetype Iot.Device.GoPiGo3.Models.GrovePort port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.GetGroveVoltage(Iot.Device.GoPiGo3.Models.GrovePort)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetGroveVoltage (port As GrovePort) As Double" />
+      <MemberSignature Language="F#" Value="member this.GetGroveVoltage : Iot.Device.GoPiGo3.Models.GrovePort -&gt; double" Usage="goPiGo.GetGroveVoltage port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.GrovePort" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Grove Pin, one at the time Grove1Pin1, Grove1Pin2, Grove2Pin1 or Grove2Pin2</param>
+        <summary>
+            Get a grove input pin analog voltage
+            </summary>
+        <returns>Returns the voltage in V</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHardwareVersion">
+      <MemberSignature Language="C#" Value="public Version GetHardwareVersion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Version GetHardwareVersion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.GetHardwareVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetHardwareVersion () As Version" />
+      <MemberSignature Language="F#" Value="member this.GetHardwareVersion : unit -&gt; Version" Usage="goPiGo.GetHardwareVersion " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read the hardware version
+            </summary>
+        <returns>Returns the hardware version as a string</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetId">
+      <MemberSignature Language="C#" Value="public byte[] GetId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.GetId" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetId () As Byte()" />
+      <MemberSignature Language="F#" Value="member this.GetId : unit -&gt; byte[]" Usage="goPiGo.GetId " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read the 128 bit GoPiGo3 hardware serial number
+            </summary>
+        <returns>Returns the serial number as a byte array</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIdHex">
+      <MemberSignature Language="C#" Value="public string GetIdHex ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetIdHex() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.GetIdHex" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetIdHex () As String" />
+      <MemberSignature Language="F#" Value="member this.GetIdHex : unit -&gt; string" Usage="goPiGo.GetIdHex " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read the 128 bit GoPiGo3 hardware serial number
+            </summary>
+        <returns>Returns the serial number as 32 char HEX formatted string</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetManufacturer">
+      <MemberSignature Language="C#" Value="public string GetManufacturer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetManufacturer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.GetManufacturer" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetManufacturer () As String" />
+      <MemberSignature Language="F#" Value="member this.GetManufacturer : unit -&gt; string" Usage="goPiGo.GetManufacturer " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read the 20 characters of GoPiGo3 manufacturer name
+            </summary>
+        <returns>Returns the GoPiGo3 manufacturer name string</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMotorEncoder">
+      <MemberSignature Language="C#" Value="public int GetMotorEncoder (Iot.Device.GoPiGo3.Models.MotorPort port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetMotorEncoder(valuetype Iot.Device.GoPiGo3.Models.MotorPort port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.GetMotorEncoder(Iot.Device.GoPiGo3.Models.MotorPort)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetMotorEncoder (port As MotorPort) As Integer" />
+      <MemberSignature Language="F#" Value="member this.GetMotorEncoder : Iot.Device.GoPiGo3.Models.MotorPort -&gt; int" Usage="goPiGo.GetMotorEncoder port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.MotorPort" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port to use, can be MotorLeft or MotorRight</param>
+        <summary>
+            Read a motor encoder in degrees
+            </summary>
+        <returns>Returns the encoder position in degrees</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMotorStatus">
+      <MemberSignature Language="C#" Value="public Iot.Device.GoPiGo3.Models.MotorStatus GetMotorStatus (Iot.Device.GoPiGo3.Models.MotorPort port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.GoPiGo3.Models.MotorStatus GetMotorStatus(valuetype Iot.Device.GoPiGo3.Models.MotorPort port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.GetMotorStatus(Iot.Device.GoPiGo3.Models.MotorPort)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetMotorStatus (port As MotorPort) As MotorStatus" />
+      <MemberSignature Language="F#" Value="member this.GetMotorStatus : Iot.Device.GoPiGo3.Models.MotorPort -&gt; Iot.Device.GoPiGo3.Models.MotorStatus" Usage="goPiGo.GetMotorStatus port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.GoPiGo3.Models.MotorStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.MotorPort" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port to use, can be MotorLeft or MotorRight</param>
+        <summary>
+            Read a motor status
+            </summary>
+        <returns>Returns MotorStatus containing the status of the motor</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVoltage5V">
+      <MemberSignature Language="C#" Value="public double GetVoltage5V ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 GetVoltage5V() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.GetVoltage5V" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetVoltage5V () As Double" />
+      <MemberSignature Language="F#" Value="member this.GetVoltage5V : unit -&gt; double" Usage="goPiGo.GetVoltage5V " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the 5v circuit voltage
+            </summary>
+        <returns>Returns the real 5v circuit voltage</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVoltageBatteryVcc">
+      <MemberSignature Language="C#" Value="public double GetVoltageBatteryVcc ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 GetVoltageBatteryVcc() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.GetVoltageBatteryVcc" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetVoltageBatteryVcc () As Double" />
+      <MemberSignature Language="F#" Value="member this.GetVoltageBatteryVcc : unit -&gt; double" Usage="goPiGo.GetVoltageBatteryVcc " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the battery voltage
+            </summary>
+        <returns>Returns the real battery/Vcc voltage</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GoPiGo3Info">
+      <MemberSignature Language="C#" Value="public Iot.Device.GoPiGo3.Models.GoPiGoInfo GoPiGo3Info { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.GoPiGo3.Models.GoPiGoInfo GoPiGo3Info" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GoPiGo3.GoPiGo.GoPiGo3Info" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GoPiGo3Info As GoPiGoInfo" />
+      <MemberSignature Language="F#" Value="member this.GoPiGo3Info : Iot.Device.GoPiGo3.Models.GoPiGoInfo" Usage="Iot.Device.GoPiGo3.GoPiGo.GoPiGo3Info" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.GoPiGo3.Models.GoPiGoInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The GoPiGo3 information including hardware, firmware, ID and Manufacturer
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GoPiGoVoltage">
+      <MemberSignature Language="C#" Value="public Iot.Device.GoPiGo3.Models.GoPiGoVoltage GoPiGoVoltage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.GoPiGo3.Models.GoPiGoVoltage GoPiGoVoltage" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GoPiGo3.GoPiGo.GoPiGoVoltage" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GoPiGoVoltage As GoPiGoVoltage" />
+      <MemberSignature Language="F#" Value="member this.GoPiGoVoltage : Iot.Device.GoPiGo3.Models.GoPiGoVoltage" Usage="Iot.Device.GoPiGo3.GoPiGo.GoPiGoVoltage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.GoPiGo3.Models.GoPiGoVoltage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the real 5V and Battery/VCC voltages
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroveI2cStart">
+      <MemberSignature Language="C#" Value="public void GroveI2cStart (Iot.Device.GoPiGo3.Models.GrovePort port, byte addr, byte[] arrayToSend, byte inBytes = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GroveI2cStart(valuetype Iot.Device.GoPiGo3.Models.GrovePort port, unsigned int8 addr, unsigned int8[] arrayToSend, unsigned int8 inBytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.GroveI2cStart(Iot.Device.GoPiGo3.Models.GrovePort,System.Byte,System.Byte[],System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub GroveI2cStart (port As GrovePort, addr As Byte, arrayToSend As Byte(), Optional inBytes As Byte = 0)" />
+      <MemberSignature Language="F#" Value="member this.GroveI2cStart : Iot.Device.GoPiGo3.Models.GrovePort * byte * byte[] * byte -&gt; unit" Usage="goPiGo.GroveI2cStart (port, addr, arrayToSend, inBytes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.GrovePort" />
+        <Parameter Name="addr" Type="System.Byte" />
+        <Parameter Name="arrayToSend" Type="System.Byte[]" />
+        <Parameter Name="inBytes" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Grove Port, one at the time Grove1 or Grove2</param>
+        <param name="addr">The I2C address of the slave to be addressed.</param>
+        <param name="arrayToSend">An array of bytes to send.</param>
+        <param name="inBytes">The number of bytes to read.</param>
+        <summary>
+            Start an I2C transaction
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroveI2cTransfer">
+      <MemberSignature Language="C#" Value="public byte[] GroveI2cTransfer (Iot.Device.GoPiGo3.Models.GrovePort port, byte addr, byte[] arrayToSend, byte inBytes = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GroveI2cTransfer(valuetype Iot.Device.GoPiGo3.Models.GrovePort port, unsigned int8 addr, unsigned int8[] arrayToSend, unsigned int8 inBytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.GroveI2cTransfer(Iot.Device.GoPiGo3.Models.GrovePort,System.Byte,System.Byte[],System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GroveI2cTransfer (port As GrovePort, addr As Byte, arrayToSend As Byte(), Optional inBytes As Byte = 0) As Byte()" />
+      <MemberSignature Language="F#" Value="member this.GroveI2cTransfer : Iot.Device.GoPiGo3.Models.GrovePort * byte * byte[] * byte -&gt; byte[]" Usage="goPiGo.GroveI2cTransfer (port, addr, arrayToSend, inBytes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.GrovePort" />
+        <Parameter Name="addr" Type="System.Byte" />
+        <Parameter Name="arrayToSend" Type="System.Byte[]" />
+        <Parameter Name="inBytes" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="port">The grove port. GROVE_1 or GROVE_2</param>
+        <param name="addr">The I2C address of the slave to be addressed.</param>
+        <param name="arrayToSend">An array of bytes to send.</param>
+        <param name="inBytes">The number of bytes to read.</param>
+        <summary>
+            Conduct an I2C transaction
+            </summary>
+        <returns>Returns a byte array with what has been read from the I2C element</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GroveSensor">
+      <MemberSignature Language="C#" Value="public Iot.Device.GoPiGo3.Models.GroveSensor[] GroveSensor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.GoPiGo3.Models.GroveSensor[] GroveSensor" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GoPiGo3.GoPiGo.GroveSensor" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GroveSensor As GroveSensor()" />
+      <MemberSignature Language="F#" Value="member this.GroveSensor : Iot.Device.GoPiGo3.Models.GroveSensor[]" Usage="Iot.Device.GoPiGo3.GoPiGo.GroveSensor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.GoPiGo3.Models.GroveSensor[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The 2 Grove Sensor
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MotorGearRatio">
+      <MemberSignature Language="C#" Value="public int MotorGearRatio { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MotorGearRatio" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GoPiGo3.GoPiGo.MotorGearRatio" />
+      <MemberSignature Language="VB.NET" Value="Public Property MotorGearRatio As Integer" />
+      <MemberSignature Language="F#" Value="member this.MotorGearRatio : int with get, set" Usage="Iot.Device.GoPiGo3.GoPiGo.MotorGearRatio" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set or get a specific gear ratio for the encoder
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MotorTicksPerDegree">
+      <MemberSignature Language="C#" Value="public double MotorTicksPerDegree { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 MotorTicksPerDegree" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GoPiGo3.GoPiGo.MotorTicksPerDegree" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MotorTicksPerDegree As Double" />
+      <MemberSignature Language="F#" Value="member this.MotorTicksPerDegree : double" Usage="Iot.Device.GoPiGo3.GoPiGo.MotorTicksPerDegree" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return the number of ticks per degree
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetMotorEncoder">
+      <MemberSignature Language="C#" Value="public void OffsetMotorEncoder (Iot.Device.GoPiGo3.Models.MotorPort port, int positionOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OffsetMotorEncoder(valuetype Iot.Device.GoPiGo3.Models.MotorPort port, int32 positionOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.OffsetMotorEncoder(Iot.Device.GoPiGo3.Models.MotorPort,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub OffsetMotorEncoder (port As MotorPort, positionOffset As Integer)" />
+      <MemberSignature Language="F#" Value="member this.OffsetMotorEncoder : Iot.Device.GoPiGo3.Models.MotorPort * int -&gt; unit" Usage="goPiGo.OffsetMotorEncoder (port, positionOffset)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.MotorPort" />
+        <Parameter Name="positionOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port to use, can be MotorLeft and/or MotorRight</param>
+        <param name="positionOffset">The encoder offset. Zero the encoder by offsetting it by the current position</param>
+        <summary>
+            Offset a motor encoder
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGroveMode">
+      <MemberSignature Language="C#" Value="public void SetGroveMode (Iot.Device.GoPiGo3.Models.GrovePort port, Iot.Device.GoPiGo3.Models.GroveInputOutput mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetGroveMode(valuetype Iot.Device.GoPiGo3.Models.GrovePort port, valuetype Iot.Device.GoPiGo3.Models.GroveInputOutput mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SetGroveMode(Iot.Device.GoPiGo3.Models.GrovePort,Iot.Device.GoPiGo3.Models.GroveInputOutput)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetGroveMode (port As GrovePort, mode As GroveInputOutput)" />
+      <MemberSignature Language="F#" Value="member this.SetGroveMode : Iot.Device.GoPiGo3.Models.GrovePort * Iot.Device.GoPiGo3.Models.GroveInputOutput -&gt; unit" Usage="goPiGo.SetGroveMode (port, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.GrovePort" />
+        <Parameter Name="mode" Type="Iot.Device.GoPiGo3.Models.GroveInputOutput" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Grove Pin, can be any combination of Grove1Pin1, Grove1Pin2, Grove2Pin1 and/or Grove2Pin2</param>
+        <param name="mode">The Grove pin mode, refere to GroveInputOutput</param>
+        <summary>
+            Set grove analog digital pin mode as input or output
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGrovePwmDuty">
+      <MemberSignature Language="C#" Value="public void SetGrovePwmDuty (Iot.Device.GoPiGo3.Models.GrovePort port, double duty);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetGrovePwmDuty(valuetype Iot.Device.GoPiGo3.Models.GrovePort port, float64 duty) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SetGrovePwmDuty(Iot.Device.GoPiGo3.Models.GrovePort,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetGrovePwmDuty (port As GrovePort, duty As Double)" />
+      <MemberSignature Language="F#" Value="member this.SetGrovePwmDuty : Iot.Device.GoPiGo3.Models.GrovePort * double -&gt; unit" Usage="goPiGo.SetGrovePwmDuty (port, duty)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.GrovePort" />
+        <Parameter Name="duty" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Grove Pin, can be any combination of Grove1Pin1, Grove1Pin2, Grove2Pin1 and/or Grove2Pin2</param>
+        <param name="duty">The PWM duty cycle in percent from 0.0 to 100.0, 1 floating point precision</param>
+        <summary>
+            Set grove output pin PWM
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGroveState">
+      <MemberSignature Language="C#" Value="public void SetGroveState (Iot.Device.GoPiGo3.Models.GrovePort port, bool state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetGroveState(valuetype Iot.Device.GoPiGo3.Models.GrovePort port, bool state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SetGroveState(Iot.Device.GoPiGo3.Models.GrovePort,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetGroveState (port As GrovePort, state As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.SetGroveState : Iot.Device.GoPiGo3.Models.GrovePort * bool -&gt; unit" Usage="goPiGo.SetGroveState (port, state)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.GrovePort" />
+        <Parameter Name="state" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Grove Pin, can be any combination of Grove1Pin1, Grove1Pin2, Grove2Pin1 and/or Grove2Pin2</param>
+        <param name="state">The pin state. false for low or true for high.</param>
+        <summary>
+            Set grove output pin low or high
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGroveType">
+      <MemberSignature Language="C#" Value="public void SetGroveType (Iot.Device.GoPiGo3.Models.GrovePort port, Iot.Device.GoPiGo3.Models.GroveSensorType type);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetGroveType(valuetype Iot.Device.GoPiGo3.Models.GrovePort port, valuetype Iot.Device.GoPiGo3.Models.GroveSensorType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SetGroveType(Iot.Device.GoPiGo3.Models.GrovePort,Iot.Device.GoPiGo3.Models.GroveSensorType)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetGroveType (port As GrovePort, type As GroveSensorType)" />
+      <MemberSignature Language="F#" Value="member this.SetGroveType : Iot.Device.GoPiGo3.Models.GrovePort * Iot.Device.GoPiGo3.Models.GroveSensorType -&gt; unit" Usage="goPiGo.SetGroveType (port, type)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.GrovePort" />
+        <Parameter Name="type" Type="Iot.Device.GoPiGo3.Models.GroveSensorType" />
+      </Parameters>
+      <Docs>
+        <param name="port">The grove port(s). Grove1 and/or Grove2</param>
+        <param name="type">The grove device type, refer to GroveSensorType</param>
+        <summary>
+            Set grove type
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLed">
+      <MemberSignature Language="C#" Value="public void SetLed (byte led, System.Drawing.Color ledColor);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetLed(unsigned int8 led, valuetype System.Drawing.Color ledColor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SetLed(System.Byte,System.Drawing.Color)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetLed (led As Byte, ledColor As Color)" />
+      <MemberSignature Language="F#" Value="member this.SetLed : byte * System.Drawing.Color -&gt; unit" Usage="goPiGo.SetLed (led, ledColor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="led" Type="System.Byte" />
+        <Parameter Name="ledColor" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="led">The led, either Left, Right, Blinky Left, Blinky Right and Wifi. Note you should only control the wifi one if you are sure to be connected to wifi</param>
+        <param name="ledColor">The Color of the <paramref name="led" /></param>
+        <summary>
+            Set the led color
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMotorDps">
+      <MemberSignature Language="C#" Value="public void SetMotorDps (Iot.Device.GoPiGo3.Models.MotorPort port, int dps);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMotorDps(valuetype Iot.Device.GoPiGo3.Models.MotorPort port, int32 dps) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SetMotorDps(Iot.Device.GoPiGo3.Models.MotorPort,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMotorDps (port As MotorPort, dps As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SetMotorDps : Iot.Device.GoPiGo3.Models.MotorPort * int -&gt; unit" Usage="goPiGo.SetMotorDps (port, dps)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.MotorPort" />
+        <Parameter Name="dps" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port to use, can be MotorLeft and/or MotorRight</param>
+        <param name="dps">The target speed in degrees per second</param>
+        <summary>
+            Set the motor target speed in degrees per second
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMotorLimits">
+      <MemberSignature Language="C#" Value="public void SetMotorLimits (Iot.Device.GoPiGo3.Models.MotorPort port, byte powerPercent = 0, int dps = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMotorLimits(valuetype Iot.Device.GoPiGo3.Models.MotorPort port, unsigned int8 powerPercent, int32 dps) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SetMotorLimits(Iot.Device.GoPiGo3.Models.MotorPort,System.Byte,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMotorLimits (port As MotorPort, Optional powerPercent As Byte = 0, Optional dps As Integer = 0)" />
+      <MemberSignature Language="F#" Value="member this.SetMotorLimits : Iot.Device.GoPiGo3.Models.MotorPort * byte * int -&gt; unit" Usage="goPiGo.SetMotorLimits (port, powerPercent, dps)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.MotorPort" />
+        <Parameter Name="powerPercent" Type="System.Byte" />
+        <Parameter Name="dps" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port to use, can be MotorLeft and/or MotorRight</param>
+        <param name="powerPercent">The power limit in percent (0 to 100), with 0 being no limit (100)</param>
+        <param name="dps">The speed limit in degrees per second, with 0 being no limit</param>
+        <summary>
+            Set the motor speed limit
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMotorPosition">
+      <MemberSignature Language="C#" Value="public void SetMotorPosition (Iot.Device.GoPiGo3.Models.MotorPort port, int positionDegree);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMotorPosition(valuetype Iot.Device.GoPiGo3.Models.MotorPort port, int32 positionDegree) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SetMotorPosition(Iot.Device.GoPiGo3.Models.MotorPort,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMotorPosition (port As MotorPort, positionDegree As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SetMotorPosition : Iot.Device.GoPiGo3.Models.MotorPort * int -&gt; unit" Usage="goPiGo.SetMotorPosition (port, positionDegree)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.MotorPort" />
+        <Parameter Name="positionDegree" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port to use, can be MotorLeft and/or MotorRight</param>
+        <param name="positionDegree">The target position in degree</param>
+        <summary>
+            Set the motor target position in degrees
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMotorPositionKD">
+      <MemberSignature Language="C#" Value="public void SetMotorPositionKD (Iot.Device.GoPiGo3.Models.MotorPort port, byte kd = 70);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMotorPositionKD(valuetype Iot.Device.GoPiGo3.Models.MotorPort port, unsigned int8 kd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SetMotorPositionKD(Iot.Device.GoPiGo3.Models.MotorPort,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMotorPositionKD (port As MotorPort, Optional kd As Byte = 70)" />
+      <MemberSignature Language="F#" Value="member this.SetMotorPositionKD : Iot.Device.GoPiGo3.Models.MotorPort * byte -&gt; unit" Usage="goPiGo.SetMotorPositionKD (port, kd)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.MotorPort" />
+        <Parameter Name="kd" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port to use, can be MotorLeft and/or MotorRight</param>
+        <param name="kd">The KD constant (default 70)</param>
+        <summary>
+            Set the motor target position KD constant
+            If you set KP higher, the motor will be more responsive to errors in position, at the cost of perhaps overshooting and oscillating.
+            KD slows down the motor as it approaches the target, and helps to prevent overshoot.
+            In general, if you increase kp, you should also increase KD to keep the motor from overshooting and oscillating.
+            See as well https://en.wikipedia.org/wiki/PID_controller
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMotorPositionKP">
+      <MemberSignature Language="C#" Value="public void SetMotorPositionKP (Iot.Device.GoPiGo3.Models.MotorPort port, byte kp = 25);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMotorPositionKP(valuetype Iot.Device.GoPiGo3.Models.MotorPort port, unsigned int8 kp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SetMotorPositionKP(Iot.Device.GoPiGo3.Models.MotorPort,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMotorPositionKP (port As MotorPort, Optional kp As Byte = 25)" />
+      <MemberSignature Language="F#" Value="member this.SetMotorPositionKP : Iot.Device.GoPiGo3.Models.MotorPort * byte -&gt; unit" Usage="goPiGo.SetMotorPositionKP (port, kp)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.MotorPort" />
+        <Parameter Name="kp" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port to use, can be MotorLeft and/or MotorRight</param>
+        <param name="kp">The KP constant (default 25)</param>
+        <summary>
+            Set the motor target position KP constant
+            If you set KP higher, the motor will be more responsive to errors in position, at the cost of perhaps overshooting and oscillating.
+            KD slows down the motor as it approaches the target, and helps to prevent overshoot.
+            In general, if you increase KP, you should also increase KD to keep the motor from overshooting and oscillating.
+            See as well https://en.wikipedia.org/wiki/PID_controller
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMotorPower">
+      <MemberSignature Language="C#" Value="public void SetMotorPower (Iot.Device.GoPiGo3.Models.MotorPort port, int power);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMotorPower(valuetype Iot.Device.GoPiGo3.Models.MotorPort port, int32 power) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SetMotorPower(Iot.Device.GoPiGo3.Models.MotorPort,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMotorPower (port As MotorPort, power As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SetMotorPower : Iot.Device.GoPiGo3.Models.MotorPort * int -&gt; unit" Usage="goPiGo.SetMotorPower (port, power)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.GoPiGo3.Models.MotorPort" />
+        <Parameter Name="power" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port to use, can be MotorLeft and/or MotorRight</param>
+        <param name="power">The power from - 100 to 100, or -128 for float</param>
+        <summary>
+            Set the motor power in percent
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetServo">
+      <MemberSignature Language="C#" Value="public void SetServo (Iot.Device.GoPiGo3.Models.ServoPort servo, int pulseMicroseconds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetServo(valuetype Iot.Device.GoPiGo3.Models.ServoPort servo, int32 pulseMicroseconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SetServo(Iot.Device.GoPiGo3.Models.ServoPort,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetServo (servo As ServoPort, pulseMicroseconds As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SetServo : Iot.Device.GoPiGo3.Models.ServoPort * int -&gt; unit" Usage="goPiGo.SetServo (servo, pulseMicroseconds)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="servo" Type="Iot.Device.GoPiGo3.Models.ServoPort" />
+        <Parameter Name="pulseMicroseconds" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="servo">The servo port Servo1 or Servo2</param>
+        <param name="pulseMicroseconds">The pulse in microseconds</param>
+        <summary>
+            Move the servo motor with a specific pulse in microseconds
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiAddress">
+      <MemberSignature Language="C#" Value="public byte SpiAddress { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 SpiAddress" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GoPiGo3.GoPiGo.SpiAddress" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SpiAddress As Byte" />
+      <MemberSignature Language="F#" Value="member this.SpiAddress : byte" Usage="Iot.Device.GoPiGo3.GoPiGo.SpiAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the SPI address of GoPiGo3. By default, it is 8
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiRead16">
+      <MemberSignature Language="C#" Value="public short SpiRead16 (Iot.Device.GoPiGo3.Models.SpiMessageType MessageType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int16 SpiRead16(valuetype Iot.Device.GoPiGo3.Models.SpiMessageType MessageType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SpiRead16(Iot.Device.GoPiGo3.Models.SpiMessageType)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SpiRead16 (MessageType As SpiMessageType) As Short" />
+      <MemberSignature Language="F#" Value="member this.SpiRead16 : Iot.Device.GoPiGo3.Models.SpiMessageType -&gt; int16" Usage="goPiGo.SpiRead16 MessageType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="MessageType" Type="Iot.Device.GoPiGo3.Models.SpiMessageType" />
+      </Parameters>
+      <Docs>
+        <param name="MessageType">The SPI message type</param>
+        <summary>
+            Read a 16 bit value over SPI
+            </summary>
+        <returns>Returns the value read</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiRead32">
+      <MemberSignature Language="C#" Value="public int SpiRead32 (Iot.Device.GoPiGo3.Models.SpiMessageType MessageType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 SpiRead32(valuetype Iot.Device.GoPiGo3.Models.SpiMessageType MessageType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SpiRead32(Iot.Device.GoPiGo3.Models.SpiMessageType)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SpiRead32 (MessageType As SpiMessageType) As Integer" />
+      <MemberSignature Language="F#" Value="member this.SpiRead32 : Iot.Device.GoPiGo3.Models.SpiMessageType -&gt; int" Usage="goPiGo.SpiRead32 MessageType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="MessageType" Type="Iot.Device.GoPiGo3.Models.SpiMessageType" />
+      </Parameters>
+      <Docs>
+        <param name="MessageType">The SPI message type</param>
+        <summary>
+            Read a 32 bit value over SPI
+            </summary>
+        <returns>Returns the value read</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiRead8">
+      <MemberSignature Language="C#" Value="public byte SpiRead8 (Iot.Device.GoPiGo3.Models.SpiMessageType MessageType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8 SpiRead8(valuetype Iot.Device.GoPiGo3.Models.SpiMessageType MessageType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SpiRead8(Iot.Device.GoPiGo3.Models.SpiMessageType)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SpiRead8 (MessageType As SpiMessageType) As Byte" />
+      <MemberSignature Language="F#" Value="member this.SpiRead8 : Iot.Device.GoPiGo3.Models.SpiMessageType -&gt; byte" Usage="goPiGo.SpiRead8 MessageType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="MessageType" Type="Iot.Device.GoPiGo3.Models.SpiMessageType" />
+      </Parameters>
+      <Docs>
+        <param name="MessageType">The SPI message type</param>
+        <summary>
+            Read a 8 bit value over SPI
+            </summary>
+        <returns>Returns the value read</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiWrite16">
+      <MemberSignature Language="C#" Value="public void SpiWrite16 (Iot.Device.GoPiGo3.Models.SpiMessageType MessageType, short Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SpiWrite16(valuetype Iot.Device.GoPiGo3.Models.SpiMessageType MessageType, int16 Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SpiWrite16(Iot.Device.GoPiGo3.Models.SpiMessageType,System.Int16)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SpiWrite16 (MessageType As SpiMessageType, Value As Short)" />
+      <MemberSignature Language="F#" Value="member this.SpiWrite16 : Iot.Device.GoPiGo3.Models.SpiMessageType * int16 -&gt; unit" Usage="goPiGo.SpiWrite16 (MessageType, Value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="MessageType" Type="Iot.Device.GoPiGo3.Models.SpiMessageType" />
+        <Parameter Name="Value" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="MessageType">The SPI message type</param>
+        <param name="Value">The value to be sent</param>
+        <summary>
+            Send a 16 bit value over SPI
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiWrite24">
+      <MemberSignature Language="C#" Value="public void SpiWrite24 (Iot.Device.GoPiGo3.Models.SpiMessageType MessageType, int Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SpiWrite24(valuetype Iot.Device.GoPiGo3.Models.SpiMessageType MessageType, int32 Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SpiWrite24(Iot.Device.GoPiGo3.Models.SpiMessageType,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SpiWrite24 (MessageType As SpiMessageType, Value As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SpiWrite24 : Iot.Device.GoPiGo3.Models.SpiMessageType * int -&gt; unit" Usage="goPiGo.SpiWrite24 (MessageType, Value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="MessageType" Type="Iot.Device.GoPiGo3.Models.SpiMessageType" />
+        <Parameter Name="Value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="MessageType">The SPI message type</param>
+        <param name="Value">The value to be sent</param>
+        <summary>
+            Send a 24 bit value over SPI
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiWrite32">
+      <MemberSignature Language="C#" Value="public void SpiWrite32 (Iot.Device.GoPiGo3.Models.SpiMessageType MessageType, int Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SpiWrite32(valuetype Iot.Device.GoPiGo3.Models.SpiMessageType MessageType, int32 Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SpiWrite32(Iot.Device.GoPiGo3.Models.SpiMessageType,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SpiWrite32 (MessageType As SpiMessageType, Value As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SpiWrite32 : Iot.Device.GoPiGo3.Models.SpiMessageType * int -&gt; unit" Usage="goPiGo.SpiWrite32 (MessageType, Value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="MessageType" Type="Iot.Device.GoPiGo3.Models.SpiMessageType" />
+        <Parameter Name="Value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="MessageType">The SPI message type</param>
+        <param name="Value">The value to be sent</param>
+        <summary>
+            Send a 32 bit value over SPI
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiWrite8">
+      <MemberSignature Language="C#" Value="public void SpiWrite8 (Iot.Device.GoPiGo3.Models.SpiMessageType MessageType, byte Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SpiWrite8(valuetype Iot.Device.GoPiGo3.Models.SpiMessageType MessageType, unsigned int8 Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.GoPiGo.SpiWrite8(Iot.Device.GoPiGo3.Models.SpiMessageType,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SpiWrite8 (MessageType As SpiMessageType, Value As Byte)" />
+      <MemberSignature Language="F#" Value="member this.SpiWrite8 : Iot.Device.GoPiGo3.Models.SpiMessageType * byte -&gt; unit" Usage="goPiGo.SpiWrite8 (MessageType, Value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="MessageType" Type="Iot.Device.GoPiGo3.Models.SpiMessageType" />
+        <Parameter Name="Value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="MessageType">The SPI message type</param>
+        <param name="Value">The value to be sent</param>
+        <summary>
+            Send a 8 bit value over SPI
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

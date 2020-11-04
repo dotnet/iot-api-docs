@@ -1,0 +1,1013 @@
+<Type Name="Hd44780" FullName="Iot.Device.CharacterLcd.Hd44780">
+  <TypeSignature Language="C#" Value="public class Hd44780 : IDisposable" FrameworkAlternate="iot-dotnet-1.0" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Hd44780 extends System.Object implements class System.IDisposable" FrameworkAlternate="iot-dotnet-1.0" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.CharacterLcd.Hd44780" />
+  <TypeSignature Language="VB.NET" Value="Public Class Hd44780&#xA;Implements IDisposable" FrameworkAlternate="iot-dotnet-1.0" />
+  <TypeSignature Language="F#" Value="type Hd44780 = class&#xA;    interface IDisposable" FrameworkAlternate="iot-dotnet-1.0" />
+  <TypeSignature Language="C#" Value="public class Hd44780 : IDisposable, Iot.Device.CharacterLcd.ICharacterLcd" FrameworkAlternate="iot-dotnet-1.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Hd44780 extends System.Object implements class Iot.Device.CharacterLcd.ICharacterLcd, class System.IDisposable" FrameworkAlternate="iot-dotnet-1.1" />
+  <TypeSignature Language="VB.NET" Value="Public Class Hd44780&#xA;Implements ICharacterLcd, IDisposable" FrameworkAlternate="iot-dotnet-1.1" />
+  <TypeSignature Language="F#" Value="type Hd44780 = class&#xA;    interface ICharacterLcd&#xA;    interface IDisposable" FrameworkAlternate="iot-dotnet-1.1" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+    <Interface FrameworkAlternate="iot-dotnet-1.1">
+      <InterfaceName>Iot.Device.CharacterLcd.ICharacterLcd</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+             Supports LCD character displays compatible with the HD44780 LCD controller/driver.
+             Also supports serial interface adapters such as the MCP23008.
+             </summary>
+    <remarks>
+             The Hitatchi HD44780 was released in 1987 and set the standard for LCD controllers. Hitatchi does not make this chipset anymore, but
+             most character LCD drivers are intended to be fully compatible with this chipset. Some examples: Sunplus SPLC780D, Sitronix ST7066U,
+             Samsung KS0066U, Aiptek AIP31066, and many more.
+            
+             Some compatible chips extend the HD44780 with addtional pins and features. They are still fully compatible. The ST7036 is one example.
+            
+             This implementation was drawn from numerous datasheets and libraries such as Adafruit_Python_CharLCD.
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Hd44780 (System.Drawing.Size size, Iot.Device.CharacterLcd.LcdInterface interface);" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Size size, class Iot.Device.CharacterLcd.LcdInterface interface) cil managed" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.#ctor(System.Drawing.Size,Iot.Device.CharacterLcd.LcdInterface)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (size As Size, interface As LcdInterface)" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="F#" Value="new Iot.Device.CharacterLcd.Hd44780 : System.Drawing.Size * Iot.Device.CharacterLcd.LcdInterface -&gt; Iot.Device.CharacterLcd.Hd44780" Usage="new Iot.Device.CharacterLcd.Hd44780 (size, interface)" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="C#" Value="public Hd44780 (System.Drawing.Size size, Iot.Device.CharacterLcd.LcdInterface lcdInterface);" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Size size, class Iot.Device.CharacterLcd.LcdInterface lcdInterface) cil managed" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (size As Size, lcdInterface As LcdInterface)" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="new Iot.Device.CharacterLcd.Hd44780 : System.Drawing.Size * Iot.Device.CharacterLcd.LcdInterface -&gt; Iot.Device.CharacterLcd.Hd44780" Usage="new Iot.Device.CharacterLcd.Hd44780 (size, lcdInterface)" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="size" Type="System.Drawing.Size" Index="0" />
+        <Parameter Name="interface" Type="Iot.Device.CharacterLcd.LcdInterface" Index="1" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="lcdInterface" Type="Iot.Device.CharacterLcd.LcdInterface" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="interface">To be added.</param>
+        <param name="size">The logical size of the LCD.</param>
+        <param name="lcdInterface">The interface to use with the LCD.</param>
+        <summary>
+            Initializes a new HD44780 LCD controller.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_interface">
+      <MemberSignature Language="C#" Value="protected readonly Iot.Device.CharacterLcd.LcdInterface _interface;" />
+      <MemberSignature Language="ILAsm" Value=".field family initonly class Iot.Device.CharacterLcd.LcdInterface _interface" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.CharacterLcd.Hd44780._interface" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly _interface As LcdInterface " />
+      <MemberSignature Language="F#" Value="val mutable _interface : Iot.Device.CharacterLcd.LcdInterface" Usage="Iot.Device.CharacterLcd.Hd44780._interface" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.CharacterLcd.LcdInterface</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_lcdInterface">
+      <MemberSignature Language="C#" Value="protected readonly Iot.Device.CharacterLcd.LcdInterface _lcdInterface;" />
+      <MemberSignature Language="ILAsm" Value=".field family initonly class Iot.Device.CharacterLcd.LcdInterface _lcdInterface" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.CharacterLcd.Hd44780._lcdInterface" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly _lcdInterface As LcdInterface " />
+      <MemberSignature Language="F#" Value="val mutable _lcdInterface : Iot.Device.CharacterLcd.LcdInterface" Usage="Iot.Device.CharacterLcd.Hd44780._lcdInterface" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.CharacterLcd.LcdInterface</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            LCD interface used by the device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_rowOffsets">
+      <MemberSignature Language="C#" Value="protected readonly byte[] _rowOffsets;" />
+      <MemberSignature Language="ILAsm" Value=".field family initonly unsigned int8[] _rowOffsets" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.CharacterLcd.Hd44780._rowOffsets" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly _rowOffsets As Byte() " />
+      <MemberSignature Language="F#" Value="val mutable _rowOffsets : byte[]" Usage="Iot.Device.CharacterLcd.Hd44780._rowOffsets" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Offsets of the rows
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoShift">
+      <MemberSignature Language="C#" Value="public bool AutoShift { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AutoShift" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.Hd44780.AutoShift" />
+      <MemberSignature Language="VB.NET" Value="Public Property AutoShift As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AutoShift : bool with get, set" Usage="Iot.Device.CharacterLcd.Hd44780.AutoShift" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When enabled the display will shift rather than the cursor.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BacklightOn">
+      <MemberSignature Language="C#" Value="public virtual bool BacklightOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BacklightOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.Hd44780.BacklightOn" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property BacklightOn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.BacklightOn : bool with get, set" Usage="Iot.Device.CharacterLcd.Hd44780.BacklightOn" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember FrameworkAlternate="iot-dotnet-1.1">P:Iot.Device.CharacterLcd.ICharacterLcd.BacklightOn</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enable/disable the backlight. (Will always return false if no backlight pin was provided.)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlinkingCursorVisible">
+      <MemberSignature Language="C#" Value="public bool BlinkingCursorVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BlinkingCursorVisible" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.Hd44780.BlinkingCursorVisible" />
+      <MemberSignature Language="VB.NET" Value="Public Property BlinkingCursorVisible As Boolean" />
+      <MemberSignature Language="F#" Value="member this.BlinkingCursorVisible : bool with get, set" Usage="Iot.Device.CharacterLcd.Hd44780.BlinkingCursorVisible" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember FrameworkAlternate="iot-dotnet-1.1">P:Iot.Device.CharacterLcd.ICharacterLcd.BlinkingCursorVisible</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enable/disable the blinking cursor.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.Clear" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
+      <MemberSignature Language="F#" Value="member this.Clear : unit -&gt; unit" Usage="hd44780.Clear " FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="abstract member Clear : unit -&gt; unit&#xA;override this.Clear : unit -&gt; unit" Usage="hd44780.Clear " FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember FrameworkAlternate="iot-dotnet-1.1">M:Iot.Device.CharacterLcd.ICharacterLcd.Clear</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clears the LCD, returning the cursor to home and unshifting if shifted.
+            Will also set to Increment.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearDisplayCommand">
+      <MemberSignature Language="C#" Value="protected const byte ClearDisplayCommand = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal unsigned int8 ClearDisplayCommand = (1)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.CharacterLcd.Hd44780.ClearDisplayCommand" />
+      <MemberSignature Language="VB.NET" Value="Protected Const ClearDisplayCommand As Byte  = 1" />
+      <MemberSignature Language="F#" Value="val mutable ClearDisplayCommand : byte" Usage="Iot.Device.CharacterLcd.Hd44780.ClearDisplayCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Command which can be used to clear the display
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCustomCharacter">
+      <MemberSignature Language="C#" Value="public void CreateCustomCharacter (byte location, params byte[] characterMap);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateCustomCharacter(unsigned int8 location, unsigned int8[] characterMap) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.CreateCustomCharacter(System.Byte,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CreateCustomCharacter (location As Byte, ParamArray characterMap As Byte())" />
+      <MemberSignature Language="F#" Value="member this.CreateCustomCharacter : byte * byte[] -&gt; unit" Usage="hd44780.CreateCustomCharacter (location, characterMap)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="characterMap" Type="System.Byte[]" Index="1" FrameworkAlternate="iot-dotnet-1.0">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="location">To be added.</param>
+        <param name="characterMap">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCustomCharacter">
+      <MemberSignature Language="C#" Value="public void CreateCustomCharacter (byte location, ReadOnlySpan&lt;byte&gt; characterMap);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateCustomCharacter(unsigned int8 location, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; characterMap) cil managed" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.CreateCustomCharacter(System.Byte,System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CreateCustomCharacter (location As Byte, characterMap As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="member this.CreateCustomCharacter : byte * ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="hd44780.CreateCustomCharacter (location, characterMap)" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CreateCustomCharacter(unsigned int8 location, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; characterMap) cil managed" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="abstract member CreateCustomCharacter : byte * ReadOnlySpan&lt;byte&gt; -&gt; unit&#xA;override this.CreateCustomCharacter : byte * ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="hd44780.CreateCustomCharacter (location, characterMap)" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember FrameworkAlternate="iot-dotnet-1.1">M:Iot.Device.CharacterLcd.ICharacterLcd.CreateCustomCharacter(System.Byte,System.ReadOnlySpan{System.Byte})</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Byte" />
+        <Parameter Name="characterMap" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="location">Should be between 0 and 7</param>
+        <param name="characterMap">Provide an array of 8 bytes containing the pattern</param>
+        <summary>
+             Fill one of the 8 CGRAM locations (character codes 0 - 7) with custom characters.
+             </summary>
+        <remarks>
+             The custom characters also occupy character codes 8 - 15.
+            
+             You can find help designing characters at https://www.quinapalus.com/hd44780udg.html.
+            
+             The datasheet description for custom characters is very difficult to follow. Here is
+             a rehash of the technical details that is hopefully easier:
+            
+             Only 6 bits of addresses are available for character ram. That makes for 64 bytes of
+             available character data. 8 bytes of data are used for each character, which is where
+             the 8 total custom characters comes from (64/8).
+            
+             Each byte corresponds to a character line. Characters are only 5 bits wide so only
+             bits 0-4 are used for display. Whatever is in bits 5-7 is just ignored. Store bits
+             there if it makes you happy, but it won't impact the display. '1' is on, '0' is off.
+            
+             In the built-in characters the 8th byte is usually empty as this is where the underline
+             cursor will be if enabled. You can put data there if you like, which gives you the full
+             5x8 character. The underline cursor just turns on the entire bottom row.
+            
+             5x10 mode is effectively useless as displays aren't available that utilize it. In 5x10
+             mode *16* bytes of data are used for each character. That leaves room for only *4*
+             custom characters. The first character is addressable from code 0, 1, 8, and 9. The
+             second is 2, 3, 10, 11 and so on...
+            
+             In this mode *11* bytes of data are actually used for the character data, which
+             effectively gives you a 5x11 character, although typically the last line is blank to
+             leave room for the underline cursor. Why the modes are referred to as 5x8 and 5x10 as
+             opposed to 5x7 and 5x10 or 5x8 and 5x11 is a mystery. In an early pre-release data
+             book 5x7 and 5x10 is used (Advance Copy #AP4 from July 1985). Perhaps it was a
+             marketing change?
+            
+             As only 11 bytes are used in 5x10 mode, but 16 bytes are reserved, the last 5 bytes
+             are useless. The datasheet helpfully suggests that you can store your own data there.
+             The same would be true for bits 5-7 of lines that matter for both 5x8 and 5x10.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayOn">
+      <MemberSignature Language="C#" Value="public bool DisplayOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisplayOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.Hd44780.DisplayOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisplayOn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DisplayOn : bool with get, set" Usage="Iot.Device.CharacterLcd.Hd44780.DisplayOn" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember FrameworkAlternate="iot-dotnet-1.1">P:Iot.Device.CharacterLcd.ICharacterLcd.DisplayOn</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enable/disable the display.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="hd44780.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="hd44780.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> to release both managed and unmanaged resources; <see langword="false" /> to release only unmanaged resources.</param>
+        <summary>
+            Releases unmanaged resources used by Hd44780
+            and optionally release managed resources
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTwoLineMode">
+      <MemberSignature Language="C#" Value="protected virtual bool GetTwoLineMode (int rows);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool GetTwoLineMode(int32 rows) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.GetTwoLineMode(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function GetTwoLineMode (rows As Integer) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member GetTwoLineMode : int -&gt; bool&#xA;override this.GetTwoLineMode : int -&gt; bool" Usage="hd44780.GetTwoLineMode rows" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rows" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rows">Number of rows on the device</param>
+        <summary>
+            Determines if the device should use two line mode
+            </summary>
+        <returns>True if device should use two line mode</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Home">
+      <MemberSignature Language="C#" Value="public void Home ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Home() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.Home" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Home ()" />
+      <MemberSignature Language="F#" Value="member this.Home : unit -&gt; unit" Usage="hd44780.Home " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Moves the cursor to the first line and first column, unshifting if shifted.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Increment">
+      <MemberSignature Language="C#" Value="public bool Increment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Increment" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.Hd44780.Increment" />
+      <MemberSignature Language="VB.NET" Value="Public Property Increment As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Increment : bool with get, set" Usage="Iot.Device.CharacterLcd.Hd44780.Increment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets/sets whether the cursor location increments (true) or decrements (false).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeRowOffsets">
+      <MemberSignature Language="C#" Value="protected virtual byte[] InitializeRowOffsets (int rows);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance unsigned int8[] InitializeRowOffsets(int32 rows) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.InitializeRowOffsets(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function InitializeRowOffsets (rows As Integer) As Byte()" />
+      <MemberSignature Language="F#" Value="abstract member InitializeRowOffsets : int -&gt; byte[]&#xA;override this.InitializeRowOffsets : int -&gt; byte[]" Usage="hd44780.InitializeRowOffsets rows" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rows" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rows">Rows to be initialized</param>
+        <summary>
+            Initializes row offsets
+            </summary>
+        <returns>Array of offsets</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfCustomCharactersSupported">
+      <MemberSignature Language="C#" Value="public virtual int NumberOfCustomCharactersSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumberOfCustomCharactersSupported" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.Hd44780.NumberOfCustomCharactersSupported" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property NumberOfCustomCharactersSupported As Integer" />
+      <MemberSignature Language="F#" Value="member this.NumberOfCustomCharactersSupported : int" Usage="Iot.Device.CharacterLcd.Hd44780.NumberOfCustomCharactersSupported" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.CharacterLcd.ICharacterLcd.NumberOfCustomCharactersSupported</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the number of custom characters for this display.
+            A custom character is one that can be user-defined and assigned to a slot using <see cref="M:Iot.Device.CharacterLcd.Hd44780.CreateCustomCharacter(System.Byte,System.ReadOnlySpan{System.Byte})" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReturnHomeCommand">
+      <MemberSignature Language="C#" Value="protected const byte ReturnHomeCommand = 2;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal unsigned int8 ReturnHomeCommand = (2)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.CharacterLcd.Hd44780.ReturnHomeCommand" />
+      <MemberSignature Language="VB.NET" Value="Protected Const ReturnHomeCommand As Byte  = 2" />
+      <MemberSignature Language="F#" Value="val mutable ReturnHomeCommand : byte" Usage="Iot.Device.CharacterLcd.Hd44780.ReturnHomeCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Command which can be used to return (cursor) home
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendCommand">
+      <MemberSignature Language="C#" Value="protected void SendCommand (byte command);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SendCommand(unsigned int8 command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.SendCommand(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub SendCommand (command As Byte)" />
+      <MemberSignature Language="F#" Value="member this.SendCommand : byte -&gt; unit" Usage="hd44780.SendCommand command" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="command">Byte representing the command to be sent</param>
+        <summary>
+            Sends command to the device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendCommands">
+      <MemberSignature Language="C#" Value="protected void SendCommands (ReadOnlySpan&lt;byte&gt; commands);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SendCommands(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; commands) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.SendCommands(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub SendCommands (commands As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="member this.SendCommands : ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="hd44780.SendCommands commands" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commands" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="commands">Each byte represents command being sent to the device</param>
+        <summary>
+            Send commands to the device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendData">
+      <MemberSignature Language="C#" Value="protected void SendData (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SendData(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.SendData(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub SendData (value As Byte)" />
+      <MemberSignature Language="F#" Value="member this.SendData : byte -&gt; unit" Usage="hd44780.SendData value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Byte to be sent to the device</param>
+        <summary>
+            Sends byte to the device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendData">
+      <MemberSignature Language="C#" Value="protected void SendData (ReadOnlySpan&lt;byte&gt; values);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SendData(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.SendData(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub SendData (values As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="member this.SendData : ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="hd44780.SendData values" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="values">Data to be send to the device</param>
+        <summary>
+            Sends data to the device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCGRamAddressCommand">
+      <MemberSignature Language="C#" Value="protected const byte SetCGRamAddressCommand = 64;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal unsigned int8 SetCGRamAddressCommand = (64)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.CharacterLcd.Hd44780.SetCGRamAddressCommand" />
+      <MemberSignature Language="VB.NET" Value="Protected Const SetCGRamAddressCommand As Byte  = 64" />
+      <MemberSignature Language="F#" Value="val mutable SetCGRamAddressCommand : byte" Usage="Iot.Device.CharacterLcd.Hd44780.SetCGRamAddressCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>64</MemberValue>
+      <Docs>
+        <summary>
+            Command which can be used to set CG RAM address
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCursorPosition">
+      <MemberSignature Language="C#" Value="public void SetCursorPosition (int left, int top);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCursorPosition(int32 left, int32 top) cil managed" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.SetCursorPosition(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetCursorPosition (left As Integer, top As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SetCursorPosition : int * int -&gt; unit" Usage="hd44780.SetCursorPosition (left, top)" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetCursorPosition(int32 left, int32 top) cil managed" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="abstract member SetCursorPosition : int * int -&gt; unit&#xA;override this.SetCursorPosition : int * int -&gt; unit" Usage="hd44780.SetCursorPosition (left, top)" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember FrameworkAlternate="iot-dotnet-1.1">M:Iot.Device.CharacterLcd.ICharacterLcd.SetCursorPosition(System.Int32,System.Int32)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Int32" />
+        <Parameter Name="top" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="left">The column position from left to right starting with 0.</param>
+        <param name="top">The row position from the top starting with 0.</param>
+        <summary>
+            Moves the cursor to an explicit column and row position.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDDRamAddressCommand">
+      <MemberSignature Language="C#" Value="protected const byte SetDDRamAddressCommand = 128;" />
+      <MemberSignature Language="ILAsm" Value=".field family static literal unsigned int8 SetDDRamAddressCommand = (128)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.CharacterLcd.Hd44780.SetDDRamAddressCommand" />
+      <MemberSignature Language="VB.NET" Value="Protected Const SetDDRamAddressCommand As Byte  = 128" />
+      <MemberSignature Language="F#" Value="val mutable SetDDRamAddressCommand : byte" Usage="Iot.Device.CharacterLcd.Hd44780.SetDDRamAddressCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>128</MemberValue>
+      <Docs>
+        <summary>
+            Command which can be used to set DD RAM address
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShiftCursorLeft">
+      <MemberSignature Language="C#" Value="public void ShiftCursorLeft ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ShiftCursorLeft() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.ShiftCursorLeft" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ShiftCursorLeft ()" />
+      <MemberSignature Language="F#" Value="member this.ShiftCursorLeft : unit -&gt; unit" Usage="hd44780.ShiftCursorLeft " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Move the cursor left one position.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShiftCursorRight">
+      <MemberSignature Language="C#" Value="public void ShiftCursorRight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ShiftCursorRight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.ShiftCursorRight" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ShiftCursorRight ()" />
+      <MemberSignature Language="F#" Value="member this.ShiftCursorRight : unit -&gt; unit" Usage="hd44780.ShiftCursorRight " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Move the cursor right one position.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShiftDisplayLeft">
+      <MemberSignature Language="C#" Value="public void ShiftDisplayLeft ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ShiftDisplayLeft() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.ShiftDisplayLeft" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ShiftDisplayLeft ()" />
+      <MemberSignature Language="F#" Value="member this.ShiftDisplayLeft : unit -&gt; unit" Usage="hd44780.ShiftDisplayLeft " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Move the display left one position.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShiftDisplayRight">
+      <MemberSignature Language="C#" Value="public void ShiftDisplayRight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ShiftDisplayRight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.ShiftDisplayRight" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ShiftDisplayRight ()" />
+      <MemberSignature Language="F#" Value="member this.ShiftDisplayRight : unit -&gt; unit" Usage="hd44780.ShiftDisplayRight " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Move the display right one position.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size Size" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.Hd44780.Size" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Size As Size" />
+      <MemberSignature Language="F#" Value="member this.Size : System.Drawing.Size" Usage="Iot.Device.CharacterLcd.Hd44780.Size" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember FrameworkAlternate="iot-dotnet-1.1">P:Iot.Device.CharacterLcd.ICharacterLcd.Size</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Logical size, in characters, of the LCD.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlineCursorVisible">
+      <MemberSignature Language="C#" Value="public bool UnderlineCursorVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UnderlineCursorVisible" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.Hd44780.UnderlineCursorVisible" />
+      <MemberSignature Language="VB.NET" Value="Public Property UnderlineCursorVisible As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UnderlineCursorVisible : bool with get, set" Usage="Iot.Device.CharacterLcd.Hd44780.UnderlineCursorVisible" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember FrameworkAlternate="iot-dotnet-1.1">P:Iot.Device.CharacterLcd.ICharacterLcd.UnderlineCursorVisible</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enable/disable the underline cursor.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForNotBusy">
+      <MemberSignature Language="C#" Value="protected void WaitForNotBusy (int microseconds);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void WaitForNotBusy(int32 microseconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.WaitForNotBusy(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub WaitForNotBusy (microseconds As Integer)" />
+      <MemberSignature Language="F#" Value="member this.WaitForNotBusy : int -&gt; unit" Usage="hd44780.WaitForNotBusy microseconds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="microseconds" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="microseconds">Time to wait if checking busy state isn't possible/practical.</param>
+        <summary>
+            Wait for the device to not be busy.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (ReadOnlySpan&lt;byte&gt; text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.Write(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (text As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="abstract member Write : ReadOnlySpan&lt;byte&gt; -&gt; unit&#xA;override this.Write : ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="hd44780.Write text" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.CharacterLcd.ICharacterLcd.Write(System.ReadOnlySpan{System.Byte})</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="text">Text to print</param>
+        <summary>
+            Write a raw byte stream to the display.
+            Used if character translation already took place
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (string value);" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(string value) cil managed" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Hd44780.Write(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (value As String)" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="F#" Value="member this.Write : string -&gt; unit" Usage="hd44780.Write value" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="C#" Value="public void Write (string text);" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(string text) cil managed" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (text As String)" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="abstract member Write : string -&gt; unit&#xA;override this.Write : string -&gt; unit" Usage="hd44780.Write text" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember FrameworkAlternate="iot-dotnet-1.1">M:Iot.Device.CharacterLcd.ICharacterLcd.Write(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="text" Type="System.String" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <param name="text">Text to be displayed.</param>
+        <summary>
+            Write text to display.
+            </summary>
+        <remarks>
+            There are only 256 characters available. There are chip variants
+            with different character sets. Characters from space ' ' (32) to
+            '}' are usually the same with the exception of '\', which is a
+            yen symbol on some chips '¥'.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

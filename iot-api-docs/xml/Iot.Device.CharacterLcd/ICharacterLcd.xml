@@ -1,0 +1,324 @@
+<Type Name="ICharacterLcd" FullName="Iot.Device.CharacterLcd.ICharacterLcd">
+  <TypeSignature Language="C#" Value="public interface ICharacterLcd : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ICharacterLcd implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.CharacterLcd.ICharacterLcd" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ICharacterLcd&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type ICharacterLcd = interface&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Interface for character LCD Low-Level handler
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BacklightOn">
+      <MemberSignature Language="C#" Value="public bool BacklightOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BacklightOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.ICharacterLcd.BacklightOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property BacklightOn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.BacklightOn : bool with get, set" Usage="Iot.Device.CharacterLcd.ICharacterLcd.BacklightOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enable/disable the backlight. (Will always return false if no backlight pin was provided.)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlinkingCursorVisible">
+      <MemberSignature Language="C#" Value="public bool BlinkingCursorVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BlinkingCursorVisible" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.ICharacterLcd.BlinkingCursorVisible" />
+      <MemberSignature Language="VB.NET" Value="Public Property BlinkingCursorVisible As Boolean" />
+      <MemberSignature Language="F#" Value="member this.BlinkingCursorVisible : bool with get, set" Usage="Iot.Device.CharacterLcd.ICharacterLcd.BlinkingCursorVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enable/disable the blinking cursor.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.ICharacterLcd.Clear" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
+      <MemberSignature Language="F#" Value="abstract member Clear : unit -&gt; unit" Usage="iCharacterLcd.Clear " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clears the display and moves the cursor to the top left.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCustomCharacter">
+      <MemberSignature Language="C#" Value="public void CreateCustomCharacter (byte location, ReadOnlySpan&lt;byte&gt; characterMap);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CreateCustomCharacter(unsigned int8 location, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; characterMap) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.ICharacterLcd.CreateCustomCharacter(System.Byte,System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CreateCustomCharacter (location As Byte, characterMap As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="abstract member CreateCustomCharacter : byte * ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="iCharacterLcd.CreateCustomCharacter (location, characterMap)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Byte" />
+        <Parameter Name="characterMap" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="location">Should be between 0 and <see cref="P:Iot.Device.CharacterLcd.ICharacterLcd.NumberOfCustomCharactersSupported" />.</param>
+        <param name="characterMap">Provide an array of 8 bytes containing the pattern</param>
+        <summary>
+             Fill one of the 8 CGRAM locations (character codes 0 - 7) with custom characters.
+             </summary>
+        <remarks>
+             The custom characters also occupy character codes 8 - 15.
+            
+             You can find help designing characters at https://www.quinapalus.com/hd44780udg.html.
+            
+             The datasheet description for custom characters is very difficult to follow. Here is
+             a rehash of the technical details that is hopefully easier:
+            
+             Only 6 bits of addresses are available for character ram. That makes for 64 bytes of
+             available character data. 8 bytes of data are used for each character, which is where
+             the 8 total custom characters comes from (64/8).
+            
+             Each byte corresponds to a character line. Characters are only 5 bits wide so only
+             bits 0-4 are used for display. Whatever is in bits 5-7 is just ignored. Store bits
+             there if it makes you happy, but it won't impact the display. '1' is on, '0' is off.
+            
+             In the built-in characters the 8th byte is usually empty as this is where the underline
+             cursor will be if enabled. You can put data there if you like, which gives you the full
+             5x8 character. The underline cursor just turns on the entire bottom row.
+            
+             5x10 mode is effectively useless as displays aren't available that utilize it. In 5x10
+             mode *16* bytes of data are used for each character. That leaves room for only *4*
+             custom characters. The first character is addressable from code 0, 1, 8, and 9. The
+             second is 2, 3, 10, 11 and so on...
+            
+             In this mode *11* bytes of data are actually used for the character data, which
+             effectively gives you a 5x11 character, although typically the last line is blank to
+             leave room for the underline cursor. Why the modes are referred to as 5x8 and 5x10 as
+             opposed to 5x7 and 5x10 or 5x8 and 5x11 is a mystery. In an early pre-release data
+             book 5x7 and 5x10 is used (Advance Copy #AP4 from July 1985). Perhaps it was a
+             marketing change?
+            
+             As only 11 bytes are used in 5x10 mode, but 16 bytes are reserved, the last 5 bytes
+             are useless. The datasheet helpfully suggests that you can store your own data there.
+             The same would be true for bits 5-7 of lines that matter for both 5x8 and 5x10.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayOn">
+      <MemberSignature Language="C#" Value="public bool DisplayOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisplayOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.ICharacterLcd.DisplayOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisplayOn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DisplayOn : bool with get, set" Usage="Iot.Device.CharacterLcd.ICharacterLcd.DisplayOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enable/disable the display.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfCustomCharactersSupported">
+      <MemberSignature Language="C#" Value="public int NumberOfCustomCharactersSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumberOfCustomCharactersSupported" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.ICharacterLcd.NumberOfCustomCharactersSupported" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NumberOfCustomCharactersSupported As Integer" />
+      <MemberSignature Language="F#" Value="member this.NumberOfCustomCharactersSupported : int" Usage="Iot.Device.CharacterLcd.ICharacterLcd.NumberOfCustomCharactersSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the number of custom characters for this display.
+            A custom character is one that can be user-defined and assigned to a slot using <see cref="M:Iot.Device.CharacterLcd.ICharacterLcd.CreateCustomCharacter(System.Byte,System.ReadOnlySpan{System.Byte})" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCursorPosition">
+      <MemberSignature Language="C#" Value="public void SetCursorPosition (int left, int top);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetCursorPosition(int32 left, int32 top) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.ICharacterLcd.SetCursorPosition(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetCursorPosition (left As Integer, top As Integer)" />
+      <MemberSignature Language="F#" Value="abstract member SetCursorPosition : int * int -&gt; unit" Usage="iCharacterLcd.SetCursorPosition (left, top)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Int32" />
+        <Parameter Name="top" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="left">The column position from left to right starting with 0.</param>
+        <param name="top">The row position from the top starting with 0.</param>
+        <summary>
+            Moves the cursor to an explicit column and row position.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">The given position is not inside the display.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size Size" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.ICharacterLcd.Size" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Size As Size" />
+      <MemberSignature Language="F#" Value="member this.Size : System.Drawing.Size" Usage="Iot.Device.CharacterLcd.ICharacterLcd.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the size of the display.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlineCursorVisible">
+      <MemberSignature Language="C#" Value="public bool UnderlineCursorVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UnderlineCursorVisible" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.ICharacterLcd.UnderlineCursorVisible" />
+      <MemberSignature Language="VB.NET" Value="Public Property UnderlineCursorVisible As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UnderlineCursorVisible : bool with get, set" Usage="Iot.Device.CharacterLcd.ICharacterLcd.UnderlineCursorVisible" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enable/disable the underline cursor.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (ReadOnlySpan&lt;byte&gt; text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.ICharacterLcd.Write(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (text As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="abstract member Write : ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="iCharacterLcd.Write text" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="text">Text to print</param>
+        <summary>
+            Write a raw byte stream to the display.
+            Used if character translation already took place.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.ICharacterLcd.Write(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (text As String)" />
+      <MemberSignature Language="F#" Value="abstract member Write : string -&gt; unit" Usage="iCharacterLcd.Write text" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Text to be displayed.</param>
+        <summary>
+            Write text to the display, without any character translation.
+            </summary>
+        <remarks>
+            There are only 256 characters available. Different chip variants
+            have different character sets. Characters from space ' ' (32) to
+            '}' are usually the same with the exception of '\', which is a
+            yen symbol ('¥') on some chips.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

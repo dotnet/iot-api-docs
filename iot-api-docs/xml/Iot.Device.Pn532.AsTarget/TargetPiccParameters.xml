@@ -1,0 +1,131 @@
+<Type Name="TargetPiccParameters" FullName="Iot.Device.Pn532.AsTarget.TargetPiccParameters">
+  <TypeSignature Language="C#" Value="public class TargetPiccParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TargetPiccParameters extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Pn532.AsTarget.TargetPiccParameters" />
+  <TypeSignature Language="VB.NET" Value="Public Class TargetPiccParameters" />
+  <TypeSignature Language="F#" Value="type TargetPiccParameters = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Parameters for a PICC card (like a Credit Card) when PN532 is
+            setup as a target
+            See document AN133910.pdf on nxp website for default values
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TargetPiccParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.AsTarget.TargetPiccParameters.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeneralTarget">
+      <MemberSignature Language="C#" Value="public byte[] GeneralTarget { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] GeneralTarget" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.AsTarget.TargetPiccParameters.GeneralTarget" />
+      <MemberSignature Language="VB.NET" Value="Public Property GeneralTarget As Byte()" />
+      <MemberSignature Language="F#" Value="member this.GeneralTarget : byte[] with get, set" Usage="Iot.Device.Pn532.AsTarget.TargetPiccParameters.GeneralTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            General target initialization bytes, length can't be more than 47
+            Default values are provided
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HistoricalTarget">
+      <MemberSignature Language="C#" Value="public byte[] HistoricalTarget { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] HistoricalTarget" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.AsTarget.TargetPiccParameters.HistoricalTarget" />
+      <MemberSignature Language="VB.NET" Value="Public Property HistoricalTarget As Byte()" />
+      <MemberSignature Language="F#" Value="member this.HistoricalTarget : byte[] with get, set" Usage="Iot.Device.Pn532.AsTarget.TargetPiccParameters.HistoricalTarget" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Historical data for target initialization bytes, length can't be more than 48
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NfcId3">
+      <MemberSignature Language="C#" Value="public byte[] NfcId3 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] NfcId3" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.AsTarget.TargetPiccParameters.NfcId3" />
+      <MemberSignature Language="VB.NET" Value="Public Property NfcId3 As Byte()" />
+      <MemberSignature Language="F#" Value="member this.NfcId3 : byte[] with get, set" Usage="Iot.Device.Pn532.AsTarget.TargetPiccParameters.NfcId3" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The NFC Id for a PICC card, legnth must be 10 bytes
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public byte[] Serialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] Serialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.AsTarget.TargetPiccParameters.Serialize" />
+      <MemberSignature Language="VB.NET" Value="Public Function Serialize () As Byte()" />
+      <MemberSignature Language="F#" Value="member this.Serialize : unit -&gt; byte[]" Usage="targetPiccParameters.Serialize " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Serialize the data to be used for initialization
+            </summary>
+        <returns>Data serialized</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,385 @@
+<Type Name="Vehicle" FullName="Iot.Device.GoPiGo3.Movements.Vehicle">
+  <TypeSignature Language="C#" Value="public class Vehicle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Vehicle extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.GoPiGo3.Movements.Vehicle" />
+  <TypeSignature Language="VB.NET" Value="Public Class Vehicle" />
+  <TypeSignature Language="F#" Value="type Vehicle = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents GoPiGo3 vehicle
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Vehicle (Iot.Device.GoPiGo3.GoPiGo goPiGo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.GoPiGo3.GoPiGo goPiGo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.Movements.Vehicle.#ctor(Iot.Device.GoPiGo3.GoPiGo)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (goPiGo As GoPiGo)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.GoPiGo3.Movements.Vehicle : Iot.Device.GoPiGo3.GoPiGo -&gt; Iot.Device.GoPiGo3.Movements.Vehicle" Usage="new Iot.Device.GoPiGo3.Movements.Vehicle goPiGo" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="goPiGo" Type="Iot.Device.GoPiGo3.GoPiGo" />
+      </Parameters>
+      <Docs>
+        <param name="goPiGo">To be added.</param>
+        <summary>
+            Create a vehicle with 2 motors, one left and one right
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Backward">
+      <MemberSignature Language="C#" Value="public void Backward (int speed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Backward(int32 speed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.Movements.Vehicle.Backward(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Backward (speed As Integer)" />
+      <MemberSignature Language="F#" Value="member this.Backward : int -&gt; unit" Usage="vehicle.Backward speed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speed" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="speed">speed is between -255 and +255</param>
+        <summary>
+            Run backward at the specified speed
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Backward">
+      <MemberSignature Language="C#" Value="public void Backward (int speed, int timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Backward(int32 speed, int32 timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.Movements.Vehicle.Backward(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Backward (speed As Integer, timeout As Integer)" />
+      <MemberSignature Language="F#" Value="member this.Backward : int * int -&gt; unit" Usage="vehicle.Backward (speed, timeout)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speed" Type="System.Int32" />
+        <Parameter Name="timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="speed">speed is between -255 and +255</param>
+        <param name="timeout">number of milliseconds to run the motors</param>
+        <summary>
+            Run backward for the specified number of milliseconds
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectionOpposite">
+      <MemberSignature Language="C#" Value="public bool DirectionOpposite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DirectionOpposite" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GoPiGo3.Movements.Vehicle.DirectionOpposite" />
+      <MemberSignature Language="VB.NET" Value="Public Property DirectionOpposite As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DirectionOpposite : bool with get, set" Usage="Iot.Device.GoPiGo3.Movements.Vehicle.DirectionOpposite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Is the vehicle has inverted direction, then true
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Forward">
+      <MemberSignature Language="C#" Value="public void Forward (int speed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Forward(int32 speed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.Movements.Vehicle.Forward(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Forward (speed As Integer)" />
+      <MemberSignature Language="F#" Value="member this.Forward : int -&gt; unit" Usage="vehicle.Forward speed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speed" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="speed">speed is between -255 and +255</param>
+        <summary>
+            Run forward at the specified speed
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Forward">
+      <MemberSignature Language="C#" Value="public void Forward (int speed, int timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Forward(int32 speed, int32 timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.Movements.Vehicle.Forward(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Forward (speed As Integer, timeout As Integer)" />
+      <MemberSignature Language="F#" Value="member this.Forward : int * int -&gt; unit" Usage="vehicle.Forward (speed, timeout)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speed" Type="System.Int32" />
+        <Parameter Name="timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="speed">speed is between -255 and +255</param>
+        <param name="timeout">number of milliseconds to run the motors</param>
+        <summary>
+            Run forward for the specified number of milliseconds
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRunning">
+      <MemberSignature Language="C#" Value="public bool IsRunning ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsRunning() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.Movements.Vehicle.IsRunning" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsRunning () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsRunning : unit -&gt; bool" Usage="vehicle.IsRunning " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Return true if the vehicle is moving
+            </summary>
+        <returns>true if vehicle moving</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PortLeft">
+      <MemberSignature Language="C#" Value="public Iot.Device.GoPiGo3.Models.MotorPort PortLeft { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.GoPiGo3.Models.MotorPort PortLeft" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GoPiGo3.Movements.Vehicle.PortLeft" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PortLeft As MotorPort" />
+      <MemberSignature Language="F#" Value="member this.PortLeft : Iot.Device.GoPiGo3.Models.MotorPort" Usage="Iot.Device.GoPiGo3.Movements.Vehicle.PortLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.GoPiGo3.Models.MotorPort</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return the MotorPort of the left motor
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PortRight">
+      <MemberSignature Language="C#" Value="public Iot.Device.GoPiGo3.Models.MotorPort PortRight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.GoPiGo3.Models.MotorPort PortRight" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.GoPiGo3.Movements.Vehicle.PortRight" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PortRight As MotorPort" />
+      <MemberSignature Language="F#" Value="member this.PortRight : Iot.Device.GoPiGo3.Models.MotorPort" Usage="Iot.Device.GoPiGo3.Movements.Vehicle.PortRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.GoPiGo3.Models.MotorPort</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return the MotorPort of the right motor
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.Movements.Vehicle.Stop" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Stop ()" />
+      <MemberSignature Language="F#" Value="member this.Stop : unit -&gt; unit" Usage="vehicle.Stop " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stop the vehicle
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrunLeftTime">
+      <MemberSignature Language="C#" Value="public void TrunLeftTime (int speed, int timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TrunLeftTime(int32 speed, int32 timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.Movements.Vehicle.TrunLeftTime(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TrunLeftTime (speed As Integer, timeout As Integer)" />
+      <MemberSignature Language="F#" Value="member this.TrunLeftTime : int * int -&gt; unit" Usage="vehicle.TrunLeftTime (speed, timeout)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speed" Type="System.Int32" />
+        <Parameter Name="timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="speed">speed is between -255 and +255</param>
+        <param name="timeout">number of milliseconds to run the motors</param>
+        <summary>
+            Turn the vehicle left for a number of milliseconds
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrunRightTime">
+      <MemberSignature Language="C#" Value="public void TrunRightTime (int speed, int timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TrunRightTime(int32 speed, int32 timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.Movements.Vehicle.TrunRightTime(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TrunRightTime (speed As Integer, timeout As Integer)" />
+      <MemberSignature Language="F#" Value="member this.TrunRightTime : int * int -&gt; unit" Usage="vehicle.TrunRightTime (speed, timeout)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speed" Type="System.Int32" />
+        <Parameter Name="timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="speed">speed is between -255 and +255</param>
+        <param name="timeout">number of milliseconds to run the motors</param>
+        <summary>
+            Turn the vehicle right for a number of milliseconds
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnLeft">
+      <MemberSignature Language="C#" Value="public void TurnLeft (int speed, int degrees);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TurnLeft(int32 speed, int32 degrees) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.Movements.Vehicle.TurnLeft(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TurnLeft (speed As Integer, degrees As Integer)" />
+      <MemberSignature Language="F#" Value="member this.TurnLeft : int * int -&gt; unit" Usage="vehicle.TurnLeft (speed, degrees)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speed" Type="System.Int32" />
+        <Parameter Name="degrees" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="speed">speed is between -255 and +255</param>
+        <param name="degrees">degrees to turn each motor</param>
+        <summary>
+            Turn the vehicle left by the specified number of degrees for each motor. So 360 will do 1 motor turn.
+            You need to do some math to have the actual vehicle turning fully at 360. It depends of the reduction used.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnRight">
+      <MemberSignature Language="C#" Value="public void TurnRight (int speed, int degrees);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TurnRight(int32 speed, int32 degrees) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.GoPiGo3.Movements.Vehicle.TurnRight(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TurnRight (speed As Integer, degrees As Integer)" />
+      <MemberSignature Language="F#" Value="member this.TurnRight : int * int -&gt; unit" Usage="vehicle.TurnRight (speed, degrees)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speed" Type="System.Int32" />
+        <Parameter Name="degrees" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="speed">speed is between -255 and +255</param>
+        <param name="degrees">degrees to turn each motor</param>
+        <summary>
+            Turn the vehicle right by the specified number of degrees for each motor. So 360 will do 1 motor turn.
+            You need to do some math to have the actual vehicle turning fully at 360. It depends of the reduction used.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

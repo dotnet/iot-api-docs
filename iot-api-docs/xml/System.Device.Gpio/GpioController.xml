@@ -1,0 +1,647 @@
+<Type Name="GpioController" FullName="System.Device.Gpio.GpioController">
+  <TypeSignature Language="C#" Value="public sealed class GpioController : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit GpioController extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Device.Gpio.GpioController" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GpioController&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type GpioController = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Device.Gpio</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents a general-purpose I/O (GPIO) controller.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GpioController ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the <see cref="T:System.Device.Gpio.GpioController" /> class that will use the logical pin numbering scheme as default.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GpioController (System.Device.Gpio.PinNumberingScheme numberingScheme);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Device.Gpio.PinNumberingScheme numberingScheme) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.#ctor(System.Device.Gpio.PinNumberingScheme)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (numberingScheme As PinNumberingScheme)" />
+      <MemberSignature Language="F#" Value="new System.Device.Gpio.GpioController : System.Device.Gpio.PinNumberingScheme -&gt; System.Device.Gpio.GpioController" Usage="new System.Device.Gpio.GpioController numberingScheme" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="numberingScheme" Type="System.Device.Gpio.PinNumberingScheme" />
+      </Parameters>
+      <Docs>
+        <param name="numberingScheme">The numbering scheme used to represent pins provided by the controller.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:System.Device.Gpio.GpioController" /> class that will use the specified numbering scheme.
+            The controller will default to use the driver that best applies given the platform the program is executing on.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GpioController (System.Device.Gpio.PinNumberingScheme numberingScheme, System.Device.Gpio.GpioDriver driver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Device.Gpio.PinNumberingScheme numberingScheme, class System.Device.Gpio.GpioDriver driver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.#ctor(System.Device.Gpio.PinNumberingScheme,System.Device.Gpio.GpioDriver)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (numberingScheme As PinNumberingScheme, driver As GpioDriver)" />
+      <MemberSignature Language="F#" Value="new System.Device.Gpio.GpioController : System.Device.Gpio.PinNumberingScheme * System.Device.Gpio.GpioDriver -&gt; System.Device.Gpio.GpioController" Usage="new System.Device.Gpio.GpioController (numberingScheme, driver)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="numberingScheme" Type="System.Device.Gpio.PinNumberingScheme" />
+        <Parameter Name="driver" Type="System.Device.Gpio.GpioDriver" />
+      </Parameters>
+      <Docs>
+        <param name="numberingScheme">The numbering scheme used to represent pins provided by the controller.</param>
+        <param name="driver">The driver that manages all of the pin operations for the controller.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:System.Device.Gpio.GpioController" /> class that will use the specified numbering scheme and driver.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClosePin">
+      <MemberSignature Language="C#" Value="public void ClosePin (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClosePin(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.ClosePin(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ClosePin (pinNumber As Integer)" />
+      <MemberSignature Language="F#" Value="member this.ClosePin : int -&gt; unit" Usage="gpioController.ClosePin pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <summary>
+            Closes an open pin.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="gpioController.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetPinMode">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.PinMode GetPinMode (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Device.Gpio.PinMode GetPinMode(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.GetPinMode(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPinMode (pinNumber As Integer) As PinMode" />
+      <MemberSignature Language="F#" Value="member this.GetPinMode : int -&gt; System.Device.Gpio.PinMode" Usage="gpioController.GetPinMode pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <summary>
+            Gets the mode of a pin.
+            </summary>
+        <returns>The mode of the pin.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPinModeSupported">
+      <MemberSignature Language="C#" Value="public bool IsPinModeSupported (int pinNumber, System.Device.Gpio.PinMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsPinModeSupported(int32 pinNumber, valuetype System.Device.Gpio.PinMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.IsPinModeSupported(System.Int32,System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsPinModeSupported (pinNumber As Integer, mode As PinMode) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsPinModeSupported : int * System.Device.Gpio.PinMode -&gt; bool" Usage="gpioController.IsPinModeSupported (pinNumber, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <param name="mode">The mode to check.</param>
+        <summary>
+            Checks if a pin supports a specific mode.
+            </summary>
+        <returns>The status if the pin supports the mode.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPinOpen">
+      <MemberSignature Language="C#" Value="public bool IsPinOpen (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsPinOpen(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.IsPinOpen(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsPinOpen (pinNumber As Integer) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsPinOpen : int -&gt; bool" Usage="gpioController.IsPinOpen pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <summary>
+            Checks if a specific pin is open.
+            </summary>
+        <returns>The status if the pin is open or closed.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberingScheme">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.PinNumberingScheme NumberingScheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Device.Gpio.PinNumberingScheme NumberingScheme" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Gpio.GpioController.NumberingScheme" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NumberingScheme As PinNumberingScheme" />
+      <MemberSignature Language="F#" Value="member this.NumberingScheme : System.Device.Gpio.PinNumberingScheme" Usage="System.Device.Gpio.GpioController.NumberingScheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinNumberingScheme</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The numbering scheme used to represent pins provided by the controller.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenPin">
+      <MemberSignature Language="C#" Value="public void OpenPin (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OpenPin(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.OpenPin(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub OpenPin (pinNumber As Integer)" />
+      <MemberSignature Language="F#" Value="member this.OpenPin : int -&gt; unit" Usage="gpioController.OpenPin pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <summary>
+            Opens a pin in order for it to be ready to use.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenPin">
+      <MemberSignature Language="C#" Value="public void OpenPin (int pinNumber, System.Device.Gpio.PinMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OpenPin(int32 pinNumber, valuetype System.Device.Gpio.PinMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.OpenPin(System.Int32,System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub OpenPin (pinNumber As Integer, mode As PinMode)" />
+      <MemberSignature Language="F#" Value="member this.OpenPin : int * System.Device.Gpio.PinMode -&gt; unit" Usage="gpioController.OpenPin (pinNumber, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <param name="mode">The mode to be set.</param>
+        <summary>
+            Opens a pin and sets it to a specific mode.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PinCount">
+      <MemberSignature Language="C#" Value="public int PinCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PinCount" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Gpio.GpioController.PinCount" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PinCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.PinCount : int" Usage="System.Device.Gpio.GpioController.PinCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The number of pins provided by the controller.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.PinValue Read (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Device.Gpio.PinValue Read(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.Read(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Read (pinNumber As Integer) As PinValue" />
+      <MemberSignature Language="F#" Value="member this.Read : int -&gt; System.Device.Gpio.PinValue" Usage="gpioController.Read pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <summary>
+            Reads the current value of a pin.
+            </summary>
+        <returns>The value of the pin.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public void Read (Span&lt;System.Device.Gpio.PinValuePair&gt; pinValuePairs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Read(valuetype System.Span`1&lt;valuetype System.Device.Gpio.PinValuePair&gt; pinValuePairs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.Read(System.Span{System.Device.Gpio.PinValuePair})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Read (pinValuePairs As Span(Of PinValuePair))" />
+      <MemberSignature Language="F#" Value="member this.Read : Span&lt;System.Device.Gpio.PinValuePair&gt; -&gt; unit" Usage="gpioController.Read pinValuePairs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinValuePairs" Type="System.Span&lt;System.Device.Gpio.PinValuePair&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pinValuePairs">The pin/value pairs to read.</param>
+        <summary>
+            Read the given pins with the given pin numbers.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterCallbackForPinValueChangedEvent">
+      <MemberSignature Language="C#" Value="public void RegisterCallbackForPinValueChangedEvent (int pinNumber, System.Device.Gpio.PinEventTypes eventTypes, System.Device.Gpio.PinChangeEventHandler callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterCallbackForPinValueChangedEvent(int32 pinNumber, valuetype System.Device.Gpio.PinEventTypes eventTypes, class System.Device.Gpio.PinChangeEventHandler callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.RegisterCallbackForPinValueChangedEvent(System.Int32,System.Device.Gpio.PinEventTypes,System.Device.Gpio.PinChangeEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterCallbackForPinValueChangedEvent (pinNumber As Integer, eventTypes As PinEventTypes, callback As PinChangeEventHandler)" />
+      <MemberSignature Language="F#" Value="member this.RegisterCallbackForPinValueChangedEvent : int * System.Device.Gpio.PinEventTypes * System.Device.Gpio.PinChangeEventHandler -&gt; unit" Usage="gpioController.RegisterCallbackForPinValueChangedEvent (pinNumber, eventTypes, callback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="eventTypes" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="callback" Type="System.Device.Gpio.PinChangeEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <param name="eventTypes">The event types to wait for.</param>
+        <param name="callback">The callback method that will be invoked.</param>
+        <summary>
+            Adds a callback that will be invoked when pinNumber has an event of type eventType.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPinMode">
+      <MemberSignature Language="C#" Value="public void SetPinMode (int pinNumber, System.Device.Gpio.PinMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPinMode(int32 pinNumber, valuetype System.Device.Gpio.PinMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.SetPinMode(System.Int32,System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetPinMode (pinNumber As Integer, mode As PinMode)" />
+      <MemberSignature Language="F#" Value="member this.SetPinMode : int * System.Device.Gpio.PinMode -&gt; unit" Usage="gpioController.SetPinMode (pinNumber, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <param name="mode">The mode to be set.</param>
+        <summary>
+            Sets the mode to a pin.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnregisterCallbackForPinValueChangedEvent">
+      <MemberSignature Language="C#" Value="public void UnregisterCallbackForPinValueChangedEvent (int pinNumber, System.Device.Gpio.PinChangeEventHandler callback);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UnregisterCallbackForPinValueChangedEvent(int32 pinNumber, class System.Device.Gpio.PinChangeEventHandler callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.UnregisterCallbackForPinValueChangedEvent(System.Int32,System.Device.Gpio.PinChangeEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub UnregisterCallbackForPinValueChangedEvent (pinNumber As Integer, callback As PinChangeEventHandler)" />
+      <MemberSignature Language="F#" Value="member this.UnregisterCallbackForPinValueChangedEvent : int * System.Device.Gpio.PinChangeEventHandler -&gt; unit" Usage="gpioController.UnregisterCallbackForPinValueChangedEvent (pinNumber, callback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.Device.Gpio.PinChangeEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <param name="callback">The callback method that will be invoked.</param>
+        <summary>
+            Removes a callback that was being invoked for pin at pinNumber.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForEvent">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.WaitForEventResult WaitForEvent (int pinNumber, System.Device.Gpio.PinEventTypes eventTypes, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Device.Gpio.WaitForEventResult WaitForEvent(int32 pinNumber, valuetype System.Device.Gpio.PinEventTypes eventTypes, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.WaitForEvent(System.Int32,System.Device.Gpio.PinEventTypes,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WaitForEvent (pinNumber As Integer, eventTypes As PinEventTypes, cancellationToken As CancellationToken) As WaitForEventResult" />
+      <MemberSignature Language="F#" Value="member this.WaitForEvent : int * System.Device.Gpio.PinEventTypes * System.Threading.CancellationToken -&gt; System.Device.Gpio.WaitForEventResult" Usage="gpioController.WaitForEvent (pinNumber, eventTypes, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.WaitForEventResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="eventTypes" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <param name="eventTypes">The event types to wait for.</param>
+        <param name="cancellationToken">The cancellation token of when the operation should stop waiting for an event.</param>
+        <summary>
+            Blocks execution until an event of type eventType is received or a cancellation is requested.
+            </summary>
+        <returns>A structure that contains the result of the waiting operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForEvent">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.WaitForEventResult WaitForEvent (int pinNumber, System.Device.Gpio.PinEventTypes eventTypes, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Device.Gpio.WaitForEventResult WaitForEvent(int32 pinNumber, valuetype System.Device.Gpio.PinEventTypes eventTypes, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.WaitForEvent(System.Int32,System.Device.Gpio.PinEventTypes,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WaitForEvent (pinNumber As Integer, eventTypes As PinEventTypes, timeout As TimeSpan) As WaitForEventResult" />
+      <MemberSignature Language="F#" Value="member this.WaitForEvent : int * System.Device.Gpio.PinEventTypes * TimeSpan -&gt; System.Device.Gpio.WaitForEventResult" Usage="gpioController.WaitForEvent (pinNumber, eventTypes, timeout)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.WaitForEventResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="eventTypes" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <param name="eventTypes">The event types to wait for.</param>
+        <param name="timeout">The time to wait for the event.</param>
+        <summary>
+            Blocks execution until an event of type eventType is received or a period of time has expired.
+            </summary>
+        <returns>A structure that contains the result of the waiting operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForEventAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.ValueTask&lt;System.Device.Gpio.WaitForEventResult&gt; WaitForEventAsync (int pinNumber, System.Device.Gpio.PinEventTypes eventTypes, System.Threading.CancellationToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Threading.Tasks.ValueTask`1&lt;valuetype System.Device.Gpio.WaitForEventResult&gt; WaitForEventAsync(int32 pinNumber, valuetype System.Device.Gpio.PinEventTypes eventTypes, valuetype System.Threading.CancellationToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.WaitForEventAsync(System.Int32,System.Device.Gpio.PinEventTypes,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WaitForEventAsync (pinNumber As Integer, eventTypes As PinEventTypes, token As CancellationToken) As ValueTask(Of WaitForEventResult)" />
+      <MemberSignature Language="F#" Value="member this.WaitForEventAsync : int * System.Device.Gpio.PinEventTypes * System.Threading.CancellationToken -&gt; System.Threading.Tasks.ValueTask&lt;System.Device.Gpio.WaitForEventResult&gt;" Usage="gpioController.WaitForEventAsync (pinNumber, eventTypes, token)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask&lt;System.Device.Gpio.WaitForEventResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="eventTypes" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="token" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <param name="eventTypes">The event types to wait for.</param>
+        <param name="token">The cancellation token of when the operation should stop waiting for an event.</param>
+        <summary>
+            Async call until an event of type eventType is received or a cancellation is requested.
+            </summary>
+        <returns>A task representing the operation of getting the structure that contains the result of the waiting operation</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForEventAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.ValueTask&lt;System.Device.Gpio.WaitForEventResult&gt; WaitForEventAsync (int pinNumber, System.Device.Gpio.PinEventTypes eventTypes, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Threading.Tasks.ValueTask`1&lt;valuetype System.Device.Gpio.WaitForEventResult&gt; WaitForEventAsync(int32 pinNumber, valuetype System.Device.Gpio.PinEventTypes eventTypes, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.WaitForEventAsync(System.Int32,System.Device.Gpio.PinEventTypes,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WaitForEventAsync (pinNumber As Integer, eventTypes As PinEventTypes, timeout As TimeSpan) As ValueTask(Of WaitForEventResult)" />
+      <MemberSignature Language="F#" Value="member this.WaitForEventAsync : int * System.Device.Gpio.PinEventTypes * TimeSpan -&gt; System.Threading.Tasks.ValueTask&lt;System.Device.Gpio.WaitForEventResult&gt;" Usage="gpioController.WaitForEventAsync (pinNumber, eventTypes, timeout)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask&lt;System.Device.Gpio.WaitForEventResult&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="eventTypes" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <param name="eventTypes">The event types to wait for.</param>
+        <param name="timeout">The time to wait for the event.</param>
+        <summary>
+            Async call to wait until an event of type eventType is received or a period of time has expired.
+            </summary>
+        <returns>A task representing the operation of getting the structure that contains the result of the waiting operation.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (ReadOnlySpan&lt;System.Device.Gpio.PinValuePair&gt; pinValuePairs);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(valuetype System.ReadOnlySpan`1&lt;valuetype System.Device.Gpio.PinValuePair&gt; pinValuePairs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.Write(System.ReadOnlySpan{System.Device.Gpio.PinValuePair})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (pinValuePairs As ReadOnlySpan(Of PinValuePair))" />
+      <MemberSignature Language="F#" Value="member this.Write : ReadOnlySpan&lt;System.Device.Gpio.PinValuePair&gt; -&gt; unit" Usage="gpioController.Write pinValuePairs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinValuePairs" Type="System.ReadOnlySpan&lt;System.Device.Gpio.PinValuePair&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pinValuePairs">The pin/value pairs to write.</param>
+        <summary>
+            Write the given pins with the given values.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (int pinNumber, System.Device.Gpio.PinValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(int32 pinNumber, valuetype System.Device.Gpio.PinValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioController.Write(System.Int32,System.Device.Gpio.PinValue)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (pinNumber As Integer, value As PinValue)" />
+      <MemberSignature Language="F#" Value="member this.Write : int * System.Device.Gpio.PinValue -&gt; unit" Usage="gpioController.Write (pinNumber, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Device.Gpio.PinValue" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <param name="value">The value to be written to the pin.</param>
+        <summary>
+            Writes a value to a pin.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

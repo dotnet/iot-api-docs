@@ -1,0 +1,268 @@
+<Type Name="TxBxSidl" FullName="Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl">
+  <TypeSignature Language="C#" Value="public class TxBxSidl : Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TxBxSidl extends System.Object implements class Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl" />
+  <TypeSignature Language="VB.NET" Value="Public Class TxBxSidl&#xA;Implements IRegister" />
+  <TypeSignature Language="F#" Value="type TxBxSidl = class&#xA;    interface IRegister" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Mcp25xxx.Register.IRegister</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Transmit Buffer Standard Identifier Low Register.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TxBxSidl (byte txBufferNumber, byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 txBufferNumber, unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl.#ctor(System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (txBufferNumber As Byte, value As Byte)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl : byte * byte -&gt; Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl" Usage="new Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl (txBufferNumber, value)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="txBufferNumber" Type="System.Byte" />
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="txBufferNumber">Transmit Buffer Number.  Must be a value of 0 - 2.</param>
+        <param name="value">The value that represents the register contents.</param>
+        <summary>
+            Initializes a new instance of the TxBxSidl class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TxBxSidl (byte txBufferNumber, byte extendedIdentifier, bool extendedIdentifierEnable, byte standardIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 txBufferNumber, unsigned int8 extendedIdentifier, bool extendedIdentifierEnable, unsigned int8 standardIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl.#ctor(System.Byte,System.Byte,System.Boolean,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (txBufferNumber As Byte, extendedIdentifier As Byte, extendedIdentifierEnable As Boolean, standardIdentifier As Byte)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl : byte * byte * bool * byte -&gt; Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl" Usage="new Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl (txBufferNumber, extendedIdentifier, extendedIdentifierEnable, standardIdentifier)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="txBufferNumber" Type="System.Byte" />
+        <Parameter Name="extendedIdentifier" Type="System.Byte" />
+        <Parameter Name="extendedIdentifierEnable" Type="System.Boolean" />
+        <Parameter Name="standardIdentifier" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="txBufferNumber">Transmit Buffer Number.  Must be a value of 0 - 2.</param>
+        <param name="extendedIdentifier">
+            EID[17:16]: Extended Identifier bits.
+            These bits contain the two Most Significant bits of the Extended Identifier for the transmit message.
+            </param>
+        <param name="extendedIdentifierEnable">
+            EXIDE: Extended Identifier Enable bit.
+            True = Message will transmit the Extended Identifier.
+            False = Message will transmit the Standard Identifier.
+            </param>
+        <param name="standardIdentifier">
+            SID[2:0]: Standard Identifier bits.
+            These bits contain the three Least Significant bits of the Standard Identifier for the transmit message.
+            </param>
+        <summary>
+            Initializes a new instance of the TxBxSidl class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mcp25xxx.Register.Address Address { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Mcp25xxx.Register.Address Address" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl.Address" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Address As Address" />
+      <MemberSignature Language="F#" Value="member this.Address : Iot.Device.Mcp25xxx.Register.Address" Usage="Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl.Address" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Mcp25xxx.Register.IRegister.Address</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp25xxx.Register.Address</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the address of the register.
+            </summary>
+        <value>The address of the register.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedIdentifier">
+      <MemberSignature Language="C#" Value="public byte ExtendedIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 ExtendedIdentifier" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl.ExtendedIdentifier" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExtendedIdentifier As Byte" />
+      <MemberSignature Language="F#" Value="member this.ExtendedIdentifier : byte" Usage="Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl.ExtendedIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            EID[17:16]: Extended Identifier bits.
+            These bits contain the two Most Significant bits of the Extended Identifier for the transmit message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedIdentifierEnable">
+      <MemberSignature Language="C#" Value="public bool ExtendedIdentifierEnable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ExtendedIdentifierEnable" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl.ExtendedIdentifierEnable" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExtendedIdentifierEnable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ExtendedIdentifierEnable : bool" Usage="Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl.ExtendedIdentifierEnable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            EXIDE: Extended Identifier Enable bit.
+            True = Message will transmit the Extended Identifier.
+            False = Message will transmit the Standard Identifier.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTxBufferNumber">
+      <MemberSignature Language="C#" Value="public static byte GetTxBufferNumber (Iot.Device.Mcp25xxx.Register.Address address);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8 GetTxBufferNumber(valuetype Iot.Device.Mcp25xxx.Register.Address address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl.GetTxBufferNumber(Iot.Device.Mcp25xxx.Register.Address)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetTxBufferNumber (address As Address) As Byte" />
+      <MemberSignature Language="F#" Value="static member GetTxBufferNumber : Iot.Device.Mcp25xxx.Register.Address -&gt; byte" Usage="Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl.GetTxBufferNumber address" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="Iot.Device.Mcp25xxx.Register.Address" />
+      </Parameters>
+      <Docs>
+        <param name="address">The address to look up Tx Buffer Number.</param>
+        <summary>
+            Gets the Tx Buffer Number based on the register address.
+            </summary>
+        <returns>The Tx Buffer Number based on the register address.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardIdentifier">
+      <MemberSignature Language="C#" Value="public byte StandardIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 StandardIdentifier" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl.StandardIdentifier" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StandardIdentifier As Byte" />
+      <MemberSignature Language="F#" Value="member this.StandardIdentifier : byte" Usage="Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl.StandardIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SID[2:0]: Standard Identifier bits.
+            These bits contain the three Least Significant bits of the Standard Identifier for the transmit message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToByte">
+      <MemberSignature Language="C#" Value="public byte ToByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8 ToByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl.ToByte" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToByte () As Byte" />
+      <MemberSignature Language="F#" Value="abstract member ToByte : unit -&gt; byte&#xA;override this.ToByte : unit -&gt; byte" Usage="txBxSidl.ToByte " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Mcp25xxx.Register.IRegister.ToByte</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Converts register contents to a byte.
+            </summary>
+        <returns>The byte that represent the register contents.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TxBufferNumber">
+      <MemberSignature Language="C#" Value="public byte TxBufferNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 TxBufferNumber" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl.TxBufferNumber" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TxBufferNumber As Byte" />
+      <MemberSignature Language="F#" Value="member this.TxBufferNumber : byte" Usage="Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxSidl.TxBufferNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Transmit Buffer Number.  Must be a value of 0 - 2.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

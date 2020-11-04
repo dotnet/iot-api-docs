@@ -1,0 +1,349 @@
+<Type Name="Ht16k33" FullName="Iot.Device.Display.Ht16k33">
+  <TypeSignature Language="C#" Value="public abstract class Ht16k33 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Ht16k33 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Display.Ht16k33" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Ht16k33&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Ht16k33 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            HT16K33 LED display driver
+            </summary>
+    <remarks>
+            Datasheet: https://www.adafruit.com/datasheets/ht16K33v110.pdf
+            Sources:
+            https://github.com/adafruit/Adafruit_LED_Backpack/blob/master/Adafruit_LEDBackpack.cpp
+            https://github.com/sobek1985/Adafruit_LEDBackpack/blob/master/Adafruit_LEDBackpack/AlphaNumericFourCharacters.cs
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ht16k33 (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Ht16k33.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Display.Ht16k33 : System.Device.I2c.I2cDevice -&gt; Iot.Device.Display.Ht16k33" Usage="new Iot.Device.Display.Ht16k33 i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The <see cref="T:System.Device.I2c.I2cDevice" /> to create with.</param>
+        <summary>
+            Initialize HT16K33 device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_bufferingEnabled">
+      <MemberSignature Language="C#" Value="protected bool _bufferingEnabled;" />
+      <MemberSignature Language="ILAsm" Value=".field family bool _bufferingEnabled" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Display.Ht16k33._bufferingEnabled" />
+      <MemberSignature Language="VB.NET" Value="Protected _bufferingEnabled As Boolean " />
+      <MemberSignature Language="F#" Value="val mutable _bufferingEnabled : bool" Usage="Iot.Device.Display.Ht16k33._bufferingEnabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Buffering enabled
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_i2cDevice">
+      <MemberSignature Language="C#" Value="protected System.Device.I2c.I2cDevice _i2cDevice;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Device.I2c.I2cDevice _i2cDevice" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Display.Ht16k33._i2cDevice" />
+      <MemberSignature Language="VB.NET" Value="Protected _i2cDevice As I2cDevice " />
+      <MemberSignature Language="F#" Value="val mutable _i2cDevice : System.Device.I2c.I2cDevice" Usage="Iot.Device.Display.Ht16k33._i2cDevice" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.I2c.I2cDevice</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            I2C device interface
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoFlush">
+      <MemberSignature Language="C#" Value="protected void AutoFlush ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void AutoFlush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Ht16k33.AutoFlush" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub AutoFlush ()" />
+      <MemberSignature Language="F#" Value="member this.AutoFlush : unit -&gt; unit" Usage="ht16k33.AutoFlush " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Calls <see cref="M:Iot.Device.Display.Ht16k33.Flush" /> if <see cref="P:Iot.Device.Display.Ht16k33.BufferingEnabled" /> is false
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlinkRate">
+      <MemberSignature Language="C#" Value="public Iot.Device.Display.BlinkRate BlinkRate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Display.BlinkRate BlinkRate" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Ht16k33.BlinkRate" />
+      <MemberSignature Language="VB.NET" Value="Public Property BlinkRate As BlinkRate" />
+      <MemberSignature Language="F#" Value="member this.BlinkRate : Iot.Device.Display.BlinkRate with get, set" Usage="Iot.Device.Display.Ht16k33.BlinkRate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Display.BlinkRate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets display blink rate, also turns on display if turned off
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException" />
+      </Docs>
+    </Member>
+    <Member MemberName="Brightness">
+      <MemberSignature Language="C#" Value="public byte Brightness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Brightness" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Ht16k33.Brightness" />
+      <MemberSignature Language="VB.NET" Value="Public Property Brightness As Byte" />
+      <MemberSignature Language="F#" Value="member this.Brightness : byte with get, set" Usage="Iot.Device.Display.Ht16k33.Brightness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets level of display brightness
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Brightness must be between 0 and <see cref="F:Iot.Device.Display.Ht16k33.MaxBrightness" /></exception>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferingEnabled">
+      <MemberSignature Language="C#" Value="public bool BufferingEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BufferingEnabled" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Ht16k33.BufferingEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property BufferingEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.BufferingEnabled : bool with get, set" Usage="Iot.Device.Display.Ht16k33.BufferingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether buffering is enabled
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            When set to true the display buffer is only flushed to the device when explicitly calling the <see cref="M:Iot.Device.Display.Ht16k33.Flush" /> method.
+            Setting it to false also implicitly calls <see cref="M:Iot.Device.Display.Ht16k33.Flush" /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public abstract void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Ht16k33.Clear" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Clear ()" />
+      <MemberSignature Language="F#" Value="abstract member Clear : unit -&gt; unit" Usage="ht16k33.Clear " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clear display buffer
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const int DefaultI2cAddress = 112;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultI2cAddress = (112)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Display.Ht16k33.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Integer  = 112" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : int" Usage="Iot.Device.Display.Ht16k33.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>112</MemberValue>
+      <Docs>
+        <summary>
+            HT16K33 default I2C address
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayOn">
+      <MemberSignature Language="C#" Value="public bool DisplayOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisplayOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Ht16k33.DisplayOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisplayOn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DisplayOn : bool with get, set" Usage="Iot.Device.Display.Ht16k33.DisplayOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sets screen on/off
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Ht16k33.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="ht16k33.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public abstract void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Ht16k33.Flush" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Flush ()" />
+      <MemberSignature Language="F#" Value="abstract member Flush : unit -&gt; unit" Usage="ht16k33.Flush " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Flush buffer to display
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxBrightness">
+      <MemberSignature Language="C#" Value="public const byte MaxBrightness = 15;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 MaxBrightness = (15)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Display.Ht16k33.MaxBrightness" />
+      <MemberSignature Language="VB.NET" Value="Public Const MaxBrightness As Byte  = 15" />
+      <MemberSignature Language="F#" Value="val mutable MaxBrightness : byte" Usage="Iot.Device.Display.Ht16k33.MaxBrightness" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>15</MemberValue>
+      <Docs>
+        <summary>
+            Maximum level of brightness
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (ReadOnlySpan&lt;byte&gt; data, int startAddress = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; data, int32 startAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Ht16k33.Write(System.ReadOnlySpan{System.Byte},System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Write (data As ReadOnlySpan(Of Byte), Optional startAddress As Integer = 0)" />
+      <MemberSignature Language="F#" Value="abstract member Write : ReadOnlySpan&lt;byte&gt; * int -&gt; unit" Usage="ht16k33.Write (data, startAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="startAddress" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="data">Array of bytes to write to the display</param>
+        <param name="startAddress">Address to start writing from</param>
+        <summary>
+            Write raw data to display buffer
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,399 @@
+<Type Name="Vl53L0X" FullName="Iot.Device.Vl53L0X.Vl53L0X">
+  <TypeSignature Language="C#" Value="public class Vl53L0X : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Vl53L0X extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Vl53L0X.Vl53L0X" />
+  <TypeSignature Language="VB.NET" Value="Public Class Vl53L0X&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Vl53L0X = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents Vl53L0X
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Vl53L0X (System.Device.I2c.I2cDevice i2cDevice, int operationTimeoutMilliseconds = 500, bool autoDisposable = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, int32 operationTimeoutMilliseconds, bool autoDisposable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vl53L0X.Vl53L0X.#ctor(System.Device.I2c.I2cDevice,System.Int32,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional operationTimeoutMilliseconds As Integer = 500, Optional autoDisposable As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Vl53L0X.Vl53L0X : System.Device.I2c.I2cDevice * int * bool -&gt; Iot.Device.Vl53L0X.Vl53L0X" Usage="new Iot.Device.Vl53L0X.Vl53L0X (i2cDevice, operationTimeoutMilliseconds, autoDisposable)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="operationTimeoutMilliseconds" Type="System.Int32" />
+        <Parameter Name="autoDisposable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C Device</param>
+        <param name="operationTimeoutMilliseconds">Timeout for reading data, by default 500 milliseonds</param>
+        <param name="autoDisposable">True to dispose the I2C Device at dispose</param>
+        <summary>
+            Create a VL53L0X Sensor class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChangeI2cAddress">
+      <MemberSignature Language="C#" Value="public static void ChangeI2cAddress (System.Device.I2c.I2cDevice i2cDevice, byte newAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ChangeI2cAddress(class System.Device.I2c.I2cDevice i2cDevice, unsigned int8 newAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vl53L0X.Vl53L0X.ChangeI2cAddress(System.Device.I2c.I2cDevice,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub ChangeI2cAddress (i2cDevice As I2cDevice, newAddress As Byte)" />
+      <MemberSignature Language="F#" Value="static member ChangeI2cAddress : System.Device.I2c.I2cDevice * byte -&gt; unit" Usage="Iot.Device.Vl53L0X.Vl53L0X.ChangeI2cAddress (i2cDevice, newAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="newAddress" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The current I2C Device</param>
+        <param name="newAddress">The new I2C Address from 0x00 to 0x7F</param>
+        <summary>
+            The sensor can be changed for other I2C Address, this function allows to change it
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte DefaultI2cAddress = 41;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 DefaultI2cAddress = (41)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Vl53L0X.Vl53L0X.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Byte  = 41" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : byte" Usage="Iot.Device.Vl53L0X.Vl53L0X.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>41</MemberValue>
+      <Docs>
+        <summary>
+            The default I2C Address
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vl53L0X.Vl53L0X.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="vl53L0X.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Distance">
+      <MemberSignature Language="C#" Value="public ushort Distance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int16 Distance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vl53L0X.Vl53L0X.Distance" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Distance As UShort" />
+      <MemberSignature Language="F#" Value="member this.Distance : uint16" Usage="Iot.Device.Vl53L0X.Vl53L0X.Distance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the distance depending on the measurement mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistanceContinous">
+      <MemberSignature Language="C#" Value="public ushort DistanceContinous { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int16 DistanceContinous" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vl53L0X.Vl53L0X.DistanceContinous" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DistanceContinous As UShort" />
+      <MemberSignature Language="F#" Value="member this.DistanceContinous : uint16" Usage="Iot.Device.Vl53L0X.Vl53L0X.DistanceContinous" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get a distance in millimeters from the continous measurement feature.
+            It is recommended to used this method to gethigher quality measurements
+            </summary>
+        <value>Returns the distance in millimeters, if any error, returns the maximum range so 8190</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistanceSingleMeasurement">
+      <MemberSignature Language="C#" Value="public ushort DistanceSingleMeasurement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int16 DistanceSingleMeasurement" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vl53L0X.Vl53L0X.DistanceSingleMeasurement" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DistanceSingleMeasurement As UShort" />
+      <MemberSignature Language="F#" Value="member this.DistanceSingleMeasurement : uint16" Usage="Iot.Device.Vl53L0X.Vl53L0X.DistanceSingleMeasurement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Performs a single-shot range measurement and returns the reading in millimeters
+            </summary>
+        <value>Returns distance in millimeters</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDistanceOnce">
+      <MemberSignature Language="C#" Value="public ushort GetDistanceOnce (bool multipleReads = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int16 GetDistanceOnce(bool multipleReads) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vl53L0X.Vl53L0X.GetDistanceOnce(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetDistanceOnce (Optional multipleReads As Boolean = false) As UShort" />
+      <MemberSignature Language="F#" Value="member this.GetDistanceOnce : bool -&gt; uint16" Usage="vl53L0X.GetDistanceOnce multipleReads" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="multipleReads" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="multipleReads">True if you want multiple try to get a clean value</param>
+        <summary>
+            Get a distance in millimeters
+            </summary>
+        <returns>Returns the distance in millimeters, if any error, returns the maximum range so 8190</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HighResolution">
+      <MemberSignature Language="C#" Value="public bool HighResolution { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HighResolution" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vl53L0X.Vl53L0X.HighResolution" />
+      <MemberSignature Language="VB.NET" Value="Public Property HighResolution As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HighResolution : bool with get, set" Usage="Iot.Device.Vl53L0X.Vl53L0X.HighResolution" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set/Get high resolution measurement
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Information">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vl53L0X.Information Information { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Vl53L0X.Information Information" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vl53L0X.Vl53L0X.Information" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Information As Information" />
+      <MemberSignature Language="F#" Value="member this.Information : Iot.Device.Vl53L0X.Information" Usage="Iot.Device.Vl53L0X.Vl53L0X.Information" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vl53L0X.Information</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the sensor information including internal signal and distance offsets
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxTryReadSingle">
+      <MemberSignature Language="C#" Value="public int MaxTryReadSingle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MaxTryReadSingle" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vl53L0X.Vl53L0X.MaxTryReadSingle" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxTryReadSingle As Integer" />
+      <MemberSignature Language="F#" Value="member this.MaxTryReadSingle : int with get, set" Usage="Iot.Device.Vl53L0X.Vl53L0X.MaxTryReadSingle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Used to find a clean measurement when reading in single shot
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasurementMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vl53L0X.MeasurementMode MeasurementMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Vl53L0X.MeasurementMode MeasurementMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vl53L0X.Vl53L0X.MeasurementMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property MeasurementMode As MeasurementMode" />
+      <MemberSignature Language="F#" Value="member this.MeasurementMode : Iot.Device.Vl53L0X.MeasurementMode with get, set" Usage="Iot.Device.Vl53L0X.Vl53L0X.MeasurementMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vl53L0X.MeasurementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get/Set the measurement mode used to return the distance property
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Precision">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vl53L0X.Precision Precision { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Vl53L0X.Precision Precision" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vl53L0X.Vl53L0X.Precision" />
+      <MemberSignature Language="VB.NET" Value="Public Property Precision As Precision" />
+      <MemberSignature Language="F#" Value="member this.Precision : Iot.Device.Vl53L0X.Precision with get, set" Usage="Iot.Device.Vl53L0X.Vl53L0X.Precision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vl53L0X.Precision</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set the type of precision needed for measurement
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSignalRateLimit">
+      <MemberSignature Language="C#" Value="public void SetSignalRateLimit (double limitMcps);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSignalRateLimit(float64 limitMcps) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vl53L0X.Vl53L0X.SetSignalRateLimit(System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetSignalRateLimit (limitMcps As Double)" />
+      <MemberSignature Language="F#" Value="member this.SetSignalRateLimit : double -&gt; unit" Usage="vl53L0X.SetSignalRateLimit limitMcps" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="limitMcps" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="limitMcps">The limit in MCPS, minimum value 0, maximum value 511.99</param>
+        <summary>
+            Set the signal rate limit in MCPS
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartContinuousMeasurement">
+      <MemberSignature Language="C#" Value="public void StartContinuousMeasurement (int periodMilliseconds = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartContinuousMeasurement(int32 periodMilliseconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vl53L0X.Vl53L0X.StartContinuousMeasurement(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StartContinuousMeasurement (Optional periodMilliseconds As Integer = 0)" />
+      <MemberSignature Language="F#" Value="member this.StartContinuousMeasurement : int -&gt; unit" Usage="vl53L0X.StartContinuousMeasurement periodMilliseconds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="periodMilliseconds" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="periodMilliseconds">The interval period between 2 measurements. Default is 0</param>
+        <summary>
+            Start continuous ranging measurements. If periodMilliseconds is 0
+            continuous back-to-back mode is used (the sensor takes measurements as
+            often as possible) otherwise, continuous timed mode is used, with the given
+            inter-measurement period in milliseconds determining how often the sensor
+            takes a measurement.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

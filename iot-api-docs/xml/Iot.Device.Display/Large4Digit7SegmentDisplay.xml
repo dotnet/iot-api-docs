@@ -1,0 +1,323 @@
+<Type Name="Large4Digit7SegmentDisplay" FullName="Iot.Device.Display.Large4Digit7SegmentDisplay">
+  <TypeSignature Language="C#" Value="public class Large4Digit7SegmentDisplay : Iot.Device.Display.Ht16k33, Iot.Device.Display.ISevenSegmentDisplay" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Large4Digit7SegmentDisplay extends Iot.Device.Display.Ht16k33 implements class Iot.Device.Display.ISevenSegmentDisplay" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Display.Large4Digit7SegmentDisplay" />
+  <TypeSignature Language="VB.NET" Value="Public Class Large4Digit7SegmentDisplay&#xA;Inherits Ht16k33&#xA;Implements ISevenSegmentDisplay" />
+  <TypeSignature Language="F#" Value="type Large4Digit7SegmentDisplay = class&#xA;    inherit Ht16k33&#xA;    interface ISevenSegmentDisplay" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Display.Ht16k33</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Display.ISevenSegmentDisplay</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Adafruit 1.2" 4-Digit 7-Segment Display w/I2C Backpack
+            </summary>
+    <remarks>
+            Comes in yellow, green and red colors:
+            https://www.adafruit.com/product/1268
+            https://www.adafruit.com/product/1269
+            https://www.adafruit.com/product/1270
+            Sources:
+            https://github.com/adafruit/Adafruit_LED_Backpack/blob/master/Adafruit_LEDBackpack.cpp
+            https://github.com/sobek1985/Adafruit_LEDBackpack/blob/master/Adafruit_LEDBackpack/AlphaNumericFourCharacters.cs
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Large4Digit7SegmentDisplay (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Large4Digit7SegmentDisplay.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Display.Large4Digit7SegmentDisplay : System.Device.I2c.I2cDevice -&gt; Iot.Device.Display.Large4Digit7SegmentDisplay" Usage="new Iot.Device.Display.Large4Digit7SegmentDisplay i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The <see cref="T:System.Device.I2c.I2cDevice" /> to create with.</param>
+        <summary>
+            Initialize 7-Segment display
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public override void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Large4Digit7SegmentDisplay.Clear" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub Clear ()" />
+      <MemberSignature Language="F#" Value="override this.Clear : unit -&gt; unit" Usage="large4Digit7SegmentDisplay.Clear " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dots">
+      <MemberSignature Language="C#" Value="public Iot.Device.Display.Dot Dots { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Display.Dot Dots" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Large4Digit7SegmentDisplay.Dots" />
+      <MemberSignature Language="VB.NET" Value="Public Property Dots As Dot" />
+      <MemberSignature Language="F#" Value="member this.Dots : Iot.Device.Display.Dot with get, set" Usage="Iot.Device.Display.Large4Digit7SegmentDisplay.Dots" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Display.Dot</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets dot configuration
+            </summary>
+        <value>To be added.</value>
+        <remarks>The <see cref="M:Iot.Device.Display.Large4Digit7SegmentDisplay.Clear" /> method also clears the dots as well.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public override void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Large4Digit7SegmentDisplay.Flush" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub Flush ()" />
+      <MemberSignature Language="F#" Value="override this.Flush : unit -&gt; unit" Usage="large4Digit7SegmentDisplay.Flush " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Iot.Device.Display.Segment this[int address] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Display.Segment Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Large4Digit7SegmentDisplay.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public Property Item(address As Integer) As Segment" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Iot.Device.Display.Segment with get, set" Usage="Iot.Device.Display.Large4Digit7SegmentDisplay.Item" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Display.ISevenSegmentDisplay.Item(System.Int32)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Display.Segment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="address">digit address (0..3)</param>
+        <summary>
+            Gets or sets a single digit's segments by id
+            </summary>
+        <value>Segment in display buffer for the given address</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfDigits">
+      <MemberSignature Language="C#" Value="public int NumberOfDigits { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumberOfDigits" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Large4Digit7SegmentDisplay.NumberOfDigits" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NumberOfDigits As Integer" />
+      <MemberSignature Language="F#" Value="member this.NumberOfDigits : int" Usage="Iot.Device.Display.Large4Digit7SegmentDisplay.NumberOfDigits" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Display.ISevenSegmentDisplay.NumberOfDigits</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (int value, Iot.Device.Display.Alignment alignment = Iot.Device.Display.Alignment.Right);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(int32 value, valuetype Iot.Device.Display.Alignment alignment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Large4Digit7SegmentDisplay.Write(System.Int32,Iot.Device.Display.Alignment)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (value As Integer, Optional alignment As Alignment = Iot.Device.Display.Alignment.Right)" />
+      <MemberSignature Language="F#" Value="override this.Write : int * Iot.Device.Display.Alignment -&gt; unit" Usage="large4Digit7SegmentDisplay.Write (value, alignment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+        <Parameter Name="alignment" Type="Iot.Device.Display.Alignment" />
+      </Parameters>
+      <Docs>
+        <param name="value">integer value</param>
+        <param name="alignment">alignment on display (left or right, right is default)</param>
+        <summary>
+            Write integer value as decimal digits
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="value" /> must be between -999..9999</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (ReadOnlySpan&lt;Iot.Device.Display.Font&gt; characters, int startAddress = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(valuetype System.ReadOnlySpan`1&lt;valuetype Iot.Device.Display.Font&gt; characters, int32 startAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Large4Digit7SegmentDisplay.Write(System.ReadOnlySpan{Iot.Device.Display.Font},System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (characters As ReadOnlySpan(Of Font), Optional startAddress As Integer = 0)" />
+      <MemberSignature Language="F#" Value="override this.Write : ReadOnlySpan&lt;Iot.Device.Display.Font&gt; * int -&gt; unit" Usage="large4Digit7SegmentDisplay.Write (characters, startAddress)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Display.ISevenSegmentDisplay.Write(System.ReadOnlySpan{Iot.Device.Display.Font},System.Int32)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="characters" Type="System.ReadOnlySpan&lt;Iot.Device.Display.Font&gt;" />
+        <Parameter Name="startAddress" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="characters">To be added.</param>
+        <param name="startAddress">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (ReadOnlySpan&lt;Iot.Device.Display.Segment&gt; digits, int startAddress = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(valuetype System.ReadOnlySpan`1&lt;valuetype Iot.Device.Display.Segment&gt; digits, int32 startAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Large4Digit7SegmentDisplay.Write(System.ReadOnlySpan{Iot.Device.Display.Segment},System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (digits As ReadOnlySpan(Of Segment), Optional startAddress As Integer = 0)" />
+      <MemberSignature Language="F#" Value="override this.Write : ReadOnlySpan&lt;Iot.Device.Display.Segment&gt; * int -&gt; unit" Usage="large4Digit7SegmentDisplay.Write (digits, startAddress)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Display.ISevenSegmentDisplay.Write(System.ReadOnlySpan{Iot.Device.Display.Segment},System.Int32)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="digits" Type="System.ReadOnlySpan&lt;Iot.Device.Display.Segment&gt;" />
+        <Parameter Name="startAddress" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="digits">To be added.</param>
+        <param name="startAddress">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (ReadOnlySpan&lt;byte&gt; digits, int startAddress = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; digits, int32 startAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Large4Digit7SegmentDisplay.Write(System.ReadOnlySpan{System.Byte},System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub Write (digits As ReadOnlySpan(Of Byte), Optional startAddress As Integer = 0)" />
+      <MemberSignature Language="F#" Value="override this.Write : ReadOnlySpan&lt;byte&gt; * int -&gt; unit" Usage="large4Digit7SegmentDisplay.Write (digits, startAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="digits" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="startAddress" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="digits">To be added.</param>
+        <param name="startAddress">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>Write clears dots, you'll have to reset them afterwards</remarks>
+        <inheritdoc />
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <see cref="T:Iot.Device.Display.Large4Digit7SegmentDisplay" /> only supports <see cref="F:Iot.Device.Display.Large4Digit7SegmentDisplay.MaxNumberOfDigits" /> digits</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (string value, Iot.Device.Display.Alignment alignment = Iot.Device.Display.Alignment.Left);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(string value, valuetype Iot.Device.Display.Alignment alignment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Large4Digit7SegmentDisplay.Write(System.String,Iot.Device.Display.Alignment)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (value As String, Optional alignment As Alignment = Iot.Device.Display.Alignment.Left)" />
+      <MemberSignature Language="F#" Value="override this.Write : string * Iot.Device.Display.Alignment -&gt; unit" Usage="large4Digit7SegmentDisplay.Write (value, alignment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.String" />
+        <Parameter Name="alignment" Type="Iot.Device.Display.Alignment" />
+      </Parameters>
+      <Docs>
+        <param name="value">value to display, max 4 characters, or 5 characters if the 3rd character is ':' (this also turns on the center colon), or 6 characters if 1st character is also ':'</param>
+        <param name="alignment">alignment on display (left or right, right is default)</param>
+        <summary>
+            Write string value to display
+            </summary>
+        <remarks>
+            * Unsupported characters will be replaced as whitespace
+            * This method clears the buffer before writing, so dots have to be reset afterwards
+            </remarks>
+        <exception cref="T:System.ArgumentException">
+          <paramref name="value" />[2] must be a ':'</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="value" /> can contain maximum 5 characters</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

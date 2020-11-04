@@ -1,0 +1,126 @@
+<Type Name="Lsm9Ds1AccelerometerAndGyroscope" FullName="Iot.Device.Lsm9Ds1.Lsm9Ds1AccelerometerAndGyroscope">
+  <TypeSignature Language="C#" Value="public class Lsm9Ds1AccelerometerAndGyroscope : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Lsm9Ds1AccelerometerAndGyroscope extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Lsm9Ds1.Lsm9Ds1AccelerometerAndGyroscope" />
+  <TypeSignature Language="VB.NET" Value="Public Class Lsm9Ds1AccelerometerAndGyroscope&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Lsm9Ds1AccelerometerAndGyroscope = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            LSM9DS1 accelerometer and gyroscope
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lsm9Ds1AccelerometerAndGyroscope (System.Device.I2c.I2cDevice i2cDevice, Iot.Device.Lsm9Ds1.AccelerationScale accelerationScale = Iot.Device.Lsm9Ds1.AccelerationScale.Scale02G, Iot.Device.Lsm9Ds1.AngularRateScale angularRateScale = Iot.Device.Lsm9Ds1.AngularRateScale.Scale0245Dps);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, valuetype Iot.Device.Lsm9Ds1.AccelerationScale accelerationScale, valuetype Iot.Device.Lsm9Ds1.AngularRateScale angularRateScale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Lsm9Ds1.Lsm9Ds1AccelerometerAndGyroscope.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Lsm9Ds1.AccelerationScale,Iot.Device.Lsm9Ds1.AngularRateScale)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional accelerationScale As AccelerationScale = Iot.Device.Lsm9Ds1.AccelerationScale.Scale02G, Optional angularRateScale As AngularRateScale = Iot.Device.Lsm9Ds1.AngularRateScale.Scale0245Dps)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Lsm9Ds1.Lsm9Ds1AccelerometerAndGyroscope : System.Device.I2c.I2cDevice * Iot.Device.Lsm9Ds1.AccelerationScale * Iot.Device.Lsm9Ds1.AngularRateScale -&gt; Iot.Device.Lsm9Ds1.Lsm9Ds1AccelerometerAndGyroscope" Usage="new Iot.Device.Lsm9Ds1.Lsm9Ds1AccelerometerAndGyroscope (i2cDevice, accelerationScale, angularRateScale)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="accelerationScale" Type="Iot.Device.Lsm9Ds1.AccelerationScale" />
+        <Parameter Name="angularRateScale" Type="Iot.Device.Lsm9Ds1.AngularRateScale" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">To be added.</param>
+        <param name="accelerationScale">To be added.</param>
+        <param name="angularRateScale">To be added.</param>
+        <summary>
+            Lsm9Ds1 - Accelerometer and Gyroscope bus
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Acceleration">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 Acceleration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector3 Acceleration" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Lsm9Ds1.Lsm9Ds1AccelerometerAndGyroscope.Acceleration" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Acceleration As Vector3" />
+      <MemberSignature Language="F#" Value="member this.Acceleration : System.Numerics.Vector3" Usage="Iot.Device.Lsm9Ds1.Lsm9Ds1AccelerometerAndGyroscope.Acceleration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Acceleration measured in gravitational force
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AngularRate">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 AngularRate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector3 AngularRate" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Lsm9Ds1.Lsm9Ds1AccelerometerAndGyroscope.AngularRate" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AngularRate As Vector3" />
+      <MemberSignature Language="F#" Value="member this.AngularRate : System.Numerics.Vector3" Usage="Iot.Device.Lsm9Ds1.Lsm9Ds1AccelerometerAndGyroscope.AngularRate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Acceleration measured in degrees per second (DPS)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Lsm9Ds1.Lsm9Ds1AccelerometerAndGyroscope.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="lsm9Ds1AccelerometerAndGyroscope.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

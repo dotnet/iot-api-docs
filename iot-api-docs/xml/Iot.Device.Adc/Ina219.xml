@@ -1,0 +1,403 @@
+<Type Name="Ina219" FullName="Iot.Device.Adc.Ina219">
+  <TypeSignature Language="C#" Value="public class Ina219 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Ina219 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Adc.Ina219" />
+  <TypeSignature Language="VB.NET" Value="Public Class Ina219&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Ina219 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+             Binding that exposes an INA219 Bidirectional Current/Power monitor.
+            
+             The INA219 is a high-side current shunt and power monitor with an I2C interface.
+             The INA219 monitors both shunt drop and supply voltage, with programmable conversion
+             times and filtering. A programmable calibration value, combined with an internal multiplier,
+             enables direct readouts in amperes. An additional multiplying register calculates power in watts.
+             <see href="http://www.ti.com/lit/ds/symlink/ina219.pdf" /></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ina219 (System.Device.I2c.I2cConnectionSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cConnectionSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Ina219.#ctor(System.Device.I2c.I2cConnectionSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (settings As I2cConnectionSettings)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Adc.Ina219 : System.Device.I2c.I2cConnectionSettings -&gt; Iot.Device.Adc.Ina219" Usage="new Iot.Device.Adc.Ina219 settings" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="System.Device.I2c.I2cConnectionSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings">The I2cConnectionSettings object initialized with the appropiate settings to communicate with the INA219.</param>
+        <summary>
+            Construct an INA219 device using an I2cConnectionSettings.
+            </summary>
+        <remarks>
+            This binding creates an I2cDevice ufor communication with the INA219. The I2cDevice is disposed when then INA219 is disposed.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ina219 (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Ina219.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Adc.Ina219 : System.Device.I2c.I2cDevice -&gt; Iot.Device.Adc.Ina219" Usage="new Iot.Device.Adc.Ina219 i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2cDevice initialized to communicate with the INA219.</param>
+        <summary>
+            Construct an Ina219 device using an I2cDevice
+            </summary>
+        <remarks>
+            This binding does not dispose the passed in I2cDevice.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BusAdcResolutionOrSamples">
+      <MemberSignature Language="C#" Value="public Iot.Device.Adc.Ina219AdcResolutionOrSamples BusAdcResolutionOrSamples { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Adc.Ina219AdcResolutionOrSamples BusAdcResolutionOrSamples" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Adc.Ina219.BusAdcResolutionOrSamples" />
+      <MemberSignature Language="VB.NET" Value="Public Property BusAdcResolutionOrSamples As Ina219AdcResolutionOrSamples" />
+      <MemberSignature Language="F#" Value="member this.BusAdcResolutionOrSamples : Iot.Device.Adc.Ina219AdcResolutionOrSamples with get, set" Usage="Iot.Device.Adc.Ina219.BusAdcResolutionOrSamples" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Adc.Ina219AdcResolutionOrSamples</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set the Ina219 ADC resolution or samples to be used when reading the Bus voltage.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This can either by the number of bits used for the ADC conversion (9-12 bits) or the number of samples at 12 bits to be averaged for the result.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BusVoltageRange">
+      <MemberSignature Language="C#" Value="public Iot.Device.Adc.Ina219BusVoltageRange BusVoltageRange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Adc.Ina219BusVoltageRange BusVoltageRange" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Adc.Ina219.BusVoltageRange" />
+      <MemberSignature Language="VB.NET" Value="Public Property BusVoltageRange As Ina219BusVoltageRange" />
+      <MemberSignature Language="F#" Value="member this.BusVoltageRange : Iot.Device.Adc.Ina219BusVoltageRange with get, set" Usage="Iot.Device.Adc.Ina219.BusVoltageRange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Adc.Ina219BusVoltageRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Property representing the Bus voltage range of the INA219
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This allows the user to selects eiter a 16V range or a 32V range for the ADC reading the bus voltage.
+            In general the lowest range compatible with the application parameters should be selected.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Ina219.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="ina219.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose of managed assets.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Ina219.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="ina219.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>
+            Dispose instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperatingMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Adc.Ina219OperatingMode OperatingMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Adc.Ina219OperatingMode OperatingMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Adc.Ina219.OperatingMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property OperatingMode As Ina219OperatingMode" />
+      <MemberSignature Language="F#" Value="member this.OperatingMode : Iot.Device.Adc.Ina219OperatingMode with get, set" Usage="Iot.Device.Adc.Ina219.OperatingMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Adc.Ina219OperatingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Property representing the Operating mode of the INA219
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This allows the user to selects continuous, triggered, or power-down mode of operation along with which of the shunt and bus voltage measurements are made.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PgaSensitivity">
+      <MemberSignature Language="C#" Value="public Iot.Device.Adc.Ina219PgaSensitivity PgaSensitivity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Adc.Ina219PgaSensitivity PgaSensitivity" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Adc.Ina219.PgaSensitivity" />
+      <MemberSignature Language="VB.NET" Value="Public Property PgaSensitivity As Ina219PgaSensitivity" />
+      <MemberSignature Language="F#" Value="member this.PgaSensitivity : Iot.Device.Adc.Ina219PgaSensitivity with get, set" Usage="Iot.Device.Adc.Ina219.PgaSensitivity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Adc.Ina219PgaSensitivity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Property representing the voltage range of the Programable Gain Amplifier used in the INA219 to measure Shunt Voltage.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This allows the user to selects a gain for the amplifier reading the shunt voltage before it is applied to the ADC. It can be one of +/-40mV, +/-80mV, +/-160mV or +/-320mV.
+            In general the lowest range compatible with the application parameters should be selected.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadBusVoltage">
+      <MemberSignature Language="C#" Value="public float ReadBusVoltage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 ReadBusVoltage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Ina219.ReadBusVoltage" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadBusVoltage () As Single" />
+      <MemberSignature Language="F#" Value="member this.ReadBusVoltage : unit -&gt; single" Usage="ina219.ReadBusVoltage " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read the measured Bus voltage.
+            </summary>
+        <returns>The Bus voltage in Volts</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadCurrent">
+      <MemberSignature Language="C#" Value="public float ReadCurrent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 ReadCurrent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Ina219.ReadCurrent" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadCurrent () As Single" />
+      <MemberSignature Language="F#" Value="member this.ReadCurrent : unit -&gt; single" Usage="ina219.ReadCurrent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read the calculated current through the INA219.
+            </summary>
+        <returns>The calculated current in Amperes</returns>
+        <remarks>
+            This value is determined by an internal calculation using the calibration register and the read shunt voltage and then scaled.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadPower">
+      <MemberSignature Language="C#" Value="public float ReadPower ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 ReadPower() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Ina219.ReadPower" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadPower () As Single" />
+      <MemberSignature Language="F#" Value="member this.ReadPower : unit -&gt; single" Usage="ina219.ReadPower " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the calculated power in the circuit being monitored by the INA219.
+            </summary>
+        <returns>The calculated power in Watts</returns>
+        <remarks>
+            This value is determined by an internal calculation using the calulated current and the read bus voltage and then scaled.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadShuntVoltage">
+      <MemberSignature Language="C#" Value="public float ReadShuntVoltage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 ReadShuntVoltage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Ina219.ReadShuntVoltage" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadShuntVoltage () As Single" />
+      <MemberSignature Language="F#" Value="member this.ReadShuntVoltage : unit -&gt; single" Usage="ina219.ReadShuntVoltage " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read the measured shunt voltage.
+            </summary>
+        <returns>The shunt voltage in Volts</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Ina219.Reset" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Reset ()" />
+      <MemberSignature Language="F#" Value="member this.Reset : unit -&gt; unit" Usage="ina219.Reset " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reset the INA219 to default values;
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCalibration">
+      <MemberSignature Language="C#" Value="public void SetCalibration (ushort calibrationValue, float currentLsb = 1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCalibration(unsigned int16 calibrationValue, float32 currentLsb) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Ina219.SetCalibration(System.UInt16,System.Single)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetCalibration (calibrationValue As UShort, Optional currentLsb As Single = 1)" />
+      <MemberSignature Language="F#" Value="member this.SetCalibration : uint16 * single -&gt; unit" Usage="ina219.SetCalibration (calibrationValue, currentLsb)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="calibrationValue" Type="System.UInt16" />
+        <Parameter Name="currentLsb" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="calibrationValue">The number of Amperes represented by the LSB of the INA219 current register.</param>
+        <param name="currentLsb">The current value in Amperes of the least significan bit of the calibration register. Defaults to unity so that the register can be read directly.</param>
+        <summary>
+            Set the INA219 calibration value used to scale the Shunt voltage into a Current reading.
+            </summary>
+        <remarks>
+            This method allows the user to manually specify the value written to the INA219 calibration register which determines how the shunt voltage
+            reading is scaled into the current register by the INA219. To allow finer control of the scaling the current register does not contain the actual
+            current value and the currentLsb is used to specify how much current in Amperes is represented by the least significant bit of the current register.
+            This will allow the ReadCurrent method to return the corrent current value and by implication ReadPower to return the correct power value as it is derived froom
+            the current value.
+            <see cref="M:Iot.Device.Adc.Ina219.ReadPower" /><see cref="M:Iot.Device.Adc.Ina219.ReadCurrent" /><seealso href="http://www.ti.com/lit/ds/symlink/ina219.pdf" /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShuntAdcResolutionOrSamples">
+      <MemberSignature Language="C#" Value="public Iot.Device.Adc.Ina219AdcResolutionOrSamples ShuntAdcResolutionOrSamples { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Adc.Ina219AdcResolutionOrSamples ShuntAdcResolutionOrSamples" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Adc.Ina219.ShuntAdcResolutionOrSamples" />
+      <MemberSignature Language="VB.NET" Value="Public Property ShuntAdcResolutionOrSamples As Ina219AdcResolutionOrSamples" />
+      <MemberSignature Language="F#" Value="member this.ShuntAdcResolutionOrSamples : Iot.Device.Adc.Ina219AdcResolutionOrSamples with get, set" Usage="Iot.Device.Adc.Ina219.ShuntAdcResolutionOrSamples" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Adc.Ina219AdcResolutionOrSamples</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set the INA219 ADC resolution or samples to be used when reading the Shunt voltage.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            This can either by the number of bits used for the ADC conversion (9-12 bits) or the number of samples at 12 bits to be averaged for the result.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,688 @@
+<Type Name="Bmxx80Base" FullName="Iot.Device.Bmxx80.Bmxx80Base">
+  <TypeSignature Language="C#" Value="public abstract class Bmxx80Base : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Bmxx80Base extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Bmxx80.Bmxx80Base" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Bmxx80Base&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Bmxx80Base = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents the core functionality of the Bmxx80 family.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Bmxx80Base (byte deviceId, System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(unsigned int8 deviceId, class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.#ctor(System.Byte,System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (deviceId As Byte, i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Bmxx80.Bmxx80Base : byte * System.Device.I2c.I2cDevice -&gt; Iot.Device.Bmxx80.Bmxx80Base" Usage="new Iot.Device.Bmxx80.Bmxx80Base (deviceId, i2cDevice)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="deviceId" Type="System.Byte" />
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="deviceId">The ID of the device.</param>
+        <param name="i2cDevice">The <see cref="T:System.Device.I2c.I2cDevice" /> to create with.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Bmxx80.Bmxx80Base" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Thrown when the given <see cref="T:System.Device.I2c.I2cDevice" /> is null.</exception>
+        <exception cref="T:System.IO.IOException">Thrown when the device cannot be found on the bus.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="_communicationProtocol">
+      <MemberSignature Language="C#" Value="protected Iot.Device.Bmxx80.Bmxx80Base.CommunicationProtocol _communicationProtocol;" />
+      <MemberSignature Language="ILAsm" Value=".field family valuetype Iot.Device.Bmxx80.Bmxx80Base/CommunicationProtocol _communicationProtocol" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Bmxx80.Bmxx80Base._communicationProtocol" />
+      <MemberSignature Language="VB.NET" Value="Protected _communicationProtocol As Bmxx80Base.CommunicationProtocol " />
+      <MemberSignature Language="F#" Value="val mutable _communicationProtocol : Iot.Device.Bmxx80.Bmxx80Base.CommunicationProtocol" Usage="Iot.Device.Bmxx80.Bmxx80Base._communicationProtocol" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bmxx80.Bmxx80Base+CommunicationProtocol</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Chosen communication protocol.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_controlRegister">
+      <MemberSignature Language="C#" Value="protected byte _controlRegister;" />
+      <MemberSignature Language="ILAsm" Value=".field family unsigned int8 _controlRegister" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Bmxx80.Bmxx80Base._controlRegister" />
+      <MemberSignature Language="VB.NET" Value="Protected _controlRegister As Byte " />
+      <MemberSignature Language="F#" Value="val mutable _controlRegister : byte" Usage="Iot.Device.Bmxx80.Bmxx80Base._controlRegister" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The control register of the sensor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_i2cDevice">
+      <MemberSignature Language="C#" Value="protected System.Device.I2c.I2cDevice _i2cDevice;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Device.I2c.I2cDevice _i2cDevice" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Bmxx80.Bmxx80Base._i2cDevice" />
+      <MemberSignature Language="VB.NET" Value="Protected _i2cDevice As I2cDevice " />
+      <MemberSignature Language="F#" Value="val mutable _i2cDevice : System.Device.I2c.I2cDevice" Usage="Iot.Device.Bmxx80.Bmxx80Base._i2cDevice" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.I2c.I2cDevice</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            I2C device used to communicate with the device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_tempCalibrationFactor">
+      <MemberSignature Language="C#" Value="protected virtual int _tempCalibrationFactor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 _tempCalibrationFactor" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bmxx80.Bmxx80Base._tempCalibrationFactor" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property _tempCalibrationFactor As Integer" />
+      <MemberSignature Language="F#" Value="member this._tempCalibrationFactor : int" Usage="Iot.Device.Bmxx80.Bmxx80Base._tempCalibrationFactor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ByteToSampling">
+      <MemberSignature Language="C#" Value="protected Iot.Device.Bmxx80.Sampling ByteToSampling (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype Iot.Device.Bmxx80.Sampling ByteToSampling(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.ByteToSampling(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function ByteToSampling (value As Byte) As Sampling" />
+      <MemberSignature Language="F#" Value="member this.ByteToSampling : byte -&gt; Iot.Device.Bmxx80.Sampling" Usage="bmxx80Base.ByteToSampling value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bmxx80.Sampling</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">Value to convert.</param>
+        <summary>
+            Converts byte to <see cref="T:Iot.Device.Bmxx80.Sampling" />.
+            </summary>
+        <returns>
+          <see cref="T:Iot.Device.Bmxx80.Sampling" />
+        </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompensateTemperature">
+      <MemberSignature Language="C#" Value="protected Iot.Units.Temperature CompensateTemperature (int adcTemperature);" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype Iot.Units.Temperature CompensateTemperature(int32 adcTemperature) cil managed" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.CompensateTemperature(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function CompensateTemperature (adcTemperature As Integer) As Temperature" />
+      <MemberSignature Language="F#" Value="member this.CompensateTemperature : int -&gt; Iot.Units.Temperature" Usage="bmxx80Base.CompensateTemperature adcTemperature" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="C#" Value="protected UnitsNet.Temperature CompensateTemperature (int adcTemperature);" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype UnitsNet.Temperature CompensateTemperature(int32 adcTemperature) cil managed" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="member this.CompensateTemperature : int -&gt; UnitsNet.Temperature" Usage="bmxx80Base.CompensateTemperature adcTemperature" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.0">Iot.Units.Temperature</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.1">UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adcTemperature" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="adcTemperature">The temperature value read from the device.</param>
+        <summary>
+            Compensates the temperature.
+            </summary>
+        <returns>The <see cref="T:UnitsNet.Temperature" />.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="bmxx80Base.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Cleanup.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="bmxx80Base.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">True to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+        <summary>
+            Releases the unmanaged resources used by the Bmxx80 and optionally releases the managed resources.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PressureSampling">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bmxx80.Sampling PressureSampling { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Bmxx80.Sampling PressureSampling" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bmxx80.Bmxx80Base.PressureSampling" />
+      <MemberSignature Language="VB.NET" Value="Public Property PressureSampling As Sampling" />
+      <MemberSignature Language="F#" Value="member this.PressureSampling : Iot.Device.Bmxx80.Sampling with get, set" Usage="Iot.Device.Bmxx80.Bmxx80Base.PressureSampling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bmxx80.Sampling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the pressure sampling.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <see cref="T:Iot.Device.Bmxx80.Sampling" /> is set to an undefined mode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Read16BitsFromRegister">
+      <MemberSignature Language="C#" Value="protected internal ushort Read16BitsFromRegister (byte register);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance unsigned int16 Read16BitsFromRegister(unsigned int8 register) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.Read16BitsFromRegister(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Function Read16BitsFromRegister (register As Byte) As UShort" />
+      <MemberSignature Language="F#" Value="member this.Read16BitsFromRegister : byte -&gt; uint16" Usage="bmxx80Base.Read16BitsFromRegister register" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="register" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="register">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read16BitsFromRegister">
+      <MemberSignature Language="C#" Value="protected internal ushort Read16BitsFromRegister (byte register, Iot.Device.Bmxx80.Bmxx80Base.Endianness endianness = Iot.Device.Bmxx80.Bmxx80Base+Endianness.LittleEndian);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance unsigned int16 Read16BitsFromRegister(unsigned int8 register, valuetype Iot.Device.Bmxx80.Bmxx80Base/Endianness endianness) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.Read16BitsFromRegister(System.Byte,Iot.Device.Bmxx80.Bmxx80Base.Endianness)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Function Read16BitsFromRegister (register As Byte, Optional endianness As Bmxx80Base.Endianness = Iot.Device.Bmxx80.Bmxx80Base+Endianness.LittleEndian) As UShort" />
+      <MemberSignature Language="F#" Value="member this.Read16BitsFromRegister : byte * Iot.Device.Bmxx80.Bmxx80Base.Endianness -&gt; uint16" Usage="bmxx80Base.Read16BitsFromRegister (register, endianness)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="register" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="endianness" Type="Iot.Device.Bmxx80.Bmxx80Base+Endianness" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="register">Register to read from.</param>
+        <param name="endianness">Interpretation of the bytes (big or little endian).</param>
+        <summary>
+            Reads a 16 bit value over I2C.
+            </summary>
+        <returns>Value from register.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read24BitsFromRegister">
+      <MemberSignature Language="C#" Value="protected internal uint Read24BitsFromRegister (byte register);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance unsigned int32 Read24BitsFromRegister(unsigned int8 register) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.Read24BitsFromRegister(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Function Read24BitsFromRegister (register As Byte) As UInteger" />
+      <MemberSignature Language="F#" Value="member this.Read24BitsFromRegister : byte -&gt; uint32" Usage="bmxx80Base.Read24BitsFromRegister register" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="register" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="register">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read24BitsFromRegister">
+      <MemberSignature Language="C#" Value="protected internal uint Read24BitsFromRegister (byte register, Iot.Device.Bmxx80.Bmxx80Base.Endianness endianness = Iot.Device.Bmxx80.Bmxx80Base+Endianness.LittleEndian);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance unsigned int32 Read24BitsFromRegister(unsigned int8 register, valuetype Iot.Device.Bmxx80.Bmxx80Base/Endianness endianness) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.Read24BitsFromRegister(System.Byte,Iot.Device.Bmxx80.Bmxx80Base.Endianness)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Function Read24BitsFromRegister (register As Byte, Optional endianness As Bmxx80Base.Endianness = Iot.Device.Bmxx80.Bmxx80Base+Endianness.LittleEndian) As UInteger" />
+      <MemberSignature Language="F#" Value="member this.Read24BitsFromRegister : byte * Iot.Device.Bmxx80.Bmxx80Base.Endianness -&gt; uint32" Usage="bmxx80Base.Read24BitsFromRegister (register, endianness)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="register" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="endianness" Type="Iot.Device.Bmxx80.Bmxx80Base+Endianness" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="register">Register to read from.</param>
+        <param name="endianness">Interpretation of the bytes (big or little endian).</param>
+        <summary>
+            Reads a 24 bit value over I2C.
+            </summary>
+        <returns>Value from register.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read8BitsFromRegister">
+      <MemberSignature Language="C#" Value="protected internal byte Read8BitsFromRegister (byte register);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance unsigned int8 Read8BitsFromRegister(unsigned int8 register) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.Read8BitsFromRegister(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Function Read8BitsFromRegister (register As Byte) As Byte" />
+      <MemberSignature Language="F#" Value="member this.Read8BitsFromRegister : byte -&gt; byte" Usage="bmxx80Base.Read8BitsFromRegister register" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="register" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="register">Register to read from.</param>
+        <summary>
+            Reads an 8 bit value from a register.
+            </summary>
+        <returns>Value from register.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadPressureSampling">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bmxx80.Sampling ReadPressureSampling ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.Bmxx80.Sampling ReadPressureSampling() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.ReadPressureSampling" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadPressureSampling () As Sampling" />
+      <MemberSignature Language="F#" Value="member this.ReadPressureSampling : unit -&gt; Iot.Device.Bmxx80.Sampling" Usage="bmxx80Base.ReadPressureSampling " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bmxx80.Sampling</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadTemperatureSampling">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bmxx80.Sampling ReadTemperatureSampling ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.Bmxx80.Sampling ReadTemperatureSampling() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.ReadTemperatureSampling" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadTemperatureSampling () As Sampling" />
+      <MemberSignature Language="F#" Value="member this.ReadTemperatureSampling : unit -&gt; Iot.Device.Bmxx80.Sampling" Usage="bmxx80Base.ReadTemperatureSampling " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bmxx80.Sampling</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.Reset" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Reset ()" />
+      <MemberSignature Language="F#" Value="member this.Reset : unit -&gt; unit" Usage="bmxx80Base.Reset " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            When called, the device is reset using the complete power-on-reset procedure.
+            The device will reset to the default configuration.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDefaultConfiguration">
+      <MemberSignature Language="C#" Value="protected virtual void SetDefaultConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SetDefaultConfiguration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.SetDefaultConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub SetDefaultConfiguration ()" />
+      <MemberSignature Language="F#" Value="abstract member SetDefaultConfiguration : unit -&gt; unit&#xA;override this.SetDefaultConfiguration : unit -&gt; unit" Usage="bmxx80Base.SetDefaultConfiguration " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Sets the default configuration for the sensor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPressureSampling">
+      <MemberSignature Language="C#" Value="public void SetPressureSampling (Iot.Device.Bmxx80.Sampling sampling);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPressureSampling(valuetype Iot.Device.Bmxx80.Sampling sampling) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.SetPressureSampling(Iot.Device.Bmxx80.Sampling)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetPressureSampling (sampling As Sampling)" />
+      <MemberSignature Language="F#" Value="member this.SetPressureSampling : Iot.Device.Bmxx80.Sampling -&gt; unit" Usage="bmxx80Base.SetPressureSampling sampling" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sampling" Type="Iot.Device.Bmxx80.Sampling" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="sampling">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTemperatureSampling">
+      <MemberSignature Language="C#" Value="public void SetTemperatureSampling (Iot.Device.Bmxx80.Sampling sampling);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetTemperatureSampling(valuetype Iot.Device.Bmxx80.Sampling sampling) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.SetTemperatureSampling(Iot.Device.Bmxx80.Sampling)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetTemperatureSampling (sampling As Sampling)" />
+      <MemberSignature Language="F#" Value="member this.SetTemperatureSampling : Iot.Device.Bmxx80.Sampling -&gt; unit" Usage="bmxx80Base.SetTemperatureSampling sampling" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sampling" Type="Iot.Device.Bmxx80.Sampling" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="sampling">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TempCalibrationFactor">
+      <MemberSignature Language="C#" Value="protected virtual int TempCalibrationFactor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TempCalibrationFactor" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bmxx80.Bmxx80Base.TempCalibrationFactor" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property TempCalibrationFactor As Integer" />
+      <MemberSignature Language="F#" Value="member this.TempCalibrationFactor : int" Usage="Iot.Device.Bmxx80.Bmxx80Base.TempCalibrationFactor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The temperature calibration factor.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemperatureFine">
+      <MemberSignature Language="C#" Value="protected int TemperatureFine;" />
+      <MemberSignature Language="ILAsm" Value=".field family int32 TemperatureFine" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Bmxx80.Bmxx80Base.TemperatureFine" />
+      <MemberSignature Language="VB.NET" Value="Protected TemperatureFine As Integer " />
+      <MemberSignature Language="F#" Value="val mutable TemperatureFine : int" Usage="Iot.Device.Bmxx80.Bmxx80Base.TemperatureFine" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemperatureFine">
+      <MemberSignature Language="C#" Value="protected int TemperatureFine { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TemperatureFine" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bmxx80.Bmxx80Base.TemperatureFine" />
+      <MemberSignature Language="VB.NET" Value="Protected Property TemperatureFine As Integer" />
+      <MemberSignature Language="F#" Value="member this.TemperatureFine : int with get, set" Usage="Iot.Device.Bmxx80.Bmxx80Base.TemperatureFine" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The variable TemperatureFine carries a fine resolution temperature value over to the
+            pressure compensation formula and could be implemented as a global variable.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemperatureSampling">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bmxx80.Sampling TemperatureSampling { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Bmxx80.Sampling TemperatureSampling" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bmxx80.Bmxx80Base.TemperatureSampling" />
+      <MemberSignature Language="VB.NET" Value="Public Property TemperatureSampling As Sampling" />
+      <MemberSignature Language="F#" Value="member this.TemperatureSampling : Iot.Device.Bmxx80.Sampling with get, set" Usage="Iot.Device.Bmxx80.Bmxx80Base.TemperatureSampling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bmxx80.Sampling</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the temperature sampling.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown when the <see cref="T:Iot.Device.Bmxx80.Sampling" /> is set to an undefined mode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadPressure">
+      <MemberSignature Language="C#" Value="public abstract bool TryReadPressure (out UnitsNet.Pressure pressure);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryReadPressure([out] valuetype UnitsNet.Pressure&amp; pressure) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.TryReadPressure(UnitsNet.Pressure@)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function TryReadPressure (ByRef pressure As Pressure) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member TryReadPressure : Pressure -&gt; bool" Usage="bmxx80Base.TryReadPressure pressure" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pressure" Type="UnitsNet.Pressure" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="pressure">
+            Contains the measured pressure if the <see cref="P:Iot.Device.Bmxx80.Bmxx80Base.PressureSampling" /> was not set to <see cref="F:Iot.Device.Bmxx80.Sampling.Skipped" />.
+            Contains <see cref="F:System.Double.NaN" /> otherwise.
+            </param>
+        <summary>
+            Reads the pressure. A return value indicates whether the reading succeeded.
+            </summary>
+        <returns>
+          <code>true</code> if measurement was not skipped, otherwise <code>false</code>.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadTemperature">
+      <MemberSignature Language="C#" Value="public abstract bool TryReadTemperature (out UnitsNet.Temperature temperature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool TryReadTemperature([out] valuetype UnitsNet.Temperature&amp; temperature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmxx80Base.TryReadTemperature(UnitsNet.Temperature@)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function TryReadTemperature (ByRef temperature As Temperature) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member TryReadTemperature : Temperature -&gt; bool" Usage="bmxx80Base.TryReadTemperature temperature" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="temperature" Type="UnitsNet.Temperature" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="temperature">
+            Contains the measured temperature if the <see cref="P:Iot.Device.Bmxx80.Bmxx80Base.TemperatureSampling" /> was not set to <see cref="F:Iot.Device.Bmxx80.Sampling.Skipped" />.
+            Contains <see cref="F:System.Double.NaN" /> otherwise.
+            </param>
+        <summary>
+            Reads the temperature. A return value indicates whether the reading succeeded.
+            </summary>
+        <returns>
+          <code>true</code> if measurement was not skipped, otherwise <code>false</code>.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

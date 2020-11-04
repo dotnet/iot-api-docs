@@ -1,0 +1,149 @@
+<Type Name="LcdRgb" FullName="Iot.Device.CharacterLcd.LcdRgb">
+  <TypeSignature Language="C#" Value="public class LcdRgb : Iot.Device.CharacterLcd.Hd44780" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LcdRgb extends Iot.Device.CharacterLcd.Hd44780" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.CharacterLcd.LcdRgb" />
+  <TypeSignature Language="VB.NET" Value="Public Class LcdRgb&#xA;Inherits Hd44780" />
+  <TypeSignature Language="F#" Value="type LcdRgb = class&#xA;    inherit Hd44780" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.CharacterLcd.Hd44780</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Supports I2c LCDs with I2c RGB backlight, such as the Grove - LCD RGB Backlight (i.e. 16x2 LCD character display with RGB backlight).
+            </summary>
+    <remarks>
+            This implementation was drawn from numerous libraries such as Grove_LCD_RGB_Backlight.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LcdRgb (System.Drawing.Size size, Iot.Device.CharacterLcd.LcdInterface lcdInterface, System.Device.I2c.I2cDevice rgbDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Size size, class Iot.Device.CharacterLcd.LcdInterface lcdInterface, class System.Device.I2c.I2cDevice rgbDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdRgb.#ctor(System.Drawing.Size,Iot.Device.CharacterLcd.LcdInterface,System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (size As Size, lcdInterface As LcdInterface, rgbDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.CharacterLcd.LcdRgb : System.Drawing.Size * Iot.Device.CharacterLcd.LcdInterface * System.Device.I2c.I2cDevice -&gt; Iot.Device.CharacterLcd.LcdRgb" Usage="new Iot.Device.CharacterLcd.LcdRgb (size, lcdInterface, rgbDevice)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="size" Type="System.Drawing.Size" />
+        <Parameter Name="lcdInterface" Type="Iot.Device.CharacterLcd.LcdInterface" />
+        <Parameter Name="rgbDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="size">Size of the device in characters. Usually 16x2 or 20x4.</param>
+        <param name="lcdInterface">Interface to the display.</param>
+        <param name="rgbDevice">The I2C device to control RGB backlight.</param>
+        <summary>
+            Initializes a new HD44780 LCD with an RGB Backlight.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LcdRgb (System.Drawing.Size size, System.Device.I2c.I2cDevice lcdDevice, System.Device.I2c.I2cDevice rgbDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Drawing.Size size, class System.Device.I2c.I2cDevice lcdDevice, class System.Device.I2c.I2cDevice rgbDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdRgb.#ctor(System.Drawing.Size,System.Device.I2c.I2cDevice,System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (size As Size, lcdDevice As I2cDevice, rgbDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.CharacterLcd.LcdRgb : System.Drawing.Size * System.Device.I2c.I2cDevice * System.Device.I2c.I2cDevice -&gt; Iot.Device.CharacterLcd.LcdRgb" Usage="new Iot.Device.CharacterLcd.LcdRgb (size, lcdDevice, rgbDevice)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="size" Type="System.Drawing.Size" />
+        <Parameter Name="lcdDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="rgbDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="size">Size of the device in characters. Usually 16x2 or 20x4.</param>
+        <param name="lcdDevice">The I2C device to control LCD display.</param>
+        <param name="rgbDevice">The I2C device to control RGB backlight.</param>
+        <summary>
+            Initializes a new HD44780 LCD controller.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BacklightOn">
+      <MemberSignature Language="C#" Value="public override bool BacklightOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BacklightOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.LcdRgb.BacklightOn" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property BacklightOn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.BacklightOn : bool with get, set" Usage="Iot.Device.CharacterLcd.LcdRgb.BacklightOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enable/disable the backlight.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdRgb.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="lcdRgb.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="SetBacklightColor">
+      <MemberSignature Language="C#" Value="public void SetBacklightColor (System.Drawing.Color color);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetBacklightColor(valuetype System.Drawing.Color color) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdRgb.SetBacklightColor(System.Drawing.Color)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetBacklightColor (color As Color)" />
+      <MemberSignature Language="F#" Value="member this.SetBacklightColor : System.Drawing.Color -&gt; unit" Usage="lcdRgb.SetBacklightColor color" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="color" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="color">The color to set.</param>
+        <summary>
+            Sets the backlight color.
+            The action will be ignored in case of the backlight is disabled.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
