@@ -1,0 +1,329 @@
+<Type Name="Mpr121Configuration" FullName="Iot.Device.Mpr121.Mpr121Configuration">
+  <TypeSignature Language="C#" Value="public class Mpr121Configuration" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Mpr121Configuration extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mpr121.Mpr121Configuration" />
+  <TypeSignature Language="VB.NET" Value="Public Class Mpr121Configuration" />
+  <TypeSignature Language="F#" Value="type Mpr121Configuration = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Configuration for registers listed on datasheet page 8.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Mpr121Configuration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mpr121.Mpr121Configuration.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChargeDischargeTimeConfiguration">
+      <MemberSignature Language="C#" Value="public byte ChargeDischargeTimeConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 ChargeDischargeTimeConfiguration" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mpr121.Mpr121Configuration.ChargeDischargeTimeConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Public Property ChargeDischargeTimeConfiguration As Byte" />
+      <MemberSignature Language="F#" Value="member this.ChargeDischargeTimeConfiguration : byte with get, set" Usage="Iot.Device.Mpr121.Mpr121Configuration.ChargeDischargeTimeConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Filter/Global Charge Discharge Time Configuration (datasheet page 14).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElectrodeConfiguration">
+      <MemberSignature Language="C#" Value="public byte ElectrodeConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 ElectrodeConfiguration" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mpr121.Mpr121Configuration.ElectrodeConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Public Property ElectrodeConfiguration As Byte" />
+      <MemberSignature Language="F#" Value="member this.ElectrodeConfiguration : byte with get, set" Usage="Iot.Device.Mpr121.Mpr121Configuration.ElectrodeConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Electrode Configuration (datasheet page 15).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ElectrodeReleaseThreshold">
+      <MemberSignature Language="C#" Value="public byte ElectrodeReleaseThreshold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 ElectrodeReleaseThreshold" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mpr121.Mpr121Configuration.ElectrodeReleaseThreshold" />
+      <MemberSignature Language="VB.NET" Value="Public Property ElectrodeReleaseThreshold As Byte" />
+      <MemberSignature Language="F#" Value="member this.ElectrodeReleaseThreshold : byte with get, set" Usage="Iot.Device.Mpr121.Mpr121Configuration.ElectrodeReleaseThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Electrode release threshold.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <remark>
+            Threshold settings are dependant on the touch/release signal strength, system sensitivity and noise immunity requirements.
+            In a typical touch detection application, threshold is typically in the range 0x04~0x10.
+            The touch threshold is several counts larger than the release threshold. This is to provide hysteresis and to prevent noise and jitter.
+            </remark>
+      </Docs>
+    </Member>
+    <Member MemberName="ElectrodeTouchThreshold">
+      <MemberSignature Language="C#" Value="public byte ElectrodeTouchThreshold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 ElectrodeTouchThreshold" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mpr121.Mpr121Configuration.ElectrodeTouchThreshold" />
+      <MemberSignature Language="VB.NET" Value="Public Property ElectrodeTouchThreshold As Byte" />
+      <MemberSignature Language="F#" Value="member this.ElectrodeTouchThreshold : byte with get, set" Usage="Iot.Device.Mpr121.Mpr121Configuration.ElectrodeTouchThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Electrode touch threshold.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <remark>
+            Threshold settings are dependant on the touch/release signal strength, system sensitivity and noise immunity requirements.
+            In a typical touch detection application, threshold is typically in the range 0x04~0x10.
+            The touch threshold is several counts larger than the release threshold. This is to provide hysteresis and to prevent noise and jitter.
+            </remark>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterDelayCountLimitFalling">
+      <MemberSignature Language="C#" Value="public byte FilterDelayCountLimitFalling { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 FilterDelayCountLimitFalling" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mpr121.Mpr121Configuration.FilterDelayCountLimitFalling" />
+      <MemberSignature Language="VB.NET" Value="Public Property FilterDelayCountLimitFalling As Byte" />
+      <MemberSignature Language="F#" Value="member this.FilterDelayCountLimitFalling : byte with get, set" Usage="Iot.Device.Mpr121.Mpr121Configuration.FilterDelayCountLimitFalling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines the operation rate of the filter. A larger count limit means the filter delay is operating more slowly (falling).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FilterDelayCountLimitRising">
+      <MemberSignature Language="C#" Value="public byte FilterDelayCountLimitRising { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 FilterDelayCountLimitRising" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mpr121.Mpr121Configuration.FilterDelayCountLimitRising" />
+      <MemberSignature Language="VB.NET" Value="Public Property FilterDelayCountLimitRising As Byte" />
+      <MemberSignature Language="F#" Value="member this.FilterDelayCountLimitRising : byte with get, set" Usage="Iot.Device.Mpr121.Mpr121Configuration.FilterDelayCountLimitRising" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines the operation rate of the filter. A larger count limit means the filter delay is operating more slowly (rising).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxHalfDeltaFalling">
+      <MemberSignature Language="C#" Value="public byte MaxHalfDeltaFalling { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 MaxHalfDeltaFalling" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mpr121.Mpr121Configuration.MaxHalfDeltaFalling" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxHalfDeltaFalling As Byte" />
+      <MemberSignature Language="F#" Value="member this.MaxHalfDeltaFalling : byte with get, set" Usage="Iot.Device.Mpr121.Mpr121Configuration.MaxHalfDeltaFalling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines the largest magnitude of variation to pass through the baseline filter (falling).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxHalfDeltaRising">
+      <MemberSignature Language="C#" Value="public byte MaxHalfDeltaRising { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 MaxHalfDeltaRising" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mpr121.Mpr121Configuration.MaxHalfDeltaRising" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxHalfDeltaRising As Byte" />
+      <MemberSignature Language="F#" Value="member this.MaxHalfDeltaRising : byte with get, set" Usage="Iot.Device.Mpr121.Mpr121Configuration.MaxHalfDeltaRising" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines the largest magnitude of variation to pass through the baseline filter (rising).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoiseCountLimitFalling">
+      <MemberSignature Language="C#" Value="public byte NoiseCountLimitFalling { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 NoiseCountLimitFalling" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mpr121.Mpr121Configuration.NoiseCountLimitFalling" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoiseCountLimitFalling As Byte" />
+      <MemberSignature Language="F#" Value="member this.NoiseCountLimitFalling : byte with get, set" Usage="Iot.Device.Mpr121.Mpr121Configuration.NoiseCountLimitFalling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines the number of samples consecutively greater than the Max Half Delta value (falling).
+            This is necessary to determine that it is not noise.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoiseCountLimitRising">
+      <MemberSignature Language="C#" Value="public byte NoiseCountLimitRising { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 NoiseCountLimitRising" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mpr121.Mpr121Configuration.NoiseCountLimitRising" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoiseCountLimitRising As Byte" />
+      <MemberSignature Language="F#" Value="member this.NoiseCountLimitRising : byte with get, set" Usage="Iot.Device.Mpr121.Mpr121Configuration.NoiseCountLimitRising" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines the number of samples consecutively greater than the Max Half Delta value (rising).
+            This is necessary to determine that it is not noise.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoiseHalfDeltaFalling">
+      <MemberSignature Language="C#" Value="public byte NoiseHalfDeltaFalling { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 NoiseHalfDeltaFalling" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mpr121.Mpr121Configuration.NoiseHalfDeltaFalling" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoiseHalfDeltaFalling As Byte" />
+      <MemberSignature Language="F#" Value="member this.NoiseHalfDeltaFalling : byte with get, set" Usage="Iot.Device.Mpr121.Mpr121Configuration.NoiseHalfDeltaFalling" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines the incremental change when non-noise drift is detected (falling).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoiseHalfDeltaRising">
+      <MemberSignature Language="C#" Value="public byte NoiseHalfDeltaRising { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 NoiseHalfDeltaRising" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mpr121.Mpr121Configuration.NoiseHalfDeltaRising" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoiseHalfDeltaRising As Byte" />
+      <MemberSignature Language="F#" Value="member this.NoiseHalfDeltaRising : byte with get, set" Usage="Iot.Device.Mpr121.Mpr121Configuration.NoiseHalfDeltaRising" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Determines the incremental change when non-noise drift is detected (rising).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

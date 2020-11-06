@@ -1,0 +1,183 @@
+<Type Name="RxBxSidh" FullName="Iot.Device.Mcp25xxx.Register.MessageReceive.RxBxSidh">
+  <TypeSignature Language="C#" Value="public class RxBxSidh : Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RxBxSidh extends System.Object implements class Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mcp25xxx.Register.MessageReceive.RxBxSidh" />
+  <TypeSignature Language="VB.NET" Value="Public Class RxBxSidh&#xA;Implements IRegister" />
+  <TypeSignature Language="F#" Value="type RxBxSidh = class&#xA;    interface IRegister" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Mcp25xxx.Register.IRegister</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Receive Buffer Standard Identifier High Register.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RxBxSidh (byte rxBufferNumber, byte standardIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 rxBufferNumber, unsigned int8 standardIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.MessageReceive.RxBxSidh.#ctor(System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (rxBufferNumber As Byte, standardIdentifier As Byte)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Register.MessageReceive.RxBxSidh : byte * byte -&gt; Iot.Device.Mcp25xxx.Register.MessageReceive.RxBxSidh" Usage="new Iot.Device.Mcp25xxx.Register.MessageReceive.RxBxSidh (rxBufferNumber, standardIdentifier)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rxBufferNumber" Type="System.Byte" />
+        <Parameter Name="standardIdentifier" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="rxBufferNumber">Receive Buffer Number. Must be a value of 0 - 1.</param>
+        <param name="standardIdentifier">
+            SID[10:3]: Standard Identifier bits.
+            These bits contain the eight Most Significant bits of the Standard Identifier for the received message.
+            </param>
+        <summary>
+            Initializes a new instance of the RxBxSidh class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mcp25xxx.Register.Address Address { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Mcp25xxx.Register.Address Address" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageReceive.RxBxSidh.Address" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Address As Address" />
+      <MemberSignature Language="F#" Value="member this.Address : Iot.Device.Mcp25xxx.Register.Address" Usage="Iot.Device.Mcp25xxx.Register.MessageReceive.RxBxSidh.Address" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Mcp25xxx.Register.IRegister.Address</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp25xxx.Register.Address</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the address of the register.
+            </summary>
+        <value>The address of the register.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRxBufferNumber">
+      <MemberSignature Language="C#" Value="public static byte GetRxBufferNumber (Iot.Device.Mcp25xxx.Register.Address address);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8 GetRxBufferNumber(valuetype Iot.Device.Mcp25xxx.Register.Address address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.MessageReceive.RxBxSidh.GetRxBufferNumber(Iot.Device.Mcp25xxx.Register.Address)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetRxBufferNumber (address As Address) As Byte" />
+      <MemberSignature Language="F#" Value="static member GetRxBufferNumber : Iot.Device.Mcp25xxx.Register.Address -&gt; byte" Usage="Iot.Device.Mcp25xxx.Register.MessageReceive.RxBxSidh.GetRxBufferNumber address" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="Iot.Device.Mcp25xxx.Register.Address" />
+      </Parameters>
+      <Docs>
+        <param name="address">The address to up look Rx Buffer Number.</param>
+        <summary>
+            Gets the Rx Buffer Number based on the register address.
+            </summary>
+        <returns>The Rx Buffer Number based on the register address.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RxBufferNumber">
+      <MemberSignature Language="C#" Value="public byte RxBufferNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 RxBufferNumber" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageReceive.RxBxSidh.RxBufferNumber" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RxBufferNumber As Byte" />
+      <MemberSignature Language="F#" Value="member this.RxBufferNumber : byte" Usage="Iot.Device.Mcp25xxx.Register.MessageReceive.RxBxSidh.RxBufferNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Receive Buffer Number. Must be a value of 0 - 1.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StandardIdentifier">
+      <MemberSignature Language="C#" Value="public byte StandardIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 StandardIdentifier" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageReceive.RxBxSidh.StandardIdentifier" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StandardIdentifier As Byte" />
+      <MemberSignature Language="F#" Value="member this.StandardIdentifier : byte" Usage="Iot.Device.Mcp25xxx.Register.MessageReceive.RxBxSidh.StandardIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SID[10:3]: Standard Identifier bits.
+            These bits contain the eight Most Significant bits of the Standard Identifier for the received message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToByte">
+      <MemberSignature Language="C#" Value="public byte ToByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8 ToByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.MessageReceive.RxBxSidh.ToByte" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToByte () As Byte" />
+      <MemberSignature Language="F#" Value="abstract member ToByte : unit -&gt; byte&#xA;override this.ToByte : unit -&gt; byte" Usage="rxBxSidh.ToByte " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Mcp25xxx.Register.IRegister.ToByte</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Converts register contents to a byte.
+            </summary>
+        <returns>The byte that represent the register contents.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

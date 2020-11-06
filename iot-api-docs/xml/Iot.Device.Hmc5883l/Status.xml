@@ -1,0 +1,100 @@
+<Type Name="Status" FullName="Iot.Device.Hmc5883l.Status">
+  <TypeSignature Language="C#" Value="public enum Status" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Status extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Hmc5883l.Status" />
+  <TypeSignature Language="VB.NET" Value="Public Enum Status" />
+  <TypeSignature Language="F#" Value="type Status = " />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Flags]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Flags&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            The status of HMC5883L device
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Lock">
+      <MemberSignature Language="C#" Value="Lock" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Hmc5883l.Status Lock = unsigned int8(2)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Hmc5883l.Status.Lock" />
+      <MemberSignature Language="VB.NET" Value="Lock" />
+      <MemberSignature Language="F#" Value="Lock = 2" Usage="Iot.Device.Hmc5883l.Status.Lock" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Hmc5883l.Status</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Data output register lock. This bit is set when some but not all for of the six data output registers have been read.
+            When this bit is set, the six data output registers are locked and any new data will not be placed in these register until
+            one of four conditions are met: all six have been read or the mode changed, a POR is issued, the mode is changed, the measurement is changed.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ready">
+      <MemberSignature Language="C#" Value="Ready" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Hmc5883l.Status Ready = unsigned int8(1)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Hmc5883l.Status.Ready" />
+      <MemberSignature Language="VB.NET" Value="Ready" />
+      <MemberSignature Language="F#" Value="Ready = 1" Usage="Iot.Device.Hmc5883l.Status.Ready" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Hmc5883l.Status</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Ready Bit. Set when data is written to all six data registers. Cleared when device initiates a write to the data output
+            registers, when in off mode, and after one or more of the data output registers are written to.
+            When RDY bit is clear it shall remain cleared for a minimum of a 250 μs.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RegulatorEnabled">
+      <MemberSignature Language="C#" Value="RegulatorEnabled" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Hmc5883l.Status RegulatorEnabled = unsigned int8(4)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Hmc5883l.Status.RegulatorEnabled" />
+      <MemberSignature Language="VB.NET" Value="RegulatorEnabled" />
+      <MemberSignature Language="F#" Value="RegulatorEnabled = 4" Usage="Iot.Device.Hmc5883l.Status.RegulatorEnabled" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Hmc5883l.Status</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            Regulator Enabled Bit. This bit is set when the internal voltage regulator is enabled.
+            This bit is cleared when the internal regulator is disabled.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

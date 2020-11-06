@@ -1,0 +1,185 @@
+<Type Name="RxMxEid8" FullName="Iot.Device.Mcp25xxx.Register.AcceptanceFilter.RxMxEid8">
+  <TypeSignature Language="C#" Value="public class RxMxEid8 : Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RxMxEid8 extends System.Object implements class Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mcp25xxx.Register.AcceptanceFilter.RxMxEid8" />
+  <TypeSignature Language="VB.NET" Value="Public Class RxMxEid8&#xA;Implements IRegister" />
+  <TypeSignature Language="F#" Value="type RxMxEid8 = class&#xA;    interface IRegister" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Mcp25xxx.Register.IRegister</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Mask Extended Identifier High Register.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RxMxEid8 (byte rxMaskNumber, byte extendedIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 rxMaskNumber, unsigned int8 extendedIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.AcceptanceFilter.RxMxEid8.#ctor(System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (rxMaskNumber As Byte, extendedIdentifier As Byte)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Register.AcceptanceFilter.RxMxEid8 : byte * byte -&gt; Iot.Device.Mcp25xxx.Register.AcceptanceFilter.RxMxEid8" Usage="new Iot.Device.Mcp25xxx.Register.AcceptanceFilter.RxMxEid8 (rxMaskNumber, extendedIdentifier)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rxMaskNumber" Type="System.Byte" />
+        <Parameter Name="extendedIdentifier" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="rxMaskNumber">Receive Mask Number.  Must be a value of 0 - 1.</param>
+        <param name="extendedIdentifier">
+            EID[15:8]: Extended Identifier bits.
+            These bits hold the filter bits to be applied to bits[15:8] of the Extended Identifier portion of a received
+            message.If corresponding with RXM[1:0] = 00 and EXIDE = 0, these bits are applied to Byte 0 in received data.
+            </param>
+        <summary>
+            Initializes a new instance of the RxMxEid8 class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mcp25xxx.Register.Address Address { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Mcp25xxx.Register.Address Address" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.AcceptanceFilter.RxMxEid8.Address" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Address As Address" />
+      <MemberSignature Language="F#" Value="member this.Address : Iot.Device.Mcp25xxx.Register.Address" Usage="Iot.Device.Mcp25xxx.Register.AcceptanceFilter.RxMxEid8.Address" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Mcp25xxx.Register.IRegister.Address</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp25xxx.Register.Address</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the address of the register.
+            </summary>
+        <value>The address of the register.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExtendedIdentifier">
+      <MemberSignature Language="C#" Value="public byte ExtendedIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 ExtendedIdentifier" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.AcceptanceFilter.RxMxEid8.ExtendedIdentifier" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ExtendedIdentifier As Byte" />
+      <MemberSignature Language="F#" Value="member this.ExtendedIdentifier : byte" Usage="Iot.Device.Mcp25xxx.Register.AcceptanceFilter.RxMxEid8.ExtendedIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            EID[15:8]: Extended Identifier bits.
+            These bits hold the filter bits to be applied to bits[15:8] of the Extended Identifier portion of a received
+            message.If corresponding with RXM[1:0] = 00 and EXIDE = 0, these bits are applied to Byte 0 in received data.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRxMaskNumber">
+      <MemberSignature Language="C#" Value="public static byte GetRxMaskNumber (Iot.Device.Mcp25xxx.Register.Address address);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8 GetRxMaskNumber(valuetype Iot.Device.Mcp25xxx.Register.Address address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.AcceptanceFilter.RxMxEid8.GetRxMaskNumber(Iot.Device.Mcp25xxx.Register.Address)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetRxMaskNumber (address As Address) As Byte" />
+      <MemberSignature Language="F#" Value="static member GetRxMaskNumber : Iot.Device.Mcp25xxx.Register.Address -&gt; byte" Usage="Iot.Device.Mcp25xxx.Register.AcceptanceFilter.RxMxEid8.GetRxMaskNumber address" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="Iot.Device.Mcp25xxx.Register.Address" />
+      </Parameters>
+      <Docs>
+        <param name="address">The address to look up Rx Mask Number.</param>
+        <summary>
+            Gets the Rx Mask Number based on the register address.
+            </summary>
+        <returns>The Rx Mask Number based on the register address.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RxMaskNumber">
+      <MemberSignature Language="C#" Value="public byte RxMaskNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 RxMaskNumber" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.AcceptanceFilter.RxMxEid8.RxMaskNumber" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RxMaskNumber As Byte" />
+      <MemberSignature Language="F#" Value="member this.RxMaskNumber : byte" Usage="Iot.Device.Mcp25xxx.Register.AcceptanceFilter.RxMxEid8.RxMaskNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Receive Mask Number.  Must be a value of 0 - 1.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToByte">
+      <MemberSignature Language="C#" Value="public byte ToByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8 ToByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.AcceptanceFilter.RxMxEid8.ToByte" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToByte () As Byte" />
+      <MemberSignature Language="F#" Value="abstract member ToByte : unit -&gt; byte&#xA;override this.ToByte : unit -&gt; byte" Usage="rxMxEid8.ToByte " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Mcp25xxx.Register.IRegister.ToByte</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Converts register contents to a byte.
+            </summary>
+        <returns>The byte that represent the register contents.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,237 @@
+<Type Name="Cnf2" FullName="Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2">
+  <TypeSignature Language="C#" Value="public class Cnf2 : Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Cnf2 extends System.Object implements class Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2" />
+  <TypeSignature Language="VB.NET" Value="Public Class Cnf2&#xA;Implements IRegister" />
+  <TypeSignature Language="F#" Value="type Cnf2 = class&#xA;    interface IRegister" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Mcp25xxx.Register.IRegister</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Configuration 2 Register.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Cnf2 (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2.#ctor(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (value As Byte)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2 : byte -&gt; Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2" Usage="new Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2 value" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">The value that represents the register contents.</param>
+        <summary>
+            Initializes a new instance of the Cnf2 class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Cnf2 (byte propagationSegmentLength, byte ps1Length, bool samplePointConfiguration, bool ps2BitTimeLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 propagationSegmentLength, unsigned int8 ps1Length, bool samplePointConfiguration, bool ps2BitTimeLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2.#ctor(System.Byte,System.Byte,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (propagationSegmentLength As Byte, ps1Length As Byte, samplePointConfiguration As Boolean, ps2BitTimeLength As Boolean)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2 : byte * byte * bool * bool -&gt; Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2" Usage="new Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2 (propagationSegmentLength, ps1Length, samplePointConfiguration, ps2BitTimeLength)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="propagationSegmentLength" Type="System.Byte" />
+        <Parameter Name="ps1Length" Type="System.Byte" />
+        <Parameter Name="samplePointConfiguration" Type="System.Boolean" />
+        <Parameter Name="ps2BitTimeLength" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="propagationSegmentLength">PRSEG[2:0]: Propagation Segment Length bits.</param>
+        <param name="ps1Length">PHSEG1[2:0]: PS1 Length bits.</param>
+        <param name="samplePointConfiguration">
+            SAM: Sample Point Configuration bit.
+            True = Bus line is sampled three times at the sample point.
+            False = Bus line is sampled once at the sample point.
+            </param>
+        <param name="ps2BitTimeLength">
+            BTLMODE: PS2 Bit Time Length bit.
+            True = Length of PS2 is determined by the PHSEG2[2:0] bits of CNF3.
+            False = Length of PS2 is the greater of PS1 and IPT(2 TQ).
+            </param>
+        <summary>
+            Initializes a new instance of the Cnf2 class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mcp25xxx.Register.Address Address { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Mcp25xxx.Register.Address Address" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2.Address" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Address As Address" />
+      <MemberSignature Language="F#" Value="member this.Address : Iot.Device.Mcp25xxx.Register.Address" Usage="Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2.Address" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Mcp25xxx.Register.IRegister.Address</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp25xxx.Register.Address</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the address of the register.
+            </summary>
+        <value>The address of the register.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropagationSegmentLength">
+      <MemberSignature Language="C#" Value="public byte PropagationSegmentLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 PropagationSegmentLength" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2.PropagationSegmentLength" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PropagationSegmentLength As Byte" />
+      <MemberSignature Language="F#" Value="member this.PropagationSegmentLength : byte" Usage="Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2.PropagationSegmentLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            PRSEG[2:0]: Propagation Segment Length bits.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ps1Length">
+      <MemberSignature Language="C#" Value="public byte Ps1Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Ps1Length" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2.Ps1Length" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Ps1Length As Byte" />
+      <MemberSignature Language="F#" Value="member this.Ps1Length : byte" Usage="Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2.Ps1Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            PHSEG1[2:0]: PS1 Length bits.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ps2BitTimeLength">
+      <MemberSignature Language="C#" Value="public bool Ps2BitTimeLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Ps2BitTimeLength" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2.Ps2BitTimeLength" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Ps2BitTimeLength As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Ps2BitTimeLength : bool" Usage="Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2.Ps2BitTimeLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            BTLMODE: PS2 Bit Time Length bit.
+            True = Length of PS2 is determined by the PHSEG2[2:0] bits of CNF3.
+            False = Length of PS2 is the greater of PS1 and IPT(2 TQ).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SamplePointConfiguration">
+      <MemberSignature Language="C#" Value="public bool SamplePointConfiguration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SamplePointConfiguration" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2.SamplePointConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SamplePointConfiguration As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SamplePointConfiguration : bool" Usage="Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2.SamplePointConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SAM: Sample Point Configuration bit.
+            True = Bus line is sampled three times at the sample point.
+            False = Bus line is sampled once at the sample point.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToByte">
+      <MemberSignature Language="C#" Value="public byte ToByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8 ToByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.BitTimeConfiguration.Cnf2.ToByte" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToByte () As Byte" />
+      <MemberSignature Language="F#" Value="abstract member ToByte : unit -&gt; byte&#xA;override this.ToByte : unit -&gt; byte" Usage="cnf2.ToByte " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Mcp25xxx.Register.IRegister.ToByte</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Converts register contents to a byte.
+            </summary>
+        <returns>The byte that represent the register contents.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

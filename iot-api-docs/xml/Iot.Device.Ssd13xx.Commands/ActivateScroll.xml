@@ -1,0 +1,106 @@
+<Type Name="ActivateScroll" FullName="Iot.Device.Ssd13xx.Commands.ActivateScroll">
+  <TypeSignature Language="C#" Value="public class ActivateScroll : Iot.Device.Ssd13xx.Commands.ISharedCommand" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActivateScroll extends System.Object implements class Iot.Device.Ssd13xx.Commands.ICommand, class Iot.Device.Ssd13xx.Commands.ISharedCommand" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ssd13xx.Commands.ActivateScroll" />
+  <TypeSignature Language="VB.NET" Value="Public Class ActivateScroll&#xA;Implements ISharedCommand" />
+  <TypeSignature Language="F#" Value="type ActivateScroll = class&#xA;    interface ISharedCommand&#xA;    interface ICommand" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Ssd13xx.Commands.ICommand</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Iot.Device.Ssd13xx.Commands.ISharedCommand</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents ActivateScroll command
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ActivateScroll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Commands.ActivateScroll.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            This command starts the motion of scrolling and should only be issued
+            after the scroll setup parameters have been defined by the scrolling
+            setup commands :26h/27h/29h/2Ah. The setting in the last scrolling setup
+            command overwrites the setting in the previous scrolling setup commands.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public byte[] GetBytes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GetBytes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Commands.ActivateScroll.GetBytes" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetBytes () As Byte()" />
+      <MemberSignature Language="F#" Value="abstract member GetBytes : unit -&gt; byte[]&#xA;override this.GetBytes : unit -&gt; byte[]" Usage="activateScroll.GetBytes " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Ssd13xx.Commands.ICommand.GetBytes</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the bytes that represent the command.
+            </summary>
+        <returns>The bytes that represent the command.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public byte Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ssd13xx.Commands.ActivateScroll.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As Byte" />
+      <MemberSignature Language="F#" Value="member this.Id : byte" Usage="Iot.Device.Ssd13xx.Commands.ActivateScroll.Id" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Ssd13xx.Commands.ICommand.Id</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The value that represents the command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

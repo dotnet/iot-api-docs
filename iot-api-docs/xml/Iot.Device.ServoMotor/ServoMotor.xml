@@ -1,0 +1,210 @@
+<Type Name="ServoMotor" FullName="Iot.Device.ServoMotor.ServoMotor">
+  <TypeSignature Language="C#" Value="public sealed class ServoMotor : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit ServoMotor extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.ServoMotor.ServoMotor" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class ServoMotor&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type ServoMotor = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents a rotary actuator or linear actuator that allows for precise control of angular or linear position.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ServoMotor (System.Device.Pwm.PwmChannel pwmChannel, double maximumAngle = 180, double minimumPulseWidthMicroseconds = 1000, double maximumPulseWidthMicroseconds = 2000);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Pwm.PwmChannel pwmChannel, float64 maximumAngle, float64 minimumPulseWidthMicroseconds, float64 maximumPulseWidthMicroseconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.ServoMotor.ServoMotor.#ctor(System.Device.Pwm.PwmChannel,System.Double,System.Double,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pwmChannel As PwmChannel, Optional maximumAngle As Double = 180, Optional minimumPulseWidthMicroseconds As Double = 1000, Optional maximumPulseWidthMicroseconds As Double = 2000)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.ServoMotor.ServoMotor : System.Device.Pwm.PwmChannel * double * double * double -&gt; Iot.Device.ServoMotor.ServoMotor" Usage="new Iot.Device.ServoMotor.ServoMotor (pwmChannel, maximumAngle, minimumPulseWidthMicroseconds, maximumPulseWidthMicroseconds)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pwmChannel" Type="System.Device.Pwm.PwmChannel" />
+        <Parameter Name="maximumAngle" Type="System.Double" />
+        <Parameter Name="minimumPulseWidthMicroseconds" Type="System.Double" />
+        <Parameter Name="maximumPulseWidthMicroseconds" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="pwmChannel">The PWM channel used to control the servo motor.</param>
+        <param name="maximumAngle">The maximum angle the servo motor can move represented as a value between 0 and 360.</param>
+        <param name="minimumPulseWidthMicroseconds">The minimum pulse width, in microseconds, that represent an angle for 0 degrees.</param>
+        <param name="maximumPulseWidthMicroseconds">The maxnimum pulse width, in microseconds, that represent an angle for maximum angle.</param>
+        <summary>
+             Initializes a new instance of the <see cref="T:Iot.Device.ServoMotor.ServoMotor" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Calibrate">
+      <MemberSignature Language="C#" Value="public void Calibrate (double maximumAngle, double minimumPulseWidthMicroseconds, double maximumPulseWidthMicroseconds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Calibrate(float64 maximumAngle, float64 minimumPulseWidthMicroseconds, float64 maximumPulseWidthMicroseconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.ServoMotor.ServoMotor.Calibrate(System.Double,System.Double,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Calibrate (maximumAngle As Double, minimumPulseWidthMicroseconds As Double, maximumPulseWidthMicroseconds As Double)" />
+      <MemberSignature Language="F#" Value="member this.Calibrate : double * double * double -&gt; unit" Usage="servoMotor.Calibrate (maximumAngle, minimumPulseWidthMicroseconds, maximumPulseWidthMicroseconds)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maximumAngle" Type="System.Double" />
+        <Parameter Name="minimumPulseWidthMicroseconds" Type="System.Double" />
+        <Parameter Name="maximumPulseWidthMicroseconds" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="maximumAngle">The maximum angle the servo motor can move represented as a value between 0 and 360.</param>
+        <param name="minimumPulseWidthMicroseconds">The minimum pulse width, in microseconds, that represent an angle for 0 degrees.</param>
+        <param name="maximumPulseWidthMicroseconds">The maxnimum pulse width, in microseconds, that represent an angle for maximum angle.</param>
+        <summary>
+            Sets calibration parameters
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.ServoMotor.ServoMotor.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="servoMotor.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.ServoMotor.ServoMotor.Start" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Start ()" />
+      <MemberSignature Language="F#" Value="member this.Start : unit -&gt; unit" Usage="servoMotor.Start " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Starts the servo motor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.ServoMotor.ServoMotor.Stop" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Stop ()" />
+      <MemberSignature Language="F#" Value="member this.Stop : unit -&gt; unit" Usage="servoMotor.Stop " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stops the servo motor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAngle">
+      <MemberSignature Language="C#" Value="public void WriteAngle (double angle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteAngle(float64 angle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.ServoMotor.ServoMotor.WriteAngle(System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteAngle (angle As Double)" />
+      <MemberSignature Language="F#" Value="member this.WriteAngle : double -&gt; unit" Usage="servoMotor.WriteAngle angle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="angle">The angle to write to the servo motor.</param>
+        <summary>
+            Writes an angle to the servo motor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritePulseWidth">
+      <MemberSignature Language="C#" Value="public void WritePulseWidth (int microseconds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WritePulseWidth(int32 microseconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.ServoMotor.ServoMotor.WritePulseWidth(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WritePulseWidth (microseconds As Integer)" />
+      <MemberSignature Language="F#" Value="member this.WritePulseWidth : int -&gt; unit" Usage="servoMotor.WritePulseWidth microseconds" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="microseconds" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="microseconds">The pulse width, in microseconds, to write to the servo motor.</param>
+        <summary>
+            Writes a pulse width to the servo motor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,1313 @@
+<Type Name="Pn532" FullName="Iot.Device.Pn532.Pn532">
+  <TypeSignature Language="C#" Value="public class Pn532 : Iot.Device.Card.CardTransceiver, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Pn532 extends Iot.Device.Card.CardTransceiver implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Pn532.Pn532" />
+  <TypeSignature Language="VB.NET" Value="Public Class Pn532&#xA;Inherits CardTransceiver&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Pn532 = class&#xA;    inherit CardTransceiver&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Card.CardTransceiver</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            PN532 RFID/NFC reader
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pn532 (System.Device.I2c.I2cDevice i2CDevice, Iot.Device.Card.LogLevel logLevel = Iot.Device.Card.LogLevel.None);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2CDevice, valuetype Iot.Device.Card.LogLevel logLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Card.LogLevel)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2CDevice As I2cDevice, Optional logLevel As LogLevel = Iot.Device.Card.LogLevel.None)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Pn532.Pn532 : System.Device.I2c.I2cDevice * Iot.Device.Card.LogLevel -&gt; Iot.Device.Pn532.Pn532" Usage="new Iot.Device.Pn532.Pn532 (i2CDevice, logLevel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2CDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="logLevel" Type="Iot.Device.Card.LogLevel" />
+      </Parameters>
+      <Docs>
+        <param name="i2CDevice">The I2C device</param>
+        <param name="logLevel">The log level</param>
+        <summary>
+            Create a PN532 using I2C
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pn532 (System.Device.Spi.SpiDevice spiDevice, Iot.Device.Card.LogLevel logLevel = Iot.Device.Card.LogLevel.None);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, valuetype Iot.Device.Card.LogLevel logLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.#ctor(System.Device.Spi.SpiDevice,Iot.Device.Card.LogLevel)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (spiDevice As SpiDevice, Optional logLevel As LogLevel = Iot.Device.Card.LogLevel.None)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Pn532.Pn532 : System.Device.Spi.SpiDevice * Iot.Device.Card.LogLevel -&gt; Iot.Device.Pn532.Pn532" Usage="new Iot.Device.Pn532.Pn532 (spiDevice, logLevel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" />
+        <Parameter Name="logLevel" Type="Iot.Device.Card.LogLevel" />
+      </Parameters>
+      <Docs>
+        <param name="spiDevice">The SPI Device</param>
+        <param name="logLevel">The log level</param>
+        <summary>
+            Create a PN532 using SPI
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pn532 (string portName, Iot.Device.Card.LogLevel logLevel = Iot.Device.Card.LogLevel.None);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string portName, valuetype Iot.Device.Card.LogLevel logLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.#ctor(System.String,Iot.Device.Card.LogLevel)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (portName As String, Optional logLevel As LogLevel = Iot.Device.Card.LogLevel.None)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Pn532.Pn532 : string * Iot.Device.Card.LogLevel -&gt; Iot.Device.Pn532.Pn532" Usage="new Iot.Device.Pn532.Pn532 (portName, logLevel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="portName" Type="System.String" />
+        <Parameter Name="logLevel" Type="Iot.Device.Card.LogLevel" />
+      </Parameters>
+      <Docs>
+        <param name="portName">The port name</param>
+        <param name="logLevel">The log level</param>
+        <summary>
+            Create a PN532 using Serial Port
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutoPoll">
+      <MemberSignature Language="C#" Value="public byte[] AutoPoll (byte numberPolling, ushort periodMilliSecond, Iot.Device.Pn532.ListPassive.PollingType[] pollingType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] AutoPoll(unsigned int8 numberPolling, unsigned int16 periodMilliSecond, valuetype Iot.Device.Pn532.ListPassive.PollingType[] pollingType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.AutoPoll(System.Byte,System.UInt16,Iot.Device.Pn532.ListPassive.PollingType[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function AutoPoll (numberPolling As Byte, periodMilliSecond As UShort, pollingType As PollingType()) As Byte()" />
+      <MemberSignature Language="F#" Value="member this.AutoPoll : byte * uint16 * Iot.Device.Pn532.ListPassive.PollingType[] -&gt; byte[]" Usage="pn532.AutoPoll (numberPolling, periodMilliSecond, pollingType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numberPolling" Type="System.Byte" />
+        <Parameter Name="periodMilliSecond" Type="System.UInt16" />
+        <Parameter Name="pollingType" Type="Iot.Device.Pn532.ListPassive.PollingType[]" />
+      </Parameters>
+      <Docs>
+        <param name="numberPolling">The number of polling before accepting a card</param>
+        <param name="periodMilliSecond">The period of polling before accepting a card</param>
+        <param name="pollingType">The type of cards to poll</param>
+        <summary>
+            Automatically poll specific types of devices
+            </summary>
+        <returns>A raw byte array containing the number of cards, the card type and the raw data. Null if nothing has been polled</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeselectTarget">
+      <MemberSignature Language="C#" Value="public bool DeselectTarget (byte targetNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool DeselectTarget(unsigned int8 targetNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.DeselectTarget(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function DeselectTarget (targetNumber As Byte) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DeselectTarget : byte -&gt; bool" Usage="pn532.DeselectTarget targetNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNumber" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="targetNumber">Target number card</param>
+        <summary>
+            Deselect a specific target number card
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="pn532.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirmwareVersion">
+      <MemberSignature Language="C#" Value="public Iot.Device.Pn532.FirmwareVersion FirmwareVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Pn532.FirmwareVersion FirmwareVersion" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.Pn532.FirmwareVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FirmwareVersion As FirmwareVersion" />
+      <MemberSignature Language="F#" Value="member this.FirmwareVersion : Iot.Device.Pn532.FirmwareVersion" Usage="Iot.Device.Pn532.Pn532.FirmwareVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Pn532.FirmwareVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Firmware version information
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="I2cDefaultAddress">
+      <MemberSignature Language="C#" Value="public const byte I2cDefaultAddress = 36;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 I2cDefaultAddress = (36)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Pn532.Pn532.I2cDefaultAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const I2cDefaultAddress As Byte  = 36" />
+      <MemberSignature Language="F#" Value="val mutable I2cDefaultAddress : byte" Usage="Iot.Device.Pn532.Pn532.I2cDefaultAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>36</MemberValue>
+      <Docs>
+        <summary>
+            The default I2C address
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitAsTarget">
+      <MemberSignature Language="C#" Value="public (Iot.Device.Pn532.AsTarget.TargetModeInitialized,byte[]) InitAsTarget (Iot.Device.Pn532.AsTarget.TargetModeInitialization mode, Iot.Device.Pn532.AsTarget.TargetMifareParameters mifare, Iot.Device.Pn532.AsTarget.TargetFeliCaParameters feliCa, Iot.Device.Pn532.AsTarget.TargetPiccParameters picc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.ValueTuple`2&lt;class Iot.Device.Pn532.AsTarget.TargetModeInitialized, unsigned int8[]&gt; InitAsTarget(valuetype Iot.Device.Pn532.AsTarget.TargetModeInitialization mode, class Iot.Device.Pn532.AsTarget.TargetMifareParameters mifare, class Iot.Device.Pn532.AsTarget.TargetFeliCaParameters feliCa, class Iot.Device.Pn532.AsTarget.TargetPiccParameters picc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.InitAsTarget(Iot.Device.Pn532.AsTarget.TargetModeInitialization,Iot.Device.Pn532.AsTarget.TargetMifareParameters,Iot.Device.Pn532.AsTarget.TargetFeliCaParameters,Iot.Device.Pn532.AsTarget.TargetPiccParameters)" />
+      <MemberSignature Language="VB.NET" Value="Public Function InitAsTarget (mode As TargetModeInitialization, mifare As TargetMifareParameters, feliCa As TargetFeliCaParameters, picc As TargetPiccParameters) As ValueTuple(Of TargetModeInitialized, Byte())" />
+      <MemberSignature Language="F#" Value="member this.InitAsTarget : Iot.Device.Pn532.AsTarget.TargetModeInitialization * Iot.Device.Pn532.AsTarget.TargetMifareParameters * Iot.Device.Pn532.AsTarget.TargetFeliCaParameters * Iot.Device.Pn532.AsTarget.TargetPiccParameters -&gt; ValueTuple&lt;Iot.Device.Pn532.AsTarget.TargetModeInitialized, byte[]&gt;" Usage="pn532.InitAsTarget (mode, mifare, feliCa, picc)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;Iot.Device.Pn532.AsTarget.TargetModeInitialized,System.Byte[]&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "modeInialized", "initiator" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "modeInialized", "initiator" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="Iot.Device.Pn532.AsTarget.TargetModeInitialization" />
+        <Parameter Name="mifare" Type="Iot.Device.Pn532.AsTarget.TargetMifareParameters" />
+        <Parameter Name="feliCa" Type="Iot.Device.Pn532.AsTarget.TargetFeliCaParameters" />
+        <Parameter Name="picc" Type="Iot.Device.Pn532.AsTarget.TargetPiccParameters" />
+      </Parameters>
+      <Docs>
+        <param name="mode">To be added.</param>
+        <param name="mifare">To be added.</param>
+        <param name="feliCa">To be added.</param>
+        <param name="picc">To be added.</param>
+        <summary>
+            Set the PN532 as a target, so as a card
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListPassiveTarget">
+      <MemberSignature Language="C#" Value="public byte[] ListPassiveTarget (Iot.Device.Pn532.ListPassive.MaxTarget maxTarget, Iot.Device.Pn532.ListPassive.TargetBaudRate targetBaudRate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] ListPassiveTarget(valuetype Iot.Device.Pn532.ListPassive.MaxTarget maxTarget, valuetype Iot.Device.Pn532.ListPassive.TargetBaudRate targetBaudRate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.ListPassiveTarget(Iot.Device.Pn532.ListPassive.MaxTarget,Iot.Device.Pn532.ListPassive.TargetBaudRate)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ListPassiveTarget (maxTarget As MaxTarget, targetBaudRate As TargetBaudRate) As Byte()" />
+      <MemberSignature Language="F#" Value="member this.ListPassiveTarget : Iot.Device.Pn532.ListPassive.MaxTarget * Iot.Device.Pn532.ListPassive.TargetBaudRate -&gt; byte[]" Usage="pn532.ListPassiveTarget (maxTarget, targetBaudRate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maxTarget" Type="Iot.Device.Pn532.ListPassive.MaxTarget" />
+        <Parameter Name="targetBaudRate" Type="Iot.Device.Pn532.ListPassive.TargetBaudRate" />
+      </Parameters>
+      <Docs>
+        <param name="maxTarget">The maximum number of targets</param>
+        <param name="targetBaudRate">The baud rate to use</param>
+        <summary>
+            List all targets cards in range
+            When using this function, you can't determine which target you've read
+            So you'll need to use the Decode functions to try to get a card type
+            So use this function only with a specific card type. Prefer the AutoPoll function
+            As the type identified is returned
+            </summary>
+        <returns>A raw byte array with the data of the targets if any has been identified</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListPassiveTarget">
+      <MemberSignature Language="C#" Value="public byte[] ListPassiveTarget (Iot.Device.Pn532.ListPassive.MaxTarget maxTarget, Iot.Device.Pn532.ListPassive.TargetBaudRate targetBaudRate, ReadOnlySpan&lt;byte&gt; initiatorData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] ListPassiveTarget(valuetype Iot.Device.Pn532.ListPassive.MaxTarget maxTarget, valuetype Iot.Device.Pn532.ListPassive.TargetBaudRate targetBaudRate, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; initiatorData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.ListPassiveTarget(Iot.Device.Pn532.ListPassive.MaxTarget,Iot.Device.Pn532.ListPassive.TargetBaudRate,System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function ListPassiveTarget (maxTarget As MaxTarget, targetBaudRate As TargetBaudRate, initiatorData As ReadOnlySpan(Of Byte)) As Byte()" />
+      <MemberSignature Language="F#" Value="member this.ListPassiveTarget : Iot.Device.Pn532.ListPassive.MaxTarget * Iot.Device.Pn532.ListPassive.TargetBaudRate * ReadOnlySpan&lt;byte&gt; -&gt; byte[]" Usage="pn532.ListPassiveTarget (maxTarget, targetBaudRate, initiatorData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maxTarget" Type="Iot.Device.Pn532.ListPassive.MaxTarget" />
+        <Parameter Name="targetBaudRate" Type="Iot.Device.Pn532.ListPassive.TargetBaudRate" />
+        <Parameter Name="initiatorData" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="maxTarget">The maximum number of targets</param>
+        <param name="targetBaudRate">The baud rate to use to find cards</param>
+        <param name="initiatorData">Specific initialization data</param>
+        <summary>
+            List all targets cards in range
+            When using this function, you can't determine which target you've read
+            So you'll need to use the Decode functions to try to get a card type
+            So use this function only with a specific card type. Prefer the AutoPoll function
+            As the type identified is returned
+            </summary>
+        <returns>A raw byte array with the data of the targets if any has been identified</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogLevel">
+      <MemberSignature Language="C#" Value="public Iot.Device.Card.LogLevel LogLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Card.LogLevel LogLevel" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.Pn532.LogLevel" />
+      <MemberSignature Language="VB.NET" Value="Public Property LogLevel As LogLevel" />
+      <MemberSignature Language="F#" Value="member this.LogLevel : Iot.Device.Card.LogLevel with get, set" Usage="Iot.Device.Pn532.Pn532.LogLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.LogLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Log level
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogTo">
+      <MemberSignature Language="C#" Value="public Iot.Device.Card.LogTo LogTo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Card.LogTo LogTo" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.Pn532.LogTo" />
+      <MemberSignature Language="VB.NET" Value="Public Property LogTo As LogTo" />
+      <MemberSignature Language="F#" Value="member this.LogTo : Iot.Device.Card.LogTo with get, set" Usage="Iot.Device.Pn532.Pn532.LogTo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.LogTo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The location to log the info
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ParametersFlags">
+      <MemberSignature Language="C#" Value="public Iot.Device.Pn532.ParametersFlags ParametersFlags { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Pn532.ParametersFlags ParametersFlags" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.Pn532.ParametersFlags" />
+      <MemberSignature Language="VB.NET" Value="Public Property ParametersFlags As ParametersFlags" />
+      <MemberSignature Language="F#" Value="member this.ParametersFlags : Iot.Device.Pn532.ParametersFlags with get, set" Usage="Iot.Device.Pn532.Pn532.ParametersFlags" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Pn532.ParametersFlags</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or set the Security Access Module parameters
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerDown">
+      <MemberSignature Language="C#" Value="public bool PowerDown (Iot.Device.Pn532.WakeUpEnable wakeUpEnable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool PowerDown(valuetype Iot.Device.Pn532.WakeUpEnable wakeUpEnable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.PowerDown(Iot.Device.Pn532.WakeUpEnable)" />
+      <MemberSignature Language="VB.NET" Value="Public Function PowerDown (wakeUpEnable As WakeUpEnable) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.PowerDown : Iot.Device.Pn532.WakeUpEnable -&gt; bool" Usage="pn532.PowerDown wakeUpEnable" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="wakeUpEnable" Type="Iot.Device.Pn532.WakeUpEnable" />
+      </Parameters>
+      <Docs>
+        <param name="wakeUpEnable">What can wake the PN532</param>
+        <summary>
+            Power down the PN532
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadDataAsTarget">
+      <MemberSignature Language="C#" Value="public int ReadDataAsTarget (Span&lt;byte&gt; receivedData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 ReadDataAsTarget(valuetype System.Span`1&lt;unsigned int8&gt; receivedData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.ReadDataAsTarget(System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadDataAsTarget (receivedData As Span(Of Byte)) As Integer" />
+      <MemberSignature Language="F#" Value="member this.ReadDataAsTarget : Span&lt;byte&gt; -&gt; int" Usage="pn532.ReadDataAsTarget receivedData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="receivedData" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="receivedData">A Span byte array for the read data. Note the first byte contains the status</param>
+        <summary>
+            read data from the reader when PN532 is a target
+            </summary>
+        <returns>Number of byte read</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadGpio">
+      <MemberSignature Language="C#" Value="public bool ReadGpio (out Iot.Device.Pn532.Port7 p7, out Iot.Device.Pn532.Port3 p3, out Iot.Device.Pn532.OperatingMode l0L1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ReadGpio([out] valuetype Iot.Device.Pn532.Port7&amp; p7, [out] valuetype Iot.Device.Pn532.Port3&amp; p3, [out] valuetype Iot.Device.Pn532.OperatingMode&amp; l0L1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.ReadGpio(Iot.Device.Pn532.Port7@,Iot.Device.Pn532.Port3@,Iot.Device.Pn532.OperatingMode@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadGpio (ByRef p7 As Port7, ByRef p3 As Port3, ByRef l0L1 As OperatingMode) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReadGpio : Port7 * Port3 * OperatingMode -&gt; bool" Usage="pn532.ReadGpio (p7, p3, l0L1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p7" Type="Iot.Device.Pn532.Port7" RefType="out" />
+        <Parameter Name="p3" Type="Iot.Device.Pn532.Port3" RefType="out" />
+        <Parameter Name="l0L1" Type="Iot.Device.Pn532.OperatingMode" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="p7">The P7 GPIO</param>
+        <param name="p3">The P3 GPIO</param>
+        <param name="l0L1">The specific operation mode register</param>
+        <summary>
+            Read the PN532 GPIO
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadRegister">
+      <MemberSignature Language="C#" Value="public bool ReadRegister (ushort register, out byte registerValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ReadRegister(unsigned int16 register, [out] unsigned int8&amp; registerValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.ReadRegister(System.UInt16,System.Byte@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadRegister (register As UShort, ByRef registerValue As Byte) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReadRegister : uint16 * byte -&gt; bool" Usage="pn532.ReadRegister (register, registerValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="register" Type="System.UInt16" />
+        <Parameter Name="registerValue" Type="System.Byte" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="register">The register to read</param>
+        <param name="registerValue">The value of the register</param>
+        <summary>
+            Read a single register
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadRegister">
+      <MemberSignature Language="C#" Value="public bool ReadRegister (ushort[] registers, Span&lt;byte&gt; registerValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ReadRegister(unsigned int16[] registers, valuetype System.Span`1&lt;unsigned int8&gt; registerValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.ReadRegister(System.UInt16[],System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadRegister (registers As UShort(), registerValues As Span(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReadRegister : uint16[] * Span&lt;byte&gt; -&gt; bool" Usage="pn532.ReadRegister (registers, registerValues)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="registers" Type="System.UInt16[]" />
+        <Parameter Name="registerValues" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="registers">Array of register to read</param>
+        <param name="registerValues">Register read values</param>
+        <summary>
+            Read any register from the XRAM
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadRegisterSfr">
+      <MemberSignature Language="C#" Value="public bool ReadRegisterSfr (Iot.Device.Pn532.SfrRegister[] registers, Span&lt;byte&gt; registerValues);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ReadRegisterSfr(valuetype Iot.Device.Pn532.SfrRegister[] registers, valuetype System.Span`1&lt;unsigned int8&gt; registerValues) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.ReadRegisterSfr(Iot.Device.Pn532.SfrRegister[],System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadRegisterSfr (registers As SfrRegister(), registerValues As Span(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReadRegisterSfr : Iot.Device.Pn532.SfrRegister[] * Span&lt;byte&gt; -&gt; bool" Usage="pn532.ReadRegisterSfr (registers, registerValues)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="registers" Type="Iot.Device.Pn532.SfrRegister[]" />
+        <Parameter Name="registerValues" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="registers">Array of register to read</param>
+        <param name="registerValues">Register read values</param>
+        <summary>
+            Read an array of SFR registers
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadTimeOut">
+      <MemberSignature Language="C#" Value="public int ReadTimeOut { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ReadTimeOut" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.Pn532.ReadTimeOut" />
+      <MemberSignature Language="VB.NET" Value="Public Property ReadTimeOut As Integer" />
+      <MemberSignature Language="F#" Value="member this.ReadTimeOut : int with get, set" Usage="Iot.Device.Pn532.Pn532.ReadTimeOut" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set or get the read timeout for I2C and SPI
+            Please refer to the documentation to set the right
+            timeout value depending on the communication
+            mode you are using
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleaseTarget">
+      <MemberSignature Language="C#" Value="public bool ReleaseTarget (byte targetNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ReleaseTarget(unsigned int8 targetNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.ReleaseTarget(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReleaseTarget (targetNumber As Byte) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReleaseTarget : byte -&gt; bool" Usage="pn532.ReleaseTarget targetNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNumber" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="targetNumber">Target number card</param>
+        <summary>
+            Release a specific target number card
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunSelfTest">
+      <MemberSignature Language="C#" Value="public bool RunSelfTest (Iot.Device.Pn532.DiagnoseMode diagnoseMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RunSelfTest(valuetype Iot.Device.Pn532.DiagnoseMode diagnoseMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.RunSelfTest(Iot.Device.Pn532.DiagnoseMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RunSelfTest (diagnoseMode As DiagnoseMode) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.RunSelfTest : Iot.Device.Pn532.DiagnoseMode -&gt; bool" Usage="pn532.RunSelfTest diagnoseMode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="diagnoseMode" Type="Iot.Device.Pn532.DiagnoseMode" />
+      </Parameters>
+      <Docs>
+        <param name="diagnoseMode">The self test to run</param>
+        <summary>
+            Run self tests
+            Note: some self tests are not implemented yet
+            </summary>
+        <returns>True when success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecurityAccessModuleMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Pn532.SecurityAccessModuleMode SecurityAccessModuleMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Pn532.SecurityAccessModuleMode SecurityAccessModuleMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.Pn532.SecurityAccessModuleMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property SecurityAccessModuleMode As SecurityAccessModuleMode" />
+      <MemberSignature Language="F#" Value="member this.SecurityAccessModuleMode : Iot.Device.Pn532.SecurityAccessModuleMode with get, set" Usage="Iot.Device.Pn532.Pn532.SecurityAccessModuleMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Pn532.SecurityAccessModuleMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or set the Security Access Module Mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectTarget">
+      <MemberSignature Language="C#" Value="public bool SelectTarget (byte targetNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SelectTarget(unsigned int8 targetNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.SelectTarget(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SelectTarget (targetNumber As Byte) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SelectTarget : byte -&gt; bool" Usage="pn532.SelectTarget targetNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNumber" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="targetNumber">Target number card</param>
+        <summary>
+            Select a specific target number card
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAnalog106kbpsTypeA">
+      <MemberSignature Language="C#" Value="public bool SetAnalog106kbpsTypeA (Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode analog106Kbps);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetAnalog106kbpsTypeA(class Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode analog106Kbps) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.SetAnalog106kbpsTypeA(Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetAnalog106kbpsTypeA (analog106Kbps As Analog106kbpsTypeAMode) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetAnalog106kbpsTypeA : Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode -&gt; bool" Usage="pn532.SetAnalog106kbpsTypeA analog106Kbps" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="analog106Kbps" Type="Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode" />
+      </Parameters>
+      <Docs>
+        <param name="analog106Kbps">The mode settings</param>
+        <summary>
+            Set the specific 106 kbps card Type A modes
+            </summary>
+        <returns>True is success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAnalog212_424_848kbps">
+      <MemberSignature Language="C#" Value="public bool SetAnalog212_424_848kbps (Iot.Device.Pn532.RfConfiguration.Analog212_424_848kbpsMode analog212_424_848Kbps);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetAnalog212_424_848kbps(class Iot.Device.Pn532.RfConfiguration.Analog212_424_848kbpsMode analog212_424_848Kbps) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.SetAnalog212_424_848kbps(Iot.Device.Pn532.RfConfiguration.Analog212_424_848kbpsMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetAnalog212_424_848kbps (analog212_424_848Kbps As Analog212_424_848kbpsMode) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetAnalog212_424_848kbps : Iot.Device.Pn532.RfConfiguration.Analog212_424_848kbpsMode -&gt; bool" Usage="pn532.SetAnalog212_424_848kbps analog212_424_848Kbps" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="analog212_424_848Kbps" Type="Iot.Device.Pn532.RfConfiguration.Analog212_424_848kbpsMode" />
+      </Parameters>
+      <Docs>
+        <param name="analog212_424_848Kbps">Settings</param>
+        <summary>
+            Configure analog mode
+            </summary>
+        <returns>True is success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAnalog212_424Kbps">
+      <MemberSignature Language="C#" Value="public bool SetAnalog212_424Kbps (Iot.Device.Pn532.RfConfiguration.Analog212_424kbpsMode analog212_424);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetAnalog212_424Kbps(class Iot.Device.Pn532.RfConfiguration.Analog212_424kbpsMode analog212_424) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.SetAnalog212_424Kbps(Iot.Device.Pn532.RfConfiguration.Analog212_424kbpsMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetAnalog212_424Kbps (analog212_424 As Analog212_424kbpsMode) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetAnalog212_424Kbps : Iot.Device.Pn532.RfConfiguration.Analog212_424kbpsMode -&gt; bool" Usage="pn532.SetAnalog212_424Kbps analog212_424" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="analog212_424" Type="Iot.Device.Pn532.RfConfiguration.Analog212_424kbpsMode" />
+      </Parameters>
+      <Docs>
+        <param name="analog212_424">The mode settings</param>
+        <summary>
+            Set the specific 212 424 kbps card modes
+            </summary>
+        <returns>True is success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAnalogTypeB">
+      <MemberSignature Language="C#" Value="public bool SetAnalogTypeB (Iot.Device.Pn532.RfConfiguration.AnalogSettingsTypeBMode analogSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetAnalogTypeB(class Iot.Device.Pn532.RfConfiguration.AnalogSettingsTypeBMode analogSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.SetAnalogTypeB(Iot.Device.Pn532.RfConfiguration.AnalogSettingsTypeBMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetAnalogTypeB (analogSettings As AnalogSettingsTypeBMode) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetAnalogTypeB : Iot.Device.Pn532.RfConfiguration.AnalogSettingsTypeBMode -&gt; bool" Usage="pn532.SetAnalogTypeB analogSettings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="analogSettings" Type="Iot.Device.Pn532.RfConfiguration.AnalogSettingsTypeBMode" />
+      </Parameters>
+      <Docs>
+        <param name="analogSettings">The mode settings</param>
+        <summary>
+            Set the specific 106 kbps card Type B modes
+            </summary>
+        <returns>True is success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMaxRetriesInitialization">
+      <MemberSignature Language="C#" Value="public bool SetMaxRetriesInitialization (Iot.Device.Pn532.RfConfiguration.MaxRetriesMode maxRetriesMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetMaxRetriesInitialization(class Iot.Device.Pn532.RfConfiguration.MaxRetriesMode maxRetriesMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.SetMaxRetriesInitialization(Iot.Device.Pn532.RfConfiguration.MaxRetriesMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetMaxRetriesInitialization (maxRetriesMode As MaxRetriesMode) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetMaxRetriesInitialization : Iot.Device.Pn532.RfConfiguration.MaxRetriesMode -&gt; bool" Usage="pn532.SetMaxRetriesInitialization maxRetriesMode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="maxRetriesMode" Type="Iot.Device.Pn532.RfConfiguration.MaxRetriesMode" />
+      </Parameters>
+      <Docs>
+        <param name="maxRetriesMode">Retry modes</param>
+        <summary>
+            Set the MAximu Retries during the various initialization modes
+            </summary>
+        <returns>True is success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMaxRetryWriteRead">
+      <MemberSignature Language="C#" Value="public bool SetMaxRetryWriteRead (byte numberRetries = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetMaxRetryWriteRead(unsigned int8 numberRetries) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.SetMaxRetryWriteRead(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetMaxRetryWriteRead (Optional numberRetries As Byte = 0) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetMaxRetryWriteRead : byte -&gt; bool" Usage="pn532.SetMaxRetryWriteRead numberRetries" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numberRetries" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="numberRetries">The number of retries</param>
+        <summary>
+            Set the Maximum Retry in the 2 WriteRead modes
+            </summary>
+        <returns>True is success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetRfField">
+      <MemberSignature Language="C#" Value="public bool SetRfField (Iot.Device.Pn532.RfConfiguration.RfFieldMode rfFieldMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetRfField(valuetype Iot.Device.Pn532.RfConfiguration.RfFieldMode rfFieldMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.SetRfField(Iot.Device.Pn532.RfConfiguration.RfFieldMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetRfField (rfFieldMode As RfFieldMode) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetRfField : Iot.Device.Pn532.RfConfiguration.RfFieldMode -&gt; bool" Usage="pn532.SetRfField rfFieldMode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rfFieldMode" Type="Iot.Device.Pn532.RfConfiguration.RfFieldMode" />
+      </Parameters>
+      <Docs>
+        <param name="rfFieldMode">Radio Frequency Field Mode</param>
+        <summary>
+            Set the Radio Frequency Field Mode
+            </summary>
+        <returns>True is success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSerialBaudRate">
+      <MemberSignature Language="C#" Value="public bool SetSerialBaudRate (Iot.Device.Pn532.BaudRate baudRate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetSerialBaudRate(valuetype Iot.Device.Pn532.BaudRate baudRate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.SetSerialBaudRate(Iot.Device.Pn532.BaudRate)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetSerialBaudRate (baudRate As BaudRate) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetSerialBaudRate : Iot.Device.Pn532.BaudRate -&gt; bool" Usage="pn532.SetSerialBaudRate baudRate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="baudRate" Type="Iot.Device.Pn532.BaudRate" />
+      </Parameters>
+      <Docs>
+        <param name="baudRate">Baud rate</param>
+        <summary>
+            Setup the baud rate communication when using the HSU Serial Port mode
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetVariousTimings">
+      <MemberSignature Language="C#" Value="public bool SetVariousTimings (Iot.Device.Pn532.RfConfiguration.VariousTimingsMode variousTimingsMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetVariousTimings(class Iot.Device.Pn532.RfConfiguration.VariousTimingsMode variousTimingsMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.SetVariousTimings(Iot.Device.Pn532.RfConfiguration.VariousTimingsMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetVariousTimings (variousTimingsMode As VariousTimingsMode) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetVariousTimings : Iot.Device.Pn532.RfConfiguration.VariousTimingsMode -&gt; bool" Usage="pn532.SetVariousTimings variousTimingsMode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="variousTimingsMode" Type="Iot.Device.Pn532.RfConfiguration.VariousTimingsMode" />
+      </Parameters>
+      <Docs>
+        <param name="variousTimingsMode">Various Timing Mode</param>
+        <summary>
+            Set the Various Timing Mode
+            </summary>
+        <returns>True is success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiClockFrequency">
+      <MemberSignature Language="C#" Value="public const int SpiClockFrequency = 2000000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 SpiClockFrequency = (2000000)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Pn532.Pn532.SpiClockFrequency" />
+      <MemberSignature Language="VB.NET" Value="Public Const SpiClockFrequency As Integer  = 2000000" />
+      <MemberSignature Language="F#" Value="val mutable SpiClockFrequency : int" Usage="Iot.Device.Pn532.Pn532.SpiClockFrequency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>2000000</MemberValue>
+      <Docs>
+        <summary>
+            PN532 SPI Clock Frequency
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiMode">
+      <MemberSignature Language="C#" Value="public const System.Device.Spi.SpiMode SpiMode = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Device.Spi.SpiMode SpiMode = (0)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Pn532.Pn532.SpiMode" />
+      <MemberSignature Language="VB.NET" Value="Public Const SpiMode As SpiMode  = 0" />
+      <MemberSignature Language="F#" Value="val mutable SpiMode : System.Device.Spi.SpiMode" Usage="Iot.Device.Pn532.Pn532.SpiMode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Spi.SpiMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Only SPI Mode supported is Mode0
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transceive">
+      <MemberSignature Language="C#" Value="public override int Transceive (byte targetNumber, ReadOnlySpan&lt;byte&gt; dataToSend, Span&lt;byte&gt; dataFromCard);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Transceive(unsigned int8 targetNumber, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; dataToSend, valuetype System.Span`1&lt;unsigned int8&gt; dataFromCard) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.Transceive(System.Byte,System.ReadOnlySpan{System.Byte},System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Transceive (targetNumber As Byte, dataToSend As ReadOnlySpan(Of Byte), dataFromCard As Span(Of Byte)) As Integer" />
+      <MemberSignature Language="F#" Value="override this.Transceive : byte * ReadOnlySpan&lt;byte&gt; * Span&lt;byte&gt; -&gt; int" Usage="pn532.Transceive (targetNumber, dataToSend, dataFromCard)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNumber" Type="System.Byte" />
+        <Parameter Name="dataToSend" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="dataFromCard" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="targetNumber">The card target number</param>
+        <param name="dataToSend">The data to write to the card</param>
+        <param name="dataFromCard">The potential data to receive</param>
+        <summary>
+            Write data to a card and read what the card responses
+            </summary>
+        <returns>The number of bytes read</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryDecode106kbpsTypeA">
+      <MemberSignature Language="C#" Value="public Iot.Device.Rfid.Data106kbpsTypeA TryDecode106kbpsTypeA (Span&lt;byte&gt; toDecode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Rfid.Data106kbpsTypeA TryDecode106kbpsTypeA(valuetype System.Span`1&lt;unsigned int8&gt; toDecode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.TryDecode106kbpsTypeA(System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryDecode106kbpsTypeA (toDecode As Span(Of Byte)) As Data106kbpsTypeA" />
+      <MemberSignature Language="F#" Value="member this.TryDecode106kbpsTypeA : Span&lt;byte&gt; -&gt; Iot.Device.Rfid.Data106kbpsTypeA" Usage="pn532.TryDecode106kbpsTypeA toDecode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Rfid.Data106kbpsTypeA</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toDecode" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="toDecode">The raw byte array</param>
+        <summary>
+            Try to decode a raw byte array containing target information
+            to a 106 kbps Type A card
+            </summary>
+        <returns>A decoded card of null if it can't</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryDecodeData106kbpsInnovisionJewel">
+      <MemberSignature Language="C#" Value="public Iot.Device.Rfid.Data106kbpsInnovisionJewel TryDecodeData106kbpsInnovisionJewel (Span&lt;byte&gt; toDecode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Rfid.Data106kbpsInnovisionJewel TryDecodeData106kbpsInnovisionJewel(valuetype System.Span`1&lt;unsigned int8&gt; toDecode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.TryDecodeData106kbpsInnovisionJewel(System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryDecodeData106kbpsInnovisionJewel (toDecode As Span(Of Byte)) As Data106kbpsInnovisionJewel" />
+      <MemberSignature Language="F#" Value="member this.TryDecodeData106kbpsInnovisionJewel : Span&lt;byte&gt; -&gt; Iot.Device.Rfid.Data106kbpsInnovisionJewel" Usage="pn532.TryDecodeData106kbpsInnovisionJewel toDecode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Rfid.Data106kbpsInnovisionJewel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toDecode" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="toDecode">The raw byte array</param>
+        <summary>
+            Try to decode a raw byte array containing target information
+            to a 106 kbps Innovision Jewel card
+            </summary>
+        <returns>A decoded card of null if it can't</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryDecodeData106kbpsTypeB">
+      <MemberSignature Language="C#" Value="public Iot.Device.Rfid.Data106kbpsTypeB TryDecodeData106kbpsTypeB (Span&lt;byte&gt; toDecode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Rfid.Data106kbpsTypeB TryDecodeData106kbpsTypeB(valuetype System.Span`1&lt;unsigned int8&gt; toDecode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.TryDecodeData106kbpsTypeB(System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryDecodeData106kbpsTypeB (toDecode As Span(Of Byte)) As Data106kbpsTypeB" />
+      <MemberSignature Language="F#" Value="member this.TryDecodeData106kbpsTypeB : Span&lt;byte&gt; -&gt; Iot.Device.Rfid.Data106kbpsTypeB" Usage="pn532.TryDecodeData106kbpsTypeB toDecode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Rfid.Data106kbpsTypeB</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toDecode" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="toDecode">The raw byte array</param>
+        <summary>
+            Try to decode a raw byte array containing target information
+            to a 106 kbps Type B card
+            </summary>
+        <returns>A decoded card of null if it can't</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryDecodeData212_424Kbps">
+      <MemberSignature Language="C#" Value="public Iot.Device.Rfid.Data212_424kbps TryDecodeData212_424Kbps (Span&lt;byte&gt; toDecode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Rfid.Data212_424kbps TryDecodeData212_424Kbps(valuetype System.Span`1&lt;unsigned int8&gt; toDecode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.TryDecodeData212_424Kbps(System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryDecodeData212_424Kbps (toDecode As Span(Of Byte)) As Data212_424kbps" />
+      <MemberSignature Language="F#" Value="member this.TryDecodeData212_424Kbps : Span&lt;byte&gt; -&gt; Iot.Device.Rfid.Data212_424kbps" Usage="pn532.TryDecodeData212_424Kbps toDecode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Rfid.Data212_424kbps</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toDecode" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="toDecode">The raw byte array</param>
+        <summary>
+            Try to decode a raw byte array containing target information
+            to a 212 424 kbps card
+            </summary>
+        <returns>A decoded card of null if it can't</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualCardTimeout">
+      <MemberSignature Language="C#" Value="public uint VirtualCardTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 VirtualCardTimeout" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.Pn532.VirtualCardTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property VirtualCardTimeout As UInteger" />
+      <MemberSignature Language="F#" Value="member this.VirtualCardTimeout : uint32 with get, set" Usage="Iot.Device.Pn532.Pn532.VirtualCardTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or set the timeout when PN532 is in virtual card mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WakeUp">
+      <MemberSignature Language="C#" Value="public void WakeUp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WakeUp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.WakeUp" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WakeUp ()" />
+      <MemberSignature Language="F#" Value="member this.WakeUp : unit -&gt; unit" Usage="pn532.WakeUp " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Wake Up the PN532
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteDataAsTarget">
+      <MemberSignature Language="C#" Value="public bool WriteDataAsTarget (ReadOnlySpan&lt;byte&gt; dataToSend);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool WriteDataAsTarget(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; dataToSend) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.WriteDataAsTarget(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function WriteDataAsTarget (dataToSend As ReadOnlySpan(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.WriteDataAsTarget : ReadOnlySpan&lt;byte&gt; -&gt; bool" Usage="pn532.WriteDataAsTarget dataToSend" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataToSend" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="dataToSend">The data to send</param>
+        <summary>
+            Write data to the reader when PN532 is a target
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteGpio">
+      <MemberSignature Language="C#" Value="public bool WriteGpio (Iot.Device.Pn532.Port7 p7, Iot.Device.Pn532.Port3 p3);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool WriteGpio(valuetype Iot.Device.Pn532.Port7 p7, valuetype Iot.Device.Pn532.Port3 p3) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.WriteGpio(Iot.Device.Pn532.Port7,Iot.Device.Pn532.Port3)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WriteGpio (p7 As Port7, p3 As Port3) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.WriteGpio : Iot.Device.Pn532.Port7 * Iot.Device.Pn532.Port3 -&gt; bool" Usage="pn532.WriteGpio (p7, p3)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p7" Type="Iot.Device.Pn532.Port7" />
+        <Parameter Name="p3" Type="Iot.Device.Pn532.Port3" />
+      </Parameters>
+      <Docs>
+        <param name="p7">The P7 GPIO</param>
+        <param name="p3">The P3 GPIO</param>
+        <summary>
+            Write the PN532 GPIO
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteReadDirect">
+      <MemberSignature Language="C#" Value="public int WriteReadDirect (Span&lt;byte&gt; dataToSend, Span&lt;byte&gt; dataFromCard);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 WriteReadDirect(valuetype System.Span`1&lt;unsigned int8&gt; dataToSend, valuetype System.Span`1&lt;unsigned int8&gt; dataFromCard) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.WriteReadDirect(System.Span{System.Byte},System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function WriteReadDirect (dataToSend As Span(Of Byte), dataFromCard As Span(Of Byte)) As Integer" />
+      <MemberSignature Language="F#" Value="member this.WriteReadDirect : Span&lt;byte&gt; * Span&lt;byte&gt; -&gt; int" Usage="pn532.WriteReadDirect (dataToSend, dataFromCard)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataToSend" Type="System.Span&lt;System.Byte&gt;" />
+        <Parameter Name="dataFromCard" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="dataToSend">The data to write to the card</param>
+        <param name="dataFromCard">The potential data to receive</param>
+        <summary>
+            Write an array of data directly to the card without adding anything
+            from the PN532 and read the raw data
+            </summary>
+        <returns>The number of bytes read</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRegister">
+      <MemberSignature Language="C#" Value="public bool WriteRegister (ushort register, byte registerValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool WriteRegister(unsigned int16 register, unsigned int8 registerValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.WriteRegister(System.UInt16,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WriteRegister (register As UShort, registerValue As Byte) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.WriteRegister : uint16 * byte -&gt; bool" Usage="pn532.WriteRegister (register, registerValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="register" Type="System.UInt16" />
+        <Parameter Name="registerValue" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="register">The register to write</param>
+        <param name="registerValue">The value of the register</param>
+        <summary>
+            Write a single register
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRegister">
+      <MemberSignature Language="C#" Value="public bool WriteRegister (ushort[] registers, Span&lt;byte&gt; registerValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool WriteRegister(unsigned int16[] registers, valuetype System.Span`1&lt;unsigned int8&gt; registerValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.WriteRegister(System.UInt16[],System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function WriteRegister (registers As UShort(), registerValue As Span(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.WriteRegister : uint16[] * Span&lt;byte&gt; -&gt; bool" Usage="pn532.WriteRegister (registers, registerValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="registers" Type="System.UInt16[]" />
+        <Parameter Name="registerValue" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="registers">Array of register to write</param>
+        <param name="registerValue">Register values to write</param>
+        <summary>
+            Write an array of register
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRegisterSfr">
+      <MemberSignature Language="C#" Value="public bool WriteRegisterSfr (Iot.Device.Pn532.SfrRegister[] registers, Span&lt;byte&gt; registerValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool WriteRegisterSfr(valuetype Iot.Device.Pn532.SfrRegister[] registers, valuetype System.Span`1&lt;unsigned int8&gt; registerValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.WriteRegisterSfr(Iot.Device.Pn532.SfrRegister[],System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function WriteRegisterSfr (registers As SfrRegister(), registerValue As Span(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.WriteRegisterSfr : Iot.Device.Pn532.SfrRegister[] * Span&lt;byte&gt; -&gt; bool" Usage="pn532.WriteRegisterSfr (registers, registerValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="registers" Type="Iot.Device.Pn532.SfrRegister[]" />
+        <Parameter Name="registerValue" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="registers">Array of register to write</param>
+        <param name="registerValue">Register values to write</param>
+        <summary>
+            Write an array of SFR registers
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

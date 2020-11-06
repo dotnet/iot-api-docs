@@ -1,0 +1,202 @@
+<Type Name="Buzzer" FullName="Iot.Device.Buzzer.Buzzer">
+  <TypeSignature Language="C#" Value="public class Buzzer : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Buzzer extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Buzzer.Buzzer" />
+  <TypeSignature Language="VB.NET" Value="Public Class Buzzer&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Buzzer = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Simple buzzer binding. Supports buzzers with ground, vcc and signal pins as well as buzzers with only ground and vcc pins.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Buzzer (System.Device.Pwm.PwmChannel pwmChannel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Pwm.PwmChannel pwmChannel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Buzzer.Buzzer.#ctor(System.Device.Pwm.PwmChannel)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pwmChannel As PwmChannel)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Buzzer.Buzzer : System.Device.Pwm.PwmChannel -&gt; Iot.Device.Buzzer.Buzzer" Usage="new Iot.Device.Buzzer.Buzzer pwmChannel" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pwmChannel" Type="System.Device.Pwm.PwmChannel" />
+      </Parameters>
+      <Docs>
+        <param name="pwmChannel">The PWM controller to use during work.</param>
+        <summary>
+            Create Buzzer class instance with output on specified pin with specified channel using passed PWM controller.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Buzzer (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Buzzer.Buzzer.#ctor(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pinNumber As Integer)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Buzzer.Buzzer : int -&gt; Iot.Device.Buzzer.Buzzer" Usage="new Iot.Device.Buzzer.Buzzer pinNumber" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">Pin connected to buzzer</param>
+        <summary>
+            Constructs Buzzer instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Buzzer (int chip, int channel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 chip, int32 channel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Buzzer.Buzzer.#ctor(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (chip As Integer, channel As Integer)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Buzzer.Buzzer : int * int -&gt; Iot.Device.Buzzer.Buzzer" Usage="new Iot.Device.Buzzer.Buzzer (chip, channel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="chip" Type="System.Int32" />
+        <Parameter Name="channel" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="chip">The GPIO pin number in case of a software PWM. The chip in case of a hardware PWM.</param>
+        <param name="channel">The channel to use in case of a hardware PWM.</param>
+        <summary>
+            Create Buzzer class instance with output on specified pin with specified channel.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Buzzer.Buzzer.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="buzzer.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose Buzzer.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlayTone">
+      <MemberSignature Language="C#" Value="public void PlayTone (double frequency, int duraton);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PlayTone(float64 frequency, int32 duraton) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Buzzer.Buzzer.PlayTone(System.Double,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub PlayTone (frequency As Double, duraton As Integer)" />
+      <MemberSignature Language="F#" Value="member this.PlayTone : double * int -&gt; unit" Usage="buzzer.PlayTone (frequency, duraton)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="frequency" Type="System.Double" />
+        <Parameter Name="duraton" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="frequency">Tone frequency in Hertz.</param>
+        <param name="duraton">Playing duration in millisecons.</param>
+        <summary>
+            Play tone of specific frequency for specified duration.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartPlaying">
+      <MemberSignature Language="C#" Value="public void StartPlaying (double frequency);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartPlaying(float64 frequency) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Buzzer.Buzzer.StartPlaying(System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StartPlaying (frequency As Double)" />
+      <MemberSignature Language="F#" Value="member this.StartPlaying : double -&gt; unit" Usage="buzzer.StartPlaying frequency" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="frequency" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="frequency">Tone frequency in Hertz.</param>
+        <summary>
+            Set new or overwrite previously set frequency and start playing the sound.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopPlaying">
+      <MemberSignature Language="C#" Value="public void StopPlaying ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StopPlaying() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Buzzer.Buzzer.StopPlaying" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StopPlaying ()" />
+      <MemberSignature Language="F#" Value="member this.StopPlaying : unit -&gt; unit" Usage="buzzer.StopPlaying " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stop playing tone.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

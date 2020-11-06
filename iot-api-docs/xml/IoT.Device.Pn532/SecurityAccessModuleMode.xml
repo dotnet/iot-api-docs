@@ -1,0 +1,109 @@
+<Type Name="SecurityAccessModuleMode" FullName="Iot.Device.Pn532.SecurityAccessModuleMode">
+  <TypeSignature Language="C#" Value="public enum SecurityAccessModuleMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed SecurityAccessModuleMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Pn532.SecurityAccessModuleMode" />
+  <TypeSignature Language="VB.NET" Value="Public Enum SecurityAccessModuleMode" />
+  <TypeSignature Language="F#" Value="type SecurityAccessModuleMode = " />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Security Access Module Mode
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DualCard">
+      <MemberSignature Language="C#" Value="DualCard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Pn532.SecurityAccessModuleMode DualCard = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Pn532.SecurityAccessModuleMode.DualCard" />
+      <MemberSignature Language="VB.NET" Value="DualCard" />
+      <MemberSignature Language="F#" Value="DualCard = 4" Usage="Iot.Device.Pn532.SecurityAccessModuleMode.DualCard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Pn532.SecurityAccessModuleMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            0x04: Dual Card, both the PN532 and the SAM are visible from the
+            external world as two separated targets
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Normal">
+      <MemberSignature Language="C#" Value="Normal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Pn532.SecurityAccessModuleMode Normal = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Pn532.SecurityAccessModuleMode.Normal" />
+      <MemberSignature Language="VB.NET" Value="Normal" />
+      <MemberSignature Language="F#" Value="Normal = 1" Usage="Iot.Device.Pn532.SecurityAccessModuleMode.Normal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Pn532.SecurityAccessModuleMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            0x01: Normal mode, the SAM is not used; this is the default mode
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="VirtualCard">
+      <MemberSignature Language="C#" Value="VirtualCard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Pn532.SecurityAccessModuleMode VirtualCard = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Pn532.SecurityAccessModuleMode.VirtualCard" />
+      <MemberSignature Language="VB.NET" Value="VirtualCard" />
+      <MemberSignature Language="F#" Value="VirtualCard = 2" Usage="Iot.Device.Pn532.SecurityAccessModuleMode.VirtualCard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Pn532.SecurityAccessModuleMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            0x02: Virtual Card, the couple PN532+SAM is seen as only one
+            contactless SAM card from the external world
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="WiredCard">
+      <MemberSignature Language="C#" Value="WiredCard" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Pn532.SecurityAccessModuleMode WiredCard = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Pn532.SecurityAccessModuleMode.WiredCard" />
+      <MemberSignature Language="VB.NET" Value="WiredCard" />
+      <MemberSignature Language="F#" Value="WiredCard = 3" Usage="Iot.Device.Pn532.SecurityAccessModuleMode.WiredCard" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Pn532.SecurityAccessModuleMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            0x03: Wired Card, the host controller can access to the SAM with
+            standard PCD commands (InListPassiveTarget,InDataExchange, …)
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,290 @@
+<Type Name="I2cDevice" FullName="System.Device.I2c.I2cDevice">
+  <TypeSignature Language="C#" Value="public abstract class I2cDevice : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit I2cDevice extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Device.I2c.I2cDevice" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class I2cDevice&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type I2cDevice = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Device.Gpio</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            The communications channel to a device on an I2C bus.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected I2cDevice ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.I2c.I2cDevice.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConnectionSettings">
+      <MemberSignature Language="C#" Value="public abstract System.Device.I2c.I2cConnectionSettings ConnectionSettings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Device.I2c.I2cConnectionSettings ConnectionSettings" />
+      <MemberSignature Language="DocId" Value="P:System.Device.I2c.I2cDevice.ConnectionSettings" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property ConnectionSettings As I2cConnectionSettings" />
+      <MemberSignature Language="F#" Value="member this.ConnectionSettings : System.Device.I2c.I2cConnectionSettings" Usage="System.Device.I2c.I2cDevice.ConnectionSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.I2c.I2cConnectionSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The connection settings of a device on an I2C bus. The connection settings are immutable after the device is created
+            so the object returned will be a clone of the settings object.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Device.I2c.I2cDevice Create (System.Device.I2c.I2cConnectionSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Device.I2c.I2cDevice Create(class System.Device.I2c.I2cConnectionSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.I2c.I2cDevice.Create(System.Device.I2c.I2cConnectionSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (settings As I2cConnectionSettings) As I2cDevice" />
+      <MemberSignature Language="F#" Value="static member Create : System.Device.I2c.I2cConnectionSettings -&gt; System.Device.I2c.I2cDevice" Usage="System.Device.I2c.I2cDevice.Create settings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.I2c.I2cDevice</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="settings" Type="System.Device.I2c.I2cConnectionSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings">The connection settings of a device on an I2C bus.</param>
+        <summary>
+            Creates a communications channel to a device on an I2C bus running on the current platform
+            </summary>
+        <returns>A communications channel to a device on an I2C bus running on Windows 10 IoT.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.I2c.I2cDevice.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="i2cDevice.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:System.IDisposable.Dispose" />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.I2c.I2cDevice.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="i2cDevice.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> if explicitly disposing, <see langword="false" /> if in finalizer</param>
+        <summary>
+            Disposes this instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public abstract void Read (Span&lt;byte&gt; buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Read(valuetype System.Span`1&lt;unsigned int8&gt; buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.I2c.I2cDevice.Read(System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Read (buffer As Span(Of Byte))" />
+      <MemberSignature Language="F#" Value="abstract member Read : Span&lt;byte&gt; -&gt; unit" Usage="i2cDevice.Read buffer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">
+            The buffer to read the data from the I2C device.
+            The length of the buffer determines how much data to read from the I2C device.
+            </param>
+        <summary>
+            Reads data from the I2C device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadByte">
+      <MemberSignature Language="C#" Value="public abstract byte ReadByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8 ReadByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.I2c.I2cDevice.ReadByte" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function ReadByte () As Byte" />
+      <MemberSignature Language="F#" Value="abstract member ReadByte : unit -&gt; byte" Usage="i2cDevice.ReadByte " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reads a byte from the I2C device.
+            </summary>
+        <returns>A byte read from the I2C device.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (ReadOnlySpan&lt;byte&gt; buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.I2c.I2cDevice.Write(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Write (buffer As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="abstract member Write : ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="i2cDevice.Write buffer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">
+            The buffer that contains the data to be written to the I2C device.
+            The data should not include the I2C device address.
+            </param>
+        <summary>
+            Writes data to the I2C device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteByte">
+      <MemberSignature Language="C#" Value="public abstract void WriteByte (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteByte(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.I2c.I2cDevice.WriteByte(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub WriteByte (value As Byte)" />
+      <MemberSignature Language="F#" Value="abstract member WriteByte : byte -&gt; unit" Usage="i2cDevice.WriteByte value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">The byte to be written to the I2C device.</param>
+        <summary>
+            Writes a byte to the I2C device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRead">
+      <MemberSignature Language="C#" Value="public abstract void WriteRead (ReadOnlySpan&lt;byte&gt; writeBuffer, Span&lt;byte&gt; readBuffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteRead(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; writeBuffer, valuetype System.Span`1&lt;unsigned int8&gt; readBuffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.I2c.I2cDevice.WriteRead(System.ReadOnlySpan{System.Byte},System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub WriteRead (writeBuffer As ReadOnlySpan(Of Byte), readBuffer As Span(Of Byte))" />
+      <MemberSignature Language="F#" Value="abstract member WriteRead : ReadOnlySpan&lt;byte&gt; * Span&lt;byte&gt; -&gt; unit" Usage="i2cDevice.WriteRead (writeBuffer, readBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="writeBuffer" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="readBuffer" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="writeBuffer">
+            The buffer that contains the data to be written to the I2C device.
+            The data should not include the I2C device address.</param>
+        <param name="readBuffer">
+            The buffer to read the data from the I2C device.
+            The length of the buffer determines how much data to read from the I2C device.
+            </param>
+        <summary>
+            Performs an atomic operation to write data to and then read data from the I2C bus on which the device is connected,
+            and sends a restart condition between the write and read operations.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

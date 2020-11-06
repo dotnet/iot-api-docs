@@ -1,0 +1,148 @@
+<Type Name="Adxl345" FullName="Iot.Device.Adxl345.Adxl345">
+  <TypeSignature Language="C#" Value="public class Adxl345 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Adxl345 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Adxl345.Adxl345" />
+  <TypeSignature Language="VB.NET" Value="Public Class Adxl345&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Adxl345 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            SPI Accelerometer ADX1345
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Adxl345 (System.Device.Spi.SpiDevice sensor, Iot.Device.Adxl345.GravityRange gravityRange);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice sensor, valuetype Iot.Device.Adxl345.GravityRange gravityRange) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adxl345.Adxl345.#ctor(System.Device.Spi.SpiDevice,Iot.Device.Adxl345.GravityRange)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sensor As SpiDevice, gravityRange As GravityRange)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Adxl345.Adxl345 : System.Device.Spi.SpiDevice * Iot.Device.Adxl345.GravityRange -&gt; Iot.Device.Adxl345.Adxl345" Usage="new Iot.Device.Adxl345.Adxl345 (sensor, gravityRange)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sensor" Type="System.Device.Spi.SpiDevice" />
+        <Parameter Name="gravityRange" Type="Iot.Device.Adxl345.GravityRange" />
+      </Parameters>
+      <Docs>
+        <param name="sensor">The communications channel to a device on a SPI bus</param>
+        <param name="gravityRange">Gravity Measurement Range</param>
+        <summary>
+            SPI Accelerometer ADX1345
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Acceleration">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 Acceleration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector3 Acceleration" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Adxl345.Adxl345.Acceleration" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Acceleration As Vector3" />
+      <MemberSignature Language="F#" Value="member this.Acceleration : System.Numerics.Vector3" Usage="Iot.Device.Adxl345.Adxl345.Acceleration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Read Acceleration from ADXL345
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adxl345.Adxl345.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="adxl345.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Cleanup
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiClockFrequency">
+      <MemberSignature Language="C#" Value="public const int SpiClockFrequency = 5000000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 SpiClockFrequency = (5000000)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Adxl345.Adxl345.SpiClockFrequency" />
+      <MemberSignature Language="VB.NET" Value="Public Const SpiClockFrequency As Integer  = 5000000" />
+      <MemberSignature Language="F#" Value="val mutable SpiClockFrequency : int" Usage="Iot.Device.Adxl345.Adxl345.SpiClockFrequency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>5000000</MemberValue>
+      <Docs>
+        <summary>
+            ADX1345 SPI Clock Frequency
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiMode">
+      <MemberSignature Language="C#" Value="public const System.Device.Spi.SpiMode SpiMode = 3;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Device.Spi.SpiMode SpiMode = (3)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Adxl345.Adxl345.SpiMode" />
+      <MemberSignature Language="VB.NET" Value="Public Const SpiMode As SpiMode  = 3" />
+      <MemberSignature Language="F#" Value="val mutable SpiMode : System.Device.Spi.SpiMode" Usage="Iot.Device.Adxl345.Adxl345.SpiMode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Spi.SpiMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            ADX1345 SPI Mode
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

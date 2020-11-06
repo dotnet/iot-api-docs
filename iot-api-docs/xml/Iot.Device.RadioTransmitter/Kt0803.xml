@@ -1,0 +1,265 @@
+<Type Name="Kt0803" FullName="Iot.Device.RadioTransmitter.Kt0803">
+  <TypeSignature Language="C#" Value="public class Kt0803 : Iot.Device.RadioTransmitter.RadioTransmitterBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Kt0803 extends Iot.Device.RadioTransmitter.RadioTransmitterBase" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.RadioTransmitter.Kt0803" />
+  <TypeSignature Language="VB.NET" Value="Public Class Kt0803&#xA;Inherits RadioTransmitterBase" />
+  <TypeSignature Language="F#" Value="type Kt0803 = class&#xA;    inherit RadioTransmitterBase" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.RadioTransmitter.RadioTransmitterBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            FM radio transmitter module KT0803.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Kt0803 (System.Device.I2c.I2cDevice i2cDevice, double frequency, Iot.Device.RadioTransmitter.Region region, Iot.Device.RadioTransmitter.TransmissionPower power = Iot.Device.RadioTransmitter.TransmissionPower.Power108dBuV, Iot.Device.RadioTransmitter.PgaGain pga = Iot.Device.RadioTransmitter.PgaGain.Pga00dB);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, float64 frequency, valuetype Iot.Device.RadioTransmitter.Region region, valuetype Iot.Device.RadioTransmitter.TransmissionPower power, valuetype Iot.Device.RadioTransmitter.PgaGain pga) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.RadioTransmitter.Kt0803.#ctor(System.Device.I2c.I2cDevice,System.Double,Iot.Device.RadioTransmitter.Region,Iot.Device.RadioTransmitter.TransmissionPower,Iot.Device.RadioTransmitter.PgaGain)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, frequency As Double, region As Region, Optional power As TransmissionPower = Iot.Device.RadioTransmitter.TransmissionPower.Power108dBuV, Optional pga As PgaGain = Iot.Device.RadioTransmitter.PgaGain.Pga00dB)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.RadioTransmitter.Kt0803 : System.Device.I2c.I2cDevice * double * Iot.Device.RadioTransmitter.Region * Iot.Device.RadioTransmitter.TransmissionPower * Iot.Device.RadioTransmitter.PgaGain -&gt; Iot.Device.RadioTransmitter.Kt0803" Usage="new Iot.Device.RadioTransmitter.Kt0803 (i2cDevice, frequency, region, power, pga)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="frequency" Type="System.Double" />
+        <Parameter Name="region" Type="Iot.Device.RadioTransmitter.Region" />
+        <Parameter Name="power" Type="Iot.Device.RadioTransmitter.TransmissionPower" />
+        <Parameter Name="pga" Type="Iot.Device.RadioTransmitter.PgaGain" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device used for communication.</param>
+        <param name="frequency">FM frequency (range from 70MHz to 108MHz).</param>
+        <param name="region">Region.</param>
+        <param name="power">Transmission power.</param>
+        <param name="pga">PGA (Programmable Gain Amplifier) gain.</param>
+        <summary>
+            Creates a new instance of the Kt0803.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BassBoost">
+      <MemberSignature Language="C#" Value="public Iot.Device.RadioTransmitter.BassBoost BassBoost { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.RadioTransmitter.BassBoost BassBoost" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.RadioTransmitter.Kt0803.BassBoost" />
+      <MemberSignature Language="VB.NET" Value="Public Property BassBoost As BassBoost" />
+      <MemberSignature Language="F#" Value="member this.BassBoost : Iot.Device.RadioTransmitter.BassBoost with get, set" Usage="Iot.Device.RadioTransmitter.Kt0803.BassBoost" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.RadioTransmitter.BassBoost</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Kt0803 bass boost.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte DefaultI2cAddress = 62;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 DefaultI2cAddress = (62)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.RadioTransmitter.Kt0803.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Byte  = 62" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : byte" Usage="Iot.Device.RadioTransmitter.Kt0803.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>62</MemberValue>
+      <Docs>
+        <summary>
+            Kt0803 default I2C address.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.RadioTransmitter.Kt0803.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="kt0803.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>
+            Cleanup
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Frequency">
+      <MemberSignature Language="C#" Value="public override double Frequency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Frequency" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.RadioTransmitter.Kt0803.Frequency" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Frequency As Double" />
+      <MemberSignature Language="F#" Value="member this.Frequency : double with get, set" Usage="Iot.Device.RadioTransmitter.Kt0803.Frequency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Kt0803 FM frequency (range from 70Mhz to 108Mhz).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mute">
+      <MemberSignature Language="C#" Value="public bool Mute { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Mute" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.RadioTransmitter.Kt0803.Mute" />
+      <MemberSignature Language="VB.NET" Value="Public Property Mute As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Mute : bool with get, set" Usage="Iot.Device.RadioTransmitter.Kt0803.Mute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Kt0803 mute.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PgaGain">
+      <MemberSignature Language="C#" Value="public Iot.Device.RadioTransmitter.PgaGain PgaGain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.RadioTransmitter.PgaGain PgaGain" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.RadioTransmitter.Kt0803.PgaGain" />
+      <MemberSignature Language="VB.NET" Value="Public Property PgaGain As PgaGain" />
+      <MemberSignature Language="F#" Value="member this.PgaGain : Iot.Device.RadioTransmitter.PgaGain with get, set" Usage="Iot.Device.RadioTransmitter.Kt0803.PgaGain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.RadioTransmitter.PgaGain</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Kt0803 PGA (Programmable Gain Amplifier) gain.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Region">
+      <MemberSignature Language="C#" Value="public Iot.Device.RadioTransmitter.Region Region { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.RadioTransmitter.Region Region" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.RadioTransmitter.Kt0803.Region" />
+      <MemberSignature Language="VB.NET" Value="Public Property Region As Region" />
+      <MemberSignature Language="F#" Value="member this.Region : Iot.Device.RadioTransmitter.Region with get, set" Usage="Iot.Device.RadioTransmitter.Kt0803.Region" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.RadioTransmitter.Region</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Kt0803 region.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Standby">
+      <MemberSignature Language="C#" Value="public bool Standby { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Standby" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.RadioTransmitter.Kt0803.Standby" />
+      <MemberSignature Language="VB.NET" Value="Public Property Standby As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Standby : bool with get, set" Usage="Iot.Device.RadioTransmitter.Kt0803.Standby" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Kt0803 standby.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransmissionPower">
+      <MemberSignature Language="C#" Value="public Iot.Device.RadioTransmitter.TransmissionPower TransmissionPower { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.RadioTransmitter.TransmissionPower TransmissionPower" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.RadioTransmitter.Kt0803.TransmissionPower" />
+      <MemberSignature Language="VB.NET" Value="Public Property TransmissionPower As TransmissionPower" />
+      <MemberSignature Language="F#" Value="member this.TransmissionPower : Iot.Device.RadioTransmitter.TransmissionPower with get, set" Usage="Iot.Device.RadioTransmitter.Kt0803.TransmissionPower" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.RadioTransmitter.TransmissionPower</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Kt0803 transmission power.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

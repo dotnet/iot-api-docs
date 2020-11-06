@@ -1,0 +1,289 @@
+<Type Name="Register" FullName="Iot.Device.Mcp23xxx.Register">
+  <TypeSignature Language="C#" Value="public enum Register" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed Register extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mcp23xxx.Register" />
+  <TypeSignature Language="VB.NET" Value="Public Enum Register" />
+  <TypeSignature Language="F#" Value="type Register = " />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Mcp23xxx Register
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DEFVAL">
+      <MemberSignature Language="C#" Value="DEFVAL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Mcp23xxx.Register DEFVAL = unsigned int8(3)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Mcp23xxx.Register.DEFVAL" />
+      <MemberSignature Language="VB.NET" Value="DEFVAL" />
+      <MemberSignature Language="F#" Value="DEFVAL = 3" Usage="Iot.Device.Mcp23xxx.Register.DEFVAL" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp23xxx.Register</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Configures the default comparison value.
+            If enabled (via GPINTEN and INTCON) to compare against the DEFVAL register,
+            an opposite value on the associated pin will cause an interrupt to occur.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GPINTEN">
+      <MemberSignature Language="C#" Value="GPINTEN" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Mcp23xxx.Register GPINTEN = unsigned int8(2)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Mcp23xxx.Register.GPINTEN" />
+      <MemberSignature Language="VB.NET" Value="GPINTEN" />
+      <MemberSignature Language="F#" Value="GPINTEN = 2" Usage="Iot.Device.Mcp23xxx.Register.GPINTEN" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp23xxx.Register</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Controls the interrupt-on-change feature for each pin.
+            When a bit is set, the corresponding pin is enabled for interrupt-on-change.
+            The DEFVAL and INTCON registers must also be configured if any pins are enabled for interrupt-on-change.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GPIO">
+      <MemberSignature Language="C#" Value="GPIO" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Mcp23xxx.Register GPIO = unsigned int8(9)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Mcp23xxx.Register.GPIO" />
+      <MemberSignature Language="VB.NET" Value="GPIO" />
+      <MemberSignature Language="F#" Value="GPIO = 9" Usage="Iot.Device.Mcp23xxx.Register.GPIO" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp23xxx.Register</ReturnType>
+      </ReturnValue>
+      <MemberValue>9</MemberValue>
+      <Docs>
+        <summary>
+            Reflects the value on the port. Reading from this register reads the port.
+            Writing to this register modifies the Output Latch (OLAT) register.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="GPPU">
+      <MemberSignature Language="C#" Value="GPPU" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Mcp23xxx.Register GPPU = unsigned int8(6)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Mcp23xxx.Register.GPPU" />
+      <MemberSignature Language="VB.NET" Value="GPPU" />
+      <MemberSignature Language="F#" Value="GPPU = 6" Usage="Iot.Device.Mcp23xxx.Register.GPPU" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp23xxx.Register</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>
+            Controls the pull-up resistors for the port pins.
+            When a bit is set and the corresponding pin is configured as an input,
+            the corresponding port pin is internally pulled up with a 100 kΩ resistor.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="INTCAP">
+      <MemberSignature Language="C#" Value="INTCAP" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Mcp23xxx.Register INTCAP = unsigned int8(8)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Mcp23xxx.Register.INTCAP" />
+      <MemberSignature Language="VB.NET" Value="INTCAP" />
+      <MemberSignature Language="F#" Value="INTCAP = 8" Usage="Iot.Device.Mcp23xxx.Register.INTCAP" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp23xxx.Register</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>
+            The INTCAP register captures the GPIO port value at the time the interrupt occurred.
+            The register is read-only and is updated only when an interrupt occurs.
+            The register will remain unchanged until the interrupt is cleared via a read of INTCAP or GPIO.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="INTCON">
+      <MemberSignature Language="C#" Value="INTCON" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Mcp23xxx.Register INTCON = unsigned int8(4)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Mcp23xxx.Register.INTCON" />
+      <MemberSignature Language="VB.NET" Value="INTCON" />
+      <MemberSignature Language="F#" Value="INTCON = 4" Usage="Iot.Device.Mcp23xxx.Register.INTCON" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp23xxx.Register</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            Controls how the associated pin value is compared for the interrupt-on-change feature.
+            When a bit is set, the corresponding I/O pin is compared against the associated bit in the DEFVAL register.
+            When a bit value is clear, the corresponding I/O pin is compared against the previous value.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="INTF">
+      <MemberSignature Language="C#" Value="INTF" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Mcp23xxx.Register INTF = unsigned int8(7)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Mcp23xxx.Register.INTF" />
+      <MemberSignature Language="VB.NET" Value="INTF" />
+      <MemberSignature Language="F#" Value="INTF = 7" Usage="Iot.Device.Mcp23xxx.Register.INTF" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp23xxx.Register</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary>
+            Reflects the interrupt condition on the port pins of any pin that is enabled for interrupts via the GPINTEN register.
+            A 'set' bit indicates that the associated pin caused the interrupt.
+            This register is read-only. Writes to this register will be ignored.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IOCON">
+      <MemberSignature Language="C#" Value="IOCON" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Mcp23xxx.Register IOCON = unsigned int8(5)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Mcp23xxx.Register.IOCON" />
+      <MemberSignature Language="VB.NET" Value="IOCON" />
+      <MemberSignature Language="F#" Value="IOCON = 5" Usage="Iot.Device.Mcp23xxx.Register.IOCON" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp23xxx.Register</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            Contains several bits for configuring the device.  See respective datasheet for more details.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="IODIR">
+      <MemberSignature Language="C#" Value="IODIR" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Mcp23xxx.Register IODIR = unsigned int8(0)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Mcp23xxx.Register.IODIR" />
+      <MemberSignature Language="VB.NET" Value="IODIR" />
+      <MemberSignature Language="F#" Value="IODIR = 0" Usage="Iot.Device.Mcp23xxx.Register.IODIR" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp23xxx.Register</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Controls the direction of the data I/O.
+            When a bit is set, the corresponding pin becomes an input.
+            When a bit is clear, the corresponding pin becomes an output.
+            </summary>
+        <remarks>
+            On reset/power on all bits are set (all pins are input).
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IPOL">
+      <MemberSignature Language="C#" Value="IPOL" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Mcp23xxx.Register IPOL = unsigned int8(1)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Mcp23xxx.Register.IPOL" />
+      <MemberSignature Language="VB.NET" Value="IPOL" />
+      <MemberSignature Language="F#" Value="IPOL = 1" Usage="Iot.Device.Mcp23xxx.Register.IPOL" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp23xxx.Register</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Configures the polarity on the corresponding GPIO port bits.
+            When a bit is set, the corresponding GPIO register bit will reflect the inverted value on the pin.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="OLAT">
+      <MemberSignature Language="C#" Value="OLAT" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Mcp23xxx.Register OLAT = unsigned int8(10)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Mcp23xxx.Register.OLAT" />
+      <MemberSignature Language="VB.NET" Value="OLAT" />
+      <MemberSignature Language="F#" Value="OLAT = 10" Usage="Iot.Device.Mcp23xxx.Register.OLAT" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp23xxx.Register</ReturnType>
+      </ReturnValue>
+      <MemberValue>10</MemberValue>
+      <Docs>
+        <summary>
+            Provides access to the output latches.
+            A read from this register results in a read of the OLAT and not the port itself.
+            A write to this register modifies the output latches that modify the pins configured as outputs.
+            </summary>
+        <remarks>
+            On reset/power on all bits are not set (all pins are low).
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

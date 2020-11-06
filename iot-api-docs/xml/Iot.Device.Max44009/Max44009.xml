@@ -1,0 +1,148 @@
+<Type Name="Max44009" FullName="Iot.Device.Max44009.Max44009">
+  <TypeSignature Language="C#" Value="public class Max44009 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Max44009 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Max44009.Max44009" />
+  <TypeSignature Language="VB.NET" Value="Public Class Max44009&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Max44009 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Ambient Light Sensor MAX44009
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Max44009 (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Max44009.Max44009.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Max44009.Max44009 : System.Device.I2c.I2cDevice -&gt; Iot.Device.Max44009.Max44009" Usage="new Iot.Device.Max44009.Max44009 i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device used for communication.</param>
+        <summary>
+            Creates a new instance of the MAX44009, MAX44009 working mode is default. (Consume lowest power)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Max44009 (System.Device.I2c.I2cDevice i2cDevice, Iot.Device.Max44009.IntegrationTime integrationTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, valuetype Iot.Device.Max44009.IntegrationTime integrationTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Max44009.Max44009.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Max44009.IntegrationTime)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, integrationTime As IntegrationTime)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Max44009.Max44009 : System.Device.I2c.I2cDevice * Iot.Device.Max44009.IntegrationTime -&gt; Iot.Device.Max44009.Max44009" Usage="new Iot.Device.Max44009.Max44009 (i2cDevice, integrationTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="integrationTime" Type="Iot.Device.Max44009.IntegrationTime" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device used for communication.</param>
+        <param name="integrationTime">Measurement Cycle</param>
+        <summary>
+            Creates a new instance of the MAX44009, MAX44009 working mode is continuous. (Consume slightly higher power than in the default mode)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte DefaultI2cAddress = 74;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 DefaultI2cAddress = (74)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Max44009.Max44009.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Byte  = 74" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : byte" Usage="Iot.Device.Max44009.Max44009.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>74</MemberValue>
+      <Docs>
+        <summary>
+            MAX44009 Default I2C Address
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Max44009.Max44009.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="max44009.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Cleanup
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Illuminance">
+      <MemberSignature Language="C#" Value="public double Illuminance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Illuminance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Max44009.Max44009.Illuminance" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Illuminance As Double" />
+      <MemberSignature Language="F#" Value="member this.Illuminance : double" Usage="Iot.Device.Max44009.Max44009.Illuminance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            MAX44009 Illuminance (Lux)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

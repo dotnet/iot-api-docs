@@ -1,0 +1,313 @@
+<Type Name="DhtBase" FullName="Iot.Device.DHTxx.DhtBase">
+  <TypeSignature Language="C#" Value="public abstract class DhtBase : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DhtBase extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.DHTxx.DhtBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class DhtBase&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type DhtBase = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Temperature and Humidity Sensor DHTxx
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DhtBase (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DHTxx.DhtBase.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.DHTxx.DhtBase : System.Device.I2c.I2cDevice -&gt; Iot.Device.DHTxx.DhtBase" Usage="new Iot.Device.DHTxx.DhtBase i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device used for communication.</param>
+        <summary>
+            Create a DHT sensor through I2C (Only DHT12)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DhtBase (int pin, System.Device.Gpio.PinNumberingScheme pinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 pin, valuetype System.Device.Gpio.PinNumberingScheme pinNumberingScheme) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DHTxx.DhtBase.#ctor(System.Int32,System.Device.Gpio.PinNumberingScheme)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pin As Integer, Optional pinNumberingScheme As PinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.DHTxx.DhtBase : int * System.Device.Gpio.PinNumberingScheme -&gt; Iot.Device.DHTxx.DhtBase" Usage="new Iot.Device.DHTxx.DhtBase (pin, pinNumberingScheme)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="pinNumberingScheme" Type="System.Device.Gpio.PinNumberingScheme" Index="1" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="pin">To be added.</param>
+        <param name="pinNumberingScheme">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DhtBase (int pin, System.Device.Gpio.PinNumberingScheme pinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical, System.Device.Gpio.GpioController gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 pin, valuetype System.Device.Gpio.PinNumberingScheme pinNumberingScheme, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DHTxx.DhtBase.#ctor(System.Int32,System.Device.Gpio.PinNumberingScheme,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pin As Integer, Optional pinNumberingScheme As PinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.DHTxx.DhtBase : int * System.Device.Gpio.PinNumberingScheme * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.DHTxx.DhtBase" Usage="new Iot.Device.DHTxx.DhtBase (pin, pinNumberingScheme, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="pinNumberingScheme" Type="System.Device.Gpio.PinNumberingScheme" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="pin">The pin number (GPIO number)</param>
+        <param name="pinNumberingScheme">The GPIO pin numbering scheme</param>
+        <param name="gpioController">
+          <see cref="T:System.Device.Gpio.GpioController" /> related with operations on pins</param>
+        <param name="shouldDispose">True to dispose the Gpio Controller</param>
+        <summary>
+            Create a DHT sensor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_controller">
+      <MemberSignature Language="C#" Value="protected readonly System.Device.Gpio.GpioController _controller;" />
+      <MemberSignature Language="ILAsm" Value=".field family initonly class System.Device.Gpio.GpioController _controller" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.DHTxx.DhtBase._controller" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly _controller As GpioController " />
+      <MemberSignature Language="F#" Value="val mutable _controller : System.Device.Gpio.GpioController" Usage="Iot.Device.DHTxx.DhtBase._controller" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.GpioController</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Device.Gpio.GpioController" /> related with the <see cref="F:Iot.Device.DHTxx.DhtBase._pin" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_i2cDevice">
+      <MemberSignature Language="C#" Value="protected readonly System.Device.I2c.I2cDevice _i2cDevice;" />
+      <MemberSignature Language="ILAsm" Value=".field family initonly class System.Device.I2c.I2cDevice _i2cDevice" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.DHTxx.DhtBase._i2cDevice" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly _i2cDevice As I2cDevice " />
+      <MemberSignature Language="F#" Value="val mutable _i2cDevice : System.Device.I2c.I2cDevice" Usage="Iot.Device.DHTxx.DhtBase._i2cDevice" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.I2c.I2cDevice</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            I2C device used to communicate with the device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_pin">
+      <MemberSignature Language="C#" Value="protected readonly int _pin;" />
+      <MemberSignature Language="ILAsm" Value=".field family initonly int32 _pin" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.DHTxx.DhtBase._pin" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly _pin As Integer " />
+      <MemberSignature Language="F#" Value="val mutable _pin : int" Usage="Iot.Device.DHTxx.DhtBase._pin" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            GPIO pin
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_readBuff">
+      <MemberSignature Language="C#" Value="protected byte[] _readBuff;" />
+      <MemberSignature Language="ILAsm" Value=".field family unsigned int8[] _readBuff" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.DHTxx.DhtBase._readBuff" />
+      <MemberSignature Language="VB.NET" Value="Protected _readBuff As Byte() " />
+      <MemberSignature Language="F#" Value="val mutable _readBuff : byte[]" Usage="Iot.Device.DHTxx.DhtBase._readBuff" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Read buffer
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_shouldDispose">
+      <MemberSignature Language="C#" Value="protected readonly bool _shouldDispose;" />
+      <MemberSignature Language="ILAsm" Value=".field family initonly bool _shouldDispose" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.DHTxx.DhtBase._shouldDispose" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly _shouldDispose As Boolean " />
+      <MemberSignature Language="F#" Value="val mutable _shouldDispose : bool" Usage="Iot.Device.DHTxx.DhtBase._shouldDispose" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True to dispose the Gpio Controller
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DHTxx.DhtBase.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="dhtBase.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Humidity">
+      <MemberSignature Language="C#" Value="public virtual double Humidity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Humidity" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.DHTxx.DhtBase.Humidity" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Humidity As Double" />
+      <MemberSignature Language="F#" Value="member this.Humidity : double" Usage="Iot.Device.DHTxx.DhtBase.Humidity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the last read of relative humidity in percentage
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If last read was not successfull, it returns double.NaN
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLastReadSuccessful">
+      <MemberSignature Language="C#" Value="public bool IsLastReadSuccessful { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLastReadSuccessful" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.DHTxx.DhtBase.IsLastReadSuccessful" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsLastReadSuccessful As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsLastReadSuccessful : bool" Usage="Iot.Device.DHTxx.DhtBase.IsLastReadSuccessful" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            How last read went, <c>true</c> for success, <c>false</c> for failure
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Temperature">
+      <MemberSignature Language="C#" Value="public virtual Iot.Units.Temperature Temperature { get; }" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Units.Temperature Temperature" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.DHTxx.DhtBase.Temperature" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Temperature As Temperature" />
+      <MemberSignature Language="F#" Value="member this.Temperature : Iot.Units.Temperature" Usage="Iot.Device.DHTxx.DhtBase.Temperature" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="C#" Value="public virtual UnitsNet.Temperature Temperature { get; }" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature Temperature" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="member this.Temperature : UnitsNet.Temperature" Usage="Iot.Device.DHTxx.DhtBase.Temperature" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.0">Iot.Units.Temperature</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.1">UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the last read temperature
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            If last read was not successfull, it returns double.NaN
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

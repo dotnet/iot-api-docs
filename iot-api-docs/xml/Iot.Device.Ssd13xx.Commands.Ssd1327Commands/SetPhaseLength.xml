@@ -1,0 +1,201 @@
+<Type Name="SetPhaseLength" FullName="Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength">
+  <TypeSignature Language="C#" Value="public class SetPhaseLength : Iot.Device.Ssd13xx.Commands.ISsd1327Command" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SetPhaseLength extends System.Object implements class Iot.Device.Ssd13xx.Commands.ICommand, class Iot.Device.Ssd13xx.Commands.ISsd1327Command" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength" />
+  <TypeSignature Language="VB.NET" Value="Public Class SetPhaseLength&#xA;Implements ISsd1327Command" />
+  <TypeSignature Language="F#" Value="type SetPhaseLength = class&#xA;    interface ISsd1327Command&#xA;    interface ICommand" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Ssd13xx.Commands.ICommand</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Iot.Device.Ssd13xx.Commands.ISsd1327Command</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Sets the length of phase 1 and 2 of segment waveform of the driver.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SetPhaseLength (byte phasePeriod);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 phasePeriod) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength.#ctor(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (phasePeriod As Byte)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength : byte -&gt; Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength" Usage="new Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength phasePeriod" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="phasePeriod" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="phasePeriod">Phase period</param>
+        <summary>
+            Constructs instance of SetPhaseLength command
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SetPhaseLength (byte phase1Period = 2, byte phase2Period = 2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 phase1Period, unsigned int8 phase2Period) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength.#ctor(System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional phase1Period As Byte = 2, Optional phase2Period As Byte = 2)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength : byte * byte -&gt; Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength" Usage="new Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength (phase1Period, phase2Period)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="phase1Period" Type="System.Byte" />
+        <Parameter Name="phase2Period" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="phase1Period">Phase 1 period</param>
+        <param name="phase2Period">Phase 2 period</param>
+        <summary>
+            Constructs instance of SetPhaseLength command
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public byte[] GetBytes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GetBytes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength.GetBytes" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetBytes () As Byte()" />
+      <MemberSignature Language="F#" Value="abstract member GetBytes : unit -&gt; byte[]&#xA;override this.GetBytes : unit -&gt; byte[]" Usage="setPhaseLength.GetBytes " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Ssd13xx.Commands.ICommand.GetBytes</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the bytes that represent the command.
+            </summary>
+        <returns>The bytes that represent the command.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public byte Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As Byte" />
+      <MemberSignature Language="F#" Value="member this.Id : byte" Usage="Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength.Id" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Ssd13xx.Commands.ICommand.Id</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The value that represents the command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Phase1Period">
+      <MemberSignature Language="C#" Value="public byte Phase1Period { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Phase1Period" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength.Phase1Period" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Phase1Period As Byte" />
+      <MemberSignature Language="F#" Value="member this.Phase1Period : byte" Usage="Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength.Phase1Period" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Phase 1 period with a range of 1-15.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Phase2Period">
+      <MemberSignature Language="C#" Value="public byte Phase2Period { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Phase2Period" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength.Phase2Period" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Phase2Period As Byte" />
+      <MemberSignature Language="F#" Value="member this.Phase2Period : byte" Usage="Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength.Phase2Period" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Phase 2 period with a range of 1-15.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PhasePeriod">
+      <MemberSignature Language="C#" Value="public byte PhasePeriod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 PhasePeriod" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength.PhasePeriod" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PhasePeriod As Byte" />
+      <MemberSignature Language="F#" Value="member this.PhasePeriod : byte" Usage="Iot.Device.Ssd13xx.Commands.Ssd1327Commands.SetPhaseLength.PhasePeriod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Phase period.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

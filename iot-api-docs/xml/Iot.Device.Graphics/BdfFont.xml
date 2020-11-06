@@ -1,0 +1,271 @@
+<Type Name="BdfFont" FullName="Iot.Device.Graphics.BdfFont">
+  <TypeSignature Language="C#" Value="public class BdfFont" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BdfFont extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Graphics.BdfFont" />
+  <TypeSignature Language="VB.NET" Value="Public Class BdfFont" />
+  <TypeSignature Language="F#" Value="type BdfFont = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents BDF font
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CharsCount">
+      <MemberSignature Language="C#" Value="public int CharsCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CharsCount" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Graphics.BdfFont.CharsCount" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CharsCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.CharsCount : int" Usage="Iot.Device.Graphics.BdfFont.CharsCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Number of characters
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultChar">
+      <MemberSignature Language="C#" Value="public int DefaultChar { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DefaultChar" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Graphics.BdfFont.DefaultChar" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultChar As Integer" />
+      <MemberSignature Language="F#" Value="member this.DefaultChar : int" Usage="Iot.Device.Graphics.BdfFont.DefaultChar" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Default character
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCharData">
+      <MemberSignature Language="C#" Value="public void GetCharData (char character, out ReadOnlySpan&lt;ushort&gt; charData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetCharData(char character, [out] valuetype System.ReadOnlySpan`1&lt;unsigned int16&gt;&amp; charData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BdfFont.GetCharData(System.Char,System.ReadOnlySpan{System.UInt16}@)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub GetCharData (character As Char, ByRef charData As ReadOnlySpan(Of UShort))" />
+      <MemberSignature Language="F#" Value="member this.GetCharData : char * ReadOnlySpan -&gt; unit" Usage="bdfFont.GetCharData (character, charData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="character" Type="System.Char" />
+        <Parameter Name="charData" Type="System.ReadOnlySpan&lt;System.UInt16&gt;" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="character">Character whose data needs to be retrieved</param>
+        <param name="charData">Character data</param>
+        <summary>
+            Get character data or data for default character
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCharData">
+      <MemberSignature Language="C#" Value="public bool GetCharData (int charOrdinal, ref Span&lt;int&gt; data, bool useDefaultChar = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetCharData(int32 charOrdinal, valuetype System.Span`1&lt;int32&gt;&amp; data, bool useDefaultChar) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BdfFont.GetCharData(System.Int32,System.Span{System.Int32}@,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCharData (charOrdinal As Integer, ByRef data As Span(Of Integer), Optional useDefaultChar As Boolean = true) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.GetCharData : int * Span * bool -&gt; bool" Usage="bdfFont.GetCharData (charOrdinal, data, useDefaultChar)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="charOrdinal" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Span&lt;System.Int32&gt;" RefType="ref" />
+        <Parameter Name="useDefaultChar" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="charOrdinal">Character ordinal</param>
+        <param name="data">Buffer to be sliced and filled with character data</param>
+        <param name="useDefaultChar">Use default character if not found</param>
+        <summary>
+            Get character data
+            </summary>
+        <returns>True if data could be retrieved</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public int Height { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Height" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Graphics.BdfFont.Height" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Height As Integer" />
+      <MemberSignature Language="F#" Value="member this.Height : int" Usage="Iot.Device.Graphics.BdfFont.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Character height
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Graphics.BdfFont Load (string fontFilePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Graphics.BdfFont Load(string fontFilePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BdfFont.Load(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Load (fontFilePath As String) As BdfFont" />
+      <MemberSignature Language="F#" Value="static member Load : string -&gt; Iot.Device.Graphics.BdfFont" Usage="Iot.Device.Graphics.BdfFont.Load fontFilePath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Graphics.BdfFont</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fontFilePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fontFilePath">Path of the file representing the font</param>
+        <summary>
+            Loads BdfFont from a specified path
+            </summary>
+        <returns>BdfFont instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedChars">
+      <MemberSignature Language="C#" Value="public int[] SupportedChars { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32[] SupportedChars" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Graphics.BdfFont.SupportedChars" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SupportedChars As Integer()" />
+      <MemberSignature Language="F#" Value="member this.SupportedChars : int[]" Usage="Iot.Device.Graphics.BdfFont.SupportedChars" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Characters supported by this font
+            </summary>
+        <value>Array of supported characters</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public int Width { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Width" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Graphics.BdfFont.Width" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Width As Integer" />
+      <MemberSignature Language="F#" Value="member this.Width : int" Usage="Iot.Device.Graphics.BdfFont.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Character width
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="XDisplacement">
+      <MemberSignature Language="C#" Value="public int XDisplacement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 XDisplacement" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Graphics.BdfFont.XDisplacement" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property XDisplacement As Integer" />
+      <MemberSignature Language="F#" Value="member this.XDisplacement : int" Usage="Iot.Device.Graphics.BdfFont.XDisplacement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            X displacement of the character
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="YDisplacement">
+      <MemberSignature Language="C#" Value="public int YDisplacement { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 YDisplacement" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Graphics.BdfFont.YDisplacement" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property YDisplacement As Integer" />
+      <MemberSignature Language="F#" Value="member this.YDisplacement : int" Usage="Iot.Device.Graphics.BdfFont.YDisplacement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Y Displacement of the character
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

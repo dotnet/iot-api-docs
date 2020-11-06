@@ -1,0 +1,178 @@
+<Type Name="OneWireBus" FullName="Iot.Device.OneWire.OneWireBus">
+  <TypeSignature Language="C#" Value="public class OneWireBus" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OneWireBus extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.OneWire.OneWireBus" />
+  <TypeSignature Language="VB.NET" Value="Public Class OneWireBus" />
+  <TypeSignature Language="F#" Value="type OneWireBus = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a 1-wire bus.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OneWireBus (string busId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string busId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.OneWire.OneWireBus.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (busId As String)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.OneWire.OneWireBus : string -&gt; Iot.Device.OneWire.OneWireBus" Usage="new Iot.Device.OneWire.OneWireBus busId" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="busId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="busId">The platform id of the 1-wire bus.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.OneWire.OneWireBus" /> class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BusId">
+      <MemberSignature Language="C#" Value="public string BusId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BusId" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.OneWire.OneWireBus.BusId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BusId As String" />
+      <MemberSignature Language="F#" Value="member this.BusId : string" Usage="Iot.Device.OneWire.OneWireBus.BusId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The 1-wire device id.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateBusIds">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;string&gt; EnumerateBusIds ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;string&gt; EnumerateBusIds() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.OneWire.OneWireBus.EnumerateBusIds" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function EnumerateBusIds () As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="static member EnumerateBusIds : unit -&gt; seq&lt;string&gt;" Usage="Iot.Device.OneWire.OneWireBus.EnumerateBusIds " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Enumerate names of all 1-wire busses in the system.
+            </summary>
+        <returns>A list of discovered bus ids.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateDeviceIds">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; EnumerateDeviceIds (Iot.Device.OneWire.DeviceFamily family = Iot.Device.OneWire.DeviceFamily.Any);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; EnumerateDeviceIds(valuetype Iot.Device.OneWire.DeviceFamily family) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.OneWire.OneWireBus.EnumerateDeviceIds(Iot.Device.OneWire.DeviceFamily)" />
+      <MemberSignature Language="VB.NET" Value="Public Iterator Function EnumerateDeviceIds (Optional family As DeviceFamily = Iot.Device.OneWire.DeviceFamily.Any) As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.EnumerateDeviceIds : Iot.Device.OneWire.DeviceFamily -&gt; seq&lt;string&gt;" Usage="oneWireBus.EnumerateDeviceIds family" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Iot.Device.OneWire.OneWireBus/&lt;EnumerateDeviceIds&gt;d__5))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Iot.Device.OneWire.OneWireBus/&lt;EnumerateDeviceIds&gt;d__5))&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="family" Type="Iot.Device.OneWire.DeviceFamily" />
+      </Parameters>
+      <Docs>
+        <param name="family">Family id used to filter enumerated devices.</param>
+        <summary>
+            Enumerates all devices currently detected on this bus. Platform can update device list
+            periodically. To manually trigger an update call <see cref="M:Iot.Device.OneWire.OneWireBus.ScanForDeviceChangesAsync(System.Int32,System.Int32)" />.
+            </summary>
+        <returns>A list of discovered devices.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScanForDeviceChanges">
+      <MemberSignature Language="C#" Value="public void ScanForDeviceChanges (int numDevices = -1, int numScans = -1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ScanForDeviceChanges(int32 numDevices, int32 numScans) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.OneWire.OneWireBus.ScanForDeviceChanges(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ScanForDeviceChanges (Optional numDevices As Integer = -1, Optional numScans As Integer = -1)" />
+      <MemberSignature Language="F#" Value="member this.ScanForDeviceChanges : int * int -&gt; unit" Usage="oneWireBus.ScanForDeviceChanges (numDevices, numScans)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numDevices" Type="System.Int32" />
+        <Parameter Name="numScans" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="numDevices">Max number of devices to scan for before finishing. Use -1 for platform default.</param>
+        <param name="numScans">Number of scans to do to find numDevices devices. Use -1 for platform default.</param>
+        <summary>
+            Start a new scan for device changes on the bus.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScanForDeviceChangesAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task ScanForDeviceChangesAsync (int numDevices = -1, int numScans = -1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task ScanForDeviceChangesAsync(int32 numDevices, int32 numScans) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.OneWire.OneWireBus.ScanForDeviceChangesAsync(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ScanForDeviceChangesAsync (Optional numDevices As Integer = -1, Optional numScans As Integer = -1) As Task" />
+      <MemberSignature Language="F#" Value="member this.ScanForDeviceChangesAsync : int * int -&gt; System.Threading.Tasks.Task" Usage="oneWireBus.ScanForDeviceChangesAsync (numDevices, numScans)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numDevices" Type="System.Int32" />
+        <Parameter Name="numScans" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="numDevices">Max number of devices to scan for before finishing. Use -1 for platform default.</param>
+        <param name="numScans">Number of scans to do to find numDevices devices. Use -1 for platform default.</param>
+        <summary>
+            Start a new scan for device changes on the bus.
+            </summary>
+        <returns>Task representing the async work.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

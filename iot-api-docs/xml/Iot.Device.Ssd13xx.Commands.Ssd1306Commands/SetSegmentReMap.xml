@@ -1,0 +1,134 @@
+<Type Name="SetSegmentReMap" FullName="Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetSegmentReMap">
+  <TypeSignature Language="C#" Value="public class SetSegmentReMap : Iot.Device.Ssd13xx.Commands.ISsd1306Command" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SetSegmentReMap extends System.Object implements class Iot.Device.Ssd13xx.Commands.ICommand, class Iot.Device.Ssd13xx.Commands.ISsd1306Command" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetSegmentReMap" />
+  <TypeSignature Language="VB.NET" Value="Public Class SetSegmentReMap&#xA;Implements ISsd1306Command" />
+  <TypeSignature Language="F#" Value="type SetSegmentReMap = class&#xA;    interface ISsd1306Command&#xA;    interface ICommand" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Ssd13xx.Commands.ICommand</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Iot.Device.Ssd13xx.Commands.ISsd1306Command</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents SetSegmentReMap command
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SetSegmentReMap (bool columnAddress127 = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool columnAddress127) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetSegmentReMap.#ctor(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional columnAddress127 As Boolean = false)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetSegmentReMap : bool -&gt; Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetSegmentReMap" Usage="new Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetSegmentReMap columnAddress127" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="columnAddress127" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="columnAddress127">Column address 0 is mapped to SEG0 when FALSE.
+            Column address 127 is mapped to SEG0 when TRUE.</param>
+        <summary>
+            This command changes the mapping between the display data column address and the segment driver.
+            It allows flexibility in OLED module design. This command only affects subsequent data input.
+            Data already stored in GDDRAM will have no changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColumnAddress127">
+      <MemberSignature Language="C#" Value="public bool ColumnAddress127 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ColumnAddress127" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetSegmentReMap.ColumnAddress127" />
+      <MemberSignature Language="VB.NET" Value="Public Property ColumnAddress127 As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ColumnAddress127 : bool with get, set" Usage="Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetSegmentReMap.ColumnAddress127" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Column Address 127.  Column address 127 is mapped to SEG0 when FALSE.
+            Column address 127 is mapped to SEG0 when TRUE.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public byte[] GetBytes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GetBytes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetSegmentReMap.GetBytes" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetBytes () As Byte()" />
+      <MemberSignature Language="F#" Value="abstract member GetBytes : unit -&gt; byte[]&#xA;override this.GetBytes : unit -&gt; byte[]" Usage="setSegmentReMap.GetBytes " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Ssd13xx.Commands.ICommand.GetBytes</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the bytes that represent the command.
+            </summary>
+        <returns>The bytes that represent the command.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public byte Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetSegmentReMap.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As Byte" />
+      <MemberSignature Language="F#" Value="member this.Id : byte" Usage="Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetSegmentReMap.Id" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Ssd13xx.Commands.ICommand.Id</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The value that represents the command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

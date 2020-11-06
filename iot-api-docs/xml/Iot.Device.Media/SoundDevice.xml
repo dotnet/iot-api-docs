@@ -1,0 +1,332 @@
+<Type Name="SoundDevice" FullName="Iot.Device.Media.SoundDevice">
+  <TypeSignature Language="C#" Value="public abstract class SoundDevice : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit SoundDevice extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Media.SoundDevice" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class SoundDevice&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type SoundDevice = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            The communications channel to a sound device.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected SoundDevice ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.SoundDevice.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Media.SoundDevice Create (Iot.Device.Media.SoundConnectionSettings settings);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Media.SoundDevice Create(class Iot.Device.Media.SoundConnectionSettings settings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.SoundDevice.Create(Iot.Device.Media.SoundConnectionSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (settings As SoundConnectionSettings) As SoundDevice" />
+      <MemberSignature Language="F#" Value="static member Create : Iot.Device.Media.SoundConnectionSettings -&gt; Iot.Device.Media.SoundDevice" Usage="Iot.Device.Media.SoundDevice.Create settings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Media.SoundDevice</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="settings" Type="Iot.Device.Media.SoundConnectionSettings" />
+      </Parameters>
+      <Docs>
+        <param name="settings">The connection settings of a sound device.</param>
+        <summary>
+            Create a communications channel to a sound device running on Unix.
+            </summary>
+        <returns>A communications channel to a sound device running on Unix.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.SoundDevice.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="soundDevice.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.SoundDevice.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="soundDevice.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">True to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+        <summary>
+            Releases the unmanaged resources used by the SoundDevice and optionally releases the managed resources.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Play">
+      <MemberSignature Language="C#" Value="public abstract void Play (System.IO.Stream wavStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Play(class System.IO.Stream wavStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.SoundDevice.Play(System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Play (wavStream As Stream)" />
+      <MemberSignature Language="F#" Value="abstract member Play : System.IO.Stream -&gt; unit" Usage="soundDevice.Play wavStream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="wavStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="wavStream">WAV stream.</param>
+        <summary>
+            Play WAV file.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Play">
+      <MemberSignature Language="C#" Value="public abstract void Play (string wavPath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Play(string wavPath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.SoundDevice.Play(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Play (wavPath As String)" />
+      <MemberSignature Language="F#" Value="abstract member Play : string -&gt; unit" Usage="soundDevice.Play wavPath" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="wavPath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="wavPath">WAV file path.</param>
+        <summary>
+            Play WAV file.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlaybackMute">
+      <MemberSignature Language="C#" Value="public abstract bool PlaybackMute { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PlaybackMute" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Media.SoundDevice.PlaybackMute" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property PlaybackMute As Boolean" />
+      <MemberSignature Language="F#" Value="member this.PlaybackMute : bool with get, set" Usage="Iot.Device.Media.SoundDevice.PlaybackMute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The playback mute of the sound device.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PlaybackVolume">
+      <MemberSignature Language="C#" Value="public abstract long PlaybackVolume { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 PlaybackVolume" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Media.SoundDevice.PlaybackVolume" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property PlaybackVolume As Long" />
+      <MemberSignature Language="F#" Value="member this.PlaybackVolume : int64 with get, set" Usage="Iot.Device.Media.SoundDevice.PlaybackVolume" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The playback volume of the sound device.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Record">
+      <MemberSignature Language="C#" Value="public abstract void Record (uint recordTimeSeconds, System.IO.Stream outputStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Record(unsigned int32 recordTimeSeconds, class System.IO.Stream outputStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.SoundDevice.Record(System.UInt32,System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Record (recordTimeSeconds As UInteger, outputStream As Stream)" />
+      <MemberSignature Language="F#" Value="abstract member Record : uint32 * System.IO.Stream -&gt; unit" Usage="soundDevice.Record (recordTimeSeconds, outputStream)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="recordTimeSeconds" Type="System.UInt32" />
+        <Parameter Name="outputStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="recordTimeSeconds">Recording duration(In seconds).</param>
+        <param name="outputStream">Recording save stream.</param>
+        <summary>
+            Sound recording.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Record">
+      <MemberSignature Language="C#" Value="public abstract void Record (uint recordTimeSeconds, string outputFilePath);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Record(unsigned int32 recordTimeSeconds, string outputFilePath) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.SoundDevice.Record(System.UInt32,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Record (recordTimeSeconds As UInteger, outputFilePath As String)" />
+      <MemberSignature Language="F#" Value="abstract member Record : uint32 * string -&gt; unit" Usage="soundDevice.Record (recordTimeSeconds, outputFilePath)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="recordTimeSeconds" Type="System.UInt32" />
+        <Parameter Name="outputFilePath" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="recordTimeSeconds">Recording duration(In seconds).</param>
+        <param name="outputFilePath">Recording save path.</param>
+        <summary>
+            Sound recording.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordingMute">
+      <MemberSignature Language="C#" Value="public abstract bool RecordingMute { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RecordingMute" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Media.SoundDevice.RecordingMute" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property RecordingMute As Boolean" />
+      <MemberSignature Language="F#" Value="member this.RecordingMute : bool with get, set" Usage="Iot.Device.Media.SoundDevice.RecordingMute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The recording mute of the sound device.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RecordingVolume">
+      <MemberSignature Language="C#" Value="public abstract long RecordingVolume { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 RecordingVolume" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Media.SoundDevice.RecordingVolume" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property RecordingVolume As Long" />
+      <MemberSignature Language="F#" Value="member this.RecordingVolume : int64 with get, set" Usage="Iot.Device.Media.SoundDevice.RecordingVolume" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The recording volume of the sound device.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Settings">
+      <MemberSignature Language="C#" Value="public abstract Iot.Device.Media.SoundConnectionSettings Settings { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Media.SoundConnectionSettings Settings" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Media.SoundDevice.Settings" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Settings As SoundConnectionSettings" />
+      <MemberSignature Language="F#" Value="member this.Settings : Iot.Device.Media.SoundConnectionSettings" Usage="Iot.Device.Media.SoundDevice.Settings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Media.SoundConnectionSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The connection settings of the sound device.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

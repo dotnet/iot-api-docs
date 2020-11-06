@@ -1,0 +1,201 @@
+<Type Name="BitmapImage" FullName="Iot.Device.Graphics.BitmapImage">
+  <TypeSignature Language="C#" Value="public abstract class BitmapImage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BitmapImage extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Graphics.BitmapImage" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class BitmapImage" />
+  <TypeSignature Language="F#" Value="type BitmapImage = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents bitmap image
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BitmapImage (byte[] data, int width, int height, int stride);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(unsigned int8[] data, int32 width, int32 height, int32 stride) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BitmapImage.#ctor(System.Byte[],System.Int32,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (data As Byte(), width As Integer, height As Integer, stride As Integer)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Graphics.BitmapImage : byte[] * int * int * int -&gt; Iot.Device.Graphics.BitmapImage" Usage="new Iot.Device.Graphics.BitmapImage (data, width, height, stride)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="stride" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="data">Data representing the image (derived class defines a specific format)</param>
+        <param name="width">Width of the image</param>
+        <param name="height">Height of the image</param>
+        <param name="stride">Number of bytes per row</param>
+        <summary>
+            Initializes a <see cref="T:Iot.Device.Graphics.BitmapImage" /> instance with the specified data, width, height and stride.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear (System.Drawing.Color color = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear(valuetype System.Drawing.Color color) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BitmapImage.Clear(System.Drawing.Color)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Clear (Optional color As Color = Nothing)" />
+      <MemberSignature Language="F#" Value="abstract member Clear : System.Drawing.Color -&gt; unit&#xA;override this.Clear : System.Drawing.Color -&gt; unit" Usage="bitmapImage.Clear color" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="color" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="color">Color to clear the image. Defaults to black.</param>
+        <summary>
+            Clears the image to specific color
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public Span&lt;byte&gt; Data { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Span`1&lt;unsigned int8&gt; Data" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Graphics.BitmapImage.Data" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Data As Span(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.Data : Span&lt;byte&gt;" Usage="Iot.Device.Graphics.BitmapImage.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Span&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Data related to the image (derived class defines a specific format)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public int Height { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Height" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Graphics.BitmapImage.Height" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Height As Integer" />
+      <MemberSignature Language="F#" Value="member this.Height : int" Usage="Iot.Device.Graphics.BitmapImage.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Height of the image
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPixel">
+      <MemberSignature Language="C#" Value="public abstract void SetPixel (int x, int y, System.Drawing.Color color);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetPixel(int32 x, int32 y, valuetype System.Drawing.Color color) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BitmapImage.SetPixel(System.Int32,System.Int32,System.Drawing.Color)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetPixel (x As Integer, y As Integer, color As Color)" />
+      <MemberSignature Language="F#" Value="abstract member SetPixel : int * int * System.Drawing.Color -&gt; unit" Usage="bitmapImage.SetPixel (x, y, color)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="color" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="x">X coordinate of the pixel</param>
+        <param name="y">Y coordinate of the pixel</param>
+        <param name="color">Color to set the pixel to</param>
+        <summary>
+            Sets pixel at specific position
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stride">
+      <MemberSignature Language="C#" Value="public int Stride { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Stride" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Graphics.BitmapImage.Stride" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Stride As Integer" />
+      <MemberSignature Language="F#" Value="member this.Stride : int" Usage="Iot.Device.Graphics.BitmapImage.Stride" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Number of bytes per row
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public int Width { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Width" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Graphics.BitmapImage.Width" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Width As Integer" />
+      <MemberSignature Language="F#" Value="member this.Width : int" Usage="Iot.Device.Graphics.BitmapImage.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Width of the image
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

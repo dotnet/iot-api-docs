@@ -1,0 +1,563 @@
+<Type Name="DCMotor" FullName="Iot.Device.DCMotor.DCMotor">
+  <TypeSignature Language="C#" Value="public abstract class DCMotor : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit DCMotor extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.DCMotor.DCMotor" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class DCMotor&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type DCMotor = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Direct current (DC) motor
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DCMotor (System.Device.Gpio.GpioController controller);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Device.Gpio.GpioController controller) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DCMotor.DCMotor.#ctor(System.Device.Gpio.GpioController)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (controller As GpioController)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.DCMotor.DCMotor : System.Device.Gpio.GpioController -&gt; Iot.Device.DCMotor.DCMotor" Usage="new Iot.Device.DCMotor.DCMotor controller" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="controller">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected DCMotor (System.Device.Gpio.GpioController controller, bool shouldDispose);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Device.Gpio.GpioController controller, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DCMotor.DCMotor.#ctor(System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (controller As GpioController, shouldDispose As Boolean)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.DCMotor.DCMotor : System.Device.Gpio.GpioController * bool -&gt; Iot.Device.DCMotor.DCMotor" Usage="new Iot.Device.DCMotor.DCMotor (controller, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="controller">
+          <see cref="T:System.Device.Gpio.GpioController" /> related with operations on pins</param>
+        <param name="shouldDispose">True to dispose the Gpio Controller</param>
+        <summary>
+            Constructs generic <see cref="T:Iot.Device.DCMotor.DCMotor" /> instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controller">
+      <MemberSignature Language="C#" Value="protected System.Device.Gpio.GpioController Controller;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Device.Gpio.GpioController Controller" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.DCMotor.DCMotor.Controller" />
+      <MemberSignature Language="VB.NET" Value="Protected Controller As GpioController " />
+      <MemberSignature Language="F#" Value="val mutable Controller : System.Device.Gpio.GpioController" Usage="Iot.Device.DCMotor.DCMotor.Controller" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.GpioController</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controller">
+      <MemberSignature Language="C#" Value="protected System.Device.Gpio.GpioController Controller { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Device.Gpio.GpioController Controller" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.DCMotor.DCMotor.Controller" />
+      <MemberSignature Language="VB.NET" Value="Protected Property Controller As GpioController" />
+      <MemberSignature Language="F#" Value="member this.Controller : System.Device.Gpio.GpioController with get, set" Usage="Iot.Device.DCMotor.DCMotor.Controller" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.GpioController</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+          <see cref="T:System.Device.Gpio.GpioController" /> related with operations on pins
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Iot.Device.DCMotor.DCMotor Create (System.Device.Pwm.PwmChannel speedControlChannel);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.DCMotor.DCMotor Create(class System.Device.Pwm.PwmChannel speedControlChannel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DCMotor.DCMotor.Create(System.Device.Pwm.PwmChannel)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (speedControlChannel As PwmChannel) As DCMotor" />
+      <MemberSignature Language="F#" Value="static member Create : System.Device.Pwm.PwmChannel -&gt; Iot.Device.DCMotor.DCMotor" Usage="Iot.Device.DCMotor.DCMotor.Create speedControlChannel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DCMotor.DCMotor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speedControlChannel" Type="System.Device.Pwm.PwmChannel" />
+      </Parameters>
+      <Docs>
+        <param name="speedControlChannel">
+          <see cref="T:System.Device.Pwm.PwmChannel" /> used to control the speed of the motor</param>
+        <summary>
+            Creates <see cref="T:Iot.Device.DCMotor.DCMotor" /> instance which allows to control speed in one direction.
+            </summary>
+        <returns>DCMotor instance</returns>
+        <remarks>
+            PWM pin <paramref name="speedControlChannel" /> can be connected to either enable pin of the H-bridge.
+            or directly to the input related with the motor (if H-bridge allows inputs to change frequently).
+            Connecting motor directly to GPIO pin is not recommended and may damage your board.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Iot.Device.DCMotor.DCMotor Create (int speedControlPin, System.Device.Gpio.GpioController controller = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.DCMotor.DCMotor Create(int32 speedControlPin, class System.Device.Gpio.GpioController controller) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DCMotor.DCMotor.Create(System.Int32,System.Device.Gpio.GpioController)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (speedControlPin As Integer, Optional controller As GpioController = Nothing) As DCMotor" />
+      <MemberSignature Language="F#" Value="static member Create : int * System.Device.Gpio.GpioController -&gt; Iot.Device.DCMotor.DCMotor" Usage="Iot.Device.DCMotor.DCMotor.Create (speedControlPin, controller)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DCMotor.DCMotor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speedControlPin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="1" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="speedControlPin">To be added.</param>
+        <param name="controller">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Iot.Device.DCMotor.DCMotor Create (System.Device.Pwm.PwmChannel speedControlChannel, int directionPin, System.Device.Gpio.GpioController controller = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.DCMotor.DCMotor Create(class System.Device.Pwm.PwmChannel speedControlChannel, int32 directionPin, class System.Device.Gpio.GpioController controller) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DCMotor.DCMotor.Create(System.Device.Pwm.PwmChannel,System.Int32,System.Device.Gpio.GpioController)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (speedControlChannel As PwmChannel, directionPin As Integer, Optional controller As GpioController = Nothing) As DCMotor" />
+      <MemberSignature Language="F#" Value="static member Create : System.Device.Pwm.PwmChannel * int * System.Device.Gpio.GpioController -&gt; Iot.Device.DCMotor.DCMotor" Usage="Iot.Device.DCMotor.DCMotor.Create (speedControlChannel, directionPin, controller)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DCMotor.DCMotor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speedControlChannel" Type="System.Device.Pwm.PwmChannel" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="directionPin" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="2" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="speedControlChannel">To be added.</param>
+        <param name="directionPin">To be added.</param>
+        <param name="controller">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Iot.Device.DCMotor.DCMotor Create (int speedControlPin, System.Device.Gpio.GpioController controller = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.DCMotor.DCMotor Create(int32 speedControlPin, class System.Device.Gpio.GpioController controller, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DCMotor.DCMotor.Create(System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (speedControlPin As Integer, Optional controller As GpioController = Nothing, Optional shouldDispose As Boolean = true) As DCMotor" />
+      <MemberSignature Language="F#" Value="static member Create : int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.DCMotor.DCMotor" Usage="Iot.Device.DCMotor.DCMotor.Create (speedControlPin, controller, shouldDispose)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DCMotor.DCMotor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speedControlPin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="speedControlPin">Pin used to control the speed of the motor with software PWM (frequency will default to 50Hz)</param>
+        <param name="controller">
+          <see cref="T:System.Device.Gpio.GpioController" /> related to the <paramref name="speedControlPin" /></param>
+        <param name="shouldDispose">True to dispose the Gpio Controller</param>
+        <summary>
+            Creates <see cref="T:Iot.Device.DCMotor.DCMotor" /> instance which allows to control speed in one direction.
+            </summary>
+        <returns>
+          <see cref="T:Iot.Device.DCMotor.DCMotor" /> instance</returns>
+        <remarks>
+          <paramref name="speedControlPin" /> can be connected to either enable pin of the H-bridge.
+            or directly to the input related with the motor (if H-bridge allows inputs to change frequently).
+            Connecting motor directly to GPIO pin is not recommended and may damage your board.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Iot.Device.DCMotor.DCMotor Create (int speedControlPin, int directionPin, System.Device.Gpio.GpioController controller = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.DCMotor.DCMotor Create(int32 speedControlPin, int32 directionPin, class System.Device.Gpio.GpioController controller) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DCMotor.DCMotor.Create(System.Int32,System.Int32,System.Device.Gpio.GpioController)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (speedControlPin As Integer, directionPin As Integer, Optional controller As GpioController = Nothing) As DCMotor" />
+      <MemberSignature Language="F#" Value="static member Create : int * int * System.Device.Gpio.GpioController -&gt; Iot.Device.DCMotor.DCMotor" Usage="Iot.Device.DCMotor.DCMotor.Create (speedControlPin, directionPin, controller)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DCMotor.DCMotor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speedControlPin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="directionPin" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="2" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="speedControlPin">To be added.</param>
+        <param name="directionPin">To be added.</param>
+        <param name="controller">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Iot.Device.DCMotor.DCMotor Create (System.Device.Pwm.PwmChannel speedControlChannel, int directionPin, System.Device.Gpio.GpioController controller = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.DCMotor.DCMotor Create(class System.Device.Pwm.PwmChannel speedControlChannel, int32 directionPin, class System.Device.Gpio.GpioController controller, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DCMotor.DCMotor.Create(System.Device.Pwm.PwmChannel,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (speedControlChannel As PwmChannel, directionPin As Integer, Optional controller As GpioController = Nothing, Optional shouldDispose As Boolean = true) As DCMotor" />
+      <MemberSignature Language="F#" Value="static member Create : System.Device.Pwm.PwmChannel * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.DCMotor.DCMotor" Usage="Iot.Device.DCMotor.DCMotor.Create (speedControlChannel, directionPin, controller, shouldDispose)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DCMotor.DCMotor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speedControlChannel" Type="System.Device.Pwm.PwmChannel" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="directionPin" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="speedControlChannel">
+          <see cref="T:System.Device.Pwm.PwmChannel" /> used to control the speed of the motor</param>
+        <param name="directionPin">Pin used to control the direction of the motor</param>
+        <param name="controller">
+          <see cref="T:System.Device.Gpio.GpioController" /> related to the <paramref name="directionPin" /></param>
+        <param name="shouldDispose">True to dispose the Gpio Controller</param>
+        <summary>
+            Creates <see cref="T:Iot.Device.DCMotor.DCMotor" /> instance which allows to control speed in both directions.
+            </summary>
+        <returns>
+          <see cref="T:Iot.Device.DCMotor.DCMotor" /> instance</returns>
+        <remarks>
+          <paramref name="speedControlChannel" /> can be connected to either enable pin of the H-bridge.
+            or directly to the input related with the motor (if H-bridge allows inputs to change frequently).
+            <paramref name="directionPin" /> should be connected to H-bridge input corresponding to one of the motor inputs.
+            Connecting motor directly to GPIO pin is not recommended and may damage your board.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Iot.Device.DCMotor.DCMotor Create (System.Device.Pwm.PwmChannel speedControlChannel, int directionPin, int otherDirectionPin, System.Device.Gpio.GpioController controller = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.DCMotor.DCMotor Create(class System.Device.Pwm.PwmChannel speedControlChannel, int32 directionPin, int32 otherDirectionPin, class System.Device.Gpio.GpioController controller) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DCMotor.DCMotor.Create(System.Device.Pwm.PwmChannel,System.Int32,System.Int32,System.Device.Gpio.GpioController)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (speedControlChannel As PwmChannel, directionPin As Integer, otherDirectionPin As Integer, Optional controller As GpioController = Nothing) As DCMotor" />
+      <MemberSignature Language="F#" Value="static member Create : System.Device.Pwm.PwmChannel * int * int * System.Device.Gpio.GpioController -&gt; Iot.Device.DCMotor.DCMotor" Usage="Iot.Device.DCMotor.DCMotor.Create (speedControlChannel, directionPin, otherDirectionPin, controller)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DCMotor.DCMotor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speedControlChannel" Type="System.Device.Pwm.PwmChannel" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="directionPin" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="otherDirectionPin" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="3" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="speedControlChannel">To be added.</param>
+        <param name="directionPin">To be added.</param>
+        <param name="otherDirectionPin">To be added.</param>
+        <param name="controller">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Iot.Device.DCMotor.DCMotor Create (int speedControlPin, int directionPin, System.Device.Gpio.GpioController controller = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.DCMotor.DCMotor Create(int32 speedControlPin, int32 directionPin, class System.Device.Gpio.GpioController controller, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DCMotor.DCMotor.Create(System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (speedControlPin As Integer, directionPin As Integer, Optional controller As GpioController = Nothing, Optional shouldDispose As Boolean = true) As DCMotor" />
+      <MemberSignature Language="F#" Value="static member Create : int * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.DCMotor.DCMotor" Usage="Iot.Device.DCMotor.DCMotor.Create (speedControlPin, directionPin, controller, shouldDispose)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DCMotor.DCMotor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speedControlPin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="directionPin" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="speedControlPin">Pin used to control the speed of the motor with software PWM (frequency will default to 50Hz)</param>
+        <param name="directionPin">Pin used to control the direction of the motor</param>
+        <param name="controller">GPIO controller related to <paramref name="speedControlPin" /> and <paramref name="directionPin" /></param>
+        <param name="shouldDispose">True to dispose the Gpio Controller</param>
+        <summary>
+            Creates <see cref="T:Iot.Device.DCMotor.DCMotor" /> instance which allows to control speed in both directions.
+            </summary>
+        <returns>
+          <see cref="T:Iot.Device.DCMotor.DCMotor" /> instance</returns>
+        <remarks>
+            PWM pin <paramref name="speedControlPin" /> can be connected to either enable pin of the H-bridge.
+            or directly to the input related with the motor (if H-bridge allows inputs to change frequently).
+            <paramref name="directionPin" /> should be connected to H-bridge input corresponding to one of the motor inputs.
+            Connecting motor directly to GPIO pin is not recommended and may damage your board.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Iot.Device.DCMotor.DCMotor Create (int speedControlPin, int directionPin, int otherDirectionPin, System.Device.Gpio.GpioController controller = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.DCMotor.DCMotor Create(int32 speedControlPin, int32 directionPin, int32 otherDirectionPin, class System.Device.Gpio.GpioController controller) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DCMotor.DCMotor.Create(System.Int32,System.Int32,System.Int32,System.Device.Gpio.GpioController)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (speedControlPin As Integer, directionPin As Integer, otherDirectionPin As Integer, Optional controller As GpioController = Nothing) As DCMotor" />
+      <MemberSignature Language="F#" Value="static member Create : int * int * int * System.Device.Gpio.GpioController -&gt; Iot.Device.DCMotor.DCMotor" Usage="Iot.Device.DCMotor.DCMotor.Create (speedControlPin, directionPin, otherDirectionPin, controller)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DCMotor.DCMotor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speedControlPin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="directionPin" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="otherDirectionPin" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="3" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="speedControlPin">To be added.</param>
+        <param name="directionPin">To be added.</param>
+        <param name="otherDirectionPin">To be added.</param>
+        <param name="controller">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Iot.Device.DCMotor.DCMotor Create (System.Device.Pwm.PwmChannel speedControlChannel, int directionPin, int otherDirectionPin, System.Device.Gpio.GpioController controller = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.DCMotor.DCMotor Create(class System.Device.Pwm.PwmChannel speedControlChannel, int32 directionPin, int32 otherDirectionPin, class System.Device.Gpio.GpioController controller, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DCMotor.DCMotor.Create(System.Device.Pwm.PwmChannel,System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (speedControlChannel As PwmChannel, directionPin As Integer, otherDirectionPin As Integer, Optional controller As GpioController = Nothing, Optional shouldDispose As Boolean = true) As DCMotor" />
+      <MemberSignature Language="F#" Value="static member Create : System.Device.Pwm.PwmChannel * int * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.DCMotor.DCMotor" Usage="Iot.Device.DCMotor.DCMotor.Create (speedControlChannel, directionPin, otherDirectionPin, controller, shouldDispose)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DCMotor.DCMotor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speedControlChannel" Type="System.Device.Pwm.PwmChannel" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="directionPin" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="otherDirectionPin" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="4" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="speedControlChannel">
+          <see cref="T:System.Device.Pwm.PwmChannel" /> used to control the speed of the motor</param>
+        <param name="directionPin">First pin used to control the direction of the motor</param>
+        <param name="otherDirectionPin">Second pin used to control the direction of the motor</param>
+        <param name="controller">
+          <see cref="T:System.Device.Gpio.GpioController" /> related to <paramref name="directionPin" /> and <paramref name="otherDirectionPin" /></param>
+        <param name="shouldDispose">True to dispose the Gpio Controller</param>
+        <summary>
+            Creates <see cref="T:Iot.Device.DCMotor.DCMotor" /> instance which allows to control speed in both directions.
+            </summary>
+        <returns>
+          <see cref="T:Iot.Device.DCMotor.DCMotor" /> instance</returns>
+        <remarks>
+            When speed is non-zero the value of <paramref name="otherDirectionPin" /> will always be opposite to that of <paramref name="directionPin" />.
+            <paramref name="speedControlChannel" /> should be connected to enable pin of the H-bridge.
+            <paramref name="directionPin" /> should be connected to H-bridge input corresponding to one of the motor inputs.
+            <paramref name="otherDirectionPin" /> should be connected to H-bridge input corresponding to the remaining motor input.
+            Connecting motor directly to GPIO pin is not recommended and may damage your board.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Iot.Device.DCMotor.DCMotor Create (int speedControlPin, int directionPin, int otherDirectionPin, System.Device.Gpio.GpioController controller = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.DCMotor.DCMotor Create(int32 speedControlPin, int32 directionPin, int32 otherDirectionPin, class System.Device.Gpio.GpioController controller, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DCMotor.DCMotor.Create(System.Int32,System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (speedControlPin As Integer, directionPin As Integer, otherDirectionPin As Integer, Optional controller As GpioController = Nothing, Optional shouldDispose As Boolean = true) As DCMotor" />
+      <MemberSignature Language="F#" Value="static member Create : int * int * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.DCMotor.DCMotor" Usage="Iot.Device.DCMotor.DCMotor.Create (speedControlPin, directionPin, otherDirectionPin, controller, shouldDispose)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DCMotor.DCMotor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speedControlPin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="directionPin" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="otherDirectionPin" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="4" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="speedControlPin">Pin used to control the speed of the motor with software PWM (frequency will default to 50Hz)</param>
+        <param name="directionPin">First pin used to control the direction of the motor</param>
+        <param name="otherDirectionPin">Second pin used to control the direction of the motor</param>
+        <param name="controller">
+          <see cref="T:System.Device.Gpio.GpioController" /> related to <paramref name="speedControlPin" />, <paramref name="directionPin" /> and <paramref name="otherDirectionPin" /></param>
+        <param name="shouldDispose">True to dispose the Gpio Controller</param>
+        <summary>
+            Creates <see cref="T:Iot.Device.DCMotor.DCMotor" /> instance which allows to control speed in both directions.
+            </summary>
+        <returns>
+          <see cref="T:Iot.Device.DCMotor.DCMotor" /> instance</returns>
+        <remarks>
+            When speed is non-zero the value of <paramref name="otherDirectionPin" /> will always be opposite to that of <paramref name="directionPin" />
+            PWM pin <paramref name="speedControlPin" /> should be connected to enable pin of the H-bridge.
+            <paramref name="directionPin" /> should be connected to H-bridge input corresponding to one of the motor inputs.
+            <paramref name="otherDirectionPin" /> should be connected to H-bridge input corresponding to the remaining motor input.
+            Connecting motor directly to GPIO pin is not recommended and may damage your board.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DCMotor.DCMotor.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="dCMotor.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disposes the <see cref="T:Iot.Device.DCMotor.DCMotor" /> class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DCMotor.DCMotor.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="dCMotor.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+        <summary>
+            Releases the resources used by the <see cref="T:Iot.Device.DCMotor.DCMotor" /> instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Speed">
+      <MemberSignature Language="C#" Value="public abstract double Speed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Speed" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.DCMotor.DCMotor.Speed" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Speed As Double" />
+      <MemberSignature Language="F#" Value="member this.Speed : double with get, set" Usage="Iot.Device.DCMotor.DCMotor.Speed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the speed of the motor. Range is -1..1 or 0..1 for 1-pin connection.
+            1 means maximum speed, 0 means no movement and -1 means movement in opposite direction.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

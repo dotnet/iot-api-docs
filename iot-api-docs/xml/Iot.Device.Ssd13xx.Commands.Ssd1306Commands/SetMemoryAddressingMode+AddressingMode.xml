@@ -1,0 +1,101 @@
+<Type Name="SetMemoryAddressingMode+AddressingMode" FullName="Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetMemoryAddressingMode+AddressingMode">
+  <TypeSignature Language="C#" Value="public enum SetMemoryAddressingMode.AddressingMode" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed SetMemoryAddressingMode/AddressingMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetMemoryAddressingMode.AddressingMode" />
+  <TypeSignature Language="VB.NET" Value="Public Enum SetMemoryAddressingMode.AddressingMode" />
+  <TypeSignature Language="F#" Value="type SetMemoryAddressingMode.AddressingMode = " />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Addressing mode
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Horizontal">
+      <MemberSignature Language="C#" Value="Horizontal" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetMemoryAddressingMode/AddressingMode Horizontal = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetMemoryAddressingMode.AddressingMode.Horizontal" />
+      <MemberSignature Language="VB.NET" Value="Horizontal" />
+      <MemberSignature Language="F#" Value="Horizontal = 0" Usage="Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetMemoryAddressingMode.AddressingMode.Horizontal" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetMemoryAddressingMode+AddressingMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            In horizontal addressing mode, after the display RAM is read/written, the column address
+            pointer is increased automatically by 1. If the column address pointer reaches column end
+            address, the column address pointer is reset to column start address and page address
+            pointer is increased by 1. When both column and page address pointers reach the end address,
+            the pointers are reset to column start address and page start address.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Page">
+      <MemberSignature Language="C#" Value="Page" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetMemoryAddressingMode/AddressingMode Page = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetMemoryAddressingMode.AddressingMode.Page" />
+      <MemberSignature Language="VB.NET" Value="Page" />
+      <MemberSignature Language="F#" Value="Page = 2" Usage="Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetMemoryAddressingMode.AddressingMode.Page" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetMemoryAddressingMode+AddressingMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            In page addressing mode, after the display RAM is read/written, the column address pointer
+            is increased automatically by 1. If the column address pointer reaches column end address,
+            the column address pointer is reset to column start address and page address pointer is not
+            changed. Users have to set the new page and column addresses in order to access the next
+            page RAM content.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Vertical">
+      <MemberSignature Language="C#" Value="Vertical" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetMemoryAddressingMode/AddressingMode Vertical = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetMemoryAddressingMode.AddressingMode.Vertical" />
+      <MemberSignature Language="VB.NET" Value="Vertical" />
+      <MemberSignature Language="F#" Value="Vertical = 1" Usage="Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetMemoryAddressingMode.AddressingMode.Vertical" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetMemoryAddressingMode+AddressingMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            In vertical addressing mode, after the display RAM is read/written, the page address pointer
+            is increased automatically by 1. If the page address pointer reaches the page end address,
+            the page address pointer is reset to page start address and column address pointer is
+            increased by 1. When both column and page address pointers reach the end address, the
+            pointers are reset to column start address and page start address.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

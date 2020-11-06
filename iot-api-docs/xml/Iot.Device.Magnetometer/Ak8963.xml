@@ -1,0 +1,437 @@
+<Type Name="Ak8963" FullName="Iot.Device.Magnetometer.Ak8963">
+  <TypeSignature Language="C#" Value="public sealed class Ak8963 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Ak8963 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Magnetometer.Ak8963" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Ak8963&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Ak8963 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            AK8963 class implementing a magnetometer
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ak8963 (System.Device.I2c.I2cDevice i2CDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2CDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Magnetometer.Ak8963.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2CDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Magnetometer.Ak8963 : System.Device.I2c.I2cDevice -&gt; Iot.Device.Magnetometer.Ak8963" Usage="new Iot.Device.Magnetometer.Ak8963 i2CDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2CDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2CDevice">The I2C device</param>
+        <summary>
+            Default constructor for an independent AK8963
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ak8963 (System.Device.I2c.I2cDevice i2CDevice, Iot.Device.Magnetometer.Ak8963I2cBase ak8963Interface, bool autoDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2CDevice, class Iot.Device.Magnetometer.Ak8963I2cBase ak8963Interface, bool autoDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Magnetometer.Ak8963.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Magnetometer.Ak8963I2cBase,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2CDevice As I2cDevice, ak8963Interface As Ak8963I2cBase, Optional autoDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Magnetometer.Ak8963 : System.Device.I2c.I2cDevice * Iot.Device.Magnetometer.Ak8963I2cBase * bool -&gt; Iot.Device.Magnetometer.Ak8963" Usage="new Iot.Device.Magnetometer.Ak8963 (i2CDevice, ak8963Interface, autoDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2CDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="ak8963Interface" Type="Iot.Device.Magnetometer.Ak8963I2cBase" />
+        <Parameter Name="autoDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="i2CDevice">The I2C device</param>
+        <param name="ak8963Interface">The specific interface to communicate with the AK8963</param>
+        <param name="autoDispose">True to dispose the I2C device when class is disposed</param>
+        <summary>
+            Constructor to use if AK8963 is behind another element and need a special I2C protocol like
+            when used with the MPU9250
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalibrateMagnetometer">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 CalibrateMagnetometer (int numberOfMeasurements = 1000);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Numerics.Vector3 CalibrateMagnetometer(int32 numberOfMeasurements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Magnetometer.Ak8963.CalibrateMagnetometer(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CalibrateMagnetometer (Optional numberOfMeasurements As Integer = 1000) As Vector3" />
+      <MemberSignature Language="F#" Value="member this.CalibrateMagnetometer : int -&gt; System.Numerics.Vector3" Usage="ak8963.CalibrateMagnetometer numberOfMeasurements" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numberOfMeasurements" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="numberOfMeasurements">Number of measurement for the calibration, default is 1000</param>
+        <summary>
+            Calibrate the magnetometer. Make sure your sensor is as far as possible of magnet
+            Calculate as well the magnetometer bias. Please make sure you are moving the magnetometer all over space, rotating it.
+            Please make sure you are not close to any magnetic field like magnet or phone
+            </summary>
+        <returns>Returns the factory calibration data</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte DefaultI2cAddress = 12;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 DefaultI2cAddress = (12)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Magnetometer.Ak8963.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Byte  = 12" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : byte" Usage="Iot.Device.Magnetometer.Ak8963.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>12</MemberValue>
+      <Docs>
+        <summary>
+            Default I2C address for the AK8963
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Magnetometer.Ak8963.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="ak8963.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Cleanup everything
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDeviceInfo">
+      <MemberSignature Language="C#" Value="public byte GetDeviceInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8 GetDeviceInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Magnetometer.Ak8963.GetDeviceInfo" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetDeviceInfo () As Byte" />
+      <MemberSignature Language="F#" Value="member this.GetDeviceInfo : unit -&gt; byte" Usage="ak8963.GetDeviceInfo " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the device information
+            </summary>
+        <returns>The device information</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDataToRead">
+      <MemberSignature Language="C#" Value="public bool HasDataToRead { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasDataToRead" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Magnetometer.Ak8963.HasDataToRead" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasDataToRead As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasDataToRead : bool" Usage="Iot.Device.Magnetometer.Ak8963.HasDataToRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if there is a data to read
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsVersionCorrect">
+      <MemberSignature Language="C#" Value="public bool IsVersionCorrect ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsVersionCorrect() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Magnetometer.Ak8963.IsVersionCorrect" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsVersionCorrect () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsVersionCorrect : unit -&gt; bool" Usage="ak8963.IsVersionCorrect " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Check if the version is the correct one (0x48). This is fixed for this device
+            Page 28 from the documentation :
+            Device ID of AKM. It is described in one byte and fixed value.  48H: fixed
+            </summary>
+        <returns>Returns true if the version match</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MageneticFieldGeneratorEnabled">
+      <MemberSignature Language="C#" Value="public bool MageneticFieldGeneratorEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MageneticFieldGeneratorEnabled" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Magnetometer.Ak8963.MageneticFieldGeneratorEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property MageneticFieldGeneratorEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.MageneticFieldGeneratorEnabled : bool with get, set" Usage="Iot.Device.Magnetometer.Ak8963.MageneticFieldGeneratorEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary><![CDATA[
+            Get or set the device self test mode.
+            If set to true, this creates a magnetic field
+            Once you read it, you will have the results of the self test
+            14-bit output(BIT=“0”)
+                     | HX[15:0]        | HY[15:0]        | HZ[15:0]
+            Criteria | -50 =< HX =< 50 | -50 =< HY =< 50 | -800 =< HZ =< -200
+            16-bit output(BIT=“1”)
+                     | HX[15:0]          | HY[15:0]          | HZ[15:0]
+            Criteria | -200 =< HX =< 200 | -200 =< HY =< 200 | -3200 =< HZ =< -800
+            ]]></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MagnetometerAdjustment">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 MagnetometerAdjustment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector3 MagnetometerAdjustment" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Magnetometer.Ak8963.MagnetometerAdjustment" />
+      <MemberSignature Language="VB.NET" Value="Public Property MagnetometerAdjustment As Vector3" />
+      <MemberSignature Language="F#" Value="member this.MagnetometerAdjustment : System.Numerics.Vector3 with get, set" Usage="Iot.Device.Magnetometer.Ak8963.MagnetometerAdjustment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the magnetometer hardware adjustment bias
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MagnetometerBias">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 MagnetometerBias { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector3 MagnetometerBias" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Magnetometer.Ak8963.MagnetometerBias" />
+      <MemberSignature Language="VB.NET" Value="Public Property MagnetometerBias As Vector3" />
+      <MemberSignature Language="F#" Value="member this.MagnetometerBias : System.Numerics.Vector3 with get, set" Usage="Iot.Device.Magnetometer.Ak8963.MagnetometerBias" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the magnetometer bias
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasurementMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Magnetometer.MeasurementMode MeasurementMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Magnetometer.MeasurementMode MeasurementMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Magnetometer.Ak8963.MeasurementMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property MeasurementMode As MeasurementMode" />
+      <MemberSignature Language="F#" Value="member this.MeasurementMode : Iot.Device.Magnetometer.MeasurementMode with get, set" Usage="Iot.Device.Magnetometer.Ak8963.MeasurementMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Magnetometer.MeasurementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Select the measurement mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputBitMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Magnetometer.OutputBitMode OutputBitMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Magnetometer.OutputBitMode OutputBitMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Magnetometer.Ak8963.OutputBitMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property OutputBitMode As OutputBitMode" />
+      <MemberSignature Language="F#" Value="member this.OutputBitMode : Iot.Device.Magnetometer.OutputBitMode with get, set" Usage="Iot.Device.Magnetometer.Ak8963.OutputBitMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Magnetometer.OutputBitMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Select the output bit rate
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadMagnetometer">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 ReadMagnetometer (bool waitForData, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Numerics.Vector3 ReadMagnetometer(bool waitForData, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Magnetometer.Ak8963.ReadMagnetometer(System.Boolean,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadMagnetometer (waitForData As Boolean, timeout As TimeSpan) As Vector3" />
+      <MemberSignature Language="F#" Value="member this.ReadMagnetometer : bool * TimeSpan -&gt; System.Numerics.Vector3" Usage="ak8963.ReadMagnetometer (waitForData, timeout)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitForData" Type="System.Boolean" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="waitForData">true to wait for new data</param>
+        <param name="timeout">timeout for waiting the data, ignored if waitForData is false</param>
+        <summary>
+            Read the magnetometer with bias correction and can wait for new data to be present
+            </summary>
+        <returns>The data from the magnetometer</returns>
+        <remarks>
+            Vector axes are the following:
+                    +X
+             \  |  /
+              \ | /
+               \|/
+               /|\
+              / | \
+             /  |  \
+               +Z   +Y
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadMagnetometerWithoutCorrection">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 ReadMagnetometerWithoutCorrection (bool waitForData, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Numerics.Vector3 ReadMagnetometerWithoutCorrection(bool waitForData, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Magnetometer.Ak8963.ReadMagnetometerWithoutCorrection(System.Boolean,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadMagnetometerWithoutCorrection (waitForData As Boolean, timeout As TimeSpan) As Vector3" />
+      <MemberSignature Language="F#" Value="member this.ReadMagnetometerWithoutCorrection : bool * TimeSpan -&gt; System.Numerics.Vector3" Usage="ak8963.ReadMagnetometerWithoutCorrection (waitForData, timeout)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitForData" Type="System.Boolean" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="waitForData">true to wait for new data</param>
+        <param name="timeout">timeout for waiting the data, ignored if waitForData is false</param>
+        <summary>
+            Read the magnetometer without Bias correction and can wait for new data to be present
+            </summary>
+        <returns>The data from the magnetometer</returns>
+        <remarks>
+            Vector axes are the following:
+                    +X
+             \  |  /
+              \ | /
+               \|/
+               /|\
+              / | \
+             /  |  \
+               +Z   +Y
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Magnetometer.Ak8963.Reset" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Reset ()" />
+      <MemberSignature Language="F#" Value="member this.Reset : unit -&gt; unit" Usage="ak8963.Reset " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reset the device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

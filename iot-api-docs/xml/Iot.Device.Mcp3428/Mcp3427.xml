@@ -1,0 +1,105 @@
+<Type Name="Mcp3427" FullName="Iot.Device.Mcp3428.Mcp3427">
+  <TypeSignature Language="C#" Value="public class Mcp3427 : Iot.Device.Mcp3428.Mcp342x" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Mcp3427 extends Iot.Device.Mcp3428.Mcp342x" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mcp3428.Mcp3427" />
+  <TypeSignature Language="VB.NET" Value="Public Class Mcp3427&#xA;Inherits Mcp342x" />
+  <TypeSignature Language="F#" Value="type Mcp3427 = class&#xA;    inherit Mcp342x" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Mcp3428.Mcp342x</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents MCP3427 ADC
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Mcp3427 (System.Device.I2c.I2cDevice i2CDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2CDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp3428.Mcp3427.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2CDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp3428.Mcp3427 : System.Device.I2c.I2cDevice -&gt; Iot.Device.Mcp3428.Mcp3427" Usage="new Iot.Device.Mcp3428.Mcp3427 i2CDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2CDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2CDevice">I2C device used to communicate with the device</param>
+        <summary>
+            Constructs Mcp3427 instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Mcp3427 (System.Device.I2c.I2cDevice i2CDevice, Iot.Device.Mcp3428.AdcMode mode = Iot.Device.Mcp3428.AdcMode.Continuous, Iot.Device.Mcp3428.AdcResolution resolution = Iot.Device.Mcp3428.AdcResolution.Bit12, Iot.Device.Mcp3428.AdcGain pgaGain = Iot.Device.Mcp3428.AdcGain.X1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2CDevice, valuetype Iot.Device.Mcp3428.AdcMode mode, valuetype Iot.Device.Mcp3428.AdcResolution resolution, valuetype Iot.Device.Mcp3428.AdcGain pgaGain) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp3428.Mcp3427.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Mcp3428.AdcMode,Iot.Device.Mcp3428.AdcResolution,Iot.Device.Mcp3428.AdcGain)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2CDevice As I2cDevice, Optional mode As AdcMode = Iot.Device.Mcp3428.AdcMode.Continuous, Optional resolution As AdcResolution = Iot.Device.Mcp3428.AdcResolution.Bit12, Optional pgaGain As AdcGain = Iot.Device.Mcp3428.AdcGain.X1)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp3428.Mcp3427 : System.Device.I2c.I2cDevice * Iot.Device.Mcp3428.AdcMode * Iot.Device.Mcp3428.AdcResolution * Iot.Device.Mcp3428.AdcGain -&gt; Iot.Device.Mcp3428.Mcp3427" Usage="new Iot.Device.Mcp3428.Mcp3427 (i2CDevice, mode, resolution, pgaGain)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2CDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="mode" Type="Iot.Device.Mcp3428.AdcMode" />
+        <Parameter Name="resolution" Type="Iot.Device.Mcp3428.AdcResolution" />
+        <Parameter Name="pgaGain" Type="Iot.Device.Mcp3428.AdcGain" />
+      </Parameters>
+      <Docs>
+        <param name="i2CDevice">I2C device used to communicate with the device</param>
+        <param name="mode">ADC operation mode</param>
+        <param name="resolution">ADC resolution</param>
+        <param name="pgaGain">PGA gain</param>
+        <summary>
+            Constructs Mcp3427 instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="I2CAddressFromPins">
+      <MemberSignature Language="C#" Value="public static int I2CAddressFromPins (Iot.Device.Mcp3428.PinState adr0, Iot.Device.Mcp3428.PinState adr1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 I2CAddressFromPins(valuetype Iot.Device.Mcp3428.PinState adr0, valuetype Iot.Device.Mcp3428.PinState adr1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp3428.Mcp3427.I2CAddressFromPins(Iot.Device.Mcp3428.PinState,Iot.Device.Mcp3428.PinState)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function I2CAddressFromPins (adr0 As PinState, adr1 As PinState) As Integer" />
+      <MemberSignature Language="F#" Value="static member I2CAddressFromPins : Iot.Device.Mcp3428.PinState * Iot.Device.Mcp3428.PinState -&gt; int" Usage="Iot.Device.Mcp3428.Mcp3427.I2CAddressFromPins (adr0, adr1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="adr0" Type="Iot.Device.Mcp3428.PinState" />
+        <Parameter Name="adr1" Type="Iot.Device.Mcp3428.PinState" />
+      </Parameters>
+      <Docs>
+        <param name="adr0">The adr0 pin state</param>
+        <param name="adr1">The adr1 pin state</param>
+        <summary>
+            Determine device I2C address based on the configuration pin states.
+            </summary>
+        <returns>System.Int32.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

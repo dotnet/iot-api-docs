@@ -1,0 +1,99 @@
+<Type Name="Pcx8574" FullName="Iot.Device.Pcx857x.Pcx8574">
+  <TypeSignature Language="C#" Value="public abstract class Pcx8574 : Iot.Device.Pcx857x.Pcx857x" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Pcx8574 extends Iot.Device.Pcx857x.Pcx857x" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Pcx857x.Pcx8574" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Pcx8574&#xA;Inherits Pcx857x" />
+  <TypeSignature Language="F#" Value="type Pcx8574 = class&#xA;    inherit Pcx857x" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Pcx857x.Pcx857x</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base class for 8 bit I/O expanders.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pcx8574 (System.Device.I2c.I2cDevice device, int interrupt = -1, System.Device.Gpio.GpioController gpioController = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice device, int32 interrupt, class System.Device.Gpio.GpioController gpioController) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pcx857x.Pcx8574.#ctor(System.Device.I2c.I2cDevice,System.Int32,System.Device.Gpio.GpioController)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (device As I2cDevice, Optional interrupt As Integer = -1, Optional gpioController As GpioController = Nothing)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Pcx857x.Pcx8574 : System.Device.I2c.I2cDevice * int * System.Device.Gpio.GpioController -&gt; Iot.Device.Pcx857x.Pcx8574" Usage="new Iot.Device.Pcx857x.Pcx8574 (device, interrupt, gpioController)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="device" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="interrupt" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" Index="2" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="device">To be added.</param>
+        <param name="interrupt">To be added.</param>
+        <param name="gpioController">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pcx8574 (System.Device.I2c.I2cDevice device, int interrupt = -1, System.Device.Gpio.GpioController gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice device, int32 interrupt, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pcx857x.Pcx8574.#ctor(System.Device.I2c.I2cDevice,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (device As I2cDevice, Optional interrupt As Integer = -1, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Pcx857x.Pcx8574 : System.Device.I2c.I2cDevice * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Pcx857x.Pcx8574" Usage="new Iot.Device.Pcx857x.Pcx8574 (device, interrupt, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="device" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="interrupt" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="device">I2C device</param>
+        <param name="interrupt">Interrupt pin</param>
+        <param name="gpioController">
+          <see cref="T:System.Device.Gpio.GpioController" /> related with <paramref name="interrupt" /> pin</param>
+        <param name="shouldDispose">True to dispose the Gpio Controller</param>
+        <summary>
+            Constructs Pcx8574 instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PinCount">
+      <MemberSignature Language="C#" Value="protected override int PinCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PinCount" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pcx857x.Pcx8574.PinCount" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property PinCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.PinCount : int" Usage="Iot.Device.Pcx857x.Pcx8574.PinCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

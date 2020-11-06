@@ -1,0 +1,149 @@
+<Type Name="Pcx8575" FullName="Iot.Device.Pcx857x.Pcx8575">
+  <TypeSignature Language="C#" Value="public abstract class Pcx8575 : Iot.Device.Pcx857x.Pcx857x" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Pcx8575 extends Iot.Device.Pcx857x.Pcx857x" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Pcx857x.Pcx8575" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Pcx8575&#xA;Inherits Pcx857x" />
+  <TypeSignature Language="F#" Value="type Pcx8575 = class&#xA;    inherit Pcx857x" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Pcx857x.Pcx857x</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base class for 16 bit I/O expanders.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pcx8575 (System.Device.I2c.I2cDevice device, int interrupt = -1, System.Device.Gpio.GpioController gpioController = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice device, int32 interrupt, class System.Device.Gpio.GpioController gpioController) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pcx857x.Pcx8575.#ctor(System.Device.I2c.I2cDevice,System.Int32,System.Device.Gpio.GpioController)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (device As I2cDevice, Optional interrupt As Integer = -1, Optional gpioController As GpioController = Nothing)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Pcx857x.Pcx8575 : System.Device.I2c.I2cDevice * int * System.Device.Gpio.GpioController -&gt; Iot.Device.Pcx857x.Pcx8575" Usage="new Iot.Device.Pcx857x.Pcx8575 (device, interrupt, gpioController)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="device" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="interrupt" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" Index="2" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="device">To be added.</param>
+        <param name="interrupt">To be added.</param>
+        <param name="gpioController">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pcx8575 (System.Device.I2c.I2cDevice device, int interrupt = -1, System.Device.Gpio.GpioController gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice device, int32 interrupt, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pcx857x.Pcx8575.#ctor(System.Device.I2c.I2cDevice,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (device As I2cDevice, Optional interrupt As Integer = -1, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Pcx857x.Pcx8575 : System.Device.I2c.I2cDevice * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Pcx857x.Pcx8575" Usage="new Iot.Device.Pcx857x.Pcx8575 (device, interrupt, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="device" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="interrupt" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="device">I2C device</param>
+        <param name="interrupt">Interrupt pin</param>
+        <param name="gpioController">
+          <see cref="T:System.Device.Gpio.GpioController" /> related with <paramref name="interrupt" /> pin</param>
+        <param name="shouldDispose">True to dispose the Gpio Controller</param>
+        <summary>
+            Constructs Pcx8575 instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PinCount">
+      <MemberSignature Language="C#" Value="protected override int PinCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PinCount" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pcx857x.Pcx8575.PinCount" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property PinCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.PinCount : int" Usage="Iot.Device.Pcx857x.Pcx8575.PinCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadUInt16">
+      <MemberSignature Language="C#" Value="public ushort ReadUInt16 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int16 ReadUInt16() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pcx857x.Pcx8575.ReadUInt16" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadUInt16 () As UShort" />
+      <MemberSignature Language="F#" Value="member this.ReadUInt16 : unit -&gt; uint16" Usage="pcx8575.ReadUInt16 " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reads 16-bit unsigned integer from the device
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteUInt16">
+      <MemberSignature Language="C#" Value="public void WriteUInt16 (ushort value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteUInt16(unsigned int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pcx857x.Pcx8575.WriteUInt16(System.UInt16)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteUInt16 (value As UShort)" />
+      <MemberSignature Language="F#" Value="member this.WriteUInt16 : uint16 -&gt; unit" Usage="pcx8575.WriteUInt16 value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="value">16-bit unsigned value to be written</param>
+        <summary>
+            Writes 16-bit unsigned integer to the device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

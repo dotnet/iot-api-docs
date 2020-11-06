@@ -1,0 +1,161 @@
+<Type Name="SetColumnAddress" FullName="Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetColumnAddress">
+  <TypeSignature Language="C#" Value="public class SetColumnAddress : Iot.Device.Ssd13xx.Commands.ISsd1306Command" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SetColumnAddress extends System.Object implements class Iot.Device.Ssd13xx.Commands.ICommand, class Iot.Device.Ssd13xx.Commands.ISsd1306Command" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetColumnAddress" />
+  <TypeSignature Language="VB.NET" Value="Public Class SetColumnAddress&#xA;Implements ISsd1306Command" />
+  <TypeSignature Language="F#" Value="type SetColumnAddress = class&#xA;    interface ISsd1306Command&#xA;    interface ICommand" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Ssd13xx.Commands.ICommand</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Iot.Device.Ssd13xx.Commands.ISsd1306Command</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents SetColumnAddress
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SetColumnAddress (byte startAddress = 0, byte endAddress = 127);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 startAddress, unsigned int8 endAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetColumnAddress.#ctor(System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional startAddress As Byte = 0, Optional endAddress As Byte = 127)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetColumnAddress : byte * byte -&gt; Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetColumnAddress" Usage="new Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetColumnAddress (startAddress, endAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="startAddress" Type="System.Byte" />
+        <Parameter Name="endAddress" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="startAddress">Column start address with a range of 0-127.</param>
+        <param name="endAddress">Column end address with a range of 0-127.</param>
+        <summary>
+            This triple byte command specifies column start address and end address of the display data RAM.
+            This command also sets the column address pointer to column start address. This pointer is used
+            to define the current read/write column address in graphic display data RAM. If horizontal address
+            increment mode is enabled by command 20h, after finishing read/write one column data, it is
+            incremented automatically to the next column address. Whenever the column address pointer finishes
+            accessing the end column address, it is reset back to start column address and the row address
+            is incremented to the next row.  This command is only for horizontal or vertical addressing modes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAddress">
+      <MemberSignature Language="C#" Value="public byte EndAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 EndAddress" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetColumnAddress.EndAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Property EndAddress As Byte" />
+      <MemberSignature Language="F#" Value="member this.EndAddress : byte with get, set" Usage="Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetColumnAddress.EndAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Column end address with a range of 0-127.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public byte[] GetBytes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GetBytes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetColumnAddress.GetBytes" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetBytes () As Byte()" />
+      <MemberSignature Language="F#" Value="abstract member GetBytes : unit -&gt; byte[]&#xA;override this.GetBytes : unit -&gt; byte[]" Usage="setColumnAddress.GetBytes " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Ssd13xx.Commands.ICommand.GetBytes</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the bytes that represent the command.
+            </summary>
+        <returns>The bytes that represent the command.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public byte Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetColumnAddress.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As Byte" />
+      <MemberSignature Language="F#" Value="member this.Id : byte" Usage="Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetColumnAddress.Id" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Ssd13xx.Commands.ICommand.Id</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The value that represents the command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartAddress">
+      <MemberSignature Language="C#" Value="public byte StartAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 StartAddress" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetColumnAddress.StartAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Property StartAddress As Byte" />
+      <MemberSignature Language="F#" Value="member this.StartAddress : byte with get, set" Usage="Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetColumnAddress.StartAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Column start address with a range of 0-127.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

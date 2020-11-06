@@ -1,0 +1,122 @@
+<Type Name="Mcp23xxx+I2cAdapter" FullName="Iot.Device.Mcp23xxx.Mcp23xxx+I2cAdapter">
+  <TypeSignature Language="C#" Value="protected class Mcp23xxx.I2cAdapter : Iot.Device.Mcp23xxx.Mcp23xxx.BusAdapter" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi beforefieldinit Mcp23xxx/I2cAdapter extends Iot.Device.Mcp23xxx.Mcp23xxx/BusAdapter" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mcp23xxx.Mcp23xxx.I2cAdapter" />
+  <TypeSignature Language="VB.NET" Value="Protected Class Mcp23xxx.I2cAdapter&#xA;Inherits Mcp23xxx.BusAdapter" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Mcp23xxx.Mcp23xxx+BusAdapter</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            I2C adapter
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public I2cAdapter (System.Device.I2c.I2cDevice device);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice device) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.I2cAdapter.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (device As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp23xxx.Mcp23xxx.I2cAdapter : System.Device.I2c.I2cDevice -&gt; Iot.Device.Mcp23xxx.Mcp23xxx.I2cAdapter" Usage="new Iot.Device.Mcp23xxx.Mcp23xxx.I2cAdapter device" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="device" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="device">I2C device</param>
+        <summary>
+            Constructs I2cAdapter instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public override void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.I2cAdapter.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="override this.Dispose : unit -&gt; unit" Usage="i2cAdapter.Dispose " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public override void Read (byte registerAddress, Span&lt;byte&gt; buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Read(unsigned int8 registerAddress, valuetype System.Span`1&lt;unsigned int8&gt; buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.I2cAdapter.Read(System.Byte,System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub Read (registerAddress As Byte, buffer As Span(Of Byte))" />
+      <MemberSignature Language="F#" Value="override this.Read : byte * Span&lt;byte&gt; -&gt; unit" Usage="i2cAdapter.Read (registerAddress, buffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="registerAddress" Type="System.Byte" />
+        <Parameter Name="buffer" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="registerAddress">To be added.</param>
+        <param name="buffer">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public override void Write (byte registerAddress, Span&lt;byte&gt; data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void Write(unsigned int8 registerAddress, valuetype System.Span`1&lt;unsigned int8&gt; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.I2cAdapter.Write(System.Byte,System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub Write (registerAddress As Byte, data As Span(Of Byte))" />
+      <MemberSignature Language="F#" Value="override this.Write : byte * Span&lt;byte&gt; -&gt; unit" Usage="i2cAdapter.Write (registerAddress, data)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="registerAddress" Type="System.Byte" />
+        <Parameter Name="data" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="registerAddress">To be added.</param>
+        <param name="data">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,825 @@
+<Type Name="Mcp23xxx" FullName="Iot.Device.Mcp23xxx.Mcp23xxx">
+  <TypeSignature Language="C#" Value="public abstract class Mcp23xxx : System.Device.Gpio.GpioDriver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Mcp23xxx extends System.Device.Gpio.GpioDriver" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mcp23xxx.Mcp23xxx" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Mcp23xxx&#xA;Inherits GpioDriver" />
+  <TypeSignature Language="F#" Value="type Mcp23xxx = class&#xA;    inherit GpioDriver" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Device.Gpio.GpioDriver</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base class for Mcp23xxx GPIO expanders
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Mcp23xxx (Iot.Device.Mcp23xxx.Mcp23xxx.BusAdapter bus, int reset = -1, int interruptA = -1, int interruptB = -1, System.Device.Gpio.GpioController masterController = default, Iot.Device.Mcp23xxx.BankStyle bankStyle = Iot.Device.Mcp23xxx.BankStyle.Sequential);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Mcp23xxx.Mcp23xxx/BusAdapter bus, int32 reset, int32 interruptA, int32 interruptB, class System.Device.Gpio.GpioController masterController, valuetype Iot.Device.Mcp23xxx.BankStyle bankStyle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.#ctor(Iot.Device.Mcp23xxx.Mcp23xxx.BusAdapter,System.Int32,System.Int32,System.Int32,System.Device.Gpio.GpioController,Iot.Device.Mcp23xxx.BankStyle)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (bus As Mcp23xxx.BusAdapter, Optional reset As Integer = -1, Optional interruptA As Integer = -1, Optional interruptB As Integer = -1, Optional masterController As GpioController = Nothing, Optional bankStyle As BankStyle = Iot.Device.Mcp23xxx.BankStyle.Sequential)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp23xxx.Mcp23xxx : Iot.Device.Mcp23xxx.Mcp23xxx.BusAdapter * int * int * int * System.Device.Gpio.GpioController * Iot.Device.Mcp23xxx.BankStyle -&gt; Iot.Device.Mcp23xxx.Mcp23xxx" Usage="new Iot.Device.Mcp23xxx.Mcp23xxx (bus, reset, interruptA, interruptB, masterController, bankStyle)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bus" Type="Iot.Device.Mcp23xxx.Mcp23xxx+BusAdapter" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="reset" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="interruptA" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="interruptB" Type="System.Int32" Index="3" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="masterController" Type="System.Device.Gpio.GpioController" Index="4" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="bankStyle" Type="Iot.Device.Mcp23xxx.BankStyle" Index="5" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="bus">To be added.</param>
+        <param name="reset">To be added.</param>
+        <param name="interruptA">To be added.</param>
+        <param name="interruptB">To be added.</param>
+        <param name="masterController">To be added.</param>
+        <param name="bankStyle">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Mcp23xxx (Iot.Device.Mcp23xxx.Mcp23xxx.BusAdapter bus, int reset = -1, int interruptA = -1, int interruptB = -1, System.Device.Gpio.GpioController masterController = default, Iot.Device.Mcp23xxx.BankStyle bankStyle = Iot.Device.Mcp23xxx.BankStyle.Sequential, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Mcp23xxx.Mcp23xxx/BusAdapter bus, int32 reset, int32 interruptA, int32 interruptB, class System.Device.Gpio.GpioController masterController, valuetype Iot.Device.Mcp23xxx.BankStyle bankStyle, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.#ctor(Iot.Device.Mcp23xxx.Mcp23xxx.BusAdapter,System.Int32,System.Int32,System.Int32,System.Device.Gpio.GpioController,Iot.Device.Mcp23xxx.BankStyle,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (bus As Mcp23xxx.BusAdapter, Optional reset As Integer = -1, Optional interruptA As Integer = -1, Optional interruptB As Integer = -1, Optional masterController As GpioController = Nothing, Optional bankStyle As BankStyle = Iot.Device.Mcp23xxx.BankStyle.Sequential, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp23xxx.Mcp23xxx : Iot.Device.Mcp23xxx.Mcp23xxx.BusAdapter * int * int * int * System.Device.Gpio.GpioController * Iot.Device.Mcp23xxx.BankStyle * bool -&gt; Iot.Device.Mcp23xxx.Mcp23xxx" Usage="new Iot.Device.Mcp23xxx.Mcp23xxx (bus, reset, interruptA, interruptB, masterController, bankStyle, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bus" Type="Iot.Device.Mcp23xxx.Mcp23xxx+BusAdapter" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="reset" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="interruptA" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="interruptB" Type="System.Int32" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="masterController" Type="System.Device.Gpio.GpioController" Index="4" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="bankStyle" Type="Iot.Device.Mcp23xxx.BankStyle" Index="5" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="6" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="bus">The bus the device is connected to.</param>
+        <param name="reset">The output pin number that is connected to the hardware reset.</param>
+        <param name="interruptA">The input pin number that is connected to the interrupt for Port A (INTA).</param>
+        <param name="interruptB">The input pin number that is connected to the interrupt for Port B (INTB).</param>
+        <param name="masterController">
+            The controller for the reset and interrupt pins. If not specified, the default controller will be used.
+            </param>
+        <param name="bankStyle">
+            The current bank style of the ports. This does not set the bank style- it tells us what the bank style is.
+            It is *highly* recommended not to change the bank style from the default as there is no direct way to
+            detect what style the chip is in and most apps will fail if the chip is not set to defaults. This setting
+            has no impact on 8-bit expanders.
+            </param>
+        <param name="shouldDispose">True to dispose the Gpio Controller</param>
+        <summary>
+            A general purpose parallel I/O expansion for I2C or SPI applications.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_bus">
+      <MemberSignature Language="C#" Value="protected Iot.Device.Mcp23xxx.Mcp23xxx.BusAdapter _bus;" />
+      <MemberSignature Language="ILAsm" Value=".field family class Iot.Device.Mcp23xxx.Mcp23xxx/BusAdapter _bus" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Mcp23xxx.Mcp23xxx._bus" />
+      <MemberSignature Language="VB.NET" Value="Protected _bus As Mcp23xxx.BusAdapter " />
+      <MemberSignature Language="F#" Value="val mutable _bus : Iot.Device.Mcp23xxx.Mcp23xxx.BusAdapter" Usage="Iot.Device.Mcp23xxx.Mcp23xxx._bus" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp23xxx.Mcp23xxx+BusAdapter</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Bus adapter (I2C/SPI) used to communicate with the device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddCallbackForPinValueChangedEvent">
+      <MemberSignature Language="C#" Value="protected override void AddCallbackForPinValueChangedEvent (int pinNumber, System.Device.Gpio.PinEventTypes eventTypes, System.Device.Gpio.PinChangeEventHandler callback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void AddCallbackForPinValueChangedEvent(int32 pinNumber, valuetype System.Device.Gpio.PinEventTypes eventTypes, class System.Device.Gpio.PinChangeEventHandler callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.AddCallbackForPinValueChangedEvent(System.Int32,System.Device.Gpio.PinEventTypes,System.Device.Gpio.PinChangeEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub AddCallbackForPinValueChangedEvent (pinNumber As Integer, eventTypes As PinEventTypes, callback As PinChangeEventHandler)" />
+      <MemberSignature Language="F#" Value="override this.AddCallbackForPinValueChangedEvent : int * System.Device.Gpio.PinEventTypes * System.Device.Gpio.PinChangeEventHandler -&gt; unit" Usage="mcp23xxx.AddCallbackForPinValueChangedEvent (pinNumber, eventTypes, callback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="eventTypes" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="callback" Type="System.Device.Gpio.PinChangeEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="eventTypes">To be added.</param>
+        <param name="callback">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ClosePin">
+      <MemberSignature Language="C#" Value="protected override void ClosePin (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ClosePin(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.ClosePin(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ClosePin (pinNumber As Integer)" />
+      <MemberSignature Language="F#" Value="override this.ClosePin : int -&gt; unit" Usage="mcp23xxx.ClosePin pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertPinNumberToLogicalNumberingScheme">
+      <MemberSignature Language="C#" Value="protected override int ConvertPinNumberToLogicalNumberingScheme (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance int32 ConvertPinNumberToLogicalNumberingScheme(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.ConvertPinNumberToLogicalNumberingScheme(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function ConvertPinNumberToLogicalNumberingScheme (pinNumber As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="override this.ConvertPinNumberToLogicalNumberingScheme : int -&gt; int" Usage="mcp23xxx.ConvertPinNumberToLogicalNumberingScheme pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Disable">
+      <MemberSignature Language="C#" Value="public void Disable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Disable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.Disable" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Disable ()" />
+      <MemberSignature Language="F#" Value="member this.Disable : unit -&gt; unit" Usage="mcp23xxx.Disable " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disables the device by setting the reset pin low.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="mcp23xxx.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Enable">
+      <MemberSignature Language="C#" Value="public void Enable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Enable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.Enable" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Enable ()" />
+      <MemberSignature Language="F#" Value="member this.Enable : unit -&gt; unit" Usage="mcp23xxx.Enable " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Enables the device by setting the reset pin high.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPinMode">
+      <MemberSignature Language="C#" Value="protected override System.Device.Gpio.PinMode GetPinMode (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Device.Gpio.PinMode GetPinMode(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.GetPinMode(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function GetPinMode (pinNumber As Integer) As PinMode" />
+      <MemberSignature Language="F#" Value="override this.GetPinMode : int -&gt; System.Device.Gpio.PinMode" Usage="mcp23xxx.GetPinMode pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="InternalRead">
+      <MemberSignature Language="C#" Value="protected void InternalRead (Iot.Device.Mcp23xxx.Register register, Span&lt;byte&gt; buffer, Iot.Device.Mcp23xxx.Port port);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InternalRead(valuetype Iot.Device.Mcp23xxx.Register register, valuetype System.Span`1&lt;unsigned int8&gt; buffer, valuetype Iot.Device.Mcp23xxx.Port port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.InternalRead(Iot.Device.Mcp23xxx.Register,System.Span{System.Byte},Iot.Device.Mcp23xxx.Port)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub InternalRead (register As Register, buffer As Span(Of Byte), port As Port)" />
+      <MemberSignature Language="F#" Value="member this.InternalRead : Iot.Device.Mcp23xxx.Register * Span&lt;byte&gt; * Iot.Device.Mcp23xxx.Port -&gt; unit" Usage="mcp23xxx.InternalRead (register, buffer, port)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="register" Type="Iot.Device.Mcp23xxx.Register" />
+        <Parameter Name="buffer" Type="System.Span&lt;System.Byte&gt;" />
+        <Parameter Name="port" Type="Iot.Device.Mcp23xxx.Port" />
+      </Parameters>
+      <Docs>
+        <param name="register">The register to read from.</param>
+        <param name="buffer">The buffer to read bytes into.</param>
+        <param name="port">The I/O port used with the register.</param>
+        <summary>
+            Reads a number of bytes from registers.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalReadByte">
+      <MemberSignature Language="C#" Value="protected byte InternalReadByte (Iot.Device.Mcp23xxx.Register register, Iot.Device.Mcp23xxx.Port port);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance unsigned int8 InternalReadByte(valuetype Iot.Device.Mcp23xxx.Register register, valuetype Iot.Device.Mcp23xxx.Port port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.InternalReadByte(Iot.Device.Mcp23xxx.Register,Iot.Device.Mcp23xxx.Port)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function InternalReadByte (register As Register, port As Port) As Byte" />
+      <MemberSignature Language="F#" Value="member this.InternalReadByte : Iot.Device.Mcp23xxx.Register * Iot.Device.Mcp23xxx.Port -&gt; byte" Usage="mcp23xxx.InternalReadByte (register, port)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="register" Type="Iot.Device.Mcp23xxx.Register" />
+        <Parameter Name="port" Type="Iot.Device.Mcp23xxx.Port" />
+      </Parameters>
+      <Docs>
+        <param name="register">Register to read the value from</param>
+        <param name="port">Port related with the <paramref name="register" /></param>
+        <summary>
+            Reads byte from the device register
+            </summary>
+        <returns>Byte read from the device register</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalReadInterrupt">
+      <MemberSignature Language="C#" Value="protected System.Device.Gpio.PinValue InternalReadInterrupt (Iot.Device.Mcp23xxx.Port port);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype System.Device.Gpio.PinValue InternalReadInterrupt(valuetype Iot.Device.Mcp23xxx.Port port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.InternalReadInterrupt(Iot.Device.Mcp23xxx.Port)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function InternalReadInterrupt (port As Port) As PinValue" />
+      <MemberSignature Language="F#" Value="member this.InternalReadInterrupt : Iot.Device.Mcp23xxx.Port -&gt; System.Device.Gpio.PinValue" Usage="mcp23xxx.InternalReadInterrupt port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.Mcp23xxx.Port" />
+      </Parameters>
+      <Docs>
+        <param name="port">Port to read interrupt on</param>
+        <summary>
+            Reads interrupt value
+            </summary>
+        <returns>Value of intterupt pin</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalReadUInt16">
+      <MemberSignature Language="C#" Value="protected ushort InternalReadUInt16 (Iot.Device.Mcp23xxx.Register register);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance unsigned int16 InternalReadUInt16(valuetype Iot.Device.Mcp23xxx.Register register) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.InternalReadUInt16(Iot.Device.Mcp23xxx.Register)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function InternalReadUInt16 (register As Register) As UShort" />
+      <MemberSignature Language="F#" Value="member this.InternalReadUInt16 : Iot.Device.Mcp23xxx.Register -&gt; uint16" Usage="mcp23xxx.InternalReadUInt16 register" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="register" Type="Iot.Device.Mcp23xxx.Register" />
+      </Parameters>
+      <Docs>
+        <param name="register">Register to read the value from</param>
+        <summary>
+            Read 16-bit unsigned integer from the device register
+            </summary>
+        <returns>16-bit unsigned integer read from the device</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalWrite">
+      <MemberSignature Language="C#" Value="protected void InternalWrite (Iot.Device.Mcp23xxx.Register register, Span&lt;byte&gt; data, Iot.Device.Mcp23xxx.Port port);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InternalWrite(valuetype Iot.Device.Mcp23xxx.Register register, valuetype System.Span`1&lt;unsigned int8&gt; data, valuetype Iot.Device.Mcp23xxx.Port port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.InternalWrite(Iot.Device.Mcp23xxx.Register,System.Span{System.Byte},Iot.Device.Mcp23xxx.Port)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub InternalWrite (register As Register, data As Span(Of Byte), port As Port)" />
+      <MemberSignature Language="F#" Value="member this.InternalWrite : Iot.Device.Mcp23xxx.Register * Span&lt;byte&gt; * Iot.Device.Mcp23xxx.Port -&gt; unit" Usage="mcp23xxx.InternalWrite (register, data, port)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="register" Type="Iot.Device.Mcp23xxx.Register" />
+        <Parameter Name="data" Type="System.Span&lt;System.Byte&gt;" />
+        <Parameter Name="port" Type="Iot.Device.Mcp23xxx.Port" />
+      </Parameters>
+      <Docs>
+        <param name="register">The register address to write to.</param>
+        <param name="data">The data to write to the registers.</param>
+        <param name="port">The I/O port used with the registers.</param>
+        <summary>
+            Writes a number of bytes to registers.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalWriteByte">
+      <MemberSignature Language="C#" Value="protected void InternalWriteByte (Iot.Device.Mcp23xxx.Register register, byte value, Iot.Device.Mcp23xxx.Port port);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InternalWriteByte(valuetype Iot.Device.Mcp23xxx.Register register, unsigned int8 value, valuetype Iot.Device.Mcp23xxx.Port port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.InternalWriteByte(Iot.Device.Mcp23xxx.Register,System.Byte,Iot.Device.Mcp23xxx.Port)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub InternalWriteByte (register As Register, value As Byte, port As Port)" />
+      <MemberSignature Language="F#" Value="member this.InternalWriteByte : Iot.Device.Mcp23xxx.Register * byte * Iot.Device.Mcp23xxx.Port -&gt; unit" Usage="mcp23xxx.InternalWriteByte (register, value, port)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="register" Type="Iot.Device.Mcp23xxx.Register" />
+        <Parameter Name="value" Type="System.Byte" />
+        <Parameter Name="port" Type="Iot.Device.Mcp23xxx.Port" />
+      </Parameters>
+      <Docs>
+        <param name="register">Register to write the value to</param>
+        <param name="value">Value to be written to the <paramref name="register" /></param>
+        <param name="port">Port related with the <paramref name="register" /></param>
+        <summary>
+            Write byte to device register
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InternalWriteUInt16">
+      <MemberSignature Language="C#" Value="protected void InternalWriteUInt16 (Iot.Device.Mcp23xxx.Register register, ushort value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void InternalWriteUInt16(valuetype Iot.Device.Mcp23xxx.Register register, unsigned int16 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.InternalWriteUInt16(Iot.Device.Mcp23xxx.Register,System.UInt16)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub InternalWriteUInt16 (register As Register, value As UShort)" />
+      <MemberSignature Language="F#" Value="member this.InternalWriteUInt16 : Iot.Device.Mcp23xxx.Register * uint16 -&gt; unit" Usage="mcp23xxx.InternalWriteUInt16 (register, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="register" Type="Iot.Device.Mcp23xxx.Register" />
+        <Parameter Name="value" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="register">Register to write <paramref name="value" /> to</param>
+        <param name="value">16-bit unsigned integer to write to the <paramref name="register" /></param>
+        <summary>
+            Writes 16-bit unsigned integer to the device register
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPinModeSupported">
+      <MemberSignature Language="C#" Value="protected override bool IsPinModeSupported (int pinNumber, System.Device.Gpio.PinMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool IsPinModeSupported(int32 pinNumber, valuetype System.Device.Gpio.PinMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.IsPinModeSupported(System.Int32,System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function IsPinModeSupported (pinNumber As Integer, mode As PinMode) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.IsPinModeSupported : int * System.Device.Gpio.PinMode -&gt; bool" Usage="mcp23xxx.IsPinModeSupported (pinNumber, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="mode">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="OpenPin">
+      <MemberSignature Language="C#" Value="protected override void OpenPin (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OpenPin(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.OpenPin(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OpenPin (pinNumber As Integer)" />
+      <MemberSignature Language="F#" Value="override this.OpenPin : int -&gt; unit" Usage="mcp23xxx.OpenPin pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="protected override System.Device.Gpio.PinValue Read (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Device.Gpio.PinValue Read(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.Read(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function Read (pinNumber As Integer) As PinValue" />
+      <MemberSignature Language="F#" Value="override this.Read : int -&gt; System.Device.Gpio.PinValue" Usage="mcp23xxx.Read pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number.</param>
+        <summary>
+            Reads the value of a pin.
+            </summary>
+        <returns>High or low pin value.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="protected void Read (Span&lt;System.Device.Gpio.PinValuePair&gt; pinValuePairs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Read(valuetype System.Span`1&lt;valuetype System.Device.Gpio.PinValuePair&gt; pinValuePairs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.Read(System.Span{System.Device.Gpio.PinValuePair})" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub Read (pinValuePairs As Span(Of PinValuePair))" />
+      <MemberSignature Language="F#" Value="override this.Read : Span&lt;System.Device.Gpio.PinValuePair&gt; -&gt; unit" Usage="mcp23xxx.Read pinValuePairs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinValuePairs" Type="System.Span&lt;System.Device.Gpio.PinValuePair&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pinValuePairs">To be added.</param>
+        <summary>
+            Reads the value of a set of pins
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadByte">
+      <MemberSignature Language="C#" Value="public byte ReadByte (Iot.Device.Mcp23xxx.Register register);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8 ReadByte(valuetype Iot.Device.Mcp23xxx.Register register) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.ReadByte(Iot.Device.Mcp23xxx.Register)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadByte (register As Register) As Byte" />
+      <MemberSignature Language="F#" Value="member this.ReadByte : Iot.Device.Mcp23xxx.Register -&gt; byte" Usage="mcp23xxx.ReadByte register" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="register" Type="Iot.Device.Mcp23xxx.Register" />
+      </Parameters>
+      <Docs>
+        <param name="register">To be added.</param>
+        <summary>
+            Read a byte from the given register.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            Writes to the A port registers on 16 bit devices.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadInterrupt">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.PinValue ReadInterrupt ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Device.Gpio.PinValue ReadInterrupt() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.ReadInterrupt" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadInterrupt () As PinValue" />
+      <MemberSignature Language="F#" Value="member this.ReadInterrupt : unit -&gt; System.Device.Gpio.PinValue" Usage="mcp23xxx.ReadInterrupt " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the value of the interrupt pin if configured.
+            </summary>
+        <returns>
+            Returns the interrupt for port A on 16 bit devices.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveCallbackForPinValueChangedEvent">
+      <MemberSignature Language="C#" Value="protected override void RemoveCallbackForPinValueChangedEvent (int pinNumber, System.Device.Gpio.PinChangeEventHandler callback);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void RemoveCallbackForPinValueChangedEvent(int32 pinNumber, class System.Device.Gpio.PinChangeEventHandler callback) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.RemoveCallbackForPinValueChangedEvent(System.Int32,System.Device.Gpio.PinChangeEventHandler)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub RemoveCallbackForPinValueChangedEvent (pinNumber As Integer, callback As PinChangeEventHandler)" />
+      <MemberSignature Language="F#" Value="override this.RemoveCallbackForPinValueChangedEvent : int * System.Device.Gpio.PinChangeEventHandler -&gt; unit" Usage="mcp23xxx.RemoveCallbackForPinValueChangedEvent (pinNumber, callback)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="callback" Type="System.Device.Gpio.PinChangeEventHandler" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="callback">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="SetPinMode">
+      <MemberSignature Language="C#" Value="protected override void SetPinMode (int pinNumber, System.Device.Gpio.PinMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetPinMode(int32 pinNumber, valuetype System.Device.Gpio.PinMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.SetPinMode(System.Int32,System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub SetPinMode (pinNumber As Integer, mode As PinMode)" />
+      <MemberSignature Language="F#" Value="override this.SetPinMode : int * System.Device.Gpio.PinMode -&gt; unit" Usage="mcp23xxx.SetPinMode (pinNumber, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number.</param>
+        <param name="mode">The mode to be set.</param>
+        <summary>
+            Sets a mode to a pin.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForEvent">
+      <MemberSignature Language="C#" Value="protected override System.Device.Gpio.WaitForEventResult WaitForEvent (int pinNumber, System.Device.Gpio.PinEventTypes eventTypes, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.Device.Gpio.WaitForEventResult WaitForEvent(int32 pinNumber, valuetype System.Device.Gpio.PinEventTypes eventTypes, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.WaitForEvent(System.Int32,System.Device.Gpio.PinEventTypes,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function WaitForEvent (pinNumber As Integer, eventTypes As PinEventTypes, cancellationToken As CancellationToken) As WaitForEventResult" />
+      <MemberSignature Language="F#" Value="override this.WaitForEvent : int * System.Device.Gpio.PinEventTypes * System.Threading.CancellationToken -&gt; System.Device.Gpio.WaitForEventResult" Usage="mcp23xxx.WaitForEvent (pinNumber, eventTypes, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.WaitForEventResult</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="eventTypes" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">To be added.</param>
+        <param name="eventTypes">To be added.</param>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="protected void Write (ReadOnlySpan&lt;System.Device.Gpio.PinValuePair&gt; pinValuePairs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Write(valuetype System.ReadOnlySpan`1&lt;valuetype System.Device.Gpio.PinValuePair&gt; pinValuePairs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.Write(System.ReadOnlySpan{System.Device.Gpio.PinValuePair})" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub Write (pinValuePairs As ReadOnlySpan(Of PinValuePair))" />
+      <MemberSignature Language="F#" Value="override this.Write : ReadOnlySpan&lt;System.Device.Gpio.PinValuePair&gt; -&gt; unit" Usage="mcp23xxx.Write pinValuePairs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinValuePairs" Type="System.ReadOnlySpan&lt;System.Device.Gpio.PinValuePair&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pinValuePairs">To be added.</param>
+        <summary>
+            Writes values to a set of pins
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="protected override void Write (int pinNumber, System.Device.Gpio.PinValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Write(int32 pinNumber, valuetype System.Device.Gpio.PinValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.Write(System.Int32,System.Device.Gpio.PinValue)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Write (pinNumber As Integer, value As PinValue)" />
+      <MemberSignature Language="F#" Value="override this.Write : int * System.Device.Gpio.PinValue -&gt; unit" Usage="mcp23xxx.Write (pinNumber, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Device.Gpio.PinValue" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number.</param>
+        <param name="value">The value to be written.</param>
+        <summary>
+            Writes a value to a pin.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteByte">
+      <MemberSignature Language="C#" Value="public void WriteByte (Iot.Device.Mcp23xxx.Register register, byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteByte(valuetype Iot.Device.Mcp23xxx.Register register, unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.WriteByte(Iot.Device.Mcp23xxx.Register,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteByte (register As Register, value As Byte)" />
+      <MemberSignature Language="F#" Value="member this.WriteByte : Iot.Device.Mcp23xxx.Register * byte -&gt; unit" Usage="mcp23xxx.WriteByte (register, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="register" Type="Iot.Device.Mcp23xxx.Register" />
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="register">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>
+            Write a byte to the given register.
+            </summary>
+        <remarks>
+            Writes to the A port registers on 16 bit devices.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

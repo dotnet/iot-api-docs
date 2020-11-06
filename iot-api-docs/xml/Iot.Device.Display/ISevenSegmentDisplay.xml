@@ -1,0 +1,122 @@
+<Type Name="ISevenSegmentDisplay" FullName="Iot.Device.Display.ISevenSegmentDisplay">
+  <TypeSignature Language="C#" Value="public interface ISevenSegmentDisplay" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract ISevenSegmentDisplay" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Display.ISevenSegmentDisplay" />
+  <TypeSignature Language="VB.NET" Value="Public Interface ISevenSegmentDisplay" />
+  <TypeSignature Language="F#" Value="type ISevenSegmentDisplay = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a 7-Segment display that can display multiple digits
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Iot.Device.Display.Segment this[int address] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Display.Segment Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.ISevenSegmentDisplay.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public Property Item(address As Integer) As Segment" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Iot.Device.Display.Segment with get, set" Usage="Iot.Device.Display.ISevenSegmentDisplay.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Display.Segment</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="address">address of digit</param>
+        <summary>
+            Gets or sets a single digit's segments by id
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfDigits">
+      <MemberSignature Language="C#" Value="public int NumberOfDigits { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumberOfDigits" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.ISevenSegmentDisplay.NumberOfDigits" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NumberOfDigits As Integer" />
+      <MemberSignature Language="F#" Value="member this.NumberOfDigits : int" Usage="Iot.Device.Display.ISevenSegmentDisplay.NumberOfDigits" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the number of digits supported by the display
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (ReadOnlySpan&lt;Iot.Device.Display.Font&gt; characters, int startAddress = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(valuetype System.ReadOnlySpan`1&lt;valuetype Iot.Device.Display.Font&gt; characters, int32 startAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.ISevenSegmentDisplay.Write(System.ReadOnlySpan{Iot.Device.Display.Font},System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (characters As ReadOnlySpan(Of Font), Optional startAddress As Integer = 0)" />
+      <MemberSignature Language="F#" Value="abstract member Write : ReadOnlySpan&lt;Iot.Device.Display.Font&gt; * int -&gt; unit" Usage="iSevenSegmentDisplay.Write (characters, startAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="characters" Type="System.ReadOnlySpan&lt;Iot.Device.Display.Font&gt;" />
+        <Parameter Name="startAddress" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="characters">a list of characters represented in fonts</param>
+        <param name="startAddress">Address to start writing from</param>
+        <summary>
+            Write a series of characters to the display buffer
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (ReadOnlySpan&lt;Iot.Device.Display.Segment&gt; digits, int startAddress = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(valuetype System.ReadOnlySpan`1&lt;valuetype Iot.Device.Display.Segment&gt; digits, int32 startAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.ISevenSegmentDisplay.Write(System.ReadOnlySpan{Iot.Device.Display.Segment},System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (digits As ReadOnlySpan(Of Segment), Optional startAddress As Integer = 0)" />
+      <MemberSignature Language="F#" Value="abstract member Write : ReadOnlySpan&lt;Iot.Device.Display.Segment&gt; * int -&gt; unit" Usage="iSevenSegmentDisplay.Write (digits, startAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="digits" Type="System.ReadOnlySpan&lt;Iot.Device.Display.Segment&gt;" />
+        <Parameter Name="startAddress" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="digits">a list of digits represented in segments</param>
+        <param name="startAddress">Address to start writing from</param>
+        <summary>
+            Write a series of digits to the display buffer
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
