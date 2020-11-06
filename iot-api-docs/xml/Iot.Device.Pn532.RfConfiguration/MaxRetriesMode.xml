@@ -1,0 +1,147 @@
+<Type Name="MaxRetriesMode" FullName="Iot.Device.Pn532.RfConfiguration.MaxRetriesMode">
+  <TypeSignature Language="C#" Value="public class MaxRetriesMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MaxRetriesMode extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Pn532.RfConfiguration.MaxRetriesMode" />
+  <TypeSignature Language="VB.NET" Value="Public Class MaxRetriesMode" />
+  <TypeSignature Language="F#" Value="type MaxRetriesMode = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The parameters MxRtyATR, MxRtyPSL and MxRtyPassiveActivation define the
+            number of retries that the PN532 will use in case of the following processes
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MaxRetriesMode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.RfConfiguration.MaxRetriesMode.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxRetryAnswerToReset">
+      <MemberSignature Language="C#" Value="public byte MaxRetryAnswerToReset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 MaxRetryAnswerToReset" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.RfConfiguration.MaxRetriesMode.MaxRetryAnswerToReset" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxRetryAnswerToReset As Byte" />
+      <MemberSignature Language="F#" Value="member this.MaxRetryAnswerToReset : byte with get, set" Usage="Iot.Device.Pn532.RfConfiguration.MaxRetriesMode.MaxRetryAnswerToReset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            MxRtyATR is a byte containing the number of times that the PN532 will retry to
+            send the ATR_REQ in case of incorrect reception of the ATR_RES(or no
+            reception at all - timeout).
+            For active mode, value 0xFF means to try eternally, 0x00 means only once(no
+            retry, only one try). The default value of this parameter is 0xFF (infinitely).
+            For passive mode, the value is always overruled with 0x02 (two retries).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxRetryPassiveActivation">
+      <MemberSignature Language="C#" Value="public byte MaxRetryPassiveActivation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 MaxRetryPassiveActivation" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.RfConfiguration.MaxRetriesMode.MaxRetryPassiveActivation" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxRetryPassiveActivation As Byte" />
+      <MemberSignature Language="F#" Value="member this.MaxRetryPassiveActivation : byte with get, set" Usage="Iot.Device.Pn532.RfConfiguration.MaxRetriesMode.MaxRetryPassiveActivation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            MxRtyPassiveActivation is a byte containing the number of times that the
+            PN532 will retry to activate a target in InListPassiveTarget command
+            (§7.3.5, p: 115).
+            Value 0xFF means to try eternally, 0x00 means only once(no retry, only one
+            try).
+            The default value of this parameter is 0xFF (infinitely).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxRetryPSL">
+      <MemberSignature Language="C#" Value="public byte MaxRetryPSL { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 MaxRetryPSL" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.RfConfiguration.MaxRetriesMode.MaxRetryPSL" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaxRetryPSL As Byte" />
+      <MemberSignature Language="F#" Value="member this.MaxRetryPSL : byte with get, set" Usage="Iot.Device.Pn532.RfConfiguration.MaxRetriesMode.MaxRetryPSL" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            MxRtyPSL is a byte containing the number of times that:
+            • The PN532 will retry to send the PSL_REQ in case of incorrect reception of
+            the PSL_RES(or no reception at all) for the NFC IP1 protocol,
+            • The PN532 will retry to send the PPS request in case of incorrect reception
+            of the PPS response(or no reception at all) for the ISO/IEC14443-4
+            protocol.
+            Value 0xFF means to try eternally, 0x00 means only once(no retry, only one
+            try).The default value of this parameter is 0x01 (the PSL_REQ/PPS request is
+            sent twice in case of need).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public byte[] Serialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] Serialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.RfConfiguration.MaxRetriesMode.Serialize" />
+      <MemberSignature Language="VB.NET" Value="Public Function Serialize () As Byte()" />
+      <MemberSignature Language="F#" Value="member this.Serialize : unit -&gt; byte[]" Usage="maxRetriesMode.Serialize " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the byte array to send
+            </summary>
+        <returns>Serialized value</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

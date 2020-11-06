@@ -1,0 +1,703 @@
+<Type Name="Ads1115" FullName="Iot.Device.Ads1115.Ads1115">
+  <TypeSignature Language="C#" Value="public class Ads1115 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Ads1115 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ads1115.Ads1115" />
+  <TypeSignature Language="VB.NET" Value="Public Class Ads1115&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Ads1115 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Analog-to-Digital Converter ADS1115
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ads1115 (System.Device.I2c.I2cDevice i2cDevice, Iot.Device.Ads1115.InputMultiplexer inputMultiplexer = Iot.Device.Ads1115.InputMultiplexer.AIN0, Iot.Device.Ads1115.MeasuringRange measuringRange = Iot.Device.Ads1115.MeasuringRange.FS4096, Iot.Device.Ads1115.DataRate dataRate = Iot.Device.Ads1115.DataRate.SPS128);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, valuetype Iot.Device.Ads1115.InputMultiplexer inputMultiplexer, valuetype Iot.Device.Ads1115.MeasuringRange measuringRange, valuetype Iot.Device.Ads1115.DataRate dataRate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Ads1115.InputMultiplexer,Iot.Device.Ads1115.MeasuringRange,Iot.Device.Ads1115.DataRate)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional inputMultiplexer As InputMultiplexer = Iot.Device.Ads1115.InputMultiplexer.AIN0, Optional measuringRange As MeasuringRange = Iot.Device.Ads1115.MeasuringRange.FS4096, Optional dataRate As DataRate = Iot.Device.Ads1115.DataRate.SPS128)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ads1115.Ads1115 : System.Device.I2c.I2cDevice * Iot.Device.Ads1115.InputMultiplexer * Iot.Device.Ads1115.MeasuringRange * Iot.Device.Ads1115.DataRate -&gt; Iot.Device.Ads1115.Ads1115" Usage="new Iot.Device.Ads1115.Ads1115 (i2cDevice, inputMultiplexer, measuringRange, dataRate)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="inputMultiplexer" Type="Iot.Device.Ads1115.InputMultiplexer" Index="1" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="measuringRange" Type="Iot.Device.Ads1115.MeasuringRange" Index="2" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="dataRate" Type="Iot.Device.Ads1115.DataRate" Index="3" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">To be added.</param>
+        <param name="inputMultiplexer">To be added.</param>
+        <param name="measuringRange">To be added.</param>
+        <param name="dataRate">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ads1115 (System.Device.I2c.I2cDevice i2cDevice, Iot.Device.Ads1115.InputMultiplexer inputMultiplexer = Iot.Device.Ads1115.InputMultiplexer.AIN0, Iot.Device.Ads1115.MeasuringRange measuringRange = Iot.Device.Ads1115.MeasuringRange.FS4096, Iot.Device.Ads1115.DataRate dataRate = Iot.Device.Ads1115.DataRate.SPS128, Iot.Device.Ads1115.DeviceMode deviceMode = Iot.Device.Ads1115.DeviceMode.Continuous);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, valuetype Iot.Device.Ads1115.InputMultiplexer inputMultiplexer, valuetype Iot.Device.Ads1115.MeasuringRange measuringRange, valuetype Iot.Device.Ads1115.DataRate dataRate, valuetype Iot.Device.Ads1115.DeviceMode deviceMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Ads1115.InputMultiplexer,Iot.Device.Ads1115.MeasuringRange,Iot.Device.Ads1115.DataRate,Iot.Device.Ads1115.DeviceMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional inputMultiplexer As InputMultiplexer = Iot.Device.Ads1115.InputMultiplexer.AIN0, Optional measuringRange As MeasuringRange = Iot.Device.Ads1115.MeasuringRange.FS4096, Optional dataRate As DataRate = Iot.Device.Ads1115.DataRate.SPS128, Optional deviceMode As DeviceMode = Iot.Device.Ads1115.DeviceMode.Continuous)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ads1115.Ads1115 : System.Device.I2c.I2cDevice * Iot.Device.Ads1115.InputMultiplexer * Iot.Device.Ads1115.MeasuringRange * Iot.Device.Ads1115.DataRate * Iot.Device.Ads1115.DeviceMode -&gt; Iot.Device.Ads1115.Ads1115" Usage="new Iot.Device.Ads1115.Ads1115 (i2cDevice, inputMultiplexer, measuringRange, dataRate, deviceMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="inputMultiplexer" Type="Iot.Device.Ads1115.InputMultiplexer" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="measuringRange" Type="Iot.Device.Ads1115.MeasuringRange" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="dataRate" Type="Iot.Device.Ads1115.DataRate" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="deviceMode" Type="Iot.Device.Ads1115.DeviceMode" Index="4" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device used for communication.</param>
+        <param name="inputMultiplexer">Input Multiplexer</param>
+        <param name="measuringRange">Programmable Gain Amplifier</param>
+        <param name="dataRate">Data Rate</param>
+        <param name="deviceMode">Initial device mode</param>
+        <summary>
+            Initialize a new Ads1115 device connected through I2C
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ads1115 (System.Device.I2c.I2cDevice i2cDevice, System.Device.Gpio.GpioController gpioController, int gpioInterruptPin, bool shouldDispose = true, Iot.Device.Ads1115.InputMultiplexer inputMultiplexer = Iot.Device.Ads1115.InputMultiplexer.AIN0, Iot.Device.Ads1115.MeasuringRange measuringRange = Iot.Device.Ads1115.MeasuringRange.FS4096, Iot.Device.Ads1115.DataRate dataRate = Iot.Device.Ads1115.DataRate.SPS128, Iot.Device.Ads1115.DeviceMode deviceMode = Iot.Device.Ads1115.DeviceMode.Continuous);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, class System.Device.Gpio.GpioController gpioController, int32 gpioInterruptPin, bool shouldDispose, valuetype Iot.Device.Ads1115.InputMultiplexer inputMultiplexer, valuetype Iot.Device.Ads1115.MeasuringRange measuringRange, valuetype Iot.Device.Ads1115.DataRate dataRate, valuetype Iot.Device.Ads1115.DeviceMode deviceMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.#ctor(System.Device.I2c.I2cDevice,System.Device.Gpio.GpioController,System.Int32,System.Boolean,Iot.Device.Ads1115.InputMultiplexer,Iot.Device.Ads1115.MeasuringRange,Iot.Device.Ads1115.DataRate,Iot.Device.Ads1115.DeviceMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, gpioController As GpioController, gpioInterruptPin As Integer, Optional shouldDispose As Boolean = true, Optional inputMultiplexer As InputMultiplexer = Iot.Device.Ads1115.InputMultiplexer.AIN0, Optional measuringRange As MeasuringRange = Iot.Device.Ads1115.MeasuringRange.FS4096, Optional dataRate As DataRate = Iot.Device.Ads1115.DataRate.SPS128, Optional deviceMode As DeviceMode = Iot.Device.Ads1115.DeviceMode.Continuous)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ads1115.Ads1115 : System.Device.I2c.I2cDevice * System.Device.Gpio.GpioController * int * bool * Iot.Device.Ads1115.InputMultiplexer * Iot.Device.Ads1115.MeasuringRange * Iot.Device.Ads1115.DataRate * Iot.Device.Ads1115.DeviceMode -&gt; Iot.Device.Ads1115.Ads1115" Usage="new Iot.Device.Ads1115.Ads1115 (i2cDevice, gpioController, gpioInterruptPin, shouldDispose, inputMultiplexer, measuringRange, dataRate, deviceMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="gpioInterruptPin" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="inputMultiplexer" Type="Iot.Device.Ads1115.InputMultiplexer" Index="4" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="measuringRange" Type="Iot.Device.Ads1115.MeasuringRange" Index="5" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="dataRate" Type="Iot.Device.Ads1115.DataRate" Index="6" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="deviceMode" Type="Iot.Device.Ads1115.DeviceMode" Index="7" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device used for communication.</param>
+        <param name="gpioController">The GPIO Controller used for interrupt handling</param>
+        <param name="gpioInterruptPin">The pin number where the interrupt line is attached on the GPIO controller</param>
+        <param name="shouldDispose">True (the default) if the GPIO controller shall be disposed when disposing this instance</param>
+        <param name="inputMultiplexer">Input Multiplexer</param>
+        <param name="measuringRange">Programmable Gain Amplifier</param>
+        <param name="dataRate">Data Rate</param>
+        <param name="deviceMode">Initial device mode</param>
+        <summary>
+            Initialize a new Ads1115 device connected through I2C with an additional GPIO controller for interrupt handling.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlertReadyAsserted">
+      <MemberSignature Language="C#" Value="public event Action AlertReadyAsserted;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action AlertReadyAsserted" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Ads1115.Ads1115.AlertReadyAsserted" />
+      <MemberSignature Language="VB.NET" Value="Public Event AlertReadyAsserted As Action " />
+      <MemberSignature Language="F#" Value="member this.AlertReadyAsserted : Action " Usage="member this.AlertReadyAsserted : System.Action " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Action</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This event fires when a new value is available (in conversion ready mode) or the comparator threshold is exceeded.
+            Requires setup through <see cref="M:Iot.Device.Ads1115.Ads1115.EnableConversionReady" /> or <see cref="M:Iot.Device.Ads1115.Ads1115.EnableComparator(System.Double,System.Double,Iot.Device.Ads1115.ComparatorMode,Iot.Device.Ads1115.ComparatorQueue)" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComparatorLatching">
+      <MemberSignature Language="C#" Value="public Iot.Device.Ads1115.ComparatorLatching ComparatorLatching { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Ads1115.ComparatorLatching ComparatorLatching" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ads1115.Ads1115.ComparatorLatching" />
+      <MemberSignature Language="VB.NET" Value="Public Property ComparatorLatching As ComparatorLatching" />
+      <MemberSignature Language="F#" Value="member this.ComparatorLatching : Iot.Device.Ads1115.ComparatorLatching with get, set" Usage="Iot.Device.Ads1115.Ads1115.ComparatorLatching" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ads1115.ComparatorLatching</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Comparator latching mode. If enabled, the ALRT/RDY Pin will be kept signaled until the conversion value is read.
+            Only relevant when the comparator is enabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComparatorMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Ads1115.ComparatorMode ComparatorMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Ads1115.ComparatorMode ComparatorMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ads1115.Ads1115.ComparatorMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ComparatorMode As ComparatorMode" />
+      <MemberSignature Language="F#" Value="member this.ComparatorMode : Iot.Device.Ads1115.ComparatorMode" Usage="Iot.Device.Ads1115.Ads1115.ComparatorMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ads1115.ComparatorMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Comparator mode.
+            Only relevant if the comparator trigger event is set up and is changed by <see cref="M:Iot.Device.Ads1115.Ads1115.EnableComparator(System.Int16,System.Int16,Iot.Device.Ads1115.ComparatorMode,Iot.Device.Ads1115.ComparatorQueue)" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComparatorPolarity">
+      <MemberSignature Language="C#" Value="public Iot.Device.Ads1115.ComparatorPolarity ComparatorPolarity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Ads1115.ComparatorPolarity ComparatorPolarity" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ads1115.Ads1115.ComparatorPolarity" />
+      <MemberSignature Language="VB.NET" Value="Public Property ComparatorPolarity As ComparatorPolarity" />
+      <MemberSignature Language="F#" Value="member this.ComparatorPolarity : Iot.Device.Ads1115.ComparatorPolarity with get, set" Usage="Iot.Device.Ads1115.Ads1115.ComparatorPolarity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ads1115.ComparatorPolarity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Comparator polarity. Indicates whether the rising or the falling edge of the ALRT/RDY Pin is relevant.
+            Default: Low (falling edge)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ComparatorQueue">
+      <MemberSignature Language="C#" Value="public Iot.Device.Ads1115.ComparatorQueue ComparatorQueue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Ads1115.ComparatorQueue ComparatorQueue" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ads1115.Ads1115.ComparatorQueue" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ComparatorQueue As ComparatorQueue" />
+      <MemberSignature Language="F#" Value="member this.ComparatorQueue : Iot.Device.Ads1115.ComparatorQueue" Usage="Iot.Device.Ads1115.Ads1115.ComparatorQueue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ads1115.ComparatorQueue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Minimum number of samples exceeding the lower/upper threshold before the ALRT pin is asserted.
+            This can only be set with <see cref="M:Iot.Device.Ads1115.Ads1115.EnableComparator(System.Int16,System.Int16,Iot.Device.Ads1115.ComparatorMode,Iot.Device.Ads1115.ComparatorQueue)" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataRate">
+      <MemberSignature Language="C#" Value="public Iot.Device.Ads1115.DataRate DataRate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Ads1115.DataRate DataRate" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ads1115.Ads1115.DataRate" />
+      <MemberSignature Language="VB.NET" Value="Public Property DataRate As DataRate" />
+      <MemberSignature Language="F#" Value="member this.DataRate : Iot.Device.Ads1115.DataRate with get, set" Usage="Iot.Device.Ads1115.Ads1115.DataRate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ads1115.DataRate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ADS1115 Data Rate.
+            The number of conversions per second that will take place. One conversion will take "1/rate" seconds to become ready. If in
+            power-down mode, only one conversion will happen automatically, then another request is required.
+            Setting this property will wait until a new value is available.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Ads1115.DeviceMode DeviceMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Ads1115.DeviceMode DeviceMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ads1115.Ads1115.DeviceMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property DeviceMode As DeviceMode" />
+      <MemberSignature Language="F#" Value="member this.DeviceMode : Iot.Device.Ads1115.DeviceMode with get, set" Usage="Iot.Device.Ads1115.Ads1115.DeviceMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ads1115.DeviceMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ADS1115 operation mode.
+            When set to <see cref="F:Iot.Device.Ads1115.DeviceMode.Continuous" /> the chip continously measures the input and the values can be read directly.
+            If set to <see cref="F:Iot.Device.Ads1115.DeviceMode.PowerDown" /> the chip enters idle mode after each conversion and
+            a new value will be requested each time a read request is performed. This is the recommended setting when frequently
+            swapping between input channels, because a change of the channel requires a new conversion anyway.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="ads1115.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Cleanup.
+            Failing to dispose this class, especially when callbacks are active, may lead to undefined behavior.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableComparator">
+      <MemberSignature Language="C#" Value="public void EnableComparator (double lowerValue, double upperValue, Iot.Device.Ads1115.ComparatorMode mode, Iot.Device.Ads1115.ComparatorQueue queueLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnableComparator(float64 lowerValue, float64 upperValue, valuetype Iot.Device.Ads1115.ComparatorMode mode, valuetype Iot.Device.Ads1115.ComparatorQueue queueLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.EnableComparator(System.Double,System.Double,Iot.Device.Ads1115.ComparatorMode,Iot.Device.Ads1115.ComparatorQueue)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EnableComparator (lowerValue As Double, upperValue As Double, mode As ComparatorMode, queueLength As ComparatorQueue)" />
+      <MemberSignature Language="F#" Value="member this.EnableComparator : double * double * Iot.Device.Ads1115.ComparatorMode * Iot.Device.Ads1115.ComparatorQueue -&gt; unit" Usage="ads1115.EnableComparator (lowerValue, upperValue, mode, queueLength)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lowerValue" Type="System.Double" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="upperValue" Type="System.Double" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="mode" Type="Iot.Device.Ads1115.ComparatorMode" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="queueLength" Type="Iot.Device.Ads1115.ComparatorQueue" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="lowerValue">Lower value for the comparator</param>
+        <param name="upperValue">Upper value for the comparator</param>
+        <param name="mode">Traditional or Window comparator mode</param>
+        <param name="queueLength">Minimum number of samples that must exceed the threshold to trigger the event</param>
+        <summary>
+            Enable comparator callback mode.
+            In traditional comparator mode, the callback is triggered each time the measured value exceeds the given upper value (for
+            the given queueLength number of samples). It deasserts when the lower value is reached.
+            In window comparator mode, the callback is triggered each time the measured value exceeds the given upper value or gets
+            less than the given lower value.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">The GPIO Controller for the interrupt handler has not been set up</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableComparator">
+      <MemberSignature Language="C#" Value="public void EnableComparator (short lowerValue, short upperValue, Iot.Device.Ads1115.ComparatorMode mode, Iot.Device.Ads1115.ComparatorQueue queueLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnableComparator(int16 lowerValue, int16 upperValue, valuetype Iot.Device.Ads1115.ComparatorMode mode, valuetype Iot.Device.Ads1115.ComparatorQueue queueLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.EnableComparator(System.Int16,System.Int16,Iot.Device.Ads1115.ComparatorMode,Iot.Device.Ads1115.ComparatorQueue)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EnableComparator (lowerValue As Short, upperValue As Short, mode As ComparatorMode, queueLength As ComparatorQueue)" />
+      <MemberSignature Language="F#" Value="member this.EnableComparator : int16 * int16 * Iot.Device.Ads1115.ComparatorMode * Iot.Device.Ads1115.ComparatorQueue -&gt; unit" Usage="ads1115.EnableComparator (lowerValue, upperValue, mode, queueLength)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lowerValue" Type="System.Int16" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="upperValue" Type="System.Int16" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="mode" Type="Iot.Device.Ads1115.ComparatorMode" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="queueLength" Type="Iot.Device.Ads1115.ComparatorQueue" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="lowerValue">Lower value for the comparator</param>
+        <param name="upperValue">Upper value for the comparator</param>
+        <param name="mode">Traditional or Window comparator mode</param>
+        <param name="queueLength">Minimum number of samples that must exceed the threshold to trigger the event</param>
+        <summary>
+            Enable comparator callback mode.
+            In traditional comparator mode, the callback is triggered each time the measured value exceeds the given upper value (for
+            the given queueLength number of samples). It deasserts when the lower value is reached.
+            In window comparator mode, the callback is triggered each time the measured value exceeds the given upper value or gets
+            less than the given lower value.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">The GPIO Controller for the interrupt handler has not been set up</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableConversionReady">
+      <MemberSignature Language="C#" Value="public void EnableConversionReady ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnableConversionReady() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.EnableConversionReady" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EnableConversionReady ()" />
+      <MemberSignature Language="F#" Value="member this.EnableConversionReady : unit -&gt; unit" Usage="ads1115.EnableConversionReady " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Enable conversion ready event.
+            The <see cref="E:Iot.Device.Ads1115.Ads1115.AlertReadyAsserted" /> event fires each time a new value is available after this method is called.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">The conversion ready event is already set up or no GPIO Controller configured
+            for interrupt handling.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FrequencyFromDataRate">
+      <MemberSignature Language="C#" Value="public double FrequencyFromDataRate (Iot.Device.Ads1115.DataRate dataRate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 FrequencyFromDataRate(valuetype Iot.Device.Ads1115.DataRate dataRate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.FrequencyFromDataRate(Iot.Device.Ads1115.DataRate)" />
+      <MemberSignature Language="VB.NET" Value="Public Function FrequencyFromDataRate (dataRate As DataRate) As Double" />
+      <MemberSignature Language="F#" Value="member this.FrequencyFromDataRate : Iot.Device.Ads1115.DataRate -&gt; double" Usage="ads1115.FrequencyFromDataRate dataRate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataRate" Type="Iot.Device.Ads1115.DataRate" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="dataRate">One of the <see cref="P:Iot.Device.Ads1115.Ads1115.DataRate" /> enumeration members.</param>
+        <summary>
+            Returns the sampling frequency in Hz for the given data rate enumeration member.
+            </summary>
+        <returns>A frequency, in Hertz</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputMultiplexer">
+      <MemberSignature Language="C#" Value="public Iot.Device.Ads1115.InputMultiplexer InputMultiplexer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Ads1115.InputMultiplexer InputMultiplexer" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ads1115.Ads1115.InputMultiplexer" />
+      <MemberSignature Language="VB.NET" Value="Public Property InputMultiplexer As InputMultiplexer" />
+      <MemberSignature Language="F#" Value="member this.InputMultiplexer : Iot.Device.Ads1115.InputMultiplexer with get, set" Usage="Iot.Device.Ads1115.Ads1115.InputMultiplexer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ads1115.InputMultiplexer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ADS1115 Input Multiplexer.
+            This selects the channel(s) for the next read operation, <see cref="T:Iot.Device.Ads1115.InputMultiplexer" />.
+            Setting this property will wait until a value is available from the newly selected input channel.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxVoltageFromMeasuringRange">
+      <MemberSignature Language="C#" Value="public double MaxVoltageFromMeasuringRange (Iot.Device.Ads1115.MeasuringRange measuringRange);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 MaxVoltageFromMeasuringRange(valuetype Iot.Device.Ads1115.MeasuringRange measuringRange) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.MaxVoltageFromMeasuringRange(Iot.Device.Ads1115.MeasuringRange)" />
+      <MemberSignature Language="VB.NET" Value="Public Function MaxVoltageFromMeasuringRange (measuringRange As MeasuringRange) As Double" />
+      <MemberSignature Language="F#" Value="member this.MaxVoltageFromMeasuringRange : Iot.Device.Ads1115.MeasuringRange -&gt; double" Usage="ads1115.MaxVoltageFromMeasuringRange measuringRange" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="measuringRange" Type="Iot.Device.Ads1115.MeasuringRange" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="measuringRange">One of the <see cref="P:Iot.Device.Ads1115.Ads1115.MeasuringRange" /> enumeration members</param>
+        <summary>
+            Returns the voltage assigned to the given MeasuringRange enumeration value.
+            </summary>
+        <returns>A voltage, as double.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasuringRange">
+      <MemberSignature Language="C#" Value="public Iot.Device.Ads1115.MeasuringRange MeasuringRange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Ads1115.MeasuringRange MeasuringRange" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ads1115.Ads1115.MeasuringRange" />
+      <MemberSignature Language="VB.NET" Value="Public Property MeasuringRange As MeasuringRange" />
+      <MemberSignature Language="F#" Value="member this.MeasuringRange : Iot.Device.Ads1115.MeasuringRange with get, set" Usage="Iot.Device.Ads1115.Ads1115.MeasuringRange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ads1115.MeasuringRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ADS1115 Programmable Gain Amplifier
+            This sets the maximum value that can be measured. Regardless of this setting, the input value on any pin must not exceed VDD + 0.3V,
+            so high ranges are only usable with a VDD of more than 5V.
+            Setting this property will wait until a new value is available.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RawToVoltage">
+      <MemberSignature Language="C#" Value="public double RawToVoltage (short val);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 RawToVoltage(int16 val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.RawToVoltage(System.Int16)" />
+      <MemberSignature Language="VB.NET" Value="Public Function RawToVoltage (val As Short) As Double" />
+      <MemberSignature Language="F#" Value="member this.RawToVoltage : int16 -&gt; double" Usage="ads1115.RawToVoltage val" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="val">Raw Data</param>
+        <summary>
+            Convert Raw Data to Voltage
+            </summary>
+        <returns>Voltage, based on the current measuring range</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadRaw">
+      <MemberSignature Language="C#" Value="public short ReadRaw ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int16 ReadRaw() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.ReadRaw" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadRaw () As Short" />
+      <MemberSignature Language="F#" Value="member this.ReadRaw : unit -&gt; int16" Usage="ads1115.ReadRaw " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read Raw Data.
+            If in PowerDown (single-shot) mode, one new sample is requested first.
+            </summary>
+        <returns>Raw Value</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadRaw">
+      <MemberSignature Language="C#" Value="public short ReadRaw (Iot.Device.Ads1115.InputMultiplexer inputMultiplexer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int16 ReadRaw(valuetype Iot.Device.Ads1115.InputMultiplexer inputMultiplexer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.ReadRaw(Iot.Device.Ads1115.InputMultiplexer)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadRaw (inputMultiplexer As InputMultiplexer) As Short" />
+      <MemberSignature Language="F#" Value="member this.ReadRaw : Iot.Device.Ads1115.InputMultiplexer -&gt; int16" Usage="ads1115.ReadRaw inputMultiplexer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputMultiplexer" Type="Iot.Device.Ads1115.InputMultiplexer" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="inputMultiplexer">New input multiplexer setting</param>
+        <summary>
+            Reads the next raw value, first switching to the given input and ranges.
+            </summary>
+        <returns>Measured value as short</returns>
+        <remarks>
+            For performance reasons, it is advised to use this method if quick readings with different input channels are required,
+            instead of setting all the properties first and then calling <see cref="M:Iot.Device.Ads1115.Ads1115.ReadRaw" />.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadRaw">
+      <MemberSignature Language="C#" Value="public short ReadRaw (Iot.Device.Ads1115.InputMultiplexer inputMultiplexer, Iot.Device.Ads1115.MeasuringRange measuringRange, Iot.Device.Ads1115.DataRate dataRate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int16 ReadRaw(valuetype Iot.Device.Ads1115.InputMultiplexer inputMultiplexer, valuetype Iot.Device.Ads1115.MeasuringRange measuringRange, valuetype Iot.Device.Ads1115.DataRate dataRate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.ReadRaw(Iot.Device.Ads1115.InputMultiplexer,Iot.Device.Ads1115.MeasuringRange,Iot.Device.Ads1115.DataRate)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadRaw (inputMultiplexer As InputMultiplexer, measuringRange As MeasuringRange, dataRate As DataRate) As Short" />
+      <MemberSignature Language="F#" Value="member this.ReadRaw : Iot.Device.Ads1115.InputMultiplexer * Iot.Device.Ads1115.MeasuringRange * Iot.Device.Ads1115.DataRate -&gt; int16" Usage="ads1115.ReadRaw (inputMultiplexer, measuringRange, dataRate)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputMultiplexer" Type="Iot.Device.Ads1115.InputMultiplexer" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="measuringRange" Type="Iot.Device.Ads1115.MeasuringRange" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="dataRate" Type="Iot.Device.Ads1115.DataRate" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="inputMultiplexer">New input multiplexer setting</param>
+        <param name="measuringRange">New measuring range</param>
+        <param name="dataRate">New data rate</param>
+        <summary>
+            Reads the next raw value, first switching to the given input and ranges.
+            </summary>
+        <returns>Measured value as short</returns>
+        <remarks>
+            For performance reasons, it is advised to use this method if quick readings with different settings
+            (i.e. different input channels) are required, instead of setting all the properties first and then
+            calling <see cref="M:Iot.Device.Ads1115.Ads1115.ReadRaw" />.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadVoltage">
+      <MemberSignature Language="C#" Value="public double ReadVoltage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 ReadVoltage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.ReadVoltage" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadVoltage () As Double" />
+      <MemberSignature Language="F#" Value="member this.ReadVoltage : unit -&gt; double" Usage="ads1115.ReadVoltage " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the voltage of the currently selected input.
+            </summary>
+        <returns>The measured voltage of the currently selected input channel. In volts. </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadVoltage">
+      <MemberSignature Language="C#" Value="public double ReadVoltage (Iot.Device.Ads1115.InputMultiplexer inputMultiplexer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 ReadVoltage(valuetype Iot.Device.Ads1115.InputMultiplexer inputMultiplexer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.ReadVoltage(Iot.Device.Ads1115.InputMultiplexer)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadVoltage (inputMultiplexer As InputMultiplexer) As Double" />
+      <MemberSignature Language="F#" Value="member this.ReadVoltage : Iot.Device.Ads1115.InputMultiplexer -&gt; double" Usage="ads1115.ReadVoltage inputMultiplexer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputMultiplexer" Type="Iot.Device.Ads1115.InputMultiplexer" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="inputMultiplexer">Channel to use</param>
+        <summary>
+            Returns the voltage of the given channel, performs a measurement first
+            </summary>
+        <returns>The voltage at the selected channel</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VoltageToRaw">
+      <MemberSignature Language="C#" Value="public short VoltageToRaw (double voltage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int16 VoltageToRaw(float64 voltage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.VoltageToRaw(System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Function VoltageToRaw (voltage As Double) As Short" />
+      <MemberSignature Language="F#" Value="member this.VoltageToRaw : double -&gt; int16" Usage="ads1115.VoltageToRaw voltage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="voltage" Type="System.Double" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="voltage">Input voltage</param>
+        <summary>
+            Converts voltage to raw data.
+            </summary>
+        <returns>Corresponding raw value, based on the current measuring range</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

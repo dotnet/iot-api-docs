@@ -1,0 +1,779 @@
+<Type Name="Seesaw" FullName="Iot.Device.Seesaw.Seesaw">
+  <TypeSignature Language="C#" Value="public class Seesaw : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Seesaw extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Seesaw.Seesaw" />
+  <TypeSignature Language="VB.NET" Value="Public Class Seesaw&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Seesaw = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents Seesaw device
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Seesaw (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Seesaw.Seesaw : System.Device.I2c.I2cDevice -&gt; Iot.Device.Seesaw.Seesaw" Usage="new Iot.Device.Seesaw.Seesaw i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2cDevice to be used to communicate with the SeeSaw module. Note that the I2cDevice
+            will be disposed when the along with the SeeSaw device</param>
+        <summary>
+            Initializes new instance of Seesaw.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AnalogRead">
+      <MemberSignature Language="C#" Value="public ushort AnalogRead (byte pin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int16 AnalogRead(unsigned int8 pin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.AnalogRead(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AnalogRead (pin As Byte) As UShort" />
+      <MemberSignature Language="F#" Value="member this.AnalogRead : byte -&gt; uint16" Usage="seesaw.AnalogRead pin" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pin" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="pin">The pin number in the devices numbering scheme.</param>
+        <summary>
+            Reads the value of an analog pin.
+            </summary>
+        <returns>A value between 0..1023 that represents the analog value.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="seesaw.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetOptions">
+      <MemberSignature Language="C#" Value="protected uint GetOptions ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance unsigned int32 GetOptions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.GetOptions" />
+      <MemberSignature Language="VB.NET" Value="Protected Function GetOptions () As UInteger" />
+      <MemberSignature Language="F#" Value="member this.GetOptions : unit -&gt; uint32" Usage="seesaw.GetOptions " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the options/modules present on the Seesaw board
+            </summary>
+        <returns>Returns 32 bit integer where the bits represent the options/modules present on the Seesaw board.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTemperature">
+      <MemberSignature Language="C#" Value="public float GetTemperature ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 GetTemperature() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.GetTemperature" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTemperature () As Single" />
+      <MemberSignature Language="F#" Value="member this.GetTemperature : unit -&gt; single" Usage="seesaw.GetTemperature " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reads the temperature of the SeeSaw device.
+            </summary>
+        <returns>A float that represents the temperature in degrees celcius.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVersion">
+      <MemberSignature Language="C#" Value="protected uint GetVersion ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance unsigned int32 GetVersion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.GetVersion" />
+      <MemberSignature Language="VB.NET" Value="Protected Function GetVersion () As UInteger" />
+      <MemberSignature Language="F#" Value="member this.GetVersion : unit -&gt; uint32" Usage="seesaw.GetVersion " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the firmware version of the Seesaw board.
+            </summary>
+        <returns>Returns the seesaw version.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasModule">
+      <MemberSignature Language="C#" Value="public bool HasModule (Iot.Device.Seesaw.Seesaw.SeesawModule moduleAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasModule(valuetype Iot.Device.Seesaw.Seesaw/SeesawModule moduleAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.HasModule(Iot.Device.Seesaw.Seesaw.SeesawModule)" />
+      <MemberSignature Language="VB.NET" Value="Public Function HasModule (moduleAddress As Seesaw.SeesawModule) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasModule : Iot.Device.Seesaw.Seesaw.SeesawModule -&gt; bool" Usage="seesaw.HasModule moduleAddress" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="moduleAddress" Type="Iot.Device.Seesaw.Seesaw+SeesawModule" />
+      </Parameters>
+      <Docs>
+        <param name="moduleAddress">&gt;An Seesaw_Module enum that represents the mdule to test for.</param>
+        <summary>
+            Tests to see if a module has been compiled into the SeeSaw firmware.
+            </summary>
+        <returns>Returns true if the functionality associated with the module is available.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="I2cDevice">
+      <MemberSignature Language="C#" Value="public System.Device.I2c.I2cDevice I2cDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Device.I2c.I2cDevice I2cDevice" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seesaw.Seesaw.I2cDevice" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property I2cDevice As I2cDevice" />
+      <MemberSignature Language="F#" Value="member this.I2cDevice : System.Device.I2c.I2cDevice" Usage="Iot.Device.Seesaw.Seesaw.I2cDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.I2c.I2cDevice</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            I2C device used for communication
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected void Initialize (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Initialize(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.Initialize(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub Initialize (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="member this.Initialize : System.Device.I2c.I2cDevice -&gt; unit" Usage="seesaw.Initialize i2cDevice" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">To be added.</param>
+        <summary>
+            Initializes the Seesaw device.
+            <param name="i2cDevice">The I2cDevice to initialize the Seesaw device with.</param></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="protected byte[] Read (Iot.Device.Seesaw.Seesaw.SeesawModule moduleAddress, Iot.Device.Seesaw.Seesaw.SeesawFunction functionAddress, int length, short readDelayMicroSeconds = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance unsigned int8[] Read(valuetype Iot.Device.Seesaw.Seesaw/SeesawModule moduleAddress, valuetype Iot.Device.Seesaw.Seesaw/SeesawFunction functionAddress, int32 length, int16 readDelayMicroSeconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.Read(Iot.Device.Seesaw.Seesaw.SeesawModule,Iot.Device.Seesaw.Seesaw.SeesawFunction,System.Int32,System.Int16)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function Read (moduleAddress As Seesaw.SeesawModule, functionAddress As Seesaw.SeesawFunction, length As Integer, Optional readDelayMicroSeconds As Short = 0) As Byte()" />
+      <MemberSignature Language="F#" Value="member this.Read : Iot.Device.Seesaw.Seesaw.SeesawModule * Iot.Device.Seesaw.Seesaw.SeesawFunction * int * int16 -&gt; byte[]" Usage="seesaw.Read (moduleAddress, functionAddress, length, readDelayMicroSeconds)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="moduleAddress" Type="Iot.Device.Seesaw.Seesaw+SeesawModule" />
+        <Parameter Name="functionAddress" Type="Iot.Device.Seesaw.Seesaw+SeesawFunction" />
+        <Parameter Name="length" Type="System.Int32" />
+        <Parameter Name="readDelayMicroSeconds" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="moduleAddress">A Seesaw_Module enum that represents the module that we are reading from.</param>
+        <param name="functionAddress">A Seesaw_Function enum that represents the Seesaw function to be called.</param>
+        <param name="length">The number of bytes that are expected to be returned from the Seesaw device.</param>
+        <param name="readDelayMicroSeconds">The delay between sending the function and readinng the data in microseconds.</param>
+        <summary>
+            Read a byte array from the I2cDevice connected to the Seesaw board.
+            </summary>
+        <returns>Returns the byte array representaing values from the Seesaw device.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadByte">
+      <MemberSignature Language="C#" Value="protected byte ReadByte (Iot.Device.Seesaw.Seesaw.SeesawModule moduleAddress, Iot.Device.Seesaw.Seesaw.SeesawFunction functionAddress, short readDelayMicroSeconds = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance unsigned int8 ReadByte(valuetype Iot.Device.Seesaw.Seesaw/SeesawModule moduleAddress, valuetype Iot.Device.Seesaw.Seesaw/SeesawFunction functionAddress, int16 readDelayMicroSeconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.ReadByte(Iot.Device.Seesaw.Seesaw.SeesawModule,Iot.Device.Seesaw.Seesaw.SeesawFunction,System.Int16)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function ReadByte (moduleAddress As Seesaw.SeesawModule, functionAddress As Seesaw.SeesawFunction, Optional readDelayMicroSeconds As Short = 0) As Byte" />
+      <MemberSignature Language="F#" Value="member this.ReadByte : Iot.Device.Seesaw.Seesaw.SeesawModule * Iot.Device.Seesaw.Seesaw.SeesawFunction * int16 -&gt; byte" Usage="seesaw.ReadByte (moduleAddress, functionAddress, readDelayMicroSeconds)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="moduleAddress" Type="Iot.Device.Seesaw.Seesaw+SeesawModule" />
+        <Parameter Name="functionAddress" Type="Iot.Device.Seesaw.Seesaw+SeesawFunction" />
+        <Parameter Name="readDelayMicroSeconds" Type="System.Int16" />
+      </Parameters>
+      <Docs>
+        <param name="moduleAddress">A Seesaw_Module enum that represents the module that we are reading from.</param>
+        <param name="functionAddress">A Seesaw_Function enum that represents the Seesaw function to be called.</param>
+        <param name="readDelayMicroSeconds">The delay between sending the function and readinng the data in microseconds.</param>
+        <summary>
+            Read a byte from the I2cDevice connected to the Seesaw board.
+            </summary>
+        <returns>Returns the byte value from the Seesaw device.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadEEPromByte">
+      <MemberSignature Language="C#" Value="public byte ReadEEPromByte (byte eepromAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8 ReadEEPromByte(unsigned int8 eepromAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.ReadEEPromByte(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadEEPromByte (eepromAddress As Byte) As Byte" />
+      <MemberSignature Language="F#" Value="member this.ReadEEPromByte : byte -&gt; byte" Usage="seesaw.ReadEEPromByte eepromAddress" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eepromAddress" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="eepromAddress">The point in the EEProm area to start reading the data.</param>
+        <summary>
+            Read a byte from the EEProm area on the Seesaw module.
+            </summary>
+        <returns>The data byte read from the EEProm area.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadGpioDigital">
+      <MemberSignature Language="C#" Value="public bool ReadGpioDigital (byte pin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ReadGpioDigital(unsigned int8 pin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.ReadGpioDigital(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadGpioDigital (pin As Byte) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReadGpioDigital : byte -&gt; bool" Usage="seesaw.ReadGpioDigital pin" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pin" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="pin">The pin that has its value read.</param>
+        <summary>
+            Read a value from a GPIO pin.
+            </summary>
+        <returns>A boolean value representaing the status of the GPIO pin.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadGpioDigitalBulk">
+      <MemberSignature Language="C#" Value="public ulong ReadGpioDigitalBulk (ulong pins);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int64 ReadGpioDigitalBulk(unsigned int64 pins) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.ReadGpioDigitalBulk(System.UInt64)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadGpioDigitalBulk (pins As ULong) As ULong" />
+      <MemberSignature Language="F#" Value="member this.ReadGpioDigitalBulk : uint64 -&gt; uint64" Usage="seesaw.ReadGpioDigitalBulk pins" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt64</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pins" Type="System.UInt64" />
+      </Parameters>
+      <Docs>
+        <param name="pins">A 64bit integer containing 1 bit for each pin. If a bit is set to 1 then the pin value is read for the associated pin.</param>
+        <summary>
+            Read a value from a number of GPIO pins.
+            </summary>
+        <returns>A 64bit integer containing 1 bit for each pin status requested.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadGpioInterruptFlags">
+      <MemberSignature Language="C#" Value="public uint ReadGpioInterruptFlags ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int32 ReadGpioInterruptFlags() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.ReadGpioInterruptFlags" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadGpioInterruptFlags () As UInteger" />
+      <MemberSignature Language="F#" Value="member this.ReadGpioInterruptFlags : unit -&gt; uint32" Usage="seesaw.ReadGpioInterruptFlags " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read all the Gpio interrupt flags. Clears any flags when read.
+            </summary>
+        <returns>
+            A 32bit integer containing 1 bit for each for the first 32 bins. If a bit is set to 1 then the interrupt is signaled for the associated pin..
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGpioInterrupts">
+      <MemberSignature Language="C#" Value="public void SetGpioInterrupts (uint pins, bool enable);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetGpioInterrupts(unsigned int32 pins, bool enable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.SetGpioInterrupts(System.UInt32,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetGpioInterrupts (pins As UInteger, enable As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.SetGpioInterrupts : uint32 * bool -&gt; unit" Usage="seesaw.SetGpioInterrupts (pins, enable)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pins" Type="System.UInt32" />
+        <Parameter Name="enable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pins">A 32bit integer containing 1 bit for each pin. If a bit is set to 1 then the interrupt is enabled for the associated pin..</param>
+        <param name="enable">A boolean value that indicates that interrupts are enabled when true or disabled when false.</param>
+        <summary>
+            Enable or disable interrupts for a GPIO pin.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGpioPinMode">
+      <MemberSignature Language="C#" Value="public void SetGpioPinMode (byte pin, System.Device.Gpio.PinMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetGpioPinMode(unsigned int8 pin, valuetype System.Device.Gpio.PinMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.SetGpioPinMode(System.Byte,System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetGpioPinMode (pin As Byte, mode As PinMode)" />
+      <MemberSignature Language="F#" Value="member this.SetGpioPinMode : byte * System.Device.Gpio.PinMode -&gt; unit" Usage="seesaw.SetGpioPinMode (pin, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pin" Type="System.Byte" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pin">The pin that has its mode set.</param>
+        <param name="mode">The pin mode to be set.</param>
+        <summary>
+            Set the PinMode for a GPIO Pin.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGpioPinModeBulk">
+      <MemberSignature Language="C#" Value="public void SetGpioPinModeBulk (ulong pins, System.Device.Gpio.PinMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetGpioPinModeBulk(unsigned int64 pins, valuetype System.Device.Gpio.PinMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.SetGpioPinModeBulk(System.UInt64,System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetGpioPinModeBulk (pins As ULong, mode As PinMode)" />
+      <MemberSignature Language="F#" Value="member this.SetGpioPinModeBulk : uint64 * System.Device.Gpio.PinMode -&gt; unit" Usage="seesaw.SetGpioPinModeBulk (pins, mode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pins" Type="System.UInt64" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pins">A 64bit integer containing 1 bit for each pin. If a bit is set to 1 then the pin mode is set for the associated pin.</param>
+        <param name="mode">The pin mode to be set.</param>
+        <summary>
+            Set the PinMode for a number of GPIO pins
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetI2cAddress">
+      <MemberSignature Language="C#" Value="public void SetI2cAddress (byte i2cAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetI2cAddress(unsigned int8 i2cAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.SetI2cAddress(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetI2cAddress (i2cAddress As Byte)" />
+      <MemberSignature Language="F#" Value="member this.SetI2cAddress : byte -&gt; unit" Usage="seesaw.SetI2cAddress i2cAddress" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i2cAddress" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="i2cAddress">The new I2C address to be used.</param>
+        <summary>
+            Change the I2C address that the Seesaw board listens on. Note that this will reset communications
+            with the host device and dispose the current I2cDevice.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SoftwareReset">
+      <MemberSignature Language="C#" Value="public void SoftwareReset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SoftwareReset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.SoftwareReset" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SoftwareReset ()" />
+      <MemberSignature Language="F#" Value="member this.SoftwareReset : unit -&gt; unit" Usage="seesaw.SoftwareReset " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Performs a soft reset of the SeeSaw module.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TouchRead">
+      <MemberSignature Language="C#" Value="public ushort TouchRead (byte pinId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int16 TouchRead(unsigned int8 pinId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.TouchRead(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TouchRead (pinId As Byte) As UShort" />
+      <MemberSignature Language="F#" Value="member this.TouchRead : byte -&gt; uint16" Usage="seesaw.TouchRead pinId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinId" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="pinId">The number of the pin to read.</param>
+        <summary>
+            Reads the analog value on an capacitive touch-enabled pin.
+            </summary>
+        <returns>An analogue value betweeen 0 and 1023 that represents the capacitance read from the pin.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public uint Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 Version" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seesaw.Seesaw.Version" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Version As UInteger" />
+      <MemberSignature Language="F#" Value="member this.Version : uint32" Usage="Iot.Device.Seesaw.Seesaw.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Version of the SeeSaw module.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="protected void Write (Iot.Device.Seesaw.Seesaw.SeesawModule moduleAddress, Iot.Device.Seesaw.Seesaw.SeesawFunction functionAddress, ReadOnlySpan&lt;byte&gt; data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void Write(valuetype Iot.Device.Seesaw.Seesaw/SeesawModule moduleAddress, valuetype Iot.Device.Seesaw.Seesaw/SeesawFunction functionAddress, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.Write(Iot.Device.Seesaw.Seesaw.SeesawModule,Iot.Device.Seesaw.Seesaw.SeesawFunction,System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub Write (moduleAddress As Seesaw.SeesawModule, functionAddress As Seesaw.SeesawFunction, data As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="member this.Write : Iot.Device.Seesaw.Seesaw.SeesawModule * Iot.Device.Seesaw.Seesaw.SeesawFunction * ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="seesaw.Write (moduleAddress, functionAddress, data)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="moduleAddress" Type="Iot.Device.Seesaw.Seesaw+SeesawModule" />
+        <Parameter Name="functionAddress" Type="Iot.Device.Seesaw.Seesaw+SeesawFunction" />
+        <Parameter Name="data" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="moduleAddress">An Seesaw_Module enum that represents the module that we are writing to.</param>
+        <param name="functionAddress">An Seesaw_Function enum that represents the Seesaw function to be called.</param>
+        <param name="data">The Span containg data to be send as a parameter or parameters to the Seesaw device.</param>
+        <summary>
+            Write a series of bytes to the I2cDevice connected to the Seesaw board.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteByte">
+      <MemberSignature Language="C#" Value="protected void WriteByte (Iot.Device.Seesaw.Seesaw.SeesawModule moduleAddress, Iot.Device.Seesaw.Seesaw.SeesawFunction functionAddress, byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void WriteByte(valuetype Iot.Device.Seesaw.Seesaw/SeesawModule moduleAddress, valuetype Iot.Device.Seesaw.Seesaw/SeesawFunction functionAddress, unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.WriteByte(Iot.Device.Seesaw.Seesaw.SeesawModule,Iot.Device.Seesaw.Seesaw.SeesawFunction,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub WriteByte (moduleAddress As Seesaw.SeesawModule, functionAddress As Seesaw.SeesawFunction, value As Byte)" />
+      <MemberSignature Language="F#" Value="member this.WriteByte : Iot.Device.Seesaw.Seesaw.SeesawModule * Iot.Device.Seesaw.Seesaw.SeesawFunction * byte -&gt; unit" Usage="seesaw.WriteByte (moduleAddress, functionAddress, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="moduleAddress" Type="Iot.Device.Seesaw.Seesaw+SeesawModule" />
+        <Parameter Name="functionAddress" Type="Iot.Device.Seesaw.Seesaw+SeesawFunction" />
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="moduleAddress">An Seesaw_Module enum that represents the module that we are writing to.</param>
+        <param name="functionAddress">An Seesaw_Function enum that represents the Seesaw function to be called.</param>
+        <param name="value">The byte value ro be send as a parameter to the Seesaw device.</param>
+        <summary>
+            Write a byte to the I2cDevice connected to the Seesaw board.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEEProm">
+      <MemberSignature Language="C#" Value="public void WriteEEProm (byte eepromAddress, byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteEEProm(unsigned int8 eepromAddress, unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.WriteEEProm(System.Byte,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteEEProm (eepromAddress As Byte, data As Byte())" />
+      <MemberSignature Language="F#" Value="member this.WriteEEProm : byte * byte[] -&gt; unit" Usage="seesaw.WriteEEProm (eepromAddress, data)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eepromAddress" Type="System.Byte" />
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="eepromAddress">The point in the EEProm area to start writing the data.</param>
+        <param name="data">The bytes to be written into the EEProm area.</param>
+        <summary>
+            Write a byte array to the EEProm area on the Seesaw module.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEEPromByte">
+      <MemberSignature Language="C#" Value="public void WriteEEPromByte (byte eepromAddress, byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteEEPromByte(unsigned int8 eepromAddress, unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.WriteEEPromByte(System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteEEPromByte (eepromAddress As Byte, value As Byte)" />
+      <MemberSignature Language="F#" Value="member this.WriteEEPromByte : byte * byte -&gt; unit" Usage="seesaw.WriteEEPromByte (eepromAddress, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eepromAddress" Type="System.Byte" />
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="eepromAddress">The point in the EEProm area to write the byte.</param>
+        <param name="value">The value to write into the EEProm area.</param>
+        <summary>
+            Write a byte to the EEProm area on the Seesaw module.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteGpioDigital">
+      <MemberSignature Language="C#" Value="public void WriteGpioDigital (byte pin, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteGpioDigital(unsigned int8 pin, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.WriteGpioDigital(System.Byte,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteGpioDigital (pin As Byte, value As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.WriteGpioDigital : byte * bool -&gt; unit" Usage="seesaw.WriteGpioDigital (pin, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pin" Type="System.Byte" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pin">The pin that has its value set.</param>
+        <param name="value">The pin value to be set.</param>
+        <summary>
+            Write a value to GPIO pin
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteGpioDigitalBulk">
+      <MemberSignature Language="C#" Value="public void WriteGpioDigitalBulk (ulong pins, bool value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteGpioDigitalBulk(unsigned int64 pins, bool value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.WriteGpioDigitalBulk(System.UInt64,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteGpioDigitalBulk (pins As ULong, value As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.WriteGpioDigitalBulk : uint64 * bool -&gt; unit" Usage="seesaw.WriteGpioDigitalBulk (pins, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pins" Type="System.UInt64" />
+        <Parameter Name="value" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pins">A 64bit integer containing 1 bit for each pin. If a bit is set to 1 then the pin value is set for the associated pin.</param>
+        <param name="value">The pin value to be set.</param>
+        <summary>
+            Write a value to a number of GPIO pins
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

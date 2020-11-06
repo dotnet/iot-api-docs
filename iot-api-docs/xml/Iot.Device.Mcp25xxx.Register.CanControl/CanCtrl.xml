@@ -1,0 +1,268 @@
+<Type Name="CanCtrl" FullName="Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl">
+  <TypeSignature Language="C#" Value="public class CanCtrl : Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CanCtrl extends System.Object implements class Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl" />
+  <TypeSignature Language="VB.NET" Value="Public Class CanCtrl&#xA;Implements IRegister" />
+  <TypeSignature Language="F#" Value="type CanCtrl = class&#xA;    interface IRegister" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Mcp25xxx.Register.IRegister</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            CAN Control Register.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CanCtrl (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.#ctor(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (value As Byte)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl : byte -&gt; Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl" Usage="new Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl value" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">The value that represents the register contents.</param>
+        <summary>
+            Initializes a new instance of the CanCtrl class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CanCtrl (Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.PinPrescaler clkOutPinPrescaler, bool clkOutPinEnable, bool oneShotMode, bool abortAllPendingTransmissions, Iot.Device.Mcp25xxx.Tests.Register.CanControl.OperationMode requestOperationMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl/PinPrescaler clkOutPinPrescaler, bool clkOutPinEnable, bool oneShotMode, bool abortAllPendingTransmissions, valuetype Iot.Device.Mcp25xxx.Tests.Register.CanControl.OperationMode requestOperationMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.#ctor(Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.PinPrescaler,System.Boolean,System.Boolean,System.Boolean,Iot.Device.Mcp25xxx.Tests.Register.CanControl.OperationMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (clkOutPinPrescaler As CanCtrl.PinPrescaler, clkOutPinEnable As Boolean, oneShotMode As Boolean, abortAllPendingTransmissions As Boolean, requestOperationMode As OperationMode)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl : Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.PinPrescaler * bool * bool * bool * Iot.Device.Mcp25xxx.Tests.Register.CanControl.OperationMode -&gt; Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl" Usage="new Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl (clkOutPinPrescaler, clkOutPinEnable, oneShotMode, abortAllPendingTransmissions, requestOperationMode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="clkOutPinPrescaler" Type="Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl+PinPrescaler" />
+        <Parameter Name="clkOutPinEnable" Type="System.Boolean" />
+        <Parameter Name="oneShotMode" Type="System.Boolean" />
+        <Parameter Name="abortAllPendingTransmissions" Type="System.Boolean" />
+        <Parameter Name="requestOperationMode" Type="Iot.Device.Mcp25xxx.Tests.Register.CanControl.OperationMode" />
+      </Parameters>
+      <Docs>
+        <param name="clkOutPinPrescaler">CLKPRE[1:0]: CLKOUT Pin Prescaler bits.</param>
+        <param name="clkOutPinEnable">
+            CLKEN: CLKOUT Pin Enable bit.
+            True = CLKOUT pin is enabled.
+            False = CLKOUT pin is disabled(pin is in a high-impedance state).
+            </param>
+        <param name="oneShotMode">
+            OSM: One-Shot Mode bit.
+            True = Enabled: Message will only attempt to transmit one time.
+            False = Disabled: Messages will reattempt transmission if required.
+            </param>
+        <param name="abortAllPendingTransmissions">
+            ABAT: Abort All Pending Transmissions bit.
+            True = Requests abort of all pending transmit buffers.
+            False = Terminates request to abort all transmissions.
+            </param>
+        <param name="requestOperationMode">REQOP[2:0]: Request Operation mode bits.</param>
+        <summary>
+            Initializes a new instance of the CanCtrl class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AbortAllPendingTransmissions">
+      <MemberSignature Language="C#" Value="public bool AbortAllPendingTransmissions { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AbortAllPendingTransmissions" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.AbortAllPendingTransmissions" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AbortAllPendingTransmissions As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AbortAllPendingTransmissions : bool" Usage="Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.AbortAllPendingTransmissions" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ABAT: Abort All Pending Transmissions bit.
+            True = Requests abort of all pending transmit buffers.
+            False = Terminates request to abort all transmissions.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mcp25xxx.Register.Address Address { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Mcp25xxx.Register.Address Address" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.Address" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Address As Address" />
+      <MemberSignature Language="F#" Value="member this.Address : Iot.Device.Mcp25xxx.Register.Address" Usage="Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.Address" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Mcp25xxx.Register.IRegister.Address</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp25xxx.Register.Address</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the address of the register.
+            </summary>
+        <value>The address of the register.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClkOutPinEnable">
+      <MemberSignature Language="C#" Value="public bool ClkOutPinEnable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ClkOutPinEnable" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.ClkOutPinEnable" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ClkOutPinEnable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ClkOutPinEnable : bool" Usage="Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.ClkOutPinEnable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            CLKEN: CLKOUT Pin Enable bit.
+            True = CLKOUT pin is enabled.
+            False = CLKOUT pin is disabled (pin is in a high-impedance state).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClkOutPinPrescaler">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.PinPrescaler ClkOutPinPrescaler { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl/PinPrescaler ClkOutPinPrescaler" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.ClkOutPinPrescaler" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ClkOutPinPrescaler As CanCtrl.PinPrescaler" />
+      <MemberSignature Language="F#" Value="member this.ClkOutPinPrescaler : Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.PinPrescaler" Usage="Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.ClkOutPinPrescaler" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl+PinPrescaler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            CLKPRE[1:0]: CLKOUT Pin Prescaler bits.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OneShotMode">
+      <MemberSignature Language="C#" Value="public bool OneShotMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OneShotMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.OneShotMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OneShotMode As Boolean" />
+      <MemberSignature Language="F#" Value="member this.OneShotMode : bool" Usage="Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.OneShotMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            OSM: One-Shot Mode bit.
+            True = Enabled: Message will only attempt to transmit one time.
+            False = Disabled: Messages will reattempt transmission if required.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestOperationMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mcp25xxx.Tests.Register.CanControl.OperationMode RequestOperationMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Mcp25xxx.Tests.Register.CanControl.OperationMode RequestOperationMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.RequestOperationMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequestOperationMode As OperationMode" />
+      <MemberSignature Language="F#" Value="member this.RequestOperationMode : Iot.Device.Mcp25xxx.Tests.Register.CanControl.OperationMode" Usage="Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.RequestOperationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp25xxx.Tests.Register.CanControl.OperationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            REQOP[2:0]: Request Operation mode bits.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToByte">
+      <MemberSignature Language="C#" Value="public byte ToByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8 ToByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.CanControl.CanCtrl.ToByte" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToByte () As Byte" />
+      <MemberSignature Language="F#" Value="abstract member ToByte : unit -&gt; byte&#xA;override this.ToByte : unit -&gt; byte" Usage="canCtrl.ToByte " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Mcp25xxx.Register.IRegister.ToByte</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Converts register contents to a byte.
+            </summary>
+        <returns>The byte that represent the register contents.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

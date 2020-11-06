@@ -1,0 +1,140 @@
+<Type Name="Lcd2004" FullName="Iot.Device.CharacterLcd.Lcd2004">
+  <TypeSignature Language="C#" Value="public class Lcd2004 : Iot.Device.CharacterLcd.Hd44780" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Lcd2004 extends Iot.Device.CharacterLcd.Hd44780" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.CharacterLcd.Lcd2004" />
+  <TypeSignature Language="VB.NET" Value="Public Class Lcd2004&#xA;Inherits Hd44780" />
+  <TypeSignature Language="F#" Value="type Lcd2004 = class&#xA;    inherit Hd44780" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.CharacterLcd.Hd44780</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            20x4 HD44780 compatible character LCD display.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lcd2004 (Iot.Device.CharacterLcd.LcdInterface lcdInterface);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.CharacterLcd.LcdInterface lcdInterface) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Lcd2004.#ctor(Iot.Device.CharacterLcd.LcdInterface)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (lcdInterface As LcdInterface)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.CharacterLcd.Lcd2004 : Iot.Device.CharacterLcd.LcdInterface -&gt; Iot.Device.CharacterLcd.Lcd2004" Usage="new Iot.Device.CharacterLcd.Lcd2004 lcdInterface" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="lcdInterface" Type="Iot.Device.CharacterLcd.LcdInterface" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="lcdInterface">The LCD Interface</param>
+        <summary>
+            Constructs a new LCD 20x4 controller with the given interface
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lcd2004 (System.Device.I2c.I2cDevice device, bool uses8Bit = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice device, bool uses8Bit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Lcd2004.#ctor(System.Device.I2c.I2cDevice,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (device As I2cDevice, Optional uses8Bit As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.CharacterLcd.Lcd2004 : System.Device.I2c.I2cDevice * bool -&gt; Iot.Device.CharacterLcd.Lcd2004" Usage="new Iot.Device.CharacterLcd.Lcd2004 (device, uses8Bit)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="device" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="uses8Bit" Type="System.Boolean" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="device">The I2c device for the LCD.</param>
+        <param name="uses8Bit">True if the device uses 8 Bit commands, false if it handles only 4 bit commands.</param>
+        <summary>
+            Constructs a new HD44780 based 16x2 LCD controller with integrated I2c support.
+            </summary>
+        <remarks>
+            This is for on-chip I2c support. For connecting via I2c GPIO expanders, use the GPIO constructor <see cref="M:Iot.Device.CharacterLcd.Lcd1602.#ctor(System.Int32,System.Int32,System.Int32[],System.Int32,System.Single,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lcd2004 (int registerSelectPin, int enablePin, int[] dataPins, int backlightPin = -1, float backlightBrightness = 1, int readWritePin = -1, System.Device.Gpio.GpioController controller = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 registerSelectPin, int32 enablePin, int32[] dataPins, int32 backlightPin, float32 backlightBrightness, int32 readWritePin, class System.Device.Gpio.GpioController controller) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Lcd2004.#ctor(System.Int32,System.Int32,System.Int32[],System.Int32,System.Single,System.Int32,System.Device.Gpio.GpioController)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (registerSelectPin As Integer, enablePin As Integer, dataPins As Integer(), Optional backlightPin As Integer = -1, Optional backlightBrightness As Single = 1, Optional readWritePin As Integer = -1, Optional controller As GpioController = Nothing)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.CharacterLcd.Lcd2004 : int * int * int[] * int * single * int * System.Device.Gpio.GpioController -&gt; Iot.Device.CharacterLcd.Lcd2004" Usage="new Iot.Device.CharacterLcd.Lcd2004 (registerSelectPin, enablePin, dataPins, backlightPin, backlightBrightness, readWritePin, controller)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="registerSelectPin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="enablePin" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="dataPins" Type="System.Int32[]" Index="2" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="backlightPin" Type="System.Int32" Index="3" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="backlightBrightness" Type="System.Single" Index="4" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="readWritePin" Type="System.Int32" Index="5" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="6" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="registerSelectPin">To be added.</param>
+        <param name="enablePin">To be added.</param>
+        <param name="dataPins">To be added.</param>
+        <param name="backlightPin">To be added.</param>
+        <param name="backlightBrightness">To be added.</param>
+        <param name="readWritePin">To be added.</param>
+        <param name="controller">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lcd2004 (int registerSelectPin, int enablePin, int[] dataPins, int backlightPin = -1, float backlightBrightness = 1, int readWritePin = -1, System.Device.Gpio.GpioController controller = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 registerSelectPin, int32 enablePin, int32[] dataPins, int32 backlightPin, float32 backlightBrightness, int32 readWritePin, class System.Device.Gpio.GpioController controller, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.Lcd2004.#ctor(System.Int32,System.Int32,System.Int32[],System.Int32,System.Single,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (registerSelectPin As Integer, enablePin As Integer, dataPins As Integer(), Optional backlightPin As Integer = -1, Optional backlightBrightness As Single = 1, Optional readWritePin As Integer = -1, Optional controller As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.CharacterLcd.Lcd2004 : int * int * int[] * int * single * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.CharacterLcd.Lcd2004" Usage="new Iot.Device.CharacterLcd.Lcd2004 (registerSelectPin, enablePin, dataPins, backlightPin, backlightBrightness, readWritePin, controller, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="registerSelectPin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="enablePin" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="dataPins" Type="System.Int32[]" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="backlightPin" Type="System.Int32" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="backlightBrightness" Type="System.Single" Index="4" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="readWritePin" Type="System.Int32" Index="5" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="6" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="7" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="registerSelectPin">The pin that controls the regsiter select.</param>
+        <param name="enablePin">The pin that controls the enable switch.</param>
+        <param name="dataPins">Collection of pins holding the data that will be printed on the screen.</param>
+        <param name="backlightPin">The optional pin that controls the backlight of the display.</param>
+        <param name="backlightBrightness">The brightness of the backlight. 0.0 for off, 1.0 for on.</param>
+        <param name="readWritePin">The optional pin that controls the read and write switch.</param>
+        <param name="controller">The controller to use with the LCD. If not specified, uses the platform default.</param>
+        <param name="shouldDispose">True to dispose the Gpio Controller</param>
+        <summary>
+            Constructs a new HD44780 based 20x4 LCD controller.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

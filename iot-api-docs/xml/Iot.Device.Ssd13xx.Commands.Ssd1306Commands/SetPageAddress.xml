@@ -1,0 +1,161 @@
+<Type Name="SetPageAddress" FullName="Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetPageAddress">
+  <TypeSignature Language="C#" Value="public class SetPageAddress : Iot.Device.Ssd13xx.Commands.ISsd1306Command" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SetPageAddress extends System.Object implements class Iot.Device.Ssd13xx.Commands.ICommand, class Iot.Device.Ssd13xx.Commands.ISsd1306Command" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetPageAddress" />
+  <TypeSignature Language="VB.NET" Value="Public Class SetPageAddress&#xA;Implements ISsd1306Command" />
+  <TypeSignature Language="F#" Value="type SetPageAddress = class&#xA;    interface ISsd1306Command&#xA;    interface ICommand" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Ssd13xx.Commands.ICommand</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>Iot.Device.Ssd13xx.Commands.ISsd1306Command</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents SetPageAddress command
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SetPageAddress (Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress startAddress = Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress.Page0, Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress endAddress = Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress.Page7);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress startAddress, valuetype Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress endAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetPageAddress.#ctor(Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress,Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional startAddress As PageAddress = Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress.Page0, Optional endAddress As PageAddress = Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress.Page7)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetPageAddress : Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress * Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress -&gt; Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetPageAddress" Usage="new Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetPageAddress (startAddress, endAddress)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="startAddress" Type="Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress" />
+        <Parameter Name="endAddress" Type="Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress" />
+      </Parameters>
+      <Docs>
+        <param name="startAddress">Page start address with a range of 0-7.</param>
+        <param name="endAddress">Page end address with a range of 0-7.</param>
+        <summary>
+            This triple byte command specifies page start address and end address of the display data RAM.
+            This command also sets the page address pointer to page start address. This pointer is used to
+            define the current read/write page address in graphic display data RAM. If vertical address
+            increment mode is enabled by command 20h, after finishing read/write one page data, it is
+            incremented automatically to the next page address. Whenever the page address pointer finishes
+            accessing the end page address, it is reset back to start page address.
+            This command is only for horizontal or vertical addressing modes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EndAddress">
+      <MemberSignature Language="C#" Value="public Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress EndAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress EndAddress" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetPageAddress.EndAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Property EndAddress As PageAddress" />
+      <MemberSignature Language="F#" Value="member this.EndAddress : Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress with get, set" Usage="Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetPageAddress.EndAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Page end address with a range of 0-7.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBytes">
+      <MemberSignature Language="C#" Value="public byte[] GetBytes ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8[] GetBytes() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetPageAddress.GetBytes" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetBytes () As Byte()" />
+      <MemberSignature Language="F#" Value="abstract member GetBytes : unit -&gt; byte[]&#xA;override this.GetBytes : unit -&gt; byte[]" Usage="setPageAddress.GetBytes " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Ssd13xx.Commands.ICommand.GetBytes</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the bytes that represent the command.
+            </summary>
+        <returns>The bytes that represent the command.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public byte Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetPageAddress.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As Byte" />
+      <MemberSignature Language="F#" Value="member this.Id : byte" Usage="Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetPageAddress.Id" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Ssd13xx.Commands.ICommand.Id</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The value that represents the command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartAddress">
+      <MemberSignature Language="C#" Value="public Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress StartAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress StartAddress" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetPageAddress.StartAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Property StartAddress As PageAddress" />
+      <MemberSignature Language="F#" Value="member this.StartAddress : Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress with get, set" Usage="Iot.Device.Ssd13xx.Commands.Ssd1306Commands.SetPageAddress.StartAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ssd13xx.Commands.Ssd1306Commands.PageAddress</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Page start address with a range of 0-7.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

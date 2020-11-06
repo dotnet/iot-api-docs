@@ -1,0 +1,790 @@
+<Type Name="Bno055Sensor" FullName="Iot.Device.Bno055.Bno055Sensor">
+  <TypeSignature Language="C#" Value="public class Bno055Sensor : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Bno055Sensor extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Bno055.Bno055Sensor" />
+  <TypeSignature Language="VB.NET" Value="Public Class Bno055Sensor&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Bno055Sensor = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            BNO055 - inertial measurement unit (IMU)
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bno055Sensor (System.Device.I2c.I2cDevice i2cDevice, Iot.Device.Bno055.OperationMode operationMode = Iot.Device.Bno055.OperationMode.AccelerometerMagnetometerGyroscopeRelativeOrientation, bool autoDispoable = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, valuetype Iot.Device.Bno055.OperationMode operationMode, bool autoDispoable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bno055.Bno055Sensor.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Bno055.OperationMode,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional operationMode As OperationMode = Iot.Device.Bno055.OperationMode.AccelerometerMagnetometerGyroscopeRelativeOrientation, Optional autoDispoable As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Bno055.Bno055Sensor : System.Device.I2c.I2cDevice * Iot.Device.Bno055.OperationMode * bool -&gt; Iot.Device.Bno055.Bno055Sensor" Usage="new Iot.Device.Bno055.Bno055Sensor (i2cDevice, operationMode, autoDispoable)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="operationMode" Type="Iot.Device.Bno055.OperationMode" />
+        <Parameter Name="autoDispoable" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C Device</param>
+        <param name="operationMode">The operation mode to setup</param>
+        <param name="autoDispoable">true to dispose the I2C device at dispose</param>
+        <summary>
+            Create an BNO055 sensor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Accelerometer">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 Accelerometer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector3 Accelerometer" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bno055.Bno055Sensor.Accelerometer" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Accelerometer As Vector3" />
+      <MemberSignature Language="F#" Value="member this.Accelerometer : System.Numerics.Vector3" Usage="Iot.Device.Bno055.Bno055Sensor.Accelerometer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the accelerometer
+            Acceleration Vector (100Hz)
+            Three axis of acceleration (gravity + linear motion)
+            Default unit in m/s^2, can be changed for mg
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte DefaultI2cAddress = 40;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 DefaultI2cAddress = (40)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Bno055.Bno055Sensor.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Byte  = 40" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : byte" Usage="Iot.Device.Bno055.Bno055Sensor.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>40</MemberValue>
+      <Docs>
+        <summary>
+            The default I2C Address, page 91 of the main documentation
+            https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BNO055-DS000.pdf
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bno055.Bno055Sensor.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="bno055Sensor.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetAccelerometerCalibrationData">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector4 GetAccelerometerCalibrationData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Numerics.Vector4 GetAccelerometerCalibrationData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bno055.Bno055Sensor.GetAccelerometerCalibrationData" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAccelerometerCalibrationData () As Vector4" />
+      <MemberSignature Language="F#" Value="member this.GetAccelerometerCalibrationData : unit -&gt; System.Numerics.Vector4" Usage="bno055Sensor.GetAccelerometerCalibrationData " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the accelerometer calibration data
+            </summary>
+        <returns>Returns the accelerometers calibration data</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAxisMap">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bno055.AxisSetting[] GetAxisMap ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Bno055.AxisSetting[] GetAxisMap() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bno055.Bno055Sensor.GetAxisMap" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAxisMap () As AxisSetting()" />
+      <MemberSignature Language="F#" Value="member this.GetAxisMap : unit -&gt; Iot.Device.Bno055.AxisSetting[]" Usage="bno055Sensor.GetAxisMap " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bno055.AxisSetting[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the Axis map
+            </summary>
+        <returns>Returns an array where first element is axis X, then Y then Z</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCalibrationStatus">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bno055.CalibrationStatus GetCalibrationStatus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.Bno055.CalibrationStatus GetCalibrationStatus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bno055.Bno055Sensor.GetCalibrationStatus" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCalibrationStatus () As CalibrationStatus" />
+      <MemberSignature Language="F#" Value="member this.GetCalibrationStatus : unit -&gt; Iot.Device.Bno055.CalibrationStatus" Usage="bno055Sensor.GetCalibrationStatus " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bno055.CalibrationStatus</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the calibration status for the system and sensors
+            </summary>
+        <returns>Calibration status</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetError">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bno055.Error GetError ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.Bno055.Error GetError() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bno055.Bno055Sensor.GetError" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetError () As Error" />
+      <MemberSignature Language="F#" Value="member this.GetError : unit -&gt; Iot.Device.Bno055.Error" Usage="bno055Sensor.GetError " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bno055.Error</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the latest error
+            </summary>
+        <returns>eturns the latest error</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetGyroscopeCalibrationData">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 GetGyroscopeCalibrationData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Numerics.Vector3 GetGyroscopeCalibrationData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bno055.Bno055Sensor.GetGyroscopeCalibrationData" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetGyroscopeCalibrationData () As Vector3" />
+      <MemberSignature Language="F#" Value="member this.GetGyroscopeCalibrationData : unit -&gt; System.Numerics.Vector3" Usage="bno055Sensor.GetGyroscopeCalibrationData " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the gyroscope calibration data
+            </summary>
+        <returns>X, Y and Z data</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInteruptStatus">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bno055.InteruptStatus GetInteruptStatus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.Bno055.InteruptStatus GetInteruptStatus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bno055.Bno055Sensor.GetInteruptStatus" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetInteruptStatus () As InteruptStatus" />
+      <MemberSignature Language="F#" Value="member this.GetInteruptStatus : unit -&gt; Iot.Device.Bno055.InteruptStatus" Usage="bno055Sensor.GetInteruptStatus " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bno055.InteruptStatus</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the interupt status
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMagnetometerCalibrationData">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector4 GetMagnetometerCalibrationData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Numerics.Vector4 GetMagnetometerCalibrationData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bno055.Bno055Sensor.GetMagnetometerCalibrationData" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetMagnetometerCalibrationData () As Vector4" />
+      <MemberSignature Language="F#" Value="member this.GetMagnetometerCalibrationData : unit -&gt; System.Numerics.Vector4" Usage="bno055Sensor.GetMagnetometerCalibrationData " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the magnetometer calibration data
+            </summary>
+        <returns>Returns the magnetometer calibration data</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetStatus">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bno055.Status GetStatus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.Bno055.Status GetStatus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bno055.Bno055Sensor.GetStatus" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetStatus () As Status" />
+      <MemberSignature Language="F#" Value="member this.GetStatus : unit -&gt; Iot.Device.Bno055.Status" Usage="bno055Sensor.GetStatus " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bno055.Status</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the status. If there is an error, GetError() will give more details
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Gravity">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 Gravity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector3 Gravity" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bno055.Bno055Sensor.Gravity" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Gravity As Vector3" />
+      <MemberSignature Language="F#" Value="member this.Gravity : System.Numerics.Vector3" Usage="Iot.Device.Bno055.Bno055Sensor.Gravity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the gravity
+            Gravity Vector (100Hz)
+            Three axis of gravitational acceleration (minus any movement)
+            Default unit in m/s^2, can be changed for mg
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Gyroscope">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 Gyroscope { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector3 Gyroscope" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bno055.Bno055Sensor.Gyroscope" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Gyroscope As Vector3" />
+      <MemberSignature Language="F#" Value="member this.Gyroscope : System.Numerics.Vector3" Usage="Iot.Device.Bno055.Bno055Sensor.Gyroscope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the gyroscope
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Info">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bno055.Info Info { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Bno055.Info Info" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bno055.Bno055Sensor.Info" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Info As Info" />
+      <MemberSignature Language="F#" Value="member this.Info : Iot.Device.Bno055.Info" Usage="Iot.Device.Bno055.Bno055Sensor.Info" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bno055.Info</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the information about various sensor system versions and ID
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinearAcceleration">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 LinearAcceleration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector3 LinearAcceleration" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bno055.Bno055Sensor.LinearAcceleration" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LinearAcceleration As Vector3" />
+      <MemberSignature Language="F#" Value="member this.LinearAcceleration : System.Numerics.Vector3" Usage="Iot.Device.Bno055.Bno055Sensor.LinearAcceleration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the linear acceleration
+            Linear Acceleration Vector (100Hz)
+            Three axis of linear acceleration data (acceleration minus gravity)
+            Default unit in m/s^2, can be changed for mg
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Magnetometer">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 Magnetometer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector3 Magnetometer" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bno055.Bno055Sensor.Magnetometer" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Magnetometer As Vector3" />
+      <MemberSignature Language="F#" Value="member this.Magnetometer : System.Numerics.Vector3" Usage="Iot.Device.Bno055.Bno055Sensor.Magnetometer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the Magnetometer
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bno055.OperationMode OperationMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Bno055.OperationMode OperationMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bno055.Bno055Sensor.OperationMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property OperationMode As OperationMode" />
+      <MemberSignature Language="F#" Value="member this.OperationMode : Iot.Device.Bno055.OperationMode with get, set" Usage="Iot.Device.Bno055.Bno055Sensor.OperationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bno055.OperationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get/Set the operation mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Orientation">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 Orientation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector3 Orientation" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bno055.Bno055Sensor.Orientation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Orientation As Vector3" />
+      <MemberSignature Language="F#" Value="member this.Orientation : System.Numerics.Vector3" Usage="Iot.Device.Bno055.Bno055Sensor.Orientation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the orientation (Euler Angles) X = Heading, Y = Roll, Z = Pitch
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bno055.PowerMode PowerMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Bno055.PowerMode PowerMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bno055.Bno055Sensor.PowerMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property PowerMode As PowerMode" />
+      <MemberSignature Language="F#" Value="member this.PowerMode : Iot.Device.Bno055.PowerMode with get, set" Usage="Iot.Device.Bno055.Bno055Sensor.PowerMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bno055.PowerMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set/Get the power mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Quaternion">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector4 Quaternion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector4 Quaternion" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bno055.Bno055Sensor.Quaternion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Quaternion As Vector4" />
+      <MemberSignature Language="F#" Value="member this.Quaternion : System.Numerics.Vector4" Usage="Iot.Device.Bno055.Bno055Sensor.Quaternion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector4</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the quaternion, unit is 1 Quaternion (unit less) = 2^14 returned result
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunSelfTest">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bno055.TestResult RunSelfTest ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.Bno055.TestResult RunSelfTest() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bno055.Bno055Sensor.RunSelfTest" />
+      <MemberSignature Language="VB.NET" Value="Public Function RunSelfTest () As TestResult" />
+      <MemberSignature Language="F#" Value="member this.RunSelfTest : unit -&gt; Iot.Device.Bno055.TestResult" Usage="bno055Sensor.RunSelfTest " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bno055.TestResult</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Run a self test. In case of error, use GetStatus() and GetError() to get the last error
+            </summary>
+        <returns>Status fo the test</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecondI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte SecondI2cAddress = 41;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 SecondI2cAddress = (41)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Bno055.Bno055Sensor.SecondI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const SecondI2cAddress As Byte  = 41" />
+      <MemberSignature Language="F#" Value="val mutable SecondI2cAddress : byte" Usage="Iot.Device.Bno055.Bno055Sensor.SecondI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>41</MemberValue>
+      <Docs>
+        <summary>
+            This is the second I2C Address. It needs to be activated to be valid
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAccelerometerCalibrationData">
+      <MemberSignature Language="C#" Value="public void SetAccelerometerCalibrationData (System.Numerics.Vector4 calibrationData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAccelerometerCalibrationData(valuetype System.Numerics.Vector4 calibrationData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bno055.Bno055Sensor.SetAccelerometerCalibrationData(System.Numerics.Vector4)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetAccelerometerCalibrationData (calibrationData As Vector4)" />
+      <MemberSignature Language="F#" Value="member this.SetAccelerometerCalibrationData : System.Numerics.Vector4 -&gt; unit" Usage="bno055Sensor.SetAccelerometerCalibrationData calibrationData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="calibrationData" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="calibrationData">Calibration data</param>
+        <summary>
+            Set the accelerometer calibration data
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAxisMap">
+      <MemberSignature Language="C#" Value="public void SetAxisMap (Iot.Device.Bno055.AxisSetting x, Iot.Device.Bno055.AxisSetting y, Iot.Device.Bno055.AxisSetting z);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAxisMap(class Iot.Device.Bno055.AxisSetting x, class Iot.Device.Bno055.AxisSetting y, class Iot.Device.Bno055.AxisSetting z) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bno055.Bno055Sensor.SetAxisMap(Iot.Device.Bno055.AxisSetting,Iot.Device.Bno055.AxisSetting,Iot.Device.Bno055.AxisSetting)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetAxisMap (x As AxisSetting, y As AxisSetting, z As AxisSetting)" />
+      <MemberSignature Language="F#" Value="member this.SetAxisMap : Iot.Device.Bno055.AxisSetting * Iot.Device.Bno055.AxisSetting * Iot.Device.Bno055.AxisSetting -&gt; unit" Usage="bno055Sensor.SetAxisMap (x, y, z)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="Iot.Device.Bno055.AxisSetting" />
+        <Parameter Name="y" Type="Iot.Device.Bno055.AxisSetting" />
+        <Parameter Name="z" Type="Iot.Device.Bno055.AxisSetting" />
+      </Parameters>
+      <Docs>
+        <param name="x">X axis setting</param>
+        <param name="y">Y axis setting</param>
+        <param name="z">Z axis setting</param>
+        <summary>
+            Set the Axis map
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetExternalCrystal">
+      <MemberSignature Language="C#" Value="public void SetExternalCrystal (bool external);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetExternalCrystal(bool external) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bno055.Bno055Sensor.SetExternalCrystal(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetExternalCrystal (external As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.SetExternalCrystal : bool -&gt; unit" Usage="bno055Sensor.SetExternalCrystal external" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="external" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="external">true to set to external</param>
+        <summary>
+            Set internal or external crystal usage.
+            Note: if you don't have an external crystal, don't use this function
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetGyroscopeCalibrationData">
+      <MemberSignature Language="C#" Value="public void SetGyroscopeCalibrationData (System.Numerics.Vector3 calibrationData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetGyroscopeCalibrationData(valuetype System.Numerics.Vector3 calibrationData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bno055.Bno055Sensor.SetGyroscopeCalibrationData(System.Numerics.Vector3)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetGyroscopeCalibrationData (calibrationData As Vector3)" />
+      <MemberSignature Language="F#" Value="member this.SetGyroscopeCalibrationData : System.Numerics.Vector3 -&gt; unit" Usage="bno055Sensor.SetGyroscopeCalibrationData calibrationData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="calibrationData" Type="System.Numerics.Vector3" />
+      </Parameters>
+      <Docs>
+        <param name="calibrationData">X, Y and Z data</param>
+        <summary>
+            Set the gyroscope calibration data
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMagnetometerCalibrationData">
+      <MemberSignature Language="C#" Value="public void SetMagnetometerCalibrationData (System.Numerics.Vector4 calibrationData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMagnetometerCalibrationData(valuetype System.Numerics.Vector4 calibrationData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bno055.Bno055Sensor.SetMagnetometerCalibrationData(System.Numerics.Vector4)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMagnetometerCalibrationData (calibrationData As Vector4)" />
+      <MemberSignature Language="F#" Value="member this.SetMagnetometerCalibrationData : System.Numerics.Vector4 -&gt; unit" Usage="bno055Sensor.SetMagnetometerCalibrationData calibrationData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="calibrationData" Type="System.Numerics.Vector4" />
+      </Parameters>
+      <Docs>
+        <param name="calibrationData">Calibration data</param>
+        <summary>
+            Set the magnetometer calibration data
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Temperature">
+      <MemberSignature Language="C#" Value="public Iot.Units.Temperature Temperature { get; }" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Units.Temperature Temperature" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bno055.Bno055Sensor.Temperature" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Temperature As Temperature" />
+      <MemberSignature Language="F#" Value="member this.Temperature : Iot.Units.Temperature" Usage="Iot.Device.Bno055.Bno055Sensor.Temperature" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature Temperature { get; }" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature Temperature" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="member this.Temperature : UnitsNet.Temperature" Usage="Iot.Device.Bno055.Bno055Sensor.Temperature" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.0">Iot.Units.Temperature</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.1">UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the temperature
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemperatureSource">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bno055.TemperatureSource TemperatureSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Bno055.TemperatureSource TemperatureSource" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bno055.Bno055Sensor.TemperatureSource" />
+      <MemberSignature Language="VB.NET" Value="Public Property TemperatureSource As TemperatureSource" />
+      <MemberSignature Language="F#" Value="member this.TemperatureSource : Iot.Device.Bno055.TemperatureSource with get, set" Usage="Iot.Device.Bno055.Bno055Sensor.TemperatureSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bno055.TemperatureSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set/Get the temperature source
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Units">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bno055.Units Units { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Bno055.Units Units" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bno055.Bno055Sensor.Units" />
+      <MemberSignature Language="VB.NET" Value="Public Property Units As Units" />
+      <MemberSignature Language="F#" Value="member this.Units : Iot.Device.Bno055.Units with get, set" Usage="Iot.Device.Bno055.Bno055Sensor.Units" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bno055.Units</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set/Get the units used. By default, international system is used
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

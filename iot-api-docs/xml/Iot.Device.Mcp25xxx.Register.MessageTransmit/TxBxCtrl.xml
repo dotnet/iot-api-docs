@@ -1,0 +1,328 @@
+<Type Name="TxBxCtrl" FullName="Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl">
+  <TypeSignature Language="C#" Value="public class TxBxCtrl : Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TxBxCtrl extends System.Object implements class Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl" />
+  <TypeSignature Language="VB.NET" Value="Public Class TxBxCtrl&#xA;Implements IRegister" />
+  <TypeSignature Language="F#" Value="type TxBxCtrl = class&#xA;    interface IRegister" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Mcp25xxx.Register.IRegister</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Transmit Buffer Control Register.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TxBxCtrl (byte txBufferNumber, byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 txBufferNumber, unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.#ctor(System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (txBufferNumber As Byte, value As Byte)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl : byte * byte -&gt; Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl" Usage="new Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl (txBufferNumber, value)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="txBufferNumber" Type="System.Byte" />
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="txBufferNumber">Transmit Buffer Number.  Must be a value of 0 - 2.</param>
+        <param name="value">The value that represents the register contents.</param>
+        <summary>
+            Initializes a new instance of the TxBxCtrl class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TxBxCtrl (byte txBufferNumber, Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.BufferPriority transmitBufferPriority, bool messageTransmitRequest, bool transmissionErrorDetected, bool messageLostArbitration, bool messageAbortedFlag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 txBufferNumber, valuetype Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl/BufferPriority transmitBufferPriority, bool messageTransmitRequest, bool transmissionErrorDetected, bool messageLostArbitration, bool messageAbortedFlag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.#ctor(System.Byte,Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.BufferPriority,System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (txBufferNumber As Byte, transmitBufferPriority As TxBxCtrl.BufferPriority, messageTransmitRequest As Boolean, transmissionErrorDetected As Boolean, messageLostArbitration As Boolean, messageAbortedFlag As Boolean)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl : byte * Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.BufferPriority * bool * bool * bool * bool -&gt; Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl" Usage="new Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl (txBufferNumber, transmitBufferPriority, messageTransmitRequest, transmissionErrorDetected, messageLostArbitration, messageAbortedFlag)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="txBufferNumber" Type="System.Byte" />
+        <Parameter Name="transmitBufferPriority" Type="Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl+BufferPriority" />
+        <Parameter Name="messageTransmitRequest" Type="System.Boolean" />
+        <Parameter Name="transmissionErrorDetected" Type="System.Boolean" />
+        <Parameter Name="messageLostArbitration" Type="System.Boolean" />
+        <Parameter Name="messageAbortedFlag" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="txBufferNumber">Transmit Buffer Number.  Must be a value of 0 - 2.</param>
+        <param name="transmitBufferPriority">TXP[1:0]: Transmit Buffer Priority bits.</param>
+        <param name="messageTransmitRequest">
+            TXREQ: Message Transmit Request bit.
+            True = Buffer is currently pending transmission (MCU sets this bit to request message be transmitted bit is automatically cleared when the message is sent).
+            False = Buffer is not currently pending transmission (MCU can clear this bit to request a message abort).
+            </param>
+        <param name="transmissionErrorDetected">
+            TXERR: Transmission Error Detected bit.
+            True = A bus error occurred while the message was being transmitted.
+            False = No bus error occurred while the message was being transmitted.
+            </param>
+        <param name="messageLostArbitration">
+            MLOA: Message Lost Arbitration bit.
+            True = Message lost arbitration while being sent.
+            False = Message did not lose arbitration while being sent.
+            </param>
+        <param name="messageAbortedFlag">
+            ABTF: Message Aborted Flag bit.
+            True = Message was aborted.
+            False = Message completed transmission successfully.
+            </param>
+        <summary>
+            Initializes a new instance of the TxBxCtrl class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mcp25xxx.Register.Address Address { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Mcp25xxx.Register.Address Address" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.Address" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Address As Address" />
+      <MemberSignature Language="F#" Value="member this.Address : Iot.Device.Mcp25xxx.Register.Address" Usage="Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.Address" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Mcp25xxx.Register.IRegister.Address</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp25xxx.Register.Address</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the address of the register.
+            </summary>
+        <value>The address of the register.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTxBufferNumber">
+      <MemberSignature Language="C#" Value="public static byte GetTxBufferNumber (Iot.Device.Mcp25xxx.Register.Address address);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8 GetTxBufferNumber(valuetype Iot.Device.Mcp25xxx.Register.Address address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.GetTxBufferNumber(Iot.Device.Mcp25xxx.Register.Address)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetTxBufferNumber (address As Address) As Byte" />
+      <MemberSignature Language="F#" Value="static member GetTxBufferNumber : Iot.Device.Mcp25xxx.Register.Address -&gt; byte" Usage="Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.GetTxBufferNumber address" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="Iot.Device.Mcp25xxx.Register.Address" />
+      </Parameters>
+      <Docs>
+        <param name="address">The address to look up Tx Buffer Number.</param>
+        <summary>
+            Gets the Tx Buffer Number based on the register address.
+            </summary>
+        <returns>The Tx Buffer Number based on the register address.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageAbortedFlag">
+      <MemberSignature Language="C#" Value="public bool MessageAbortedFlag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MessageAbortedFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.MessageAbortedFlag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageAbortedFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.MessageAbortedFlag : bool" Usage="Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.MessageAbortedFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ABTF: Message Aborted Flag bit.
+            True = Message was aborted.
+            False = Message completed transmission successfully.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageLostArbitration">
+      <MemberSignature Language="C#" Value="public bool MessageLostArbitration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MessageLostArbitration" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.MessageLostArbitration" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageLostArbitration As Boolean" />
+      <MemberSignature Language="F#" Value="member this.MessageLostArbitration : bool" Usage="Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.MessageLostArbitration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            MLOA: Message Lost Arbitration bit.
+            True = Message lost arbitration while being sent.
+            False = Message did not lose arbitration while being sent.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageTransmitRequest">
+      <MemberSignature Language="C#" Value="public bool MessageTransmitRequest { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MessageTransmitRequest" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.MessageTransmitRequest" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageTransmitRequest As Boolean" />
+      <MemberSignature Language="F#" Value="member this.MessageTransmitRequest : bool" Usage="Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.MessageTransmitRequest" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TXREQ: Message Transmit Request bit.
+            True = Buffer is currently pending transmission (MCU sets this bit to request message be transmitted bit is automatically cleared when the message is sent).
+            False = Buffer is not currently pending transmission (MCU can clear this bit to request a message abort).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToByte">
+      <MemberSignature Language="C#" Value="public byte ToByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8 ToByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.ToByte" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToByte () As Byte" />
+      <MemberSignature Language="F#" Value="abstract member ToByte : unit -&gt; byte&#xA;override this.ToByte : unit -&gt; byte" Usage="txBxCtrl.ToByte " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Mcp25xxx.Register.IRegister.ToByte</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Converts register contents to a byte.
+            </summary>
+        <returns>The byte that represent the register contents.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransmissionErrorDetected">
+      <MemberSignature Language="C#" Value="public bool TransmissionErrorDetected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TransmissionErrorDetected" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.TransmissionErrorDetected" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TransmissionErrorDetected As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TransmissionErrorDetected : bool" Usage="Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.TransmissionErrorDetected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TXERR: Transmission Error Detected bit.
+            True = A bus error occurred while the message was being transmitted.
+            False = No bus error occurred while the message was being transmitted.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransmitBufferPriority">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.BufferPriority TransmitBufferPriority { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl/BufferPriority TransmitBufferPriority" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.TransmitBufferPriority" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TransmitBufferPriority As TxBxCtrl.BufferPriority" />
+      <MemberSignature Language="F#" Value="member this.TransmitBufferPriority : Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.BufferPriority" Usage="Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.TransmitBufferPriority" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl+BufferPriority</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TXP[1:0]: Transmit Buffer Priority bits.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TxBufferNumber">
+      <MemberSignature Language="C#" Value="public byte TxBufferNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 TxBufferNumber" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.TxBufferNumber" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TxBufferNumber As Byte" />
+      <MemberSignature Language="F#" Value="member this.TxBufferNumber : byte" Usage="Iot.Device.Mcp25xxx.Register.MessageTransmit.TxBxCtrl.TxBufferNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Transmit Buffer Number.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

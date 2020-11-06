@@ -1,0 +1,179 @@
+<Type Name="Hmc5883l" FullName="Iot.Device.Hmc5883l.Hmc5883l">
+  <TypeSignature Language="C#" Value="public class Hmc5883l : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Hmc5883l extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Hmc5883l.Hmc5883l" />
+  <TypeSignature Language="VB.NET" Value="Public Class Hmc5883l&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Hmc5883l = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            3-Axis Digital Compass HMC5883L
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Hmc5883l (System.Device.I2c.I2cDevice i2cDevice, Iot.Device.Hmc5883l.Gain gain = Iot.Device.Hmc5883l.Gain.Gain1090, Iot.Device.Hmc5883l.MeasuringMode measuringMode = Iot.Device.Hmc5883l.MeasuringMode.Continuous, Iot.Device.Hmc5883l.OutputRate outputRate = Iot.Device.Hmc5883l.OutputRate.Rate15, Iot.Device.Hmc5883l.SamplesAmount samplesAmount = Iot.Device.Hmc5883l.SamplesAmount.One, Iot.Device.Hmc5883l.MeasurementConfiguration measurementConfig = Iot.Device.Hmc5883l.MeasurementConfiguration.Normal);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, valuetype Iot.Device.Hmc5883l.Gain gain, valuetype Iot.Device.Hmc5883l.MeasuringMode measuringMode, valuetype Iot.Device.Hmc5883l.OutputRate outputRate, valuetype Iot.Device.Hmc5883l.SamplesAmount samplesAmount, valuetype Iot.Device.Hmc5883l.MeasurementConfiguration measurementConfig) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hmc5883l.Hmc5883l.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Hmc5883l.Gain,Iot.Device.Hmc5883l.MeasuringMode,Iot.Device.Hmc5883l.OutputRate,Iot.Device.Hmc5883l.SamplesAmount,Iot.Device.Hmc5883l.MeasurementConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional gain As Gain = Iot.Device.Hmc5883l.Gain.Gain1090, Optional measuringMode As MeasuringMode = Iot.Device.Hmc5883l.MeasuringMode.Continuous, Optional outputRate As OutputRate = Iot.Device.Hmc5883l.OutputRate.Rate15, Optional samplesAmount As SamplesAmount = Iot.Device.Hmc5883l.SamplesAmount.One, Optional measurementConfig As MeasurementConfiguration = Iot.Device.Hmc5883l.MeasurementConfiguration.Normal)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Hmc5883l.Hmc5883l : System.Device.I2c.I2cDevice * Iot.Device.Hmc5883l.Gain * Iot.Device.Hmc5883l.MeasuringMode * Iot.Device.Hmc5883l.OutputRate * Iot.Device.Hmc5883l.SamplesAmount * Iot.Device.Hmc5883l.MeasurementConfiguration -&gt; Iot.Device.Hmc5883l.Hmc5883l" Usage="new Iot.Device.Hmc5883l.Hmc5883l (i2cDevice, gain, measuringMode, outputRate, samplesAmount, measurementConfig)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="gain" Type="Iot.Device.Hmc5883l.Gain" />
+        <Parameter Name="measuringMode" Type="Iot.Device.Hmc5883l.MeasuringMode" />
+        <Parameter Name="outputRate" Type="Iot.Device.Hmc5883l.OutputRate" />
+        <Parameter Name="samplesAmount" Type="Iot.Device.Hmc5883l.SamplesAmount" />
+        <Parameter Name="measurementConfig" Type="Iot.Device.Hmc5883l.MeasurementConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device used for communication.</param>
+        <param name="gain">Gain Setting</param>
+        <param name="measuringMode">The Mode of Measuring</param>
+        <param name="outputRate">Typical Data Output Rate (Hz)</param>
+        <param name="samplesAmount">Number of samples averaged per measurement output</param>
+        <param name="measurementConfig">Measurement configuration</param>
+        <summary>
+            Initialize a new HMC5883L device connected through I2C
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte DefaultI2cAddress = 30;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 DefaultI2cAddress = (30)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Hmc5883l.Hmc5883l.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Byte  = 30" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : byte" Usage="Iot.Device.Hmc5883l.Hmc5883l.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>30</MemberValue>
+      <Docs>
+        <summary>
+            HMC5883L Default I2C Address
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceStatus">
+      <MemberSignature Language="C#" Value="public Iot.Device.Hmc5883l.Status DeviceStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Hmc5883l.Status DeviceStatus" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Hmc5883l.Hmc5883l.DeviceStatus" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeviceStatus As Status" />
+      <MemberSignature Language="F#" Value="member this.DeviceStatus : Iot.Device.Hmc5883l.Status" Usage="Iot.Device.Hmc5883l.Hmc5883l.DeviceStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Hmc5883l.Status</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            HMC5883L Status
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectionVector">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 DirectionVector { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector3 DirectionVector" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Hmc5883l.Hmc5883l.DirectionVector" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DirectionVector As Vector3" />
+      <MemberSignature Language="F#" Value="member this.DirectionVector : System.Numerics.Vector3" Usage="Iot.Device.Hmc5883l.Hmc5883l.DirectionVector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            HMC5883L Direction Vector
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hmc5883l.Hmc5883l.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="hmc5883l.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Cleanup
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Heading">
+      <MemberSignature Language="C#" Value="public double Heading { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Heading" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Hmc5883l.Hmc5883l.Heading" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Heading As Double" />
+      <MemberSignature Language="F#" Value="member this.Heading : double" Usage="Iot.Device.Hmc5883l.Hmc5883l.Heading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            HMC5883L Heading (DEG)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

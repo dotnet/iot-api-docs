@@ -1,0 +1,131 @@
+<Type Name="Hcsr04" FullName="Iot.Device.Hcsr04.Hcsr04">
+  <TypeSignature Language="C#" Value="public class Hcsr04 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Hcsr04 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Hcsr04.Hcsr04" />
+  <TypeSignature Language="VB.NET" Value="Public Class Hcsr04&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Hcsr04 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            HC-SR04 - Ultrasonic Ranging Module
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Hcsr04 (int triggerPin, int echoPin, System.Device.Gpio.PinNumberingScheme pinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 triggerPin, int32 echoPin, valuetype System.Device.Gpio.PinNumberingScheme pinNumberingScheme) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hcsr04.Hcsr04.#ctor(System.Int32,System.Int32,System.Device.Gpio.PinNumberingScheme)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (triggerPin As Integer, echoPin As Integer, Optional pinNumberingScheme As PinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Hcsr04.Hcsr04 : int * int * System.Device.Gpio.PinNumberingScheme -&gt; Iot.Device.Hcsr04.Hcsr04" Usage="new Iot.Device.Hcsr04.Hcsr04 (triggerPin, echoPin, pinNumberingScheme)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="triggerPin" Type="System.Int32" />
+        <Parameter Name="echoPin" Type="System.Int32" />
+        <Parameter Name="pinNumberingScheme" Type="System.Device.Gpio.PinNumberingScheme" />
+      </Parameters>
+      <Docs>
+        <param name="triggerPin">Trigger pulse input.</param>
+        <param name="echoPin">Trigger pulse output.</param>
+        <param name="pinNumberingScheme">Pin Numbering Scheme</param>
+        <summary>
+            Creates a new instance of the HC-SCR04 sonar.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Hcsr04 (System.Device.Gpio.GpioController gpioController, int triggerPin, int echoPin, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Gpio.GpioController gpioController, int32 triggerPin, int32 echoPin, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hcsr04.Hcsr04.#ctor(System.Device.Gpio.GpioController,System.Int32,System.Int32,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (gpioController As GpioController, triggerPin As Integer, echoPin As Integer, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Hcsr04.Hcsr04 : System.Device.Gpio.GpioController * int * int * bool -&gt; Iot.Device.Hcsr04.Hcsr04" Usage="new Iot.Device.Hcsr04.Hcsr04 (gpioController, triggerPin, echoPin, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="triggerPin" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="echoPin" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="gpioController">GPIO controller related with the pins</param>
+        <param name="triggerPin">Trigger pulse input.</param>
+        <param name="echoPin">Trigger pulse output.</param>
+        <param name="shouldDispose">True to dispose the Gpio Controller</param>
+        <summary>
+            Creates a new instance of the HC-SCR04 sonar.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hcsr04.Hcsr04.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="hcsr04.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Distance">
+      <MemberSignature Language="C#" Value="public double Distance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Distance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Hcsr04.Hcsr04.Distance" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Distance As Double" />
+      <MemberSignature Language="F#" Value="member this.Distance : double" Usage="Iot.Device.Hcsr04.Hcsr04.Distance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current distance in cm.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,972 @@
+<Type Name="Brick" FullName="Iot.Device.BrickPi3.Brick">
+  <TypeSignature Language="C#" Value="public class Brick : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Brick extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.BrickPi3.Brick" />
+  <TypeSignature Language="VB.NET" Value="Public Class Brick&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Brick = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            The main Brick class allowing low level access to motors and sensors
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Brick (byte spiAddress = 1, int busId = 0, int ChipSelectLine = 1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 spiAddress, int32 busId, int32 ChipSelectLine) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.#ctor(System.Byte,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional spiAddress As Byte = 1, Optional busId As Integer = 0, Optional ChipSelectLine As Integer = 1)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.BrickPi3.Brick : byte * int * int -&gt; Iot.Device.BrickPi3.Brick" Usage="new Iot.Device.BrickPi3.Brick (spiAddress, busId, ChipSelectLine)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spiAddress" Type="System.Byte" />
+        <Parameter Name="busId" Type="System.Int32" />
+        <Parameter Name="ChipSelectLine" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="spiAddress">The Spi Address of the brick</param>
+        <param name="busId">The bus id that the device is connected to</param>
+        <param name="ChipSelectLine">The chip select line that the device is connected to</param>
+        <summary>
+            Initialize the brick including SPI communication
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BrickPi3Info">
+      <MemberSignature Language="C#" Value="public Iot.Device.BrickPi3.Models.BrickPiInfo BrickPi3Info { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.BrickPi3.Models.BrickPiInfo BrickPi3Info" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BrickPi3.Brick.BrickPi3Info" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BrickPi3Info As BrickPiInfo" />
+      <MemberSignature Language="F#" Value="member this.BrickPi3Info : Iot.Device.BrickPi3.Models.BrickPiInfo" Usage="Iot.Device.BrickPi3.Brick.BrickPi3Info" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.BrickPi3.Models.BrickPiInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Stores all the information regarding the Brick
+            This includes id, hardware and firmware versions
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BrickPi3Voltage">
+      <MemberSignature Language="C#" Value="public Iot.Device.BrickPi3.Models.BrickPiVoltage BrickPi3Voltage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.BrickPi3.Models.BrickPiVoltage BrickPi3Voltage" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BrickPi3.Brick.BrickPi3Voltage" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BrickPi3Voltage As BrickPiVoltage" />
+      <MemberSignature Language="F#" Value="member this.BrickPi3Voltage : Iot.Device.BrickPi3.Models.BrickPiVoltage" Usage="Iot.Device.BrickPi3.Brick.BrickPi3Voltage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.BrickPi3.Models.BrickPiVoltage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Stores the voltage information
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="brick.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reset the brick, stop the motors, release sensors
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBoard">
+      <MemberSignature Language="C#" Value="public string GetBoard ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetBoard() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.GetBoard" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetBoard () As String" />
+      <MemberSignature Language="F#" Value="member this.GetBoard : unit -&gt; string" Usage="brick.GetBoard " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read the 20 charactor BrcikPi3 board name
+            </summary>
+        <returns>BrcikPi3 board name string</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFirmwareVersion">
+      <MemberSignature Language="C#" Value="public string GetFirmwareVersion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetFirmwareVersion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.GetFirmwareVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetFirmwareVersion () As String" />
+      <MemberSignature Language="F#" Value="member this.GetFirmwareVersion : unit -&gt; string" Usage="brick.GetFirmwareVersion " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read the firmware version
+            </summary>
+        <returns>firmware version</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHardwareVersion">
+      <MemberSignature Language="C#" Value="public string GetHardwareVersion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetHardwareVersion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.GetHardwareVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetHardwareVersion () As String" />
+      <MemberSignature Language="F#" Value="member this.GetHardwareVersion : unit -&gt; string" Usage="brick.GetHardwareVersion " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read the hardware version
+            </summary>
+        <returns>hardware version</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetId">
+      <MemberSignature Language="C#" Value="public string GetId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.GetId" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetId () As String" />
+      <MemberSignature Language="F#" Value="member this.GetId : unit -&gt; string" Usage="brick.GetId " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read the 128 - bit BrcikPi3 hardware serial number
+            </summary>
+        <returns>serial number as 32 char HEX formatted string</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetManufacturer">
+      <MemberSignature Language="C#" Value="public string GetManufacturer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetManufacturer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.GetManufacturer" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetManufacturer () As String" />
+      <MemberSignature Language="F#" Value="member this.GetManufacturer : unit -&gt; string" Usage="brick.GetManufacturer " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read the 20 charactor BrickPi3 manufacturer name
+            </summary>
+        <returns>BrickPi3 manufacturer name string</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMotorEncoder">
+      <MemberSignature Language="C#" Value="public int GetMotorEncoder (byte port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetMotorEncoder(unsigned int8 port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.GetMotorEncoder(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetMotorEncoder (port As Byte) As Integer" />
+      <MemberSignature Language="F#" Value="member this.GetMotorEncoder : byte -&gt; int" Usage="brick.GetMotorEncoder port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="port">The motor port (one at a time). PortA, PortB, PortC, or PortD.</param>
+        <summary>
+            Read a motor encoder in degrees
+            </summary>
+        <returns>Returns the encoder position in degrees</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMotorStatus">
+      <MemberSignature Language="C#" Value="public Iot.Device.BrickPi3.Models.MotorStatus GetMotorStatus (byte port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.BrickPi3.Models.MotorStatus GetMotorStatus(unsigned int8 port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.GetMotorStatus(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetMotorStatus (port As Byte) As MotorStatus" />
+      <MemberSignature Language="F#" Value="member this.GetMotorStatus : byte -&gt; Iot.Device.BrickPi3.Models.MotorStatus" Usage="brick.GetMotorStatus port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.BrickPi3.Models.MotorStatus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="port">The motor port (one at a time). PortA, PortB, PortC, or PortD.</param>
+        <summary>
+            Read a motor status
+            </summary>
+        <returns>MotorStatus containing the status of the motor</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSensor">
+      <MemberSignature Language="C#" Value="public byte[] GetSensor (byte port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetSensor(unsigned int8 port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.GetSensor(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSensor (port As Byte) As Byte()" />
+      <MemberSignature Language="F#" Value="member this.GetSensor : byte -&gt; byte[]" Usage="brick.GetSensor port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="port">The sensor port(one at a time). Port 1, 2, 3, or 4</param>
+        <summary>
+            Get the sensor data from a specific port
+            The following sensor types each return a single value:
+              NONE----------------------- 0
+              TOUCH---------------------- 0 or 1(released or pressed)
+              NXT_TOUCH------------------ 0 or 1(released or pressed)
+              EV3_TOUCH------------------ 0 or 1(released or pressed)
+              NXT_ULTRASONIC------------- distance in CM
+              NXT_LIGHT_ON--------------- reflected light
+              NXT_LIGHT_OFF-------------- ambient light
+              NXT_COLOR_RED-------------- red reflected light
+              NXT_COLOR_GREEN------------ green reflected light
+              NXT_COLOR_BLUE------------- blue reflected light
+              NXT_COLOR_OFF-------------- ambient light
+              EV3_GYRO_ABS--------------- absolute rotation position in degrees
+              EV3_GYRO_DPS--------------- rotation rate in degrees per second
+              EV3_COLOR_REFLECTED-------- red reflected light
+              EV3_COLOR_AMBIENT---------- ambient light
+              EV3_COLOR_COLOR------------ detected color
+              EV3_ULTRASONIC_CM---------- distance in CM
+              EV3_ULTRASONIC_INCHES------ distance in inches
+              EV3_ULTRASONIC_LISTEN------ 0 or 1(no other ultrasonic sensors or another ultrasonic sensor detected)
+              EV3_INFRARED_PROXIMITY----- distance 0 - 100 %
+            The following sensor types each return a list of values
+              CUSTOM--------------------- Pin 1 ADC(5v scale from 0 to 4095), Pin 6 ADC(3.3v scale from 0 to 4095), Pin 5 digital, Pin 6 digital
+              I2C------------------------ the I2C bytes read
+              NXT_COLOR_FULL------------- detected color, red light reflected, green light reflected, blue light reflected, ambient light
+              EV3_GYRO_ABS_DPS----------- absolute rotation position in degrees, rotation rate in degrees per second
+              EV3_COLOR_RAW_REFLECTED---- red reflected light, unknown value(maybe a raw ambient value ?)
+              EV3_COLOR_COLOR_COMPONENTS- red reflected light, green reflected light, blue reflected light, unknown value(maybe a raw value ?)
+              EV3_INFRARED_SEEK---------- a list for each of the four channels.For each channel heading(-25 to 25), distance(-128 or 0 to 100)
+              EV3_INFRARED_REMOTE-------- a list for each of the four channels.For each channel red up, red down, blue up, blue down, boadcast
+            </summary>
+        <returns>Returns the value(s) for the specified sensor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVoltage3V3">
+      <MemberSignature Language="C#" Value="public double GetVoltage3V3 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 GetVoltage3V3() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.GetVoltage3V3" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetVoltage3V3 () As Double" />
+      <MemberSignature Language="F#" Value="member this.GetVoltage3V3 : unit -&gt; double" Usage="brick.GetVoltage3V3 " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the 3.3v circuit voltage
+            </summary>
+        <returns>3.3v circuit voltage</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVoltage5V">
+      <MemberSignature Language="C#" Value="public double GetVoltage5V ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 GetVoltage5V() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.GetVoltage5V" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetVoltage5V () As Double" />
+      <MemberSignature Language="F#" Value="member this.GetVoltage5V : unit -&gt; double" Usage="brick.GetVoltage5V " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the 5v circuit voltage
+            </summary>
+        <returns>5v circuit voltage</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVoltage9V">
+      <MemberSignature Language="C#" Value="public double GetVoltage9V ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 GetVoltage9V() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.GetVoltage9V" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetVoltage9V () As Double" />
+      <MemberSignature Language="F#" Value="member this.GetVoltage9V : unit -&gt; double" Usage="brick.GetVoltage9V " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the 9v circuit voltage
+            </summary>
+        <returns>9v circuit voltage</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVoltageBatteryVcc">
+      <MemberSignature Language="C#" Value="public double GetVoltageBatteryVcc ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 GetVoltageBatteryVcc() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.GetVoltageBatteryVcc" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetVoltageBatteryVcc () As Double" />
+      <MemberSignature Language="F#" Value="member this.GetVoltageBatteryVcc : unit -&gt; double" Usage="brick.GetVoltageBatteryVcc " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the battery voltage
+            </summary>
+        <returns>battery/Vcc voltage</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffsetMotorEncoder">
+      <MemberSignature Language="C#" Value="public void OffsetMotorEncoder (byte port, int positionOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void OffsetMotorEncoder(unsigned int8 port, int32 positionOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.OffsetMotorEncoder(System.Byte,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub OffsetMotorEncoder (port As Byte, positionOffset As Integer)" />
+      <MemberSignature Language="F#" Value="member this.OffsetMotorEncoder : byte * int -&gt; unit" Usage="brick.OffsetMotorEncoder (port, positionOffset)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="System.Byte" />
+        <Parameter Name="positionOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port(s). PortA, PortB, PortC, and/or PortD.</param>
+        <param name="positionOffset">The encoder offset. Zero the encoder by offsetting it by the current position</param>
+        <summary>
+            Offset a motor encoder
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAddress">
+      <MemberSignature Language="C#" Value="public void SetAddress (byte address, string id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAddress(unsigned int8 address, string id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.SetAddress(System.Byte,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetAddress (address As Byte, id As String)" />
+      <MemberSignature Language="F#" Value="member this.SetAddress : byte * string -&gt; unit" Usage="brick.SetAddress (address, id)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Byte" />
+        <Parameter Name="id" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="address">the new SPI address to use(1 to 255)</param>
+        <param name="id">the BrickPi3's unique serial number ID (so that the address can be set while multiple BrickPi3s are stacked on a Raspberry Pi).</param>
+        <summary>
+            Set the SPI address of the BrickPi3
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLed">
+      <MemberSignature Language="C#" Value="public void SetLed (byte intensity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetLed(unsigned int8 intensity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.SetLed(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetLed (intensity As Byte)" />
+      <MemberSignature Language="F#" Value="member this.SetLed : byte -&gt; unit" Usage="brick.SetLed intensity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="intensity" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="intensity">Led intensity</param>
+        <summary>
+            Set the Led intensity from 0 (off) to 100 (fully bright), 255 used to return the led to BrickPi3 management
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMotorDps">
+      <MemberSignature Language="C#" Value="public void SetMotorDps (byte port, int dps);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMotorDps(unsigned int8 port, int32 dps) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.SetMotorDps(System.Byte,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMotorDps (port As Byte, dps As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SetMotorDps : byte * int -&gt; unit" Usage="brick.SetMotorDps (port, dps)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="System.Byte" />
+        <Parameter Name="dps" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port(s). PortA, PortB, PortC, and/or PortD.</param>
+        <param name="dps">The target speed in degrees per second</param>
+        <summary>
+            Set the motor target speed in degrees per second
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMotorLimits">
+      <MemberSignature Language="C#" Value="public void SetMotorLimits (byte port, byte powerPercent = 0, int dps = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMotorLimits(unsigned int8 port, unsigned int8 powerPercent, int32 dps) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.SetMotorLimits(System.Byte,System.Byte,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMotorLimits (port As Byte, Optional powerPercent As Byte = 0, Optional dps As Integer = 0)" />
+      <MemberSignature Language="F#" Value="member this.SetMotorLimits : byte * byte * int -&gt; unit" Usage="brick.SetMotorLimits (port, powerPercent, dps)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="System.Byte" />
+        <Parameter Name="powerPercent" Type="System.Byte" />
+        <Parameter Name="dps" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port(s). PortA, PortB, PortC, and/or PortD.</param>
+        <param name="powerPercent">The power limit in percent (0 to 100), with 0 being no limit (100)</param>
+        <param name="dps">The speed limit in degrees per second, with 0 being no limit</param>
+        <summary>
+            Set the motor speed limit
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMotorPosition">
+      <MemberSignature Language="C#" Value="public void SetMotorPosition (byte port, int positionDegree);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMotorPosition(unsigned int8 port, int32 positionDegree) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.SetMotorPosition(System.Byte,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMotorPosition (port As Byte, positionDegree As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SetMotorPosition : byte * int -&gt; unit" Usage="brick.SetMotorPosition (port, positionDegree)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="System.Byte" />
+        <Parameter Name="positionDegree" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port(s). PortA, PortB, PortC, and/or PortD.</param>
+        <param name="positionDegree">The target position in degree</param>
+        <summary>
+            Set the motor target position in degrees
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMotorPositionKD">
+      <MemberSignature Language="C#" Value="public void SetMotorPositionKD (byte port, byte kd = 70);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMotorPositionKD(unsigned int8 port, unsigned int8 kd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.SetMotorPositionKD(System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMotorPositionKD (port As Byte, Optional kd As Byte = 70)" />
+      <MemberSignature Language="F#" Value="member this.SetMotorPositionKD : byte * byte -&gt; unit" Usage="brick.SetMotorPositionKD (port, kd)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="System.Byte" />
+        <Parameter Name="kd" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port(s). PortA, PortB, PortC, and/or PortD.</param>
+        <param name="kd">The KD constant (default 70)</param>
+        <summary>
+            Set the motor target position KD constant
+            If you set KP higher, the motor will be more responsive to errors in position, at the cost of perhaps overshooting and oscillating.
+            KD slows down the motor as it approaches the target, and helps to prevent overshoot.
+            In general, if you increase kp, you should also increase KD to keep the motor from overshooting and oscillating.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMotorPositionKP">
+      <MemberSignature Language="C#" Value="public void SetMotorPositionKP (byte port, byte kp = 25);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMotorPositionKP(unsigned int8 port, unsigned int8 kp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.SetMotorPositionKP(System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMotorPositionKP (port As Byte, Optional kp As Byte = 25)" />
+      <MemberSignature Language="F#" Value="member this.SetMotorPositionKP : byte * byte -&gt; unit" Usage="brick.SetMotorPositionKP (port, kp)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="System.Byte" />
+        <Parameter Name="kp" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port(s). PortA, PortB, PortC, and/or PortD.</param>
+        <param name="kp">The KP constant (default 25)</param>
+        <summary>
+            Set the motor target position KP constant
+            If you set KP higher, the motor will be more responsive to errors in position, at the cost of perhaps overshooting and oscillating.
+            KP slows down the motor as it approaches the target, and helps to prevent overshoot.
+            In general, if you increase KP, you should also increase KD to keep the motor from overshooting and oscillating.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMotorPower">
+      <MemberSignature Language="C#" Value="public void SetMotorPower (byte port, int powerPercent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMotorPower(unsigned int8 port, int32 powerPercent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.SetMotorPower(System.Byte,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMotorPower (port As Byte, powerPercent As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SetMotorPower : byte * int -&gt; unit" Usage="brick.SetMotorPower (port, powerPercent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="System.Byte" />
+        <Parameter Name="powerPercent" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port(s). PortA, PortB, PortC, and/or PortD.</param>
+        <param name="powerPercent">The power from - 100 to 100, or -128 for float</param>
+        <summary>
+            Set the motor power in percent
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSensorType">
+      <MemberSignature Language="C#" Value="public void SetSensorType (byte port, Iot.Device.BrickPi3.Models.SensorType type, int[] param = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSensorType(unsigned int8 port, valuetype Iot.Device.BrickPi3.Models.SensorType type, int32[] param) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.SetSensorType(System.Byte,Iot.Device.BrickPi3.Models.SensorType,System.Int32[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetSensorType (port As Byte, type As SensorType, Optional param As Integer() = Nothing)" />
+      <MemberSignature Language="F#" Value="member this.SetSensorType : byte * Iot.Device.BrickPi3.Models.SensorType * int[] -&gt; unit" Usage="brick.SetSensorType (port, type, param)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="System.Byte" />
+        <Parameter Name="type" Type="Iot.Device.BrickPi3.Models.SensorType" />
+        <Parameter Name="param" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="port">The sensor port(s). Port 1, 2, 3, and/or 4</param>
+        <param name="type">The sensor type</param>
+        <param name="param">param is used only for some sensors and can be ignore for the others
+            params is used for the following sensor types:
+              CUSTOM-- a 16 - bit integer used to configure the hardware.
+              I2C-- a list of settings:
+                params[0]-- Settings / flags
+                params[1] -- target Speed in microseconds(0-255). Realistically the speed will vary.
+                if SENSOR_I2C_SETTINGS_SAME flag set in I2C Settings:
+                   params[2] -- Delay in microseconds between transactions.
+                   params[3] -- Address
+                   params[4] -- List of bytes to write
+                   params[5] -- Number of bytes to read
+            </param>
+        <summary>
+            Set the sensor type
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiAddress">
+      <MemberSignature Language="C#" Value="public byte SpiAddress { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 SpiAddress" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BrickPi3.Brick.SpiAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Property SpiAddress As Byte" />
+      <MemberSignature Language="F#" Value="member this.SpiAddress : byte with get, set" Usage="Iot.Device.BrickPi3.Brick.SpiAddress" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            used to store the SPI Address
+            used mainly when multiple bricks in a raw or not the default SPI address
+            up to 254 addresses supported
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiRead16">
+      <MemberSignature Language="C#" Value="public int SpiRead16 (Iot.Device.BrickPi3.Models.SpiMessageType MessageType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 SpiRead16(valuetype Iot.Device.BrickPi3.Models.SpiMessageType MessageType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.SpiRead16(Iot.Device.BrickPi3.Models.SpiMessageType)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SpiRead16 (MessageType As SpiMessageType) As Integer" />
+      <MemberSignature Language="F#" Value="member this.SpiRead16 : Iot.Device.BrickPi3.Models.SpiMessageType -&gt; int" Usage="brick.SpiRead16 MessageType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="MessageType" Type="Iot.Device.BrickPi3.Models.SpiMessageType" />
+      </Parameters>
+      <Docs>
+        <param name="MessageType">the SPI message type</param>
+        <summary>
+            Read a 16 - bit value over SPI
+            </summary>
+        <returns>the vallue read</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiRead32">
+      <MemberSignature Language="C#" Value="public int SpiRead32 (Iot.Device.BrickPi3.Models.SpiMessageType MessageType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 SpiRead32(valuetype Iot.Device.BrickPi3.Models.SpiMessageType MessageType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.SpiRead32(Iot.Device.BrickPi3.Models.SpiMessageType)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SpiRead32 (MessageType As SpiMessageType) As Integer" />
+      <MemberSignature Language="F#" Value="member this.SpiRead32 : Iot.Device.BrickPi3.Models.SpiMessageType -&gt; int" Usage="brick.SpiRead32 MessageType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="MessageType" Type="Iot.Device.BrickPi3.Models.SpiMessageType" />
+      </Parameters>
+      <Docs>
+        <param name="MessageType">the SPI message type</param>
+        <summary>
+            Read a 32 - bit value over SPI
+            </summary>
+        <returns>the value read</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiTransferArray">
+      <MemberSignature Language="C#" Value="public byte[] SpiTransferArray (byte[] dataOut);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] SpiTransferArray(unsigned int8[] dataOut) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.SpiTransferArray(System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function SpiTransferArray (dataOut As Byte()) As Byte()" />
+      <MemberSignature Language="F#" Value="member this.SpiTransferArray : byte[] -&gt; byte[]" Usage="brick.SpiTransferArray dataOut" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dataOut" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="dataOut">a list of bytes to send.The length of the list will determine how many bytes are transferred.</param>
+        <summary>
+            Conduct a SPI transaction
+            </summary>
+        <returns>Returns an array of the bytes read.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiWrite16">
+      <MemberSignature Language="C#" Value="public void SpiWrite16 (Iot.Device.BrickPi3.Models.SpiMessageType MessageType, int Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SpiWrite16(valuetype Iot.Device.BrickPi3.Models.SpiMessageType MessageType, int32 Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.SpiWrite16(Iot.Device.BrickPi3.Models.SpiMessageType,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SpiWrite16 (MessageType As SpiMessageType, Value As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SpiWrite16 : Iot.Device.BrickPi3.Models.SpiMessageType * int -&gt; unit" Usage="brick.SpiWrite16 (MessageType, Value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="MessageType" Type="Iot.Device.BrickPi3.Models.SpiMessageType" />
+        <Parameter Name="Value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="MessageType">the SPI message type</param>
+        <param name="Value">the value to be sent</param>
+        <summary>
+            Send a 16 - bit value over SPI
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiWrite24">
+      <MemberSignature Language="C#" Value="public void SpiWrite24 (Iot.Device.BrickPi3.Models.SpiMessageType MessageType, int Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SpiWrite24(valuetype Iot.Device.BrickPi3.Models.SpiMessageType MessageType, int32 Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.SpiWrite24(Iot.Device.BrickPi3.Models.SpiMessageType,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SpiWrite24 (MessageType As SpiMessageType, Value As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SpiWrite24 : Iot.Device.BrickPi3.Models.SpiMessageType * int -&gt; unit" Usage="brick.SpiWrite24 (MessageType, Value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="MessageType" Type="Iot.Device.BrickPi3.Models.SpiMessageType" />
+        <Parameter Name="Value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="MessageType">the SPI message type</param>
+        <param name="Value">the value to be sent</param>
+        <summary>
+            Send a 24 - bit value over SPI
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiWrite32">
+      <MemberSignature Language="C#" Value="public void SpiWrite32 (Iot.Device.BrickPi3.Models.SpiMessageType MessageType, int Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SpiWrite32(valuetype Iot.Device.BrickPi3.Models.SpiMessageType MessageType, int32 Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.SpiWrite32(Iot.Device.BrickPi3.Models.SpiMessageType,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SpiWrite32 (MessageType As SpiMessageType, Value As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SpiWrite32 : Iot.Device.BrickPi3.Models.SpiMessageType * int -&gt; unit" Usage="brick.SpiWrite32 (MessageType, Value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="MessageType" Type="Iot.Device.BrickPi3.Models.SpiMessageType" />
+        <Parameter Name="Value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="MessageType">the SPI message type</param>
+        <param name="Value">the value to be sent</param>
+        <summary>
+            Send a 32 - bit value over SPI
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiWrite8">
+      <MemberSignature Language="C#" Value="public void SpiWrite8 (Iot.Device.BrickPi3.Models.SpiMessageType MessageType, int Value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SpiWrite8(valuetype Iot.Device.BrickPi3.Models.SpiMessageType MessageType, int32 Value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Brick.SpiWrite8(Iot.Device.BrickPi3.Models.SpiMessageType,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SpiWrite8 (MessageType As SpiMessageType, Value As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SpiWrite8 : Iot.Device.BrickPi3.Models.SpiMessageType * int -&gt; unit" Usage="brick.SpiWrite8 (MessageType, Value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="MessageType" Type="Iot.Device.BrickPi3.Models.SpiMessageType" />
+        <Parameter Name="Value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="MessageType">the SPI message type</param>
+        <param name="Value">the value to be sent</param>
+        <summary>
+            Send a 8 - bit value over SPI
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

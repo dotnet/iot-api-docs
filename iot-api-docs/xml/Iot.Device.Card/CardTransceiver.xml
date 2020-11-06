@@ -1,0 +1,73 @@
+<Type Name="CardTransceiver" FullName="Iot.Device.Card.CardTransceiver">
+  <TypeSignature Language="C#" Value="public abstract class CardTransceiver" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit CardTransceiver extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Card.CardTransceiver" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class CardTransceiver" />
+  <TypeSignature Language="F#" Value="type CardTransceiver = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Abstract class implementing a specific Write and Read function
+            This class allow to transceive information with the card
+            This class has to be implemented in all RFID/NFC/Card readers
+            So Mifare cards can be used the same way independent of any reader
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected CardTransceiver ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.CardTransceiver.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transceive">
+      <MemberSignature Language="C#" Value="public abstract int Transceive (byte targetNumber, ReadOnlySpan&lt;byte&gt; dataToSend, Span&lt;byte&gt; dataFromCard);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 Transceive(unsigned int8 targetNumber, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; dataToSend, valuetype System.Span`1&lt;unsigned int8&gt; dataFromCard) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.CardTransceiver.Transceive(System.Byte,System.ReadOnlySpan{System.Byte},System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function Transceive (targetNumber As Byte, dataToSend As ReadOnlySpan(Of Byte), dataFromCard As Span(Of Byte)) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member Transceive : byte * ReadOnlySpan&lt;byte&gt; * Span&lt;byte&gt; -&gt; int" Usage="cardTransceiver.Transceive (targetNumber, dataToSend, dataFromCard)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNumber" Type="System.Byte" />
+        <Parameter Name="dataToSend" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="dataFromCard" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="targetNumber">Some readers have a notion of target number for the cards as they can read multiple ones</param>
+        <param name="dataToSend">A standardized raw buffer with the command at the position 0 in the array</param>
+        <param name="dataFromCard">If any data are read from the card, they will be put into this array</param>
+        <summary>
+            This function has to be implemented by all NFC/RFID/Card readers. This function is used in exchange of data with
+            the reader and the cards.
+            </summary>
+        <returns>-1 in case of error, otherwise the number of bytes read and copied into the <paramref name="dataFromCard" /> array</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

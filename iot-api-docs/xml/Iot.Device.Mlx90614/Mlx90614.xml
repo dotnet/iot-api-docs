@@ -1,0 +1,156 @@
+<Type Name="Mlx90614" FullName="Iot.Device.Mlx90614.Mlx90614">
+  <TypeSignature Language="C#" Value="public sealed class Mlx90614 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Mlx90614 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mlx90614.Mlx90614" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Mlx90614&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Mlx90614 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Infra Red Thermometer MLX90614
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Mlx90614 (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mlx90614.Mlx90614.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mlx90614.Mlx90614 : System.Device.I2c.I2cDevice -&gt; Iot.Device.Mlx90614.Mlx90614" Usage="new Iot.Device.Mlx90614.Mlx90614 i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device used for communication.</param>
+        <summary>
+            Creates a new instance of the MLX90614
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte DefaultI2cAddress = 90;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 DefaultI2cAddress = (90)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Mlx90614.Mlx90614.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Byte  = 90" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : byte" Usage="Iot.Device.Mlx90614.Mlx90614.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>90</MemberValue>
+      <Docs>
+        <summary>
+            MLX90614 Default I2C Address
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mlx90614.Mlx90614.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="mlx90614.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Cleanup
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAmbientTemperature">
+      <MemberSignature Language="C#" Value="public Iot.Units.Temperature ReadAmbientTemperature ();" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Units.Temperature ReadAmbientTemperature() cil managed" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mlx90614.Mlx90614.ReadAmbientTemperature" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadAmbientTemperature () As Temperature" />
+      <MemberSignature Language="F#" Value="member this.ReadAmbientTemperature : unit -&gt; Iot.Units.Temperature" Usage="mlx90614.ReadAmbientTemperature " FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature ReadAmbientTemperature ();" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Temperature ReadAmbientTemperature() cil managed" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="member this.ReadAmbientTemperature : unit -&gt; UnitsNet.Temperature" Usage="mlx90614.ReadAmbientTemperature " FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.0">Iot.Units.Temperature</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.1">UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read ambient temperature from MLX90614
+            </summary>
+        <returns>Temperature</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadObjectTemperature">
+      <MemberSignature Language="C#" Value="public Iot.Units.Temperature ReadObjectTemperature ();" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Units.Temperature ReadObjectTemperature() cil managed" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mlx90614.Mlx90614.ReadObjectTemperature" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadObjectTemperature () As Temperature" />
+      <MemberSignature Language="F#" Value="member this.ReadObjectTemperature : unit -&gt; Iot.Units.Temperature" Usage="mlx90614.ReadObjectTemperature " FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature ReadObjectTemperature ();" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Temperature ReadObjectTemperature() cil managed" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="member this.ReadObjectTemperature : unit -&gt; UnitsNet.Temperature" Usage="mlx90614.ReadObjectTemperature " FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.0">Iot.Units.Temperature</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.1">UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read surface temperature of object from MLX90614
+            </summary>
+        <returns>Temperature</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

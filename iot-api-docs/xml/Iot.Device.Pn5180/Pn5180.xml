@@ -1,0 +1,990 @@
+<Type Name="Pn5180" FullName="Iot.Device.Pn5180.Pn5180">
+  <TypeSignature Language="C#" Value="public class Pn5180 : Iot.Device.Card.CardTransceiver, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Pn5180 extends Iot.Device.Card.CardTransceiver implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Pn5180.Pn5180" />
+  <TypeSignature Language="VB.NET" Value="Public Class Pn5180&#xA;Inherits CardTransceiver&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Pn5180 = class&#xA;    inherit CardTransceiver&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Card.CardTransceiver</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            A PN5180 class offering RFID and NFC functionalities. Implement the CardTransceiver class to
+            allow Mifare, Credit Card support
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pn5180 (System.Device.Spi.SpiDevice spiDevice, int pinBusy, int pinNss, System.Device.Gpio.GpioController gpioController = default, bool shouldDispose = true, Iot.Device.Card.LogLevel logLevel = Iot.Device.Card.LogLevel.None);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, int32 pinBusy, int32 pinNss, class System.Device.Gpio.GpioController gpioController, bool shouldDispose, valuetype Iot.Device.Card.LogLevel logLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.#ctor(System.Device.Spi.SpiDevice,System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean,Iot.Device.Card.LogLevel)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (spiDevice As SpiDevice, pinBusy As Integer, pinNss As Integer, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true, Optional logLevel As LogLevel = Iot.Device.Card.LogLevel.None)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Pn5180.Pn5180 : System.Device.Spi.SpiDevice * int * int * System.Device.Gpio.GpioController * bool * Iot.Device.Card.LogLevel -&gt; Iot.Device.Pn5180.Pn5180" Usage="new Iot.Device.Pn5180.Pn5180 (spiDevice, pinBusy, pinNss, gpioController, shouldDispose, logLevel)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" />
+        <Parameter Name="pinBusy" Type="System.Int32" />
+        <Parameter Name="pinNss" Type="System.Int32" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+        <Parameter Name="logLevel" Type="Iot.Device.Card.LogLevel" />
+      </Parameters>
+      <Docs>
+        <param name="spiDevice">The SPI device</param>
+        <param name="pinBusy">The pin for the busy line</param>
+        <param name="pinNss">The pin for the SPI select line. This has to be handle differently than thru the normal process as PN5180 has a specific way of working</param>
+        <param name="gpioController">A GPIO controller, null will use a default one</param>
+        <param name="shouldDispose">Dispose the SPI and the GPIO controller at the end if true</param>
+        <param name="logLevel">The log level</param>
+        <summary>
+            Create a PN5180 RFID/NFC reader
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateCrcA">
+      <MemberSignature Language="C#" Value="public void CalculateCrcA (ReadOnlySpan&lt;byte&gt; buffer, Span&lt;byte&gt; crc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CalculateCrcA(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; buffer, valuetype System.Span`1&lt;unsigned int8&gt; crc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.CalculateCrcA(System.ReadOnlySpan{System.Byte},System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CalculateCrcA (buffer As ReadOnlySpan(Of Byte), crc As Span(Of Byte))" />
+      <MemberSignature Language="F#" Value="member this.CalculateCrcA : ReadOnlySpan&lt;byte&gt; * Span&lt;byte&gt; -&gt; unit" Usage="pn5180.CalculateCrcA (buffer, crc)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="crc" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">The buffer to process</param>
+        <param name="crc">The CRC, Must be a 2 bytes buffer</param>
+        <summary>
+            Provide a calculation of CRC for Type A cards
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateCrcB">
+      <MemberSignature Language="C#" Value="public void CalculateCrcB (ReadOnlySpan&lt;byte&gt; buffer, Span&lt;byte&gt; crc);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CalculateCrcB(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; buffer, valuetype System.Span`1&lt;unsigned int8&gt; crc) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.CalculateCrcB(System.ReadOnlySpan{System.Byte},System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CalculateCrcB (buffer As ReadOnlySpan(Of Byte), crc As Span(Of Byte))" />
+      <MemberSignature Language="F#" Value="member this.CalculateCrcB : ReadOnlySpan&lt;byte&gt; * Span&lt;byte&gt; -&gt; unit" Usage="pn5180.CalculateCrcB (buffer, crc)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buffer" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="crc" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">The buffer to process</param>
+        <param name="crc">The CRC, Must be a 2 bytes buffer</param>
+        <summary>
+            Provide a calculation of CRC for Type B cards
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CrcReceptionTransfer">
+      <MemberSignature Language="C#" Value="public bool CrcReceptionTransfer { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CrcReceptionTransfer" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn5180.Pn5180.CrcReceptionTransfer" />
+      <MemberSignature Language="VB.NET" Value="Public Property CrcReceptionTransfer As Boolean" />
+      <MemberSignature Language="F#" Value="member this.CrcReceptionTransfer : bool with get, set" Usage="Iot.Device.Pn5180.Pn5180.CrcReceptionTransfer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set on of off the CRC calculation for the Transfer and Reception
+            Switch off is needed for anticollision operation on type A cards. Otherwise normal state is on
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSpiMode">
+      <MemberSignature Language="C#" Value="public const System.Device.Spi.SpiMode DefaultSpiMode = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Device.Spi.SpiMode DefaultSpiMode = (0)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Pn5180.Pn5180.DefaultSpiMode" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultSpiMode As SpiMode  = 0" />
+      <MemberSignature Language="F#" Value="val mutable DefaultSpiMode : System.Device.Spi.SpiMode" Usage="Iot.Device.Pn5180.Pn5180.DefaultSpiMode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Spi.SpiMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Only SPI Mode supported is Mode0
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeselectCardTypeB">
+      <MemberSignature Language="C#" Value="public bool DeselectCardTypeB (Iot.Device.Rfid.Data106kbpsTypeB card);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool DeselectCardTypeB(class Iot.Device.Rfid.Data106kbpsTypeB card) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.DeselectCardTypeB(Iot.Device.Rfid.Data106kbpsTypeB)" />
+      <MemberSignature Language="VB.NET" Value="Public Function DeselectCardTypeB (card As Data106kbpsTypeB) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DeselectCardTypeB : Iot.Device.Rfid.Data106kbpsTypeB -&gt; bool" Usage="pn5180.DeselectCardTypeB card" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="card" Type="Iot.Device.Rfid.Data106kbpsTypeB" />
+      </Parameters>
+      <Docs>
+        <param name="card">The card to deselect</param>
+        <summary>
+            Deselect a 14443 Type B card
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="pn5180.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIdentifier">
+      <MemberSignature Language="C#" Value="public bool GetIdentifier (Span&lt;byte&gt; outputIdentifier);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool GetIdentifier(valuetype System.Span`1&lt;unsigned int8&gt; outputIdentifier) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.GetIdentifier(System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetIdentifier (outputIdentifier As Span(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.GetIdentifier : Span&lt;byte&gt; -&gt; bool" Usage="pn5180.GetIdentifier outputIdentifier" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="outputIdentifier" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="outputIdentifier">A 16 byte buffer</param>
+        <summary>
+            Get the PN5180 identifier, this is a 16 byte long
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNumberOfBytesReceivedAndValidBits">
+      <MemberSignature Language="C#" Value="public (int,int) GetNumberOfBytesReceivedAndValidBits ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.ValueTuple`2&lt;int32, int32&gt; GetNumberOfBytesReceivedAndValidBits() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.GetNumberOfBytesReceivedAndValidBits" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetNumberOfBytesReceivedAndValidBits () As ValueTuple(Of Integer, Integer)" />
+      <MemberSignature Language="F#" Value="member this.GetNumberOfBytesReceivedAndValidBits : unit -&gt; ValueTuple&lt;int, int&gt;" Usage="pn5180.GetNumberOfBytesReceivedAndValidBits " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;System.Int32,System.Int32&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "bytes", "validBits" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "bytes", "validBits" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the number of bytes to read and the valid number of bits in the last byte
+            If the full byte is valid then the value of the valid bit is 0
+            </summary>
+        <returns>A tuple whit the number of bytes to read and the number of valid bits in the last byte. If all bits are valid, then the value of valid bits is 0</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRadioFrequencyConfigSize">
+      <MemberSignature Language="C#" Value="public int GetRadioFrequencyConfigSize (Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration receiver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetRadioFrequencyConfigSize(valuetype Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration receiver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.GetRadioFrequencyConfigSize(Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetRadioFrequencyConfigSize (receiver As ReceiverRadioFrequencyConfiguration) As Integer" />
+      <MemberSignature Language="F#" Value="member this.GetRadioFrequencyConfigSize : Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration -&gt; int" Usage="pn5180.GetRadioFrequencyConfigSize receiver" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="receiver" Type="Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="receiver">The receiver configuration</param>
+        <summary>
+            Get the size of the configuration of a specific receiver configuration
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRadioFrequencyConfigSize">
+      <MemberSignature Language="C#" Value="public int GetRadioFrequencyConfigSize (Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration transmitter);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetRadioFrequencyConfigSize(valuetype Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration transmitter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.GetRadioFrequencyConfigSize(Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetRadioFrequencyConfigSize (transmitter As TransmitterRadioFrequencyConfiguration) As Integer" />
+      <MemberSignature Language="F#" Value="member this.GetRadioFrequencyConfigSize : Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration -&gt; int" Usage="pn5180.GetRadioFrequencyConfigSize transmitter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transmitter" Type="Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="transmitter">The transmitter configuration</param>
+        <summary>
+            Get the size of the configuration of a specific transmitter configuration
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRadioFrequencyStatus">
+      <MemberSignature Language="C#" Value="public Iot.Device.Pn5180.RadioFrequencyStatus GetRadioFrequencyStatus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.Pn5180.RadioFrequencyStatus GetRadioFrequencyStatus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.GetRadioFrequencyStatus" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetRadioFrequencyStatus () As RadioFrequencyStatus" />
+      <MemberSignature Language="F#" Value="member this.GetRadioFrequencyStatus : unit -&gt; Iot.Device.Pn5180.RadioFrequencyStatus" Usage="pn5180.GetRadioFrequencyStatus " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Pn5180.RadioFrequencyStatus</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the radio frenquency status
+            </summary>
+        <returns>The radio frequence status</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVersions">
+      <MemberSignature Language="C#" Value="public (Version,Version,Version) GetVersions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.ValueTuple`3&lt;class System.Version, class System.Version, class System.Version&gt; GetVersions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.GetVersions" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetVersions () As ValueTuple(Of Version, Version, Version)" />
+      <MemberSignature Language="F#" Value="member this.GetVersions : unit -&gt; ValueTuple&lt;Version, Version, Version&gt;" Usage="pn5180.GetVersions " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;System.Version,System.Version,System.Version&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "product", "firmware", "eeprom" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "product", "firmware", "eeprom" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the Product, Firmware and EEPROM versions of the PN8150
+            </summary>
+        <returns>A tuple with the Product, Firmware and EEPROM versions</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRadioFrequencyFieldExternal">
+      <MemberSignature Language="C#" Value="public bool IsRadioFrequencyFieldExternal ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsRadioFrequencyFieldExternal() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.IsRadioFrequencyFieldExternal" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsRadioFrequencyFieldExternal () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsRadioFrequencyFieldExternal : unit -&gt; bool" Usage="pn5180.IsRadioFrequencyFieldExternal " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Is the external field activated?
+            </summary>
+        <returns>True if active, false if not</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListenToCardIso14443TypeA">
+      <MemberSignature Language="C#" Value="public bool ListenToCardIso14443TypeA (Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration transmitter, Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration receiver, out Iot.Device.Rfid.Data106kbpsTypeA card, int timeoutPollingMilliseconds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ListenToCardIso14443TypeA(valuetype Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration transmitter, valuetype Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration receiver, [out] class Iot.Device.Rfid.Data106kbpsTypeA&amp; card, int32 timeoutPollingMilliseconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.ListenToCardIso14443TypeA(Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration,Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration,Iot.Device.Rfid.Data106kbpsTypeA@,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ListenToCardIso14443TypeA (transmitter As TransmitterRadioFrequencyConfiguration, receiver As ReceiverRadioFrequencyConfiguration, ByRef card As Data106kbpsTypeA, timeoutPollingMilliseconds As Integer) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ListenToCardIso14443TypeA : Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration * Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration * Data106kbpsTypeA * int -&gt; bool" Usage="pn5180.ListenToCardIso14443TypeA (transmitter, receiver, card, timeoutPollingMilliseconds)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transmitter" Type="Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration" />
+        <Parameter Name="receiver" Type="Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration" />
+        <Parameter Name="card" Type="Iot.Device.Rfid.Data106kbpsTypeA" RefType="out" />
+        <Parameter Name="timeoutPollingMilliseconds" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="transmitter">The transmitter configuration, should be compatible with type A card</param>
+        <param name="receiver">The receiver configuration, should be compatible with type A card</param>
+        <param name="card">The type A card once detected</param>
+        <param name="timeoutPollingMilliseconds">The time to poll the card in milliseconds. Card detection will stop once the detection time will be over</param>
+        <summary>
+            Listen to any 14443 Type A card
+            </summary>
+        <returns>True if a 14443 Type A card has been detected</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListenToCardIso14443TypeB">
+      <MemberSignature Language="C#" Value="public bool ListenToCardIso14443TypeB (Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration transmitter, Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration receiver, out Iot.Device.Rfid.Data106kbpsTypeB card, int timeoutPollingMilliseconds);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ListenToCardIso14443TypeB(valuetype Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration transmitter, valuetype Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration receiver, [out] class Iot.Device.Rfid.Data106kbpsTypeB&amp; card, int32 timeoutPollingMilliseconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.ListenToCardIso14443TypeB(Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration,Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration,Iot.Device.Rfid.Data106kbpsTypeB@,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ListenToCardIso14443TypeB (transmitter As TransmitterRadioFrequencyConfiguration, receiver As ReceiverRadioFrequencyConfiguration, ByRef card As Data106kbpsTypeB, timeoutPollingMilliseconds As Integer) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ListenToCardIso14443TypeB : Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration * Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration * Data106kbpsTypeB * int -&gt; bool" Usage="pn5180.ListenToCardIso14443TypeB (transmitter, receiver, card, timeoutPollingMilliseconds)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transmitter" Type="Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration" />
+        <Parameter Name="receiver" Type="Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration" />
+        <Parameter Name="card" Type="Iot.Device.Rfid.Data106kbpsTypeB" RefType="out" />
+        <Parameter Name="timeoutPollingMilliseconds" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="transmitter">The transmitter configuration, should be compatible with type B card</param>
+        <param name="receiver">The receiver configuration, should be compatible with type A card</param>
+        <param name="card">The type B card once detected</param>
+        <param name="timeoutPollingMilliseconds">The time to poll the card in milliseconds. Card detection will stop once the detection time will be over</param>
+        <summary>
+            Listen to any 14443 Type B card
+            </summary>
+        <returns>True if a 14443 Type B card has been detected</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadRadioFrequencyConfiguration">
+      <MemberSignature Language="C#" Value="public bool LoadRadioFrequencyConfiguration (Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration transmitter, Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration receiver);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool LoadRadioFrequencyConfiguration(valuetype Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration transmitter, valuetype Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration receiver) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.LoadRadioFrequencyConfiguration(Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration,Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Function LoadRadioFrequencyConfiguration (transmitter As TransmitterRadioFrequencyConfiguration, receiver As ReceiverRadioFrequencyConfiguration) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.LoadRadioFrequencyConfiguration : Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration * Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration -&gt; bool" Usage="pn5180.LoadRadioFrequencyConfiguration (transmitter, receiver)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transmitter" Type="Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration" />
+        <Parameter Name="receiver" Type="Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="transmitter">The transmitter configuration</param>
+        <param name="receiver">The receiver configuration</param>
+        <summary>
+            Load a specific radio frequency configuration
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogLevel">
+      <MemberSignature Language="C#" Value="public Iot.Device.Card.LogLevel LogLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Card.LogLevel LogLevel" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn5180.Pn5180.LogLevel" />
+      <MemberSignature Language="VB.NET" Value="Public Property LogLevel As LogLevel" />
+      <MemberSignature Language="F#" Value="member this.LogLevel : Iot.Device.Card.LogLevel with get, set" Usage="Iot.Device.Pn5180.Pn5180.LogLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.LogLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Log level
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogTo">
+      <MemberSignature Language="C#" Value="public Iot.Device.Card.LogTo LogTo { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Card.LogTo LogTo" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn5180.Pn5180.LogTo" />
+      <MemberSignature Language="VB.NET" Value="Public Property LogTo As LogTo" />
+      <MemberSignature Language="F#" Value="member this.LogTo : Iot.Device.Card.LogTo with get, set" Usage="Iot.Device.Pn5180.Pn5180.LogTo" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.LogTo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The location to log the info
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumSpiClockFrequency">
+      <MemberSignature Language="C#" Value="public const int MaximumSpiClockFrequency = 7000000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 MaximumSpiClockFrequency = (7000000)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Pn5180.Pn5180.MaximumSpiClockFrequency" />
+      <MemberSignature Language="VB.NET" Value="Public Const MaximumSpiClockFrequency As Integer  = 7000000" />
+      <MemberSignature Language="F#" Value="val mutable MaximumSpiClockFrequency : int" Usage="Iot.Device.Pn5180.Pn5180.MaximumSpiClockFrequency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>7000000</MemberValue>
+      <Docs>
+        <summary>
+            PN532 SPI Clock Frequency
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MifareAuthenticate">
+      <MemberSignature Language="C#" Value="public bool MifareAuthenticate (Span&lt;byte&gt; key, Iot.Device.Card.Mifare.MifareCardCommand mifareCommand, byte blockAddress, Span&lt;byte&gt; cardUid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool MifareAuthenticate(valuetype System.Span`1&lt;unsigned int8&gt; key, valuetype Iot.Device.Card.Mifare.MifareCardCommand mifareCommand, unsigned int8 blockAddress, valuetype System.Span`1&lt;unsigned int8&gt; cardUid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.MifareAuthenticate(System.Span{System.Byte},Iot.Device.Card.Mifare.MifareCardCommand,System.Byte,System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function MifareAuthenticate (key As Span(Of Byte), mifareCommand As MifareCardCommand, blockAddress As Byte, cardUid As Span(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.MifareAuthenticate : Span&lt;byte&gt; * Iot.Device.Card.Mifare.MifareCardCommand * byte * Span&lt;byte&gt; -&gt; bool" Usage="pn5180.MifareAuthenticate (key, mifareCommand, blockAddress, cardUid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.Span&lt;System.Byte&gt;" />
+        <Parameter Name="mifareCommand" Type="Iot.Device.Card.Mifare.MifareCardCommand" />
+        <Parameter Name="blockAddress" Type="System.Byte" />
+        <Parameter Name="cardUid" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="key">A 6 bytes key</param>
+        <param name="mifareCommand">MifareCardCommand.AuthenticationA or MifareCardCommand.AuthenticationB</param>
+        <param name="blockAddress">The block address to authenticate</param>
+        <param name="cardUid">The 4 bytes UUID of the card</param>
+        <summary>
+            Specific function to authenticate Mifare cards
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RadioFrequencyCollision">
+      <MemberSignature Language="C#" Value="public Iot.Device.Pn5180.RadioFrequencyCollision RadioFrequencyCollision { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Pn5180.RadioFrequencyCollision RadioFrequencyCollision" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn5180.Pn5180.RadioFrequencyCollision" />
+      <MemberSignature Language="VB.NET" Value="Public Property RadioFrequencyCollision As RadioFrequencyCollision" />
+      <MemberSignature Language="F#" Value="member this.RadioFrequencyCollision : Iot.Device.Pn5180.RadioFrequencyCollision with get, set" Usage="Iot.Device.Pn5180.Pn5180.RadioFrequencyCollision" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Pn5180.RadioFrequencyCollision</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True to disable the Radio Frequency collision avoidance according to ISO/IEC 18092
+            False to use Active Communication mode according to ISO/IEC 18092
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RadioFrequencyConfigurationSize">
+      <MemberSignature Language="C#" Value="public const int RadioFrequencyConfigurationSize = 5;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 RadioFrequencyConfigurationSize = (5)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Pn5180.Pn5180.RadioFrequencyConfigurationSize" />
+      <MemberSignature Language="VB.NET" Value="Public Const RadioFrequencyConfigurationSize As Integer  = 5" />
+      <MemberSignature Language="F#" Value="val mutable RadioFrequencyConfigurationSize : int" Usage="Iot.Device.Pn5180.Pn5180.RadioFrequencyConfigurationSize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            A radio Frequency configuration element size is 5 bytes
+            Byte 1 = Register Address
+            next 4 bytes = data of the register
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RadioFrequencyField">
+      <MemberSignature Language="C#" Value="public bool RadioFrequencyField { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RadioFrequencyField" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn5180.Pn5180.RadioFrequencyField" />
+      <MemberSignature Language="VB.NET" Value="Public Property RadioFrequencyField As Boolean" />
+      <MemberSignature Language="F#" Value="member this.RadioFrequencyField : bool with get, set" Usage="Iot.Device.Pn5180.Pn5180.RadioFrequencyField" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or set the radio frequency field. True for on, false for off
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAllEeprom">
+      <MemberSignature Language="C#" Value="public bool ReadAllEeprom (Span&lt;byte&gt; eeprom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ReadAllEeprom(valuetype System.Span`1&lt;unsigned int8&gt; eeprom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.ReadAllEeprom(System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadAllEeprom (eeprom As Span(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReadAllEeprom : Span&lt;byte&gt; -&gt; bool" Usage="pn5180.ReadAllEeprom eeprom" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eeprom" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="eeprom">At 255 bytes buffer</param>
+        <summary>
+            Read the full EEPROM
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadDataFromCard">
+      <MemberSignature Language="C#" Value="public bool ReadDataFromCard (Span&lt;byte&gt; toRead);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ReadDataFromCard(valuetype System.Span`1&lt;unsigned int8&gt; toRead) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.ReadDataFromCard(System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadDataFromCard (toRead As Span(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReadDataFromCard : Span&lt;byte&gt; -&gt; bool" Usage="pn5180.ReadDataFromCard toRead" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toRead" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="toRead">The span of byte to read</param>
+        <summary>
+            Read data from a card.
+            </summary>
+        <returns>True if success</returns>
+        <remarks>Using this function you'll have to manage yourself the possible low level communication protocol.
+            This function write directly to the card all the bytes. Please make sure you'll first load specific radio frequence settings,
+            detect a card, select it and then send data</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadDataFromCard">
+      <MemberSignature Language="C#" Value="public bool ReadDataFromCard (Span&lt;byte&gt; toRead, out int bytesRead);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ReadDataFromCard(valuetype System.Span`1&lt;unsigned int8&gt; toRead, [out] int32&amp; bytesRead) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.ReadDataFromCard(System.Span{System.Byte},System.Int32@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadDataFromCard (toRead As Span(Of Byte), ByRef bytesRead As Integer) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReadDataFromCard : Span&lt;byte&gt; * int -&gt; bool" Usage="pn5180.ReadDataFromCard (toRead, bytesRead)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toRead" Type="System.Span&lt;System.Byte&gt;" />
+        <Parameter Name="bytesRead" Type="System.Int32" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="toRead">&gt;The span of byte to read</param>
+        <param name="bytesRead">number of bytes read</param>
+        <summary>
+            Read all the data from the card
+            </summary>
+        <returns>A byte array with all the read elements, null if nothing can be read</returns>
+        <remarks>Using this function you'll have to manage yourself the possible low level communication protocol.
+            This function write directly to the card all the bytes. Please make sure you'll first load specific radio frequence settings,
+            detect a card, select it and then send data</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadEeprom">
+      <MemberSignature Language="C#" Value="public bool ReadEeprom (Iot.Device.Pn5180.EepromAddress address, Span&lt;byte&gt; eeprom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ReadEeprom(valuetype Iot.Device.Pn5180.EepromAddress address, valuetype System.Span`1&lt;unsigned int8&gt; eeprom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.ReadEeprom(Iot.Device.Pn5180.EepromAddress,System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadEeprom (address As EepromAddress, eeprom As Span(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReadEeprom : Iot.Device.Pn5180.EepromAddress * Span&lt;byte&gt; -&gt; bool" Usage="pn5180.ReadEeprom (address, eeprom)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="Iot.Device.Pn5180.EepromAddress" />
+        <Parameter Name="eeprom" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="address">The EEPROM address</param>
+        <param name="eeprom">A span of byte to read the EEPROM</param>
+        <summary>
+            Read a specific part of the EEPROM
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RetrieveRadioFrequencyConfiguration">
+      <MemberSignature Language="C#" Value="public bool RetrieveRadioFrequencyConfiguration (Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration receiver, Span&lt;byte&gt; configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RetrieveRadioFrequencyConfiguration(valuetype Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration receiver, valuetype System.Span`1&lt;unsigned int8&gt; configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.RetrieveRadioFrequencyConfiguration(Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration,System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function RetrieveRadioFrequencyConfiguration (receiver As ReceiverRadioFrequencyConfiguration, configuration As Span(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.RetrieveRadioFrequencyConfiguration : Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration * Span&lt;byte&gt; -&gt; bool" Usage="pn5180.RetrieveRadioFrequencyConfiguration (receiver, configuration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="receiver" Type="Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration" />
+        <Parameter Name="configuration" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="receiver">The receiver configuration</param>
+        <param name="configuration">A span of bytes for the configuration. Should be a multiple of 5 with the size of <see ref="GetRadioFrequenceConfigSize" /></param>
+        <summary>
+            Retrieve the radio frequency configuration
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RetrieveRadioFrequencyConfiguration">
+      <MemberSignature Language="C#" Value="public bool RetrieveRadioFrequencyConfiguration (Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration transmitter, Span&lt;byte&gt; configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RetrieveRadioFrequencyConfiguration(valuetype Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration transmitter, valuetype System.Span`1&lt;unsigned int8&gt; configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.RetrieveRadioFrequencyConfiguration(Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration,System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function RetrieveRadioFrequencyConfiguration (transmitter As TransmitterRadioFrequencyConfiguration, configuration As Span(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.RetrieveRadioFrequencyConfiguration : Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration * Span&lt;byte&gt; -&gt; bool" Usage="pn5180.RetrieveRadioFrequencyConfiguration (transmitter, configuration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transmitter" Type="Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration" />
+        <Parameter Name="configuration" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="transmitter">The transmitter configuration</param>
+        <param name="configuration">A span of bytes for the configuration. Should be a multiple of 5 with the size of <see ref="GetRadioFrequenceConfigSize" /></param>
+        <summary>
+            Retrieve the radio frequency configuration
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendDataToCard">
+      <MemberSignature Language="C#" Value="public bool SendDataToCard (Span&lt;byte&gt; toSend, int numberValidBitsLastByte = 8);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SendDataToCard(valuetype System.Span`1&lt;unsigned int8&gt; toSend, int32 numberValidBitsLastByte) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.SendDataToCard(System.Span{System.Byte},System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SendDataToCard (toSend As Span(Of Byte), Optional numberValidBitsLastByte As Integer = 8) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SendDataToCard : Span&lt;byte&gt; * int -&gt; bool" Usage="pn5180.SendDataToCard (toSend, numberValidBitsLastByte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="toSend" Type="System.Span&lt;System.Byte&gt;" />
+        <Parameter Name="numberValidBitsLastByte" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="toSend">The span of byte to send</param>
+        <param name="numberValidBitsLastByte">The number of bits valid in the last byte, 8 is the default.
+            If validBits == 3 then it's equivalent to apply a mask of 0b000_0111 to get the correct valid bits</param>
+        <summary>
+            Send data to a card.
+            </summary>
+        <returns>True if success</returns>
+        <remarks>Using this function you'll have to manage yourself the possible low level communication protocol.
+            This function write directly to the card all the bytes. Please make sure you'll first load specific radio frequence settings,
+            detect a card, select it and then send data</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transceive">
+      <MemberSignature Language="C#" Value="public override int Transceive (byte targetNumber, ReadOnlySpan&lt;byte&gt; dataToSend, Span&lt;byte&gt; dataFromCard);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Transceive(unsigned int8 targetNumber, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; dataToSend, valuetype System.Span`1&lt;unsigned int8&gt; dataFromCard) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.Transceive(System.Byte,System.ReadOnlySpan{System.Byte},System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Transceive (targetNumber As Byte, dataToSend As ReadOnlySpan(Of Byte), dataFromCard As Span(Of Byte)) As Integer" />
+      <MemberSignature Language="F#" Value="override this.Transceive : byte * ReadOnlySpan&lt;byte&gt; * Span&lt;byte&gt; -&gt; int" Usage="pn5180.Transceive (targetNumber, dataToSend, dataFromCard)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNumber" Type="System.Byte" />
+        <Parameter Name="dataToSend" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="dataFromCard" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="targetNumber">To be added.</param>
+        <param name="dataToSend">To be added.</param>
+        <param name="dataFromCard">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateRadioFrequencyConfiguration">
+      <MemberSignature Language="C#" Value="public bool UpdateRadioFrequencyConfiguration (Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration receiver, Span&lt;byte&gt; configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool UpdateRadioFrequencyConfiguration(valuetype Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration receiver, valuetype System.Span`1&lt;unsigned int8&gt; configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.UpdateRadioFrequencyConfiguration(Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration,System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function UpdateRadioFrequencyConfiguration (receiver As ReceiverRadioFrequencyConfiguration, configuration As Span(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UpdateRadioFrequencyConfiguration : Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration * Span&lt;byte&gt; -&gt; bool" Usage="pn5180.UpdateRadioFrequencyConfiguration (receiver, configuration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="receiver" Type="Iot.Device.Pn5180.ReceiverRadioFrequencyConfiguration" />
+        <Parameter Name="configuration" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="receiver">The receiver configuration</param>
+        <param name="configuration">A span of bytes for the configuration. Should be a multiple of 5 with the size of <see ref="GetRadioFrequenceConfigSize" /></param>
+        <summary>
+            Update the radio frequency configuration
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateRadioFrequencyConfiguration">
+      <MemberSignature Language="C#" Value="public bool UpdateRadioFrequencyConfiguration (Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration transmitter, Span&lt;byte&gt; configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool UpdateRadioFrequencyConfiguration(valuetype Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration transmitter, valuetype System.Span`1&lt;unsigned int8&gt; configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.UpdateRadioFrequencyConfiguration(Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration,System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function UpdateRadioFrequencyConfiguration (transmitter As TransmitterRadioFrequencyConfiguration, configuration As Span(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UpdateRadioFrequencyConfiguration : Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration * Span&lt;byte&gt; -&gt; bool" Usage="pn5180.UpdateRadioFrequencyConfiguration (transmitter, configuration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transmitter" Type="Iot.Device.Pn5180.TransmitterRadioFrequencyConfiguration" />
+        <Parameter Name="configuration" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="transmitter">The transmitter configuration</param>
+        <param name="configuration">A span of bytes for the configuration. Should be a multiple of 5 with the size of <see ref="GetRadioFrequenceConfigSize" /></param>
+        <summary>
+            Update the radio frequency configuration
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteAllEeprom">
+      <MemberSignature Language="C#" Value="public bool WriteAllEeprom (Span&lt;byte&gt; eeprom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool WriteAllEeprom(valuetype System.Span`1&lt;unsigned int8&gt; eeprom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.WriteAllEeprom(System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function WriteAllEeprom (eeprom As Span(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.WriteAllEeprom : Span&lt;byte&gt; -&gt; bool" Usage="pn5180.WriteAllEeprom eeprom" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eeprom" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="eeprom">A 255 bytes buffer</param>
+        <summary>
+            Write all the EEPROM
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteEeprom">
+      <MemberSignature Language="C#" Value="public bool WriteEeprom (Iot.Device.Pn5180.EepromAddress address, Span&lt;byte&gt; eeprom);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool WriteEeprom(valuetype Iot.Device.Pn5180.EepromAddress address, valuetype System.Span`1&lt;unsigned int8&gt; eeprom) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn5180.Pn5180.WriteEeprom(Iot.Device.Pn5180.EepromAddress,System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function WriteEeprom (address As EepromAddress, eeprom As Span(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.WriteEeprom : Iot.Device.Pn5180.EepromAddress * Span&lt;byte&gt; -&gt; bool" Usage="pn5180.WriteEeprom (address, eeprom)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="Iot.Device.Pn5180.EepromAddress" />
+        <Parameter Name="eeprom" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="address">The EEPROM address</param>
+        <param name="eeprom">A span of byte to write the EEPROM</param>
+        <summary>
+            Write the EEPROM at a specific address
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

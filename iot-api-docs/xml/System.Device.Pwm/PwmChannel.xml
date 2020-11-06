@@ -1,0 +1,222 @@
+<Type Name="PwmChannel" FullName="System.Device.Pwm.PwmChannel">
+  <TypeSignature Language="C#" Value="public abstract class PwmChannel : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PwmChannel extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Device.Pwm.PwmChannel" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PwmChannel&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type PwmChannel = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Device.Gpio</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents a single PWM channel.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PwmChannel ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Pwm.PwmChannel.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Device.Pwm.PwmChannel Create (int chip, int channel, int frequency = 400, double dutyCyclePercentage = 0.5);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Device.Pwm.PwmChannel Create(int32 chip, int32 channel, int32 frequency, float64 dutyCyclePercentage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Pwm.PwmChannel.Create(System.Int32,System.Int32,System.Int32,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (chip As Integer, channel As Integer, Optional frequency As Integer = 400, Optional dutyCyclePercentage As Double = 0.5) As PwmChannel" />
+      <MemberSignature Language="F#" Value="static member Create : int * int * int * double -&gt; System.Device.Pwm.PwmChannel" Usage="System.Device.Pwm.PwmChannel.Create (chip, channel, frequency, dutyCyclePercentage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Pwm.PwmChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chip" Type="System.Int32" />
+        <Parameter Name="channel" Type="System.Int32" />
+        <Parameter Name="frequency" Type="System.Int32" />
+        <Parameter Name="dutyCyclePercentage" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="chip">The PWM chip number.</param>
+        <param name="channel">The PWM channel number.</param>
+        <param name="frequency">The frequency in hertz.</param>
+        <param name="dutyCyclePercentage">The duty cycle percentage represented as a value between 0.0 and 1.0.</param>
+        <summary>
+            Creates a new instance of the <see cref="T:System.Device.Pwm.PwmChannel" /> running on the current platform. (Windows 10 IoT or Unix/Raspbian)
+            </summary>
+        <returns>A PWM channel running on Windows 10 IoT.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Pwm.PwmChannel.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="pwmChannel.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:System.IDisposable.Dispose" />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Pwm.PwmChannel.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="pwmChannel.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> if explicitly disposing, <see langword="false" /> if in finalizer</param>
+        <summary>
+            Disposes this instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DutyCycle">
+      <MemberSignature Language="C#" Value="public abstract double DutyCycle { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 DutyCycle" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Pwm.PwmChannel.DutyCycle" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property DutyCycle As Double" />
+      <MemberSignature Language="F#" Value="member this.DutyCycle : double with get, set" Usage="System.Device.Pwm.PwmChannel.DutyCycle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The duty cycle represented as a value between 0.0 and 1.0.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Frequency">
+      <MemberSignature Language="C#" Value="public abstract int Frequency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Frequency" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Pwm.PwmChannel.Frequency" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property Frequency As Integer" />
+      <MemberSignature Language="F#" Value="member this.Frequency : int with get, set" Usage="System.Device.Pwm.PwmChannel.Frequency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The frequency in hertz.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public abstract void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Pwm.PwmChannel.Start" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Start ()" />
+      <MemberSignature Language="F#" Value="abstract member Start : unit -&gt; unit" Usage="pwmChannel.Start " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Starts the PWM channel.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public abstract void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Pwm.PwmChannel.Stop" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Stop ()" />
+      <MemberSignature Language="F#" Value="abstract member Stop : unit -&gt; unit" Usage="pwmChannel.Stop " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stops the PWM channel.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,547 @@
+<Type Name="Bh1745" FullName="Iot.Device.Bh1745.Bh1745">
+  <TypeSignature Language="C#" Value="public class Bh1745 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Bh1745 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Bh1745.Bh1745" />
+  <TypeSignature Language="VB.NET" Value="Public Class Bh1745&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Bh1745 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Digital color sensor Bh1745.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bh1745 (System.Device.I2c.I2cDevice device);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice device) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bh1745.Bh1745.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (device As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Bh1745.Bh1745 : System.Device.I2c.I2cDevice -&gt; Iot.Device.Bh1745.Bh1745" Usage="new Iot.Device.Bh1745.Bh1745 device" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="device" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="device">The used I2c communication device.</param>
+        <summary>
+            Digital color sensor Bh1745.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdcGain">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bh1745.AdcGain AdcGain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Bh1745.AdcGain AdcGain" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bh1745.Bh1745.AdcGain" />
+      <MemberSignature Language="VB.NET" Value="Public Property AdcGain As AdcGain" />
+      <MemberSignature Language="F#" Value="member this.AdcGain : Iot.Device.Bh1745.AdcGain with get, set" Usage="Iot.Device.Bh1745.Bh1745.AdcGain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bh1745.AdcGain</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the adc gain of the sensor.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if invalid AdcGain is set.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelCompensationMultipliers">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bh1745.ChannelCompensationMultipliers ChannelCompensationMultipliers { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Bh1745.ChannelCompensationMultipliers ChannelCompensationMultipliers" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bh1745.Bh1745.ChannelCompensationMultipliers" />
+      <MemberSignature Language="VB.NET" Value="Public Property ChannelCompensationMultipliers As ChannelCompensationMultipliers" />
+      <MemberSignature Language="F#" Value="member this.ChannelCompensationMultipliers : Iot.Device.Bh1745.ChannelCompensationMultipliers with get, set" Usage="Iot.Device.Bh1745.Bh1745.ChannelCompensationMultipliers" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bh1745.ChannelCompensationMultipliers</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the channel compensation multipliers which are used to compensate the measurements.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte DefaultI2cAddress = 56;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 DefaultI2cAddress = (56)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Bh1745.Bh1745.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Byte  = 56" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : byte" Usage="Iot.Device.Bh1745.Bh1745.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>56</MemberValue>
+      <Docs>
+        <summary>
+            The primary I2c address of the BH1745
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bh1745.Bh1745.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="bh1745.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disposes the Bh1745 resources.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCompensatedColor">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color GetCompensatedColor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Drawing.Color GetCompensatedColor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bh1745.Bh1745.GetCompensatedColor" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCompensatedColor () As Color" />
+      <MemberSignature Language="F#" Value="member this.GetCompensatedColor : unit -&gt; System.Drawing.Color" Usage="bh1745.GetCompensatedColor " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the compensated color reading from the sensor.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HigherInterruptThreshold">
+      <MemberSignature Language="C#" Value="public ushort HigherInterruptThreshold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int16 HigherInterruptThreshold" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bh1745.Bh1745.HigherInterruptThreshold" />
+      <MemberSignature Language="VB.NET" Value="Public Property HigherInterruptThreshold As UShort" />
+      <MemberSignature Language="F#" Value="member this.HigherInterruptThreshold : uint16 with get, set" Usage="Iot.Device.Bh1745.Bh1745.HigherInterruptThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the higher interrupt threshold.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterruptIsEnabled">
+      <MemberSignature Language="C#" Value="public bool InterruptIsEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InterruptIsEnabled" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bh1745.Bh1745.InterruptIsEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property InterruptIsEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.InterruptIsEnabled : bool with get, set" Usage="Iot.Device.Bh1745.Bh1745.InterruptIsEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the interrupt pin is enabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterruptPersistence">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bh1745.InterruptPersistence InterruptPersistence { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Bh1745.InterruptPersistence InterruptPersistence" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bh1745.Bh1745.InterruptPersistence" />
+      <MemberSignature Language="VB.NET" Value="Public Property InterruptPersistence As InterruptPersistence" />
+      <MemberSignature Language="F#" Value="member this.InterruptPersistence : Iot.Device.Bh1745.InterruptPersistence with get, set" Usage="Iot.Device.Bh1745.Bh1745.InterruptPersistence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bh1745.InterruptPersistence</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the persistence function of the interrupt.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterruptReset">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bh1745.InterruptStatus InterruptReset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Bh1745.InterruptStatus InterruptReset" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bh1745.Bh1745.InterruptReset" />
+      <MemberSignature Language="VB.NET" Value="Public Property InterruptReset As InterruptStatus" />
+      <MemberSignature Language="F#" Value="member this.InterruptReset : Iot.Device.Bh1745.InterruptStatus with get, set" Usage="Iot.Device.Bh1745.Bh1745.InterruptReset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bh1745.InterruptStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the state of the interrupt pin.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if invalid InterruptStatus is set.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="InterruptSignalIsActive">
+      <MemberSignature Language="C#" Value="public bool InterruptSignalIsActive { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InterruptSignalIsActive" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bh1745.Bh1745.InterruptSignalIsActive" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InterruptSignalIsActive As Boolean" />
+      <MemberSignature Language="F#" Value="member this.InterruptSignalIsActive : bool" Usage="Iot.Device.Bh1745.Bh1745.InterruptSignalIsActive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the interrupt signal is active.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterruptSource">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bh1745.InterruptSource InterruptSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Bh1745.InterruptSource InterruptSource" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bh1745.Bh1745.InterruptSource" />
+      <MemberSignature Language="VB.NET" Value="Public Property InterruptSource As InterruptSource" />
+      <MemberSignature Language="F#" Value="member this.InterruptSource : Iot.Device.Bh1745.InterruptSource with get, set" Usage="Iot.Device.Bh1745.Bh1745.InterruptSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bh1745.InterruptSource</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the source channel of the interrupt.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LatchBehavior">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bh1745.LatchBehavior LatchBehavior { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Bh1745.LatchBehavior LatchBehavior" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bh1745.Bh1745.LatchBehavior" />
+      <MemberSignature Language="VB.NET" Value="Public Property LatchBehavior As LatchBehavior" />
+      <MemberSignature Language="F#" Value="member this.LatchBehavior : Iot.Device.Bh1745.LatchBehavior with get, set" Usage="Iot.Device.Bh1745.Bh1745.LatchBehavior" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bh1745.LatchBehavior</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets how the interrupt pin latches.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if invalid LatchBehavior is set.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="LowerInterruptThreshold">
+      <MemberSignature Language="C#" Value="public ushort LowerInterruptThreshold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int16 LowerInterruptThreshold" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bh1745.Bh1745.LowerInterruptThreshold" />
+      <MemberSignature Language="VB.NET" Value="Public Property LowerInterruptThreshold As UShort" />
+      <MemberSignature Language="F#" Value="member this.LowerInterruptThreshold : uint16 with get, set" Usage="Iot.Device.Bh1745.Bh1745.LowerInterruptThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the lower interrupt threshold.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasurementIsActive">
+      <MemberSignature Language="C#" Value="public bool MeasurementIsActive { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MeasurementIsActive" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bh1745.Bh1745.MeasurementIsActive" />
+      <MemberSignature Language="VB.NET" Value="Public Property MeasurementIsActive As Boolean" />
+      <MemberSignature Language="F#" Value="member this.MeasurementIsActive : bool with get, set" Usage="Iot.Device.Bh1745.Bh1745.MeasurementIsActive" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether the measurement is active.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasurementTime">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bh1745.MeasurementTime MeasurementTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Bh1745.MeasurementTime MeasurementTime" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bh1745.Bh1745.MeasurementTime" />
+      <MemberSignature Language="VB.NET" Value="Public Property MeasurementTime As MeasurementTime" />
+      <MemberSignature Language="F#" Value="member this.MeasurementTime : Iot.Device.Bh1745.MeasurementTime with get, set" Usage="Iot.Device.Bh1745.Bh1745.MeasurementTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bh1745.MeasurementTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the currently set measurement time.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Thrown if invalid MeasurementTime is set.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadBlueDataRegister">
+      <MemberSignature Language="C#" Value="public ushort ReadBlueDataRegister ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int16 ReadBlueDataRegister() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bh1745.Bh1745.ReadBlueDataRegister" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadBlueDataRegister () As UShort" />
+      <MemberSignature Language="F#" Value="member this.ReadBlueDataRegister : unit -&gt; uint16" Usage="bh1745.ReadBlueDataRegister " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reads the blue data register of the sensor.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadClearDataRegister">
+      <MemberSignature Language="C#" Value="public ushort ReadClearDataRegister ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int16 ReadClearDataRegister() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bh1745.Bh1745.ReadClearDataRegister" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadClearDataRegister () As UShort" />
+      <MemberSignature Language="F#" Value="member this.ReadClearDataRegister : unit -&gt; uint16" Usage="bh1745.ReadClearDataRegister " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reads the clear data register of the sensor.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadGreenDataRegister">
+      <MemberSignature Language="C#" Value="public ushort ReadGreenDataRegister ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int16 ReadGreenDataRegister() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bh1745.Bh1745.ReadGreenDataRegister" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadGreenDataRegister () As UShort" />
+      <MemberSignature Language="F#" Value="member this.ReadGreenDataRegister : unit -&gt; uint16" Usage="bh1745.ReadGreenDataRegister " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reads the green data register of the sensor.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadMeasurementIsValid">
+      <MemberSignature Language="C#" Value="public bool ReadMeasurementIsValid ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ReadMeasurementIsValid() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bh1745.Bh1745.ReadMeasurementIsValid" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadMeasurementIsValid () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReadMeasurementIsValid : unit -&gt; bool" Usage="bh1745.ReadMeasurementIsValid " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reads whether the last measurement is valid.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadRedDataRegister">
+      <MemberSignature Language="C#" Value="public ushort ReadRedDataRegister ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int16 ReadRedDataRegister() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bh1745.Bh1745.ReadRedDataRegister" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadRedDataRegister () As UShort" />
+      <MemberSignature Language="F#" Value="member this.ReadRedDataRegister : unit -&gt; uint16" Usage="bh1745.ReadRedDataRegister " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reads the red data register of the sensor.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bh1745.Bh1745.Reset" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Reset ()" />
+      <MemberSignature Language="F#" Value="member this.Reset : unit -&gt; unit" Usage="bh1745.Reset " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resets the device to the default configuration.
+            On reset the sensor goes to power down mode.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecondaryI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte SecondaryI2cAddress = 57;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 SecondaryI2cAddress = (57)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Bh1745.Bh1745.SecondaryI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const SecondaryI2cAddress As Byte  = 57" />
+      <MemberSignature Language="F#" Value="val mutable SecondaryI2cAddress : byte" Usage="Iot.Device.Bh1745.Bh1745.SecondaryI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>57</MemberValue>
+      <Docs>
+        <summary>
+            The secondary I2c address of the BH1745
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

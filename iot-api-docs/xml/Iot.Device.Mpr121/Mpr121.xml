@@ -1,0 +1,206 @@
+<Type Name="Mpr121" FullName="Iot.Device.Mpr121.Mpr121">
+  <TypeSignature Language="C#" Value="public class Mpr121 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Mpr121 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mpr121.Mpr121" />
+  <TypeSignature Language="VB.NET" Value="Public Class Mpr121&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Mpr121 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Supports MPR121 Proximity Capacitive Touch Sensor Controller.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Mpr121 (System.Device.I2c.I2cDevice device, int periodRefresh = -1, Iot.Device.Mpr121.Mpr121Configuration configuration = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice device, int32 periodRefresh, class Iot.Device.Mpr121.Mpr121Configuration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mpr121.Mpr121.#ctor(System.Device.I2c.I2cDevice,System.Int32,Iot.Device.Mpr121.Mpr121Configuration)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (device As I2cDevice, Optional periodRefresh As Integer = -1, Optional configuration As Mpr121Configuration = Nothing)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mpr121.Mpr121 : System.Device.I2c.I2cDevice * int * Iot.Device.Mpr121.Mpr121Configuration -&gt; Iot.Device.Mpr121.Mpr121" Usage="new Iot.Device.Mpr121.Mpr121 (device, periodRefresh, configuration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="device" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="periodRefresh" Type="System.Int32" />
+        <Parameter Name="configuration" Type="Iot.Device.Mpr121.Mpr121Configuration" />
+      </Parameters>
+      <Docs>
+        <param name="device">The i2c device.</param>
+        <param name="periodRefresh">The period in milliseconds of refresing the channel statuses.</param>
+        <param name="configuration">The controller configuration.</param>
+        <summary>
+            Initialize a MPR121 controller.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChannelStatusesChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Iot.Device.Mpr121.ChannelStatusesChangedEventArgs&gt; ChannelStatusesChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Iot.Device.Mpr121.ChannelStatusesChangedEventArgs&gt; ChannelStatusesChanged" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Mpr121.Mpr121.ChannelStatusesChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Event ChannelStatusesChanged As EventHandler(Of ChannelStatusesChangedEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.ChannelStatusesChanged : EventHandler&lt;Iot.Device.Mpr121.ChannelStatusesChangedEventArgs&gt; " Usage="member this.ChannelStatusesChanged : System.EventHandler&lt;Iot.Device.Mpr121.ChannelStatusesChangedEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Iot.Device.Mpr121.ChannelStatusesChangedEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Notifies about a the channel statuses have been changed.
+            Refresh period can be changed by setting PeriodRefresh property.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public static readonly byte DefaultI2cAddress;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly unsigned int8 DefaultI2cAddress" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Mpr121.Mpr121.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly DefaultI2cAddress As Byte " />
+      <MemberSignature Language="F#" Value=" staticval mutable DefaultI2cAddress : byte" Usage="Iot.Device.Mpr121.Mpr121.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            MPR121 Default I2C Address.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mpr121.Mpr121.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="mpr121.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="PeriodRefresh">
+      <MemberSignature Language="C#" Value="public int PeriodRefresh { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PeriodRefresh" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mpr121.Mpr121.PeriodRefresh" />
+      <MemberSignature Language="VB.NET" Value="Public Property PeriodRefresh As Integer" />
+      <MemberSignature Language="F#" Value="member this.PeriodRefresh : int with get, set" Usage="Iot.Device.Mpr121.Mpr121.PeriodRefresh" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the period in milliseconds to refresh the channels statuses.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <remark>
+            Set value 0 to stop the automatically refreshing. Setting the value greater than 0 will start/update auto-refresh.
+            </remark>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadChannelStatus">
+      <MemberSignature Language="C#" Value="public bool ReadChannelStatus (Iot.Device.Mpr121.Channels channel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ReadChannelStatus(valuetype Iot.Device.Mpr121.Channels channel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mpr121.Mpr121.ReadChannelStatus(Iot.Device.Mpr121.Channels)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadChannelStatus (channel As Channels) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReadChannelStatus : Iot.Device.Mpr121.Channels -&gt; bool" Usage="mpr121.ReadChannelStatus channel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel" Type="Iot.Device.Mpr121.Channels" />
+      </Parameters>
+      <Docs>
+        <param name="channel">The channel to read status.</param>
+        <summary>
+            Reads the channel status of MPR121 controller.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <remark>
+            Please use ReadChannelStatuses() if you need to read statuses of multiple channels.
+            Using this method several times to read status for several channels can affect the performance.
+            </remark>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadChannelStatuses">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyDictionary&lt;Iot.Device.Mpr121.Channels,bool&gt; ReadChannelStatuses ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;valuetype Iot.Device.Mpr121.Channels, bool&gt; ReadChannelStatuses() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mpr121.Mpr121.ReadChannelStatuses" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadChannelStatuses () As IReadOnlyDictionary(Of Channels, Boolean)" />
+      <MemberSignature Language="F#" Value="member this.ReadChannelStatuses : unit -&gt; System.Collections.Generic.IReadOnlyDictionary&lt;Iot.Device.Mpr121.Channels, bool&gt;" Usage="mpr121.ReadChannelStatuses " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;Iot.Device.Mpr121.Channels,System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reads the channel statuses of MPR121 controller.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

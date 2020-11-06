@@ -1,0 +1,609 @@
+<Type Name="RGBLedMatrix" FullName="Iot.Device.LEDMatrix.RGBLedMatrix">
+  <TypeSignature Language="C#" Value="public class RGBLedMatrix" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RGBLedMatrix extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.LEDMatrix.RGBLedMatrix" />
+  <TypeSignature Language="VB.NET" Value="Public Class RGBLedMatrix" />
+  <TypeSignature Language="F#" Value="type RGBLedMatrix = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents RGB LED matrix
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RGBLedMatrix (Iot.Device.LEDMatrix.PinMapping mapping, int width, int height, int chainRows = 1, int chainColumns = 1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.LEDMatrix.PinMapping mapping, int32 width, int32 height, int32 chainRows, int32 chainColumns) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.LEDMatrix.RGBLedMatrix.#ctor(Iot.Device.LEDMatrix.PinMapping,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (mapping As PinMapping, width As Integer, height As Integer, Optional chainRows As Integer = 1, Optional chainColumns As Integer = 1)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.LEDMatrix.RGBLedMatrix : Iot.Device.LEDMatrix.PinMapping * int * int * int * int -&gt; Iot.Device.LEDMatrix.RGBLedMatrix" Usage="new Iot.Device.LEDMatrix.RGBLedMatrix (mapping, width, height, chainRows, chainColumns)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mapping" Type="Iot.Device.LEDMatrix.PinMapping" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="chainRows" Type="System.Int32" />
+        <Parameter Name="chainColumns" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="mapping">The Gpio pin mapping</param>
+        <param name="width">The width in pixels of the matrix display area</param>
+        <param name="height">The height in pixels of the matrix display area</param>
+        <param name="chainRows">Number of the matrices rows in the chain</param>
+        <param name="chainColumns">Number of the matrices columns in the chain</param>
+        <summary>
+            Construct a new RGBLedMatrix object
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.LEDMatrix.RGBLedMatrix.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="member this.Dispose : unit -&gt; unit" Usage="rGBLedMatrix.Dispose " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose the object after done using it.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBitmap">
+      <MemberSignature Language="C#" Value="public void DrawBitmap (int x, int y, System.Drawing.Bitmap bitmap, bool backBuffer = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawBitmap(int32 x, int32 y, class System.Drawing.Bitmap bitmap, bool backBuffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.LEDMatrix.RGBLedMatrix.DrawBitmap(System.Int32,System.Int32,System.Drawing.Bitmap,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DrawBitmap (x As Integer, y As Integer, bitmap As Bitmap, Optional backBuffer As Boolean = false)" />
+      <MemberSignature Language="F#" Value="member this.DrawBitmap : int * int * System.Drawing.Bitmap * bool -&gt; unit" Usage="rGBLedMatrix.DrawBitmap (x, y, bitmap, backBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="bitmap" Type="System.Drawing.Bitmap" />
+        <Parameter Name="backBuffer" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Upper left x coordinate on the display</param>
+        <param name="y">Upper left y coordinate on the display</param>
+        <param name="bitmap">System.Drawing.Bitmap object to draw</param>
+        <param name="backBuffer">true if want use back buffer, false otherwise</param>
+        <summary>
+            Draw a bitmap on the matrix display area
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBitmap">
+      <MemberSignature Language="C#" Value="public void DrawBitmap (int x, int y, System.Drawing.Bitmap bitmap, byte red, byte green, byte blue, byte repRed, byte repGreen, byte repBlue, bool backBuffer = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawBitmap(int32 x, int32 y, class System.Drawing.Bitmap bitmap, unsigned int8 red, unsigned int8 green, unsigned int8 blue, unsigned int8 repRed, unsigned int8 repGreen, unsigned int8 repBlue, bool backBuffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.LEDMatrix.RGBLedMatrix.DrawBitmap(System.Int32,System.Int32,System.Drawing.Bitmap,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DrawBitmap (x As Integer, y As Integer, bitmap As Bitmap, red As Byte, green As Byte, blue As Byte, repRed As Byte, repGreen As Byte, repBlue As Byte, Optional backBuffer As Boolean = false)" />
+      <MemberSignature Language="F#" Value="member this.DrawBitmap : int * int * System.Drawing.Bitmap * byte * byte * byte * byte * byte * byte * bool -&gt; unit" Usage="rGBLedMatrix.DrawBitmap (x, y, bitmap, red, green, blue, repRed, repGreen, repBlue, backBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="bitmap" Type="System.Drawing.Bitmap" />
+        <Parameter Name="red" Type="System.Byte" />
+        <Parameter Name="green" Type="System.Byte" />
+        <Parameter Name="blue" Type="System.Byte" />
+        <Parameter Name="repRed" Type="System.Byte" />
+        <Parameter Name="repGreen" Type="System.Byte" />
+        <Parameter Name="repBlue" Type="System.Byte" />
+        <Parameter Name="backBuffer" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Upper left x coordinate on the display</param>
+        <param name="y">Upper left y coordinate on the display</param>
+        <param name="bitmap">System.Drawing.Bitmap object to draw</param>
+        <param name="red">red color to replace</param>
+        <param name="green">green color to replace</param>
+        <param name="blue">blue color to replace</param>
+        <param name="repRed">replacement color for the red color</param>
+        <param name="repGreen">replacement color for the green color</param>
+        <param name="repBlue">replacement color for the blue color</param>
+        <param name="backBuffer">true if want use back buffer, false otherwise</param>
+        <summary>
+            Draw a bitmap on the matrix display area.
+            The drawing will replace any pixel with the color (red, green, blue) by the color (repRed, repGreen, repBlue)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawCircle">
+      <MemberSignature Language="C#" Value="public void DrawCircle (int xCenter, int yCenter, int radius, byte red, byte green, byte blue, bool backBuffer = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawCircle(int32 xCenter, int32 yCenter, int32 radius, unsigned int8 red, unsigned int8 green, unsigned int8 blue, bool backBuffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.LEDMatrix.RGBLedMatrix.DrawCircle(System.Int32,System.Int32,System.Int32,System.Byte,System.Byte,System.Byte,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DrawCircle (xCenter As Integer, yCenter As Integer, radius As Integer, red As Byte, green As Byte, blue As Byte, Optional backBuffer As Boolean = false)" />
+      <MemberSignature Language="F#" Value="member this.DrawCircle : int * int * int * byte * byte * byte * bool -&gt; unit" Usage="rGBLedMatrix.DrawCircle (xCenter, yCenter, radius, red, green, blue, backBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="xCenter" Type="System.Int32" />
+        <Parameter Name="yCenter" Type="System.Int32" />
+        <Parameter Name="radius" Type="System.Int32" />
+        <Parameter Name="red" Type="System.Byte" />
+        <Parameter Name="green" Type="System.Byte" />
+        <Parameter Name="blue" Type="System.Byte" />
+        <Parameter Name="backBuffer" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="xCenter">x coordinate of the center</param>
+        <param name="yCenter">y coordinate of the center</param>
+        <param name="radius">radius length</param>
+        <param name="red">red color of circle arc</param>
+        <param name="green">green color of circle arc</param>
+        <param name="blue">blue color of circle arc</param>
+        <param name="backBuffer">true if want use back buffer, false otherwise</param>
+        <summary>
+            Draw a Circle on the display
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public void DrawText (int x, int y, ReadOnlySpan&lt;char&gt; text, Iot.Device.Graphics.BdfFont font, byte textR, byte textG, byte textB, byte bkR, byte bkG, byte bkB, bool backBuffer = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawText(int32 x, int32 y, valuetype System.ReadOnlySpan`1&lt;char&gt; text, class Iot.Device.Graphics.BdfFont font, unsigned int8 textR, unsigned int8 textG, unsigned int8 textB, unsigned int8 bkR, unsigned int8 bkG, unsigned int8 bkB, bool backBuffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.LEDMatrix.RGBLedMatrix.DrawText(System.Int32,System.Int32,System.ReadOnlySpan{System.Char},Iot.Device.Graphics.BdfFont,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DrawText (x As Integer, y As Integer, text As ReadOnlySpan(Of Char), font As BdfFont, textR As Byte, textG As Byte, textB As Byte, bkR As Byte, bkG As Byte, bkB As Byte, Optional backBuffer As Boolean = false)" />
+      <MemberSignature Language="F#" Value="member this.DrawText : int * int * ReadOnlySpan&lt;char&gt; * Iot.Device.Graphics.BdfFont * byte * byte * byte * byte * byte * byte * bool -&gt; unit" Usage="rGBLedMatrix.DrawText (x, y, text, font, textR, textG, textB, bkR, bkG, bkB, backBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="text" Type="System.ReadOnlySpan&lt;System.Char&gt;" />
+        <Parameter Name="font" Type="Iot.Device.Graphics.BdfFont" />
+        <Parameter Name="textR" Type="System.Byte" />
+        <Parameter Name="textG" Type="System.Byte" />
+        <Parameter Name="textB" Type="System.Byte" />
+        <Parameter Name="bkR" Type="System.Byte" />
+        <Parameter Name="bkG" Type="System.Byte" />
+        <Parameter Name="bkB" Type="System.Byte" />
+        <Parameter Name="backBuffer" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">X coordinate of the text position</param>
+        <param name="y">Y coordinate of the text position</param>
+        <param name="text">Text to draw</param>
+        <param name="font">Font to use to draw the text</param>
+        <param name="textR">Red channel of the text color</param>
+        <param name="textG">Green channel of the text color</param>
+        <param name="textB">Blue channel of the text color</param>
+        <param name="bkR">Red channel of the text background</param>
+        <param name="bkG">Green channel of the text background</param>
+        <param name="bkB">Blue channel of the text background</param>
+        <param name="backBuffer">Set to true if drawing on the backing buffer. Defaults to false.</param>
+        <summary>
+            Draws text on the display at a specified position
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawText">
+      <MemberSignature Language="C#" Value="public void DrawText (int x, int y, string text, Iot.Device.Graphics.BdfFont font, byte textR, byte textG, byte textB, byte bkR, byte bkG, byte bkB, bool backBuffer = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawText(int32 x, int32 y, string text, class Iot.Device.Graphics.BdfFont font, unsigned int8 textR, unsigned int8 textG, unsigned int8 textB, unsigned int8 bkR, unsigned int8 bkG, unsigned int8 bkB, bool backBuffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.LEDMatrix.RGBLedMatrix.DrawText(System.Int32,System.Int32,System.String,Iot.Device.Graphics.BdfFont,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Byte,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DrawText (x As Integer, y As Integer, text As String, font As BdfFont, textR As Byte, textG As Byte, textB As Byte, bkR As Byte, bkG As Byte, bkB As Byte, Optional backBuffer As Boolean = false)" />
+      <MemberSignature Language="F#" Value="member this.DrawText : int * int * string * Iot.Device.Graphics.BdfFont * byte * byte * byte * byte * byte * byte * bool -&gt; unit" Usage="rGBLedMatrix.DrawText (x, y, text, font, textR, textG, textB, bkR, bkG, bkB, backBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="font" Type="Iot.Device.Graphics.BdfFont" />
+        <Parameter Name="textR" Type="System.Byte" />
+        <Parameter Name="textG" Type="System.Byte" />
+        <Parameter Name="textB" Type="System.Byte" />
+        <Parameter Name="bkR" Type="System.Byte" />
+        <Parameter Name="bkG" Type="System.Byte" />
+        <Parameter Name="bkB" Type="System.Byte" />
+        <Parameter Name="backBuffer" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Upper left x coordinate to start drawing the text at</param>
+        <param name="y">Upper left y coordinate to start drawing the text at</param>
+        <param name="text">The text to draw</param>
+        <param name="font">The drawing font</param>
+        <param name="textR">text red color</param>
+        <param name="textG">text green color</param>
+        <param name="textB">text blue color</param>
+        <param name="bkR">text background red color</param>
+        <param name="bkG">text background green color</param>
+        <param name="bkB">text background blue color</param>
+        <param name="backBuffer">true if want use back buffer, false otherwise</param>
+        <summary>
+            Write a text at specific position to the display using the input font and the colors
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="public void Fill (byte red, byte green, byte blue, bool backBuffer = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Fill(unsigned int8 red, unsigned int8 green, unsigned int8 blue, bool backBuffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.LEDMatrix.RGBLedMatrix.Fill(System.Byte,System.Byte,System.Byte,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Fill (red As Byte, green As Byte, blue As Byte, Optional backBuffer As Boolean = false)" />
+      <MemberSignature Language="F#" Value="member this.Fill : byte * byte * byte * bool -&gt; unit" Usage="rGBLedMatrix.Fill (red, green, blue, backBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="red" Type="System.Byte" />
+        <Parameter Name="green" Type="System.Byte" />
+        <Parameter Name="blue" Type="System.Byte" />
+        <Parameter Name="backBuffer" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="red">red color value</param>
+        <param name="green">green color value</param>
+        <param name="blue">blue color value</param>
+        <param name="backBuffer">true if to draw on back buffer, false to draw on the forground buffer</param>
+        <summary>
+            Fill the whole display area with a specific color
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillRectangle">
+      <MemberSignature Language="C#" Value="public void FillRectangle (int x, int y, int width, int height, byte red, byte green, byte blue, bool backBuffer = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FillRectangle(int32 x, int32 y, int32 width, int32 height, unsigned int8 red, unsigned int8 green, unsigned int8 blue, bool backBuffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.LEDMatrix.RGBLedMatrix.FillRectangle(System.Int32,System.Int32,System.Int32,System.Int32,System.Byte,System.Byte,System.Byte,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub FillRectangle (x As Integer, y As Integer, width As Integer, height As Integer, red As Byte, green As Byte, blue As Byte, Optional backBuffer As Boolean = false)" />
+      <MemberSignature Language="F#" Value="member this.FillRectangle : int * int * int * int * byte * byte * byte * bool -&gt; unit" Usage="rGBLedMatrix.FillRectangle (x, y, width, height, red, green, blue, backBuffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="red" Type="System.Byte" />
+        <Parameter Name="green" Type="System.Byte" />
+        <Parameter Name="blue" Type="System.Byte" />
+        <Parameter Name="backBuffer" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">Upper left rectangle x coordinate</param>
+        <param name="y">Upper left rectangle y coordinate</param>
+        <param name="width">The rectangle width</param>
+        <param name="height">The rectangle height</param>
+        <param name="red">red color value</param>
+        <param name="green">green color value</param>
+        <param name="blue">blue color value</param>
+        <param name="backBuffer">true if to draw on back buffer, false to draw on the forground buffer</param>
+        <summary>
+            Fill a rectangle on the display with specific color
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FrameTime">
+      <MemberSignature Language="C#" Value="public long FrameTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 FrameTime" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.LEDMatrix.RGBLedMatrix.FrameTime" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FrameTime As Long" />
+      <MemberSignature Language="F#" Value="member this.FrameTime : int64" Usage="Iot.Device.LEDMatrix.RGBLedMatrix.FrameTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return the time in microseconds used to draw a full display frame
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public int Height { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Height" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.LEDMatrix.RGBLedMatrix.Height" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Height As Integer" />
+      <MemberSignature Language="F#" Value="member this.Height : int" Usage="Iot.Device.LEDMatrix.RGBLedMatrix.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return the height in pixels of the display
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatrixHeight">
+      <MemberSignature Language="C#" Value="public int MatrixHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 MatrixHeight" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.LEDMatrix.RGBLedMatrix.MatrixHeight" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MatrixHeight As Integer" />
+      <MemberSignature Language="F#" Value="member this.MatrixHeight : int" Usage="Iot.Device.LEDMatrix.RGBLedMatrix.MatrixHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The height in pixels of one matrix in the chain
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PWMDuration">
+      <MemberSignature Language="C#" Value="public long PWMDuration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int64 PWMDuration" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.LEDMatrix.RGBLedMatrix.PWMDuration" />
+      <MemberSignature Language="VB.NET" Value="Public Property PWMDuration As Long" />
+      <MemberSignature Language="F#" Value="member this.PWMDuration : int64 with get, set" Usage="Iot.Device.LEDMatrix.RGBLedMatrix.PWMDuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int64</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set or get the time duration in nanoseconds used in the Pulse Width Modulation (PWM).
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBackBufferPixel">
+      <MemberSignature Language="C#" Value="public void SetBackBufferPixel (int column, int row, byte red, byte green, byte blue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetBackBufferPixel(int32 column, int32 row, unsigned int8 red, unsigned int8 green, unsigned int8 blue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.LEDMatrix.RGBLedMatrix.SetBackBufferPixel(System.Int32,System.Int32,System.Byte,System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetBackBufferPixel (column As Integer, row As Integer, red As Byte, green As Byte, blue As Byte)" />
+      <MemberSignature Language="F#" Value="member this.SetBackBufferPixel : int * int * byte * byte * byte -&gt; unit" Usage="rGBLedMatrix.SetBackBufferPixel (column, row, red, green, blue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Int32" />
+        <Parameter Name="row" Type="System.Int32" />
+        <Parameter Name="red" Type="System.Byte" />
+        <Parameter Name="green" Type="System.Byte" />
+        <Parameter Name="blue" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="column">x coordinate of the pixel</param>
+        <param name="row">y coordinate of the pixel</param>
+        <param name="red">red color value</param>
+        <param name="green">green color value</param>
+        <param name="blue">blue color value</param>
+        <summary>
+            Set color of specific pixel on the background buffer display
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPixel">
+      <MemberSignature Language="C#" Value="public void SetPixel (int column, int row, byte red, byte green, byte blue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPixel(int32 column, int32 row, unsigned int8 red, unsigned int8 green, unsigned int8 blue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.LEDMatrix.RGBLedMatrix.SetPixel(System.Int32,System.Int32,System.Byte,System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetPixel (column As Integer, row As Integer, red As Byte, green As Byte, blue As Byte)" />
+      <MemberSignature Language="F#" Value="member this.SetPixel : int * int * byte * byte * byte -&gt; unit" Usage="rGBLedMatrix.SetPixel (column, row, red, green, blue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="column" Type="System.Int32" />
+        <Parameter Name="row" Type="System.Int32" />
+        <Parameter Name="red" Type="System.Byte" />
+        <Parameter Name="green" Type="System.Byte" />
+        <Parameter Name="blue" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="column">x coordinate of the pixel</param>
+        <param name="row">y coordinate of the pixel</param>
+        <param name="red">red color value</param>
+        <param name="green">green color value</param>
+        <param name="blue">blue color value</param>
+        <summary>
+            Set color of specific pixel on the forground buffer display
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartRendering">
+      <MemberSignature Language="C#" Value="public void StartRendering ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartRendering() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.LEDMatrix.RGBLedMatrix.StartRendering" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StartRendering ()" />
+      <MemberSignature Language="F#" Value="member this.StartRendering : unit -&gt; unit" Usage="rGBLedMatrix.StartRendering " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Start rendering on the display area.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopRendering">
+      <MemberSignature Language="C#" Value="public void StopRendering ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StopRendering() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.LEDMatrix.RGBLedMatrix.StopRendering" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StopRendering ()" />
+      <MemberSignature Language="F#" Value="member this.StopRendering : unit -&gt; unit" Usage="rGBLedMatrix.StopRendering " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stop rendering on the display area.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SwapBuffers">
+      <MemberSignature Language="C#" Value="public void SwapBuffers ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SwapBuffers() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.LEDMatrix.RGBLedMatrix.SwapBuffers" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SwapBuffers ()" />
+      <MemberSignature Language="F#" Value="member this.SwapBuffers : unit -&gt; unit" Usage="rGBLedMatrix.SwapBuffers " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Swap the forground and background buffers
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public int Width { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Width" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.LEDMatrix.RGBLedMatrix.Width" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Width As Integer" />
+      <MemberSignature Language="F#" Value="member this.Width : int" Usage="Iot.Device.LEDMatrix.RGBLedMatrix.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return the width in pixels of the display
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

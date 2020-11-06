@@ -1,0 +1,342 @@
+<Type Name="Mpu9250" FullName="Iot.Device.Imu.Mpu9250">
+  <TypeSignature Language="C#" Value="public class Mpu9250 : Iot.Device.Imu.Mpu6500" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Mpu9250 extends Iot.Device.Imu.Mpu6500" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Imu.Mpu9250" />
+  <TypeSignature Language="VB.NET" Value="Public Class Mpu9250&#xA;Inherits Mpu6500" />
+  <TypeSignature Language="F#" Value="type Mpu9250 = class&#xA;    inherit Mpu6500" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Imu.Mpu6500</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            MPU9250 class. MPU9250 has an embedded gyroscope, accelerometer and temperature. It is built on an MPU6500 and it does offers a magnetometer thru an embedded AK8963.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Mpu9250 (System.Device.I2c.I2cDevice i2cDevice, bool autoDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, bool autoDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Imu.Mpu9250.#ctor(System.Device.I2c.I2cDevice,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional autoDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Imu.Mpu9250 : System.Device.I2c.I2cDevice * bool -&gt; Iot.Device.Imu.Mpu9250" Usage="new Iot.Device.Imu.Mpu9250 (i2cDevice, autoDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="autoDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device</param>
+        <param name="autoDispose">Will automatically dispose the I2C device if true</param>
+        <summary>
+            Initialize the MPU9250
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalibrateMagnetometer">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 CalibrateMagnetometer (int calibrationCounts = 1000);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Numerics.Vector3 CalibrateMagnetometer(int32 calibrationCounts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Imu.Mpu9250.CalibrateMagnetometer(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CalibrateMagnetometer (Optional calibrationCounts As Integer = 1000) As Vector3" />
+      <MemberSignature Language="F#" Value="member this.CalibrateMagnetometer : int -&gt; System.Numerics.Vector3" Usage="mpu9250.CalibrateMagnetometer calibrationCounts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="calibrationCounts" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="calibrationCounts">number of points to read during calibration, default is 1000</param>
+        <summary>
+            Calibrate the magnetometer. Make sure your sensor is as far as possible of magnet.
+            Move your sensor in all direction to make sure it will get enough data in all points of space
+            Calculate as well the magnetometer bias
+            </summary>
+        <returns>Returns the factory calibration data</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Imu.Mpu9250.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="override this.Dispose : unit -&gt; unit" Usage="mpu9250.Dispose " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Cleanup everything
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMagnetometerVersion">
+      <MemberSignature Language="C#" Value="public byte GetMagnetometerVersion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8 GetMagnetometerVersion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Imu.Mpu9250.GetMagnetometerVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetMagnetometerVersion () As Byte" />
+      <MemberSignature Language="F#" Value="member this.GetMagnetometerVersion : unit -&gt; byte" Usage="mpu9250.GetMagnetometerVersion " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Check if the magnetometer version is the correct one (0x48)
+            </summary>
+        <returns>Returns the Magnetometer version number</returns>
+        <remarks>When the wake on motion is on, you can't read the magnetometer, so this function returns 0</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDataToRead">
+      <MemberSignature Language="C#" Value="public bool HasDataToRead { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasDataToRead" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Imu.Mpu9250.HasDataToRead" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasDataToRead As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasDataToRead : bool" Usage="Iot.Device.Imu.Mpu9250.HasDataToRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if there is a data to read
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MagnetometerAdjustment">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 MagnetometerAdjustment { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector3 MagnetometerAdjustment" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Imu.Mpu9250.MagnetometerAdjustment" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MagnetometerAdjustment As Vector3" />
+      <MemberSignature Language="F#" Value="member this.MagnetometerAdjustment : System.Numerics.Vector3" Usage="Iot.Device.Imu.Mpu9250.MagnetometerAdjustment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the magnetometer hardware adjustment bias
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MagnetometerMeasurementMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Magnetometer.MeasurementMode MagnetometerMeasurementMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Magnetometer.MeasurementMode MagnetometerMeasurementMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Imu.Mpu9250.MagnetometerMeasurementMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property MagnetometerMeasurementMode As MeasurementMode" />
+      <MemberSignature Language="F#" Value="member this.MagnetometerMeasurementMode : Iot.Device.Magnetometer.MeasurementMode with get, set" Usage="Iot.Device.Imu.Mpu9250.MagnetometerMeasurementMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Magnetometer.MeasurementMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Select the magnetometer measurement mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MagnetometerOutputBitMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Magnetometer.OutputBitMode MagnetometerOutputBitMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Magnetometer.OutputBitMode MagnetometerOutputBitMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Imu.Mpu9250.MagnetometerOutputBitMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property MagnetometerOutputBitMode As OutputBitMode" />
+      <MemberSignature Language="F#" Value="member this.MagnetometerOutputBitMode : Iot.Device.Magnetometer.OutputBitMode with get, set" Usage="Iot.Device.Imu.Mpu9250.MagnetometerOutputBitMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Magnetometer.OutputBitMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Select the magnetometer output bit rate
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MagnometerBias">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 MagnometerBias { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector3 MagnometerBias" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Imu.Mpu9250.MagnometerBias" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MagnometerBias As Vector3" />
+      <MemberSignature Language="F#" Value="member this.MagnometerBias : System.Numerics.Vector3" Usage="Iot.Device.Imu.Mpu9250.MagnometerBias" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the magnetometer bias
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Vector axes are the following:
+               +Z   +Y
+             \  |  /
+              \ | /
+               \|/
+               /|\
+              / | \
+             /  |  \
+                    +X
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadMagnetometer">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 ReadMagnetometer (bool waitForData = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Numerics.Vector3 ReadMagnetometer(bool waitForData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Imu.Mpu9250.ReadMagnetometer(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadMagnetometer (Optional waitForData As Boolean = true) As Vector3" />
+      <MemberSignature Language="F#" Value="member this.ReadMagnetometer : bool -&gt; System.Numerics.Vector3" Usage="mpu9250.ReadMagnetometer waitForData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitForData" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="waitForData">true to wait for new data</param>
+        <summary>
+            Read the magnetometer with bias correction and can wait for new data to be present
+            </summary>
+        <returns>The data from the magnetometer</returns>
+        <remarks>
+            Vector axes are the following:
+               +Z   +Y
+             \  |  /
+              \ | /
+               \|/
+               /|\
+              / | \
+             /  |  \
+                    +X
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadMagnetometerWithoutCorrection">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 ReadMagnetometerWithoutCorrection (bool waitForData = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Numerics.Vector3 ReadMagnetometerWithoutCorrection(bool waitForData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Imu.Mpu9250.ReadMagnetometerWithoutCorrection(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadMagnetometerWithoutCorrection (Optional waitForData As Boolean = true) As Vector3" />
+      <MemberSignature Language="F#" Value="member this.ReadMagnetometerWithoutCorrection : bool -&gt; System.Numerics.Vector3" Usage="mpu9250.ReadMagnetometerWithoutCorrection waitForData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitForData" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="waitForData">true to wait for new data</param>
+        <summary>
+            Read the magnetometer without bias correction and can wait for new data to be present
+            </summary>
+        <returns>The data from the magnetometer</returns>
+        <remarks>
+            Vector axes are the following:
+               +Z   +Y
+             \  |  /
+              \ | /
+               \|/
+               /|\
+              / | \
+             /  |  \
+                    +X
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetWakeOnMotion">
+      <MemberSignature Language="C#" Value="public void SetWakeOnMotion (uint accelerometerThreshold, Iot.Device.Imu.AccelerometerLowPowerFrequency acceleratorLowPower);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetWakeOnMotion(unsigned int32 accelerometerThreshold, valuetype Iot.Device.Imu.AccelerometerLowPowerFrequency acceleratorLowPower) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Imu.Mpu9250.SetWakeOnMotion(System.UInt32,Iot.Device.Imu.AccelerometerLowPowerFrequency)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetWakeOnMotion (accelerometerThreshold As UInteger, acceleratorLowPower As AccelerometerLowPowerFrequency)" />
+      <MemberSignature Language="F#" Value="override this.SetWakeOnMotion : uint32 * Iot.Device.Imu.AccelerometerLowPowerFrequency -&gt; unit" Usage="mpu9250.SetWakeOnMotion (accelerometerThreshold, acceleratorLowPower)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accelerometerThreshold" Type="System.UInt32" />
+        <Parameter Name="acceleratorLowPower" Type="Iot.Device.Imu.AccelerometerLowPowerFrequency" />
+      </Parameters>
+      <Docs>
+        <param name="accelerometerThreshold">Threshold of magnetometer x/y/z axes. LSB = 4mg. Range is 0mg to 1020mg</param>
+        <param name="acceleratorLowPower">Frequency used to measure data for the low power consumption mode</param>
+        <summary>
+            Setup the Wake On Motion. This mode generate a rising signal on pin INT
+            You can catch it with a normal GPIO and place an interruption on it if supported
+            Reading the sensor won't give any value until it wakes up periodically
+            Only Accelerator data is available in this mode
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

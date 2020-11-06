@@ -1,0 +1,373 @@
+<Type Name="CanIntF" FullName="Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF">
+  <TypeSignature Language="C#" Value="public class CanIntF : Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CanIntF extends System.Object implements class Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF" />
+  <TypeSignature Language="VB.NET" Value="Public Class CanIntF&#xA;Implements IRegister" />
+  <TypeSignature Language="F#" Value="type CanIntF = class&#xA;    interface IRegister" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Mcp25xxx.Register.IRegister</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            CAN Interrupt Flag Register.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CanIntF (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.#ctor(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (value As Byte)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF : byte -&gt; Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF" Usage="new Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF value" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">The value that represents the register contents.</param>
+        <summary>
+            Initializes a new instance of the CanIntF class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CanIntF (bool receiveBuffer0FullInterruptFlag, bool receiveBuffer1FullInterruptFlag, bool transmitBuffer0EmptyInterruptFlag, bool transmitBuffer1EmptyInterruptFlag, bool transmitBuffer2EmptyInterruptFlag, bool errorInterruptFlag, bool wakeUpInterruptFlag, bool messageErrorInterruptFlag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool receiveBuffer0FullInterruptFlag, bool receiveBuffer1FullInterruptFlag, bool transmitBuffer0EmptyInterruptFlag, bool transmitBuffer1EmptyInterruptFlag, bool transmitBuffer2EmptyInterruptFlag, bool errorInterruptFlag, bool wakeUpInterruptFlag, bool messageErrorInterruptFlag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.#ctor(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (receiveBuffer0FullInterruptFlag As Boolean, receiveBuffer1FullInterruptFlag As Boolean, transmitBuffer0EmptyInterruptFlag As Boolean, transmitBuffer1EmptyInterruptFlag As Boolean, transmitBuffer2EmptyInterruptFlag As Boolean, errorInterruptFlag As Boolean, wakeUpInterruptFlag As Boolean, messageErrorInterruptFlag As Boolean)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF : bool * bool * bool * bool * bool * bool * bool * bool -&gt; Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF" Usage="new Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF (receiveBuffer0FullInterruptFlag, receiveBuffer1FullInterruptFlag, transmitBuffer0EmptyInterruptFlag, transmitBuffer1EmptyInterruptFlag, transmitBuffer2EmptyInterruptFlag, errorInterruptFlag, wakeUpInterruptFlag, messageErrorInterruptFlag)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="receiveBuffer0FullInterruptFlag" Type="System.Boolean" />
+        <Parameter Name="receiveBuffer1FullInterruptFlag" Type="System.Boolean" />
+        <Parameter Name="transmitBuffer0EmptyInterruptFlag" Type="System.Boolean" />
+        <Parameter Name="transmitBuffer1EmptyInterruptFlag" Type="System.Boolean" />
+        <Parameter Name="transmitBuffer2EmptyInterruptFlag" Type="System.Boolean" />
+        <Parameter Name="errorInterruptFlag" Type="System.Boolean" />
+        <Parameter Name="wakeUpInterruptFlag" Type="System.Boolean" />
+        <Parameter Name="messageErrorInterruptFlag" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="receiveBuffer0FullInterruptFlag">
+            RX0IF: Receive Buffer 0 Full Interrupt Flag bit.
+            True = Interrupt pending (must be cleared by MCU to reset interrupt condition).
+            False = No interrupt pending.
+            </param>
+        <param name="receiveBuffer1FullInterruptFlag">
+            RX1IF: Receive Buffer 1 Full Interrupt Flag bit.
+            True = Interrupt pending (must be cleared by MCU to reset interrupt condition).
+            False = No interrupt pending.
+            </param>
+        <param name="transmitBuffer0EmptyInterruptFlag">
+            TX0IF: Transmit Buffer 0 Empty Interrupt Flag bit.
+            True = Interrupt pending (must be cleared by MCU to reset interrupt condition).
+            False = No interrupt pending.
+            </param>
+        <param name="transmitBuffer1EmptyInterruptFlag">
+            TX1IF: Transmit Buffer 1 Empty Interrupt Flag bit.
+            True = Interrupt pending (must be cleared by MCU to reset interrupt condition).
+            False = No interrupt pending.
+            </param>
+        <param name="transmitBuffer2EmptyInterruptFlag">
+            TX2IF: Transmit Buffer 2 Empty Interrupt Flag bit.
+            True = Interrupt pending (must be cleared by MCU to reset interrupt condition).
+            False = No interrupt pending.
+            </param>
+        <param name="errorInterruptFlag">
+            ERRIF: Error Interrupt Flag bit (multiple sources in the EFLG register).
+            True = Interrupt pending (must be cleared by MCU to reset interrupt condition).
+            False = No interrupt pending.
+            </param>
+        <param name="wakeUpInterruptFlag">
+            WAKIF: Wake-up Interrupt Flag bit.
+            True = Interrupt pending (must be cleared by MCU to reset interrupt condition).
+            False = No interrupt pending.
+            </param>
+        <param name="messageErrorInterruptFlag">
+            MERRF: Message Error Interrupt Flag bit.
+            True = Interrupt pending (must be cleared by MCU to reset interrupt condition).
+            False = No interrupt pending.
+            </param>
+        <summary>
+            Initializes a new instance of the CanIntF class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mcp25xxx.Register.Address Address { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Mcp25xxx.Register.Address Address" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.Address" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Address As Address" />
+      <MemberSignature Language="F#" Value="member this.Address : Iot.Device.Mcp25xxx.Register.Address" Usage="Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.Address" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Mcp25xxx.Register.IRegister.Address</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp25xxx.Register.Address</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the address of the register.
+            </summary>
+        <value>The address of the register.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorInterruptFlag">
+      <MemberSignature Language="C#" Value="public bool ErrorInterruptFlag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ErrorInterruptFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.ErrorInterruptFlag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ErrorInterruptFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ErrorInterruptFlag : bool" Usage="Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.ErrorInterruptFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ERRIF: Error Interrupt Flag bit (multiple sources in the EFLG register).
+            True = Interrupt pending (must be cleared by MCU to reset interrupt condition).
+            False = No interrupt pending.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MessageErrorInterruptFlag">
+      <MemberSignature Language="C#" Value="public bool MessageErrorInterruptFlag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool MessageErrorInterruptFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.MessageErrorInterruptFlag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MessageErrorInterruptFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.MessageErrorInterruptFlag : bool" Usage="Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.MessageErrorInterruptFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            MERRF: Message Error Interrupt Flag bit.
+            True = Interrupt pending (must be cleared by MCU to reset interrupt condition).
+            False = No interrupt pending.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveBuffer0FullInterruptFlag">
+      <MemberSignature Language="C#" Value="public bool ReceiveBuffer0FullInterruptFlag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReceiveBuffer0FullInterruptFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.ReceiveBuffer0FullInterruptFlag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReceiveBuffer0FullInterruptFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReceiveBuffer0FullInterruptFlag : bool" Usage="Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.ReceiveBuffer0FullInterruptFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RX0IF: Receive Buffer 0 Full Interrupt Flag bit.
+            True = Interrupt pending (must be cleared by MCU to reset interrupt condition).
+            False = No interrupt pending.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveBuffer1FullInterruptFlag">
+      <MemberSignature Language="C#" Value="public bool ReceiveBuffer1FullInterruptFlag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReceiveBuffer1FullInterruptFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.ReceiveBuffer1FullInterruptFlag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReceiveBuffer1FullInterruptFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReceiveBuffer1FullInterruptFlag : bool" Usage="Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.ReceiveBuffer1FullInterruptFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RX1IF: Receive Buffer 1 Full Interrupt Flag bit.
+            True = Interrupt pending (must be cleared by MCU to reset interrupt condition).
+            False = No interrupt pending.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToByte">
+      <MemberSignature Language="C#" Value="public byte ToByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8 ToByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.ToByte" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToByte () As Byte" />
+      <MemberSignature Language="F#" Value="abstract member ToByte : unit -&gt; byte&#xA;override this.ToByte : unit -&gt; byte" Usage="canIntF.ToByte " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Mcp25xxx.Register.IRegister.ToByte</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Converts register contents to a byte.
+            </summary>
+        <returns>The byte that represent the register contents.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransmitBuffer0EmptyInterruptFlag">
+      <MemberSignature Language="C#" Value="public bool TransmitBuffer0EmptyInterruptFlag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TransmitBuffer0EmptyInterruptFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.TransmitBuffer0EmptyInterruptFlag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TransmitBuffer0EmptyInterruptFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TransmitBuffer0EmptyInterruptFlag : bool" Usage="Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.TransmitBuffer0EmptyInterruptFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TX0IF: Transmit Buffer 0 Empty Interrupt Flag bit.
+            True = Interrupt pending (must be cleared by MCU to reset interrupt condition).
+            False = No interrupt pending.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransmitBuffer1EmptyInterruptFlag">
+      <MemberSignature Language="C#" Value="public bool TransmitBuffer1EmptyInterruptFlag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TransmitBuffer1EmptyInterruptFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.TransmitBuffer1EmptyInterruptFlag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TransmitBuffer1EmptyInterruptFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TransmitBuffer1EmptyInterruptFlag : bool" Usage="Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.TransmitBuffer1EmptyInterruptFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TX1IF: Transmit Buffer 1 Empty Interrupt Flag bit.
+            True = Interrupt pending (must be cleared by MCU to reset interrupt condition).
+            False = No interrupt pending.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransmitBuffer2EmptyInterruptFlag">
+      <MemberSignature Language="C#" Value="public bool TransmitBuffer2EmptyInterruptFlag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TransmitBuffer2EmptyInterruptFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.TransmitBuffer2EmptyInterruptFlag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TransmitBuffer2EmptyInterruptFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TransmitBuffer2EmptyInterruptFlag : bool" Usage="Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.TransmitBuffer2EmptyInterruptFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TX2IF: Transmit Buffer 2 Empty Interrupt Flag bit.
+            True = Interrupt pending (must be cleared by MCU to reset interrupt condition).
+            False = No interrupt pending.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WakeUpInterruptFlag">
+      <MemberSignature Language="C#" Value="public bool WakeUpInterruptFlag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WakeUpInterruptFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.WakeUpInterruptFlag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WakeUpInterruptFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.WakeUpInterruptFlag : bool" Usage="Iot.Device.Mcp25xxx.Register.Interrupt.CanIntF.WakeUpInterruptFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            WAKIF: Wake-up Interrupt Flag bit.
+            True = Interrupt pending(must be cleared by MCU to reset interrupt condition).
+            False = No interrupt pending.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

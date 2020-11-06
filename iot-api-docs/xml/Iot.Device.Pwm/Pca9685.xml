@@ -1,0 +1,291 @@
+<Type Name="Pca9685" FullName="Iot.Device.Pwm.Pca9685">
+  <TypeSignature Language="C#" Value="public class Pca9685 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Pca9685 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Pwm.Pca9685" />
+  <TypeSignature Language="VB.NET" Value="Public Class Pca9685&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Pca9685 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            PCA9685 PWM LED/servo controller
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pca9685 (System.Device.I2c.I2cDevice i2cDevice, double pwmFrequency = -1, double dutyCycleAllChannels = -1, bool usingExternalClock = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, float64 pwmFrequency, float64 dutyCycleAllChannels, bool usingExternalClock) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pwm.Pca9685.#ctor(System.Device.I2c.I2cDevice,System.Double,System.Double,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional pwmFrequency As Double = -1, Optional dutyCycleAllChannels As Double = -1, Optional usingExternalClock As Boolean = false)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Pwm.Pca9685 : System.Device.I2c.I2cDevice * double * double * bool -&gt; Iot.Device.Pwm.Pca9685" Usage="new Iot.Device.Pwm.Pca9685 (i2cDevice, pwmFrequency, dutyCycleAllChannels, usingExternalClock)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="pwmFrequency" Type="System.Double" />
+        <Parameter Name="dutyCycleAllChannels" Type="System.Double" />
+        <Parameter Name="usingExternalClock" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device to be used</param>
+        <param name="pwmFrequency">Initial PWM frequency on all channels</param>
+        <param name="dutyCycleAllChannels">Duty cycle set on all channels after constructing</param>
+        <param name="usingExternalClock">
+            When true specifies that external clock is used.
+            Use <see cref="P:Iot.Device.Pwm.Pca9685.ClockFrequency" /> to set frequency of an external clock
+            </param>
+        <summary>
+            Constructs Pca9685 instance
+            </summary>
+        <remarks>
+            Default value for <paramref name="pwmFrequency" /> and <paramref name="dutyCycleAllChannels" />
+            is -1 which means to not change value already set on the device.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClockFrequency">
+      <MemberSignature Language="C#" Value="public double ClockFrequency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ClockFrequency" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pwm.Pca9685.ClockFrequency" />
+      <MemberSignature Language="VB.NET" Value="Public Property ClockFrequency As Double" />
+      <MemberSignature Language="F#" Value="member this.ClockFrequency : double with get, set" Usage="Iot.Device.Pwm.Pca9685.ClockFrequency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get clock frequency (Hz). Only set if you are using external clock.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePwmChannel">
+      <MemberSignature Language="C#" Value="public System.Device.Pwm.PwmChannel CreatePwmChannel (int channel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Device.Pwm.PwmChannel CreatePwmChannel(int32 channel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pwm.Pca9685.CreatePwmChannel(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreatePwmChannel (channel As Integer) As PwmChannel" />
+      <MemberSignature Language="F#" Value="member this.CreatePwmChannel : int -&gt; System.Device.Pwm.PwmChannel" Usage="pca9685.CreatePwmChannel channel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Pwm.PwmChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="channel">Channel number (0-15)</param>
+        <summary>
+            Creates PwmChannel instance from selected channel
+            </summary>
+        <returns>PwmChannel instance</returns>
+        <remarks>Channel is already started when constructed.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pwm.Pca9685.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="pca9685.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetDutyCycle">
+      <MemberSignature Language="C#" Value="public double GetDutyCycle (int channel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 GetDutyCycle(int32 channel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pwm.Pca9685.GetDutyCycle(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetDutyCycle (channel As Integer) As Double" />
+      <MemberSignature Language="F#" Value="member this.GetDutyCycle : int -&gt; double" Usage="pca9685.GetDutyCycle channel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="channel">selected channel</param>
+        <summary>
+            Gets duty cycle on specified channel
+            </summary>
+        <returns>Value of duty cycle in 0.0 - 1.0 range</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="I2cAddressBase">
+      <MemberSignature Language="C#" Value="public const byte I2cAddressBase = 64;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 I2cAddressBase = (64)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Pwm.Pca9685.I2cAddressBase" />
+      <MemberSignature Language="VB.NET" Value="Public Const I2cAddressBase As Byte  = 64" />
+      <MemberSignature Language="F#" Value="val mutable I2cAddressBase : byte" Usage="Iot.Device.Pwm.Pca9685.I2cAddressBase" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>64</MemberValue>
+      <Docs>
+        <summary>
+            I2C address base. Equal to actual address when all selectable address bits are equal to 0.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Prescale">
+      <MemberSignature Language="C#" Value="protected byte Prescale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Prescale" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pwm.Pca9685.Prescale" />
+      <MemberSignature Language="VB.NET" Value="Protected Property Prescale As Byte" />
+      <MemberSignature Language="F#" Value="member this.Prescale : byte with get, set" Usage="Iot.Device.Pwm.Pca9685.Prescale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set PWM frequency using prescale value or get the value.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PwmFrequency">
+      <MemberSignature Language="C#" Value="public double PwmFrequency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 PwmFrequency" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pwm.Pca9685.PwmFrequency" />
+      <MemberSignature Language="VB.NET" Value="Public Property PwmFrequency As Double" />
+      <MemberSignature Language="F#" Value="member this.PwmFrequency : double with get, set" Usage="Iot.Device.Pwm.Pca9685.PwmFrequency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set PWM frequency or get effective value.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Value of the effective frequency may be different than desired frequency.
+            Read the property in order to get the actual value
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDutyCycle">
+      <MemberSignature Language="C#" Value="public void SetDutyCycle (int channel, double dutyCycle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDutyCycle(int32 channel, float64 dutyCycle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pwm.Pca9685.SetDutyCycle(System.Int32,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetDutyCycle (channel As Integer, dutyCycle As Double)" />
+      <MemberSignature Language="F#" Value="member this.SetDutyCycle : int * double -&gt; unit" Usage="pca9685.SetDutyCycle (channel, dutyCycle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel" Type="System.Int32" />
+        <Parameter Name="dutyCycle" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="channel">Selected channel</param>
+        <param name="dutyCycle">Value to set duty cycle to</param>
+        <summary>
+            Sets duty cycle on specified channel.
+            </summary>
+        <remarks>Throws <see cref="T:System.InvalidOperationException" /> if specified channel is created with <see cref="M:Iot.Device.Pwm.Pca9685.CreatePwmChannel(System.Int32)" /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDutyCycleAllChannels">
+      <MemberSignature Language="C#" Value="public void SetDutyCycleAllChannels (double dutyCycle);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDutyCycleAllChannels(float64 dutyCycle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pwm.Pca9685.SetDutyCycleAllChannels(System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetDutyCycleAllChannels (dutyCycle As Double)" />
+      <MemberSignature Language="F#" Value="member this.SetDutyCycleAllChannels : double -&gt; unit" Usage="pca9685.SetDutyCycleAllChannels dutyCycle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dutyCycle" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="dutyCycle">Duty cycle value (0.0 - 1.0)</param>
+        <summary>
+            Sets duty cycles on all channels
+            </summary>
+        <remarks>Throws <see cref="T:System.InvalidOperationException" /> if any of the channels is created with <see cref="M:Iot.Device.Pwm.Pca9685.CreatePwmChannel(System.Int32)" /></remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

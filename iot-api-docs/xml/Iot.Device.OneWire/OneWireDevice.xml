@@ -1,0 +1,151 @@
+<Type Name="OneWireDevice" FullName="Iot.Device.OneWire.OneWireDevice">
+  <TypeSignature Language="C#" Value="public class OneWireDevice" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit OneWireDevice extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.OneWire.OneWireDevice" />
+  <TypeSignature Language="VB.NET" Value="Public Class OneWireDevice" />
+  <TypeSignature Language="F#" Value="type OneWireDevice = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a 1-wire device.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OneWireDevice (string busId, string devId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string busId, string devId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.OneWire.OneWireDevice.#ctor(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (busId As String, devId As String)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.OneWire.OneWireDevice : string * string -&gt; Iot.Device.OneWire.OneWireDevice" Usage="new Iot.Device.OneWire.OneWireDevice (busId, devId)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="busId" Type="System.String" />
+        <Parameter Name="devId" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="busId">The 1-wire bus the device is found on.</param>
+        <param name="devId">The id of the device.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.OneWire.OneWireDevice" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BusId">
+      <MemberSignature Language="C#" Value="public string BusId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string BusId" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.OneWire.OneWireDevice.BusId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BusId As String" />
+      <MemberSignature Language="F#" Value="member this.BusId : string" Usage="Iot.Device.OneWire.OneWireDevice.BusId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The bus where this device is attached.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceId">
+      <MemberSignature Language="C#" Value="public string DeviceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string DeviceId" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.OneWire.OneWireDevice.DeviceId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeviceId As String" />
+      <MemberSignature Language="F#" Value="member this.DeviceId : string" Usage="Iot.Device.OneWire.OneWireDevice.DeviceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The 1-wire id of this device.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnumerateDeviceIds">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IEnumerable&lt;ValueTuple&lt;string,string&gt;&gt; EnumerateDeviceIds (Iot.Device.OneWire.DeviceFamily family = Iot.Device.OneWire.DeviceFamily.Any);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IEnumerable`1&lt;valuetype System.ValueTuple`2&lt;string, string&gt;&gt; EnumerateDeviceIds(valuetype Iot.Device.OneWire.DeviceFamily family) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.OneWire.OneWireDevice.EnumerateDeviceIds(Iot.Device.OneWire.DeviceFamily)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Iterator Function EnumerateDeviceIds (Optional family As DeviceFamily = Iot.Device.OneWire.DeviceFamily.Any) As IEnumerable(Of ValueTuple(Of String, String))" />
+      <MemberSignature Language="F#" Value="static member EnumerateDeviceIds : Iot.Device.OneWire.DeviceFamily -&gt; seq&lt;ValueTuple&lt;string, string&gt;&gt;" Usage="Iot.Device.OneWire.OneWireDevice.EnumerateDeviceIds family" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Iot.Device.OneWire.OneWireDevice/&lt;EnumerateDeviceIds&gt;d__1))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Iot.Device.OneWire.OneWireDevice/&lt;EnumerateDeviceIds&gt;d__1))&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.ValueTuple&lt;System.String,System.String&gt;&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "busId", "devId" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "busId", "devId" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="family" Type="Iot.Device.OneWire.DeviceFamily" />
+      </Parameters>
+      <Docs>
+        <param name="family">Family id used to filter devices.</param>
+        <summary>
+            Enumerate all devices found on 1-wire busses in this system.
+            </summary>
+        <returns>A list of devices found.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Family">
+      <MemberSignature Language="C#" Value="public Iot.Device.OneWire.DeviceFamily Family { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.OneWire.DeviceFamily Family" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.OneWire.OneWireDevice.Family" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Family As DeviceFamily" />
+      <MemberSignature Language="F#" Value="member this.Family : Iot.Device.OneWire.DeviceFamily" Usage="Iot.Device.OneWire.OneWireDevice.Family" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.OneWire.DeviceFamily</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The device family id of this device.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

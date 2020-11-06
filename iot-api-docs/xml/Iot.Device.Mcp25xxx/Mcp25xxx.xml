@@ -1,0 +1,598 @@
+<Type Name="Mcp25xxx" FullName="Iot.Device.Mcp25xxx.Mcp25xxx">
+  <TypeSignature Language="C#" Value="public abstract class Mcp25xxx : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Mcp25xxx extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mcp25xxx.Mcp25xxx" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Mcp25xxx&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Mcp25xxx = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            A general purpose driver for the Microchip MCP25 CAN controller device family.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Mcp25xxx (System.Device.Spi.SpiDevice spiDevice, int reset = -1, int tx0rts = -1, int tx1rts = -1, int tx2rts = -1, int interrupt = -1, int rx0bf = -1, int rx1bf = -1, int clkout = -1, System.Device.Gpio.GpioController gpioController = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, int32 reset, int32 tx0rts, int32 tx1rts, int32 tx2rts, int32 interrupt, int32 rx0bf, int32 rx1bf, int32 clkout, class System.Device.Gpio.GpioController gpioController) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.#ctor(System.Device.Spi.SpiDevice,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Device.Gpio.GpioController)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (spiDevice As SpiDevice, Optional reset As Integer = -1, Optional tx0rts As Integer = -1, Optional tx1rts As Integer = -1, Optional tx2rts As Integer = -1, Optional interrupt As Integer = -1, Optional rx0bf As Integer = -1, Optional rx1bf As Integer = -1, Optional clkout As Integer = -1, Optional gpioController As GpioController = Nothing)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Mcp25xxx : System.Device.Spi.SpiDevice * int * int * int * int * int * int * int * int * System.Device.Gpio.GpioController -&gt; Iot.Device.Mcp25xxx.Mcp25xxx" Usage="new Iot.Device.Mcp25xxx.Mcp25xxx (spiDevice, reset, tx0rts, tx1rts, tx2rts, interrupt, rx0bf, rx1bf, clkout, gpioController)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="reset" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="tx0rts" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="tx1rts" Type="System.Int32" Index="3" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="tx2rts" Type="System.Int32" Index="4" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="interrupt" Type="System.Int32" Index="5" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="rx0bf" Type="System.Int32" Index="6" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="rx1bf" Type="System.Int32" Index="7" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="clkout" Type="System.Int32" Index="8" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" Index="9" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="spiDevice">To be added.</param>
+        <param name="reset">To be added.</param>
+        <param name="tx0rts">To be added.</param>
+        <param name="tx1rts">To be added.</param>
+        <param name="tx2rts">To be added.</param>
+        <param name="interrupt">To be added.</param>
+        <param name="rx0bf">To be added.</param>
+        <param name="rx1bf">To be added.</param>
+        <param name="clkout">To be added.</param>
+        <param name="gpioController">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Mcp25xxx (System.Device.Spi.SpiDevice spiDevice, int reset = -1, int tx0rts = -1, int tx1rts = -1, int tx2rts = -1, int interrupt = -1, int rx0bf = -1, int rx1bf = -1, int clkout = -1, System.Device.Gpio.GpioController gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, int32 reset, int32 tx0rts, int32 tx1rts, int32 tx2rts, int32 interrupt, int32 rx0bf, int32 rx1bf, int32 clkout, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.#ctor(System.Device.Spi.SpiDevice,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (spiDevice As SpiDevice, Optional reset As Integer = -1, Optional tx0rts As Integer = -1, Optional tx1rts As Integer = -1, Optional tx2rts As Integer = -1, Optional interrupt As Integer = -1, Optional rx0bf As Integer = -1, Optional rx1bf As Integer = -1, Optional clkout As Integer = -1, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Mcp25xxx : System.Device.Spi.SpiDevice * int * int * int * int * int * int * int * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Mcp25xxx.Mcp25xxx" Usage="new Iot.Device.Mcp25xxx.Mcp25xxx (spiDevice, reset, tx0rts, tx1rts, tx2rts, interrupt, rx0bf, rx1bf, clkout, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="reset" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="tx0rts" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="tx1rts" Type="System.Int32" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="tx2rts" Type="System.Int32" Index="4" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="interrupt" Type="System.Int32" Index="5" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="rx0bf" Type="System.Int32" Index="6" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="rx1bf" Type="System.Int32" Index="7" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="clkout" Type="System.Int32" Index="8" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" Index="9" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="10" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="spiDevice">The SPI device used for communication.</param>
+        <param name="reset">The output pin number that is connected to Reset.</param>
+        <param name="tx0rts">The output pin number that is connected to Tx0RTS.</param>
+        <param name="tx1rts">The output pin number that is connected to Tx1RTS.</param>
+        <param name="tx2rts">The output pin number that is connected to Tx2RTS.</param>
+        <param name="interrupt">The input pin number that is connected to INT.</param>
+        <param name="rx0bf">The input pin number that is connected to Rx0BF.</param>
+        <param name="rx1bf">The input pin number that is connected to Rx1BF.</param>
+        <param name="clkout">The input pin number that is connected to CLKOUT.</param>
+        <param name="gpioController">
+            The GPIO controller for defined external pins. If not specified, the default controller will be used.
+            </param>
+        <param name="shouldDispose">True to dispose the Gpio Controller</param>
+        <summary>
+            A general purpose driver for the Microchip MCP25 CAN controller device family.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BitModify">
+      <MemberSignature Language="C#" Value="public void BitModify (Iot.Device.Mcp25xxx.Register.Address address, byte mask, byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BitModify(valuetype Iot.Device.Mcp25xxx.Register.Address address, unsigned int8 mask, unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.BitModify(Iot.Device.Mcp25xxx.Register.Address,System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub BitModify (address As Address, mask As Byte, value As Byte)" />
+      <MemberSignature Language="F#" Value="member this.BitModify : Iot.Device.Mcp25xxx.Register.Address * byte * byte -&gt; unit" Usage="mcp25xxx.BitModify (address, mask, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="Iot.Device.Mcp25xxx.Register.Address" />
+        <Parameter Name="mask" Type="System.Byte" />
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="address">The address to write data.</param>
+        <param name="mask">The mask to determine which bits in the register will be allowed to change.
+            A '1' will allow a bit to change while a '0' will not.</param>
+        <param name="value">The value to be written.</param>
+        <summary>
+            Allows the user to set or clear individual bits in a particular register.
+            Not all registers can be bit modified with this command.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="mcp25xxx.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="InterruptPin">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.PinValue InterruptPin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Device.Gpio.PinValue InterruptPin" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Mcp25xxx.InterruptPin" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InterruptPin As PinValue" />
+      <MemberSignature Language="F#" Value="member this.InterruptPin : System.Device.Gpio.PinValue" Usage="Iot.Device.Mcp25xxx.Mcp25xxx.InterruptPin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Reads the current value of Interrupt pin.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadTxBuffer">
+      <MemberSignature Language="C#" Value="public void LoadTxBuffer (Iot.Device.Mcp25xxx.TxBufferAddressPointer addressPointer, ReadOnlySpan&lt;byte&gt; buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void LoadTxBuffer(valuetype Iot.Device.Mcp25xxx.TxBufferAddressPointer addressPointer, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.LoadTxBuffer(Iot.Device.Mcp25xxx.TxBufferAddressPointer,System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub LoadTxBuffer (addressPointer As TxBufferAddressPointer, buffer As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="member this.LoadTxBuffer : Iot.Device.Mcp25xxx.TxBufferAddressPointer * ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="mcp25xxx.LoadTxBuffer (addressPointer, buffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addressPointer" Type="Iot.Device.Mcp25xxx.TxBufferAddressPointer" />
+        <Parameter Name="buffer" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="addressPointer">The Address Pointer to one of six locations for the transmit buffer.</param>
+        <param name="buffer">The data to load in transmit buffer.</param>
+        <summary>
+            When loading a transmit buffer, reduces the overhead of a normal WRITE
+            command by placing the Address Pointer at one of six locations for transmit buffer.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public byte Read (Iot.Device.Mcp25xxx.Register.Address address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8 Read(valuetype Iot.Device.Mcp25xxx.Register.Address address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.Read(Iot.Device.Mcp25xxx.Register.Address)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Read (address As Address) As Byte" />
+      <MemberSignature Language="F#" Value="member this.Read : Iot.Device.Mcp25xxx.Register.Address -&gt; byte" Usage="mcp25xxx.Read address" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="Iot.Device.Mcp25xxx.Register.Address" />
+      </Parameters>
+      <Docs>
+        <param name="address">The address to read.</param>
+        <summary>
+            Reads data from the register beginning at the selected address.
+            </summary>
+        <returns>The value of address read.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadRxBuffer">
+      <MemberSignature Language="C#" Value="public byte[] ReadRxBuffer (Iot.Device.Mcp25xxx.RxBufferAddressPointer addressPointer, int byteCount = 1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] ReadRxBuffer(valuetype Iot.Device.Mcp25xxx.RxBufferAddressPointer addressPointer, int32 byteCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.ReadRxBuffer(Iot.Device.Mcp25xxx.RxBufferAddressPointer,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadRxBuffer (addressPointer As RxBufferAddressPointer, Optional byteCount As Integer = 1) As Byte()" />
+      <MemberSignature Language="F#" Value="member this.ReadRxBuffer : Iot.Device.Mcp25xxx.RxBufferAddressPointer * int -&gt; byte[]" Usage="mcp25xxx.ReadRxBuffer (addressPointer, byteCount)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="addressPointer" Type="Iot.Device.Mcp25xxx.RxBufferAddressPointer" />
+        <Parameter Name="byteCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="addressPointer">The Address Pointer to one of four locations for the receive buffer.</param>
+        <param name="byteCount">Number of bytes to read.  This must be one or more to read.</param>
+        <summary>
+            When reading a receive buffer, reduces the overhead of a normal READ
+            command by placing the Address Pointer at one of four locations for the receive buffer.
+            </summary>
+        <returns>The value of address read.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadStatus">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mcp25xxx.ReadStatusResponse ReadStatus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.Mcp25xxx.ReadStatusResponse ReadStatus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.ReadStatus" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadStatus () As ReadStatusResponse" />
+      <MemberSignature Language="F#" Value="member this.ReadStatus : unit -&gt; Iot.Device.Mcp25xxx.ReadStatusResponse" Usage="mcp25xxx.ReadStatus " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp25xxx.ReadStatusResponse</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Quick polling command that reads several Status bits for transmit and receive functions.
+            </summary>
+        <returns>The response from READ STATUS instruction.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestToSend">
+      <MemberSignature Language="C#" Value="public void RequestToSend (bool txb0, bool txb1, bool txb2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RequestToSend(bool txb0, bool txb1, bool txb2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.RequestToSend(System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RequestToSend (txb0 As Boolean, txb1 As Boolean, txb2 As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.RequestToSend : bool * bool * bool -&gt; unit" Usage="mcp25xxx.RequestToSend (txb0, txb1, txb2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="txb0" Type="System.Boolean" />
+        <Parameter Name="txb1" Type="System.Boolean" />
+        <Parameter Name="txb2" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="txb0">Instructs the controller to begin the message transmission sequence for TxB0.</param>
+        <param name="txb1">Instructs the controller to begin the message transmission sequence for TxB1.</param>
+        <param name="txb2">Instructs the controller to begin the message transmission sequence for TxB2.</param>
+        <summary>
+            Instructs the controller to begin the message transmission sequence for any of the transmit buffers.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.Reset" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Reset ()" />
+      <MemberSignature Language="F#" Value="member this.Reset : unit -&gt; unit" Usage="mcp25xxx.Reset " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resets the internal registers to the default state and sets Configuration mode.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetPin">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.PinValue ResetPin { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Device.Gpio.PinValue ResetPin" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Mcp25xxx.ResetPin" />
+      <MemberSignature Language="VB.NET" Value="Public Property ResetPin As PinValue" />
+      <MemberSignature Language="F#" Value="member this.ResetPin : System.Device.Gpio.PinValue" Usage="Iot.Device.Mcp25xxx.Mcp25xxx.ResetPin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Writes a value to Reset pin.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rx0BfPin">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.PinValue Rx0BfPin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Device.Gpio.PinValue Rx0BfPin" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Mcp25xxx.Rx0BfPin" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Rx0BfPin As PinValue" />
+      <MemberSignature Language="F#" Value="member this.Rx0BfPin : System.Device.Gpio.PinValue" Usage="Iot.Device.Mcp25xxx.Mcp25xxx.Rx0BfPin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Reads the current value of Rx0BF pin.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Rx1BfPin">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.PinValue Rx1BfPin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Device.Gpio.PinValue Rx1BfPin" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Mcp25xxx.Rx1BfPin" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Rx1BfPin As PinValue" />
+      <MemberSignature Language="F#" Value="member this.Rx1BfPin : System.Device.Gpio.PinValue" Usage="Iot.Device.Mcp25xxx.Mcp25xxx.Rx1BfPin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Reads the current value of Rx1BF pin.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RxStatus">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mcp25xxx.RxStatusResponse RxStatus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Mcp25xxx.RxStatusResponse RxStatus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.RxStatus" />
+      <MemberSignature Language="VB.NET" Value="Public Function RxStatus () As RxStatusResponse" />
+      <MemberSignature Language="F#" Value="member this.RxStatus : unit -&gt; Iot.Device.Mcp25xxx.RxStatusResponse" Usage="mcp25xxx.RxStatus " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp25xxx.RxStatusResponse</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Quick polling command that indicates a filter match and message type
+            (standard, extended and/or remote) of the received message.
+            </summary>
+        <returns>Response from RX STATUS instruction.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tx0RtsPin">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.PinValue Tx0RtsPin { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Device.Gpio.PinValue Tx0RtsPin" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Mcp25xxx.Tx0RtsPin" />
+      <MemberSignature Language="VB.NET" Value="Public Property Tx0RtsPin As PinValue" />
+      <MemberSignature Language="F#" Value="member this.Tx0RtsPin : System.Device.Gpio.PinValue" Usage="Iot.Device.Mcp25xxx.Mcp25xxx.Tx0RtsPin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Writes a value to Tx0RTS pin.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tx1RtsPin">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.PinValue Tx1RtsPin { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Device.Gpio.PinValue Tx1RtsPin" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Mcp25xxx.Tx1RtsPin" />
+      <MemberSignature Language="VB.NET" Value="Public Property Tx1RtsPin As PinValue" />
+      <MemberSignature Language="F#" Value="member this.Tx1RtsPin : System.Device.Gpio.PinValue" Usage="Iot.Device.Mcp25xxx.Mcp25xxx.Tx1RtsPin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Writes a value to Tx1RTS pin.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tx2RtsPin">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.PinValue Tx2RtsPin { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Device.Gpio.PinValue Tx2RtsPin" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Mcp25xxx.Tx2RtsPin" />
+      <MemberSignature Language="VB.NET" Value="Public Property Tx2RtsPin As PinValue" />
+      <MemberSignature Language="F#" Value="member this.Tx2RtsPin : System.Device.Gpio.PinValue" Usage="Iot.Device.Mcp25xxx.Mcp25xxx.Tx2RtsPin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Writes a value to Tx2RTS pin.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (Iot.Device.Mcp25xxx.Register.Address address, ReadOnlySpan&lt;byte&gt; buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(valuetype Iot.Device.Mcp25xxx.Register.Address address, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.Write(Iot.Device.Mcp25xxx.Register.Address,System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (address As Address, buffer As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="member this.Write : Iot.Device.Mcp25xxx.Register.Address * ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="mcp25xxx.Write (address, buffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="Iot.Device.Mcp25xxx.Register.Address" />
+        <Parameter Name="buffer" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="address">The starting address to write data.</param>
+        <param name="buffer">The buffer that contains the data to be written.</param>
+        <summary>
+            Writes data to the register beginning at the selected address.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteByte">
+      <MemberSignature Language="C#" Value="public void WriteByte (Iot.Device.Mcp25xxx.Register.IRegister register);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteByte(class Iot.Device.Mcp25xxx.Register.IRegister register) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.WriteByte(Iot.Device.Mcp25xxx.Register.IRegister)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteByte (register As IRegister)" />
+      <MemberSignature Language="F#" Value="member this.WriteByte : Iot.Device.Mcp25xxx.Register.IRegister -&gt; unit" Usage="mcp25xxx.WriteByte register" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="register" Type="Iot.Device.Mcp25xxx.Register.IRegister" />
+      </Parameters>
+      <Docs>
+        <param name="register">The register to write the data.</param>
+        <summary>
+            Writes a byte to the selected register address.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteByte">
+      <MemberSignature Language="C#" Value="public void WriteByte (Iot.Device.Mcp25xxx.Register.Address address, byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteByte(valuetype Iot.Device.Mcp25xxx.Register.Address address, unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.WriteByte(Iot.Device.Mcp25xxx.Register.Address,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteByte (address As Address, value As Byte)" />
+      <MemberSignature Language="F#" Value="member this.WriteByte : Iot.Device.Mcp25xxx.Register.Address * byte -&gt; unit" Usage="mcp25xxx.WriteByte (address, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="Iot.Device.Mcp25xxx.Register.Address" />
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="address">The address to write the data.</param>
+        <param name="value">The value to be written.</param>
+        <summary>
+            Writes one byte to the register beginning at the selected address.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

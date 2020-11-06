@@ -1,0 +1,125 @@
+<Type Name="Mcp23xxx+BusAdapter" FullName="Iot.Device.Mcp23xxx.Mcp23xxx+BusAdapter">
+  <TypeSignature Language="C#" Value="protected abstract class Mcp23xxx.BusAdapter : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class nested protected auto ansi abstract beforefieldinit Mcp23xxx/BusAdapter extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mcp23xxx.Mcp23xxx.BusAdapter" />
+  <TypeSignature Language="VB.NET" Value="Protected MustInherit Class Mcp23xxx.BusAdapter&#xA;Implements IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Bus adapter
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BusAdapter ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.BusAdapter.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public abstract void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.BusAdapter.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit" Usage="busAdapter.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public abstract void Read (byte registerAddress, Span&lt;byte&gt; buffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Read(unsigned int8 registerAddress, valuetype System.Span`1&lt;unsigned int8&gt; buffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.BusAdapter.Read(System.Byte,System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Read (registerAddress As Byte, buffer As Span(Of Byte))" />
+      <MemberSignature Language="F#" Value="abstract member Read : byte * Span&lt;byte&gt; -&gt; unit" Usage="busAdapter.Read (registerAddress, buffer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="registerAddress" Type="System.Byte" />
+        <Parameter Name="buffer" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="registerAddress">Register address</param>
+        <param name="buffer">Bytes to be read from the register</param>
+        <summary>
+            Reads bytes from the device register
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public abstract void Write (byte registerAddress, Span&lt;byte&gt; data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(unsigned int8 registerAddress, valuetype System.Span`1&lt;unsigned int8&gt; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23xxx.BusAdapter.Write(System.Byte,System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Write (registerAddress As Byte, data As Span(Of Byte))" />
+      <MemberSignature Language="F#" Value="abstract member Write : byte * Span&lt;byte&gt; -&gt; unit" Usage="busAdapter.Write (registerAddress, data)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="registerAddress" Type="System.Byte" />
+        <Parameter Name="data" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="registerAddress">Register address</param>
+        <param name="data">Bytes to be written to the register</param>
+        <summary>
+            Writes bytes to the device register
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

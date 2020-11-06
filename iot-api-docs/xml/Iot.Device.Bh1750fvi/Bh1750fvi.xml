@@ -1,0 +1,150 @@
+<Type Name="Bh1750fvi" FullName="Iot.Device.Bh1750fvi.Bh1750fvi">
+  <TypeSignature Language="C#" Value="public class Bh1750fvi : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Bh1750fvi extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Bh1750fvi.Bh1750fvi" />
+  <TypeSignature Language="VB.NET" Value="Public Class Bh1750fvi&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Bh1750fvi = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Ambient Light Sensor BH1750FVI
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bh1750fvi (System.Device.I2c.I2cDevice i2cDevice, Iot.Device.Bh1750fvi.MeasuringMode measuringMode = Iot.Device.Bh1750fvi.MeasuringMode.ContinuouslyHighResolutionMode, double lightTransmittance = 1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, valuetype Iot.Device.Bh1750fvi.MeasuringMode measuringMode, float64 lightTransmittance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bh1750fvi.Bh1750fvi.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Bh1750fvi.MeasuringMode,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional measuringMode As MeasuringMode = Iot.Device.Bh1750fvi.MeasuringMode.ContinuouslyHighResolutionMode, Optional lightTransmittance As Double = 1)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Bh1750fvi.Bh1750fvi : System.Device.I2c.I2cDevice * Iot.Device.Bh1750fvi.MeasuringMode * double -&gt; Iot.Device.Bh1750fvi.Bh1750fvi" Usage="new Iot.Device.Bh1750fvi.Bh1750fvi (i2cDevice, measuringMode, lightTransmittance)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="measuringMode" Type="Iot.Device.Bh1750fvi.MeasuringMode" />
+        <Parameter Name="lightTransmittance" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device used for communication.</param>
+        <param name="measuringMode">The measuring mode of BH1750FVI</param>
+        <param name="lightTransmittance">BH1750FVI Light Transmittance, from 27.20% to 222.50%</param>
+        <summary>
+            Creates a new instance of the BH1750FVI
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bh1750fvi.Bh1750fvi.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="bh1750fvi.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Cleanup
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Illuminance">
+      <MemberSignature Language="C#" Value="public double Illuminance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Illuminance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bh1750fvi.Bh1750fvi.Illuminance" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Illuminance As Double" />
+      <MemberSignature Language="F#" Value="member this.Illuminance : double" Usage="Iot.Device.Bh1750fvi.Bh1750fvi.Illuminance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            BH1750FVI Illuminance (Lux)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LightTransmittance">
+      <MemberSignature Language="C#" Value="public double LightTransmittance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 LightTransmittance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bh1750fvi.Bh1750fvi.LightTransmittance" />
+      <MemberSignature Language="VB.NET" Value="Public Property LightTransmittance As Double" />
+      <MemberSignature Language="F#" Value="member this.LightTransmittance : double with get, set" Usage="Iot.Device.Bh1750fvi.Bh1750fvi.LightTransmittance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            BH1750FVI Light Transmittance, from 27.20% to 222.50%
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasuringMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Bh1750fvi.MeasuringMode MeasuringMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Bh1750fvi.MeasuringMode MeasuringMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bh1750fvi.Bh1750fvi.MeasuringMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property MeasuringMode As MeasuringMode" />
+      <MemberSignature Language="F#" Value="member this.MeasuringMode : Iot.Device.Bh1750fvi.MeasuringMode with get, set" Usage="Iot.Device.Bh1750fvi.Bh1750fvi.MeasuringMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Bh1750fvi.MeasuringMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            BH1750FVI Measuring Mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

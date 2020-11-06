@@ -1,0 +1,549 @@
+<Type Name="Nrf24l01" FullName="Iot.Device.Nrf24l01.Nrf24l01">
+  <TypeSignature Language="C#" Value="public class Nrf24l01 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Nrf24l01 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nrf24l01.Nrf24l01" />
+  <TypeSignature Language="VB.NET" Value="Public Class Nrf24l01&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Nrf24l01 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Single chip 2.4 GHz Transceiver nRF24L01
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Nrf24l01 (System.Device.Spi.SpiDevice sensor, int ce, int irq, byte packetSize, byte channel = 2, Iot.Device.Nrf24l01.OutputPower outputPower = Iot.Device.Nrf24l01.OutputPower.N00dBm, Iot.Device.Nrf24l01.DataRate dataRate = Iot.Device.Nrf24l01.DataRate.Rate2Mbps, System.Device.Gpio.PinNumberingScheme pinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice sensor, int32 ce, int32 irq, unsigned int8 packetSize, unsigned int8 channel, valuetype Iot.Device.Nrf24l01.OutputPower outputPower, valuetype Iot.Device.Nrf24l01.DataRate dataRate, valuetype System.Device.Gpio.PinNumberingScheme pinNumberingScheme) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nrf24l01.Nrf24l01.#ctor(System.Device.Spi.SpiDevice,System.Int32,System.Int32,System.Byte,System.Byte,Iot.Device.Nrf24l01.OutputPower,Iot.Device.Nrf24l01.DataRate,System.Device.Gpio.PinNumberingScheme)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sensor As SpiDevice, ce As Integer, irq As Integer, packetSize As Byte, Optional channel As Byte = 2, Optional outputPower As OutputPower = Iot.Device.Nrf24l01.OutputPower.N00dBm, Optional dataRate As DataRate = Iot.Device.Nrf24l01.DataRate.Rate2Mbps, Optional pinNumberingScheme As PinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nrf24l01.Nrf24l01 : System.Device.Spi.SpiDevice * int * int * byte * byte * Iot.Device.Nrf24l01.OutputPower * Iot.Device.Nrf24l01.DataRate * System.Device.Gpio.PinNumberingScheme -&gt; Iot.Device.Nrf24l01.Nrf24l01" Usage="new Iot.Device.Nrf24l01.Nrf24l01 (sensor, ce, irq, packetSize, channel, outputPower, dataRate, pinNumberingScheme)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sensor" Type="System.Device.Spi.SpiDevice" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="ce" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="irq" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="packetSize" Type="System.Byte" Index="3" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="channel" Type="System.Byte" Index="4" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="outputPower" Type="Iot.Device.Nrf24l01.OutputPower" Index="5" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="dataRate" Type="Iot.Device.Nrf24l01.DataRate" Index="6" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="pinNumberingScheme" Type="System.Device.Gpio.PinNumberingScheme" Index="7" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="sensor">To be added.</param>
+        <param name="ce">To be added.</param>
+        <param name="irq">To be added.</param>
+        <param name="packetSize">To be added.</param>
+        <param name="channel">To be added.</param>
+        <param name="outputPower">To be added.</param>
+        <param name="dataRate">To be added.</param>
+        <param name="pinNumberingScheme">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Nrf24l01 (System.Device.Spi.SpiDevice sensor, int ce, int irq, byte packetSize, byte channel = 2, Iot.Device.Nrf24l01.OutputPower outputPower = Iot.Device.Nrf24l01.OutputPower.N00dBm, Iot.Device.Nrf24l01.DataRate dataRate = Iot.Device.Nrf24l01.DataRate.Rate2Mbps, System.Device.Gpio.PinNumberingScheme pinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical, System.Device.Gpio.GpioController gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice sensor, int32 ce, int32 irq, unsigned int8 packetSize, unsigned int8 channel, valuetype Iot.Device.Nrf24l01.OutputPower outputPower, valuetype Iot.Device.Nrf24l01.DataRate dataRate, valuetype System.Device.Gpio.PinNumberingScheme pinNumberingScheme, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nrf24l01.Nrf24l01.#ctor(System.Device.Spi.SpiDevice,System.Int32,System.Int32,System.Byte,System.Byte,Iot.Device.Nrf24l01.OutputPower,Iot.Device.Nrf24l01.DataRate,System.Device.Gpio.PinNumberingScheme,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sensor As SpiDevice, ce As Integer, irq As Integer, packetSize As Byte, Optional channel As Byte = 2, Optional outputPower As OutputPower = Iot.Device.Nrf24l01.OutputPower.N00dBm, Optional dataRate As DataRate = Iot.Device.Nrf24l01.DataRate.Rate2Mbps, Optional pinNumberingScheme As PinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nrf24l01.Nrf24l01 : System.Device.Spi.SpiDevice * int * int * byte * byte * Iot.Device.Nrf24l01.OutputPower * Iot.Device.Nrf24l01.DataRate * System.Device.Gpio.PinNumberingScheme * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Nrf24l01.Nrf24l01" Usage="new Iot.Device.Nrf24l01.Nrf24l01 (sensor, ce, irq, packetSize, channel, outputPower, dataRate, pinNumberingScheme, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sensor" Type="System.Device.Spi.SpiDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="ce" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="irq" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="packetSize" Type="System.Byte" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="channel" Type="System.Byte" Index="4" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="outputPower" Type="Iot.Device.Nrf24l01.OutputPower" Index="5" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="dataRate" Type="Iot.Device.Nrf24l01.DataRate" Index="6" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="pinNumberingScheme" Type="System.Device.Gpio.PinNumberingScheme" Index="7" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" Index="8" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="9" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="sensor">The communications channel to a device on a SPI bus</param>
+        <param name="ce">CE Pin</param>
+        <param name="irq">IRQ Pin</param>
+        <param name="packetSize">Receive Packet Size</param>
+        <param name="channel">Working Channel</param>
+        <param name="outputPower">Output Power</param>
+        <param name="dataRate">Send Data Rate</param>
+        <param name="pinNumberingScheme">Pin Numbering Scheme</param>
+        <param name="gpioController">
+          <see cref="T:System.Device.Gpio.GpioController" /> related with operations on pins</param>
+        <param name="shouldDispose">True to dispose the Gpio Controller</param>
+        <summary>
+            Creates a new instance of the nRF24L01.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public byte[] Address { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Address" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nrf24l01.Nrf24l01.Address" />
+      <MemberSignature Language="VB.NET" Value="Public Property Address As Byte()" />
+      <MemberSignature Language="F#" Value="member this.Address : byte[] with get, set" Usage="Iot.Device.Nrf24l01.Nrf24l01.Address" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            nRF24L01 Send Address
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Channel">
+      <MemberSignature Language="C#" Value="public byte Channel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Channel" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nrf24l01.Nrf24l01.Channel" />
+      <MemberSignature Language="VB.NET" Value="Public Property Channel As Byte" />
+      <MemberSignature Language="F#" Value="member this.Channel : byte with get, set" Usage="Iot.Device.Nrf24l01.Nrf24l01.Channel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            nRF24L01 Working Channel
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataRate">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nrf24l01.DataRate DataRate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nrf24l01.DataRate DataRate" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nrf24l01.Nrf24l01.DataRate" />
+      <MemberSignature Language="VB.NET" Value="Public Property DataRate As DataRate" />
+      <MemberSignature Language="F#" Value="member this.DataRate : Iot.Device.Nrf24l01.DataRate with get, set" Usage="Iot.Device.Nrf24l01.Nrf24l01.DataRate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nrf24l01.DataRate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            nRF24L01 Send Rate
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataReceived">
+      <MemberSignature Language="C#" Value="public event Iot.Device.Nrf24l01.Nrf24l01.DataReceivedHandle DataReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class Iot.Device.Nrf24l01.Nrf24l01/DataReceivedHandle DataReceived" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Nrf24l01.Nrf24l01.DataReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Event DataReceived As Nrf24l01.DataReceivedHandle " />
+      <MemberSignature Language="F#" Value="member this.DataReceived : Iot.Device.Nrf24l01.Nrf24l01.DataReceivedHandle " Usage="member this.DataReceived : Iot.Device.Nrf24l01.Nrf24l01.DataReceivedHandle " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nrf24l01.Nrf24l01+DataReceivedHandle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Triggering when data was received
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nrf24l01.Nrf24l01.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="nrf24l01.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Cleanup
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputPower">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nrf24l01.OutputPower OutputPower { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nrf24l01.OutputPower OutputPower" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nrf24l01.Nrf24l01.OutputPower" />
+      <MemberSignature Language="VB.NET" Value="Public Property OutputPower As OutputPower" />
+      <MemberSignature Language="F#" Value="member this.OutputPower : Iot.Device.Nrf24l01.OutputPower with get, set" Usage="Iot.Device.Nrf24l01.Nrf24l01.OutputPower" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nrf24l01.OutputPower</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            nRF24L01 Output Power
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PacketSize">
+      <MemberSignature Language="C#" Value="public byte PacketSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 PacketSize" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nrf24l01.Nrf24l01.PacketSize" />
+      <MemberSignature Language="VB.NET" Value="Public Property PacketSize As Byte" />
+      <MemberSignature Language="F#" Value="member this.PacketSize : byte with get, set" Usage="Iot.Device.Nrf24l01.Nrf24l01.PacketSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            nRF24L01 Receive Packet Size
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pipe0">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nrf24l01.Nrf24l01Pipe Pipe0 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Nrf24l01.Nrf24l01Pipe Pipe0" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nrf24l01.Nrf24l01.Pipe0" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Pipe0 As Nrf24l01Pipe" />
+      <MemberSignature Language="F#" Value="member this.Pipe0 : Iot.Device.Nrf24l01.Nrf24l01Pipe" Usage="Iot.Device.Nrf24l01.Nrf24l01.Pipe0" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nrf24l01.Nrf24l01Pipe</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            nRF24L01 Pipe 0
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pipe1">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nrf24l01.Nrf24l01Pipe Pipe1 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Nrf24l01.Nrf24l01Pipe Pipe1" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nrf24l01.Nrf24l01.Pipe1" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Pipe1 As Nrf24l01Pipe" />
+      <MemberSignature Language="F#" Value="member this.Pipe1 : Iot.Device.Nrf24l01.Nrf24l01Pipe" Usage="Iot.Device.Nrf24l01.Nrf24l01.Pipe1" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nrf24l01.Nrf24l01Pipe</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            nRF24L01 Pipe 1
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pipe2">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nrf24l01.Nrf24l01Pipe Pipe2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Nrf24l01.Nrf24l01Pipe Pipe2" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nrf24l01.Nrf24l01.Pipe2" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Pipe2 As Nrf24l01Pipe" />
+      <MemberSignature Language="F#" Value="member this.Pipe2 : Iot.Device.Nrf24l01.Nrf24l01Pipe" Usage="Iot.Device.Nrf24l01.Nrf24l01.Pipe2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nrf24l01.Nrf24l01Pipe</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            nRF24L01 Pipe 2
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pipe3">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nrf24l01.Nrf24l01Pipe Pipe3 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Nrf24l01.Nrf24l01Pipe Pipe3" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nrf24l01.Nrf24l01.Pipe3" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Pipe3 As Nrf24l01Pipe" />
+      <MemberSignature Language="F#" Value="member this.Pipe3 : Iot.Device.Nrf24l01.Nrf24l01Pipe" Usage="Iot.Device.Nrf24l01.Nrf24l01.Pipe3" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nrf24l01.Nrf24l01Pipe</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            nRF24L01 Pipe 3
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pipe4">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nrf24l01.Nrf24l01Pipe Pipe4 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Nrf24l01.Nrf24l01Pipe Pipe4" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nrf24l01.Nrf24l01.Pipe4" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Pipe4 As Nrf24l01Pipe" />
+      <MemberSignature Language="F#" Value="member this.Pipe4 : Iot.Device.Nrf24l01.Nrf24l01Pipe" Usage="Iot.Device.Nrf24l01.Nrf24l01.Pipe4" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nrf24l01.Nrf24l01Pipe</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            nRF24L01 Pipe 4
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pipe5">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nrf24l01.Nrf24l01Pipe Pipe5 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Nrf24l01.Nrf24l01Pipe Pipe5" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nrf24l01.Nrf24l01.Pipe5" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Pipe5 As Nrf24l01Pipe" />
+      <MemberSignature Language="F#" Value="member this.Pipe5 : Iot.Device.Nrf24l01.Nrf24l01Pipe" Usage="Iot.Device.Nrf24l01.Nrf24l01.Pipe5" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nrf24l01.Nrf24l01Pipe</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            nRF24L01 Pipe 5
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nrf24l01.PowerMode PowerMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nrf24l01.PowerMode PowerMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nrf24l01.Nrf24l01.PowerMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property PowerMode As PowerMode" />
+      <MemberSignature Language="F#" Value="member this.PowerMode : Iot.Device.Nrf24l01.PowerMode with get, set" Usage="Iot.Device.Nrf24l01.Nrf24l01.PowerMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nrf24l01.PowerMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            nRF24L01 Power Mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Receive">
+      <MemberSignature Language="C#" Value="public Span&lt;byte&gt; Receive (byte length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Span`1&lt;unsigned int8&gt; Receive(unsigned int8 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nrf24l01.Nrf24l01.Receive(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Receive (length As Byte) As Span(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.Receive : byte -&gt; Span&lt;byte&gt;" Usage="nrf24l01.Receive length" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Span&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="length" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="length">Packet Size</param>
+        <summary>
+            Receive
+            </summary>
+        <returns>Data</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Send">
+      <MemberSignature Language="C#" Value="public void Send (byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Send(unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nrf24l01.Nrf24l01.Send(System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Send (data As Byte())" />
+      <MemberSignature Language="F#" Value="member this.Send : byte[] -&gt; unit" Usage="nrf24l01.Send data" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="data">Send Data</param>
+        <summary>
+            Send
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiClockFrequency">
+      <MemberSignature Language="C#" Value="public const int SpiClockFrequency = 2000000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 SpiClockFrequency = (2000000)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Nrf24l01.Nrf24l01.SpiClockFrequency" />
+      <MemberSignature Language="VB.NET" Value="Public Const SpiClockFrequency As Integer  = 2000000" />
+      <MemberSignature Language="F#" Value="val mutable SpiClockFrequency : int" Usage="Iot.Device.Nrf24l01.Nrf24l01.SpiClockFrequency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>2000000</MemberValue>
+      <Docs>
+        <summary>
+            NRF24L01 SPI Clock Frequency
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiMode">
+      <MemberSignature Language="C#" Value="public const System.Device.Spi.SpiMode SpiMode = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Device.Spi.SpiMode SpiMode = (0)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Nrf24l01.Nrf24l01.SpiMode" />
+      <MemberSignature Language="VB.NET" Value="Public Const SpiMode As SpiMode  = 0" />
+      <MemberSignature Language="F#" Value="val mutable SpiMode : System.Device.Spi.SpiMode" Usage="Iot.Device.Nrf24l01.Nrf24l01.SpiMode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Spi.SpiMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            NRF24L01 SPI Mode
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WorkingMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nrf24l01.WorkingMode WorkingMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nrf24l01.WorkingMode WorkingMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nrf24l01.Nrf24l01.WorkingMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property WorkingMode As WorkingMode" />
+      <MemberSignature Language="F#" Value="member this.WorkingMode : Iot.Device.Nrf24l01.WorkingMode with get, set" Usage="Iot.Device.Nrf24l01.Nrf24l01.WorkingMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nrf24l01.WorkingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            nRF24L01 Working Mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

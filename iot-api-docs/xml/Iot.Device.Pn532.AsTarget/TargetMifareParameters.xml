@@ -1,0 +1,135 @@
+<Type Name="TargetMifareParameters" FullName="Iot.Device.Pn532.AsTarget.TargetMifareParameters">
+  <TypeSignature Language="C#" Value="public class TargetMifareParameters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TargetMifareParameters extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Pn532.AsTarget.TargetMifareParameters" />
+  <TypeSignature Language="VB.NET" Value="Public Class TargetMifareParameters" />
+  <TypeSignature Language="F#" Value="type TargetMifareParameters = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Parameters to emulate a Mifare card when PN532 is
+            setup as a target
+            See document AN133910.pdf on nxp website for default values
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TargetMifareParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.AsTarget.TargetMifareParameters.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Atqa">
+      <MemberSignature Language="C#" Value="public byte[] Atqa { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Atqa" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.AsTarget.TargetMifareParameters.Atqa" />
+      <MemberSignature Language="VB.NET" Value="Public Property Atqa As Byte()" />
+      <MemberSignature Language="F#" Value="member this.Atqa : byte[] with get, set" Usage="Iot.Device.Pn532.AsTarget.TargetMifareParameters.Atqa" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SENS_RES (2 bytes LSB first, as defined in ISO/IEC14443-3)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NfcId3">
+      <MemberSignature Language="C#" Value="public byte[] NfcId3 { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] NfcId3" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.AsTarget.TargetMifareParameters.NfcId3" />
+      <MemberSignature Language="VB.NET" Value="Public Property NfcId3 As Byte()" />
+      <MemberSignature Language="F#" Value="member this.NfcId3 : byte[] with get, set" Usage="Iot.Device.Pn532.AsTarget.TargetMifareParameters.NfcId3" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            NFCID for emulation is only 3 lenght
+            PN532 has hardware coded first NFCID byte to avoid
+            having full copy of cards
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sak">
+      <MemberSignature Language="C#" Value="public byte Sak { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Sak" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.AsTarget.TargetMifareParameters.Sak" />
+      <MemberSignature Language="VB.NET" Value="Public Property Sak As Byte" />
+      <MemberSignature Language="F#" Value="member this.Sak : byte with get, set" Usage="Iot.Device.Pn532.AsTarget.TargetMifareParameters.Sak" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SEL_RES (1 byte), typical value:
+            = 0x40 (for DEP)
+            = 0x20 (for ISO/IEC14443-4 PICC emulation)
+            = 0x60 (for both DEP and emulation of ISO/IEC14443-4 PICC)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public byte[] Serialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] Serialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.AsTarget.TargetMifareParameters.Serialize" />
+      <MemberSignature Language="VB.NET" Value="Public Function Serialize () As Byte()" />
+      <MemberSignature Language="F#" Value="member this.Serialize : unit -&gt; byte[]" Usage="targetMifareParameters.Serialize " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Serialize the data to be used for initialization
+            </summary>
+        <returns>Data serialized</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

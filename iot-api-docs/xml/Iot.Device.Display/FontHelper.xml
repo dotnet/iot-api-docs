@@ -1,0 +1,201 @@
+<Type Name="FontHelper" FullName="Iot.Device.Display.FontHelper">
+  <TypeSignature Language="C#" Value="public static class FontHelper" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit FontHelper extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Display.FontHelper" />
+  <TypeSignature Language="VB.NET" Value="Public Class FontHelper" />
+  <TypeSignature Language="F#" Value="type FontHelper = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides segment mappings for hexadecimal digits and certain ASCII characters
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ConvertHexDigits">
+      <MemberSignature Language="C#" Value="public static void ConvertHexDigits (Span&lt;byte&gt; digits);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ConvertHexDigits(valuetype System.Span`1&lt;unsigned int8&gt; digits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.FontHelper.ConvertHexDigits(System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub ConvertHexDigits (digits As Span(Of Byte))" />
+      <MemberSignature Language="F#" Value="static member ConvertHexDigits : Span&lt;byte&gt; -&gt; unit" Usage="Iot.Device.Display.FontHelper.ConvertHexDigits digits" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="digits" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="digits">list of hexadecimal digits (will be converted in place!)</param>
+        <summary>
+            Converts a span of bytes to their corresponding hexadecimal digits' font representation
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertString">
+      <MemberSignature Language="C#" Value="public static void ConvertString (ReadOnlySpan&lt;char&gt; input, Span&lt;Iot.Device.Display.Font&gt; output);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ConvertString(valuetype System.ReadOnlySpan`1&lt;char&gt; input, valuetype System.Span`1&lt;valuetype Iot.Device.Display.Font&gt; output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.FontHelper.ConvertString(System.ReadOnlySpan{System.Char},System.Span{Iot.Device.Display.Font})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub ConvertString (input As ReadOnlySpan(Of Char), output As Span(Of Font))" />
+      <MemberSignature Language="F#" Value="static member ConvertString : ReadOnlySpan&lt;char&gt; * Span&lt;Iot.Device.Display.Font&gt; -&gt; unit" Usage="Iot.Device.Display.FontHelper.ConvertString (input, output)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.ReadOnlySpan&lt;System.Char&gt;" />
+        <Parameter Name="output" Type="System.Span&lt;Iot.Device.Display.Font&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="input">input string</param>
+        <param name="output">list of corresponding character fonts</param>
+        <summary>
+            Convert a string of characters to corresponding fonts
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCharacter">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Display.Font GetCharacter (char value);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Iot.Device.Display.Font GetCharacter(char value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.FontHelper.GetCharacter(System.Char)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetCharacter (value As Char) As Font" />
+      <MemberSignature Language="F#" Value="static member GetCharacter : char -&gt; Iot.Device.Display.Font" Usage="Iot.Device.Display.FontHelper.GetCharacter value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Display.Font</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Char" />
+      </Parameters>
+      <Docs>
+        <param name="value">input character</param>
+        <summary>
+            Convert character value to corresponding font segments
+            </summary>
+        <returns>corresponding font bits</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHexDigit">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Display.Font GetHexDigit (byte digit);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Iot.Device.Display.Font GetHexDigit(unsigned int8 digit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.FontHelper.GetHexDigit(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetHexDigit (digit As Byte) As Font" />
+      <MemberSignature Language="F#" Value="static member GetHexDigit : byte -&gt; Iot.Device.Display.Font" Usage="Iot.Device.Display.FontHelper.GetHexDigit digit" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Display.Font</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="digit" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="digit">hexadecimal digit (0..F)</param>
+        <summary>
+            Convert byte value hexadecimal digit (0..F) to corresponding font bits
+            </summary>
+        <returns>corresponding font</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHexDigits">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Display.Font[] GetHexDigits (ReadOnlySpan&lt;byte&gt; digits);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Iot.Device.Display.Font[] GetHexDigits(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; digits) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.FontHelper.GetHexDigits(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetHexDigits (digits As ReadOnlySpan(Of Byte)) As Font()" />
+      <MemberSignature Language="F#" Value="static member GetHexDigits : ReadOnlySpan&lt;byte&gt; -&gt; Iot.Device.Display.Font[]" Usage="Iot.Device.Display.FontHelper.GetHexDigits digits" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Display.Font[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="digits" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="digits">list of hexadecimal digits (will be converted in place!)</param>
+        <summary>
+            Converts a span of bytes to their corresponding hexadecimal digits' font representation
+            </summary>
+        <returns>list of corresponding digit fonts</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetString">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Display.Font[] GetString (string input);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Iot.Device.Display.Font[] GetString(string input) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.FontHelper.GetString(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetString (input As String) As Font()" />
+      <MemberSignature Language="F#" Value="static member GetString : string -&gt; Iot.Device.Display.Font[]" Usage="Iot.Device.Display.FontHelper.GetString input" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Display.Font[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="input">input string</param>
+        <summary>
+            Convert a string of characters to corresponding font segments
+            </summary>
+        <returns>list of corresponding character fonts</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HexadecimalMask">
+      <MemberSignature Language="C#" Value="public const byte HexadecimalMask = 15;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 HexadecimalMask = (15)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Display.FontHelper.HexadecimalMask" />
+      <MemberSignature Language="VB.NET" Value="Public Const HexadecimalMask As Byte  = 15" />
+      <MemberSignature Language="F#" Value="val mutable HexadecimalMask : byte" Usage="Iot.Device.Display.FontHelper.HexadecimalMask" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>15</MemberValue>
+      <Docs>
+        <summary>
+            Used to mask upper 4 bits of a byte for a single hexadecimal value
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

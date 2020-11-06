@@ -1,0 +1,485 @@
+<Type Name="MifareCard" FullName="Iot.Device.Card.Mifare.MifareCard">
+  <TypeSignature Language="C#" Value="public class MifareCard" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MifareCard extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Card.Mifare.MifareCard" />
+  <TypeSignature Language="VB.NET" Value="Public Class MifareCard" />
+  <TypeSignature Language="F#" Value="type MifareCard = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A Mifare card class
+            So far only supports the classical 1K cards
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MifareCard (Iot.Device.Card.CardTransceiver rfid, byte target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Card.CardTransceiver rfid, unsigned int8 target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.#ctor(Iot.Device.Card.CardTransceiver,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (rfid As CardTransceiver, target As Byte)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Card.Mifare.MifareCard : Iot.Device.Card.CardTransceiver * byte -&gt; Iot.Device.Card.Mifare.MifareCard" Usage="new Iot.Device.Card.Mifare.MifareCard (rfid, target)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rfid" Type="Iot.Device.Card.CardTransceiver" />
+        <Parameter Name="target" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="rfid">A card transceiver class</param>
+        <param name="target">The target number as some card readers attribute one</param>
+        <summary>
+            Constructor for Mifarecard
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockAccess">
+      <MemberSignature Language="C#" Value="public Iot.Device.Card.Mifare.AccessType BlockAccess (byte blockNumber, byte[] sectorData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.Card.Mifare.AccessType BlockAccess(unsigned int8 blockNumber, unsigned int8[] sectorData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.BlockAccess(System.Byte,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function BlockAccess (blockNumber As Byte, sectorData As Byte()) As AccessType" />
+      <MemberSignature Language="F#" Value="member this.BlockAccess : byte * byte[] -&gt; Iot.Device.Card.Mifare.AccessType" Usage="mifareCard.BlockAccess (blockNumber, sectorData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.Mifare.AccessType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="blockNumber" Type="System.Byte" />
+        <Parameter Name="sectorData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="blockNumber">the block number</param>
+        <param name="sectorData">the sector tailer data</param>
+        <summary>
+            Get the block access information
+            </summary>
+        <returns>The access type rights</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockNumber">
+      <MemberSignature Language="C#" Value="public byte BlockNumber { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 BlockNumber" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareCard.BlockNumber" />
+      <MemberSignature Language="VB.NET" Value="Public Property BlockNumber As Byte" />
+      <MemberSignature Language="F#" Value="member this.BlockNumber : byte with get, set" Usage="Iot.Device.Card.Mifare.MifareCard.BlockNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The block number to authenticate or read or write
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Capacity">
+      <MemberSignature Language="C#" Value="public Iot.Device.Card.Mifare.MifareCardCapacity Capacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Card.Mifare.MifareCardCapacity Capacity" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareCard.Capacity" />
+      <MemberSignature Language="VB.NET" Value="Public Property Capacity As MifareCardCapacity" />
+      <MemberSignature Language="F#" Value="member this.Capacity : Iot.Device.Card.Mifare.MifareCardCapacity with get, set" Usage="Iot.Device.Card.Mifare.MifareCard.Capacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.Mifare.MifareCardCapacity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The storage capacity
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Command">
+      <MemberSignature Language="C#" Value="public Iot.Device.Card.Mifare.MifareCardCommand Command { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Card.Mifare.MifareCardCommand Command" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareCard.Command" />
+      <MemberSignature Language="VB.NET" Value="Public Property Command As MifareCardCommand" />
+      <MemberSignature Language="F#" Value="member this.Command : Iot.Device.Card.Mifare.MifareCardCommand with get, set" Usage="Iot.Device.Card.Mifare.MifareCard.Command" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.Mifare.MifareCardCommand</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The command to execute on the card
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public byte[] Data { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Data" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareCard.Data" />
+      <MemberSignature Language="VB.NET" Value="Public Property Data As Byte()" />
+      <MemberSignature Language="F#" Value="member this.Data : byte[] with get, set" Usage="Iot.Device.Card.Mifare.MifareCard.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Data which has been read or to write for the specific block
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodeDefaultSectorAndBlockTailer">
+      <MemberSignature Language="C#" Value="public (byte,byte,byte) EncodeDefaultSectorAndBlockTailer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.ValueTuple`3&lt;unsigned int8, unsigned int8, unsigned int8&gt; EncodeDefaultSectorAndBlockTailer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.EncodeDefaultSectorAndBlockTailer" />
+      <MemberSignature Language="VB.NET" Value="Public Function EncodeDefaultSectorAndBlockTailer () As ValueTuple(Of Byte, Byte, Byte)" />
+      <MemberSignature Language="F#" Value="member this.EncodeDefaultSectorAndBlockTailer : unit -&gt; ValueTuple&lt;byte, byte, byte&gt;" Usage="mifareCard.EncodeDefaultSectorAndBlockTailer " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;System.Byte,System.Byte,System.Byte&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "b6", "b7", "b8" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "b6", "b7", "b8" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Encode with default value the access sector and tailer blocks
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodeSectorAndClockTailer">
+      <MemberSignature Language="C#" Value="public (byte,byte,byte) EncodeSectorAndClockTailer (Iot.Device.Card.Mifare.AccessSector accessSector, Iot.Device.Card.Mifare.AccessType[] accessTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.ValueTuple`3&lt;unsigned int8, unsigned int8, unsigned int8&gt; EncodeSectorAndClockTailer(valuetype Iot.Device.Card.Mifare.AccessSector accessSector, valuetype Iot.Device.Card.Mifare.AccessType[] accessTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.EncodeSectorAndClockTailer(Iot.Device.Card.Mifare.AccessSector,Iot.Device.Card.Mifare.AccessType[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function EncodeSectorAndClockTailer (accessSector As AccessSector, accessTypes As AccessType()) As ValueTuple(Of Byte, Byte, Byte)" />
+      <MemberSignature Language="F#" Value="member this.EncodeSectorAndClockTailer : Iot.Device.Card.Mifare.AccessSector * Iot.Device.Card.Mifare.AccessType[] -&gt; ValueTuple&lt;byte, byte, byte&gt;" Usage="mifareCard.EncodeSectorAndClockTailer (accessSector, accessTypes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;System.Byte,System.Byte,System.Byte&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "b6", "b7", "b8" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "b6", "b7", "b8" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessSector" Type="Iot.Device.Card.Mifare.AccessSector" />
+        <Parameter Name="accessTypes" Type="Iot.Device.Card.Mifare.AccessType[]" />
+      </Parameters>
+      <Docs>
+        <param name="accessSector">The access desired</param>
+        <param name="accessTypes">An array of 3 AccessType determining access of each block</param>
+        <summary>
+            Encode the desired access for the full sector including the block tailer
+            </summary>
+        <returns>The 3 bytes encoding the rights</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodeSectorTailer">
+      <MemberSignature Language="C#" Value="public (byte,byte,byte) EncodeSectorTailer (Iot.Device.Card.Mifare.AccessSector accessSector);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.ValueTuple`3&lt;unsigned int8, unsigned int8, unsigned int8&gt; EncodeSectorTailer(valuetype Iot.Device.Card.Mifare.AccessSector accessSector) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.EncodeSectorTailer(Iot.Device.Card.Mifare.AccessSector)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EncodeSectorTailer (accessSector As AccessSector) As ValueTuple(Of Byte, Byte, Byte)" />
+      <MemberSignature Language="F#" Value="member this.EncodeSectorTailer : Iot.Device.Card.Mifare.AccessSector -&gt; ValueTuple&lt;byte, byte, byte&gt;" Usage="mifareCard.EncodeSectorTailer accessSector" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;System.Byte,System.Byte,System.Byte&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "b6", "b7", "b8" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "b6", "b7", "b8" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessSector" Type="Iot.Device.Card.Mifare.AccessSector" />
+      </Parameters>
+      <Docs>
+        <param name="accessSector">the access sector</param>
+        <summary>
+            Get the sector tailer bytes for a specific access sector configuration
+            </summary>
+        <returns>the 3 bytes for configuration</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodeSectorTailer">
+      <MemberSignature Language="C#" Value="public (byte,byte,byte) EncodeSectorTailer (byte blockNumber, Iot.Device.Card.Mifare.AccessType accessType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.ValueTuple`3&lt;unsigned int8, unsigned int8, unsigned int8&gt; EncodeSectorTailer(unsigned int8 blockNumber, valuetype Iot.Device.Card.Mifare.AccessType accessType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.EncodeSectorTailer(System.Byte,Iot.Device.Card.Mifare.AccessType)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EncodeSectorTailer (blockNumber As Byte, accessType As AccessType) As ValueTuple(Of Byte, Byte, Byte)" />
+      <MemberSignature Language="F#" Value="member this.EncodeSectorTailer : byte * Iot.Device.Card.Mifare.AccessType -&gt; ValueTuple&lt;byte, byte, byte&gt;" Usage="mifareCard.EncodeSectorTailer (blockNumber, accessType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;System.Byte,System.Byte,System.Byte&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "b6", "b7", "b8" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "b6", "b7", "b8" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="blockNumber" Type="System.Byte" />
+        <Parameter Name="accessType" Type="Iot.Device.Card.Mifare.AccessType" />
+      </Parameters>
+      <Docs>
+        <param name="blockNumber">The block sector to encode</param>
+        <param name="accessType">The access type to encode</param>
+        <summary>
+            Encode the sector tailer access type for a specific block
+            </summary>
+        <returns>The encoded sector tailer for the specific block</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSectorBlock">
+      <MemberSignature Language="C#" Value="public bool IsSectorBlock (byte blockNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsSectorBlock(unsigned int8 blockNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.IsSectorBlock(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsSectorBlock (blockNumber As Byte) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsSectorBlock : byte -&gt; bool" Usage="mifareCard.IsSectorBlock blockNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="blockNumber" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="blockNumber">Input block number</param>
+        <summary>
+            Is it a block sector?
+            </summary>
+        <returns>True if it is a sector block</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyA">
+      <MemberSignature Language="C#" Value="public byte[] KeyA { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] KeyA" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareCard.KeyA" />
+      <MemberSignature Language="VB.NET" Value="Public Property KeyA As Byte()" />
+      <MemberSignature Language="F#" Value="member this.KeyA : byte[] with get, set" Usage="Iot.Device.Card.Mifare.MifareCard.KeyA" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Key A Used for encryption/decryption
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyB">
+      <MemberSignature Language="C#" Value="public byte[] KeyB { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] KeyB" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareCard.KeyB" />
+      <MemberSignature Language="VB.NET" Value="Public Property KeyB As Byte()" />
+      <MemberSignature Language="F#" Value="member this.KeyB : byte[] with get, set" Usage="Iot.Device.Card.Mifare.MifareCard.KeyB" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Key B Used for encryption/decryption
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunMifiCardCommand">
+      <MemberSignature Language="C#" Value="public int RunMifiCardCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 RunMifiCardCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.RunMifiCardCommand" />
+      <MemberSignature Language="VB.NET" Value="Public Function RunMifiCardCommand () As Integer" />
+      <MemberSignature Language="F#" Value="member this.RunMifiCardCommand : unit -&gt; int" Usage="mifareCard.RunMifiCardCommand " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Run the last setup command. In case of reading bytes, they are automatically pushed into the Data property
+            </summary>
+        <returns>-1 if the process fails otherwise the number of bytes read</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SectorTailerAccess">
+      <MemberSignature Language="C#" Value="public Iot.Device.Card.Mifare.AccessSector SectorTailerAccess (byte blockNumber, byte[] sectorData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.Card.Mifare.AccessSector SectorTailerAccess(unsigned int8 blockNumber, unsigned int8[] sectorData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.SectorTailerAccess(System.Byte,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function SectorTailerAccess (blockNumber As Byte, sectorData As Byte()) As AccessSector" />
+      <MemberSignature Language="F#" Value="member this.SectorTailerAccess : byte * byte[] -&gt; Iot.Device.Card.Mifare.AccessSector" Usage="mifareCard.SectorTailerAccess (blockNumber, sectorData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.Mifare.AccessSector</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="blockNumber" Type="System.Byte" />
+        <Parameter Name="sectorData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="blockNumber">the block sector number</param>
+        <param name="sectorData">The full sector data to decode</param>
+        <summary>
+            Get the sector tailer access information
+            </summary>
+        <returns>the access sector rights</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerialNumber">
+      <MemberSignature Language="C#" Value="public byte[] SerialNumber { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] SerialNumber" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareCard.SerialNumber" />
+      <MemberSignature Language="VB.NET" Value="Public Property SerialNumber As Byte()" />
+      <MemberSignature Language="F#" Value="member this.SerialNumber : byte[] with get, set" Usage="Iot.Device.Card.Mifare.MifareCard.SerialNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            UUID is the Serial Number, called MAC sometimes
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCapacity">
+      <MemberSignature Language="C#" Value="public void SetCapacity (ushort ATAQ, byte SAK);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCapacity(unsigned int16 ATAQ, unsigned int8 SAK) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.SetCapacity(System.UInt16,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetCapacity (ATAQ As UShort, SAK As Byte)" />
+      <MemberSignature Language="F#" Value="member this.SetCapacity : uint16 * byte -&gt; unit" Usage="mifareCard.SetCapacity (ATAQ, SAK)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ATAQ" Type="System.UInt16" />
+        <Parameter Name="SAK" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="ATAQ">The ATQA response</param>
+        <param name="SAK">The SAK response</param>
+        <summary>
+            From the ATAQ ans SAK data find common card capacity
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Target">
+      <MemberSignature Language="C#" Value="public byte Target { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Target" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareCard.Target" />
+      <MemberSignature Language="VB.NET" Value="Public Property Target As Byte" />
+      <MemberSignature Language="F#" Value="member this.Target : byte with get, set" Usage="Iot.Device.Card.Mifare.MifareCard.Target" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The tag number detected by the reader, only 1 or 2
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

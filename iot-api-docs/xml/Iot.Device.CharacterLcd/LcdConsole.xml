@@ -1,0 +1,545 @@
+<Type Name="LcdConsole" FullName="Iot.Device.CharacterLcd.LcdConsole">
+  <TypeSignature Language="C#" Value="public sealed class LcdConsole : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LcdConsole extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.CharacterLcd.LcdConsole" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class LcdConsole&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type LcdConsole = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            This is a high-level interface to an LCD display.
+            It supports automatic wrapping of text, automatic scrolling and code page mappings.
+            This class is thread safe, however using Write from different threads may lead to unexpected results, since the order is not guaranteed.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LcdConsole (Iot.Device.CharacterLcd.ICharacterLcd lcd, string romType, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.CharacterLcd.ICharacterLcd lcd, string romType, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdConsole.#ctor(Iot.Device.CharacterLcd.ICharacterLcd,System.String,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (lcd As ICharacterLcd, romType As String, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.CharacterLcd.LcdConsole : Iot.Device.CharacterLcd.ICharacterLcd * string * bool -&gt; Iot.Device.CharacterLcd.LcdConsole" Usage="new Iot.Device.CharacterLcd.LcdConsole (lcd, romType, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="lcd" Type="Iot.Device.CharacterLcd.ICharacterLcd" />
+        <Parameter Name="romType" Type="System.String" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="lcd">The low-level LCD interface.</param>
+        <param name="romType">Name of character ROM of display. Currently supported types: A00 and A02.</param>
+        <param name="shouldDispose">If the class should dispose the LCD driver when it is disposed. Defaults to true</param>
+        <summary>
+            Creates a new instance of the <see cref="T:Iot.Device.CharacterLcd.LcdConsole" /> class using the specified LCD low-level interface.
+            This class automatically configures the low-level interface. Do not use the low-level interface at the same time.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BacklightOn">
+      <MemberSignature Language="C#" Value="public bool BacklightOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BacklightOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.LcdConsole.BacklightOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property BacklightOn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.BacklightOn : bool with get, set" Usage="Iot.Device.CharacterLcd.LcdConsole.BacklightOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enables or disables the backlight
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlinkDisplay">
+      <MemberSignature Language="C#" Value="public void BlinkDisplay (int times);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BlinkDisplay(int32 times) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdConsole.BlinkDisplay(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub BlinkDisplay (times As Integer)" />
+      <MemberSignature Language="F#" Value="member this.BlinkDisplay : int -&gt; unit" Usage="lcdConsole.BlinkDisplay times" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="times" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="times">Number of times to blink. The blink rate is 1 Hz</param>
+        <summary>
+            Blinks the display text (and the backlight, if available).
+            Can be used to get user attention.
+            Operation is synchronous.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlinkDisplayAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task BlinkDisplayAsync (int times);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task BlinkDisplayAsync(int32 times) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdConsole.BlinkDisplayAsync(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function BlinkDisplayAsync (times As Integer) As Task" />
+      <MemberSignature Language="F#" Value="member this.BlinkDisplayAsync : int -&gt; System.Threading.Tasks.Task" Usage="lcdConsole.BlinkDisplayAsync times" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="times" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="times">Number of times to blink</param>
+        <summary>
+            Blinks the display in the background
+            </summary>
+        <returns>A task handle</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdConsole.Clear" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
+      <MemberSignature Language="F#" Value="member this.Clear : unit -&gt; unit" Usage="lcdConsole.Clear " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clears the screen and sets the cursor back to the start.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEncoding">
+      <MemberSignature Language="C#" Value="public static Iot.Device.CharacterLcd.LcdCharacterEncoding CreateEncoding (System.Globalization.CultureInfo culture, string romType, char unknownCharacter = '?', int maxNumberOfCustomCharacters = 8, Iot.Device.CharacterLcd.LcdCharacterEncodingFactory factory = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.CharacterLcd.LcdCharacterEncoding CreateEncoding(class System.Globalization.CultureInfo culture, string romType, char unknownCharacter, int32 maxNumberOfCustomCharacters, class Iot.Device.CharacterLcd.LcdCharacterEncodingFactory factory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdConsole.CreateEncoding(System.Globalization.CultureInfo,System.String,System.Char,System.Int32,Iot.Device.CharacterLcd.LcdCharacterEncodingFactory)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateEncoding (culture As CultureInfo, romType As String, Optional unknownCharacter As Char = '?', Optional maxNumberOfCustomCharacters As Integer = 8, Optional factory As LcdCharacterEncodingFactory = Nothing) As LcdCharacterEncoding" />
+      <MemberSignature Language="F#" Value="static member CreateEncoding : System.Globalization.CultureInfo * string * char * int * Iot.Device.CharacterLcd.LcdCharacterEncodingFactory -&gt; Iot.Device.CharacterLcd.LcdCharacterEncoding" Usage="Iot.Device.CharacterLcd.LcdConsole.CreateEncoding (culture, romType, unknownCharacter, maxNumberOfCustomCharacters, factory)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.CharacterLcd.LcdCharacterEncoding</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+        <Parameter Name="romType" Type="System.String" />
+        <Parameter Name="unknownCharacter" Type="System.Char" />
+        <Parameter Name="maxNumberOfCustomCharacters" Type="System.Int32" />
+        <Parameter Name="factory" Type="Iot.Device.CharacterLcd.LcdCharacterEncodingFactory" />
+      </Parameters>
+      <Docs>
+        <param name="culture">Required display culture (forwarded to the factory)</param>
+        <param name="romType">The name of the ROM for which the encoding is to be applied. The default factory supports roms A00 and A02.</param>
+        <param name="unknownCharacter">The character to print for unknown letters, default: ?</param>
+        <param name="maxNumberOfCustomCharacters">The maximum number of custom characters supported by the hardware.</param>
+        <param name="factory">Character encoding factory that delivers the mapping of the Char type to the hardware ROM character codes. May add special characters into
+            the character ROM. Default: Null (Use internal factory)</param>
+        <summary>
+            Creates an encoding that can be used for an LCD display.
+            Typically, the returned value will be loaded using <see cref="M:Iot.Device.CharacterLcd.LcdConsole.LoadEncoding(Iot.Device.CharacterLcd.LcdCharacterEncoding)" />.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CursorLeft">
+      <MemberSignature Language="C#" Value="public int CursorLeft { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CursorLeft" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.LcdConsole.CursorLeft" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CursorLeft As Integer" />
+      <MemberSignature Language="F#" Value="member this.CursorLeft : int" Usage="Iot.Device.CharacterLcd.LcdConsole.CursorLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Position of the cursor, from left.
+            Note: May be outside the bounds of the display.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CursorTop">
+      <MemberSignature Language="C#" Value="public int CursorTop { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 CursorTop" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.LcdConsole.CursorTop" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CursorTop As Integer" />
+      <MemberSignature Language="F#" Value="member this.CursorTop : int" Usage="Iot.Device.CharacterLcd.LcdConsole.CursorTop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Position of the cursor, from top
+            Note: May be outside the bounds of the display.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayOn">
+      <MemberSignature Language="C#" Value="public bool DisplayOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisplayOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.LcdConsole.DisplayOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisplayOn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DisplayOn : bool with get, set" Usage="Iot.Device.CharacterLcd.LcdConsole.DisplayOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enables or disables the display
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdConsole.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="lcdConsole.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disposes this instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LineFeedMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.CharacterLcd.LineWrapMode LineFeedMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.CharacterLcd.LineWrapMode LineFeedMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.LcdConsole.LineFeedMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property LineFeedMode As LineWrapMode" />
+      <MemberSignature Language="F#" Value="member this.LineFeedMode : Iot.Device.CharacterLcd.LineWrapMode with get, set" Usage="Iot.Device.CharacterLcd.LcdConsole.LineFeedMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.CharacterLcd.LineWrapMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sets the Line Feed Mode.
+            This defines what happens when writting past the end of the line/screen.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadEncoding">
+      <MemberSignature Language="C#" Value="public bool LoadEncoding (Iot.Device.CharacterLcd.LcdCharacterEncoding encoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool LoadEncoding(class Iot.Device.CharacterLcd.LcdCharacterEncoding encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdConsole.LoadEncoding(Iot.Device.CharacterLcd.LcdCharacterEncoding)" />
+      <MemberSignature Language="VB.NET" Value="Public Function LoadEncoding (encoding As LcdCharacterEncoding) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.LoadEncoding : Iot.Device.CharacterLcd.LcdCharacterEncoding -&gt; bool" Usage="lcdConsole.LoadEncoding encoding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encoding" Type="Iot.Device.CharacterLcd.LcdCharacterEncoding" />
+      </Parameters>
+      <Docs>
+        <param name="encoding">The encoding to load.</param>
+        <summary>
+            Loads the specified character encoding. This loads any custom characters from the encoding to the display.
+            </summary>
+        <returns>True if the character encoding was successfully loaded, false if there are not enough custom slots for all the required custom characters.
+            This may also return false if the encoding factory returned incomplete results, such as a missing custom character for a special diacritic.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadEncoding">
+      <MemberSignature Language="C#" Value="public bool LoadEncoding (System.Text.Encoding encoding);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool LoadEncoding(class System.Text.Encoding encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdConsole.LoadEncoding(System.Text.Encoding)" />
+      <MemberSignature Language="VB.NET" Value="Public Function LoadEncoding (encoding As Encoding) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.LoadEncoding : System.Text.Encoding -&gt; bool" Usage="lcdConsole.LoadEncoding encoding" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encoding" Type="System.Text.Encoding" />
+      </Parameters>
+      <Docs>
+        <param name="encoding">The encoding to load.</param>
+        <summary>
+            Loads the specified encoding.
+            This behaves as <see cref="M:Iot.Device.CharacterLcd.LcdConsole.LoadEncoding(Iot.Device.CharacterLcd.LcdCharacterEncoding)" /> when the argument is of the dynamic type <see cref="T:Iot.Device.CharacterLcd.LcdCharacterEncoding" />, otherwise like an encding
+            with no special characters.
+            </summary>
+        <returns>See true if the encoding was correctly loaded.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplaceLine">
+      <MemberSignature Language="C#" Value="public void ReplaceLine (int lineNumber, string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReplaceLine(int32 lineNumber, string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdConsole.ReplaceLine(System.Int32,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ReplaceLine (lineNumber As Integer, text As String)" />
+      <MemberSignature Language="F#" Value="member this.ReplaceLine : int * string -&gt; unit" Usage="lcdConsole.ReplaceLine (lineNumber, text)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lineNumber" Type="System.Int32" />
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="lineNumber">0-based index of the line to start</param>
+        <param name="text">Text to insert. No newlines supported.</param>
+        <summary>
+            Replaces the text of the given line.
+            This will overwrite the text in the given line, filling up with spaces, if needed.
+            This will never wrap to the next line, and line feeds in the input string are not allowed.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">The string contains newlines.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetEncoding">
+      <MemberSignature Language="C#" Value="public void ResetEncoding ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetEncoding() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdConsole.ResetEncoding" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ResetEncoding ()" />
+      <MemberSignature Language="F#" Value="member this.ResetEncoding : unit -&gt; unit" Usage="lcdConsole.ResetEncoding " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resets the character encoding to hardware defaults (using simply the lower byte of a char).
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScrollUpDelay">
+      <MemberSignature Language="C#" Value="public TimeSpan ScrollUpDelay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ScrollUpDelay" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.LcdConsole.ScrollUpDelay" />
+      <MemberSignature Language="VB.NET" Value="Public Property ScrollUpDelay As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.ScrollUpDelay : TimeSpan with get, set" Usage="Iot.Device.CharacterLcd.LcdConsole.ScrollUpDelay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this is larger than zero, an a wait is introduced each time the display wraps to the next line or scrolls up. Can be used to print long texts to the display,
+            but keeping it readable.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCursorPosition">
+      <MemberSignature Language="C#" Value="public void SetCursorPosition (int left, int top);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCursorPosition(int32 left, int32 top) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdConsole.SetCursorPosition(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetCursorPosition (left As Integer, top As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SetCursorPosition : int * int -&gt; unit" Usage="lcdConsole.SetCursorPosition (left, top)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Int32" />
+        <Parameter Name="top" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="left">The column position from left to right starting with 0.</param>
+        <param name="top">The row position from the top starting with 0.</param>
+        <summary>
+            Moves the cursor to an explicit column and row position.
+            The position may be outside the bounds of the display. Any subsequent writes will then have no effect, unless <see cref="P:Iot.Device.CharacterLcd.LcdConsole.LineFeedMode" /> allows it or a newline character is written.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">The new position negative.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size Size" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.LcdConsole.Size" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Size As Size" />
+      <MemberSignature Language="F#" Value="member this.Size : System.Drawing.Size" Usage="Iot.Device.CharacterLcd.LcdConsole.Size" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Size of the display
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdConsole.Write(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (text As String)" />
+      <MemberSignature Language="F#" Value="member this.Write : string -&gt; unit" Usage="lcdConsole.Write text" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Text to be displayed.</param>
+        <summary>
+            Write text to display.
+            </summary>
+        <remarks>
+            There are only 256 characters available. There are chip variants
+            with different character sets. Characters from space ' ' (32) to
+            '}' are usually the same with the exception of '\', which is a
+            yen symbol on some chips '¥'.
+            </remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> was null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public void WriteLine (string text = &quot;&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteLine(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdConsole.WriteLine(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteLine (Optional text As String = &quot;&quot;)" />
+      <MemberSignature Language="F#" Value="member this.WriteLine : string -&gt; unit" Usage="lcdConsole.WriteLine text" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">Text to draw.</param>
+        <summary>
+            Writes the given text to the current position, then wraps to the next line.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="text" /> was null.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,210 @@
+<Type Name="Ssd13xx" FullName="Iot.Device.Ssd13xx.Ssd13xx">
+  <TypeSignature Language="C#" Value="public abstract class Ssd13xx : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Ssd13xx extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ssd13xx.Ssd13xx" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Ssd13xx&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Ssd13xx = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents base class for SSD13xx OLED displays
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ssd13xx (System.Device.I2c.I2cDevice i2cDevice, int bufferSize = 4609);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, int32 bufferSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Ssd13xx.#ctor(System.Device.I2c.I2cDevice,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional bufferSize As Integer = 4609)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ssd13xx.Ssd13xx : System.Device.I2c.I2cDevice * int -&gt; Iot.Device.Ssd13xx.Ssd13xx" Usage="new Iot.Device.Ssd13xx.Ssd13xx (i2cDevice, bufferSize)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="bufferSize" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">I2C device used to communicate with the device</param>
+        <param name="bufferSize">Command buffer size</param>
+        <summary>
+            Constructs instance of Ssd13xx
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_i2cDevice">
+      <MemberSignature Language="C#" Value="protected System.Device.I2c.I2cDevice _i2cDevice;" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Device.I2c.I2cDevice _i2cDevice" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Ssd13xx.Ssd13xx._i2cDevice" />
+      <MemberSignature Language="VB.NET" Value="Protected _i2cDevice As I2cDevice " />
+      <MemberSignature Language="F#" Value="val mutable _i2cDevice : System.Device.I2c.I2cDevice" Usage="Iot.Device.Ssd13xx.Ssd13xx._i2cDevice" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.I2c.I2cDevice</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Underlying I2C device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Ssd13xx.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="ssd13xx.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="SendCommand">
+      <MemberSignature Language="C#" Value="public abstract void SendCommand (Iot.Device.Ssd13xx.Commands.ISharedCommand command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SendCommand(class Iot.Device.Ssd13xx.Commands.ISharedCommand command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Ssd13xx.SendCommand(Iot.Device.Ssd13xx.Commands.ISharedCommand)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SendCommand (command As ISharedCommand)" />
+      <MemberSignature Language="F#" Value="abstract member SendCommand : Iot.Device.Ssd13xx.Commands.ISharedCommand -&gt; unit" Usage="ssd13xx.SendCommand command" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="Iot.Device.Ssd13xx.Commands.ISharedCommand" />
+      </Parameters>
+      <Docs>
+        <param name="command">The command to send to the display controller.</param>
+        <summary>
+            Send a command to the display controller.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendData">
+      <MemberSignature Language="C#" Value="public virtual void SendData (byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SendData(unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Ssd13xx.SendData(System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SendData (data As Byte())" />
+      <MemberSignature Language="F#" Value="abstract member SendData : byte[] -&gt; unit&#xA;override this.SendData : byte[] -&gt; unit" Usage="ssd13xx.SendData data" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="data">The data to send to the display controller.</param>
+        <summary>
+            Send data to the display controller.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SliceGenericBuffer">
+      <MemberSignature Language="C#" Value="protected Span&lt;byte&gt; SliceGenericBuffer (int length);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype System.Span`1&lt;unsigned int8&gt; SliceGenericBuffer(int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Ssd13xx.SliceGenericBuffer(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function SliceGenericBuffer (length As Integer) As Span(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.SliceGenericBuffer : int -&gt; Span&lt;byte&gt;" Usage="ssd13xx.SliceGenericBuffer length" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Span&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="length">Requested length</param>
+        <summary>
+            Acquires span of specific length pointing to the command buffer.
+            If length of the command buffer is too small it will be reallocated.
+            </summary>
+        <returns>Span of bytes pointing to the command buffer</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SliceGenericBuffer">
+      <MemberSignature Language="C#" Value="protected Span&lt;byte&gt; SliceGenericBuffer (int start, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance valuetype System.Span`1&lt;unsigned int8&gt; SliceGenericBuffer(int32 start, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd13xx.Ssd13xx.SliceGenericBuffer(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function SliceGenericBuffer (start As Integer, length As Integer) As Span(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.SliceGenericBuffer : int * int -&gt; Span&lt;byte&gt;" Usage="ssd13xx.SliceGenericBuffer (start, length)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Span&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="start">Start index of the requested span</param>
+        <param name="length">Requested length</param>
+        <summary>
+            Acquires span of specific length at specific position in command buffer.
+            If length of the command buffer is too small it will be reallocated.
+            </summary>
+        <returns>Span of bytes pointing to the command buffer</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

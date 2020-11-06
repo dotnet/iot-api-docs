@@ -1,0 +1,329 @@
+<Type Name="Analog106kbpsTypeAMode" FullName="Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode">
+  <TypeSignature Language="C#" Value="public class Analog106kbpsTypeAMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Analog106kbpsTypeAMode extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode" />
+  <TypeSignature Language="VB.NET" Value="Public Class Analog106kbpsTypeAMode" />
+  <TypeSignature Language="F#" Value="type Analog106kbpsTypeAMode = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This CfgItem is used to choose the analog settings that the PN532 will use for the
+            baudrate 106kbps type A.
+            When using this command, the host controller has to provide 11 values
+            (ConfigurationData[]) for the following internal registers
+            Actually, there is only one CIU_Demod register which defines a setting used by the
+            reader in reception only.But depending on the RF condition, two different settings
+            can be used for this register:
+            • CIU_Demod when own RF is On defines a setting when its RF field is on
+            during a reception i.e.initiator passive mode,
+            • CIU_Demod when own RF is Off defines a setting when its RF field is off
+            during a reception i.e.initiator active mode.
+            CIU = Contactless Interface Unit
+            Please refer to https://www.nxp.com/docs/en/nxp/data-sheets/PN532_C1.pdf page 144
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Analog106kbpsTypeAMode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CWGsP">
+      <MemberSignature Language="C#" Value="public byte CWGsP { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 CWGsP" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.CWGsP" />
+      <MemberSignature Language="VB.NET" Value="Public Property CWGsP As Byte" />
+      <MemberSignature Language="F#" Value="member this.CWGsP : byte with get, set" Usage="Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.CWGsP" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            CWGsP, cf page 104 documentation 141520.pdf and page 144 documentation PN532_C1.pdf
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DemodWhenRfOff">
+      <MemberSignature Language="C#" Value="public byte DemodWhenRfOff { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 DemodWhenRfOff" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.DemodWhenRfOff" />
+      <MemberSignature Language="VB.NET" Value="Public Property DemodWhenRfOff As Byte" />
+      <MemberSignature Language="F#" Value="member this.DemodWhenRfOff : byte with get, set" Usage="Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.DemodWhenRfOff" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            DemodWhenRfOff, cf page 104 documentation 141520.pdf and page 144 documentation PN532_C1.pdf
+            Defines demodulator settings when radio frequency is off
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DemodWhenRfOn">
+      <MemberSignature Language="C#" Value="public byte DemodWhenRfOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 DemodWhenRfOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.DemodWhenRfOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property DemodWhenRfOn As Byte" />
+      <MemberSignature Language="F#" Value="member this.DemodWhenRfOn : byte with get, set" Usage="Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.DemodWhenRfOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            DemodWhenRfOn, cf page 104 documentation 141520.pdf and page 144 documentation PN532_C1.pdf
+            Defines demodulator settings when radio frequency is on
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GsNOff">
+      <MemberSignature Language="C#" Value="public byte GsNOff { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 GsNOff" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.GsNOff" />
+      <MemberSignature Language="VB.NET" Value="Public Property GsNOff As Byte" />
+      <MemberSignature Language="F#" Value="member this.GsNOff : byte with get, set" Usage="Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.GsNOff" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            GsNOff, cf page 104 documentation 141520.pdf and page 144 documentation PN532_C1.pdf
+            Selects the conductance of the antenna driver pins TX1 and
+            TX2 for load modulation when own RF field is switched off
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GsNOn">
+      <MemberSignature Language="C#" Value="public byte GsNOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 GsNOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.GsNOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property GsNOn As Byte" />
+      <MemberSignature Language="F#" Value="member this.GsNOn : byte with get, set" Usage="Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.GsNOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            GsNOn, cf page 104 documentation 141520.pdf and page 144 documentation PN532_C1.pdf
+            Selects the conductance of the antenna driver pins TX1 and
+            TX2 for modulation, when own RF field is switched on
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MifNFC">
+      <MemberSignature Language="C#" Value="public byte MifNFC { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 MifNFC" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.MifNFC" />
+      <MemberSignature Language="VB.NET" Value="Public Property MifNFC As Byte" />
+      <MemberSignature Language="F#" Value="member this.MifNFC : byte with get, set" Usage="Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.MifNFC" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            MifNFC, cf page 104 documentation 141520.pdf and page 144 documentation PN532_C1.pdf
+            Controls the communication in ISO/IEC 14443/MIFARE and
+            NFC target mode at 106 kbit/s
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModGsP">
+      <MemberSignature Language="C#" Value="public byte ModGsP { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 ModGsP" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.ModGsP" />
+      <MemberSignature Language="VB.NET" Value="Public Property ModGsP As Byte" />
+      <MemberSignature Language="F#" Value="member this.ModGsP : byte with get, set" Usage="Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.ModGsP" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ModGsP, cf page 104 documentation 141520.pdf and page 144 documentation PN532_C1.pdf
+            Selects the conductance of the antenna driver pins TX1 and
+            TX2 when not in modulation phase
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModWidth">
+      <MemberSignature Language="C#" Value="public byte ModWidth { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 ModWidth" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.ModWidth" />
+      <MemberSignature Language="VB.NET" Value="Public Property ModWidth As Byte" />
+      <MemberSignature Language="F#" Value="member this.ModWidth : byte with get, set" Usage="Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.ModWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            ModWidth, cf page 104 documentation 141520.pdf and page 144 documentation PN532_C1.pdf
+            Controls the setting of the width of the Miller pause
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RfConfiguration">
+      <MemberSignature Language="C#" Value="public byte RfConfiguration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 RfConfiguration" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.RfConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Public Property RfConfiguration As Byte" />
+      <MemberSignature Language="F#" Value="member this.RfConfiguration : byte with get, set" Usage="Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.RfConfiguration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RFCfg, cf page 104 documentation 141520.pdf and page 144 documentation PN532_C1.pdf
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RxThreshold">
+      <MemberSignature Language="C#" Value="public byte RxThreshold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 RxThreshold" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.RxThreshold" />
+      <MemberSignature Language="VB.NET" Value="Public Property RxThreshold As Byte" />
+      <MemberSignature Language="F#" Value="member this.RxThreshold : byte with get, set" Usage="Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.RxThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RxThreshold, cf page 104 documentation 141520.pdf and page 144 documentation PN532_C1.pdf
+            Selects thresholds for the bit decoder
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public byte[] Serialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] Serialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.Serialize" />
+      <MemberSignature Language="VB.NET" Value="Public Function Serialize () As Byte()" />
+      <MemberSignature Language="F#" Value="member this.Serialize : unit -&gt; byte[]" Usage="analog106kbpsTypeAMode.Serialize " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the byte array to send
+            </summary>
+        <returns>Serialized value</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TxBitPhase">
+      <MemberSignature Language="C#" Value="public byte TxBitPhase { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 TxBitPhase" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.TxBitPhase" />
+      <MemberSignature Language="VB.NET" Value="Public Property TxBitPhase As Byte" />
+      <MemberSignature Language="F#" Value="member this.TxBitPhase : byte with get, set" Usage="Iot.Device.Pn532.RfConfiguration.Analog106kbpsTypeAMode.TxBitPhase" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TxBitPhase, cf page 104 documentation 141520.pdf and page 144 documentation PN532_C1.pdf
+            Bit synchronization at 106 kbit/s
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

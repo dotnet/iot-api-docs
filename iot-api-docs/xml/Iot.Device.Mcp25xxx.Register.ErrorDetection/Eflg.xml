@@ -1,0 +1,373 @@
+<Type Name="Eflg" FullName="Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg">
+  <TypeSignature Language="C#" Value="public class Eflg : Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Eflg extends System.Object implements class Iot.Device.Mcp25xxx.Register.IRegister" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg" />
+  <TypeSignature Language="VB.NET" Value="Public Class Eflg&#xA;Implements IRegister" />
+  <TypeSignature Language="F#" Value="type Eflg = class&#xA;    interface IRegister" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Mcp25xxx.Register.IRegister</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Error Flag Register.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Eflg (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.#ctor(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (value As Byte)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg : byte -&gt; Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg" Usage="new Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg value" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">The value that represents the register contents.</param>
+        <summary>
+            Initializes a new instance of the Eflg class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Eflg (bool errorWarningFlag, bool receiveErrorWarningFlag, bool transmitErrorWarningFlag, bool receiveErrorPassiveFlag, bool transmitErrorPassiveFlag, bool busOffErrorFlag, bool receiveBuffer0OverflowFlag, bool receiveBuffer1OverflowFlag);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool errorWarningFlag, bool receiveErrorWarningFlag, bool transmitErrorWarningFlag, bool receiveErrorPassiveFlag, bool transmitErrorPassiveFlag, bool busOffErrorFlag, bool receiveBuffer0OverflowFlag, bool receiveBuffer1OverflowFlag) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.#ctor(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (errorWarningFlag As Boolean, receiveErrorWarningFlag As Boolean, transmitErrorWarningFlag As Boolean, receiveErrorPassiveFlag As Boolean, transmitErrorPassiveFlag As Boolean, busOffErrorFlag As Boolean, receiveBuffer0OverflowFlag As Boolean, receiveBuffer1OverflowFlag As Boolean)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg : bool * bool * bool * bool * bool * bool * bool * bool -&gt; Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg" Usage="new Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg (errorWarningFlag, receiveErrorWarningFlag, transmitErrorWarningFlag, receiveErrorPassiveFlag, transmitErrorPassiveFlag, busOffErrorFlag, receiveBuffer0OverflowFlag, receiveBuffer1OverflowFlag)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="errorWarningFlag" Type="System.Boolean" />
+        <Parameter Name="receiveErrorWarningFlag" Type="System.Boolean" />
+        <Parameter Name="transmitErrorWarningFlag" Type="System.Boolean" />
+        <Parameter Name="receiveErrorPassiveFlag" Type="System.Boolean" />
+        <Parameter Name="transmitErrorPassiveFlag" Type="System.Boolean" />
+        <Parameter Name="busOffErrorFlag" Type="System.Boolean" />
+        <Parameter Name="receiveBuffer0OverflowFlag" Type="System.Boolean" />
+        <Parameter Name="receiveBuffer1OverflowFlag" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="errorWarningFlag">
+            EWARN: Error Warning Flag bit.
+            Sets when TEC or REC is equal to or greater than 96 (TXWAR or RXWAR = 1).
+            Resets when both REC and TEC are less than 96.
+            </param>
+        <param name="receiveErrorWarningFlag">
+            RXWAR: Receive Error Warning Flag bit.
+            Sets when REC is equal to or greater than 96.
+            Resets when REC is less than 96.
+            </param>
+        <param name="transmitErrorWarningFlag">
+            TXWAR: Transmit Error Warning Flag bit.
+            Sets when TEC is equal to or greater than 96.
+            Resets when TEC is less than 96.
+            </param>
+        <param name="receiveErrorPassiveFlag">
+            RXEP: Receive Error-Passive Flag bit.
+            Sets when REC is equal to or greater than 128.
+            Resets when REC is less than 128.
+            </param>
+        <param name="transmitErrorPassiveFlag">
+            TXEP: Transmit Error-Passive Flag bit.
+            Sets when TEC is equal to or greater than 128.
+            Resets when TEC is less than 128.
+            </param>
+        <param name="busOffErrorFlag">
+            TXBO: Bus-Off Error Flag bit.
+            Bit sets when TEC reaches 255.
+            Resets after a successful bus recovery sequence.
+            </param>
+        <param name="receiveBuffer0OverflowFlag">
+            RX0OVR: Receive Buffer 0 Overflow Flag bit.
+            Sets when a valid message is received for RXB0 and the RX0IF bit in the CANINTF register is ‘1’.
+            Must be reset by MCU.
+            </param>
+        <param name="receiveBuffer1OverflowFlag">
+            RX1OVR: Receive Buffer 1 Overflow Flag bit.
+            Sets when a valid message is received for RXB1 and the RX1IF bit in the CANINTF register is ‘1’.
+            Must be reset by MCU.
+            </param>
+        <summary>
+            Initializes a new instance of the Eflg class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Address">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mcp25xxx.Register.Address Address { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Mcp25xxx.Register.Address Address" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.Address" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Address As Address" />
+      <MemberSignature Language="F#" Value="member this.Address : Iot.Device.Mcp25xxx.Register.Address" Usage="Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.Address" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Mcp25xxx.Register.IRegister.Address</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp25xxx.Register.Address</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the address of the register.
+            </summary>
+        <value>The address of the register.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BusOffErrorFlag">
+      <MemberSignature Language="C#" Value="public bool BusOffErrorFlag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BusOffErrorFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.BusOffErrorFlag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BusOffErrorFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.BusOffErrorFlag : bool" Usage="Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.BusOffErrorFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TXBO: Bus-Off Error Flag bit.
+            Bit sets when TEC reaches 255.
+            Resets after a successful bus recovery sequence.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ErrorWarningFlag">
+      <MemberSignature Language="C#" Value="public bool ErrorWarningFlag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ErrorWarningFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.ErrorWarningFlag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ErrorWarningFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ErrorWarningFlag : bool" Usage="Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.ErrorWarningFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            EWARN: Error Warning Flag bit.
+            Sets when TEC or REC is equal to or greater than 96 (TXWAR or RXWAR = 1).
+            Resets when both REC and TEC are less than 96.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveBuffer0OverflowFlag">
+      <MemberSignature Language="C#" Value="public bool ReceiveBuffer0OverflowFlag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReceiveBuffer0OverflowFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.ReceiveBuffer0OverflowFlag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReceiveBuffer0OverflowFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReceiveBuffer0OverflowFlag : bool" Usage="Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.ReceiveBuffer0OverflowFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RX0OVR: Receive Buffer 0 Overflow Flag bit.
+            Sets when a valid message is received for RXB0 and the RX0IF bit in the CANINTF register is ‘1’.
+            Must be reset by MCU.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveBuffer1OverflowFlag">
+      <MemberSignature Language="C#" Value="public bool ReceiveBuffer1OverflowFlag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReceiveBuffer1OverflowFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.ReceiveBuffer1OverflowFlag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReceiveBuffer1OverflowFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReceiveBuffer1OverflowFlag : bool" Usage="Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.ReceiveBuffer1OverflowFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RX1OVR: Receive Buffer 1 Overflow Flag bit.
+            Sets when a valid message is received for RXB1 and the RX1IF bit in the CANINTF register is ‘1’.
+            Must be reset by MCU.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveErrorPassiveFlag">
+      <MemberSignature Language="C#" Value="public bool ReceiveErrorPassiveFlag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReceiveErrorPassiveFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.ReceiveErrorPassiveFlag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReceiveErrorPassiveFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReceiveErrorPassiveFlag : bool" Usage="Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.ReceiveErrorPassiveFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RXEP: Receive Error-Passive Flag bit.
+            Sets when REC is equal to or greater than 128.
+            Resets when REC is less than 128.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReceiveErrorWarningFlag">
+      <MemberSignature Language="C#" Value="public bool ReceiveErrorWarningFlag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReceiveErrorWarningFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.ReceiveErrorWarningFlag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ReceiveErrorWarningFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReceiveErrorWarningFlag : bool" Usage="Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.ReceiveErrorWarningFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            RXWAR: Receive Error Warning Flag bit.
+            Sets when REC is equal to or greater than 96.
+            Resets when REC is less than 96.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToByte">
+      <MemberSignature Language="C#" Value="public byte ToByte ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8 ToByte() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.ToByte" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToByte () As Byte" />
+      <MemberSignature Language="F#" Value="abstract member ToByte : unit -&gt; byte&#xA;override this.ToByte : unit -&gt; byte" Usage="eflg.ToByte " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Mcp25xxx.Register.IRegister.ToByte</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Converts register contents to a byte.
+            </summary>
+        <returns>The byte that represent the register contents.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransmitErrorPassiveFlag">
+      <MemberSignature Language="C#" Value="public bool TransmitErrorPassiveFlag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TransmitErrorPassiveFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.TransmitErrorPassiveFlag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TransmitErrorPassiveFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TransmitErrorPassiveFlag : bool" Usage="Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.TransmitErrorPassiveFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TXEP: Transmit Error-Passive Flag bit.
+            Sets when TEC is equal to or greater than 128.
+            Resets when TEC is less than 128.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TransmitErrorWarningFlag">
+      <MemberSignature Language="C#" Value="public bool TransmitErrorWarningFlag { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TransmitErrorWarningFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.TransmitErrorWarningFlag" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TransmitErrorWarningFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TransmitErrorWarningFlag : bool" Usage="Iot.Device.Mcp25xxx.Register.ErrorDetection.Eflg.TransmitErrorWarningFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TXWAR: Transmit Error Warning Flag bit.
+            Sets when TEC is equal to or greater than 96.
+            Resets when TEC is less than 96.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

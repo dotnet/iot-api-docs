@@ -1,0 +1,389 @@
+<Type Name="Vehicle" FullName="Iot.Device.BrickPi3.Movement.Vehicle">
+  <TypeSignature Language="C#" Value="public sealed class Vehicle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Vehicle extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.BrickPi3.Movement.Vehicle" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Vehicle" />
+  <TypeSignature Language="F#" Value="type Vehicle = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents BrickPi Vehicle
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Vehicle (Iot.Device.BrickPi3.Brick brick, Iot.Device.BrickPi3.Models.BrickPortMotor left, Iot.Device.BrickPi3.Models.BrickPortMotor right);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.BrickPi3.Brick brick, valuetype Iot.Device.BrickPi3.Models.BrickPortMotor left, valuetype Iot.Device.BrickPi3.Models.BrickPortMotor right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Movement.Vehicle.#ctor(Iot.Device.BrickPi3.Brick,Iot.Device.BrickPi3.Models.BrickPortMotor,Iot.Device.BrickPi3.Models.BrickPortMotor)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (brick As Brick, left As BrickPortMotor, right As BrickPortMotor)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.BrickPi3.Movement.Vehicle : Iot.Device.BrickPi3.Brick * Iot.Device.BrickPi3.Models.BrickPortMotor * Iot.Device.BrickPi3.Models.BrickPortMotor -&gt; Iot.Device.BrickPi3.Movement.Vehicle" Usage="new Iot.Device.BrickPi3.Movement.Vehicle (brick, left, right)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="brick" Type="Iot.Device.BrickPi3.Brick" />
+        <Parameter Name="left" Type="Iot.Device.BrickPi3.Models.BrickPortMotor" />
+        <Parameter Name="right" Type="Iot.Device.BrickPi3.Models.BrickPortMotor" />
+      </Parameters>
+      <Docs>
+        <param name="brick">The main brick controlling the motor</param>
+        <param name="left">Motor port for left motor</param>
+        <param name="right">Motor port for right motor</param>
+        <summary>
+            Create a vehicule with 2 motors, one left and one right
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Backward">
+      <MemberSignature Language="C#" Value="public void Backward (int speed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Backward(int32 speed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Movement.Vehicle.Backward(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Backward (speed As Integer)" />
+      <MemberSignature Language="F#" Value="member this.Backward : int -&gt; unit" Usage="vehicle.Backward speed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speed" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="speed">speed is between -255 and +255</param>
+        <summary>
+            Run backward at the specified speed
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Backward">
+      <MemberSignature Language="C#" Value="public void Backward (int speed, int timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Backward(int32 speed, int32 timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Movement.Vehicle.Backward(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Backward (speed As Integer, timeout As Integer)" />
+      <MemberSignature Language="F#" Value="member this.Backward : int * int -&gt; unit" Usage="vehicle.Backward (speed, timeout)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speed" Type="System.Int32" />
+        <Parameter Name="timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="speed">speed is between -255 and +255</param>
+        <param name="timeout">number of milliseconds to run the motors</param>
+        <summary>
+            Run backward for the specified number of milliseconds
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DirectionOpposite">
+      <MemberSignature Language="C#" Value="public bool DirectionOpposite { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DirectionOpposite" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BrickPi3.Movement.Vehicle.DirectionOpposite" />
+      <MemberSignature Language="VB.NET" Value="Public Property DirectionOpposite As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DirectionOpposite : bool with get, set" Usage="Iot.Device.BrickPi3.Movement.Vehicle.DirectionOpposite" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Is the vehicule has inverted direction, then true
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Foreward">
+      <MemberSignature Language="C#" Value="public void Foreward (int speed, int timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Foreward(int32 speed, int32 timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Movement.Vehicle.Foreward(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Foreward (speed As Integer, timeout As Integer)" />
+      <MemberSignature Language="F#" Value="member this.Foreward : int * int -&gt; unit" Usage="vehicle.Foreward (speed, timeout)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speed" Type="System.Int32" />
+        <Parameter Name="timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="speed">speed is between -255 and +255</param>
+        <param name="timeout">number of milliseconds to run the motors</param>
+        <summary>
+            Run forward for the specified number of milliseconds
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Forward">
+      <MemberSignature Language="C#" Value="public void Forward (int speed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Forward(int32 speed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Movement.Vehicle.Forward(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Forward (speed As Integer)" />
+      <MemberSignature Language="F#" Value="member this.Forward : int -&gt; unit" Usage="vehicle.Forward speed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speed" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="speed">speed is between -255 and +255</param>
+        <summary>
+            Run forward at the specified speed
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRunning">
+      <MemberSignature Language="C#" Value="public bool IsRunning ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsRunning() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Movement.Vehicle.IsRunning" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsRunning () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsRunning : unit -&gt; bool" Usage="vehicle.IsRunning " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Return true if the vehicule is moving
+            </summary>
+        <returns>true if vehicule moving</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PortLeft">
+      <MemberSignature Language="C#" Value="public Iot.Device.BrickPi3.Models.BrickPortMotor PortLeft { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.BrickPi3.Models.BrickPortMotor PortLeft" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BrickPi3.Movement.Vehicle.PortLeft" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PortLeft As BrickPortMotor" />
+      <MemberSignature Language="F#" Value="member this.PortLeft : Iot.Device.BrickPi3.Models.BrickPortMotor" Usage="Iot.Device.BrickPi3.Movement.Vehicle.PortLeft" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.BrickPi3.Models.BrickPortMotor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return the BrickPortMotor of the left motor
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PortRight">
+      <MemberSignature Language="C#" Value="public Iot.Device.BrickPi3.Models.BrickPortMotor PortRight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.BrickPi3.Models.BrickPortMotor PortRight" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BrickPi3.Movement.Vehicle.PortRight" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PortRight As BrickPortMotor" />
+      <MemberSignature Language="F#" Value="member this.PortRight : Iot.Device.BrickPi3.Models.BrickPortMotor" Usage="Iot.Device.BrickPi3.Movement.Vehicle.PortRight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.BrickPi3.Models.BrickPortMotor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Return the BrickPortMotor of the right motor
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Movement.Vehicle.Stop" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Stop ()" />
+      <MemberSignature Language="F#" Value="member this.Stop : unit -&gt; unit" Usage="vehicle.Stop " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stop the vehicule
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrunLeftTime">
+      <MemberSignature Language="C#" Value="public void TrunLeftTime (int speed, int timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TrunLeftTime(int32 speed, int32 timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Movement.Vehicle.TrunLeftTime(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TrunLeftTime (speed As Integer, timeout As Integer)" />
+      <MemberSignature Language="F#" Value="member this.TrunLeftTime : int * int -&gt; unit" Usage="vehicle.TrunLeftTime (speed, timeout)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speed" Type="System.Int32" />
+        <Parameter Name="timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="speed">speed is between -255 and +255</param>
+        <param name="timeout">number of milliseconds to run the motors</param>
+        <summary>
+            Turn the vehicule left for a number of milliseconds
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrunRightTime">
+      <MemberSignature Language="C#" Value="public void TrunRightTime (int speed, int timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TrunRightTime(int32 speed, int32 timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Movement.Vehicle.TrunRightTime(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TrunRightTime (speed As Integer, timeout As Integer)" />
+      <MemberSignature Language="F#" Value="member this.TrunRightTime : int * int -&gt; unit" Usage="vehicle.TrunRightTime (speed, timeout)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speed" Type="System.Int32" />
+        <Parameter Name="timeout" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="speed">speed is between -255 and +255</param>
+        <param name="timeout">number of milliseconds to run the motors</param>
+        <summary>
+            Turn the vehicule right for a number of milliseconds
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnLeft">
+      <MemberSignature Language="C#" Value="public void TurnLeft (int speed, int degrees);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TurnLeft(int32 speed, int32 degrees) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Movement.Vehicle.TurnLeft(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TurnLeft (speed As Integer, degrees As Integer)" />
+      <MemberSignature Language="F#" Value="member this.TurnLeft : int * int -&gt; unit" Usage="vehicle.TurnLeft (speed, degrees)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speed" Type="System.Int32" />
+        <Parameter Name="degrees" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="speed">speed is between -255 and +255</param>
+        <param name="degrees">degrees to turn each motor</param>
+        <summary>
+            Turn the vehicule left by the specified number of degrees for each motor. So 360 will do 1 motor turn.
+            You need to do some math to have the actual vehicule turning fully at 360. It depends of the reduction used.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnRight">
+      <MemberSignature Language="C#" Value="public void TurnRight (int speed, int degrees);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TurnRight(int32 speed, int32 degrees) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BrickPi3.Movement.Vehicle.TurnRight(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TurnRight (speed As Integer, degrees As Integer)" />
+      <MemberSignature Language="F#" Value="member this.TurnRight : int * int -&gt; unit" Usage="vehicle.TurnRight (speed, degrees)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="speed" Type="System.Int32" />
+        <Parameter Name="degrees" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="speed">speed is between -255 and +255</param>
+        <param name="degrees">degrees to turn each motor</param>
+        <summary>
+            Turn the vehicule right by the specified number of degrees for each motor. So 360 will do 1 motor turn.
+            You need to do some math to have the actual vehicule turning fully at 360. It depends of the reduction used.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

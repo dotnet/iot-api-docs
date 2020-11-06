@@ -1,0 +1,301 @@
+<Type Name="Bmp180" FullName="Iot.Device.Bmp180.Bmp180">
+  <TypeSignature Language="C#" Value="public class Bmp180 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Bmp180 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Bmp180.Bmp180" />
+  <TypeSignature Language="VB.NET" Value="Public Class Bmp180&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Bmp180 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            BMP180 - barometer, altitude and temperature sensor
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bmp180 (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmp180.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Bmp180.Bmp180 : System.Device.I2c.I2cDevice -&gt; Iot.Device.Bmp180.Bmp180" Usage="new Iot.Device.Bmp180.Bmp180 i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">I2C device used to communicate with the device</param>
+        <summary>
+            Constructs Bmp180 instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte DefaultI2cAddress = 119;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 DefaultI2cAddress = (119)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Bmp180.Bmp180.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Byte  = 119" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : byte" Usage="Iot.Device.Bmp180.Bmp180.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>119</MemberValue>
+      <Docs>
+        <summary>
+            Default I2C address
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmp180.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="bmp180.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAltitude">
+      <MemberSignature Language="C#" Value="public double ReadAltitude ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 ReadAltitude() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmp180.ReadAltitude" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadAltitude () As Double" />
+      <MemberSignature Language="F#" Value="member this.ReadAltitude : unit -&gt; double" Usage="bmp180.ReadAltitude " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Calculates the altitude in meters from the mean sea-level pressure.
+            </summary>
+        <returns>
+             Height in meters from the sensor
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAltitude">
+      <MemberSignature Language="C#" Value="public double ReadAltitude (double seaLevelPressure = 101325);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 ReadAltitude(float64 seaLevelPressure) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmp180.ReadAltitude(System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadAltitude (Optional seaLevelPressure As Double = 101325) As Double" />
+      <MemberSignature Language="F#" Value="member this.ReadAltitude : double -&gt; double" Usage="bmp180.ReadAltitude seaLevelPressure" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="seaLevelPressure" Type="System.Double" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="seaLevelPressure">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadAltitude">
+      <MemberSignature Language="C#" Value="public double ReadAltitude (UnitsNet.Pressure seaLevelPressure);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 ReadAltitude(valuetype UnitsNet.Pressure seaLevelPressure) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmp180.ReadAltitude(UnitsNet.Pressure)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadAltitude (seaLevelPressure As Pressure) As Double" />
+      <MemberSignature Language="F#" Value="member this.ReadAltitude : UnitsNet.Pressure -&gt; double" Usage="bmp180.ReadAltitude seaLevelPressure" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="seaLevelPressure" Type="UnitsNet.Pressure" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="seaLevelPressure">
+             Sea-level pressure
+            </param>
+        <summary>
+             Calculates the altitude in meters from the specified sea-level pressure.
+            </summary>
+        <returns>
+             Height in meters from the sensor
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadPressure">
+      <MemberSignature Language="C#" Value="public double ReadPressure ();" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 ReadPressure() cil managed" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmp180.ReadPressure" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadPressure () As Double" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="F#" Value="member this.ReadPressure : unit -&gt; double" Usage="bmp180.ReadPressure " FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="C#" Value="public UnitsNet.Pressure ReadPressure ();" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Pressure ReadPressure() cil managed" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadPressure () As Pressure" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="member this.ReadPressure : unit -&gt; UnitsNet.Pressure" Usage="bmp180.ReadPressure " FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.0">System.Double</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.1">UnitsNet.Pressure</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Reads the pressure from the sensor
+            </summary>
+        <returns>
+             Atmospheric pressure
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadSeaLevelPressure">
+      <MemberSignature Language="C#" Value="public double ReadSeaLevelPressure (double altitude = 0);" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 ReadSeaLevelPressure(float64 altitude) cil managed" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmp180.ReadSeaLevelPressure(System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadSeaLevelPressure (Optional altitude As Double = 0) As Double" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="F#" Value="member this.ReadSeaLevelPressure : double -&gt; double" Usage="bmp180.ReadSeaLevelPressure altitude" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="C#" Value="public UnitsNet.Pressure ReadSeaLevelPressure (double altitude = 0);" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Pressure ReadSeaLevelPressure(float64 altitude) cil managed" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadSeaLevelPressure (Optional altitude As Double = 0) As Pressure" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="member this.ReadSeaLevelPressure : double -&gt; UnitsNet.Pressure" Usage="bmp180.ReadSeaLevelPressure altitude" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.0">System.Double</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.1">UnitsNet.Pressure</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="altitude" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="altitude">
+             Altitude in meters
+            </param>
+        <summary>
+             Calculates the pressure at sea level when given a known altitude in meter
+            </summary>
+        <returns>
+             Pressure
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadTemperature">
+      <MemberSignature Language="C#" Value="public Iot.Units.Temperature ReadTemperature ();" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Units.Temperature ReadTemperature() cil managed" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmp180.ReadTemperature" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadTemperature () As Temperature" />
+      <MemberSignature Language="F#" Value="member this.ReadTemperature : unit -&gt; Iot.Units.Temperature" Usage="bmp180.ReadTemperature " FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature ReadTemperature ();" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Temperature ReadTemperature() cil managed" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="member this.ReadTemperature : unit -&gt; UnitsNet.Temperature" Usage="bmp180.ReadTemperature " FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.0">Iot.Units.Temperature</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.1">UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Reads the temperature from the sensor
+            </summary>
+        <returns>
+             Temperature in degrees celsius
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSampling">
+      <MemberSignature Language="C#" Value="public void SetSampling (Iot.Device.Bmp180.Sampling mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSampling(valuetype Iot.Device.Bmp180.Sampling mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmp180.SetSampling(Iot.Device.Bmp180.Sampling)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetSampling (mode As Sampling)" />
+      <MemberSignature Language="F#" Value="member this.SetSampling : Iot.Device.Bmp180.Sampling -&gt; unit" Usage="bmp180.SetSampling mode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="Iot.Device.Bmp180.Sampling" />
+      </Parameters>
+      <Docs>
+        <param name="mode">Sampling Mode</param>
+        <summary>
+            Sets sampling to the given value
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
