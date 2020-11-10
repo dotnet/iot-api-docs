@@ -20,18 +20,28 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public FirmwareVersion ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.FirmwareVersion.#ctor" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C#" Value="public FirmwareVersion (byte identificationCode, Version version, Iot.Device.Pn532.VersionSupported versionSupported);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 identificationCode, class System.Version version, valuetype Iot.Device.Pn532.VersionSupported versionSupported) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.FirmwareVersion.#ctor(System.Byte,System.Version,Iot.Device.Pn532.VersionSupported)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (identificationCode As Byte, version As Version, versionSupported As VersionSupported)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Pn532.FirmwareVersion : byte * Version * Iot.Device.Pn532.VersionSupported -&gt; Iot.Device.Pn532.FirmwareVersion" Usage="new Iot.Device.Pn532.FirmwareVersion (identificationCode, version, versionSupported)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Parameters />
+      <Parameters>
+        <Parameter Name="identificationCode" Type="System.Byte" />
+        <Parameter Name="version" Type="System.Version" />
+        <Parameter Name="versionSupported" Type="Iot.Device.Pn532.VersionSupported" />
+      </Parameters>
       <Docs>
-        <summary>To be added.</summary>
+        <param name="identificationCode">The identification code for PN532 should be 0x32.</param>
+        <param name="version">The version, latest know one is 1.6.</param>
+        <param name="versionSupported">All card version supported.</param>
+        <summary>
+            Creates PN532 firmware version object
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

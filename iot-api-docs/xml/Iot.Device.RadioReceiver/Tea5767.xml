@@ -33,9 +33,35 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
-        <Parameter Name="frequencyRange" Type="Iot.Device.RadioReceiver.FrequencyRange" />
-        <Parameter Name="frequency" Type="System.Double" />
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="frequencyRange" Type="Iot.Device.RadioReceiver.FrequencyRange" Index="1" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="frequency" Type="System.Double" Index="2" FrameworkAlternate="iot-dotnet-1.0" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device used for communication.</param>
+        <param name="frequencyRange">FM frequency range.</param>
+        <param name="frequency">FM frequency.</param>
+        <summary>
+            Create a new instance of the TEA5767.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Tea5767 (System.Device.I2c.I2cDevice i2cDevice, Iot.Device.RadioReceiver.FrequencyRange frequencyRange, UnitsNet.Frequency frequency);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, valuetype Iot.Device.RadioReceiver.FrequencyRange frequencyRange, valuetype UnitsNet.Frequency frequency) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.RadioReceiver.Tea5767.#ctor(System.Device.I2c.I2cDevice,Iot.Device.RadioReceiver.FrequencyRange,UnitsNet.Frequency)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, frequencyRange As FrequencyRange, frequency As Frequency)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.RadioReceiver.Tea5767 : System.Device.I2c.I2cDevice * Iot.Device.RadioReceiver.FrequencyRange * UnitsNet.Frequency -&gt; Iot.Device.RadioReceiver.Tea5767" Usage="new Iot.Device.RadioReceiver.Tea5767 (i2cDevice, frequencyRange, frequency)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="frequencyRange" Type="Iot.Device.RadioReceiver.FrequencyRange" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="frequency" Type="UnitsNet.Frequency" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
       </Parameters>
       <Docs>
         <param name="i2cDevice">The I2C device used for communication.</param>
@@ -97,11 +123,15 @@
       </Docs>
     </Member>
     <Member MemberName="Frequency">
-      <MemberSignature Language="C#" Value="public override double Frequency { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance float64 Frequency" />
+      <MemberSignature Language="C#" Value="public override double Frequency { get; set; }" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Frequency" FrameworkAlternate="iot-dotnet-1.0" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.RadioReceiver.Tea5767.Frequency" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides Property Frequency As Double" />
-      <MemberSignature Language="F#" Value="member this.Frequency : double with get, set" Usage="Iot.Device.RadioReceiver.Tea5767.Frequency" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Frequency As Double" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="F#" Value="member this.Frequency : double with get, set" Usage="Iot.Device.RadioReceiver.Tea5767.Frequency" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="C#" Value="public override UnitsNet.Frequency Frequency { get; set; }" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Frequency Frequency" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property Frequency As Frequency" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="member this.Frequency : UnitsNet.Frequency with get, set" Usage="Iot.Device.RadioReceiver.Tea5767.Frequency" FrameworkAlternate="iot-dotnet-1.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -109,7 +139,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Double</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.0">System.Double</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.1">UnitsNet.Frequency</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>

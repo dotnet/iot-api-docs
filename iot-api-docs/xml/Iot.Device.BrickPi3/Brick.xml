@@ -733,16 +733,16 @@
         <param name="port">The sensor port(s). Port 1, 2, 3, and/or 4</param>
         <param name="type">The sensor type</param>
         <param name="param">param is used only for some sensors and can be ignore for the others
-            params is used for the following sensor types:
+            param is used for the following sensor types:
               CUSTOM-- a 16 - bit integer used to configure the hardware.
               I2C-- a list of settings:
-                params[0]-- Settings / flags
-                params[1] -- target Speed in microseconds(0-255). Realistically the speed will vary.
+                param[0]-- Settings / flags
+                param[1] -- target Speed in microseconds(0-255). Realistically the speed will vary.
                 if SENSOR_I2C_SETTINGS_SAME flag set in I2C Settings:
-                   params[2] -- Delay in microseconds between transactions.
-                   params[3] -- Address
-                   params[4] -- List of bytes to write
-                   params[5] -- Number of bytes to read
+                   param[2] -- Delay in microseconds between transactions.
+                   param[3] -- Address
+                   param[4] -- List of bytes to write
+                   param[5] -- Number of bytes to read
             </param>
         <summary>
             Set the sensor type

@@ -20,18 +20,28 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Data106kbpsInnovisionJewel ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Rfid.Data106kbpsInnovisionJewel.#ctor" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C#" Value="public Data106kbpsInnovisionJewel (byte targetNumber, byte[] atqa, byte[] jewelId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 targetNumber, unsigned int8[] atqa, unsigned int8[] jewelId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Rfid.Data106kbpsInnovisionJewel.#ctor(System.Byte,System.Byte[],System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (targetNumber As Byte, atqa As Byte(), jewelId As Byte())" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Rfid.Data106kbpsInnovisionJewel : byte * byte[] * byte[] -&gt; Iot.Device.Rfid.Data106kbpsInnovisionJewel" Usage="new Iot.Device.Rfid.Data106kbpsInnovisionJewel (targetNumber, atqa, jewelId)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Parameters />
+      <Parameters>
+        <Parameter Name="targetNumber" Type="System.Byte" />
+        <Parameter Name="atqa" Type="System.Byte[]" />
+        <Parameter Name="jewelId" Type="System.Byte[]" />
+      </Parameters>
       <Docs>
-        <summary>To be added.</summary>
+        <param name="targetNumber">The target number, should be 1 or 2 with PN532.</param>
+        <param name="atqa">Known as SENS_RES in the documentation.</param>
+        <param name="jewelId">The Jewel card ID.</param>
+        <summary>
+            Create a 106 kbpd Innovision Jewel card.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

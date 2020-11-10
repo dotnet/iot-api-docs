@@ -1,0 +1,139 @@
+<Type Name="UFireOrp" FullName="Iot.Device.UFire.UFireOrp">
+  <TypeSignature Language="C#" Value="public class UFireOrp : Iot.Device.UFire.UFireIse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UFireOrp extends Iot.Device.UFire.UFireIse" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.UFire.UFireOrp" />
+  <TypeSignature Language="VB.NET" Value="Public Class UFireOrp&#xA;Inherits UFireIse" />
+  <TypeSignature Language="F#" Value="type UFireOrp = class&#xA;    inherit UFireIse" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.UFire.UFireIse</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Get ORP (oxidation-reduction potential) measuremens from μFire ISE (ion-selective electrode) Probe Interface
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UFireOrp (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireOrp.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.UFire.UFireOrp : System.Device.I2c.I2cDevice -&gt; Iot.Device.UFire.UFireOrp" Usage="new Iot.Device.UFire.UFireOrp i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device to be used</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.UFire.UFireOrp" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastOxidationReducationPotential">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential LastOxidationReducationPotential { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricPotential LastOxidationReducationPotential" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.UFire.UFireOrp.LastOxidationReducationPotential" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LastOxidationReducationPotential As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.LastOxidationReducationPotential : UnitsNet.ElectricPotential" Usage="Iot.Device.UFire.UFireOrp.LastOxidationReducationPotential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Oxidation-reduction potential (ORP) measuremens
+            It makes it possible to the Oxidation-Reduction Potential (ORP) measurement without doing a measuremen (the retunres the old measurement)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastReductionPotential">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential LastReductionPotential { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricPotential LastReductionPotential" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.UFire.UFireOrp.LastReductionPotential" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LastReductionPotential As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.LastReductionPotential : UnitsNet.ElectricPotential" Usage="Iot.Device.UFire.UFireOrp.LastReductionPotential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Reduction potential (Eh) measuremens
+            It makes it possible to the Reduction potential (Eh) measurement without doing a measuremen (the retunres the old measurement)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProbePotential">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential ProbePotential { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricPotential ProbePotential" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.UFire.UFireOrp.ProbePotential" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProbePotential As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.ProbePotential : UnitsNet.ElectricPotential" Usage="Iot.Device.UFire.UFireOrp.ProbePotential" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The probe potential
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryMeasureOxidationReductionPotential">
+      <MemberSignature Language="C#" Value="public bool TryMeasureOxidationReductionPotential (out UnitsNet.ElectricPotential orp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryMeasureOxidationReductionPotential([out] valuetype UnitsNet.ElectricPotential&amp; orp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireOrp.TryMeasureOxidationReductionPotential(UnitsNet.ElectricPotential@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryMeasureOxidationReductionPotential (ByRef orp As ElectricPotential) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryMeasureOxidationReductionPotential : ElectricPotential -&gt; bool" Usage="uFireOrp.TryMeasureOxidationReductionPotential orp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="orp" Type="UnitsNet.ElectricPotential" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="orp">ORP (Oxidation-Reduction Potential) measurement</param>
+        <summary>
+            Tries to measure ORP (Oxidation-Reduction Potential).
+            </summary>
+        <returns>True if it could measure ORP (Oxidation-Reduction Potential) else false</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

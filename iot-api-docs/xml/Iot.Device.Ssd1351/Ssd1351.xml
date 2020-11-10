@@ -54,7 +54,7 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Ssd1351 (System.Device.Spi.SpiDevice spiDevice, int dataCommandPin, int resetPin, int spiBufferSize = 4096, System.Device.Gpio.GpioController gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="C#" Value="public Ssd1351 (System.Device.Spi.SpiDevice spiDevice, int dataCommandPin, int resetPin, int spiBufferSize = 4096, System.Device.Gpio.GpioController? gpioController = default, bool shouldDispose = true);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, int32 dataCommandPin, int32 resetPin, int32 spiBufferSize, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd1351.Ssd1351.#ctor(System.Device.Spi.SpiDevice,System.Int32,System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (spiDevice As SpiDevice, dataCommandPin As Integer, resetPin As Integer, Optional spiBufferSize As Integer = 4096, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
@@ -171,11 +171,12 @@
       </Docs>
     </Member>
     <Member MemberName="GetBitmapPixelData">
-      <MemberSignature Language="C#" Value="public Span&lt;byte&gt; GetBitmapPixelData (System.Drawing.Bitmap bm, System.Drawing.Rectangle sourceRect);" />
+      <MemberSignature Language="C#" Value="public Span&lt;byte&gt; GetBitmapPixelData (System.Drawing.Bitmap bm, System.Drawing.Rectangle sourceRect);" FrameworkAlternate="iot-dotnet-1.0" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Span`1&lt;unsigned int8&gt; GetBitmapPixelData(class System.Drawing.Bitmap bm, valuetype System.Drawing.Rectangle sourceRect) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd1351.Ssd1351.GetBitmapPixelData(System.Drawing.Bitmap,System.Drawing.Rectangle)" />
       <MemberSignature Language="VB.NET" Value="Public Function GetBitmapPixelData (bm As Bitmap, sourceRect As Rectangle) As Span(Of Byte)" />
       <MemberSignature Language="F#" Value="member this.GetBitmapPixelData : System.Drawing.Bitmap * System.Drawing.Rectangle -&gt; Span&lt;byte&gt;" Usage="ssd1351.GetBitmapPixelData (bm, sourceRect)" />
+      <MemberSignature Language="C#" Value="public Span&lt;byte&gt; GetBitmapPixelData (System.Drawing.Bitmap? bm, System.Drawing.Rectangle sourceRect);" FrameworkAlternate="iot-dotnet-1.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -773,7 +774,7 @@
       </Parameters>
       <Docs>
         <param name="grayLevels">A byte array containing 64 gray levels representing GS0 -&gt; GS63.
-            If this paramneter is null or an empty array then the gray leves are set to default.</param>
+            If this parameter is null or an empty array then the gray leves are set to default.</param>
         <summary>
             This command sets the gray levels GS0 -&gt; GS63.
             </summary>

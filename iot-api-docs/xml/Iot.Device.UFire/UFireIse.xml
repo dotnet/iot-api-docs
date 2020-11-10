@@ -1,0 +1,482 @@
+<Type Name="UFireIse" FullName="Iot.Device.UFire.UFireIse">
+  <TypeSignature Language="C#" Value="public class UFireIse : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UFireIse extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.UFire.UFireIse" />
+  <TypeSignature Language="VB.NET" Value="Public Class UFireIse&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type UFireIse = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            μFire ISE (Ion Specific Electrode) Probe Interface controller
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UFireIse (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireIse.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.UFire.UFireIse : System.Device.I2c.I2cDevice -&gt; Iot.Device.UFire.UFireIse" Usage="new Iot.Device.UFire.UFireIse i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device to be used</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.UFire.UFireIse" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalibrateFromSingleValue">
+      <MemberSignature Language="C#" Value="public void CalibrateFromSingleValue (UnitsNet.ElectricPotential solution);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CalibrateFromSingleValue(valuetype UnitsNet.ElectricPotential solution) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireIse.CalibrateFromSingleValue(UnitsNet.ElectricPotential)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CalibrateFromSingleValue (solution As ElectricPotential)" />
+      <MemberSignature Language="F#" Value="member this.CalibrateFromSingleValue : UnitsNet.ElectricPotential -&gt; unit" Usage="uFireIse.CalibrateFromSingleValue solution" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="solution" Type="UnitsNet.ElectricPotential" />
+      </Parameters>
+      <Docs>
+        <param name="solution">The known pH value in mV. Range: -1024 mV to 1024 mV</param>
+        <summary>
+            Calibrates the probe using a single solution. Put the probe in a solution where the pH (Power of Hydrogen) is known.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalibrateFromTwoValuesHighValue">
+      <MemberSignature Language="C#" Value="public void CalibrateFromTwoValuesHighValue (UnitsNet.ElectricPotential solution);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CalibrateFromTwoValuesHighValue(valuetype UnitsNet.ElectricPotential solution) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireIse.CalibrateFromTwoValuesHighValue(UnitsNet.ElectricPotential)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CalibrateFromTwoValuesHighValue (solution As ElectricPotential)" />
+      <MemberSignature Language="F#" Value="member this.CalibrateFromTwoValuesHighValue : UnitsNet.ElectricPotential -&gt; unit" Usage="uFireIse.CalibrateFromTwoValuesHighValue solution" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="solution" Type="UnitsNet.ElectricPotential" />
+      </Parameters>
+      <Docs>
+        <param name="solution">The known pH value in mV. Range: -1024 mV to 1024 mV</param>
+        <summary>
+             The highest value when calibrating from two solutions. Put the probe in a solution with the highest pH (Power of Hydrogen) value.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalibrateFromTwoValuesLowValue">
+      <MemberSignature Language="C#" Value="public void CalibrateFromTwoValuesLowValue (UnitsNet.ElectricPotential solution);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CalibrateFromTwoValuesLowValue(valuetype UnitsNet.ElectricPotential solution) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireIse.CalibrateFromTwoValuesLowValue(UnitsNet.ElectricPotential)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CalibrateFromTwoValuesLowValue (solution As ElectricPotential)" />
+      <MemberSignature Language="F#" Value="member this.CalibrateFromTwoValuesLowValue : UnitsNet.ElectricPotential -&gt; unit" Usage="uFireIse.CalibrateFromTwoValuesLowValue solution" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="solution" Type="UnitsNet.ElectricPotential" />
+      </Parameters>
+      <Docs>
+        <param name="solution">The known pH value in mV. Range: -1024 mV to 1024 mV</param>
+        <summary>
+            The lower value when calibrating from two solutions. Put the probe in a solution with the lowest pH (Power of Hydrogen) value.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireIse.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="uFireIse.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetCalibrateHighReading">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential GetCalibrateHighReading ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.ElectricPotential GetCalibrateHighReading() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireIse.GetCalibrateHighReading" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCalibrateHighReading () As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.GetCalibrateHighReading : unit -&gt; UnitsNet.ElectricPotential" Usage="uFireIse.GetCalibrateHighReading " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dual point uses two measures for low and high points. It needs the measured value (reading value) and the known value (reference value). Calling SetDualPointCalibration saves both the reading and reference value.
+            When there are high and low calibration points, the device will automatically use them to adjust readings.To disable dual-point adjustment, call ResetCalibration to remove all calibration data.
+            </summary>
+        <returns>The measured value (reading value) for calibrate the high value</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCalibrateHighReference">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential GetCalibrateHighReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.ElectricPotential GetCalibrateHighReference() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireIse.GetCalibrateHighReference" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCalibrateHighReference () As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.GetCalibrateHighReference : unit -&gt; UnitsNet.ElectricPotential" Usage="uFireIse.GetCalibrateHighReference " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dual point uses two measures for low and high points. It needs the measured value (reading value) and the known value (reference value). Calling SetDualPointCalibration saves both the reading and reference value.
+            When there are high and low calibration points, the device will automatically use them to adjust readings.To disable dual-point adjustment, call ResetCalibration to remove all calibration data.
+            </summary>
+        <returns>The known value (reference value) for calibrate the high value</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCalibrateLowReading">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential GetCalibrateLowReading ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.ElectricPotential GetCalibrateLowReading() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireIse.GetCalibrateLowReading" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCalibrateLowReading () As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.GetCalibrateLowReading : unit -&gt; UnitsNet.ElectricPotential" Usage="uFireIse.GetCalibrateLowReading " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dual point uses two measures for low and high points. It needs the measured value (reading value) and the known value (reference value). Calling SetDualPointCalibration saves both the reading and reference value.
+            When there are high and low calibration points, the device will automatically use them to adjust readings.To disable dual-point adjustment, call ResetCalibration to remove all calibration data.
+            </summary>
+        <returns>The measured value (reading value) for calibrate the low value</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCalibrateLowReference">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential GetCalibrateLowReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.ElectricPotential GetCalibrateLowReference() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireIse.GetCalibrateLowReference" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCalibrateLowReference () As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.GetCalibrateLowReference : unit -&gt; UnitsNet.ElectricPotential" Usage="uFireIse.GetCalibrateLowReference " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dual point uses two measures for low and high points. It needs the measured value (reading value) and the known value (reference value). Calling SetDualPointCalibration saves both the reading and reference value.
+            When there are high and low calibration points, the device will automatically use them to adjust readings.To disable dual-point adjustment, call ResetCalibration to remove all calibration data.
+            </summary>
+        <returns>The known value (reference value) for calibrate the low value</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFirmwareVersion">
+      <MemberSignature Language="C#" Value="public byte GetFirmwareVersion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8 GetFirmwareVersion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireIse.GetFirmwareVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetFirmwareVersion () As Byte" />
+      <MemberSignature Language="F#" Value="member this.GetFirmwareVersion : unit -&gt; byte" Usage="uFireIse.GetFirmwareVersion " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get Firmware version.The manufacturer do not provide any information about the format of the version number, see https://www.ufire.co/docs/uFire_ISE/api.html#getversion
+            </summary>
+        <returns>The version of the firmware</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetVersion">
+      <MemberSignature Language="C#" Value="public byte GetVersion ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8 GetVersion() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireIse.GetVersion" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetVersion () As Byte" />
+      <MemberSignature Language="F#" Value="member this.GetVersion : unit -&gt; byte" Usage="uFireIse.GetVersion " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the firmware version of the device. The manufacturer do not provide any information about the format of the version number, see https://www.ufire.co/docs/uFire_ISE/api.html#getversion
+            </summary>
+        <returns>Firmware version</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="I2cAddress">
+      <MemberSignature Language="C#" Value="public static byte I2cAddress;" />
+      <MemberSignature Language="ILAsm" Value=".field public static unsigned int8 I2cAddress" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.UFire.UFireIse.I2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Shared I2cAddress As Byte " />
+      <MemberSignature Language="F#" Value=" staticval mutable I2cAddress : byte" Usage="Iot.Device.UFire.UFireIse.I2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            0x3F is the default address of all sensors
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadElectricPotential">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential ReadElectricPotential ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.ElectricPotential ReadElectricPotential() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireIse.ReadElectricPotential" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadElectricPotential () As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.ReadElectricPotential : unit -&gt; UnitsNet.ElectricPotential" Usage="uFireIse.ReadElectricPotential " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read a value from the ISE Probe Interface, typical measure are in the millivolt range.
+            </summary>
+        <returns>value from ISE Probe Interface, typical measure are in the millivolt range. On error it return -1 as value</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadTemperature">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature ReadTemperature ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Temperature ReadTemperature() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireIse.ReadTemperature" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadTemperature () As Temperature" />
+      <MemberSignature Language="F#" Value="member this.ReadTemperature : unit -&gt; UnitsNet.Temperature" Usage="uFireIse.ReadTemperature " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read temperature
+            </summary>
+        <returns>Temperature. Temperature range: -2 to 35 C. Temperature Precision: 0.05 C</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetCalibration">
+      <MemberSignature Language="C#" Value="public void ResetCalibration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetCalibration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireIse.ResetCalibration" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ResetCalibration ()" />
+      <MemberSignature Language="F#" Value="member this.ResetCalibration : unit -&gt; unit" Usage="uFireIse.ResetCalibration " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Resets all the stored calibration information.It is possible to run without calibration.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDualPointCalibration">
+      <MemberSignature Language="C#" Value="public void SetDualPointCalibration (UnitsNet.ElectricPotential refLow, UnitsNet.ElectricPotential refHigh, UnitsNet.ElectricPotential readLow, UnitsNet.ElectricPotential readHigh);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetDualPointCalibration(valuetype UnitsNet.ElectricPotential refLow, valuetype UnitsNet.ElectricPotential refHigh, valuetype UnitsNet.ElectricPotential readLow, valuetype UnitsNet.ElectricPotential readHigh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireIse.SetDualPointCalibration(UnitsNet.ElectricPotential,UnitsNet.ElectricPotential,UnitsNet.ElectricPotential,UnitsNet.ElectricPotential)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetDualPointCalibration (refLow As ElectricPotential, refHigh As ElectricPotential, readLow As ElectricPotential, readHigh As ElectricPotential)" />
+      <MemberSignature Language="F#" Value="member this.SetDualPointCalibration : UnitsNet.ElectricPotential * UnitsNet.ElectricPotential * UnitsNet.ElectricPotential * UnitsNet.ElectricPotential -&gt; unit" Usage="uFireIse.SetDualPointCalibration (refLow, refHigh, readLow, readHigh)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="refLow" Type="UnitsNet.ElectricPotential" />
+        <Parameter Name="refHigh" Type="UnitsNet.ElectricPotential" />
+        <Parameter Name="readLow" Type="UnitsNet.ElectricPotential" />
+        <Parameter Name="readHigh" Type="UnitsNet.ElectricPotential" />
+      </Parameters>
+      <Docs>
+        <param name="refLow">the reference low point. Range: -1024 mV to 1024 mV</param>
+        <param name="refHigh">the reference high point. Range: -1024 mV to 1024 mV</param>
+        <param name="readLow">the measured low point. Range: -1024 mV to 1024 mV</param>
+        <param name="readHigh">the measured high point. Range: -1024 mV to 1024 mV</param>
+        <summary>
+            Sets all the values, in mV, for dual point calibration and saves them in the devices's EEPROM
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetI2cAddressAndDispose">
+      <MemberSignature Language="C#" Value="public void SetI2cAddressAndDispose (byte i2cAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetI2cAddressAndDispose(unsigned int8 i2cAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireIse.SetI2cAddressAndDispose(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetI2cAddressAndDispose (i2cAddress As Byte)" />
+      <MemberSignature Language="F#" Value="member this.SetI2cAddressAndDispose : byte -&gt; unit" Usage="uFireIse.SetI2cAddressAndDispose i2cAddress" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i2cAddress" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="i2cAddress">The new I2C address. Range: 1 to 127 </param>
+        <summary>
+            Changes the default I2C address
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTemperatureCompensation">
+      <MemberSignature Language="C#" Value="public void SetTemperatureCompensation (UnitsNet.Temperature temp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetTemperatureCompensation(valuetype UnitsNet.Temperature temp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFireIse.SetTemperatureCompensation(UnitsNet.Temperature)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetTemperatureCompensation (temp As Temperature)" />
+      <MemberSignature Language="F#" Value="member this.SetTemperatureCompensation : UnitsNet.Temperature -&gt; unit" Usage="uFireIse.SetTemperatureCompensation temp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="temp" Type="UnitsNet.Temperature" />
+      </Parameters>
+      <Docs>
+        <param name="temp">The temperature used for compensation</param>
+        <summary>
+            It sets the a temperature used as compensation. The compensation temperature is to correlate the mV input to the correct pH value, see https://assets.tequipment.net/assets/1/26/Yokogawa_Temperature_Compensation.pdf
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemperatureCompensation">
+      <MemberSignature Language="C#" Value="public bool TemperatureCompensation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TemperatureCompensation" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.UFire.UFireIse.TemperatureCompensation" />
+      <MemberSignature Language="VB.NET" Value="Public Property TemperatureCompensation As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TemperatureCompensation : bool with get, set" Usage="Iot.Device.UFire.UFireIse.TemperatureCompensation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Use temperature compensation
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

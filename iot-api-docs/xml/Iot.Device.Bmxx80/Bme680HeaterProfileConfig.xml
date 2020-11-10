@@ -20,11 +20,11 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Bme680HeaterProfileConfig (Iot.Device.Bmxx80.Bme680HeaterProfile profile, ushort heaterResistance, ushort heaterDuration);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Bmxx80.Bme680HeaterProfile profile, unsigned int16 heaterResistance, unsigned int16 heaterDuration) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme680HeaterProfileConfig.#ctor(Iot.Device.Bmxx80.Bme680HeaterProfile,System.UInt16,System.UInt16)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (profile As Bme680HeaterProfile, heaterResistance As UShort, heaterDuration As UShort)" />
-      <MemberSignature Language="F#" Value="new Iot.Device.Bmxx80.Bme680HeaterProfileConfig : Iot.Device.Bmxx80.Bme680HeaterProfile * uint16 * uint16 -&gt; Iot.Device.Bmxx80.Bme680HeaterProfileConfig" Usage="new Iot.Device.Bmxx80.Bme680HeaterProfileConfig (profile, heaterResistance, heaterDuration)" />
+      <MemberSignature Language="C#" Value="public Bme680HeaterProfileConfig (Iot.Device.Bmxx80.Bme680HeaterProfile profile, ushort heaterResistance, UnitsNet.Duration heaterDuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Bmxx80.Bme680HeaterProfile profile, unsigned int16 heaterResistance, valuetype UnitsNet.Duration heaterDuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme680HeaterProfileConfig.#ctor(Iot.Device.Bmxx80.Bme680HeaterProfile,System.UInt16,UnitsNet.Duration)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (profile As Bme680HeaterProfile, heaterResistance As UShort, heaterDuration As Duration)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Bmxx80.Bme680HeaterProfileConfig : Iot.Device.Bmxx80.Bme680HeaterProfile * uint16 * UnitsNet.Duration -&gt; Iot.Device.Bmxx80.Bme680HeaterProfileConfig" Usage="new Iot.Device.Bmxx80.Bme680HeaterProfileConfig (profile, heaterResistance, heaterDuration)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -33,12 +33,12 @@
       <Parameters>
         <Parameter Name="profile" Type="Iot.Device.Bmxx80.Bme680HeaterProfile" />
         <Parameter Name="heaterResistance" Type="System.UInt16" />
-        <Parameter Name="heaterDuration" Type="System.UInt16" />
+        <Parameter Name="heaterDuration" Type="UnitsNet.Duration" />
       </Parameters>
       <Docs>
         <param name="profile">The used heater profile.</param>
         <param name="heaterResistance">The heater resistance in Ohm.</param>
-        <param name="heaterDuration">The heating duration in ms.</param>
+        <param name="heaterDuration">The heating duration.</param>
         <summary>
             Creates a new instance of <see cref="T:Iot.Device.Bmxx80.Bme680HeaterProfileConfig" />.
             </summary>
@@ -47,22 +47,22 @@
       </Docs>
     </Member>
     <Member MemberName="HeaterDuration">
-      <MemberSignature Language="C#" Value="public ushort HeaterDuration { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance unsigned int16 HeaterDuration" />
+      <MemberSignature Language="C#" Value="public UnitsNet.Duration HeaterDuration { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Duration HeaterDuration" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.Bmxx80.Bme680HeaterProfileConfig.HeaterDuration" />
-      <MemberSignature Language="VB.NET" Value="Public Property HeaterDuration As UShort" />
-      <MemberSignature Language="F#" Value="member this.HeaterDuration : uint16 with get, set" Usage="Iot.Device.Bmxx80.Bme680HeaterProfileConfig.HeaterDuration" />
+      <MemberSignature Language="VB.NET" Value="Public Property HeaterDuration As Duration" />
+      <MemberSignature Language="F#" Value="member this.HeaterDuration : UnitsNet.Duration with get, set" Usage="Iot.Device.Bmxx80.Bme680HeaterProfileConfig.HeaterDuration" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.UInt16</ReturnType>
+        <ReturnType>UnitsNet.Duration</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            The heater duration in the internally used format.
+            The heater duration
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

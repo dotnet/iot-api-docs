@@ -1,0 +1,207 @@
+<Type Name="ShiftRegisterPinMapping" FullName="Iot.Device.Multiplexing.ShiftRegisterPinMapping">
+  <TypeSignature Language="C#" Value="public struct ShiftRegisterPinMapping" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit ShiftRegisterPinMapping extends System.ValueType" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Multiplexing.ShiftRegisterPinMapping" />
+  <TypeSignature Language="VB.NET" Value="Public Structure ShiftRegisterPinMapping" />
+  <TypeSignature Language="F#" Value="type ShiftRegisterPinMapping = struct" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents pin bindings for the Sn74hc595.
+            Requires specifying 3 pins (serial data in, data clock, and latch).
+            Can specify output enable pin (otherwise, wire to ground).
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ShiftRegisterPinMapping (int serialData, int clock, int latchEnable, int outputEnable = -1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 serialData, int32 clock, int32 latchEnable, int32 outputEnable) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.ShiftRegisterPinMapping.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (serialData As Integer, clock As Integer, latchEnable As Integer, Optional outputEnable As Integer = -1)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Multiplexing.ShiftRegisterPinMapping : int * int * int * int -&gt; Iot.Device.Multiplexing.ShiftRegisterPinMapping" Usage="new Iot.Device.Multiplexing.ShiftRegisterPinMapping (serialData, clock, latchEnable, outputEnable)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serialData" Type="System.Int32" />
+        <Parameter Name="clock" Type="System.Int32" />
+        <Parameter Name="latchEnable" Type="System.Int32" />
+        <Parameter Name="outputEnable" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="serialData">Serial data in pin</param>
+        <param name="clock">Shift register clock pin</param>
+        <param name="latchEnable">Register clock pin (latch)</param>
+        <param name="outputEnable">Output enable pin</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clock">
+      <MemberSignature Language="C#" Value="public int Clock { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Clock" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Multiplexing.ShiftRegisterPinMapping.Clock" />
+      <MemberSignature Language="VB.NET" Value="Public Property Clock As Integer" />
+      <MemberSignature Language="F#" Value="member this.Clock : int with get, set" Usage="Iot.Device.Multiplexing.ShiftRegisterPinMapping.Clock" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Storage register clock pin.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Complete">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Multiplexing.ShiftRegisterPinMapping Complete { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype Iot.Device.Multiplexing.ShiftRegisterPinMapping Complete" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Multiplexing.ShiftRegisterPinMapping.Complete" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Complete As ShiftRegisterPinMapping" />
+      <MemberSignature Language="F#" Value="member this.Complete : Iot.Device.Multiplexing.ShiftRegisterPinMapping" Usage="Iot.Device.Multiplexing.ShiftRegisterPinMapping.Complete" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Multiplexing.ShiftRegisterPinMapping</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Complete pin bindings for the Sn74hc595.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LatchEnable">
+      <MemberSignature Language="C#" Value="public int LatchEnable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LatchEnable" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Multiplexing.ShiftRegisterPinMapping.LatchEnable" />
+      <MemberSignature Language="VB.NET" Value="Public Property LatchEnable As Integer" />
+      <MemberSignature Language="F#" Value="member this.LatchEnable : int with get, set" Usage="Iot.Device.Multiplexing.ShiftRegisterPinMapping.LatchEnable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Shift register clock pin.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Minimal">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Multiplexing.ShiftRegisterPinMapping Minimal { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype Iot.Device.Multiplexing.ShiftRegisterPinMapping Minimal" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Multiplexing.ShiftRegisterPinMapping.Minimal" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Minimal As ShiftRegisterPinMapping" />
+      <MemberSignature Language="F#" Value="member this.Minimal : Iot.Device.Multiplexing.ShiftRegisterPinMapping" Usage="Iot.Device.Multiplexing.ShiftRegisterPinMapping.Minimal" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Multiplexing.ShiftRegisterPinMapping</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Minimal pin bindings for the Sn74hc595.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputEnable">
+      <MemberSignature Language="C#" Value="public int OutputEnable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 OutputEnable" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Multiplexing.ShiftRegisterPinMapping.OutputEnable" />
+      <MemberSignature Language="VB.NET" Value="Public Property OutputEnable As Integer" />
+      <MemberSignature Language="F#" Value="member this.OutputEnable : int with get, set" Usage="Iot.Device.Multiplexing.ShiftRegisterPinMapping.OutputEnable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Output enable pin.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerialDataInput">
+      <MemberSignature Language="C#" Value="public int SerialDataInput { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 SerialDataInput" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Multiplexing.ShiftRegisterPinMapping.SerialDataInput" />
+      <MemberSignature Language="VB.NET" Value="Public Property SerialDataInput As Integer" />
+      <MemberSignature Language="F#" Value="member this.SerialDataInput : int with get, set" Usage="Iot.Device.Multiplexing.ShiftRegisterPinMapping.SerialDataInput" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[get: System.Runtime.CompilerServices.IsReadOnly]</AttributeName>
+          <AttributeName Language="F#">[&lt;get: System.Runtime.CompilerServices.IsReadOnly&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Serial data in pin.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

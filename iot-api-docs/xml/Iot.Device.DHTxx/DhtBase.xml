@@ -99,11 +99,14 @@
       </Docs>
     </Member>
     <Member MemberName="_controller">
-      <MemberSignature Language="C#" Value="protected readonly System.Device.Gpio.GpioController _controller;" />
-      <MemberSignature Language="ILAsm" Value=".field family initonly class System.Device.Gpio.GpioController _controller" />
+      <MemberSignature Language="C#" Value="protected readonly System.Device.Gpio.GpioController _controller;" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".field family initonly class System.Device.Gpio.GpioController _controller" FrameworkAlternate="iot-dotnet-1.0" />
       <MemberSignature Language="DocId" Value="F:Iot.Device.DHTxx.DhtBase._controller" />
-      <MemberSignature Language="VB.NET" Value="Protected ReadOnly _controller As GpioController " />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly _controller As GpioController " FrameworkAlternate="iot-dotnet-1.0" />
       <MemberSignature Language="F#" Value="val mutable _controller : System.Device.Gpio.GpioController" Usage="Iot.Device.DHTxx.DhtBase._controller" />
+      <MemberSignature Language="C#" Value="protected System.Device.Gpio.GpioController? _controller;" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Device.Gpio.GpioController _controller" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="VB.NET" Value="Protected _controller As GpioController " FrameworkAlternate="iot-dotnet-1.1" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -121,11 +124,14 @@
       </Docs>
     </Member>
     <Member MemberName="_i2cDevice">
-      <MemberSignature Language="C#" Value="protected readonly System.Device.I2c.I2cDevice _i2cDevice;" />
-      <MemberSignature Language="ILAsm" Value=".field family initonly class System.Device.I2c.I2cDevice _i2cDevice" />
+      <MemberSignature Language="C#" Value="protected readonly System.Device.I2c.I2cDevice _i2cDevice;" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".field family initonly class System.Device.I2c.I2cDevice _i2cDevice" FrameworkAlternate="iot-dotnet-1.0" />
       <MemberSignature Language="DocId" Value="F:Iot.Device.DHTxx.DhtBase._i2cDevice" />
-      <MemberSignature Language="VB.NET" Value="Protected ReadOnly _i2cDevice As I2cDevice " />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly _i2cDevice As I2cDevice " FrameworkAlternate="iot-dotnet-1.0" />
       <MemberSignature Language="F#" Value="val mutable _i2cDevice : System.Device.I2c.I2cDevice" Usage="Iot.Device.DHTxx.DhtBase._i2cDevice" />
+      <MemberSignature Language="C#" Value="protected System.Device.I2c.I2cDevice? _i2cDevice;" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Device.I2c.I2cDevice _i2cDevice" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="VB.NET" Value="Protected _i2cDevice As I2cDevice " FrameworkAlternate="iot-dotnet-1.1" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -233,11 +239,15 @@
       </Docs>
     </Member>
     <Member MemberName="Humidity">
-      <MemberSignature Language="C#" Value="public virtual double Humidity { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance float64 Humidity" />
+      <MemberSignature Language="C#" Value="public virtual double Humidity { get; }" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Humidity" FrameworkAlternate="iot-dotnet-1.0" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.DHTxx.DhtBase.Humidity" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Humidity As Double" />
-      <MemberSignature Language="F#" Value="member this.Humidity : double" Usage="Iot.Device.DHTxx.DhtBase.Humidity" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Humidity As Double" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="F#" Value="member this.Humidity : double" Usage="Iot.Device.DHTxx.DhtBase.Humidity" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="C#" Value="public virtual UnitsNet.Ratio Humidity { get; }" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Ratio Humidity" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Humidity As Ratio" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="member this.Humidity : UnitsNet.Ratio" Usage="Iot.Device.DHTxx.DhtBase.Humidity" FrameworkAlternate="iot-dotnet-1.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -245,7 +255,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Double</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.0">System.Double</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.1">UnitsNet.Ratio</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -253,8 +264,7 @@
             </summary>
         <value>To be added.</value>
         <remarks>
-            If last read was not successfull, it returns double.NaN
-            </remarks>
+            If last read was not successful, it returns <code>default(Ratio)</code></remarks>
       </Docs>
     </Member>
     <Member MemberName="IsLastReadSuccessful">
@@ -305,8 +315,7 @@
             </summary>
         <value>To be added.</value>
         <remarks>
-            If last read was not successfull, it returns double.NaN
-            </remarks>
+            If last read was not successful, it returns <code>default(Temperature)</code></remarks>
       </Docs>
     </Member>
   </Members>

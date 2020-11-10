@@ -1,0 +1,153 @@
+<Type Name="Mbi5027" FullName="Iot.Device.Multiplexing.Mbi5027">
+  <TypeSignature Language="C#" Value="public class Mbi5027 : Iot.Device.Multiplexing.ShiftRegister" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Mbi5027 extends Iot.Device.Multiplexing.ShiftRegister" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Multiplexing.Mbi5027" />
+  <TypeSignature Language="VB.NET" Value="Public Class Mbi5027&#xA;Inherits ShiftRegister" />
+  <TypeSignature Language="F#" Value="type Mbi5027 = class&#xA;    inherit ShiftRegister" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Multiplexing.ShiftRegister</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            MBI5027 16-Bit shift register With 3-State output register and error detection.
+            Supports SPI and GPIO control.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Mbi5027 (System.Device.Spi.SpiDevice spiDevice, int bitLength = 16);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, int32 bitLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.Mbi5027.#ctor(System.Device.Spi.SpiDevice,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (spiDevice As SpiDevice, Optional bitLength As Integer = 16)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Multiplexing.Mbi5027 : System.Device.Spi.SpiDevice * int -&gt; Iot.Device.Multiplexing.Mbi5027" Usage="new Iot.Device.Multiplexing.Mbi5027 (spiDevice, bitLength)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" />
+        <Parameter Name="bitLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="spiDevice">SpiDevice used for serial communication.</param>
+        <param name="bitLength">Bit length of register, including chained registers. Default is 8 bits.</param>
+        <summary>
+            Initializes a new shift register device connected through SPI.
+            Uses 3 pins (SDI -&gt; SDI, SCLK -&gt; SCLK, CE0 -&gt; LE)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Mbi5027 (Iot.Device.Multiplexing.Mbi5027PinMapping pinMapping, int bitLength = 16, System.Device.Gpio.GpioController gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Multiplexing.Mbi5027PinMapping pinMapping, int32 bitLength, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.Mbi5027.#ctor(Iot.Device.Multiplexing.Mbi5027PinMapping,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pinMapping As Mbi5027PinMapping, Optional bitLength As Integer = 16, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Multiplexing.Mbi5027 : Iot.Device.Multiplexing.Mbi5027PinMapping * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Multiplexing.Mbi5027" Usage="new Iot.Device.Multiplexing.Mbi5027 (pinMapping, bitLength, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pinMapping" Type="Iot.Device.Multiplexing.Mbi5027PinMapping" />
+        <Parameter Name="bitLength" Type="System.Int32" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pinMapping">The pin mapping to use by the binding.</param>
+        <param name="bitLength">Bit length of register, including chained registers. Default is 16 bits.</param>
+        <param name="gpioController">The GPIO Controller used for interrupt handling.</param>
+        <param name="shouldDispose">Option (true by default) to dispose the GPIO controller when disposing this instance.</param>
+        <summary>
+            Initialize a new shift register connected through GPIO.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDetectionMode">
+      <MemberSignature Language="C#" Value="public void EnableDetectionMode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnableDetectionMode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.Mbi5027.EnableDetectionMode" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EnableDetectionMode ()" />
+      <MemberSignature Language="F#" Value="member this.EnableDetectionMode : unit -&gt; unit" Usage="mbi5027.EnableDetectionMode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Enable open/short eror detection mode.
+            Requires use of GPIO controller.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableNormalMode">
+      <MemberSignature Language="C#" Value="public void EnableNormalMode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnableNormalMode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.Mbi5027.EnableNormalMode" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EnableNormalMode ()" />
+      <MemberSignature Language="F#" Value="member this.EnableNormalMode : unit -&gt; unit" Usage="mbi5027.EnableNormalMode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Enable normal mode.
+            Requires use of GPIO controller.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOutputErrorStatus">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;System.Device.Gpio.PinValue&gt; ReadOutputErrorStatus ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;valuetype System.Device.Gpio.PinValue&gt; ReadOutputErrorStatus() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.Mbi5027.ReadOutputErrorStatus" />
+      <MemberSignature Language="VB.NET" Value="Public Iterator Function ReadOutputErrorStatus () As IEnumerable(Of PinValue)" />
+      <MemberSignature Language="F#" Value="member this.ReadOutputErrorStatus : unit -&gt; seq&lt;System.Device.Gpio.PinValue&gt;" Usage="mbi5027.ReadOutputErrorStatus " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Iot.Device.Multiplexing.Mbi5027/&lt;ReadOutputErrorStatus&gt;d__4))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Iot.Device.Multiplexing.Mbi5027/&lt;ReadOutputErrorStatus&gt;d__4))&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Device.Gpio.PinValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read output error status.
+            Requires use of GPIO controller.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

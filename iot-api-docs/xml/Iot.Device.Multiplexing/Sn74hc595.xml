@@ -1,0 +1,78 @@
+<Type Name="Sn74hc595" FullName="Iot.Device.Multiplexing.Sn74hc595">
+  <TypeSignature Language="C#" Value="public class Sn74hc595 : Iot.Device.Multiplexing.ShiftRegister" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Sn74hc595 extends Iot.Device.Multiplexing.ShiftRegister" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Multiplexing.Sn74hc595" />
+  <TypeSignature Language="VB.NET" Value="Public Class Sn74hc595&#xA;Inherits ShiftRegister" />
+  <TypeSignature Language="F#" Value="type Sn74hc595 = class&#xA;    inherit ShiftRegister" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Multiplexing.ShiftRegister</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            SN74HC595 8-Bit Shift Registers With 3-State Output Registers
+            Supports SPI and GPIO control
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Sn74hc595 (Iot.Device.Multiplexing.Sn74hc595PinMapping pinMapping, int bitLength = 8, System.Device.Gpio.GpioController gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Multiplexing.Sn74hc595PinMapping pinMapping, int32 bitLength, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.Sn74hc595.#ctor(Iot.Device.Multiplexing.Sn74hc595PinMapping,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pinMapping As Sn74hc595PinMapping, Optional bitLength As Integer = 8, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Multiplexing.Sn74hc595 : Iot.Device.Multiplexing.Sn74hc595PinMapping * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Multiplexing.Sn74hc595" Usage="new Iot.Device.Multiplexing.Sn74hc595 (pinMapping, bitLength, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pinMapping" Type="Iot.Device.Multiplexing.Sn74hc595PinMapping" />
+        <Parameter Name="bitLength" Type="System.Int32" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pinMapping">The pin mapping to use by the binding.</param>
+        <param name="bitLength">Bit length of register, including chained registers. Default is 8 bits.</param>
+        <param name="gpioController">The GPIO Controller used for interrupt handling.</param>
+        <param name="shouldDispose">True (the default) if the GPIO controller shall be disposed when disposing this instance.</param>
+        <summary>
+            Initialize a new shift register connected through GPIO.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearStorage">
+      <MemberSignature Language="C#" Value="public void ClearStorage (bool latch = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearStorage(bool latch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.Sn74hc595.ClearStorage(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ClearStorage (Optional latch As Boolean = true)" />
+      <MemberSignature Language="F#" Value="member this.ClearStorage : bool -&gt; unit" Usage="sn74hc595.ClearStorage latch" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="latch" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="latch">To be added.</param>
+        <summary>
+            Clear storage register.
+            Requires use of GPIO controller.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

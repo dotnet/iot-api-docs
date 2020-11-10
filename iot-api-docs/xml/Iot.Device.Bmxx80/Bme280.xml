@@ -177,11 +177,11 @@
       </Docs>
     </Member>
     <Member MemberName="TryReadHumidity">
-      <MemberSignature Language="C#" Value="public bool TryReadHumidity (out double humidity);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadHumidity([out] float64&amp; humidity) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme280.TryReadHumidity(System.Double@)" />
-      <MemberSignature Language="VB.NET" Value="Public Function TryReadHumidity (ByRef humidity As Double) As Boolean" />
-      <MemberSignature Language="F#" Value="member this.TryReadHumidity : double -&gt; bool" Usage="bme280.TryReadHumidity humidity" />
+      <MemberSignature Language="C#" Value="public bool TryReadHumidity (out UnitsNet.Ratio humidity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadHumidity([out] valuetype UnitsNet.Ratio&amp; humidity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme280.TryReadHumidity(UnitsNet.Ratio@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadHumidity (ByRef humidity As Ratio) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadHumidity : Ratio -&gt; bool" Usage="bme280.TryReadHumidity humidity" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -191,12 +191,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="humidity" Type="System.Double" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="humidity" Type="UnitsNet.Ratio" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
       </Parameters>
       <Docs>
         <param name="humidity">
             Contains the measured humidity as %rH if the <see cref="P:Iot.Device.Bmxx80.Bme280.HumiditySampling" /> was not set to <see cref="F:Iot.Device.Bmxx80.Sampling.Skipped" />.
-            Contains <see cref="F:System.Double.NaN" /> otherwise.
+            Contains an undefined value if the return value is false.
             </param>
         <summary>
             Reads the humidity. A return value indicates whether the reading succeeded.

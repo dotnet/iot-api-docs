@@ -57,7 +57,7 @@
       </Parameters>
       <Docs>
         <param name="culture">Culture for which support is required</param>
-        <param name="romName">ROM type of attached chip. Supported values: "A00" and "A02"</param>
+        <param name="romName">ROM type of attached chip. Supported values: "A00", "A02", "SplC780"</param>
         <param name="unknownLetter">Letter that is printed when an unknown character is encountered. This letter must be part of the
             default rom set</param>
         <param name="maxNumberOfCustomCharacters">Maximum number of custom characters supported on the hardware. Should be 8 for Hd44780-controlled displays.</param>
@@ -125,7 +125,7 @@
       </Docs>
     </Member>
     <Member MemberName="CreateLetter">
-      <MemberSignature Language="C#" Value="protected virtual byte[] CreateLetter (char character, string romName);" />
+      <MemberSignature Language="C#" Value="protected virtual byte[]? CreateLetter (char character, string romName);" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance unsigned int8[] CreateLetter(char character, string romName) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdCharacterEncodingFactory.CreateLetter(System.Char,System.String)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function CreateLetter (character As Char, romName As String) As Byte()" />

@@ -1,0 +1,31 @@
+<Type Name="OpenHardwareMonitor+OnNewValue" FullName="Iot.Device.HardwareMonitor.OpenHardwareMonitor+OnNewValue">
+  <TypeSignature Language="C#" Value="public delegate void OpenHardwareMonitor.OnNewValue(OpenHardwareMonitor.Sensor sensor, IQuantity value, TimeSpan timeSinceUpdate);" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed OpenHardwareMonitor/OnNewValue extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.HardwareMonitor.OpenHardwareMonitor.OnNewValue" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub OpenHardwareMonitor.OnNewValue(sensor As OpenHardwareMonitor.Sensor, value As IQuantity, timeSinceUpdate As TimeSpan)" />
+  <TypeSignature Language="F#" Value="type OpenHardwareMonitor.OnNewValue = delegate of OpenHardwareMonitor.Sensor * IQuantity * TimeSpan -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="sensor" Type="Iot.Device.HardwareMonitor.OpenHardwareMonitor+Sensor" />
+    <Parameter Name="value" Type="UnitsNet.IQuantity" />
+    <Parameter Name="timeSinceUpdate" Type="System.TimeSpan" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="sensor">Sensor that has an updated value</param>
+    <param name="value">New value for the sensor</param>
+    <param name="timeSinceUpdate">Time since the last update of this sensor</param>
+    <summary>
+            Event that gets invoked when a value is updated
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

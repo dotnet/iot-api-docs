@@ -1,0 +1,526 @@
+<Type Name="Ccs811Sensor" FullName="Iot.Device.Ccs811.Ccs811Sensor">
+  <TypeSignature Language="C#" Value="public class Ccs811Sensor : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Ccs811Sensor extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ccs811.Ccs811Sensor" />
+  <TypeSignature Language="VB.NET" Value="Public Class Ccs811Sensor&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Ccs811Sensor = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Ultra-Low Power Digital Gas Sensor for
+            Monitoring Indoor Air Quality
+            Documentation can be found here: https://www.sciosense.com/products/environmental-sensors/ccs811-gas-sensor-solution/
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ccs811Sensor (System.Device.I2c.I2cDevice i2cDevice, System.Device.Gpio.GpioController? gpioController = default, int pinWake = -1, int pinInterruption = -1, int pinReset = -1, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, class System.Device.Gpio.GpioController gpioController, int32 pinWake, int32 pinInterruption, int32 pinReset, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ccs811.Ccs811Sensor.#ctor(System.Device.I2c.I2cDevice,System.Device.Gpio.GpioController,System.Int32,System.Int32,System.Int32,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional gpioController As GpioController = Nothing, Optional pinWake As Integer = -1, Optional pinInterruption As Integer = -1, Optional pinReset As Integer = -1, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ccs811.Ccs811Sensor : System.Device.I2c.I2cDevice * System.Device.Gpio.GpioController * int * int * int * bool -&gt; Iot.Device.Ccs811.Ccs811Sensor" Usage="new Iot.Device.Ccs811.Ccs811Sensor (i2cDevice, gpioController, pinWake, pinInterruption, pinReset, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="pinWake" Type="System.Int32" />
+        <Parameter Name="pinInterruption" Type="System.Int32" />
+        <Parameter Name="pinReset" Type="System.Int32" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">A valid I2C device</param>
+        <param name="gpioController">An optional controller, either the default one will be used, either none will be created if any pin is used</param>
+        <param name="pinWake">An awake pin, it is optional, this pin can be set to the ground if the sensor is always on</param>
+        <param name="pinInterruption">An interruption pin when a measurement is ready, best use when you specify a threshold</param>
+        <param name="pinReset">An optional hard reset pin</param>
+        <param name="shouldDispose">Should the GPIO controller be disposed at the end</param>
+        <summary>
+            The CCS811 sensor constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationVersion">
+      <MemberSignature Language="C#" Value="public Version ApplicationVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version ApplicationVersion" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ccs811.Ccs811Sensor.ApplicationVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ApplicationVersion As Version" />
+      <MemberSignature Language="F#" Value="member this.ApplicationVersion : Version" Usage="Iot.Device.Ccs811.Ccs811Sensor.ApplicationVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the application version
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaselineAlgorithmCalculation">
+      <MemberSignature Language="C#" Value="public ushort BaselineAlgorithmCalculation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int16 BaselineAlgorithmCalculation" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ccs811.Ccs811Sensor.BaselineAlgorithmCalculation" />
+      <MemberSignature Language="VB.NET" Value="Public Property BaselineAlgorithmCalculation As UShort" />
+      <MemberSignature Language="F#" Value="member this.BaselineAlgorithmCalculation : uint16 with get, set" Usage="Iot.Device.Ccs811.Ccs811Sensor.BaselineAlgorithmCalculation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or set the encoded version of the current baseline used in Algorithm Calculations
+            </summary>
+        <value>To be added.</value>
+        <remarks>A previously stored value may be written back to this two byte
+            register and the Algorithms will use the new value in its
+            calculations(until it adjusts it as part of its internal Automatic
+            Baseline Correction). Please refer to documentation to understand when to restore a
+            previous baseline: https://www.sciosense.com/wp-content/uploads/2020/01/Application-Note-Baseline-Save-and-Restore-on-CCS811.pdf</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BootloaderVersion">
+      <MemberSignature Language="C#" Value="public Version BootloaderVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version BootloaderVersion" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ccs811.Ccs811Sensor.BootloaderVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BootloaderVersion As Version" />
+      <MemberSignature Language="F#" Value="member this.BootloaderVersion : Version" Usage="Iot.Device.Ccs811.Ccs811Sensor.BootloaderVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the boot loader version
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ccs811.Ccs811Sensor.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="ccs811Sensor.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose the sensor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Error">
+      <MemberSignature Language="C#" Value="public Iot.Device.Ccs811.Error Error { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Ccs811.Error Error" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ccs811.Ccs811Sensor.Error" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Error As Error" />
+      <MemberSignature Language="F#" Value="member this.Error : Iot.Device.Ccs811.Error" Usage="Iot.Device.Ccs811.Ccs811Sensor.Error" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ccs811.Error</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the error
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HardwareIdentification">
+      <MemberSignature Language="C#" Value="public byte HardwareIdentification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 HardwareIdentification" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ccs811.Ccs811Sensor.HardwareIdentification" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HardwareIdentification As Byte" />
+      <MemberSignature Language="F#" Value="member this.HardwareIdentification : byte" Usage="Iot.Device.Ccs811.Ccs811Sensor.HardwareIdentification" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the hardware identification, it has to be 0x81
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HardwareVersion">
+      <MemberSignature Language="C#" Value="public byte HardwareVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 HardwareVersion" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ccs811.Ccs811Sensor.HardwareVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HardwareVersion As Byte" />
+      <MemberSignature Language="F#" Value="member this.HardwareVersion : byte" Usage="Iot.Device.Ccs811.Ccs811Sensor.HardwareVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Hardware version should be 0x1X, any X seems valid
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="I2cFirstAddress">
+      <MemberSignature Language="C#" Value="public const int I2cFirstAddress = 90;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 I2cFirstAddress = (90)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Ccs811.Ccs811Sensor.I2cFirstAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const I2cFirstAddress As Integer  = 90" />
+      <MemberSignature Language="F#" Value="val mutable I2cFirstAddress : int" Usage="Iot.Device.Ccs811.Ccs811Sensor.I2cFirstAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>90</MemberValue>
+      <Docs>
+        <summary>
+            The first default I2C address when the Address pin is put to low
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="I2cSecondAddress">
+      <MemberSignature Language="C#" Value="public const int I2cSecondAddress = 91;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 I2cSecondAddress = (91)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Ccs811.Ccs811Sensor.I2cSecondAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const I2cSecondAddress As Integer  = 91" />
+      <MemberSignature Language="F#" Value="val mutable I2cSecondAddress : int" Usage="Iot.Device.Ccs811.Ccs811Sensor.I2cSecondAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>91</MemberValue>
+      <Docs>
+        <summary>
+            The second default I2C address when the Address pin is put to high
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="I2cTypicalFrequency">
+      <MemberSignature Language="C#" Value="public const int I2cTypicalFrequency = 100000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 I2cTypicalFrequency = (100000)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Ccs811.Ccs811Sensor.I2cTypicalFrequency" />
+      <MemberSignature Language="VB.NET" Value="Public Const I2cTypicalFrequency As Integer  = 100000" />
+      <MemberSignature Language="F#" Value="val mutable I2cTypicalFrequency : int" Usage="Iot.Device.Ccs811.Ccs811Sensor.I2cTypicalFrequency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>100000</MemberValue>
+      <Docs>
+        <summary>
+            The typical operating speed for the bus
+            Note that minimum is 10 KHz and the maximum is 400 KHz
+            The device can operate in Stretching mode is the transfer is too fast.
+            This stretching may not be well supported in all the hardware, in case of
+            issue, it is recommended to lower the operating frequency
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterruptEnable">
+      <MemberSignature Language="C#" Value="public bool InterruptEnable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InterruptEnable" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ccs811.Ccs811Sensor.InterruptEnable" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InterruptEnable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.InterruptEnable : bool" Usage="Iot.Device.Ccs811.Ccs811Sensor.InterruptEnable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Is the hardware interrupt enabled
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDataReady">
+      <MemberSignature Language="C#" Value="public bool IsDataReady { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDataReady" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ccs811.Ccs811Sensor.IsDataReady" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsDataReady As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsDataReady : bool" Usage="Iot.Device.Ccs811.Ccs811Sensor.IsDataReady" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Do we have data ready to read?
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasurementReady">
+      <MemberSignature Language="C#" Value="public event Iot.Device.Ccs811.Ccs811Sensor.MeasurementReadyHandler MeasurementReady;" />
+      <MemberSignature Language="ILAsm" Value=".event class Iot.Device.Ccs811.Ccs811Sensor/MeasurementReadyHandler MeasurementReady" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Ccs811.Ccs811Sensor.MeasurementReady" />
+      <MemberSignature Language="VB.NET" Value="Public Event MeasurementReady As Ccs811Sensor.MeasurementReadyHandler " />
+      <MemberSignature Language="F#" Value="member this.MeasurementReady : Iot.Device.Ccs811.Ccs811Sensor.MeasurementReadyHandler " Usage="member this.MeasurementReady : Iot.Device.Ccs811.Ccs811Sensor.MeasurementReadyHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ccs811.Ccs811Sensor+MeasurementReadyHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The event handler for the measurement
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Ccs811.OperationMode OperationMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Ccs811.OperationMode OperationMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ccs811.Ccs811Sensor.OperationMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property OperationMode As OperationMode" />
+      <MemberSignature Language="F#" Value="member this.OperationMode : Iot.Device.Ccs811.OperationMode with get, set" Usage="Iot.Device.Ccs811.Ccs811Sensor.OperationMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ccs811.OperationMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set or get the operation mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEnvironmentData">
+      <MemberSignature Language="C#" Value="public void SetEnvironmentData (UnitsNet.Temperature temperature, UnitsNet.Ratio humidity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetEnvironmentData(valuetype UnitsNet.Temperature temperature, valuetype UnitsNet.Ratio humidity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ccs811.Ccs811Sensor.SetEnvironmentData(UnitsNet.Temperature,UnitsNet.Ratio)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetEnvironmentData (temperature As Temperature, humidity As Ratio)" />
+      <MemberSignature Language="F#" Value="member this.SetEnvironmentData : UnitsNet.Temperature * UnitsNet.Ratio -&gt; unit" Usage="ccs811Sensor.SetEnvironmentData (temperature, humidity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="temperature" Type="UnitsNet.Temperature" />
+        <Parameter Name="humidity" Type="UnitsNet.Ratio" />
+      </Parameters>
+      <Docs>
+        <param name="temperature">The temperature</param>
+        <param name="humidity">The relative humidity, best to use Percent from 0 to 100</param>
+        <summary>
+            Set the environmental data, this is impacting the equivalent calculation
+            of the gas.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetThreshold">
+      <MemberSignature Language="C#" Value="public bool SetThreshold (UnitsNet.VolumeConcentration lowEquivalentCO2, UnitsNet.VolumeConcentration highEquivalentCO2);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetThreshold(valuetype UnitsNet.VolumeConcentration lowEquivalentCO2, valuetype UnitsNet.VolumeConcentration highEquivalentCO2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ccs811.Ccs811Sensor.SetThreshold(UnitsNet.VolumeConcentration,UnitsNet.VolumeConcentration)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetThreshold (lowEquivalentCO2 As VolumeConcentration, highEquivalentCO2 As VolumeConcentration) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetThreshold : UnitsNet.VolumeConcentration * UnitsNet.VolumeConcentration -&gt; bool" Usage="ccs811Sensor.SetThreshold (lowEquivalentCO2, highEquivalentCO2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lowEquivalentCO2" Type="UnitsNet.VolumeConcentration" />
+        <Parameter Name="highEquivalentCO2" Type="UnitsNet.VolumeConcentration" />
+      </Parameters>
+      <Docs>
+        <param name="lowEquivalentCO2">The low value for the threshold</param>
+        <param name="highEquivalentCO2">The high value for the threshold</param>
+        <summary>
+            Set the threshold for the equivalent CO2. The pinInterrupt should be existing so
+            interruptions are activated. If not, then the function will return false
+            </summary>
+        <returns>True if success</returns>
+        <remarks>Difference between the low and high value should be more than 50. This is called
+            the hysteresis value.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadGasData">
+      <MemberSignature Language="C#" Value="public bool TryReadGasData (out UnitsNet.VolumeConcentration equivalentCO2, out UnitsNet.VolumeConcentration equivalentTotalVolatileOrganicCompound);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadGasData([out] valuetype UnitsNet.VolumeConcentration&amp; equivalentCO2, [out] valuetype UnitsNet.VolumeConcentration&amp; equivalentTotalVolatileOrganicCompound) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ccs811.Ccs811Sensor.TryReadGasData(UnitsNet.VolumeConcentration@,UnitsNet.VolumeConcentration@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadGasData (ByRef equivalentCO2 As VolumeConcentration, ByRef equivalentTotalVolatileOrganicCompound As VolumeConcentration) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadGasData : VolumeConcentration * VolumeConcentration -&gt; bool" Usage="ccs811Sensor.TryReadGasData (equivalentCO2, equivalentTotalVolatileOrganicCompound)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="equivalentCO2" Type="UnitsNet.VolumeConcentration" RefType="out" />
+        <Parameter Name="equivalentTotalVolatileOrganicCompound" Type="UnitsNet.VolumeConcentration" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="equivalentCO2">The equivalent CO2 (eCO2) output range for CCS811 is from
+            400ppm up to 29206ppm.</param>
+        <param name="equivalentTotalVolatileOrganicCompound">The equivalent Total Volatile Organic Compound (eTVOC)
+            output range for CCS811 is from 0ppb up to 32768ppb</param>
+        <summary>
+            Read the equivalent CO2 in ppm and equivalent Total Volatile Compound in ppb
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadGasData">
+      <MemberSignature Language="C#" Value="public bool TryReadGasData (out UnitsNet.VolumeConcentration equivalentCO2, out UnitsNet.VolumeConcentration equivalentTotalVolatileOrganicCompound, out UnitsNet.ElectricCurrent rawCurrentSelected, out int rawAdcReading);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadGasData([out] valuetype UnitsNet.VolumeConcentration&amp; equivalentCO2, [out] valuetype UnitsNet.VolumeConcentration&amp; equivalentTotalVolatileOrganicCompound, [out] valuetype UnitsNet.ElectricCurrent&amp; rawCurrentSelected, [out] int32&amp; rawAdcReading) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ccs811.Ccs811Sensor.TryReadGasData(UnitsNet.VolumeConcentration@,UnitsNet.VolumeConcentration@,UnitsNet.ElectricCurrent@,System.Int32@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadGasData (ByRef equivalentCO2 As VolumeConcentration, ByRef equivalentTotalVolatileOrganicCompound As VolumeConcentration, ByRef rawCurrentSelected As ElectricCurrent, ByRef rawAdcReading As Integer) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadGasData : VolumeConcentration * VolumeConcentration * ElectricCurrent * int -&gt; bool" Usage="ccs811Sensor.TryReadGasData (equivalentCO2, equivalentTotalVolatileOrganicCompound, rawCurrentSelected, rawAdcReading)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="equivalentCO2" Type="UnitsNet.VolumeConcentration" RefType="out" />
+        <Parameter Name="equivalentTotalVolatileOrganicCompound" Type="UnitsNet.VolumeConcentration" RefType="out" />
+        <Parameter Name="rawCurrentSelected" Type="UnitsNet.ElectricCurrent" RefType="out" />
+        <Parameter Name="rawAdcReading" Type="System.Int32" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="equivalentCO2">The equivalent CO2 (eCO2) output range for CCS811 is from
+            400ppm up to 29206ppm.</param>
+        <param name="equivalentTotalVolatileOrganicCompound">The equivalent Total Volatile Organic Compound (eTVOC)
+            output range for CCS811 is from 0ppb up to 32768ppb</param>
+        <param name="rawCurrentSelected">Raw data containing the value of the
+            current through the sensor(0μA to 63μA)</param>
+        <param name="rawAdcReading">Raw data containing  the
+            readings of the voltage across the sensor with the selected
+            current(1023 = 1.65V) where 1023 is the maximum value</param>
+        <summary>
+            Read the equivalent CO2 in ppm and equivalent Total Volatile Compound in ppb
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WakeEnable">
+      <MemberSignature Language="C#" Value="public bool WakeEnable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool WakeEnable" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ccs811.Ccs811Sensor.WakeEnable" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WakeEnable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.WakeEnable : bool" Usage="Iot.Device.Ccs811.Ccs811Sensor.WakeEnable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Is the wake feature enabled
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

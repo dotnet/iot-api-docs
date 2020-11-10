@@ -103,6 +103,31 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="CharacterOrder">
+      <MemberSignature Language="C#" Value="public byte[] CharacterOrder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] CharacterOrder" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Tm1637.Tm1637.CharacterOrder" />
+      <MemberSignature Language="VB.NET" Value="Public Property CharacterOrder As Byte()" />
+      <MemberSignature Language="F#" Value="member this.CharacterOrder : byte[] with get, set" Usage="Iot.Device.Tm1637.Tm1637.CharacterOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Order of characters, expect a 6 length byte array
+            0 to 5, any order. Most of the time 4 segments do
+            not need to be changed but the 6 ones may be in different order
+            like 0 1 2 5 4 3. In this case, this byte array has be be in this order
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="ClearDisplay">
       <MemberSignature Language="C#" Value="public void ClearDisplay ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearDisplay() cil managed" />
@@ -154,11 +179,15 @@
       </Docs>
     </Member>
     <Member MemberName="Display">
-      <MemberSignature Language="C#" Value="public void Display (byte segmentPosition, Iot.Device.Tm1637.Character rawData);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Display(unsigned int8 segmentPosition, valuetype Iot.Device.Tm1637.Character rawData) cil managed" />
+      <MemberSignature Language="C#" Value="public void Display (byte segmentPosition, Iot.Device.Tm1637.Character rawData);" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Display(unsigned int8 segmentPosition, valuetype Iot.Device.Tm1637.Character rawData) cil managed" FrameworkAlternate="iot-dotnet-1.0" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Tm1637.Tm1637.Display(System.Byte,Iot.Device.Tm1637.Character)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub Display (segmentPosition As Byte, rawData As Character)" />
-      <MemberSignature Language="F#" Value="member this.Display : byte * Iot.Device.Tm1637.Character -&gt; unit" Usage="tm1637.Display (segmentPosition, rawData)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Display (segmentPosition As Byte, rawData As Character)" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="F#" Value="member this.Display : byte * Iot.Device.Tm1637.Character -&gt; unit" Usage="tm1637.Display (segmentPosition, rawData)" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="C#" Value="public void Display (byte characterPosition, Iot.Device.Tm1637.Character rawData);" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Display(unsigned int8 characterPosition, valuetype Iot.Device.Tm1637.Character rawData) cil managed" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Display (characterPosition As Byte, rawData As Character)" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="member this.Display : byte * Iot.Device.Tm1637.Character -&gt; unit" Usage="tm1637.Display (characterPosition, rawData)" FrameworkAlternate="iot-dotnet-1.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -169,12 +198,14 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="segmentPosition" Type="System.Byte" />
-        <Parameter Name="rawData" Type="Iot.Device.Tm1637.Character" />
+        <Parameter Name="segmentPosition" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
+        <Parameter Name="characterPosition" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="rawData" Type="Iot.Device.Tm1637.Character" Index="1" />
       </Parameters>
       <Docs>
         <param name="segmentPosition">The segment position from 0 to 5</param>
-        <param name="rawData">The segemnet characters to display</param>
+        <param name="characterPosition">The character position from 0 to 5</param>
+        <param name="rawData">The segment characters to display</param>
         <summary>
              Displays a raw data at a specific segment position from 0 to 5
              </summary>
@@ -220,15 +251,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="MaxCharacters">
+      <MemberSignature Language="C#" Value="public static byte MaxCharacters { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property unsigned int8 MaxCharacters" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Tm1637.Tm1637.MaxCharacters" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property MaxCharacters As Byte" />
+      <MemberSignature Language="F#" Value="member this.MaxCharacters : byte" Usage="Iot.Device.Tm1637.Tm1637.MaxCharacters" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The number of characters that the TM1637 can handle
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="MaxSegments">
-      <MemberSignature Language="C#" Value="public byte MaxSegments { get; }" FrameworkAlternate="iot-dotnet-1.0" />
-      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 MaxSegments" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="C#" Value="public byte MaxSegments { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 MaxSegments" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.Tm1637.Tm1637.MaxSegments" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MaxSegments As Byte" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MaxSegments As Byte" />
       <MemberSignature Language="F#" Value="member this.MaxSegments : byte" Usage="Iot.Device.Tm1637.Tm1637.MaxSegments" />
-      <MemberSignature Language="C#" Value="public static byte MaxSegments { get; }" FrameworkAlternate="iot-dotnet-1.1" />
-      <MemberSignature Language="ILAsm" Value=".property unsigned int8 MaxSegments" FrameworkAlternate="iot-dotnet-1.1" />
-      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property MaxSegments As Byte" FrameworkAlternate="iot-dotnet-1.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
