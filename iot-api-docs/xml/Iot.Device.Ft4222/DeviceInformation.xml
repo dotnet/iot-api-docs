@@ -20,18 +20,34 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public DeviceInformation ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.DeviceInformation.#ctor" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C#" Value="public DeviceInformation (Iot.Device.Ft4222.FtFlag flags, Iot.Device.Ft4222.FtDevice type, uint id, uint locId, string serialNumber, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Ft4222.FtFlag flags, valuetype Iot.Device.Ft4222.FtDevice type, unsigned int32 id, unsigned int32 locId, string serialNumber, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.DeviceInformation.#ctor(Iot.Device.Ft4222.FtFlag,Iot.Device.Ft4222.FtDevice,System.UInt32,System.UInt32,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (flags As FtFlag, type As FtDevice, id As UInteger, locId As UInteger, serialNumber As String, description As String)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ft4222.DeviceInformation : Iot.Device.Ft4222.FtFlag * Iot.Device.Ft4222.FtDevice * uint32 * uint32 * string * string -&gt; Iot.Device.Ft4222.DeviceInformation" Usage="new Iot.Device.Ft4222.DeviceInformation (flags, type, id, locId, serialNumber, description)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Parameters />
+      <Parameters>
+        <Parameter Name="flags" Type="Iot.Device.Ft4222.FtFlag" />
+        <Parameter Name="type" Type="Iot.Device.Ft4222.FtDevice" />
+        <Parameter Name="id" Type="System.UInt32" />
+        <Parameter Name="locId" Type="System.UInt32" />
+        <Parameter Name="serialNumber" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
       <Docs>
-        <summary>To be added.</summary>
+        <param name="flags">Indicates device state.</param>
+        <param name="type">Indicates the device type.</param>
+        <param name="id">The Vendor ID and Product ID of the device.</param>
+        <param name="locId">The physical location identifier of the device.</param>
+        <param name="serialNumber">The device serial number.</param>
+        <param name="description">The device description.</param>
+        <summary>
+            Instantiates a DeviceInformation object.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -51,7 +67,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The device description
+            The device description.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -95,7 +111,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The Vendor ID and Product ID of the device
+            The Vendor ID and Product ID of the device.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -117,7 +133,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The physical location identifier of the device
+            The physical location identifier of the device.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -139,7 +155,7 @@
       </ReturnValue>
       <Docs>
         <summary>
-            The device serial number
+            The device serial number.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

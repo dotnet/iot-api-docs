@@ -1,0 +1,225 @@
+<Type Name="Mhz19b" FullName="Iot.Device.Mhz19b.Mhz19b">
+  <TypeSignature Language="C#" Value="public sealed class Mhz19b : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Mhz19b extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mhz19b.Mhz19b" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Mhz19b&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Mhz19b = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            MH-Z19B CO2 concentration sensor binding
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Mhz19b (string uartDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string uartDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mhz19b.Mhz19b.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (uartDevice As String)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mhz19b.Mhz19b : string -&gt; Iot.Device.Mhz19b.Mhz19b" Usage="new Iot.Device.Mhz19b.Mhz19b uartDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="uartDevice" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="uartDevice">Path to the UART device / serial port, e.g. /dev/serial0</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Mhz19b.Mhz19b" /> class and creates a new serial port stream.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">uartDevice is null or empty</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Mhz19b (System.IO.Stream stream, bool shouldDispose);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mhz19b.Mhz19b.#ctor(System.IO.Stream,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (stream As Stream, shouldDispose As Boolean)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mhz19b.Mhz19b : System.IO.Stream * bool -&gt; Iot.Device.Mhz19b.Mhz19b" Usage="new Iot.Device.Mhz19b.Mhz19b (stream, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="stream">Existing stream</param>
+        <param name="shouldDispose">If true, the stream gets disposed when disposing the binding</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Mhz19b.Mhz19b" /> class using an existing (serial port) stream.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mhz19b.Mhz19b.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="mhz19b.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="T:System.IDisposable" />
+      </Docs>
+    </Member>
+    <Member MemberName="GetCo2Reading">
+      <MemberSignature Language="C#" Value="public UnitsNet.VolumeConcentration GetCo2Reading ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.VolumeConcentration GetCo2Reading() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mhz19b.Mhz19b.GetCo2Reading" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCo2Reading () As VolumeConcentration" />
+      <MemberSignature Language="F#" Value="member this.GetCo2Reading : unit -&gt; UnitsNet.VolumeConcentration" Usage="mhz19b.GetCo2Reading " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.VolumeConcentration</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the current CO2 concentration from the sensor.
+            </summary>
+        <returns>CO2 volume concentration</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.IOException">Communication with sensor failed</exception>
+        <exception cref="T:System.TimeoutException">A timeout occurred while communicating with the sensor</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformSpanPointCalibration">
+      <MemberSignature Language="C#" Value="public void PerformSpanPointCalibration (UnitsNet.VolumeConcentration span);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PerformSpanPointCalibration(valuetype UnitsNet.VolumeConcentration span) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mhz19b.Mhz19b.PerformSpanPointCalibration(UnitsNet.VolumeConcentration)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub PerformSpanPointCalibration (span As VolumeConcentration)" />
+      <MemberSignature Language="F#" Value="member this.PerformSpanPointCalibration : UnitsNet.VolumeConcentration -&gt; unit" Usage="mhz19b.PerformSpanPointCalibration span" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="span" Type="UnitsNet.VolumeConcentration" />
+      </Parameters>
+      <Docs>
+        <param name="span">span value, between 1000[ppm] and 5000[ppm]. The typical value is 2000[ppm].</param>
+        <summary>
+            Initiate a span point calibration.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when span value is out of range</exception>
+        <exception cref="T:System.IO.IOException">Communication with sensor failed</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformZeroPointCalibration">
+      <MemberSignature Language="C#" Value="public void PerformZeroPointCalibration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PerformZeroPointCalibration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mhz19b.Mhz19b.PerformZeroPointCalibration" />
+      <MemberSignature Language="VB.NET" Value="Public Sub PerformZeroPointCalibration ()" />
+      <MemberSignature Language="F#" Value="member this.PerformZeroPointCalibration : unit -&gt; unit" Usage="mhz19b.PerformZeroPointCalibration " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initiates a zero point calibration.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.IOException">Communication with sensor failed</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetAutomaticBaselineCorrection">
+      <MemberSignature Language="C#" Value="public void SetAutomaticBaselineCorrection (Iot.Device.Mhz19b.AbmState state);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetAutomaticBaselineCorrection(valuetype Iot.Device.Mhz19b.AbmState state) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mhz19b.Mhz19b.SetAutomaticBaselineCorrection(Iot.Device.Mhz19b.AbmState)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetAutomaticBaselineCorrection (state As AbmState)" />
+      <MemberSignature Language="F#" Value="member this.SetAutomaticBaselineCorrection : Iot.Device.Mhz19b.AbmState -&gt; unit" Usage="mhz19b.SetAutomaticBaselineCorrection state" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="state" Type="Iot.Device.Mhz19b.AbmState" />
+      </Parameters>
+      <Docs>
+        <param name="state">State of automatic correction</param>
+        <summary>
+            Switches the autmatic baseline correction on and off.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.IOException">Communication with sensor failed</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetSensorDetectionRange">
+      <MemberSignature Language="C#" Value="public void SetSensorDetectionRange (Iot.Device.Mhz19b.DetectionRange detectionRange);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetSensorDetectionRange(valuetype Iot.Device.Mhz19b.DetectionRange detectionRange) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mhz19b.Mhz19b.SetSensorDetectionRange(Iot.Device.Mhz19b.DetectionRange)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetSensorDetectionRange (detectionRange As DetectionRange)" />
+      <MemberSignature Language="F#" Value="member this.SetSensorDetectionRange : Iot.Device.Mhz19b.DetectionRange -&gt; unit" Usage="mhz19b.SetSensorDetectionRange detectionRange" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="detectionRange" Type="Iot.Device.Mhz19b.DetectionRange" />
+      </Parameters>
+      <Docs>
+        <param name="detectionRange">Detection range of the sensor</param>
+        <summary>
+            Set the sensor detection range.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.IOException">Communication with sensor failed</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

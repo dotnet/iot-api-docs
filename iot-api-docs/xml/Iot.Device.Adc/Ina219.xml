@@ -145,31 +145,6 @@
       <Parameters />
       <Docs>
         <summary>
-            Dispose of managed assets.
-            </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="Dispose">
-      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Ina219.Dispose(System.Boolean)" />
-      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
-      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="ina219.Dispose disposing" />
-      <MemberType>Method</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.Void</ReturnType>
-      </ReturnValue>
-      <Parameters>
-        <Parameter Name="disposing" Type="System.Boolean" />
-      </Parameters>
-      <Docs>
-        <param name="disposing">To be added.</param>
-        <summary>
             Dispose instance
             </summary>
         <remarks>To be added.</remarks>
@@ -225,98 +200,98 @@
       </Docs>
     </Member>
     <Member MemberName="ReadBusVoltage">
-      <MemberSignature Language="C#" Value="public float ReadBusVoltage ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 ReadBusVoltage() cil managed" />
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential ReadBusVoltage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.ElectricPotential ReadBusVoltage() cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Ina219.ReadBusVoltage" />
-      <MemberSignature Language="VB.NET" Value="Public Function ReadBusVoltage () As Single" />
-      <MemberSignature Language="F#" Value="member this.ReadBusVoltage : unit -&gt; single" Usage="ina219.ReadBusVoltage " />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadBusVoltage () As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.ReadBusVoltage : unit -&gt; UnitsNet.ElectricPotential" Usage="ina219.ReadBusVoltage " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Single</ReturnType>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
         <summary>
             Read the measured Bus voltage.
             </summary>
-        <returns>The Bus voltage in Volts</returns>
+        <returns>The Bus potential (voltage)</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="ReadCurrent">
-      <MemberSignature Language="C#" Value="public float ReadCurrent ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 ReadCurrent() cil managed" />
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricCurrent ReadCurrent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.ElectricCurrent ReadCurrent() cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Ina219.ReadCurrent" />
-      <MemberSignature Language="VB.NET" Value="Public Function ReadCurrent () As Single" />
-      <MemberSignature Language="F#" Value="member this.ReadCurrent : unit -&gt; single" Usage="ina219.ReadCurrent " />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadCurrent () As ElectricCurrent" />
+      <MemberSignature Language="F#" Value="member this.ReadCurrent : unit -&gt; UnitsNet.ElectricCurrent" Usage="ina219.ReadCurrent " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Single</ReturnType>
+        <ReturnType>UnitsNet.ElectricCurrent</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
         <summary>
             Read the calculated current through the INA219.
             </summary>
-        <returns>The calculated current in Amperes</returns>
+        <returns>The calculated current</returns>
         <remarks>
             This value is determined by an internal calculation using the calibration register and the read shunt voltage and then scaled.
             </remarks>
       </Docs>
     </Member>
     <Member MemberName="ReadPower">
-      <MemberSignature Language="C#" Value="public float ReadPower ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 ReadPower() cil managed" />
+      <MemberSignature Language="C#" Value="public UnitsNet.Power ReadPower ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Power ReadPower() cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Ina219.ReadPower" />
-      <MemberSignature Language="VB.NET" Value="Public Function ReadPower () As Single" />
-      <MemberSignature Language="F#" Value="member this.ReadPower : unit -&gt; single" Usage="ina219.ReadPower " />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadPower () As Power" />
+      <MemberSignature Language="F#" Value="member this.ReadPower : unit -&gt; UnitsNet.Power" Usage="ina219.ReadPower " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Single</ReturnType>
+        <ReturnType>UnitsNet.Power</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
         <summary>
             Get the calculated power in the circuit being monitored by the INA219.
             </summary>
-        <returns>The calculated power in Watts</returns>
+        <returns>The calculated electric power</returns>
         <remarks>
             This value is determined by an internal calculation using the calulated current and the read bus voltage and then scaled.
             </remarks>
       </Docs>
     </Member>
     <Member MemberName="ReadShuntVoltage">
-      <MemberSignature Language="C#" Value="public float ReadShuntVoltage ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 ReadShuntVoltage() cil managed" />
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential ReadShuntVoltage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.ElectricPotential ReadShuntVoltage() cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Adc.Ina219.ReadShuntVoltage" />
-      <MemberSignature Language="VB.NET" Value="Public Function ReadShuntVoltage () As Single" />
-      <MemberSignature Language="F#" Value="member this.ReadShuntVoltage : unit -&gt; single" Usage="ina219.ReadShuntVoltage " />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadShuntVoltage () As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.ReadShuntVoltage : unit -&gt; UnitsNet.ElectricPotential" Usage="ina219.ReadShuntVoltage " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Single</ReturnType>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
         <summary>
             Read the measured shunt voltage.
             </summary>
-        <returns>The shunt voltage in Volts</returns>
+        <returns>The shunt potential difference</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

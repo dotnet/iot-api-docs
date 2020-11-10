@@ -20,18 +20,32 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Data106kbpsTypeA ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Rfid.Data106kbpsTypeA.#ctor" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C#" Value="public Data106kbpsTypeA (byte targetNumber, ushort atqa, byte sak, byte[] nfcId, byte[]? ats);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int8 targetNumber, unsigned int16 atqa, unsigned int8 sak, unsigned int8[] nfcId, unsigned int8[] ats) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Rfid.Data106kbpsTypeA.#ctor(System.Byte,System.UInt16,System.Byte,System.Byte[],System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (targetNumber As Byte, atqa As UShort, sak As Byte, nfcId As Byte(), ats As Byte())" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Rfid.Data106kbpsTypeA : byte * uint16 * byte * byte[] * byte[] -&gt; Iot.Device.Rfid.Data106kbpsTypeA" Usage="new Iot.Device.Rfid.Data106kbpsTypeA (targetNumber, atqa, sak, nfcId, ats)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Parameters />
+      <Parameters>
+        <Parameter Name="targetNumber" Type="System.Byte" />
+        <Parameter Name="atqa" Type="System.UInt16" />
+        <Parameter Name="sak" Type="System.Byte" />
+        <Parameter Name="nfcId" Type="System.Byte[]" />
+        <Parameter Name="ats" Type="System.Byte[]" />
+      </Parameters>
       <Docs>
-        <summary>To be added.</summary>
+        <param name="targetNumber">he target number, should be 1 or 2 with PN532.</param>
+        <param name="atqa">Known as SENS_RES in the documentation.</param>
+        <param name="sak">Know as SEL_RES in the documentation.</param>
+        <param name="nfcId">The unique NFC ID.</param>
+        <param name="ats">Potential extra Answer To Select data.</param>
+        <summary>
+            Create a 106 kbpd card like a Mifare card
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -59,7 +73,7 @@
       </Docs>
     </Member>
     <Member MemberName="Ats">
-      <MemberSignature Language="C#" Value="public byte[] Ats { get; set; }" />
+      <MemberSignature Language="C#" Value="public byte[]? Ats { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Ats" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.Rfid.Data106kbpsTypeA.Ats" />
       <MemberSignature Language="VB.NET" Value="Public Property Ats As Byte()" />

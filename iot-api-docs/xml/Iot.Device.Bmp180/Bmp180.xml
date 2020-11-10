@@ -96,18 +96,18 @@
       </Docs>
     </Member>
     <Member MemberName="ReadAltitude">
-      <MemberSignature Language="C#" Value="public double ReadAltitude ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 ReadAltitude() cil managed" />
+      <MemberSignature Language="C#" Value="public UnitsNet.Length ReadAltitude ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Length ReadAltitude() cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmp180.ReadAltitude" />
-      <MemberSignature Language="VB.NET" Value="Public Function ReadAltitude () As Double" />
-      <MemberSignature Language="F#" Value="member this.ReadAltitude : unit -&gt; double" Usage="bmp180.ReadAltitude " />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadAltitude () As Length" />
+      <MemberSignature Language="F#" Value="member this.ReadAltitude : unit -&gt; UnitsNet.Length" Usage="bmp180.ReadAltitude " />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Double</ReturnType>
+        <ReturnType>UnitsNet.Length</ReturnType>
       </ReturnValue>
       <Parameters />
       <Docs>
@@ -115,7 +115,7 @@
              Calculates the altitude in meters from the mean sea-level pressure.
             </summary>
         <returns>
-             Height in meters from the sensor
+             Height in meters above sea level
             </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -145,18 +145,18 @@
       </Docs>
     </Member>
     <Member MemberName="ReadAltitude">
-      <MemberSignature Language="C#" Value="public double ReadAltitude (UnitsNet.Pressure seaLevelPressure);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 ReadAltitude(valuetype UnitsNet.Pressure seaLevelPressure) cil managed" />
+      <MemberSignature Language="C#" Value="public UnitsNet.Length ReadAltitude (UnitsNet.Pressure seaLevelPressure);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Length ReadAltitude(valuetype UnitsNet.Pressure seaLevelPressure) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmp180.ReadAltitude(UnitsNet.Pressure)" />
-      <MemberSignature Language="VB.NET" Value="Public Function ReadAltitude (seaLevelPressure As Pressure) As Double" />
-      <MemberSignature Language="F#" Value="member this.ReadAltitude : UnitsNet.Pressure -&gt; double" Usage="bmp180.ReadAltitude seaLevelPressure" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadAltitude (seaLevelPressure As Pressure) As Length" />
+      <MemberSignature Language="F#" Value="member this.ReadAltitude : UnitsNet.Pressure -&gt; UnitsNet.Length" Usage="bmp180.ReadAltitude seaLevelPressure" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Double</ReturnType>
+        <ReturnType>UnitsNet.Length</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="seaLevelPressure" Type="UnitsNet.Pressure" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
@@ -169,7 +169,7 @@
              Calculates the altitude in meters from the specified sea-level pressure.
             </summary>
         <returns>
-             Height in meters from the sensor
+             Height above sea level
             </returns>
         <remarks>To be added.</remarks>
       </Docs>
@@ -206,15 +206,36 @@
       </Docs>
     </Member>
     <Member MemberName="ReadSeaLevelPressure">
-      <MemberSignature Language="C#" Value="public double ReadSeaLevelPressure (double altitude = 0);" FrameworkAlternate="iot-dotnet-1.0" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 ReadSeaLevelPressure(float64 altitude) cil managed" FrameworkAlternate="iot-dotnet-1.0" />
+      <MemberSignature Language="C#" Value="public UnitsNet.Pressure ReadSeaLevelPressure ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Pressure ReadSeaLevelPressure() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmp180.ReadSeaLevelPressure" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadSeaLevelPressure () As Pressure" />
+      <MemberSignature Language="F#" Value="member this.ReadSeaLevelPressure : unit -&gt; UnitsNet.Pressure" Usage="bmp180.ReadSeaLevelPressure " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Pressure</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Calculates the pressure at sea level, when the current altitude is 0.
+            </summary>
+        <returns>
+             Pressure
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadSeaLevelPressure">
+      <MemberSignature Language="C#" Value="public double ReadSeaLevelPressure (double altitude = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 ReadSeaLevelPressure(float64 altitude) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmp180.ReadSeaLevelPressure(System.Double)" />
-      <MemberSignature Language="VB.NET" Value="Public Function ReadSeaLevelPressure (Optional altitude As Double = 0) As Double" FrameworkAlternate="iot-dotnet-1.0" />
-      <MemberSignature Language="F#" Value="member this.ReadSeaLevelPressure : double -&gt; double" Usage="bmp180.ReadSeaLevelPressure altitude" FrameworkAlternate="iot-dotnet-1.0" />
-      <MemberSignature Language="C#" Value="public UnitsNet.Pressure ReadSeaLevelPressure (double altitude = 0);" FrameworkAlternate="iot-dotnet-1.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Pressure ReadSeaLevelPressure(float64 altitude) cil managed" FrameworkAlternate="iot-dotnet-1.1" />
-      <MemberSignature Language="VB.NET" Value="Public Function ReadSeaLevelPressure (Optional altitude As Double = 0) As Pressure" FrameworkAlternate="iot-dotnet-1.1" />
-      <MemberSignature Language="F#" Value="member this.ReadSeaLevelPressure : double -&gt; UnitsNet.Pressure" Usage="bmp180.ReadSeaLevelPressure altitude" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadSeaLevelPressure (Optional altitude As Double = 0) As Double" />
+      <MemberSignature Language="F#" Value="member this.ReadSeaLevelPressure : double -&gt; double" Usage="bmp180.ReadSeaLevelPressure altitude" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -222,11 +243,10 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType FrameworkAlternate="iot-dotnet-1.0">System.Double</ReturnType>
-        <ReturnType FrameworkAlternate="iot-dotnet-1.1">UnitsNet.Pressure</ReturnType>
+        <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="altitude" Type="System.Double" />
+        <Parameter Name="altitude" Type="System.Double" Index="0" FrameworkAlternate="iot-dotnet-1.0" />
       </Parameters>
       <Docs>
         <param name="altitude">
@@ -234,6 +254,36 @@
             </param>
         <summary>
              Calculates the pressure at sea level when given a known altitude in meter
+            </summary>
+        <returns>
+             Pressure
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadSeaLevelPressure">
+      <MemberSignature Language="C#" Value="public UnitsNet.Pressure ReadSeaLevelPressure (UnitsNet.Length altitude);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Pressure ReadSeaLevelPressure(valuetype UnitsNet.Length altitude) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmp180.ReadSeaLevelPressure(UnitsNet.Length)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadSeaLevelPressure (altitude As Length) As Pressure" />
+      <MemberSignature Language="F#" Value="member this.ReadSeaLevelPressure : UnitsNet.Length -&gt; UnitsNet.Pressure" Usage="bmp180.ReadSeaLevelPressure altitude" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Pressure</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="altitude" Type="UnitsNet.Length" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="altitude">
+             Altitude in meters
+            </param>
+        <summary>
+             Calculates the pressure at sea level when given a known altitude
             </summary>
         <returns>
              Pressure

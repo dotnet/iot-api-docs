@@ -1,0 +1,261 @@
+<Type Name="UFirePh" FullName="Iot.Device.UFire.UFirePh">
+  <TypeSignature Language="C#" Value="public class UFirePh : Iot.Device.UFire.UFireIse" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UFirePh extends Iot.Device.UFire.UFireIse" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.UFire.UFirePh" />
+  <TypeSignature Language="VB.NET" Value="Public Class UFirePh&#xA;Inherits UFireIse" />
+  <TypeSignature Language="F#" Value="type UFirePh = class&#xA;    inherit UFireIse" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.UFire.UFireIse</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Get pH measuremens from μFire ISE (ion-selective electrode) Probe Interface
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public UFirePh (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFirePh.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.UFire.UFirePh : System.Device.I2c.I2cDevice -&gt; Iot.Device.UFire.UFirePh" Usage="new Iot.Device.UFire.UFirePh i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device to be used</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.UFire.UFirePh" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalibrateProbeHigh">
+      <MemberSignature Language="C#" Value="public void CalibrateProbeHigh (float solutionpH);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CalibrateProbeHigh(float32 solutionpH) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFirePh.CalibrateProbeHigh(System.Single)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CalibrateProbeHigh (solutionpH As Single)" />
+      <MemberSignature Language="F#" Value="member this.CalibrateProbeHigh : single -&gt; unit" Usage="uFirePh.CalibrateProbeHigh solutionpH" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="solutionpH" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="solutionpH">The pH of the calibration solution</param>
+        <summary>
+            Calibrates the dual-point values for the high reading and saves them in the devices's EEPROM.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalibrateProbeLow">
+      <MemberSignature Language="C#" Value="public void CalibrateProbeLow (float solutionpH);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CalibrateProbeLow(float32 solutionpH) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFirePh.CalibrateProbeLow(System.Single)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CalibrateProbeLow (solutionpH As Single)" />
+      <MemberSignature Language="F#" Value="member this.CalibrateProbeLow : single -&gt; unit" Usage="uFirePh.CalibrateProbeLow solutionpH" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="solutionpH" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="solutionpH"> the pH of the calibration solution</param>
+        <summary>
+            Calibrates the dual-point values for the low reading and saves them in the devices's EEPROM.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalibrateSingle">
+      <MemberSignature Language="C#" Value="public void CalibrateSingle (float solutionpH);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CalibrateSingle(float32 solutionpH) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFirePh.CalibrateSingle(System.Single)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CalibrateSingle (solutionpH As Single)" />
+      <MemberSignature Language="F#" Value="member this.CalibrateSingle : single -&gt; unit" Usage="uFirePh.CalibrateSingle solutionpH" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="solutionpH" Type="System.Single" />
+      </Parameters>
+      <Docs>
+        <param name="solutionpH">pH value</param>
+        <summary>
+            Calibrates the probe using a single point using a pH value.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCalibrateHighReading">
+      <MemberSignature Language="C#" Value="public float GetCalibrateHighReading ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 GetCalibrateHighReading() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFirePh.GetCalibrateHighReading" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCalibrateHighReading () As Single" />
+      <MemberSignature Language="F#" Value="override this.GetCalibrateHighReading : unit -&gt; single" Usage="uFirePh.GetCalibrateHighReading " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the dual-point calibration high-reading value.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCalibrateHighReference">
+      <MemberSignature Language="C#" Value="public float GetCalibrateHighReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 GetCalibrateHighReference() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFirePh.GetCalibrateHighReference" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCalibrateHighReference () As Single" />
+      <MemberSignature Language="F#" Value="override this.GetCalibrateHighReference : unit -&gt; single" Usage="uFirePh.GetCalibrateHighReference " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the dual-point calibration high-reference value.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCalibrateLowReading">
+      <MemberSignature Language="C#" Value="public float GetCalibrateLowReading ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 GetCalibrateLowReading() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFirePh.GetCalibrateLowReading" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCalibrateLowReading () As Single" />
+      <MemberSignature Language="F#" Value="override this.GetCalibrateLowReading : unit -&gt; single" Usage="uFirePh.GetCalibrateLowReading " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the dual-point calibration low-reading value.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCalibrateLowReference">
+      <MemberSignature Language="C#" Value="public float GetCalibrateLowReference ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 GetCalibrateLowReference() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFirePh.GetCalibrateLowReference" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCalibrateLowReference () As Single" />
+      <MemberSignature Language="F#" Value="override this.GetCalibrateLowReference : unit -&gt; single" Usage="uFirePh.GetCalibrateLowReference " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the dual-point calibration low-reference value.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Ph">
+      <MemberSignature Language="C#" Value="public float Ph;" />
+      <MemberSignature Language="ILAsm" Value=".field public float32 Ph" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.UFire.UFirePh.Ph" />
+      <MemberSignature Language="VB.NET" Value="Public Ph As Single " />
+      <MemberSignature Language="F#" Value="val mutable Ph : single" Usage="Iot.Device.UFire.UFirePh.Ph" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            pH (Power of Hydrogen) units measurement
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryMeasurepH">
+      <MemberSignature Language="C#" Value="public bool TryMeasurepH (out float pH, UnitsNet.Temperature? temp = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryMeasurepH([out] float32&amp; pH, valuetype System.Nullable`1&lt;valuetype UnitsNet.Temperature&gt; temp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.UFire.UFirePh.TryMeasurepH(System.Single@,System.Nullable{UnitsNet.Temperature})" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryMeasurepH (ByRef pH As Single, Optional temp As Nullable(Of Temperature) = Nothing) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryMeasurepH : single * Nullable&lt;UnitsNet.Temperature&gt; -&gt; bool" Usage="uFirePh.TryMeasurepH (pH, temp)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pH" Type="System.Single" RefType="out" />
+        <Parameter Name="temp" Type="System.Nullable&lt;UnitsNet.Temperature&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pH">The measure pH value</param>
+        <param name="temp">Temperature compensation is available by passing the temperature.</param>
+        <summary>
+            Tries to measure pH (Power of Hydrogen).
+            </summary>
+        <returns>True if it could measure pH (Power of Hydrogen) else false</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

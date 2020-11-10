@@ -20,18 +20,34 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public VideoDeviceValue ();" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.VideoDeviceValue.#ctor" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberSignature Language="C#" Value="public VideoDeviceValue (string name, int minimum, int maximum, int step, int defaultValue, int currentValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, int32 minimum, int32 maximum, int32 step, int32 defaultValue, int32 currentValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Media.VideoDeviceValue.#ctor(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, minimum As Integer, maximum As Integer, step As Integer, defaultValue As Integer, currentValue As Integer)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Media.VideoDeviceValue : string * int * int * int * int * int -&gt; Iot.Device.Media.VideoDeviceValue" Usage="new Iot.Device.Media.VideoDeviceValue (name, minimum, maximum, step, defaultValue, currentValue)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
-      <Parameters />
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="minimum" Type="System.Int32" />
+        <Parameter Name="maximum" Type="System.Int32" />
+        <Parameter Name="step" Type="System.Int32" />
+        <Parameter Name="defaultValue" Type="System.Int32" />
+        <Parameter Name="currentValue" Type="System.Int32" />
+      </Parameters>
       <Docs>
-        <summary>To be added.</summary>
+        <param name="name">Control's name.</param>
+        <param name="minimum">Minimum value.</param>
+        <param name="maximum">Maximum value.</param>
+        <param name="step">Value change step.</param>
+        <param name="defaultValue">Control's default value.</param>
+        <param name="currentValue">Control's current value.</param>
+        <summary>
+            Instantiate VideoDeviceValue.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

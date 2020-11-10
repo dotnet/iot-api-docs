@@ -433,11 +433,11 @@
       </Docs>
     </Member>
     <Member MemberName="TryReadAltitude">
-      <MemberSignature Language="C#" Value="public bool TryReadAltitude (out double altitude);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadAltitude([out] float64&amp; altitude) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmx280Base.TryReadAltitude(System.Double@)" />
-      <MemberSignature Language="VB.NET" Value="Public Function TryReadAltitude (ByRef altitude As Double) As Boolean" />
-      <MemberSignature Language="F#" Value="member this.TryReadAltitude : double -&gt; bool" Usage="bmx280Base.TryReadAltitude altitude" />
+      <MemberSignature Language="C#" Value="public bool TryReadAltitude (out UnitsNet.Length altitude);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadAltitude([out] valuetype UnitsNet.Length&amp; altitude) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmx280Base.TryReadAltitude(UnitsNet.Length@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadAltitude (ByRef altitude As Length) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadAltitude : Length -&gt; bool" Usage="bmx280Base.TryReadAltitude altitude" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -447,7 +447,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="altitude" Type="System.Double" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="altitude" Type="UnitsNet.Length" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
       </Parameters>
       <Docs>
         <param name="altitude">
@@ -463,11 +463,11 @@
       </Docs>
     </Member>
     <Member MemberName="TryReadAltitude">
-      <MemberSignature Language="C#" Value="public bool TryReadAltitude (UnitsNet.Pressure seaLevelPressure, out double altitude);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadAltitude(valuetype UnitsNet.Pressure seaLevelPressure, [out] float64&amp; altitude) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmx280Base.TryReadAltitude(UnitsNet.Pressure,System.Double@)" />
-      <MemberSignature Language="VB.NET" Value="Public Function TryReadAltitude (seaLevelPressure As Pressure, ByRef altitude As Double) As Boolean" />
-      <MemberSignature Language="F#" Value="member this.TryReadAltitude : UnitsNet.Pressure * double -&gt; bool" Usage="bmx280Base.TryReadAltitude (seaLevelPressure, altitude)" />
+      <MemberSignature Language="C#" Value="public bool TryReadAltitude (UnitsNet.Pressure seaLevelPressure, out UnitsNet.Length altitude);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadAltitude(valuetype UnitsNet.Pressure seaLevelPressure, [out] valuetype UnitsNet.Length&amp; altitude) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bmx280Base.TryReadAltitude(UnitsNet.Pressure,UnitsNet.Length@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadAltitude (seaLevelPressure As Pressure, ByRef altitude As Length) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadAltitude : UnitsNet.Pressure * Length -&gt; bool" Usage="bmx280Base.TryReadAltitude (seaLevelPressure, altitude)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -478,7 +478,7 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="seaLevelPressure" Type="UnitsNet.Pressure" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="altitude" Type="System.Double" RefType="out" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="altitude" Type="UnitsNet.Length" RefType="out" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
       </Parameters>
       <Docs>
         <param name="seaLevelPressure">Sea-level pressure</param>
