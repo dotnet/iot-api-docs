@@ -20,26 +20,26 @@
   </Docs>
   <Members>
     <Member MemberName="CalculateAbsoluteHumidity">
-      <MemberSignature Language="C#" Value="public static double CalculateAbsoluteHumidity (UnitsNet.Temperature airTemperature, double relativeHumidity);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 CalculateAbsoluteHumidity(valuetype UnitsNet.Temperature airTemperature, float64 relativeHumidity) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateAbsoluteHumidity(UnitsNet.Temperature,System.Double)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateAbsoluteHumidity (airTemperature As Temperature, relativeHumidity As Double) As Double" />
-      <MemberSignature Language="F#" Value="static member CalculateAbsoluteHumidity : UnitsNet.Temperature * double -&gt; double" Usage="Iot.Device.Common.WeatherHelper.CalculateAbsoluteHumidity (airTemperature, relativeHumidity)" />
+      <MemberSignature Language="C#" Value="public static UnitsNet.Density CalculateAbsoluteHumidity (UnitsNet.Temperature airTemperature, UnitsNet.Ratio relativeHumidity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Density CalculateAbsoluteHumidity(valuetype UnitsNet.Temperature airTemperature, valuetype UnitsNet.Ratio relativeHumidity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateAbsoluteHumidity(UnitsNet.Temperature,UnitsNet.Ratio)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateAbsoluteHumidity (airTemperature As Temperature, relativeHumidity As Ratio) As Density" />
+      <MemberSignature Language="F#" Value="static member CalculateAbsoluteHumidity : UnitsNet.Temperature * UnitsNet.Ratio -&gt; UnitsNet.Density" Usage="Iot.Device.Common.WeatherHelper.CalculateAbsoluteHumidity (airTemperature, relativeHumidity)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Double</ReturnType>
+        <ReturnType>UnitsNet.Density</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="airTemperature" Type="UnitsNet.Temperature" />
-        <Parameter Name="relativeHumidity" Type="System.Double" />
+        <Parameter Name="relativeHumidity" Type="UnitsNet.Ratio" />
       </Parameters>
       <Docs>
         <param name="airTemperature">The dry air temperature</param>
-        <param name="relativeHumidity">The relative humidity (RH) expressed as a percentage</param>
+        <param name="relativeHumidity">The relative humidity (RH)</param>
         <summary>
             Calculates the absolute humidity in g/m³
             </summary>
@@ -50,11 +50,11 @@
       </Docs>
     </Member>
     <Member MemberName="CalculateActualVaporPressure">
-      <MemberSignature Language="C#" Value="public static UnitsNet.Pressure CalculateActualVaporPressure (UnitsNet.Temperature airTemperature, double relativeHumidity);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Pressure CalculateActualVaporPressure(valuetype UnitsNet.Temperature airTemperature, float64 relativeHumidity) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateActualVaporPressure(UnitsNet.Temperature,System.Double)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateActualVaporPressure (airTemperature As Temperature, relativeHumidity As Double) As Pressure" />
-      <MemberSignature Language="F#" Value="static member CalculateActualVaporPressure : UnitsNet.Temperature * double -&gt; UnitsNet.Pressure" Usage="Iot.Device.Common.WeatherHelper.CalculateActualVaporPressure (airTemperature, relativeHumidity)" />
+      <MemberSignature Language="C#" Value="public static UnitsNet.Pressure CalculateActualVaporPressure (UnitsNet.Temperature airTemperature, UnitsNet.Ratio relativeHumidity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Pressure CalculateActualVaporPressure(valuetype UnitsNet.Temperature airTemperature, valuetype UnitsNet.Ratio relativeHumidity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateActualVaporPressure(UnitsNet.Temperature,UnitsNet.Ratio)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateActualVaporPressure (airTemperature As Temperature, relativeHumidity As Ratio) As Pressure" />
+      <MemberSignature Language="F#" Value="static member CalculateActualVaporPressure : UnitsNet.Temperature * UnitsNet.Ratio -&gt; UnitsNet.Pressure" Usage="Iot.Device.Common.WeatherHelper.CalculateActualVaporPressure (airTemperature, relativeHumidity)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -65,11 +65,11 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="airTemperature" Type="UnitsNet.Temperature" />
-        <Parameter Name="relativeHumidity" Type="System.Double" />
+        <Parameter Name="relativeHumidity" Type="UnitsNet.Ratio" />
       </Parameters>
       <Docs>
         <param name="airTemperature">The dry air temperature</param>
-        <param name="relativeHumidity">The relative humidity (RH) expressed as a percentage</param>
+        <param name="relativeHumidity">The relative humidity (RH)</param>
         <summary>
             Calculates the actual vapor pressure.
             </summary>
@@ -78,18 +78,18 @@
       </Docs>
     </Member>
     <Member MemberName="CalculateAltitude">
-      <MemberSignature Language="C#" Value="public static double CalculateAltitude (UnitsNet.Pressure pressure);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 CalculateAltitude(valuetype UnitsNet.Pressure pressure) cil managed" />
+      <MemberSignature Language="C#" Value="public static UnitsNet.Length CalculateAltitude (UnitsNet.Pressure pressure);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Length CalculateAltitude(valuetype UnitsNet.Pressure pressure) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateAltitude(UnitsNet.Pressure)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateAltitude (pressure As Pressure) As Double" />
-      <MemberSignature Language="F#" Value="static member CalculateAltitude : UnitsNet.Pressure -&gt; double" Usage="Iot.Device.Common.WeatherHelper.CalculateAltitude pressure" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateAltitude (pressure As Pressure) As Length" />
+      <MemberSignature Language="F#" Value="static member CalculateAltitude : UnitsNet.Pressure -&gt; UnitsNet.Length" Usage="Iot.Device.Common.WeatherHelper.CalculateAltitude pressure" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Double</ReturnType>
+        <ReturnType>UnitsNet.Length</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="pressure" Type="UnitsNet.Pressure" />
@@ -99,23 +99,23 @@
         <summary>
             Calculates the altitude in meters from the given pressure. Assumes mean sea-level pressure and temperature of 15C.
             </summary>
-        <returns>The altitude in meters</returns>
+        <returns>The altitude</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="CalculateAltitude">
-      <MemberSignature Language="C#" Value="public static double CalculateAltitude (UnitsNet.Pressure pressure, UnitsNet.Pressure seaLevelPressure);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 CalculateAltitude(valuetype UnitsNet.Pressure pressure, valuetype UnitsNet.Pressure seaLevelPressure) cil managed" />
+      <MemberSignature Language="C#" Value="public static UnitsNet.Length CalculateAltitude (UnitsNet.Pressure pressure, UnitsNet.Pressure seaLevelPressure);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Length CalculateAltitude(valuetype UnitsNet.Pressure pressure, valuetype UnitsNet.Pressure seaLevelPressure) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateAltitude(UnitsNet.Pressure,UnitsNet.Pressure)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateAltitude (pressure As Pressure, seaLevelPressure As Pressure) As Double" />
-      <MemberSignature Language="F#" Value="static member CalculateAltitude : UnitsNet.Pressure * UnitsNet.Pressure -&gt; double" Usage="Iot.Device.Common.WeatherHelper.CalculateAltitude (pressure, seaLevelPressure)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateAltitude (pressure As Pressure, seaLevelPressure As Pressure) As Length" />
+      <MemberSignature Language="F#" Value="static member CalculateAltitude : UnitsNet.Pressure * UnitsNet.Pressure -&gt; UnitsNet.Length" Usage="Iot.Device.Common.WeatherHelper.CalculateAltitude (pressure, seaLevelPressure)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Double</ReturnType>
+        <ReturnType>UnitsNet.Length</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="pressure" Type="UnitsNet.Pressure" />
@@ -127,23 +127,23 @@
         <summary>
             Calculates the altitude in meters from the given pressure and sea-level pressure. Assumes temperature of 15C.
             </summary>
-        <returns>The altitude in meters</returns>
+        <returns>The altitude</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="CalculateAltitude">
-      <MemberSignature Language="C#" Value="public static double CalculateAltitude (UnitsNet.Pressure pressure, UnitsNet.Temperature airTemperature);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 CalculateAltitude(valuetype UnitsNet.Pressure pressure, valuetype UnitsNet.Temperature airTemperature) cil managed" />
+      <MemberSignature Language="C#" Value="public static UnitsNet.Length CalculateAltitude (UnitsNet.Pressure pressure, UnitsNet.Temperature airTemperature);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Length CalculateAltitude(valuetype UnitsNet.Pressure pressure, valuetype UnitsNet.Temperature airTemperature) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateAltitude(UnitsNet.Pressure,UnitsNet.Temperature)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateAltitude (pressure As Pressure, airTemperature As Temperature) As Double" />
-      <MemberSignature Language="F#" Value="static member CalculateAltitude : UnitsNet.Pressure * UnitsNet.Temperature -&gt; double" Usage="Iot.Device.Common.WeatherHelper.CalculateAltitude (pressure, airTemperature)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateAltitude (pressure As Pressure, airTemperature As Temperature) As Length" />
+      <MemberSignature Language="F#" Value="static member CalculateAltitude : UnitsNet.Pressure * UnitsNet.Temperature -&gt; UnitsNet.Length" Usage="Iot.Device.Common.WeatherHelper.CalculateAltitude (pressure, airTemperature)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Double</ReturnType>
+        <ReturnType>UnitsNet.Length</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="pressure" Type="UnitsNet.Pressure" />
@@ -155,23 +155,23 @@
         <summary>
             Calculates the altitude in meters from the given pressure and air temperature. Assumes mean sea-level pressure.
             </summary>
-        <returns>The altitude in meters</returns>
+        <returns>The altitude</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="CalculateAltitude">
-      <MemberSignature Language="C#" Value="public static double CalculateAltitude (UnitsNet.Pressure pressure, UnitsNet.Pressure seaLevelPressure, UnitsNet.Temperature airTemperature);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 CalculateAltitude(valuetype UnitsNet.Pressure pressure, valuetype UnitsNet.Pressure seaLevelPressure, valuetype UnitsNet.Temperature airTemperature) cil managed" />
+      <MemberSignature Language="C#" Value="public static UnitsNet.Length CalculateAltitude (UnitsNet.Pressure pressure, UnitsNet.Pressure seaLevelPressure, UnitsNet.Temperature airTemperature);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Length CalculateAltitude(valuetype UnitsNet.Pressure pressure, valuetype UnitsNet.Pressure seaLevelPressure, valuetype UnitsNet.Temperature airTemperature) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateAltitude(UnitsNet.Pressure,UnitsNet.Pressure,UnitsNet.Temperature)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateAltitude (pressure As Pressure, seaLevelPressure As Pressure, airTemperature As Temperature) As Double" />
-      <MemberSignature Language="F#" Value="static member CalculateAltitude : UnitsNet.Pressure * UnitsNet.Pressure * UnitsNet.Temperature -&gt; double" Usage="Iot.Device.Common.WeatherHelper.CalculateAltitude (pressure, seaLevelPressure, airTemperature)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateAltitude (pressure As Pressure, seaLevelPressure As Pressure, airTemperature As Temperature) As Length" />
+      <MemberSignature Language="F#" Value="static member CalculateAltitude : UnitsNet.Pressure * UnitsNet.Pressure * UnitsNet.Temperature -&gt; UnitsNet.Length" Usage="Iot.Device.Common.WeatherHelper.CalculateAltitude (pressure, seaLevelPressure, airTemperature)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Double</ReturnType>
+        <ReturnType>UnitsNet.Length</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="pressure" Type="UnitsNet.Pressure" />
@@ -185,16 +185,16 @@
         <summary>
             Calculates the altitude in meters from the given pressure, sea-level pressure and air temperature
             </summary>
-        <returns>The altitude in meters</returns>
+        <returns>The altitude</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="CalculateBarometricPressure">
-      <MemberSignature Language="C#" Value="public static UnitsNet.Pressure CalculateBarometricPressure (UnitsNet.Pressure measuredPressure, UnitsNet.Temperature measuredTemperature, double measurementAltitude);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Pressure CalculateBarometricPressure(valuetype UnitsNet.Pressure measuredPressure, valuetype UnitsNet.Temperature measuredTemperature, float64 measurementAltitude) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateBarometricPressure(UnitsNet.Pressure,UnitsNet.Temperature,System.Double)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateBarometricPressure (measuredPressure As Pressure, measuredTemperature As Temperature, measurementAltitude As Double) As Pressure" />
-      <MemberSignature Language="F#" Value="static member CalculateBarometricPressure : UnitsNet.Pressure * UnitsNet.Temperature * double -&gt; UnitsNet.Pressure" Usage="Iot.Device.Common.WeatherHelper.CalculateBarometricPressure (measuredPressure, measuredTemperature, measurementAltitude)" />
+      <MemberSignature Language="C#" Value="public static UnitsNet.Pressure CalculateBarometricPressure (UnitsNet.Pressure measuredPressure, UnitsNet.Temperature measuredTemperature, UnitsNet.Length measurementAltitude);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Pressure CalculateBarometricPressure(valuetype UnitsNet.Pressure measuredPressure, valuetype UnitsNet.Temperature measuredTemperature, valuetype UnitsNet.Length measurementAltitude) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateBarometricPressure(UnitsNet.Pressure,UnitsNet.Temperature,UnitsNet.Length)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateBarometricPressure (measuredPressure As Pressure, measuredTemperature As Temperature, measurementAltitude As Length) As Pressure" />
+      <MemberSignature Language="F#" Value="static member CalculateBarometricPressure : UnitsNet.Pressure * UnitsNet.Temperature * UnitsNet.Length -&gt; UnitsNet.Pressure" Usage="Iot.Device.Common.WeatherHelper.CalculateBarometricPressure (measuredPressure, measuredTemperature, measurementAltitude)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -206,16 +206,17 @@
       <Parameters>
         <Parameter Name="measuredPressure" Type="UnitsNet.Pressure" />
         <Parameter Name="measuredTemperature" Type="UnitsNet.Temperature" />
-        <Parameter Name="measurementAltitude" Type="System.Double" />
+        <Parameter Name="measurementAltitude" Type="UnitsNet.Length" />
       </Parameters>
       <Docs>
         <param name="measuredPressure">Measured pressure at the observation point</param>
         <param name="measuredTemperature">Measured temperature at the observation point</param>
         <param name="measurementAltitude">Height over sea level of the observation point (to be really precise, geopotential heights have
-            to be used above ~750m)</param>
+            to be used above ~750m). Do not use the height obtained by calling <see cref="M:Iot.Device.Common.WeatherHelper.CalculateAltitude(UnitsNet.Pressure)" />
+            or any of its overloads, since what would use redundant data.</param>
         <summary>
             Calculates the barometric pressure from a raw reading, using the reduction formula from the german met service.
-            This is a more complex variant of <see cref="M:Iot.Device.Common.WeatherHelper.CalculateSeaLevelPressure(UnitsNet.Pressure,System.Double,UnitsNet.Temperature)" />. It gives the value that a weather station gives
+            This is a more complex variant of <see cref="M:Iot.Device.Common.WeatherHelper.CalculateSeaLevelPressure(UnitsNet.Pressure,UnitsNet.Length,UnitsNet.Temperature)" />. It gives the value that a weather station gives
             for a particular area and is also used in meteorological charts.
             <example>
             You are at 650m over sea and measure a pressure of 948.7 hPa and a temperature of 24.0°C. The met service will show that
@@ -228,11 +229,11 @@
       </Docs>
     </Member>
     <Member MemberName="CalculateBarometricPressure">
-      <MemberSignature Language="C#" Value="public static UnitsNet.Pressure CalculateBarometricPressure (UnitsNet.Pressure measuredPressure, UnitsNet.Temperature measuredTemperature, double measurementAltitude, double relativeHumidity);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Pressure CalculateBarometricPressure(valuetype UnitsNet.Pressure measuredPressure, valuetype UnitsNet.Temperature measuredTemperature, float64 measurementAltitude, float64 relativeHumidity) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateBarometricPressure(UnitsNet.Pressure,UnitsNet.Temperature,System.Double,System.Double)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateBarometricPressure (measuredPressure As Pressure, measuredTemperature As Temperature, measurementAltitude As Double, relativeHumidity As Double) As Pressure" />
-      <MemberSignature Language="F#" Value="static member CalculateBarometricPressure : UnitsNet.Pressure * UnitsNet.Temperature * double * double -&gt; UnitsNet.Pressure" Usage="Iot.Device.Common.WeatherHelper.CalculateBarometricPressure (measuredPressure, measuredTemperature, measurementAltitude, relativeHumidity)" />
+      <MemberSignature Language="C#" Value="public static UnitsNet.Pressure CalculateBarometricPressure (UnitsNet.Pressure measuredPressure, UnitsNet.Temperature measuredTemperature, UnitsNet.Length measurementAltitude, UnitsNet.Ratio relativeHumidity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Pressure CalculateBarometricPressure(valuetype UnitsNet.Pressure measuredPressure, valuetype UnitsNet.Temperature measuredTemperature, valuetype UnitsNet.Length measurementAltitude, valuetype UnitsNet.Ratio relativeHumidity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateBarometricPressure(UnitsNet.Pressure,UnitsNet.Temperature,UnitsNet.Length,UnitsNet.Ratio)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateBarometricPressure (measuredPressure As Pressure, measuredTemperature As Temperature, measurementAltitude As Length, relativeHumidity As Ratio) As Pressure" />
+      <MemberSignature Language="F#" Value="static member CalculateBarometricPressure : UnitsNet.Pressure * UnitsNet.Temperature * UnitsNet.Length * UnitsNet.Ratio -&gt; UnitsNet.Pressure" Usage="Iot.Device.Common.WeatherHelper.CalculateBarometricPressure (measuredPressure, measuredTemperature, measurementAltitude, relativeHumidity)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -244,8 +245,8 @@
       <Parameters>
         <Parameter Name="measuredPressure" Type="UnitsNet.Pressure" />
         <Parameter Name="measuredTemperature" Type="UnitsNet.Temperature" />
-        <Parameter Name="measurementAltitude" Type="System.Double" />
-        <Parameter Name="relativeHumidity" Type="System.Double" />
+        <Parameter Name="measurementAltitude" Type="UnitsNet.Length" />
+        <Parameter Name="relativeHumidity" Type="UnitsNet.Ratio" />
       </Parameters>
       <Docs>
         <param name="measuredPressure">Measured pressure at the observation point</param>
@@ -255,7 +256,7 @@
         <param name="relativeHumidity">Relative humidity at point of measurement</param>
         <summary>
             Calculates the barometric pressure from a raw reading, using the reduction formula from the german met service.
-            This is a more complex variant of <see cref="M:Iot.Device.Common.WeatherHelper.CalculateSeaLevelPressure(UnitsNet.Pressure,System.Double,UnitsNet.Temperature)" />. It gives the value that a weather station gives
+            This is a more complex variant of <see cref="M:Iot.Device.Common.WeatherHelper.CalculateSeaLevelPressure(UnitsNet.Pressure,UnitsNet.Length,UnitsNet.Temperature)" />. It gives the value that a weather station gives
             for a particular area and is also used in meteorological charts.
             Use this method if you also have the relative humidity.
             </summary>
@@ -266,11 +267,11 @@
       </Docs>
     </Member>
     <Member MemberName="CalculateBarometricPressure">
-      <MemberSignature Language="C#" Value="public static UnitsNet.Pressure CalculateBarometricPressure (UnitsNet.Pressure measuredPressure, UnitsNet.Temperature measuredTemperature, UnitsNet.Pressure vaporPressure, double measurementAltitude);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Pressure CalculateBarometricPressure(valuetype UnitsNet.Pressure measuredPressure, valuetype UnitsNet.Temperature measuredTemperature, valuetype UnitsNet.Pressure vaporPressure, float64 measurementAltitude) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateBarometricPressure(UnitsNet.Pressure,UnitsNet.Temperature,UnitsNet.Pressure,System.Double)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateBarometricPressure (measuredPressure As Pressure, measuredTemperature As Temperature, vaporPressure As Pressure, measurementAltitude As Double) As Pressure" />
-      <MemberSignature Language="F#" Value="static member CalculateBarometricPressure : UnitsNet.Pressure * UnitsNet.Temperature * UnitsNet.Pressure * double -&gt; UnitsNet.Pressure" Usage="Iot.Device.Common.WeatherHelper.CalculateBarometricPressure (measuredPressure, measuredTemperature, vaporPressure, measurementAltitude)" />
+      <MemberSignature Language="C#" Value="public static UnitsNet.Pressure CalculateBarometricPressure (UnitsNet.Pressure measuredPressure, UnitsNet.Temperature measuredTemperature, UnitsNet.Pressure vaporPressure, UnitsNet.Length measurementAltitude);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Pressure CalculateBarometricPressure(valuetype UnitsNet.Pressure measuredPressure, valuetype UnitsNet.Temperature measuredTemperature, valuetype UnitsNet.Pressure vaporPressure, valuetype UnitsNet.Length measurementAltitude) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateBarometricPressure(UnitsNet.Pressure,UnitsNet.Temperature,UnitsNet.Pressure,UnitsNet.Length)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateBarometricPressure (measuredPressure As Pressure, measuredTemperature As Temperature, vaporPressure As Pressure, measurementAltitude As Length) As Pressure" />
+      <MemberSignature Language="F#" Value="static member CalculateBarometricPressure : UnitsNet.Pressure * UnitsNet.Temperature * UnitsNet.Pressure * UnitsNet.Length -&gt; UnitsNet.Pressure" Usage="Iot.Device.Common.WeatherHelper.CalculateBarometricPressure (measuredPressure, measuredTemperature, vaporPressure, measurementAltitude)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -283,7 +284,7 @@
         <Parameter Name="measuredPressure" Type="UnitsNet.Pressure" />
         <Parameter Name="measuredTemperature" Type="UnitsNet.Temperature" />
         <Parameter Name="vaporPressure" Type="UnitsNet.Pressure" />
-        <Parameter Name="measurementAltitude" Type="System.Double" />
+        <Parameter Name="measurementAltitude" Type="UnitsNet.Length" />
       </Parameters>
       <Docs>
         <param name="measuredPressure">Measured pressure at the observation point</param>
@@ -293,7 +294,7 @@
             to be used above ~750m)</param>
         <summary>
             Calculates the barometric pressure from a raw reading, using the reduction formula from the german met service.
-            This is a more complex variant of <see cref="M:Iot.Device.Common.WeatherHelper.CalculateSeaLevelPressure(UnitsNet.Pressure,System.Double,UnitsNet.Temperature)" />. It gives the value that a weather station gives
+            This is a more complex variant of <see cref="M:Iot.Device.Common.WeatherHelper.CalculateSeaLevelPressure(UnitsNet.Pressure,UnitsNet.Length,UnitsNet.Temperature)" />. It gives the value that a weather station gives
             for a particular area and is also used in meteorological charts.
             <example>
             You are at 650m over sea and measure a pressure of 948.7 hPa and a temperature of 24.0°C. The met service will show that
@@ -306,11 +307,11 @@
       </Docs>
     </Member>
     <Member MemberName="CalculateDewPoint">
-      <MemberSignature Language="C#" Value="public static UnitsNet.Temperature CalculateDewPoint (UnitsNet.Temperature airTemperature, double relativeHumidity);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Temperature CalculateDewPoint(valuetype UnitsNet.Temperature airTemperature, float64 relativeHumidity) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateDewPoint(UnitsNet.Temperature,System.Double)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateDewPoint (airTemperature As Temperature, relativeHumidity As Double) As Temperature" />
-      <MemberSignature Language="F#" Value="static member CalculateDewPoint : UnitsNet.Temperature * double -&gt; UnitsNet.Temperature" Usage="Iot.Device.Common.WeatherHelper.CalculateDewPoint (airTemperature, relativeHumidity)" />
+      <MemberSignature Language="C#" Value="public static UnitsNet.Temperature CalculateDewPoint (UnitsNet.Temperature airTemperature, UnitsNet.Ratio relativeHumidity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Temperature CalculateDewPoint(valuetype UnitsNet.Temperature airTemperature, valuetype UnitsNet.Ratio relativeHumidity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateDewPoint(UnitsNet.Temperature,UnitsNet.Ratio)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateDewPoint (airTemperature As Temperature, relativeHumidity As Ratio) As Temperature" />
+      <MemberSignature Language="F#" Value="static member CalculateDewPoint : UnitsNet.Temperature * UnitsNet.Ratio -&gt; UnitsNet.Temperature" Usage="Iot.Device.Common.WeatherHelper.CalculateDewPoint (airTemperature, relativeHumidity)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -321,11 +322,11 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="airTemperature" Type="UnitsNet.Temperature" />
-        <Parameter Name="relativeHumidity" Type="System.Double" />
+        <Parameter Name="relativeHumidity" Type="UnitsNet.Ratio" />
       </Parameters>
       <Docs>
         <param name="airTemperature">The dry air temperature</param>
-        <param name="relativeHumidity">The relative humidity (RH) expressed as a percentage</param>
+        <param name="relativeHumidity">The relative humidity (RH)</param>
         <summary>
             Calculates the dew point.
             </summary>
@@ -336,11 +337,11 @@
       </Docs>
     </Member>
     <Member MemberName="CalculateHeatIndex">
-      <MemberSignature Language="C#" Value="public static UnitsNet.Temperature CalculateHeatIndex (UnitsNet.Temperature airTemperature, double relativeHumidity);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Temperature CalculateHeatIndex(valuetype UnitsNet.Temperature airTemperature, float64 relativeHumidity) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateHeatIndex(UnitsNet.Temperature,System.Double)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateHeatIndex (airTemperature As Temperature, relativeHumidity As Double) As Temperature" />
-      <MemberSignature Language="F#" Value="static member CalculateHeatIndex : UnitsNet.Temperature * double -&gt; UnitsNet.Temperature" Usage="Iot.Device.Common.WeatherHelper.CalculateHeatIndex (airTemperature, relativeHumidity)" />
+      <MemberSignature Language="C#" Value="public static UnitsNet.Temperature CalculateHeatIndex (UnitsNet.Temperature airTemperature, UnitsNet.Ratio relativeHumidity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Temperature CalculateHeatIndex(valuetype UnitsNet.Temperature airTemperature, valuetype UnitsNet.Ratio relativeHumidity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateHeatIndex(UnitsNet.Temperature,UnitsNet.Ratio)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateHeatIndex (airTemperature As Temperature, relativeHumidity As Ratio) As Temperature" />
+      <MemberSignature Language="F#" Value="static member CalculateHeatIndex : UnitsNet.Temperature * UnitsNet.Ratio -&gt; UnitsNet.Temperature" Usage="Iot.Device.Common.WeatherHelper.CalculateHeatIndex (airTemperature, relativeHumidity)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -351,11 +352,11 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="airTemperature" Type="UnitsNet.Temperature" />
-        <Parameter Name="relativeHumidity" Type="System.Double" />
+        <Parameter Name="relativeHumidity" Type="UnitsNet.Ratio" />
       </Parameters>
       <Docs>
         <param name="airTemperature">The dry air temperature</param>
-        <param name="relativeHumidity">The relative humidity (RH) expressed as a percentage</param>
+        <param name="relativeHumidity">The relative humidity (RH) expressed as a ratio</param>
         <summary>
             The heat index (or apparent temperature) is used to measure the amount of discomfort
             during the summer months when heat and humidity often combine to make it feel hotter
@@ -366,11 +367,11 @@
       </Docs>
     </Member>
     <Member MemberName="CalculatePressure">
-      <MemberSignature Language="C#" Value="public static UnitsNet.Pressure CalculatePressure (UnitsNet.Pressure seaLevelPressure, double altitude, UnitsNet.Temperature airTemperature);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Pressure CalculatePressure(valuetype UnitsNet.Pressure seaLevelPressure, float64 altitude, valuetype UnitsNet.Temperature airTemperature) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculatePressure(UnitsNet.Pressure,System.Double,UnitsNet.Temperature)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculatePressure (seaLevelPressure As Pressure, altitude As Double, airTemperature As Temperature) As Pressure" />
-      <MemberSignature Language="F#" Value="static member CalculatePressure : UnitsNet.Pressure * double * UnitsNet.Temperature -&gt; UnitsNet.Pressure" Usage="Iot.Device.Common.WeatherHelper.CalculatePressure (seaLevelPressure, altitude, airTemperature)" />
+      <MemberSignature Language="C#" Value="public static UnitsNet.Pressure CalculatePressure (UnitsNet.Pressure seaLevelPressure, UnitsNet.Length altitude, UnitsNet.Temperature airTemperature);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Pressure CalculatePressure(valuetype UnitsNet.Pressure seaLevelPressure, valuetype UnitsNet.Length altitude, valuetype UnitsNet.Temperature airTemperature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculatePressure(UnitsNet.Pressure,UnitsNet.Length,UnitsNet.Temperature)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculatePressure (seaLevelPressure As Pressure, altitude As Length, airTemperature As Temperature) As Pressure" />
+      <MemberSignature Language="F#" Value="static member CalculatePressure : UnitsNet.Pressure * UnitsNet.Length * UnitsNet.Temperature -&gt; UnitsNet.Pressure" Usage="Iot.Device.Common.WeatherHelper.CalculatePressure (seaLevelPressure, altitude, airTemperature)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -381,7 +382,7 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="seaLevelPressure" Type="UnitsNet.Pressure" />
-        <Parameter Name="altitude" Type="System.Double" />
+        <Parameter Name="altitude" Type="UnitsNet.Length" />
         <Parameter Name="airTemperature" Type="UnitsNet.Temperature" />
       </Parameters>
       <Docs>
@@ -454,11 +455,11 @@
       </Docs>
     </Member>
     <Member MemberName="CalculateSeaLevelPressure">
-      <MemberSignature Language="C#" Value="public static UnitsNet.Pressure CalculateSeaLevelPressure (UnitsNet.Pressure pressure, double altitude, UnitsNet.Temperature airTemperature);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Pressure CalculateSeaLevelPressure(valuetype UnitsNet.Pressure pressure, float64 altitude, valuetype UnitsNet.Temperature airTemperature) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateSeaLevelPressure(UnitsNet.Pressure,System.Double,UnitsNet.Temperature)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateSeaLevelPressure (pressure As Pressure, altitude As Double, airTemperature As Temperature) As Pressure" />
-      <MemberSignature Language="F#" Value="static member CalculateSeaLevelPressure : UnitsNet.Pressure * double * UnitsNet.Temperature -&gt; UnitsNet.Pressure" Usage="Iot.Device.Common.WeatherHelper.CalculateSeaLevelPressure (pressure, altitude, airTemperature)" />
+      <MemberSignature Language="C#" Value="public static UnitsNet.Pressure CalculateSeaLevelPressure (UnitsNet.Pressure pressure, UnitsNet.Length altitude, UnitsNet.Temperature airTemperature);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Pressure CalculateSeaLevelPressure(valuetype UnitsNet.Pressure pressure, valuetype UnitsNet.Length altitude, valuetype UnitsNet.Temperature airTemperature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateSeaLevelPressure(UnitsNet.Pressure,UnitsNet.Length,UnitsNet.Temperature)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateSeaLevelPressure (pressure As Pressure, altitude As Length, airTemperature As Temperature) As Pressure" />
+      <MemberSignature Language="F#" Value="static member CalculateSeaLevelPressure : UnitsNet.Pressure * UnitsNet.Length * UnitsNet.Temperature -&gt; UnitsNet.Pressure" Usage="Iot.Device.Common.WeatherHelper.CalculateSeaLevelPressure (pressure, altitude, airTemperature)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -469,27 +470,27 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="pressure" Type="UnitsNet.Pressure" />
-        <Parameter Name="altitude" Type="System.Double" />
+        <Parameter Name="altitude" Type="UnitsNet.Length" />
         <Parameter Name="airTemperature" Type="UnitsNet.Temperature" />
       </Parameters>
       <Docs>
         <param name="pressure">The air pressure at the point of measurement</param>
-        <param name="altitude">The altitude in meters at the point of the measurement</param>
+        <param name="altitude">The altitude at the point of the measurement</param>
         <param name="airTemperature">The air temperature</param>
         <summary>
             Calculates the approximate sea-level pressure from given absolute pressure, altitude and air temperature.
             </summary>
         <returns>The estimated absolute sea-level pressure</returns>
         <remarks>
-          <see cref="M:Iot.Device.Common.WeatherHelper.CalculatePressure(UnitsNet.Pressure,System.Double,UnitsNet.Temperature)" /> solved for sea level pressure</remarks>
+          <see cref="M:Iot.Device.Common.WeatherHelper.CalculatePressure(UnitsNet.Pressure,UnitsNet.Length,UnitsNet.Temperature)" /> solved for sea level pressure</remarks>
       </Docs>
     </Member>
     <Member MemberName="CalculateTemperature">
-      <MemberSignature Language="C#" Value="public static UnitsNet.Temperature CalculateTemperature (UnitsNet.Pressure pressure, UnitsNet.Pressure seaLevelPressure, double altitude);" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Temperature CalculateTemperature(valuetype UnitsNet.Pressure pressure, valuetype UnitsNet.Pressure seaLevelPressure, float64 altitude) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateTemperature(UnitsNet.Pressure,UnitsNet.Pressure,System.Double)" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateTemperature (pressure As Pressure, seaLevelPressure As Pressure, altitude As Double) As Temperature" />
-      <MemberSignature Language="F#" Value="static member CalculateTemperature : UnitsNet.Pressure * UnitsNet.Pressure * double -&gt; UnitsNet.Temperature" Usage="Iot.Device.Common.WeatherHelper.CalculateTemperature (pressure, seaLevelPressure, altitude)" />
+      <MemberSignature Language="C#" Value="public static UnitsNet.Temperature CalculateTemperature (UnitsNet.Pressure pressure, UnitsNet.Pressure seaLevelPressure, UnitsNet.Length altitude);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Temperature CalculateTemperature(valuetype UnitsNet.Pressure pressure, valuetype UnitsNet.Pressure seaLevelPressure, valuetype UnitsNet.Length altitude) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateTemperature(UnitsNet.Pressure,UnitsNet.Pressure,UnitsNet.Length)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateTemperature (pressure As Pressure, seaLevelPressure As Pressure, altitude As Length) As Temperature" />
+      <MemberSignature Language="F#" Value="static member CalculateTemperature : UnitsNet.Pressure * UnitsNet.Pressure * UnitsNet.Length -&gt; UnitsNet.Temperature" Usage="Iot.Device.Common.WeatherHelper.CalculateTemperature (pressure, seaLevelPressure, altitude)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -501,7 +502,7 @@
       <Parameters>
         <Parameter Name="pressure" Type="UnitsNet.Pressure" />
         <Parameter Name="seaLevelPressure" Type="UnitsNet.Pressure" />
-        <Parameter Name="altitude" Type="System.Double" />
+        <Parameter Name="altitude" Type="UnitsNet.Length" />
       </Parameters>
       <Docs>
         <param name="pressure">The air pressure at the point for which temperature is being calculated</param>
@@ -512,7 +513,42 @@
             </summary>
         <returns>The standard temperature at the given altitude, when the given pressure difference is known</returns>
         <remarks>
-          <see cref="M:Iot.Device.Common.WeatherHelper.CalculatePressure(UnitsNet.Pressure,System.Double,UnitsNet.Temperature)" /> solved for temperature</remarks>
+          <see cref="M:Iot.Device.Common.WeatherHelper.CalculatePressure(UnitsNet.Pressure,UnitsNet.Length,UnitsNet.Temperature)" /> solved for temperature</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRelativeHumidityFromActualAirTemperature">
+      <MemberSignature Language="C#" Value="public static UnitsNet.Ratio GetRelativeHumidityFromActualAirTemperature (UnitsNet.Temperature airTemperatureFromHumiditySensor, UnitsNet.Ratio relativeHumidityMeasured, UnitsNet.Temperature airTemperatureFromBetterPlacedSensor);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Ratio GetRelativeHumidityFromActualAirTemperature(valuetype UnitsNet.Temperature airTemperatureFromHumiditySensor, valuetype UnitsNet.Ratio relativeHumidityMeasured, valuetype UnitsNet.Temperature airTemperatureFromBetterPlacedSensor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.GetRelativeHumidityFromActualAirTemperature(UnitsNet.Temperature,UnitsNet.Ratio,UnitsNet.Temperature)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetRelativeHumidityFromActualAirTemperature (airTemperatureFromHumiditySensor As Temperature, relativeHumidityMeasured As Ratio, airTemperatureFromBetterPlacedSensor As Temperature) As Ratio" />
+      <MemberSignature Language="F#" Value="static member GetRelativeHumidityFromActualAirTemperature : UnitsNet.Temperature * UnitsNet.Ratio * UnitsNet.Temperature -&gt; UnitsNet.Ratio" Usage="Iot.Device.Common.WeatherHelper.GetRelativeHumidityFromActualAirTemperature (airTemperatureFromHumiditySensor, relativeHumidityMeasured, airTemperatureFromBetterPlacedSensor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Ratio</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="airTemperatureFromHumiditySensor" Type="UnitsNet.Temperature" />
+        <Parameter Name="relativeHumidityMeasured" Type="UnitsNet.Ratio" />
+        <Parameter Name="airTemperatureFromBetterPlacedSensor" Type="UnitsNet.Temperature" />
+      </Parameters>
+      <Docs>
+        <param name="airTemperatureFromHumiditySensor">Temperature measured by the humidity sensor</param>
+        <param name="relativeHumidityMeasured">Humidity measured</param>
+        <param name="airTemperatureFromBetterPlacedSensor">Temperature measured by better placed sensor</param>
+        <summary>
+            Calculates a corrected relative humidity. This is useful if you have a temperature/humidity sensor that is
+            placed in a location where the temperature is different from the real ambient temperature (like it sits inside a hot case)
+            and another temperature-only sensor that gives more reasonable ambient temperature readings.
+            Do note that the relative humidity is dependent on the temperature, because it depends on how much water a volume of air
+            can contain, which increases with temperature.
+            </summary>
+        <returns>A corrected humidity. The value will be lower than the input value if the better placed sensor is cooler than
+            the "bad" sensor.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="MeanSeaLevel">

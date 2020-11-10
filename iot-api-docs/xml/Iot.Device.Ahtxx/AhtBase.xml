@@ -1,0 +1,172 @@
+<Type Name="AhtBase" FullName="Iot.Device.Ahtxx.AhtBase">
+  <TypeSignature Language="C#" Value="public abstract class AhtBase : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AhtBase extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ahtxx.AhtBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class AhtBase&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type AhtBase = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+             Base class for common functions of the AHT10/15 and AHT20 sensors.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AhtBase (System.Device.I2c.I2cDevice i2cDevice, byte initCommand);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, unsigned int8 initCommand) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ahtxx.AhtBase.#ctor(System.Device.I2c.I2cDevice,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, initCommand As Byte)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ahtxx.AhtBase : System.Device.I2c.I2cDevice * byte -&gt; Iot.Device.Ahtxx.AhtBase" Usage="new Iot.Device.Ahtxx.AhtBase (i2cDevice, initCommand)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="initCommand" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">To be added.</param>
+        <param name="initCommand">To be added.</param>
+        <summary>
+            Initializes a new instance of the binding for a sensor connected through I2C interface.
+            </summary>
+        <remarks>To be added.</remarks>
+        <paramref name="i2cDevice">Reference to the initialized I2C interface device</paramref>
+        <paramref name="initCommand">Type specific command for device initialization</paramref>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const int DefaultI2cAddress = 56;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultI2cAddress = (56)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Ahtxx.AhtBase.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Integer  = 56" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : int" Usage="Iot.Device.Ahtxx.AhtBase.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>56</MemberValue>
+      <Docs>
+        <summary>
+            Address of AHT10/15/20 device (0x38). This address is fix and cannot be changed.
+            This implies that only one device can be attached to a single I2C bus at a time.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ahtxx.AhtBase.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="ahtBase.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="T:System.IDisposable" />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ahtxx.AhtBase.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="ahtBase.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="T:System.IDisposable" />
+      </Docs>
+    </Member>
+    <Member MemberName="GetHumidity">
+      <MemberSignature Language="C#" Value="public UnitsNet.Ratio GetHumidity ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Ratio GetHumidity() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ahtxx.AhtBase.GetHumidity" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetHumidity () As Ratio" />
+      <MemberSignature Language="F#" Value="member this.GetHumidity : unit -&gt; UnitsNet.Ratio" Usage="ahtBase.GetHumidity " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Ratio</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the current relative humidity reading from the sensor.
+            Reading the humidity takes between 10 ms and 80 ms.
+            </summary>
+        <returns>Relative humidity reading</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTemperature">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature GetTemperature ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Temperature GetTemperature() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ahtxx.AhtBase.GetTemperature" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTemperature () As Temperature" />
+      <MemberSignature Language="F#" Value="member this.GetTemperature : unit -&gt; UnitsNet.Temperature" Usage="ahtBase.GetTemperature " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the current temperature reading from the sensor.
+            Reading the temperature takes between 10 ms and 80 ms.
+            </summary>
+        <returns>Temperature reading</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

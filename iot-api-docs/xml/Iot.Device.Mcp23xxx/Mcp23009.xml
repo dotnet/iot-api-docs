@@ -47,11 +47,11 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Mcp23009 (System.Device.I2c.I2cDevice i2cDevice, int reset = -1, int interrupt = -1, System.Device.Gpio.GpioController masterController = default, bool shouldDispose = true);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, int32 reset, int32 interrupt, class System.Device.Gpio.GpioController masterController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="C#" Value="public Mcp23009 (System.Device.I2c.I2cDevice i2cDevice, int reset = -1, int interrupt = -1, System.Device.Gpio.GpioController? controller = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, int32 reset, int32 interrupt, class System.Device.Gpio.GpioController controller, bool shouldDispose) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23009.#ctor(System.Device.I2c.I2cDevice,System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional reset As Integer = -1, Optional interrupt As Integer = -1, Optional masterController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
-      <MemberSignature Language="F#" Value="new Iot.Device.Mcp23xxx.Mcp23009 : System.Device.I2c.I2cDevice * int * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Mcp23xxx.Mcp23009" Usage="new Iot.Device.Mcp23xxx.Mcp23009 (i2cDevice, reset, interrupt, masterController, shouldDispose)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional reset As Integer = -1, Optional interrupt As Integer = -1, Optional controller As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp23xxx.Mcp23009 : System.Device.I2c.I2cDevice * int * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Mcp23xxx.Mcp23009" Usage="new Iot.Device.Mcp23xxx.Mcp23009 (i2cDevice, reset, interrupt, controller, shouldDispose)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -61,7 +61,7 @@
         <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
         <Parameter Name="reset" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
         <Parameter Name="interrupt" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="masterController" Type="System.Device.Gpio.GpioController" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
         <Parameter Name="shouldDispose" Type="System.Boolean" Index="4" FrameworkAlternate="iot-dotnet-1.1" />
       </Parameters>
       <Docs>
@@ -71,7 +71,7 @@
             will start in a disabled state.
             </param>
         <param name="interrupt">The input pin number that is connected to the interrupt, if any.</param>
-        <param name="masterController">
+        <param name="controller">
             The controller for the reset and interrupt pins. If not specified, the default controller will be used.
             </param>
         <param name="shouldDispose">True to dispose the Gpio Controller</param>

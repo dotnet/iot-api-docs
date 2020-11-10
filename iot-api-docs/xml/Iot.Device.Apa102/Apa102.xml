@@ -1,0 +1,119 @@
+<Type Name="Apa102" FullName="Iot.Device.Apa102.Apa102">
+  <TypeSignature Language="C#" Value="public class Apa102 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Apa102 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Apa102.Apa102" />
+  <TypeSignature Language="VB.NET" Value="Public Class Apa102&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Apa102 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Driver for APA102. A double line transmission integrated control LED
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Apa102 (System.Device.Spi.SpiDevice spi, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spi, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Apa102.Apa102.#ctor(System.Device.Spi.SpiDevice,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (spi As SpiDevice, length As Integer)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Apa102.Apa102 : System.Device.Spi.SpiDevice * int -&gt; Iot.Device.Apa102.Apa102" Usage="new Iot.Device.Apa102.Apa102 (spi, length)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spi" Type="System.Device.Spi.SpiDevice" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="spi">The SPI device used for communication.</param>
+        <param name="length">Number of LEDs</param>
+        <summary>
+            Initializes a new instance of the APA102 device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Apa102.Apa102.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="apa102.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Apa102.Apa102.Flush" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Flush ()" />
+      <MemberSignature Language="F#" Value="member this.Flush : unit -&gt; unit" Usage="apa102.Flush " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Update color data to LEDs
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Pixels">
+      <MemberSignature Language="C#" Value="public Span&lt;System.Drawing.Color&gt; Pixels { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Span`1&lt;valuetype System.Drawing.Color&gt; Pixels" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Apa102.Apa102.Pixels" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Pixels As Span(Of Color)" />
+      <MemberSignature Language="F#" Value="member this.Pixels : Span&lt;System.Drawing.Color&gt;" Usage="Iot.Device.Apa102.Apa102.Pixels" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Span&lt;System.Drawing.Color&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Colors of LEDs
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

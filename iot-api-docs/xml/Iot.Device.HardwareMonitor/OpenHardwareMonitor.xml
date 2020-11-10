@@ -1,0 +1,436 @@
+<Type Name="OpenHardwareMonitor" FullName="Iot.Device.HardwareMonitor.OpenHardwareMonitor">
+  <TypeSignature Language="C#" Value="public sealed class OpenHardwareMonitor : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed OpenHardwareMonitor extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.HardwareMonitor.OpenHardwareMonitor" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class OpenHardwareMonitor&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type OpenHardwareMonitor = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            This class connects to a running instance of OpenHardwareMonitor and reads out all available values.
+            This works only if OpenHardwareMonitor (https://openhardwaremonitor.org/) is currently running.
+            While the tool needs to be run with elevated permissions, the application using this binding does not.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public OpenHardwareMonitor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Constructs a new instance of this class.
+            The class can be constructed even if no sensors are available or OpenHardwareMonitor is not running (yet).
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.PlatformNotSupportedException">The operating system is not Windows.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableDerivedSensors">
+      <MemberSignature Language="C#" Value="public void DisableDerivedSensors ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DisableDerivedSensors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.DisableDerivedSensors" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DisableDerivedSensors ()" />
+      <MemberSignature Language="F#" Value="member this.DisableDerivedSensors : unit -&gt; unit" Usage="openHardwareMonitor.DisableDerivedSensors " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Remove the derived sensors from the active list.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="openHardwareMonitor.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="EnableDerivedSensors">
+      <MemberSignature Language="C#" Value="public void EnableDerivedSensors (UnitsNet.Area cpuDieSize = default, TimeSpan monitoringInterval = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnableDerivedSensors(valuetype UnitsNet.Area cpuDieSize, valuetype System.TimeSpan monitoringInterval) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.EnableDerivedSensors(UnitsNet.Area,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EnableDerivedSensors (Optional cpuDieSize As Area = Nothing, Optional monitoringInterval As TimeSpan = Nothing)" />
+      <MemberSignature Language="F#" Value="member this.EnableDerivedSensors : UnitsNet.Area * TimeSpan -&gt; unit" Usage="openHardwareMonitor.EnableDerivedSensors (cpuDieSize, monitoringInterval)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cpuDieSize" Type="UnitsNet.Area" />
+        <Parameter Name="monitoringInterval" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="cpuDieSize">Die size of your CPU, optional. Find your CPU on https://en.wikichip.org/ to find out. Note: This
+            value is usually much smaller than the size of the physical CPU.</param>
+        <param name="monitoringInterval">Monitoring interval for the derived sensors. Defaults to 500ms.</param>
+        <summary>
+            Adds some special derived sensors.
+            - For each power sensor, this adds another sensor that integrates power over time and so generated the energy used in W/h or
+            more conveniently, Kilowatthours (this is the unit the electricity bill bases on)
+            - Gives the heat flux for the primary CPU, using the given CPU die size (or a default value)
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">
+          <paramref name="monitoringInterval" /> is less than 0.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCpuLoad">
+      <MemberSignature Language="C#" Value="public UnitsNet.Ratio GetCpuLoad ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Ratio GetCpuLoad() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.GetCpuLoad" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCpuLoad () As Ratio" />
+      <MemberSignature Language="F#" Value="member this.GetCpuLoad : unit -&gt; UnitsNet.Ratio" Usage="openHardwareMonitor.GetCpuLoad " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Ratio</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the overall CPU Load
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHardwareComponents">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Iot.Device.HardwareMonitor.OpenHardwareMonitor.Hardware&gt; GetHardwareComponents ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class Iot.Device.HardwareMonitor.OpenHardwareMonitor/Hardware&gt; GetHardwareComponents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.GetHardwareComponents" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetHardwareComponents () As IList(Of OpenHardwareMonitor.Hardware)" />
+      <MemberSignature Language="F#" Value="member this.GetHardwareComponents : unit -&gt; System.Collections.Generic.IList&lt;Iot.Device.HardwareMonitor.OpenHardwareMonitor.Hardware&gt;" Usage="openHardwareMonitor.GetHardwareComponents " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Iot.Device.HardwareMonitor.OpenHardwareMonitor+Hardware&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a list of hardware components, such as "CPU", "GPU" or "Mainboard"
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSensorList">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IList&lt;Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor&gt; GetSensorList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IList`1&lt;class Iot.Device.HardwareMonitor.OpenHardwareMonitor/Sensor&gt; GetSensorList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.GetSensorList" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSensorList () As IList(Of OpenHardwareMonitor.Sensor)" />
+      <MemberSignature Language="F#" Value="member this.GetSensorList : unit -&gt; System.Collections.Generic.IList&lt;Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor&gt;" Usage="openHardwareMonitor.GetSensorList " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Iot.Device.HardwareMonitor.OpenHardwareMonitor+Sensor&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Query the list of all available sensors.
+            </summary>
+        <returns>A list of <see cref="T:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor" /> instances. May be empty.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Management.ManagementException">The WMI objects required are not available. Is OpenHardwareMonitor running?</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSensorList">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor&gt; GetSensorList (Iot.Device.HardwareMonitor.OpenHardwareMonitor.Hardware? forHardware);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Iot.Device.HardwareMonitor.OpenHardwareMonitor/Sensor&gt; GetSensorList(class Iot.Device.HardwareMonitor.OpenHardwareMonitor/Hardware forHardware) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.GetSensorList(Iot.Device.HardwareMonitor.OpenHardwareMonitor.Hardware)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSensorList (forHardware As OpenHardwareMonitor.Hardware) As IEnumerable(Of OpenHardwareMonitor.Sensor)" />
+      <MemberSignature Language="F#" Value="member this.GetSensorList : Iot.Device.HardwareMonitor.OpenHardwareMonitor.Hardware -&gt; seq&lt;Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor&gt;" Usage="openHardwareMonitor.GetSensorList forHardware" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Iot.Device.HardwareMonitor.OpenHardwareMonitor+Sensor&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forHardware" Type="Iot.Device.HardwareMonitor.OpenHardwareMonitor+Hardware" />
+      </Parameters>
+      <Docs>
+        <param name="forHardware">The module that should be queried</param>
+        <summary>
+            Get the list of sensors for a specific piece of hardware
+            </summary>
+        <returns>A list of sensors</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LogicalProcessors">
+      <MemberSignature Language="C#" Value="public int LogicalProcessors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 LogicalProcessors" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.LogicalProcessors" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LogicalProcessors As Integer" />
+      <MemberSignature Language="F#" Value="member this.LogicalProcessors : int" Usage="Iot.Device.HardwareMonitor.OpenHardwareMonitor.LogicalProcessors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Number of logical processors in the system
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MonitoringInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan MonitoringInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MonitoringInterval" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.MonitoringInterval" />
+      <MemberSignature Language="VB.NET" Value="Public Property MonitoringInterval As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.MonitoringInterval : TimeSpan with get, set" Usage="Iot.Device.HardwareMonitor.OpenHardwareMonitor.MonitoringInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The minimum monitoring interval.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartMonitoring">
+      <MemberSignature Language="C#" Value="public Iot.Device.HardwareMonitor.OpenHardwareMonitor.MonitoringJob StartMonitoring (Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor sensorToMonitor, TimeSpan monitoringInterval, Iot.Device.HardwareMonitor.OpenHardwareMonitor.OnNewValue onNewValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.HardwareMonitor.OpenHardwareMonitor/MonitoringJob StartMonitoring(class Iot.Device.HardwareMonitor.OpenHardwareMonitor/Sensor sensorToMonitor, valuetype System.TimeSpan monitoringInterval, class Iot.Device.HardwareMonitor.OpenHardwareMonitor/OnNewValue onNewValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.StartMonitoring(Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor,System.TimeSpan,Iot.Device.HardwareMonitor.OpenHardwareMonitor.OnNewValue)" />
+      <MemberSignature Language="VB.NET" Value="Public Function StartMonitoring (sensorToMonitor As OpenHardwareMonitor.Sensor, monitoringInterval As TimeSpan, onNewValue As OpenHardwareMonitor.OnNewValue) As OpenHardwareMonitor.MonitoringJob" />
+      <MemberSignature Language="F#" Value="member this.StartMonitoring : Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor * TimeSpan * Iot.Device.HardwareMonitor.OpenHardwareMonitor.OnNewValue -&gt; Iot.Device.HardwareMonitor.OpenHardwareMonitor.MonitoringJob" Usage="openHardwareMonitor.StartMonitoring (sensorToMonitor, monitoringInterval, onNewValue)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.HardwareMonitor.OpenHardwareMonitor+MonitoringJob</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sensorToMonitor" Type="Iot.Device.HardwareMonitor.OpenHardwareMonitor+Sensor" />
+        <Parameter Name="monitoringInterval" Type="System.TimeSpan" />
+        <Parameter Name="onNewValue" Type="Iot.Device.HardwareMonitor.OpenHardwareMonitor+OnNewValue" />
+      </Parameters>
+      <Docs>
+        <param name="sensorToMonitor">The sensor to monitor. The same sensor may be registered multiple times</param>
+        <param name="monitoringInterval">The monitoring interval. Will be rounded to the next 0.1s.</param>
+        <param name="onNewValue">Action to perform each time</param>
+        <summary>
+            Starts monitoring a sensor.
+            This will internally start a thread that calls the provided action each time the TimeSpan elapses.
+            </summary>
+        <returns>An identifier for the monitoring job</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopAllMonitoring">
+      <MemberSignature Language="C#" Value="public void StopAllMonitoring ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StopAllMonitoring() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.StopAllMonitoring" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StopAllMonitoring ()" />
+      <MemberSignature Language="F#" Value="member this.StopAllMonitoring : unit -&gt; unit" Usage="openHardwareMonitor.StopAllMonitoring " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stops all monitoring.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopMonitoring">
+      <MemberSignature Language="C#" Value="public void StopMonitoring (Iot.Device.HardwareMonitor.OpenHardwareMonitor.MonitoringJob job);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StopMonitoring(class Iot.Device.HardwareMonitor.OpenHardwareMonitor/MonitoringJob job) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.StopMonitoring(Iot.Device.HardwareMonitor.OpenHardwareMonitor.MonitoringJob)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StopMonitoring (job As OpenHardwareMonitor.MonitoringJob)" />
+      <MemberSignature Language="F#" Value="member this.StopMonitoring : Iot.Device.HardwareMonitor.OpenHardwareMonitor.MonitoringJob -&gt; unit" Usage="openHardwareMonitor.StopMonitoring job" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="job" Type="Iot.Device.HardwareMonitor.OpenHardwareMonitor+MonitoringJob" />
+      </Parameters>
+      <Docs>
+        <param name="job">Monitoring job</param>
+        <summary>
+            Stops monitoring of the given job.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetAverage&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public bool TryGetAverage&lt;T&gt; (Iot.Device.HardwareMonitor.OpenHardwareMonitor.Hardware hardware, out T? average) where T : UnitsNet.IQuantity;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetAverage&lt;(class UnitsNet.IQuantity) T&gt;(class Iot.Device.HardwareMonitor.OpenHardwareMonitor/Hardware hardware, [out] !!T&amp; average) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.TryGetAverage``1(Iot.Device.HardwareMonitor.OpenHardwareMonitor.Hardware,``0@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetAverage(Of T As IQuantity) (hardware As OpenHardwareMonitor.Hardware, ByRef average As T) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetAverage : Iot.Device.HardwareMonitor.OpenHardwareMonitor.Hardware * 'T -&gt; bool (requires 'T :&gt; UnitsNet.IQuantity)" Usage="openHardwareMonitor.TryGetAverage (hardware, average)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <InterfaceName>UnitsNet.IQuantity</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="hardware" Type="Iot.Device.HardwareMonitor.OpenHardwareMonitor+Hardware" />
+        <Parameter Name="average" Type="T" RefType="out" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">Type of value to query (i.e. Load, Power)</typeparam>
+        <param name="hardware">The hardware type (i.e. CPU)</param>
+        <param name="average">Gets the returned quantity</param>
+        <summary>
+            Tries to calculate the average of a set of sensors.
+            </summary>
+        <returns>True if at least one matching quantity was found</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">There were multiple sensors found, but they return different units (i.e. CPU temperature is
+            reported as Celsius for some cores and Fahrenheit for others)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetAverageCpuTemperature">
+      <MemberSignature Language="C#" Value="public bool TryGetAverageCpuTemperature (out UnitsNet.Temperature temperature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetAverageCpuTemperature([out] valuetype UnitsNet.Temperature&amp; temperature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.TryGetAverageCpuTemperature(UnitsNet.Temperature@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetAverageCpuTemperature (ByRef temperature As Temperature) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetAverageCpuTemperature : Temperature -&gt; bool" Usage="openHardwareMonitor.TryGetAverageCpuTemperature temperature" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="temperature" Type="UnitsNet.Temperature" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="temperature">To be added.</param>
+        <summary>
+            Gets the average CPU temperature (averaged over all CPU sensors / cores)
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetAverageGpuTemperature">
+      <MemberSignature Language="C#" Value="public bool TryGetAverageGpuTemperature (out UnitsNet.Temperature temperature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetAverageGpuTemperature([out] valuetype UnitsNet.Temperature&amp; temperature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.TryGetAverageGpuTemperature(UnitsNet.Temperature@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetAverageGpuTemperature (ByRef temperature As Temperature) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetAverageGpuTemperature : Temperature -&gt; bool" Usage="openHardwareMonitor.TryGetAverageGpuTemperature temperature" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="temperature" Type="UnitsNet.Temperature" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="temperature">The average GPU temperature</param>
+        <summary>
+            Gets the average GPU temperature (averaged over all GPU sensors / cores)
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

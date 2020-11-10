@@ -1,0 +1,189 @@
+<Type Name="CharlieplexSegment" FullName="Iot.Device.Multiplexing.CharlieplexSegment">
+  <TypeSignature Language="C#" Value="public class CharlieplexSegment : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CharlieplexSegment extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Multiplexing.CharlieplexSegment" />
+  <TypeSignature Language="VB.NET" Value="Public Class CharlieplexSegment&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type CharlieplexSegment = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Provides support for Charlieplex multiplexing.
+            https://wikipedia.org/wiki/Charlieplexing
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CharlieplexSegment (int[] pins, int nodeCount = 0, System.Device.Gpio.GpioController? gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32[] pins, int32 nodeCount, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.CharlieplexSegment.#ctor(System.Int32[],System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pins As Integer(), Optional nodeCount As Integer = 0, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Multiplexing.CharlieplexSegment : int[] * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Multiplexing.CharlieplexSegment" Usage="new Iot.Device.Multiplexing.CharlieplexSegment (pins, nodeCount, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pins" Type="System.Int32[]" />
+        <Parameter Name="nodeCount" Type="System.Int32" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pins">The set of pins to use.</param>
+        <param name="nodeCount">The count of nodes (like LEDs) that will be addressable. If 0, then the Charlieplex maximum is used for the pins provided (n^2-n).</param>
+        <param name="gpioController">The GPIO Controller used for interrupt handling.</param>
+        <param name="shouldDispose">True (the default) if the GPIO controller shall be disposed when disposing this instance.</param>
+        <summary>
+            Initializes a new Charlieplex type that can be use for multiplex over a relatively small number of GPIO pins.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplaySegment">
+      <MemberSignature Language="C#" Value="public void DisplaySegment (TimeSpan duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DisplaySegment(valuetype System.TimeSpan duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.CharlieplexSegment.DisplaySegment(System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DisplaySegment (duration As TimeSpan)" />
+      <MemberSignature Language="F#" Value="member this.DisplaySegment : TimeSpan -&gt; unit" Usage="charlieplexSegment.DisplaySegment duration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="duration" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="duration">Time to display segment.</param>
+        <summary>
+            Displays nodes in their current configuration for the specified duration.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.CharlieplexSegment.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="charlieplexSegment.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Cleanup.
+            Failing to dispose this class, especially when callbacks are active, may lead to undefined behavior.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNodes">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Multiplexing.CharlieplexSegmentNode[] GetNodes (int[] pins, int nodeCount = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype Iot.Device.Multiplexing.CharlieplexSegmentNode[] GetNodes(int32[] pins, int32 nodeCount) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.CharlieplexSegment.GetNodes(System.Int32[],System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetNodes (pins As Integer(), Optional nodeCount As Integer = 0) As CharlieplexSegmentNode()" />
+      <MemberSignature Language="F#" Value="static member GetNodes : int[] * int -&gt; Iot.Device.Multiplexing.CharlieplexSegmentNode[]" Usage="Iot.Device.Multiplexing.CharlieplexSegment.GetNodes (pins, nodeCount)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Multiplexing.CharlieplexSegmentNode[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pins" Type="System.Int32[]" />
+        <Parameter Name="nodeCount" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pins">The pins to use for the segment.</param>
+        <param name="nodeCount">The number of nodes to use. Default is the Charlieplex maximum.</param>
+        <summary>
+            Provides the set of Charlie nodes given the set of pins and the count provided.
+            If count = 0, then the Charlieplex maximum is used for the pins provided (n^2-n).
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NodeCount">
+      <MemberSignature Language="C#" Value="public int NodeCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NodeCount" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Multiplexing.CharlieplexSegment.NodeCount" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NodeCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.NodeCount : int" Usage="Iot.Device.Multiplexing.CharlieplexSegment.NodeCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The number of nodes (like LEDs) that can be addressed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (int node, System.Device.Gpio.PinValue value, int duration = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(int32 node, valuetype System.Device.Gpio.PinValue value, int32 duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.CharlieplexSegment.Write(System.Int32,System.Device.Gpio.PinValue,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (node As Integer, value As PinValue, Optional duration As Integer = 0)" />
+      <MemberSignature Language="F#" Value="member this.Write : int * System.Device.Gpio.PinValue * int -&gt; unit" Usage="charlieplexSegment.Write (node, value, duration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="node" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Device.Gpio.PinValue" />
+        <Parameter Name="duration" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="node">Node to update.</param>
+        <param name="value">Value to write.</param>
+        <param name="duration">Time to display segment, in milliseconds (default is 0; not displayed).</param>
+        <summary>
+            Write a PinValue to a node, to update Charlieplex segment.
+            Address scheme is 0-based. Given 8 nodes, addresses would be 0-7.
+            Displays nodes in their updated configuration for the specified duration.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

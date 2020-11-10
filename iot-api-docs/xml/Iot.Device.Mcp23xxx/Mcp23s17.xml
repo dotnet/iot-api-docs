@@ -51,11 +51,11 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Mcp23s17 (System.Device.Spi.SpiDevice spiDevice, int deviceAddress, int reset = -1, int interruptA = -1, int interruptB = -1, System.Device.Gpio.GpioController masterController = default, bool shouldDispose = true);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, int32 deviceAddress, int32 reset, int32 interruptA, int32 interruptB, class System.Device.Gpio.GpioController masterController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="C#" Value="public Mcp23s17 (System.Device.Spi.SpiDevice spiDevice, int deviceAddress, int reset = -1, int interruptA = -1, int interruptB = -1, System.Device.Gpio.GpioController? controller = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, int32 deviceAddress, int32 reset, int32 interruptA, int32 interruptB, class System.Device.Gpio.GpioController controller, bool shouldDispose) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp23xxx.Mcp23s17.#ctor(System.Device.Spi.SpiDevice,System.Int32,System.Int32,System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (spiDevice As SpiDevice, deviceAddress As Integer, Optional reset As Integer = -1, Optional interruptA As Integer = -1, Optional interruptB As Integer = -1, Optional masterController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
-      <MemberSignature Language="F#" Value="new Iot.Device.Mcp23xxx.Mcp23s17 : System.Device.Spi.SpiDevice * int * int * int * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Mcp23xxx.Mcp23s17" Usage="new Iot.Device.Mcp23xxx.Mcp23s17 (spiDevice, deviceAddress, reset, interruptA, interruptB, masterController, shouldDispose)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (spiDevice As SpiDevice, deviceAddress As Integer, Optional reset As Integer = -1, Optional interruptA As Integer = -1, Optional interruptB As Integer = -1, Optional controller As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp23xxx.Mcp23s17 : System.Device.Spi.SpiDevice * int * int * int * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Mcp23xxx.Mcp23s17" Usage="new Iot.Device.Mcp23xxx.Mcp23s17 (spiDevice, deviceAddress, reset, interruptA, interruptB, controller, shouldDispose)" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -67,7 +67,7 @@
         <Parameter Name="reset" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
         <Parameter Name="interruptA" Type="System.Int32" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
         <Parameter Name="interruptB" Type="System.Int32" Index="4" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="masterController" Type="System.Device.Gpio.GpioController" Index="5" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="5" FrameworkAlternate="iot-dotnet-1.1" />
         <Parameter Name="shouldDispose" Type="System.Boolean" Index="6" FrameworkAlternate="iot-dotnet-1.1" />
       </Parameters>
       <Docs>
@@ -76,7 +76,7 @@
         <param name="reset">The output pin number that is connected to the hardware reset, if any. If specified the device will start in a disabled state.</param>
         <param name="interruptA">The input pin number that is connected to the interrupt for Port A (INTA), if any.</param>
         <param name="interruptB">The input pin number that is connected to the interrupt for Port B (INTB), if any.</param>
-        <param name="masterController">The controller for the reset and interrupt pins. If not specified, the default controller will be used.</param>
+        <param name="controller">The controller for the reset and interrupt pins. If not specified, the default controller will be used.</param>
         <param name="shouldDispose">True to dispose the Gpio Controller</param>
         <summary>
             Initializes a new instance of the Mcp23s17 device.

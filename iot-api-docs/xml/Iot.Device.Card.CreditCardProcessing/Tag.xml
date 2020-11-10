@@ -31,7 +31,37 @@
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Create an empty tag
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Tag (uint tagNumber, byte[] data, uint parent = 0, System.Collections.Generic.List&lt;Iot.Device.Card.CreditCardProcessing.Tag&gt;? tags = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int32 tagNumber, unsigned int8[] data, unsigned int32 parent, class System.Collections.Generic.List`1&lt;class Iot.Device.Card.CreditCardProcessing.Tag&gt; tags) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.CreditCardProcessing.Tag.#ctor(System.UInt32,System.Byte[],System.UInt32,System.Collections.Generic.List{Iot.Device.Card.CreditCardProcessing.Tag})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (tagNumber As UInteger, data As Byte(), Optional parent As UInteger = 0, Optional tags As List(Of Tag) = Nothing)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Card.CreditCardProcessing.Tag : uint32 * byte[] * uint32 * System.Collections.Generic.List&lt;Iot.Device.Card.CreditCardProcessing.Tag&gt; -&gt; Iot.Device.Card.CreditCardProcessing.Tag" Usage="new Iot.Device.Card.CreditCardProcessing.Tag (tagNumber, data, parent, tags)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="tagNumber" Type="System.UInt32" />
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="parent" Type="System.UInt32" />
+        <Parameter Name="tags" Type="System.Collections.Generic.List&lt;Iot.Device.Card.CreditCardProcessing.Tag&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="tagNumber">The Tag number.</param>
+        <param name="data">The data of the Tag.</param>
+        <param name="parent">The Tag parent, 0 is it's a root Tag.</param>
+        <param name="tags">List of Tag that this Tag can contain if it's a constructed one or a template or a DOL.</param>
+        <summary>
+            Instantiate Tag class containing part of a card information
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

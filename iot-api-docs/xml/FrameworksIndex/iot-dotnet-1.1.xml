@@ -9,7 +9,6 @@
       <Member Id="M:Iot.Device.Adc.Ina219.#ctor(System.Device.I2c.I2cConnectionSettings)" />
       <Member Id="M:Iot.Device.Adc.Ina219.#ctor(System.Device.I2c.I2cDevice)" />
       <Member Id="M:Iot.Device.Adc.Ina219.Dispose" />
-      <Member Id="M:Iot.Device.Adc.Ina219.Dispose(System.Boolean)" />
       <Member Id="M:Iot.Device.Adc.Ina219.ReadBusVoltage" />
       <Member Id="M:Iot.Device.Adc.Ina219.ReadCurrent" />
       <Member Id="M:Iot.Device.Adc.Ina219.ReadPower" />
@@ -124,8 +123,8 @@
       <Member Id="M:Iot.Device.Ads1115.Ads1115.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Ads1115.InputMultiplexer,Iot.Device.Ads1115.MeasuringRange,Iot.Device.Ads1115.DataRate,Iot.Device.Ads1115.DeviceMode)" />
       <Member Id="M:Iot.Device.Ads1115.Ads1115.#ctor(System.Device.I2c.I2cDevice,System.Device.Gpio.GpioController,System.Int32,System.Boolean,Iot.Device.Ads1115.InputMultiplexer,Iot.Device.Ads1115.MeasuringRange,Iot.Device.Ads1115.DataRate,Iot.Device.Ads1115.DeviceMode)" />
       <Member Id="M:Iot.Device.Ads1115.Ads1115.Dispose" />
-      <Member Id="M:Iot.Device.Ads1115.Ads1115.EnableComparator(System.Double,System.Double,Iot.Device.Ads1115.ComparatorMode,Iot.Device.Ads1115.ComparatorQueue)" />
       <Member Id="M:Iot.Device.Ads1115.Ads1115.EnableComparator(System.Int16,System.Int16,Iot.Device.Ads1115.ComparatorMode,Iot.Device.Ads1115.ComparatorQueue)" />
+      <Member Id="M:Iot.Device.Ads1115.Ads1115.EnableComparator(UnitsNet.ElectricPotential,UnitsNet.ElectricPotential,Iot.Device.Ads1115.ComparatorMode,Iot.Device.Ads1115.ComparatorQueue)" />
       <Member Id="M:Iot.Device.Ads1115.Ads1115.EnableConversionReady" />
       <Member Id="M:Iot.Device.Ads1115.Ads1115.FrequencyFromDataRate(Iot.Device.Ads1115.DataRate)" />
       <Member Id="M:Iot.Device.Ads1115.Ads1115.MaxVoltageFromMeasuringRange(Iot.Device.Ads1115.MeasuringRange)" />
@@ -135,7 +134,7 @@
       <Member Id="M:Iot.Device.Ads1115.Ads1115.ReadRaw(Iot.Device.Ads1115.InputMultiplexer,Iot.Device.Ads1115.MeasuringRange,Iot.Device.Ads1115.DataRate)" />
       <Member Id="M:Iot.Device.Ads1115.Ads1115.ReadVoltage" />
       <Member Id="M:Iot.Device.Ads1115.Ads1115.ReadVoltage(Iot.Device.Ads1115.InputMultiplexer)" />
-      <Member Id="M:Iot.Device.Ads1115.Ads1115.VoltageToRaw(System.Double)" />
+      <Member Id="M:Iot.Device.Ads1115.Ads1115.VoltageToRaw(UnitsNet.ElectricPotential)" />
       <Member Id="P:Iot.Device.Ads1115.Ads1115.ComparatorLatching" />
       <Member Id="P:Iot.Device.Ads1115.Ads1115.ComparatorMode" />
       <Member Id="P:Iot.Device.Ads1115.Ads1115.ComparatorPolarity" />
@@ -224,6 +223,30 @@
       <Member Id="M:Iot.Device.Ags01db.Ags01db.Dispose" />
       <Member Id="P:Iot.Device.Ags01db.Ags01db.Concentration" />
       <Member Id="P:Iot.Device.Ags01db.Ags01db.Version" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Iot.Device.Ahtxx">
+    <Type Name="Iot.Device.Ahtxx.Aht10" Id="T:Iot.Device.Ahtxx.Aht10">
+      <Member Id="M:Iot.Device.Ahtxx.Aht10.#ctor(System.Device.I2c.I2cDevice)" />
+    </Type>
+    <Type Name="Iot.Device.Ahtxx.Aht20" Id="T:Iot.Device.Ahtxx.Aht20">
+      <Member Id="M:Iot.Device.Ahtxx.Aht20.#ctor(System.Device.I2c.I2cDevice)" />
+    </Type>
+    <Type Name="Iot.Device.Ahtxx.AhtBase" Id="T:Iot.Device.Ahtxx.AhtBase">
+      <Member Id="F:Iot.Device.Ahtxx.AhtBase.DefaultI2cAddress" />
+      <Member Id="M:Iot.Device.Ahtxx.AhtBase.#ctor(System.Device.I2c.I2cDevice,System.Byte)" />
+      <Member Id="M:Iot.Device.Ahtxx.AhtBase.Dispose" />
+      <Member Id="M:Iot.Device.Ahtxx.AhtBase.Dispose(System.Boolean)" />
+      <Member Id="M:Iot.Device.Ahtxx.AhtBase.GetHumidity" />
+      <Member Id="M:Iot.Device.Ahtxx.AhtBase.GetTemperature" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Iot.Device.Apa102">
+    <Type Name="Iot.Device.Apa102.Apa102" Id="T:Iot.Device.Apa102.Apa102">
+      <Member Id="M:Iot.Device.Apa102.Apa102.#ctor(System.Device.Spi.SpiDevice,System.Int32)" />
+      <Member Id="M:Iot.Device.Apa102.Apa102.Dispose" />
+      <Member Id="M:Iot.Device.Apa102.Apa102.Flush" />
+      <Member Id="P:Iot.Device.Apa102.Apa102.Pixels" />
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.Bh1745">
@@ -325,7 +348,8 @@
       <Member Id="M:Iot.Device.Bmp180.Bmp180.ReadAltitude" />
       <Member Id="M:Iot.Device.Bmp180.Bmp180.ReadAltitude(UnitsNet.Pressure)" />
       <Member Id="M:Iot.Device.Bmp180.Bmp180.ReadPressure" />
-      <Member Id="M:Iot.Device.Bmp180.Bmp180.ReadSeaLevelPressure(System.Double)" />
+      <Member Id="M:Iot.Device.Bmp180.Bmp180.ReadSeaLevelPressure" />
+      <Member Id="M:Iot.Device.Bmp180.Bmp180.ReadSeaLevelPressure(UnitsNet.Length)" />
       <Member Id="M:Iot.Device.Bmp180.Bmp180.ReadTemperature" />
       <Member Id="M:Iot.Device.Bmp180.Bmp180.SetSampling(Iot.Device.Bmp180.Sampling)" />
     </Type>
@@ -341,14 +365,15 @@
       <Member Id="M:Iot.Device.Bmxx80.Bme280.#ctor(System.Device.I2c.I2cDevice)" />
       <Member Id="M:Iot.Device.Bmxx80.Bme280.GetMeasurementDuration" />
       <Member Id="M:Iot.Device.Bmxx80.Bme280.SetDefaultConfiguration" />
-      <Member Id="M:Iot.Device.Bmxx80.Bme280.TryReadHumidity(System.Double@)" />
+      <Member Id="M:Iot.Device.Bmxx80.Bme280.TryReadHumidity(UnitsNet.Ratio@)" />
       <Member Id="P:Iot.Device.Bmxx80.Bme280.HumiditySampling" />
     </Type>
     <Type Name="Iot.Device.Bmxx80.Bme680" Id="T:Iot.Device.Bmxx80.Bme680">
       <Member Id="F:Iot.Device.Bmxx80.Bme680.DefaultI2cAddress" />
       <Member Id="F:Iot.Device.Bmxx80.Bme680.SecondaryI2cAddress" />
       <Member Id="M:Iot.Device.Bmxx80.Bme680.#ctor(System.Device.I2c.I2cDevice)" />
-      <Member Id="M:Iot.Device.Bmxx80.Bme680.ConfigureHeatingProfile(Iot.Device.Bmxx80.Bme680HeaterProfile,System.UInt16,System.UInt16,System.Double)" />
+      <Member Id="M:Iot.Device.Bmxx80.Bme680.#ctor(System.Device.I2c.I2cDevice,UnitsNet.Temperature)" />
+      <Member Id="M:Iot.Device.Bmxx80.Bme680.ConfigureHeatingProfile(Iot.Device.Bmxx80.Bme680HeaterProfile,UnitsNet.Temperature,UnitsNet.Duration,UnitsNet.Temperature)" />
       <Member Id="M:Iot.Device.Bmxx80.Bme680.GetMeasurementDuration(Iot.Device.Bmxx80.Bme680HeaterProfile)" />
       <Member Id="M:Iot.Device.Bmxx80.Bme680.ReadGasMeasurementInProcess" />
       <Member Id="M:Iot.Device.Bmxx80.Bme680.ReadHeaterIsStable" />
@@ -357,8 +382,8 @@
       <Member Id="M:Iot.Device.Bmxx80.Bme680.ReadPowerMode" />
       <Member Id="M:Iot.Device.Bmxx80.Bme680.SetDefaultConfiguration" />
       <Member Id="M:Iot.Device.Bmxx80.Bme680.SetPowerMode(Iot.Device.Bmxx80.PowerMode.Bme680PowerMode)" />
-      <Member Id="M:Iot.Device.Bmxx80.Bme680.TryReadGasResistance(System.Double@)" />
-      <Member Id="M:Iot.Device.Bmxx80.Bme680.TryReadHumidity(System.Double@)" />
+      <Member Id="M:Iot.Device.Bmxx80.Bme680.TryReadGasResistance(UnitsNet.ElectricResistance@)" />
+      <Member Id="M:Iot.Device.Bmxx80.Bme680.TryReadHumidity(UnitsNet.Ratio@)" />
       <Member Id="M:Iot.Device.Bmxx80.Bme680.TryReadPressure(UnitsNet.Pressure@)" />
       <Member Id="M:Iot.Device.Bmxx80.Bme680.TryReadTemperature(UnitsNet.Temperature@)" />
       <Member Id="P:Iot.Device.Bmxx80.Bme680.FilterMode" />
@@ -381,7 +406,7 @@
       <Member Id="F:Iot.Device.Bmxx80.Bme680HeaterProfile.Profile9" />
     </Type>
     <Type Name="Iot.Device.Bmxx80.Bme680HeaterProfileConfig" Id="T:Iot.Device.Bmxx80.Bme680HeaterProfileConfig">
-      <Member Id="M:Iot.Device.Bmxx80.Bme680HeaterProfileConfig.#ctor(Iot.Device.Bmxx80.Bme680HeaterProfile,System.UInt16,System.UInt16)" />
+      <Member Id="M:Iot.Device.Bmxx80.Bme680HeaterProfileConfig.#ctor(Iot.Device.Bmxx80.Bme680HeaterProfile,System.UInt16,UnitsNet.Duration)" />
       <Member Id="P:Iot.Device.Bmxx80.Bme680HeaterProfileConfig.HeaterDuration" />
       <Member Id="P:Iot.Device.Bmxx80.Bme680HeaterProfileConfig.HeaterProfile" />
       <Member Id="P:Iot.Device.Bmxx80.Bme680HeaterProfileConfig.HeaterResistance" />
@@ -399,8 +424,8 @@
       <Member Id="M:Iot.Device.Bmxx80.Bmx280Base.ReadStatus" />
       <Member Id="M:Iot.Device.Bmxx80.Bmx280Base.SetDefaultConfiguration" />
       <Member Id="M:Iot.Device.Bmxx80.Bmx280Base.SetPowerMode(Iot.Device.Bmxx80.PowerMode.Bmx280PowerMode)" />
-      <Member Id="M:Iot.Device.Bmxx80.Bmx280Base.TryReadAltitude(System.Double@)" />
-      <Member Id="M:Iot.Device.Bmxx80.Bmx280Base.TryReadAltitude(UnitsNet.Pressure,System.Double@)" />
+      <Member Id="M:Iot.Device.Bmxx80.Bmx280Base.TryReadAltitude(UnitsNet.Length@)" />
+      <Member Id="M:Iot.Device.Bmxx80.Bmx280Base.TryReadAltitude(UnitsNet.Pressure,UnitsNet.Length@)" />
       <Member Id="M:Iot.Device.Bmxx80.Bmx280Base.TryReadPressure(UnitsNet.Pressure@)" />
       <Member Id="M:Iot.Device.Bmxx80.Bmx280Base.TryReadTemperature(UnitsNet.Temperature@)" />
       <Member Id="P:Iot.Device.Bmxx80.Bmx280Base.FilterMode" />
@@ -556,7 +581,7 @@
       <Member Id="F:Iot.Device.Bno055.Error.SystemInitializationError" />
     </Type>
     <Type Name="Iot.Device.Bno055.Info" Id="T:Iot.Device.Bno055.Info">
-      <Member Id="M:Iot.Device.Bno055.Info.#ctor" />
+      <Member Id="M:Iot.Device.Bno055.Info.#ctor(System.Byte,System.Byte,System.Byte,System.Byte,System.Version,System.Version)" />
       <Member Id="P:Iot.Device.Bno055.Info.AcceleratorId" />
       <Member Id="P:Iot.Device.Bno055.Info.BootloaderVersion" />
       <Member Id="P:Iot.Device.Bno055.Info.ChipId" />
@@ -675,7 +700,7 @@
   </Namespace>
   <Namespace Name="Iot.Device.BrickPi3.Models">
     <Type Name="Iot.Device.BrickPi3.Models.BrickPiInfo" Id="T:Iot.Device.BrickPi3.Models.BrickPiInfo">
-      <Member Id="M:Iot.Device.BrickPi3.Models.BrickPiInfo.#ctor" />
+      <Member Id="M:Iot.Device.BrickPi3.Models.BrickPiInfo.#ctor(System.String,System.String,System.String,System.String,System.String)" />
       <Member Id="M:Iot.Device.BrickPi3.Models.BrickPiInfo.GetHardwareVersion" />
       <Member Id="M:Iot.Device.BrickPi3.Models.BrickPiInfo.GetSoftwareVersion" />
       <Member Id="P:Iot.Device.BrickPi3.Models.BrickPiInfo.Board" />
@@ -1240,6 +1265,7 @@
     </Type>
     <Type Name="Iot.Device.Card.CreditCardProcessing.Tag" Id="T:Iot.Device.Card.CreditCardProcessing.Tag">
       <Member Id="M:Iot.Device.Card.CreditCardProcessing.Tag.#ctor" />
+      <Member Id="M:Iot.Device.Card.CreditCardProcessing.Tag.#ctor(System.UInt32,System.Byte[],System.UInt32,System.Collections.Generic.List{Iot.Device.Card.CreditCardProcessing.Tag})" />
       <Member Id="M:Iot.Device.Card.CreditCardProcessing.Tag.SearchTag(System.Collections.Generic.List{Iot.Device.Card.CreditCardProcessing.Tag},System.UInt32)" />
       <Member Id="P:Iot.Device.Card.CreditCardProcessing.Tag.Data" />
       <Member Id="P:Iot.Device.Card.CreditCardProcessing.Tag.IsConstructed" />
@@ -1339,6 +1365,55 @@
       <Member Id="F:Iot.Device.Card.Mifare.MifareCardCommand.Transfer" />
       <Member Id="F:Iot.Device.Card.Mifare.MifareCardCommand.Write16Bytes" />
       <Member Id="F:Iot.Device.Card.Mifare.MifareCardCommand.Write4Bytes" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Iot.Device.Ccs811">
+    <Type Name="Iot.Device.Ccs811.Ccs811Sensor" Id="T:Iot.Device.Ccs811.Ccs811Sensor">
+      <Member Id="E:Iot.Device.Ccs811.Ccs811Sensor.MeasurementReady" />
+      <Member Id="F:Iot.Device.Ccs811.Ccs811Sensor.I2cFirstAddress" />
+      <Member Id="F:Iot.Device.Ccs811.Ccs811Sensor.I2cSecondAddress" />
+      <Member Id="F:Iot.Device.Ccs811.Ccs811Sensor.I2cTypicalFrequency" />
+      <Member Id="M:Iot.Device.Ccs811.Ccs811Sensor.#ctor(System.Device.I2c.I2cDevice,System.Device.Gpio.GpioController,System.Int32,System.Int32,System.Int32,System.Boolean)" />
+      <Member Id="M:Iot.Device.Ccs811.Ccs811Sensor.Dispose" />
+      <Member Id="M:Iot.Device.Ccs811.Ccs811Sensor.SetEnvironmentData(UnitsNet.Temperature,UnitsNet.Ratio)" />
+      <Member Id="M:Iot.Device.Ccs811.Ccs811Sensor.SetThreshold(UnitsNet.VolumeConcentration,UnitsNet.VolumeConcentration)" />
+      <Member Id="M:Iot.Device.Ccs811.Ccs811Sensor.TryReadGasData(UnitsNet.VolumeConcentration@,UnitsNet.VolumeConcentration@)" />
+      <Member Id="M:Iot.Device.Ccs811.Ccs811Sensor.TryReadGasData(UnitsNet.VolumeConcentration@,UnitsNet.VolumeConcentration@,UnitsNet.ElectricCurrent@,System.Int32@)" />
+      <Member Id="P:Iot.Device.Ccs811.Ccs811Sensor.ApplicationVersion" />
+      <Member Id="P:Iot.Device.Ccs811.Ccs811Sensor.BaselineAlgorithmCalculation" />
+      <Member Id="P:Iot.Device.Ccs811.Ccs811Sensor.BootloaderVersion" />
+      <Member Id="P:Iot.Device.Ccs811.Ccs811Sensor.Error" />
+      <Member Id="P:Iot.Device.Ccs811.Ccs811Sensor.HardwareIdentification" />
+      <Member Id="P:Iot.Device.Ccs811.Ccs811Sensor.HardwareVersion" />
+      <Member Id="P:Iot.Device.Ccs811.Ccs811Sensor.InterruptEnable" />
+      <Member Id="P:Iot.Device.Ccs811.Ccs811Sensor.IsDataReady" />
+      <Member Id="P:Iot.Device.Ccs811.Ccs811Sensor.OperationMode" />
+      <Member Id="P:Iot.Device.Ccs811.Ccs811Sensor.WakeEnable" />
+    </Type>
+    <Type Name="Iot.Device.Ccs811.Ccs811Sensor/MeasurementReadyHandler" Id="T:Iot.Device.Ccs811.Ccs811Sensor.MeasurementReadyHandler" />
+    <Type Name="Iot.Device.Ccs811.Error" Id="T:Iot.Device.Ccs811.Error">
+      <Member Id="F:Iot.Device.Ccs811.Error.HeaterCurrentFault" />
+      <Member Id="F:Iot.Device.Ccs811.Error.HeaterVoltageFault" />
+      <Member Id="F:Iot.Device.Ccs811.Error.MaximumSensorResistanceReached" />
+      <Member Id="F:Iot.Device.Ccs811.Error.MeasurementModeInvalid" />
+      <Member Id="F:Iot.Device.Ccs811.Error.NoError" />
+      <Member Id="F:Iot.Device.Ccs811.Error.ReadRegisterInvalid" />
+      <Member Id="F:Iot.Device.Ccs811.Error.WriteRegisterInvalid" />
+    </Type>
+    <Type Name="Iot.Device.Ccs811.MeasurementArgs" Id="T:Iot.Device.Ccs811.MeasurementArgs">
+      <Member Id="M:Iot.Device.Ccs811.MeasurementArgs.#ctor" />
+      <Member Id="P:Iot.Device.Ccs811.MeasurementArgs.EquivalentCO2" />
+      <Member Id="P:Iot.Device.Ccs811.MeasurementArgs.EquivalentTotalVolatileOrganicCompound" />
+      <Member Id="P:Iot.Device.Ccs811.MeasurementArgs.MeasurementSuccess" />
+      <Member Id="P:Iot.Device.Ccs811.MeasurementArgs.RawAdcReading" />
+      <Member Id="P:Iot.Device.Ccs811.MeasurementArgs.RawCurrentSelected" />
+    </Type>
+    <Type Name="Iot.Device.Ccs811.OperationMode" Id="T:Iot.Device.Ccs811.OperationMode">
+      <Member Id="F:Iot.Device.Ccs811.OperationMode.ConstantPower1Second" />
+      <Member Id="F:Iot.Device.Ccs811.OperationMode.ConstantPower250Millisecond" />
+      <Member Id="F:Iot.Device.Ccs811.OperationMode.Idle" />
+      <Member Id="F:Iot.Device.Ccs811.OperationMode.LowPower60Second" />
+      <Member Id="F:Iot.Device.Ccs811.OperationMode.PluseHeating10Second" />
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.CharacterLcd">
@@ -1481,27 +1556,30 @@
   <Namespace Name="Iot.Device.Common">
     <Type Name="Iot.Device.Common.WeatherHelper" Id="T:Iot.Device.Common.WeatherHelper">
       <Member Id="F:Iot.Device.Common.WeatherHelper.MeanSeaLevel" />
-      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateAbsoluteHumidity(UnitsNet.Temperature,System.Double)" />
-      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateActualVaporPressure(UnitsNet.Temperature,System.Double)" />
+      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateAbsoluteHumidity(UnitsNet.Temperature,UnitsNet.Ratio)" />
+      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateActualVaporPressure(UnitsNet.Temperature,UnitsNet.Ratio)" />
       <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateAltitude(UnitsNet.Pressure)" />
       <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateAltitude(UnitsNet.Pressure,UnitsNet.Pressure)" />
       <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateAltitude(UnitsNet.Pressure,UnitsNet.Pressure,UnitsNet.Temperature)" />
       <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateAltitude(UnitsNet.Pressure,UnitsNet.Temperature)" />
-      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateBarometricPressure(UnitsNet.Pressure,UnitsNet.Temperature,System.Double)" />
-      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateBarometricPressure(UnitsNet.Pressure,UnitsNet.Temperature,System.Double,System.Double)" />
-      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateBarometricPressure(UnitsNet.Pressure,UnitsNet.Temperature,UnitsNet.Pressure,System.Double)" />
-      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateDewPoint(UnitsNet.Temperature,System.Double)" />
-      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateHeatIndex(UnitsNet.Temperature,System.Double)" />
-      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculatePressure(UnitsNet.Pressure,System.Double,UnitsNet.Temperature)" />
+      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateBarometricPressure(UnitsNet.Pressure,UnitsNet.Temperature,UnitsNet.Length)" />
+      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateBarometricPressure(UnitsNet.Pressure,UnitsNet.Temperature,UnitsNet.Length,UnitsNet.Ratio)" />
+      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateBarometricPressure(UnitsNet.Pressure,UnitsNet.Temperature,UnitsNet.Pressure,UnitsNet.Length)" />
+      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateDewPoint(UnitsNet.Temperature,UnitsNet.Ratio)" />
+      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateHeatIndex(UnitsNet.Temperature,UnitsNet.Ratio)" />
+      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculatePressure(UnitsNet.Pressure,UnitsNet.Length,UnitsNet.Temperature)" />
       <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateSaturatedVaporPressureOverIce(UnitsNet.Temperature)" />
       <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateSaturatedVaporPressureOverWater(UnitsNet.Temperature)" />
-      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateSeaLevelPressure(UnitsNet.Pressure,System.Double,UnitsNet.Temperature)" />
-      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateTemperature(UnitsNet.Pressure,UnitsNet.Pressure,System.Double)" />
+      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateSeaLevelPressure(UnitsNet.Pressure,UnitsNet.Length,UnitsNet.Temperature)" />
+      <Member Id="M:Iot.Device.Common.WeatherHelper.CalculateTemperature(UnitsNet.Pressure,UnitsNet.Pressure,UnitsNet.Length)" />
+      <Member Id="M:Iot.Device.Common.WeatherHelper.GetRelativeHumidityFromActualAirTemperature(UnitsNet.Temperature,UnitsNet.Ratio,UnitsNet.Temperature)" />
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.CpuTemperature">
     <Type Name="Iot.Device.CpuTemperature.CpuTemperature" Id="T:Iot.Device.CpuTemperature.CpuTemperature">
       <Member Id="M:Iot.Device.CpuTemperature.CpuTemperature.#ctor" />
+      <Member Id="M:Iot.Device.CpuTemperature.CpuTemperature.Dispose" />
+      <Member Id="M:Iot.Device.CpuTemperature.CpuTemperature.ReadTemperatures" />
       <Member Id="P:Iot.Device.CpuTemperature.CpuTemperature.IsAvailable" />
       <Member Id="P:Iot.Device.CpuTemperature.CpuTemperature.Temperature" />
     </Type>
@@ -1510,10 +1588,10 @@
     <Type Name="Iot.Device.DCMotor.DCMotor" Id="T:Iot.Device.DCMotor.DCMotor">
       <Member Id="M:Iot.Device.DCMotor.DCMotor.#ctor(System.Device.Gpio.GpioController,System.Boolean)" />
       <Member Id="M:Iot.Device.DCMotor.DCMotor.Create(System.Device.Pwm.PwmChannel)" />
-      <Member Id="M:Iot.Device.DCMotor.DCMotor.Create(System.Device.Pwm.PwmChannel,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <Member Id="M:Iot.Device.DCMotor.DCMotor.Create(System.Device.Pwm.PwmChannel,System.Int32,System.Device.Gpio.GpioController,System.Boolean,System.Boolean)" />
       <Member Id="M:Iot.Device.DCMotor.DCMotor.Create(System.Device.Pwm.PwmChannel,System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
       <Member Id="M:Iot.Device.DCMotor.DCMotor.Create(System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
-      <Member Id="M:Iot.Device.DCMotor.DCMotor.Create(System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <Member Id="M:Iot.Device.DCMotor.DCMotor.Create(System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean,System.Boolean)" />
       <Member Id="M:Iot.Device.DCMotor.DCMotor.Create(System.Int32,System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
       <Member Id="M:Iot.Device.DCMotor.DCMotor.Dispose" />
       <Member Id="M:Iot.Device.DCMotor.DCMotor.Dispose(System.Boolean)" />
@@ -1705,13 +1783,11 @@
     <Type Name="Iot.Device.ExplorerHat.ExplorerHat" Id="T:Iot.Device.ExplorerHat.ExplorerHat">
       <Member Id="M:Iot.Device.ExplorerHat.ExplorerHat.#ctor(System.Device.Gpio.GpioController,System.Boolean)" />
       <Member Id="M:Iot.Device.ExplorerHat.ExplorerHat.Dispose" />
-      <Member Id="M:Iot.Device.ExplorerHat.ExplorerHat.Dispose(System.Boolean)" />
       <Member Id="P:Iot.Device.ExplorerHat.ExplorerHat.Lights" />
       <Member Id="P:Iot.Device.ExplorerHat.ExplorerHat.Motors" />
     </Type>
     <Type Name="Iot.Device.ExplorerHat.Led" Id="T:Iot.Device.ExplorerHat.Led">
       <Member Id="M:Iot.Device.ExplorerHat.Led.Dispose" />
-      <Member Id="M:Iot.Device.ExplorerHat.Led.Dispose(System.Boolean)" />
       <Member Id="M:Iot.Device.ExplorerHat.Led.Off" />
       <Member Id="M:Iot.Device.ExplorerHat.Led.On" />
       <Member Id="P:Iot.Device.ExplorerHat.Led.IsOn" />
@@ -1719,7 +1795,6 @@
     </Type>
     <Type Name="Iot.Device.ExplorerHat.Lights" Id="T:Iot.Device.ExplorerHat.Lights">
       <Member Id="M:Iot.Device.ExplorerHat.Lights.Dispose" />
-      <Member Id="M:Iot.Device.ExplorerHat.Lights.Dispose(System.Boolean)" />
       <Member Id="M:Iot.Device.ExplorerHat.Lights.GetEnumerator" />
       <Member Id="M:Iot.Device.ExplorerHat.Lights.Off" />
       <Member Id="M:Iot.Device.ExplorerHat.Lights.On" />
@@ -1736,7 +1811,6 @@
     <Type Name="Iot.Device.ExplorerHat.Motors" Id="T:Iot.Device.ExplorerHat.Motors">
       <Member Id="M:Iot.Device.ExplorerHat.Motors.Backwards(System.Double)" />
       <Member Id="M:Iot.Device.ExplorerHat.Motors.Dispose" />
-      <Member Id="M:Iot.Device.ExplorerHat.Motors.Dispose(System.Boolean)" />
       <Member Id="M:Iot.Device.ExplorerHat.Motors.Forwards(System.Double)" />
       <Member Id="M:Iot.Device.ExplorerHat.Motors.Stop" />
       <Member Id="P:Iot.Device.ExplorerHat.Motors.One" />
@@ -1745,7 +1819,7 @@
   </Namespace>
   <Namespace Name="Iot.Device.Ft4222">
     <Type Name="Iot.Device.Ft4222.DeviceInformation" Id="T:Iot.Device.Ft4222.DeviceInformation">
-      <Member Id="M:Iot.Device.Ft4222.DeviceInformation.#ctor" />
+      <Member Id="M:Iot.Device.Ft4222.DeviceInformation.#ctor(Iot.Device.Ft4222.FtFlag,Iot.Device.Ft4222.FtDevice,System.UInt32,System.UInt32,System.String,System.String)" />
       <Member Id="P:Iot.Device.Ft4222.DeviceInformation.Description" />
       <Member Id="P:Iot.Device.Ft4222.DeviceInformation.Flags" />
       <Member Id="P:Iot.Device.Ft4222.DeviceInformation.Id" />
@@ -1824,6 +1898,7 @@
   </Namespace>
   <Namespace Name="Iot.Device.GoPiGo3">
     <Type Name="Iot.Device.GoPiGo3.GoPiGo" Id="T:Iot.Device.GoPiGo3.GoPiGo">
+      <Member Id="F:Iot.Device.GoPiGo3.GoPiGo.GroveSensor" />
       <Member Id="M:Iot.Device.GoPiGo3.GoPiGo.#ctor(System.Device.Spi.SpiDevice,System.Byte,System.Boolean,System.Boolean)" />
       <Member Id="M:Iot.Device.GoPiGo3.GoPiGo.Dispose" />
       <Member Id="M:Iot.Device.GoPiGo3.GoPiGo.GetBoard" />
@@ -1866,7 +1941,6 @@
       <Member Id="P:Iot.Device.GoPiGo3.GoPiGo.EncoderTicksPerRotation" />
       <Member Id="P:Iot.Device.GoPiGo3.GoPiGo.GoPiGo3Info" />
       <Member Id="P:Iot.Device.GoPiGo3.GoPiGo.GoPiGoVoltage" />
-      <Member Id="P:Iot.Device.GoPiGo3.GoPiGo.GroveSensor" />
       <Member Id="P:Iot.Device.GoPiGo3.GoPiGo.MotorGearRatio" />
       <Member Id="P:Iot.Device.GoPiGo3.GoPiGo.MotorTicksPerDegree" />
       <Member Id="P:Iot.Device.GoPiGo3.GoPiGo.SpiAddress" />
@@ -1881,7 +1955,7 @@
       <Member Id="F:Iot.Device.GoPiGo3.Models.GoPiGo3Led.LedWifi" />
     </Type>
     <Type Name="Iot.Device.GoPiGo3.Models.GoPiGoInfo" Id="T:Iot.Device.GoPiGo3.Models.GoPiGoInfo">
-      <Member Id="M:Iot.Device.GoPiGo3.Models.GoPiGoInfo.#ctor" />
+      <Member Id="M:Iot.Device.GoPiGo3.Models.GoPiGoInfo.#ctor(System.String,System.String,System.Version,System.Version,System.String)" />
       <Member Id="P:Iot.Device.GoPiGo3.Models.GoPiGoInfo.Board" />
       <Member Id="P:Iot.Device.GoPiGo3.Models.GoPiGoInfo.HardwareVersion" />
       <Member Id="P:Iot.Device.GoPiGo3.Models.GoPiGoInfo.Id" />
@@ -2141,6 +2215,7 @@
   </Namespace>
   <Namespace Name="Iot.Device.Graphics">
     <Type Name="Iot.Device.Graphics.BdfFont" Id="T:Iot.Device.Graphics.BdfFont">
+      <Member Id="M:Iot.Device.Graphics.BdfFont.#ctor" />
       <Member Id="M:Iot.Device.Graphics.BdfFont.GetCharData(System.Char,System.ReadOnlySpan{System.UInt16}@)" />
       <Member Id="M:Iot.Device.Graphics.BdfFont.GetCharData(System.Int32,System.Span{System.Int32}@,System.Boolean)" />
       <Member Id="M:Iot.Device.Graphics.BdfFont.Load(System.String)" />
@@ -2229,7 +2304,7 @@
       <Member Id="F:Iot.Device.GrovePiDevice.Models.GrovePort.DigitalPin8" />
     </Type>
     <Type Name="Iot.Device.GrovePiDevice.Models.Info" Id="T:Iot.Device.GrovePiDevice.Models.Info">
-      <Member Id="M:Iot.Device.GrovePiDevice.Models.Info.#ctor" />
+      <Member Id="M:Iot.Device.GrovePiDevice.Models.Info.#ctor(System.Version)" />
       <Member Id="P:Iot.Device.GrovePiDevice.Models.Info.Board" />
       <Member Id="P:Iot.Device.GrovePiDevice.Models.Info.Manufacturer" />
       <Member Id="P:Iot.Device.GrovePiDevice.Models.Info.SoftwareVersion" />
@@ -2364,11 +2439,71 @@
       <Member Id="P:Iot.Device.GrovePiDevice.Sensors.UltrasonicSensor.Value" />
     </Type>
   </Namespace>
+  <Namespace Name="Iot.Device.HardwareMonitor">
+    <Type Name="Iot.Device.HardwareMonitor.OpenHardwareMonitor" Id="T:Iot.Device.HardwareMonitor.OpenHardwareMonitor">
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.#ctor" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.DisableDerivedSensors" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Dispose" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.EnableDerivedSensors(UnitsNet.Area,System.TimeSpan)" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.GetCpuLoad" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.GetHardwareComponents" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.GetSensorList" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.GetSensorList(Iot.Device.HardwareMonitor.OpenHardwareMonitor.Hardware)" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.StartMonitoring(Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor,System.TimeSpan,Iot.Device.HardwareMonitor.OpenHardwareMonitor.OnNewValue)" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.StopAllMonitoring" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.StopMonitoring(Iot.Device.HardwareMonitor.OpenHardwareMonitor.MonitoringJob)" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.TryGetAverage``1(Iot.Device.HardwareMonitor.OpenHardwareMonitor.Hardware,``0@)" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.TryGetAverageCpuTemperature(UnitsNet.Temperature@)" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.TryGetAverageGpuTemperature(UnitsNet.Temperature@)" />
+      <Member Id="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.LogicalProcessors" />
+      <Member Id="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.MonitoringInterval" />
+    </Type>
+    <Type Name="Iot.Device.HardwareMonitor.OpenHardwareMonitor/Hardware" Id="T:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Hardware">
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Hardware.#ctor(System.String,System.String,System.String,System.String)" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Hardware.ToString" />
+      <Member Id="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Hardware.Identifier" />
+      <Member Id="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Hardware.Name" />
+      <Member Id="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Hardware.Parent" />
+      <Member Id="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Hardware.Type" />
+    </Type>
+    <Type Name="Iot.Device.HardwareMonitor.OpenHardwareMonitor/MonitoringJob" Id="T:Iot.Device.HardwareMonitor.OpenHardwareMonitor.MonitoringJob">
+      <Member Id="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.MonitoringJob.Interval" />
+      <Member Id="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.MonitoringJob.Sensor" />
+    </Type>
+    <Type Name="Iot.Device.HardwareMonitor.OpenHardwareMonitor/OnNewValue" Id="T:Iot.Device.HardwareMonitor.OpenHardwareMonitor.OnNewValue" />
+    <Type Name="Iot.Device.HardwareMonitor.OpenHardwareMonitor/Sensor" Id="T:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor">
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.#ctor(System.Management.ManagementObject,System.String,System.String,System.String,Iot.Device.HardwareMonitor.SensorType)" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.Dispose" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.ToString" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.TryGetValue(UnitsNet.IQuantity@)" />
+      <Member Id="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.TryGetValue``1(``0@)" />
+      <Member Id="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.Identifier" />
+      <Member Id="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.Name" />
+      <Member Id="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.Parent" />
+      <Member Id="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.SensorType" />
+    </Type>
+    <Type Name="Iot.Device.HardwareMonitor.SensorType" Id="T:Iot.Device.HardwareMonitor.SensorType">
+      <Member Id="F:Iot.Device.HardwareMonitor.SensorType.Clock" />
+      <Member Id="F:Iot.Device.HardwareMonitor.SensorType.Control" />
+      <Member Id="F:Iot.Device.HardwareMonitor.SensorType.Current" />
+      <Member Id="F:Iot.Device.HardwareMonitor.SensorType.Energy" />
+      <Member Id="F:Iot.Device.HardwareMonitor.SensorType.Fan" />
+      <Member Id="F:Iot.Device.HardwareMonitor.SensorType.Flow" />
+      <Member Id="F:Iot.Device.HardwareMonitor.SensorType.HeatFlux" />
+      <Member Id="F:Iot.Device.HardwareMonitor.SensorType.Level" />
+      <Member Id="F:Iot.Device.HardwareMonitor.SensorType.Load" />
+      <Member Id="F:Iot.Device.HardwareMonitor.SensorType.Power" />
+      <Member Id="F:Iot.Device.HardwareMonitor.SensorType.Temperature" />
+      <Member Id="F:Iot.Device.HardwareMonitor.SensorType.Unknown" />
+      <Member Id="F:Iot.Device.HardwareMonitor.SensorType.Voltage" />
+    </Type>
+  </Namespace>
   <Namespace Name="Iot.Device.Hcsr04">
     <Type Name="Iot.Device.Hcsr04.Hcsr04" Id="T:Iot.Device.Hcsr04.Hcsr04">
       <Member Id="M:Iot.Device.Hcsr04.Hcsr04.#ctor(System.Device.Gpio.GpioController,System.Int32,System.Int32,System.Boolean)" />
       <Member Id="M:Iot.Device.Hcsr04.Hcsr04.#ctor(System.Int32,System.Int32,System.Device.Gpio.PinNumberingScheme)" />
       <Member Id="M:Iot.Device.Hcsr04.Hcsr04.Dispose" />
+      <Member Id="M:Iot.Device.Hcsr04.Hcsr04.TryGetDistance(UnitsNet.Length@)" />
       <Member Id="P:Iot.Device.Hcsr04.Hcsr04.Distance" />
     </Type>
   </Namespace>
@@ -2619,6 +2754,16 @@
       <Member Id="P:Iot.Device.LEDMatrix.RGBLedMatrix.MatrixHeight" />
       <Member Id="P:Iot.Device.LEDMatrix.RGBLedMatrix.PWMDuration" />
       <Member Id="P:Iot.Device.LEDMatrix.RGBLedMatrix.Width" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Iot.Device.LiquidLevel">
+    <Type Name="Iot.Device.LiquidLevel.LiquidLevelSwitch" Id="T:Iot.Device.LiquidLevel.LiquidLevelSwitch">
+      <Member Id="M:Iot.Device.LiquidLevel.LiquidLevelSwitch.#ctor(System.Int32,System.Device.Gpio.PinValue,System.Device.Gpio.GpioController,System.Device.Gpio.PinNumberingScheme,System.Boolean)" />
+      <Member Id="M:Iot.Device.LiquidLevel.LiquidLevelSwitch.Dispose" />
+      <Member Id="M:Iot.Device.LiquidLevel.LiquidLevelSwitch.IsLiquidPresent" />
+    </Type>
+    <Type Name="Iot.Device.LiquidLevel.Llc200d3sh" Id="T:Iot.Device.LiquidLevel.Llc200d3sh">
+      <Member Id="M:Iot.Device.LiquidLevel.Llc200d3sh.#ctor(System.Int32,System.Device.Gpio.GpioController,System.Device.Gpio.PinNumberingScheme,System.Boolean)" />
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.Lm75">
@@ -3909,7 +4054,7 @@
       <Member Id="P:Iot.Device.Media.VideoDevice.Settings" />
     </Type>
     <Type Name="Iot.Device.Media.VideoDeviceValue" Id="T:Iot.Device.Media.VideoDeviceValue">
-      <Member Id="M:Iot.Device.Media.VideoDeviceValue.#ctor" />
+      <Member Id="M:Iot.Device.Media.VideoDeviceValue.#ctor(System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" />
       <Member Id="P:Iot.Device.Media.VideoDeviceValue.CurrentValue" />
       <Member Id="P:Iot.Device.Media.VideoDeviceValue.DefaultValue" />
       <Member Id="P:Iot.Device.Media.VideoDeviceValue.Maximum" />
@@ -3946,6 +4091,26 @@
       <Member Id="F:Iot.Device.Media.WhiteBalanceEffect.Incandescent" />
       <Member Id="F:Iot.Device.Media.WhiteBalanceEffect.Manual" />
       <Member Id="F:Iot.Device.Media.WhiteBalanceEffect.Shade" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Iot.Device.Mhz19b">
+    <Type Name="Iot.Device.Mhz19b.AbmState" Id="T:Iot.Device.Mhz19b.AbmState">
+      <Member Id="F:Iot.Device.Mhz19b.AbmState.Off" />
+      <Member Id="F:Iot.Device.Mhz19b.AbmState.On" />
+    </Type>
+    <Type Name="Iot.Device.Mhz19b.DetectionRange" Id="T:Iot.Device.Mhz19b.DetectionRange">
+      <Member Id="F:Iot.Device.Mhz19b.DetectionRange.Range2000" />
+      <Member Id="F:Iot.Device.Mhz19b.DetectionRange.Range5000" />
+    </Type>
+    <Type Name="Iot.Device.Mhz19b.Mhz19b" Id="T:Iot.Device.Mhz19b.Mhz19b">
+      <Member Id="M:Iot.Device.Mhz19b.Mhz19b.#ctor(System.IO.Stream,System.Boolean)" />
+      <Member Id="M:Iot.Device.Mhz19b.Mhz19b.#ctor(System.String)" />
+      <Member Id="M:Iot.Device.Mhz19b.Mhz19b.Dispose" />
+      <Member Id="M:Iot.Device.Mhz19b.Mhz19b.GetCo2Reading" />
+      <Member Id="M:Iot.Device.Mhz19b.Mhz19b.PerformSpanPointCalibration(UnitsNet.VolumeConcentration)" />
+      <Member Id="M:Iot.Device.Mhz19b.Mhz19b.PerformZeroPointCalibration" />
+      <Member Id="M:Iot.Device.Mhz19b.Mhz19b.SetAutomaticBaselineCorrection(Iot.Device.Mhz19b.AbmState)" />
+      <Member Id="M:Iot.Device.Mhz19b.Mhz19b.SetSensorDetectionRange(Iot.Device.Mhz19b.DetectionRange)" />
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.Mlx90614">
@@ -4010,6 +4175,76 @@
       <Member Id="P:Iot.Device.Mpr121.Mpr121Configuration.NoiseCountLimitRising" />
       <Member Id="P:Iot.Device.Mpr121.Mpr121Configuration.NoiseHalfDeltaFalling" />
       <Member Id="P:Iot.Device.Mpr121.Mpr121Configuration.NoiseHalfDeltaRising" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Iot.Device.Multiplexing">
+    <Type Name="Iot.Device.Multiplexing.CharlieplexSegment" Id="T:Iot.Device.Multiplexing.CharlieplexSegment">
+      <Member Id="M:Iot.Device.Multiplexing.CharlieplexSegment.#ctor(System.Int32[],System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <Member Id="M:Iot.Device.Multiplexing.CharlieplexSegment.DisplaySegment(System.TimeSpan)" />
+      <Member Id="M:Iot.Device.Multiplexing.CharlieplexSegment.Dispose" />
+      <Member Id="M:Iot.Device.Multiplexing.CharlieplexSegment.GetNodes(System.Int32[],System.Int32)" />
+      <Member Id="M:Iot.Device.Multiplexing.CharlieplexSegment.Write(System.Int32,System.Device.Gpio.PinValue,System.Int32)" />
+      <Member Id="P:Iot.Device.Multiplexing.CharlieplexSegment.NodeCount" />
+    </Type>
+    <Type Name="Iot.Device.Multiplexing.CharlieplexSegmentNode" Id="T:Iot.Device.Multiplexing.CharlieplexSegmentNode">
+      <Member Id="F:Iot.Device.Multiplexing.CharlieplexSegmentNode.Anode" />
+      <Member Id="F:Iot.Device.Multiplexing.CharlieplexSegmentNode.Cathode" />
+      <Member Id="F:Iot.Device.Multiplexing.CharlieplexSegmentNode.Value" />
+    </Type>
+    <Type Name="Iot.Device.Multiplexing.Mbi5027" Id="T:Iot.Device.Multiplexing.Mbi5027">
+      <Member Id="M:Iot.Device.Multiplexing.Mbi5027.#ctor(Iot.Device.Multiplexing.Mbi5027PinMapping,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <Member Id="M:Iot.Device.Multiplexing.Mbi5027.#ctor(System.Device.Spi.SpiDevice,System.Int32)" />
+      <Member Id="M:Iot.Device.Multiplexing.Mbi5027.EnableDetectionMode" />
+      <Member Id="M:Iot.Device.Multiplexing.Mbi5027.EnableNormalMode" />
+      <Member Id="M:Iot.Device.Multiplexing.Mbi5027.ReadOutputErrorStatus" />
+    </Type>
+    <Type Name="Iot.Device.Multiplexing.Mbi5027PinMapping" Id="T:Iot.Device.Multiplexing.Mbi5027PinMapping">
+      <Member Id="M:Iot.Device.Multiplexing.Mbi5027PinMapping.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <Member Id="P:Iot.Device.Multiplexing.Mbi5027PinMapping.Clk" />
+      <Member Id="P:Iot.Device.Multiplexing.Mbi5027PinMapping.Complete" />
+      <Member Id="P:Iot.Device.Multiplexing.Mbi5027PinMapping.LE" />
+      <Member Id="P:Iot.Device.Multiplexing.Mbi5027PinMapping.Minimal" />
+      <Member Id="P:Iot.Device.Multiplexing.Mbi5027PinMapping.OE" />
+      <Member Id="P:Iot.Device.Multiplexing.Mbi5027PinMapping.Sdi" />
+      <Member Id="P:Iot.Device.Multiplexing.Mbi5027PinMapping.Sdo" />
+    </Type>
+    <Type Name="Iot.Device.Multiplexing.ShiftRegister" Id="T:Iot.Device.Multiplexing.ShiftRegister">
+      <Member Id="M:Iot.Device.Multiplexing.ShiftRegister.#ctor(Iot.Device.Multiplexing.ShiftRegisterPinMapping,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <Member Id="M:Iot.Device.Multiplexing.ShiftRegister.#ctor(System.Device.Spi.SpiDevice,System.Int32)" />
+      <Member Id="M:Iot.Device.Multiplexing.ShiftRegister.Dispose" />
+      <Member Id="M:Iot.Device.Multiplexing.ShiftRegister.Latch" />
+      <Member Id="M:Iot.Device.Multiplexing.ShiftRegister.ShiftBit(System.Device.Gpio.PinValue)" />
+      <Member Id="M:Iot.Device.Multiplexing.ShiftRegister.ShiftByte(System.Byte,System.Boolean)" />
+      <Member Id="M:Iot.Device.Multiplexing.ShiftRegister.ShiftClear" />
+      <Member Id="P:Iot.Device.Multiplexing.ShiftRegister.BitLength" />
+      <Member Id="P:Iot.Device.Multiplexing.ShiftRegister.GpioController" />
+      <Member Id="P:Iot.Device.Multiplexing.ShiftRegister.OutputEnable" />
+      <Member Id="P:Iot.Device.Multiplexing.ShiftRegister.SpiDevice" />
+      <Member Id="P:Iot.Device.Multiplexing.ShiftRegister.UsesGpio" />
+      <Member Id="P:Iot.Device.Multiplexing.ShiftRegister.UsesSpi" />
+    </Type>
+    <Type Name="Iot.Device.Multiplexing.ShiftRegisterPinMapping" Id="T:Iot.Device.Multiplexing.ShiftRegisterPinMapping">
+      <Member Id="M:Iot.Device.Multiplexing.ShiftRegisterPinMapping.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <Member Id="P:Iot.Device.Multiplexing.ShiftRegisterPinMapping.Clock" />
+      <Member Id="P:Iot.Device.Multiplexing.ShiftRegisterPinMapping.Complete" />
+      <Member Id="P:Iot.Device.Multiplexing.ShiftRegisterPinMapping.LatchEnable" />
+      <Member Id="P:Iot.Device.Multiplexing.ShiftRegisterPinMapping.Minimal" />
+      <Member Id="P:Iot.Device.Multiplexing.ShiftRegisterPinMapping.OutputEnable" />
+      <Member Id="P:Iot.Device.Multiplexing.ShiftRegisterPinMapping.SerialDataInput" />
+    </Type>
+    <Type Name="Iot.Device.Multiplexing.Sn74hc595" Id="T:Iot.Device.Multiplexing.Sn74hc595">
+      <Member Id="M:Iot.Device.Multiplexing.Sn74hc595.#ctor(Iot.Device.Multiplexing.Sn74hc595PinMapping,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <Member Id="M:Iot.Device.Multiplexing.Sn74hc595.ClearStorage(System.Boolean)" />
+    </Type>
+    <Type Name="Iot.Device.Multiplexing.Sn74hc595PinMapping" Id="T:Iot.Device.Multiplexing.Sn74hc595PinMapping">
+      <Member Id="M:Iot.Device.Multiplexing.Sn74hc595PinMapping.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <Member Id="P:Iot.Device.Multiplexing.Sn74hc595PinMapping.Complete" />
+      <Member Id="P:Iot.Device.Multiplexing.Sn74hc595PinMapping.Minimal" />
+      <Member Id="P:Iot.Device.Multiplexing.Sn74hc595PinMapping.OE" />
+      <Member Id="P:Iot.Device.Multiplexing.Sn74hc595PinMapping.RClk" />
+      <Member Id="P:Iot.Device.Multiplexing.Sn74hc595PinMapping.Ser" />
+      <Member Id="P:Iot.Device.Multiplexing.Sn74hc595PinMapping.SrClk" />
+      <Member Id="P:Iot.Device.Multiplexing.Sn74hc595PinMapping.SrClr" />
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.Nrf24l01">
@@ -4415,7 +4650,7 @@
       <Member Id="F:Iot.Device.Pn532.DiagnoseMode.SelfAntenaTest" />
     </Type>
     <Type Name="Iot.Device.Pn532.FirmwareVersion" Id="T:Iot.Device.Pn532.FirmwareVersion">
-      <Member Id="M:Iot.Device.Pn532.FirmwareVersion.#ctor" />
+      <Member Id="M:Iot.Device.Pn532.FirmwareVersion.#ctor(System.Byte,System.Version,Iot.Device.Pn532.VersionSupported)" />
       <Member Id="P:Iot.Device.Pn532.FirmwareVersion.IdentificationCode" />
       <Member Id="P:Iot.Device.Pn532.FirmwareVersion.IsPn532" />
       <Member Id="P:Iot.Device.Pn532.FirmwareVersion.Version" />
@@ -4757,7 +4992,7 @@
     </Type>
     <Type Name="Iot.Device.RadioReceiver.Tea5767" Id="T:Iot.Device.RadioReceiver.Tea5767">
       <Member Id="F:Iot.Device.RadioReceiver.Tea5767.DefaultI2cAddress" />
-      <Member Id="M:Iot.Device.RadioReceiver.Tea5767.#ctor(System.Device.I2c.I2cDevice,Iot.Device.RadioReceiver.FrequencyRange,System.Double)" />
+      <Member Id="M:Iot.Device.RadioReceiver.Tea5767.#ctor(System.Device.I2c.I2cDevice,Iot.Device.RadioReceiver.FrequencyRange,UnitsNet.Frequency)" />
       <Member Id="M:Iot.Device.RadioReceiver.Tea5767.Dispose(System.Boolean)" />
       <Member Id="M:Iot.Device.RadioReceiver.Tea5767.Search(Iot.Device.RadioReceiver.SearchDirection,System.Int32)" />
       <Member Id="P:Iot.Device.RadioReceiver.Tea5767.Frequency" />
@@ -4833,13 +5068,13 @@
       <Member Id="F:Iot.Device.Rfid.ApplicationType.Proprietary" />
     </Type>
     <Type Name="Iot.Device.Rfid.Data106kbpsInnovisionJewel" Id="T:Iot.Device.Rfid.Data106kbpsInnovisionJewel">
-      <Member Id="M:Iot.Device.Rfid.Data106kbpsInnovisionJewel.#ctor" />
+      <Member Id="M:Iot.Device.Rfid.Data106kbpsInnovisionJewel.#ctor(System.Byte,System.Byte[],System.Byte[])" />
       <Member Id="P:Iot.Device.Rfid.Data106kbpsInnovisionJewel.Atqa" />
       <Member Id="P:Iot.Device.Rfid.Data106kbpsInnovisionJewel.JewelId" />
       <Member Id="P:Iot.Device.Rfid.Data106kbpsInnovisionJewel.TargetNumber" />
     </Type>
     <Type Name="Iot.Device.Rfid.Data106kbpsTypeA" Id="T:Iot.Device.Rfid.Data106kbpsTypeA">
-      <Member Id="M:Iot.Device.Rfid.Data106kbpsTypeA.#ctor" />
+      <Member Id="M:Iot.Device.Rfid.Data106kbpsTypeA.#ctor(System.Byte,System.UInt16,System.Byte,System.Byte[],System.Byte[])" />
       <Member Id="P:Iot.Device.Rfid.Data106kbpsTypeA.Atqa" />
       <Member Id="P:Iot.Device.Rfid.Data106kbpsTypeA.Ats" />
       <Member Id="P:Iot.Device.Rfid.Data106kbpsTypeA.NfcId" />
@@ -4861,7 +5096,7 @@
       <Member Id="P:Iot.Device.Rfid.Data106kbpsTypeB.TargetNumber" />
     </Type>
     <Type Name="Iot.Device.Rfid.Data212_424kbps" Id="T:Iot.Device.Rfid.Data212_424kbps">
-      <Member Id="M:Iot.Device.Rfid.Data212_424kbps.#ctor" />
+      <Member Id="M:Iot.Device.Rfid.Data212_424kbps.#ctor(System.Byte,System.Byte,System.Byte[],System.Byte[],System.Byte[])" />
       <Member Id="P:Iot.Device.Rfid.Data212_424kbps.NfcId" />
       <Member Id="P:Iot.Device.Rfid.Data212_424kbps.Pad" />
       <Member Id="P:Iot.Device.Rfid.Data212_424kbps.ResponseCode" />
@@ -5112,6 +5347,17 @@
       <Member Id="P:Iot.Device.Sht3x.Sht3x.Humidity" />
       <Member Id="P:Iot.Device.Sht3x.Sht3x.Resolution" />
       <Member Id="P:Iot.Device.Sht3x.Sht3x.Temperature" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Iot.Device.Shtc3">
+    <Type Name="Iot.Device.Shtc3.Shtc3" Id="T:Iot.Device.Shtc3.Shtc3">
+      <Member Id="F:Iot.Device.Shtc3.Shtc3.DefaultI2cAddress" />
+      <Member Id="M:Iot.Device.Shtc3.Shtc3.#ctor(System.Device.I2c.I2cDevice)" />
+      <Member Id="M:Iot.Device.Shtc3.Shtc3.Dispose" />
+      <Member Id="M:Iot.Device.Shtc3.Shtc3.Reset" />
+      <Member Id="M:Iot.Device.Shtc3.Shtc3.Sleep" />
+      <Member Id="M:Iot.Device.Shtc3.Shtc3.TryGetTemperatureAndHumidity(UnitsNet.Temperature@,UnitsNet.Ratio@,System.Boolean,System.Boolean)" />
+      <Member Id="P:Iot.Device.Shtc3.Shtc3.Id" />
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.Si7021">
@@ -5683,9 +5929,51 @@
       <Member Id="M:Iot.Device.Tm1637.Tm1637.Display(System.ReadOnlySpan{Iot.Device.Tm1637.Character})" />
       <Member Id="M:Iot.Device.Tm1637.Tm1637.Dispose" />
       <Member Id="P:Iot.Device.Tm1637.Tm1637.Brightness" />
-      <Member Id="P:Iot.Device.Tm1637.Tm1637.MaxSegments" />
+      <Member Id="P:Iot.Device.Tm1637.Tm1637.CharacterOrder" />
+      <Member Id="P:Iot.Device.Tm1637.Tm1637.MaxCharacters" />
       <Member Id="P:Iot.Device.Tm1637.Tm1637.ScreenOn" />
-      <Member Id="P:Iot.Device.Tm1637.Tm1637.SegmentOrder" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Iot.Device.UFire">
+    <Type Name="Iot.Device.UFire.UFireIse" Id="T:Iot.Device.UFire.UFireIse">
+      <Member Id="F:Iot.Device.UFire.UFireIse.I2cAddress" />
+      <Member Id="M:Iot.Device.UFire.UFireIse.#ctor(System.Device.I2c.I2cDevice)" />
+      <Member Id="M:Iot.Device.UFire.UFireIse.CalibrateFromSingleValue(UnitsNet.ElectricPotential)" />
+      <Member Id="M:Iot.Device.UFire.UFireIse.CalibrateFromTwoValuesHighValue(UnitsNet.ElectricPotential)" />
+      <Member Id="M:Iot.Device.UFire.UFireIse.CalibrateFromTwoValuesLowValue(UnitsNet.ElectricPotential)" />
+      <Member Id="M:Iot.Device.UFire.UFireIse.Dispose" />
+      <Member Id="M:Iot.Device.UFire.UFireIse.GetCalibrateHighReading" />
+      <Member Id="M:Iot.Device.UFire.UFireIse.GetCalibrateHighReference" />
+      <Member Id="M:Iot.Device.UFire.UFireIse.GetCalibrateLowReading" />
+      <Member Id="M:Iot.Device.UFire.UFireIse.GetCalibrateLowReference" />
+      <Member Id="M:Iot.Device.UFire.UFireIse.GetFirmwareVersion" />
+      <Member Id="M:Iot.Device.UFire.UFireIse.GetVersion" />
+      <Member Id="M:Iot.Device.UFire.UFireIse.ReadElectricPotential" />
+      <Member Id="M:Iot.Device.UFire.UFireIse.ReadTemperature" />
+      <Member Id="M:Iot.Device.UFire.UFireIse.ResetCalibration" />
+      <Member Id="M:Iot.Device.UFire.UFireIse.SetDualPointCalibration(UnitsNet.ElectricPotential,UnitsNet.ElectricPotential,UnitsNet.ElectricPotential,UnitsNet.ElectricPotential)" />
+      <Member Id="M:Iot.Device.UFire.UFireIse.SetI2cAddressAndDispose(System.Byte)" />
+      <Member Id="M:Iot.Device.UFire.UFireIse.SetTemperatureCompensation(UnitsNet.Temperature)" />
+      <Member Id="P:Iot.Device.UFire.UFireIse.TemperatureCompensation" />
+    </Type>
+    <Type Name="Iot.Device.UFire.UFireOrp" Id="T:Iot.Device.UFire.UFireOrp">
+      <Member Id="M:Iot.Device.UFire.UFireOrp.#ctor(System.Device.I2c.I2cDevice)" />
+      <Member Id="M:Iot.Device.UFire.UFireOrp.TryMeasureOxidationReductionPotential(UnitsNet.ElectricPotential@)" />
+      <Member Id="P:Iot.Device.UFire.UFireOrp.LastOxidationReducationPotential" />
+      <Member Id="P:Iot.Device.UFire.UFireOrp.LastReductionPotential" />
+      <Member Id="P:Iot.Device.UFire.UFireOrp.ProbePotential" />
+    </Type>
+    <Type Name="Iot.Device.UFire.UFirePh" Id="T:Iot.Device.UFire.UFirePh">
+      <Member Id="F:Iot.Device.UFire.UFirePh.Ph" />
+      <Member Id="M:Iot.Device.UFire.UFirePh.#ctor(System.Device.I2c.I2cDevice)" />
+      <Member Id="M:Iot.Device.UFire.UFirePh.CalibrateProbeHigh(System.Single)" />
+      <Member Id="M:Iot.Device.UFire.UFirePh.CalibrateProbeLow(System.Single)" />
+      <Member Id="M:Iot.Device.UFire.UFirePh.CalibrateSingle(System.Single)" />
+      <Member Id="M:Iot.Device.UFire.UFirePh.GetCalibrateHighReading" />
+      <Member Id="M:Iot.Device.UFire.UFirePh.GetCalibrateHighReference" />
+      <Member Id="M:Iot.Device.UFire.UFirePh.GetCalibrateLowReading" />
+      <Member Id="M:Iot.Device.UFire.UFirePh.GetCalibrateLowReference" />
+      <Member Id="M:Iot.Device.UFire.UFirePh.TryMeasurepH(System.Single@,System.Nullable{UnitsNet.Temperature})" />
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.Uln2003">
@@ -5695,8 +5983,9 @@
       <Member Id="F:Iot.Device.Uln2003.StepperMode.HalfStep" />
     </Type>
     <Type Name="Iot.Device.Uln2003.Uln2003" Id="T:Iot.Device.Uln2003.Uln2003">
-      <Member Id="M:Iot.Device.Uln2003.Uln2003.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <Member Id="M:Iot.Device.Uln2003.Uln2003.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean,System.Int32)" />
       <Member Id="M:Iot.Device.Uln2003.Uln2003.Dispose" />
+      <Member Id="M:Iot.Device.Uln2003.Uln2003.Rotate(System.Int32)" />
       <Member Id="M:Iot.Device.Uln2003.Uln2003.Step(System.Int32)" />
       <Member Id="M:Iot.Device.Uln2003.Uln2003.Stop" />
       <Member Id="P:Iot.Device.Uln2003.Uln2003.Mode" />
@@ -5705,7 +5994,7 @@
   </Namespace>
   <Namespace Name="Iot.Device.Vl53L0X">
     <Type Name="Iot.Device.Vl53L0X.Information" Id="T:Iot.Device.Vl53L0X.Information">
-      <Member Id="M:Iot.Device.Vl53L0X.Information.#ctor" />
+      <Member Id="M:Iot.Device.Vl53L0X.Information.#ctor(System.Byte,System.Version,System.String,System.UInt32,System.UInt32)" />
       <Member Id="P:Iot.Device.Vl53L0X.Information.ModuleId" />
       <Member Id="P:Iot.Device.Vl53L0X.Information.OffsetMicrometers" />
       <Member Id="P:Iot.Device.Vl53L0X.Information.ProductId" />
@@ -5761,7 +6050,7 @@
     </Type>
     <Type Name="Iot.Device.Ws28xx.Ws28xx" Id="T:Iot.Device.Ws28xx.Ws28xx">
       <Member Id="F:Iot.Device.Ws28xx.Ws28xx._spiDevice" />
-      <Member Id="M:Iot.Device.Ws28xx.Ws28xx.#ctor(System.Device.Spi.SpiDevice)" />
+      <Member Id="M:Iot.Device.Ws28xx.Ws28xx.#ctor(System.Device.Spi.SpiDevice,Iot.Device.Graphics.BitmapImage)" />
       <Member Id="M:Iot.Device.Ws28xx.Ws28xx.Update" />
       <Member Id="P:Iot.Device.Ws28xx.Ws28xx.Image" />
     </Type>
@@ -5927,6 +6216,7 @@
       <Member Id="M:System.Device.Gpio.PinValue.op_Implicit(System.Boolean)~System.Device.Gpio.PinValue" />
       <Member Id="M:System.Device.Gpio.PinValue.op_Implicit(System.Int32)~System.Device.Gpio.PinValue" />
       <Member Id="M:System.Device.Gpio.PinValue.op_Inequality(System.Device.Gpio.PinValue,System.Device.Gpio.PinValue)" />
+      <Member Id="M:System.Device.Gpio.PinValue.op_LogicalNot(System.Device.Gpio.PinValue)" />
       <Member Id="M:System.Device.Gpio.PinValue.ToString" />
       <Member Id="P:System.Device.Gpio.PinValue.High" />
       <Member Id="P:System.Device.Gpio.PinValue.Low" />

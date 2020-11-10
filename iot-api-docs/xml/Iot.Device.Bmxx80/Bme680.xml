@@ -43,6 +43,31 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bme680 (System.Device.I2c.I2cDevice i2cDevice, UnitsNet.Temperature ambientTemperatureDefault);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, valuetype UnitsNet.Temperature ambientTemperatureDefault) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme680.#ctor(System.Device.I2c.I2cDevice,UnitsNet.Temperature)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, ambientTemperatureDefault As Temperature)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Bmxx80.Bme680 : System.Device.I2c.I2cDevice * UnitsNet.Temperature -&gt; Iot.Device.Bmxx80.Bme680" Usage="new Iot.Device.Bmxx80.Bme680 (i2cDevice, ambientTemperatureDefault)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="ambientTemperatureDefault" Type="UnitsNet.Temperature" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The <see cref="T:System.Device.I2c.I2cDevice" /> to create with.</param>
+        <param name="ambientTemperatureDefault">Assumed ambient temperature for startup. Used for initialization of the gas measurement
+            if the temperature cannot be read during a reset.</param>
+        <summary>
+            Initialize a new instance of the <see cref="T:Iot.Device.Bmxx80.Bme680" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="_tempCalibrationFactor">
       <MemberSignature Language="C#" Value="protected override int _tempCalibrationFactor { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance int32 _tempCalibrationFactor" />
@@ -64,11 +89,11 @@
       </Docs>
     </Member>
     <Member MemberName="ConfigureHeatingProfile">
-      <MemberSignature Language="C#" Value="public void ConfigureHeatingProfile (Iot.Device.Bmxx80.Bme680HeaterProfile profile, ushort targetTemperature, ushort duration, double ambientTemperature);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ConfigureHeatingProfile(valuetype Iot.Device.Bmxx80.Bme680HeaterProfile profile, unsigned int16 targetTemperature, unsigned int16 duration, float64 ambientTemperature) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme680.ConfigureHeatingProfile(Iot.Device.Bmxx80.Bme680HeaterProfile,System.UInt16,System.UInt16,System.Double)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub ConfigureHeatingProfile (profile As Bme680HeaterProfile, targetTemperature As UShort, duration As UShort, ambientTemperature As Double)" />
-      <MemberSignature Language="F#" Value="member this.ConfigureHeatingProfile : Iot.Device.Bmxx80.Bme680HeaterProfile * uint16 * uint16 * double -&gt; unit" Usage="bme680.ConfigureHeatingProfile (profile, targetTemperature, duration, ambientTemperature)" />
+      <MemberSignature Language="C#" Value="public void ConfigureHeatingProfile (Iot.Device.Bmxx80.Bme680HeaterProfile profile, UnitsNet.Temperature targetTemperature, UnitsNet.Duration duration, UnitsNet.Temperature ambientTemperature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ConfigureHeatingProfile(valuetype Iot.Device.Bmxx80.Bme680HeaterProfile profile, valuetype UnitsNet.Temperature targetTemperature, valuetype UnitsNet.Duration duration, valuetype UnitsNet.Temperature ambientTemperature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme680.ConfigureHeatingProfile(Iot.Device.Bmxx80.Bme680HeaterProfile,UnitsNet.Temperature,UnitsNet.Duration,UnitsNet.Temperature)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ConfigureHeatingProfile (profile As Bme680HeaterProfile, targetTemperature As Temperature, duration As Duration, ambientTemperature As Temperature)" />
+      <MemberSignature Language="F#" Value="member this.ConfigureHeatingProfile : Iot.Device.Bmxx80.Bme680HeaterProfile * UnitsNet.Temperature * UnitsNet.Duration * UnitsNet.Temperature -&gt; unit" Usage="bme680.ConfigureHeatingProfile (profile, targetTemperature, duration, ambientTemperature)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -79,15 +104,15 @@
       </ReturnValue>
       <Parameters>
         <Parameter Name="profile" Type="Iot.Device.Bmxx80.Bme680HeaterProfile" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="targetTemperature" Type="System.UInt16" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="duration" Type="System.UInt16" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="ambientTemperature" Type="System.Double" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="targetTemperature" Type="UnitsNet.Temperature" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="duration" Type="UnitsNet.Duration" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="ambientTemperature" Type="UnitsNet.Temperature" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
       </Parameters>
       <Docs>
         <param name="profile">The <see cref="T:Iot.Device.Bmxx80.Bme680HeaterProfile" /> to configure.</param>
-        <param name="targetTemperature">The target temperature in °C. Ranging from 0-400.</param>
-        <param name="duration">The duration in ms. Ranging from 0-4032.</param>
-        <param name="ambientTemperature">The ambient temperature in °C.</param>
+        <param name="targetTemperature">The target temperature. Ranging from 0-400.</param>
+        <param name="duration">The measurement durations. Ranging from 0-4032ms.</param>
+        <param name="ambientTemperature">The ambient temperature.</param>
         <summary>
             Configures a heater profile, making it ready for use.
             </summary>
@@ -164,18 +189,18 @@
       </Docs>
     </Member>
     <Member MemberName="GetMeasurementDuration">
-      <MemberSignature Language="C#" Value="public int GetMeasurementDuration (Iot.Device.Bmxx80.Bme680HeaterProfile profile);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetMeasurementDuration(valuetype Iot.Device.Bmxx80.Bme680HeaterProfile profile) cil managed" />
+      <MemberSignature Language="C#" Value="public UnitsNet.Duration GetMeasurementDuration (Iot.Device.Bmxx80.Bme680HeaterProfile profile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Duration GetMeasurementDuration(valuetype Iot.Device.Bmxx80.Bme680HeaterProfile profile) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme680.GetMeasurementDuration(Iot.Device.Bmxx80.Bme680HeaterProfile)" />
-      <MemberSignature Language="VB.NET" Value="Public Function GetMeasurementDuration (profile As Bme680HeaterProfile) As Integer" />
-      <MemberSignature Language="F#" Value="member this.GetMeasurementDuration : Iot.Device.Bmxx80.Bme680HeaterProfile -&gt; int" Usage="bme680.GetMeasurementDuration profile" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetMeasurementDuration (profile As Bme680HeaterProfile) As Duration" />
+      <MemberSignature Language="F#" Value="member this.GetMeasurementDuration : Iot.Device.Bmxx80.Bme680HeaterProfile -&gt; UnitsNet.Duration" Usage="bme680.GetMeasurementDuration profile" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Int32</ReturnType>
+        <ReturnType>UnitsNet.Duration</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="profile" Type="Iot.Device.Bmxx80.Bme680HeaterProfile" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
@@ -578,11 +603,11 @@
       </Docs>
     </Member>
     <Member MemberName="TryReadGasResistance">
-      <MemberSignature Language="C#" Value="public bool TryReadGasResistance (out double gasResistance);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadGasResistance([out] float64&amp; gasResistance) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme680.TryReadGasResistance(System.Double@)" />
-      <MemberSignature Language="VB.NET" Value="Public Function TryReadGasResistance (ByRef gasResistance As Double) As Boolean" />
-      <MemberSignature Language="F#" Value="member this.TryReadGasResistance : double -&gt; bool" Usage="bme680.TryReadGasResistance gasResistance" />
+      <MemberSignature Language="C#" Value="public bool TryReadGasResistance (out UnitsNet.ElectricResistance gasResistance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadGasResistance([out] valuetype UnitsNet.ElectricResistance&amp; gasResistance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme680.TryReadGasResistance(UnitsNet.ElectricResistance@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadGasResistance (ByRef gasResistance As ElectricResistance) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadGasResistance : ElectricResistance -&gt; bool" Usage="bme680.TryReadGasResistance gasResistance" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -592,12 +617,12 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="gasResistance" Type="System.Double" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="gasResistance" Type="UnitsNet.ElectricResistance" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
       </Parameters>
       <Docs>
         <param name="gasResistance">
-            Contains the measured gas resistance in Ohm if the heater module reached the target temperature and
-            the measurement was valid. Contains <see cref="F:System.Double.NaN" /> otherwise.
+            Contains the measured gas resistance if the heater module reached the target temperature and
+            the measurement was valid. Undefined otherwise.
             </param>
         <summary>
             Reads the gas resistance. A return value indicates whether the reading succeeded.
@@ -608,11 +633,11 @@
       </Docs>
     </Member>
     <Member MemberName="TryReadHumidity">
-      <MemberSignature Language="C#" Value="public bool TryReadHumidity (out double humidity);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadHumidity([out] float64&amp; humidity) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme680.TryReadHumidity(System.Double@)" />
-      <MemberSignature Language="VB.NET" Value="Public Function TryReadHumidity (ByRef humidity As Double) As Boolean" />
-      <MemberSignature Language="F#" Value="member this.TryReadHumidity : double -&gt; bool" Usage="bme680.TryReadHumidity humidity" />
+      <MemberSignature Language="C#" Value="public bool TryReadHumidity (out UnitsNet.Ratio humidity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadHumidity([out] valuetype UnitsNet.Ratio&amp; humidity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmxx80.Bme680.TryReadHumidity(UnitsNet.Ratio@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadHumidity (ByRef humidity As Ratio) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadHumidity : Ratio -&gt; bool" Usage="bme680.TryReadHumidity humidity" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -622,7 +647,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="humidity" Type="System.Double" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="humidity" Type="UnitsNet.Ratio" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
       </Parameters>
       <Docs>
         <param name="humidity">

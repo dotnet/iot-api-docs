@@ -1,0 +1,348 @@
+<Type Name="ShiftRegister" FullName="Iot.Device.Multiplexing.ShiftRegister">
+  <TypeSignature Language="C#" Value="public class ShiftRegister : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ShiftRegister extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Multiplexing.ShiftRegister" />
+  <TypeSignature Language="VB.NET" Value="Public Class ShiftRegister&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type ShiftRegister = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Generic shift register implementation. Supports multiple register lengths.
+            Compatible with SN74HC595, MBI5027 and MBI5168, for example.
+            Supports SPI and GPIO control.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ShiftRegister (System.Device.Spi.SpiDevice spiDevice, int bitLength);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, int32 bitLength) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.ShiftRegister.#ctor(System.Device.Spi.SpiDevice,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (spiDevice As SpiDevice, bitLength As Integer)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Multiplexing.ShiftRegister : System.Device.Spi.SpiDevice * int -&gt; Iot.Device.Multiplexing.ShiftRegister" Usage="new Iot.Device.Multiplexing.ShiftRegister (spiDevice, bitLength)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" />
+        <Parameter Name="bitLength" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="spiDevice">SpiDevice used for serial communication.</param>
+        <param name="bitLength">Bit length of register, including chained registers.</param>
+        <summary>
+            Initialize a new shift register device connected through SPI.
+            Uses 3 pins (SDI -&gt; SDI, SCLK -&gt; SCLK, CE0 -&gt; LE)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ShiftRegister (Iot.Device.Multiplexing.ShiftRegisterPinMapping pinMapping, int bitLength, System.Device.Gpio.GpioController gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Multiplexing.ShiftRegisterPinMapping pinMapping, int32 bitLength, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.ShiftRegister.#ctor(Iot.Device.Multiplexing.ShiftRegisterPinMapping,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pinMapping As ShiftRegisterPinMapping, bitLength As Integer, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Multiplexing.ShiftRegister : Iot.Device.Multiplexing.ShiftRegisterPinMapping * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Multiplexing.ShiftRegister" Usage="new Iot.Device.Multiplexing.ShiftRegister (pinMapping, bitLength, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pinMapping" Type="Iot.Device.Multiplexing.ShiftRegisterPinMapping" />
+        <Parameter Name="bitLength" Type="System.Int32" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pinMapping">The pin mapping to use by the binding.</param>
+        <param name="bitLength">Bit length of register, including chained registers.</param>
+        <param name="gpioController">The GPIO Controller used for interrupt handling.</param>
+        <param name="shouldDispose">True (the default) if the GPIO controller shall be disposed when disposing this instance.</param>
+        <summary>
+            Initialize a new shift register connected through GPIO.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BitLength">
+      <MemberSignature Language="C#" Value="public int BitLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BitLength" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Multiplexing.ShiftRegister.BitLength" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BitLength As Integer" />
+      <MemberSignature Language="F#" Value="member this.BitLength : int" Usage="Iot.Device.Multiplexing.ShiftRegister.BitLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Bit length across all connected registers.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.ShiftRegister.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="shiftRegister.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Cleanup.
+            Failing to dispose this class, especially when callbacks are active, may lead to undefined behavior.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GpioController">
+      <MemberSignature Language="C#" Value="protected System.Device.Gpio.GpioController GpioController { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Device.Gpio.GpioController GpioController" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Multiplexing.ShiftRegister.GpioController" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property GpioController As GpioController" />
+      <MemberSignature Language="F#" Value="member this.GpioController : System.Device.Gpio.GpioController" Usage="Iot.Device.Multiplexing.ShiftRegister.GpioController" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.GpioController</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            GPIO controller.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Latch">
+      <MemberSignature Language="C#" Value="public void Latch ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Latch() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.ShiftRegister.Latch" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Latch ()" />
+      <MemberSignature Language="F#" Value="member this.Latch : unit -&gt; unit" Usage="shiftRegister.Latch " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Latches values in data register to output pi.
+            Requires use of GPIO controller.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputEnable">
+      <MemberSignature Language="C#" Value="public bool OutputEnable { set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OutputEnable" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Multiplexing.ShiftRegister.OutputEnable" />
+      <MemberSignature Language="VB.NET" Value="Public Property OutputEnable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.OutputEnable : bool" Usage="Iot.Device.Multiplexing.ShiftRegister.OutputEnable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Switch output register to high or low-impedance state.
+            Enables or disables register outputs, but does not delete values.
+            Requires use of GPIO controller.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShiftBit">
+      <MemberSignature Language="C#" Value="public void ShiftBit (System.Device.Gpio.PinValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ShiftBit(valuetype System.Device.Gpio.PinValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.ShiftRegister.ShiftBit(System.Device.Gpio.PinValue)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ShiftBit (value As PinValue)" />
+      <MemberSignature Language="F#" Value="member this.ShiftBit : System.Device.Gpio.PinValue -&gt; unit" Usage="shiftRegister.ShiftBit value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Device.Gpio.PinValue" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>
+            Writes PinValue value to storage register.
+            This will shift existing values to the next storage slot.
+            Does not latch.
+            Requires use of GPIO controller.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShiftByte">
+      <MemberSignature Language="C#" Value="public void ShiftByte (byte value, bool latch = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ShiftByte(unsigned int8 value, bool latch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.ShiftRegister.ShiftByte(System.Byte,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ShiftByte (value As Byte, Optional latch As Boolean = true)" />
+      <MemberSignature Language="F#" Value="member this.ShiftByte : byte * bool -&gt; unit" Usage="shiftRegister.ShiftByte (value, latch)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+        <Parameter Name="latch" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <param name="latch">To be added.</param>
+        <summary>
+            Shifts a byte -- 8 bits -- to the storage register.
+            Assumes register bit length evenly divisible by 8.
+            Pushes / overwrites any existing values.
+            Latches by default.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShiftClear">
+      <MemberSignature Language="C#" Value="public void ShiftClear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ShiftClear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.ShiftRegister.ShiftClear" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ShiftClear ()" />
+      <MemberSignature Language="F#" Value="member this.ShiftClear : unit -&gt; unit" Usage="shiftRegister.ShiftClear " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Shifts zeros.
+            Will dim all connected LEDs, for example.
+            Assumes register bit length evenly divisible by 8.
+            Supports GPIO controller or SPI device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiDevice">
+      <MemberSignature Language="C#" Value="protected System.Device.Spi.SpiDevice SpiDevice { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Device.Spi.SpiDevice SpiDevice" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Multiplexing.ShiftRegister.SpiDevice" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property SpiDevice As SpiDevice" />
+      <MemberSignature Language="F#" Value="member this.SpiDevice : System.Device.Spi.SpiDevice" Usage="Iot.Device.Multiplexing.ShiftRegister.SpiDevice" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Spi.SpiDevice</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SPI device.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsesGpio">
+      <MemberSignature Language="C#" Value="public bool UsesGpio { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsesGpio" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Multiplexing.ShiftRegister.UsesGpio" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UsesGpio As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UsesGpio : bool" Usage="Iot.Device.Multiplexing.ShiftRegister.UsesGpio" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Reports if shift register is connected with GPIO.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsesSpi">
+      <MemberSignature Language="C#" Value="public bool UsesSpi { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsesSpi" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Multiplexing.ShiftRegister.UsesSpi" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property UsesSpi As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UsesSpi : bool" Usage="Iot.Device.Multiplexing.ShiftRegister.UsesSpi" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Reports if shift register is connected with SPI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,104 @@
+<Type Name="LiquidLevelSwitch" FullName="Iot.Device.LiquidLevel.LiquidLevelSwitch">
+  <TypeSignature Language="C#" Value="public class LiquidLevelSwitch : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LiquidLevelSwitch extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.LiquidLevel.LiquidLevelSwitch" />
+  <TypeSignature Language="VB.NET" Value="Public Class LiquidLevelSwitch&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type LiquidLevelSwitch = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Supports any single pin output digital liquid level switch which is configured
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LiquidLevelSwitch (int dataPin, System.Device.Gpio.PinValue liquidPresentPinState, System.Device.Gpio.GpioController gpioController = default, System.Device.Gpio.PinNumberingScheme pinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 dataPin, valuetype System.Device.Gpio.PinValue liquidPresentPinState, class System.Device.Gpio.GpioController gpioController, valuetype System.Device.Gpio.PinNumberingScheme pinNumberingScheme, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.LiquidLevel.LiquidLevelSwitch.#ctor(System.Int32,System.Device.Gpio.PinValue,System.Device.Gpio.GpioController,System.Device.Gpio.PinNumberingScheme,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (dataPin As Integer, liquidPresentPinState As PinValue, Optional gpioController As GpioController = Nothing, Optional pinNumberingScheme As PinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.LiquidLevel.LiquidLevelSwitch : int * System.Device.Gpio.PinValue * System.Device.Gpio.GpioController * System.Device.Gpio.PinNumberingScheme * bool -&gt; Iot.Device.LiquidLevel.LiquidLevelSwitch" Usage="new Iot.Device.LiquidLevel.LiquidLevelSwitch (dataPin, liquidPresentPinState, gpioController, pinNumberingScheme, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataPin" Type="System.Int32" />
+        <Parameter Name="liquidPresentPinState" Type="System.Device.Gpio.PinValue" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="pinNumberingScheme" Type="System.Device.Gpio.PinNumberingScheme" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dataPin">The data pin</param>
+        <param name="liquidPresentPinState">Data pin state representing liquid being present</param>
+        <param name="pinNumberingScheme">Use the logical or physical pin layout</param>
+        <param name="gpioController">A Gpio Controller if you want to use a specific one</param>
+        <param name="shouldDispose">True to dispose the Gpio Controller</param>
+        <summary>Creates a new instance of the LiquidLevelSwitch.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.LiquidLevel.LiquidLevelSwitch.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="liquidLevelSwitch.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose Buzzer.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLiquidPresent">
+      <MemberSignature Language="C#" Value="public bool IsLiquidPresent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsLiquidPresent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.LiquidLevel.LiquidLevelSwitch.IsLiquidPresent" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsLiquidPresent () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsLiquidPresent : unit -&gt; bool" Usage="liquidLevelSwitch.IsLiquidPresent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Determines whether liquid is present.
+            </summary>
+        <returns>
+          <code>true</code> if liquid is present, otherwise <code>false</code>.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
