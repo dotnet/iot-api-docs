@@ -8,6 +8,8 @@
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -60,13 +62,15 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="inputMultiplexer" Type="Iot.Device.Ads1115.InputMultiplexer" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="measuringRange" Type="Iot.Device.Ads1115.MeasuringRange" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="dataRate" Type="Iot.Device.Ads1115.DataRate" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="deviceMode" Type="Iot.Device.Ads1115.DeviceMode" Index="4" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="inputMultiplexer" Type="Iot.Device.Ads1115.InputMultiplexer" Index="1" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="measuringRange" Type="Iot.Device.Ads1115.MeasuringRange" Index="2" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="dataRate" Type="Iot.Device.Ads1115.DataRate" Index="3" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="deviceMode" Type="Iot.Device.Ads1115.DeviceMode" Index="4" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
       </Parameters>
       <Docs>
         <param name="i2cDevice">The I2C device used for communication.</param>
@@ -81,25 +85,28 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Ads1115 (System.Device.I2c.I2cDevice i2cDevice, System.Device.Gpio.GpioController gpioController, int gpioInterruptPin, bool shouldDispose = true, Iot.Device.Ads1115.InputMultiplexer inputMultiplexer = Iot.Device.Ads1115.InputMultiplexer.AIN0, Iot.Device.Ads1115.MeasuringRange measuringRange = Iot.Device.Ads1115.MeasuringRange.FS4096, Iot.Device.Ads1115.DataRate dataRate = Iot.Device.Ads1115.DataRate.SPS128, Iot.Device.Ads1115.DeviceMode deviceMode = Iot.Device.Ads1115.DeviceMode.Continuous);" />
+      <MemberSignature Language="C#" Value="public Ads1115 (System.Device.I2c.I2cDevice i2cDevice, System.Device.Gpio.GpioController gpioController, int gpioInterruptPin, bool shouldDispose = true, Iot.Device.Ads1115.InputMultiplexer inputMultiplexer = Iot.Device.Ads1115.InputMultiplexer.AIN0, Iot.Device.Ads1115.MeasuringRange measuringRange = Iot.Device.Ads1115.MeasuringRange.FS4096, Iot.Device.Ads1115.DataRate dataRate = Iot.Device.Ads1115.DataRate.SPS128, Iot.Device.Ads1115.DeviceMode deviceMode = Iot.Device.Ads1115.DeviceMode.Continuous);" FrameworkAlternate="iot-dotnet-1.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, class System.Device.Gpio.GpioController gpioController, int32 gpioInterruptPin, bool shouldDispose, valuetype Iot.Device.Ads1115.InputMultiplexer inputMultiplexer, valuetype Iot.Device.Ads1115.MeasuringRange measuringRange, valuetype Iot.Device.Ads1115.DataRate dataRate, valuetype Iot.Device.Ads1115.DeviceMode deviceMode) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.#ctor(System.Device.I2c.I2cDevice,System.Device.Gpio.GpioController,System.Int32,System.Boolean,Iot.Device.Ads1115.InputMultiplexer,Iot.Device.Ads1115.MeasuringRange,Iot.Device.Ads1115.DataRate,Iot.Device.Ads1115.DeviceMode)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, gpioController As GpioController, gpioInterruptPin As Integer, Optional shouldDispose As Boolean = true, Optional inputMultiplexer As InputMultiplexer = Iot.Device.Ads1115.InputMultiplexer.AIN0, Optional measuringRange As MeasuringRange = Iot.Device.Ads1115.MeasuringRange.FS4096, Optional dataRate As DataRate = Iot.Device.Ads1115.DataRate.SPS128, Optional deviceMode As DeviceMode = Iot.Device.Ads1115.DeviceMode.Continuous)" />
       <MemberSignature Language="F#" Value="new Iot.Device.Ads1115.Ads1115 : System.Device.I2c.I2cDevice * System.Device.Gpio.GpioController * int * bool * Iot.Device.Ads1115.InputMultiplexer * Iot.Device.Ads1115.MeasuringRange * Iot.Device.Ads1115.DataRate * Iot.Device.Ads1115.DeviceMode -&gt; Iot.Device.Ads1115.Ads1115" Usage="new Iot.Device.Ads1115.Ads1115 (i2cDevice, gpioController, gpioInterruptPin, shouldDispose, inputMultiplexer, measuringRange, dataRate, deviceMode)" />
+      <MemberSignature Language="C#" Value="public Ads1115 (System.Device.I2c.I2cDevice i2cDevice, System.Device.Gpio.GpioController? gpioController, int gpioInterruptPin, bool shouldDispose = true, Iot.Device.Ads1115.InputMultiplexer inputMultiplexer = Iot.Device.Ads1115.InputMultiplexer.AIN0, Iot.Device.Ads1115.MeasuringRange measuringRange = Iot.Device.Ads1115.MeasuringRange.FS4096, Iot.Device.Ads1115.DataRate dataRate = Iot.Device.Ads1115.DataRate.SPS128, Iot.Device.Ads1115.DeviceMode deviceMode = Iot.Device.Ads1115.DeviceMode.Continuous);" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="gpioInterruptPin" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="shouldDispose" Type="System.Boolean" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="inputMultiplexer" Type="Iot.Device.Ads1115.InputMultiplexer" Index="4" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="measuringRange" Type="Iot.Device.Ads1115.MeasuringRange" Index="5" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="dataRate" Type="Iot.Device.Ads1115.DataRate" Index="6" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="deviceMode" Type="Iot.Device.Ads1115.DeviceMode" Index="7" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" Index="1" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="gpioInterruptPin" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="3" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="inputMultiplexer" Type="Iot.Device.Ads1115.InputMultiplexer" Index="4" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="measuringRange" Type="Iot.Device.Ads1115.MeasuringRange" Index="5" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="dataRate" Type="Iot.Device.Ads1115.DataRate" Index="6" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="deviceMode" Type="Iot.Device.Ads1115.DeviceMode" Index="7" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
       </Parameters>
       <Docs>
         <param name="i2cDevice">The I2C device used for communication.</param>
@@ -126,6 +133,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Action</ReturnType>
@@ -148,6 +157,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Ads1115.ComparatorLatching</ReturnType>
@@ -171,6 +182,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Ads1115.ComparatorMode</ReturnType>
@@ -194,6 +207,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Ads1115.ComparatorPolarity</ReturnType>
@@ -217,6 +232,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Ads1115.ComparatorQueue</ReturnType>
@@ -241,6 +258,8 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Ads1115.DataRate</ReturnType>
@@ -266,6 +285,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Ads1115.DeviceMode</ReturnType>
@@ -296,6 +317,8 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -319,15 +342,17 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="lowerValue" Type="System.Int16" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="upperValue" Type="System.Int16" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="mode" Type="Iot.Device.Ads1115.ComparatorMode" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="queueLength" Type="Iot.Device.Ads1115.ComparatorQueue" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="lowerValue" Type="System.Int16" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="upperValue" Type="System.Int16" Index="1" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="mode" Type="Iot.Device.Ads1115.ComparatorMode" Index="2" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="queueLength" Type="Iot.Device.Ads1115.ComparatorQueue" Index="3" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
       </Parameters>
       <Docs>
         <param name="lowerValue">Lower value for the comparator</param>
@@ -355,15 +380,17 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="lowerValue" Type="UnitsNet.ElectricPotential" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="upperValue" Type="UnitsNet.ElectricPotential" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="mode" Type="Iot.Device.Ads1115.ComparatorMode" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="queueLength" Type="Iot.Device.Ads1115.ComparatorQueue" Index="3" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="lowerValue" Type="UnitsNet.ElectricPotential" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="upperValue" Type="UnitsNet.ElectricPotential" Index="1" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="mode" Type="Iot.Device.Ads1115.ComparatorMode" Index="2" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="queueLength" Type="Iot.Device.Ads1115.ComparatorQueue" Index="3" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
       </Parameters>
       <Docs>
         <param name="lowerValue">Lower value for the comparator</param>
@@ -391,6 +418,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -416,12 +445,14 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="dataRate" Type="Iot.Device.Ads1115.DataRate" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="dataRate" Type="Iot.Device.Ads1115.DataRate" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
       </Parameters>
       <Docs>
         <param name="dataRate">One of the <see cref="P:Iot.Device.Ads1115.Ads1115.DataRate" /> enumeration members.</param>
@@ -443,6 +474,8 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Ads1115.InputMultiplexer</ReturnType>
@@ -467,12 +500,14 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.ElectricPotential</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="measuringRange" Type="Iot.Device.Ads1115.MeasuringRange" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="measuringRange" Type="Iot.Device.Ads1115.MeasuringRange" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
       </Parameters>
       <Docs>
         <param name="measuringRange">One of the <see cref="P:Iot.Device.Ads1115.Ads1115.MeasuringRange" /> enumeration members</param>
@@ -494,6 +529,8 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Ads1115.MeasuringRange</ReturnType>
@@ -515,19 +552,21 @@
       <MemberSignature Language="DocId" Value="M:Iot.Device.Ads1115.Ads1115.RawToVoltage(System.Int16)" />
       <MemberSignature Language="VB.NET" Value="Public Function RawToVoltage (val As Short) As Double" FrameworkAlternate="iot-dotnet-1.0" />
       <MemberSignature Language="F#" Value="member this.RawToVoltage : int16 -&gt; double" Usage="ads1115.RawToVoltage val" FrameworkAlternate="iot-dotnet-1.0" />
-      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential RawToVoltage (short val);" FrameworkAlternate="iot-dotnet-1.1" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.ElectricPotential RawToVoltage(int16 val) cil managed" FrameworkAlternate="iot-dotnet-1.1" />
-      <MemberSignature Language="VB.NET" Value="Public Function RawToVoltage (val As Short) As ElectricPotential" FrameworkAlternate="iot-dotnet-1.1" />
-      <MemberSignature Language="F#" Value="member this.RawToVoltage : int16 -&gt; UnitsNet.ElectricPotential" Usage="ads1115.RawToVoltage val" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential RawToVoltage (short val);" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.ElectricPotential RawToVoltage(int16 val) cil managed" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+      <MemberSignature Language="VB.NET" Value="Public Function RawToVoltage (val As Short) As ElectricPotential" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+      <MemberSignature Language="F#" Value="member this.RawToVoltage : int16 -&gt; UnitsNet.ElectricPotential" Usage="ads1115.RawToVoltage val" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType FrameworkAlternate="iot-dotnet-1.0">System.Double</ReturnType>
-        <ReturnType FrameworkAlternate="iot-dotnet-1.1">UnitsNet.ElectricPotential</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3">UnitsNet.ElectricPotential</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="val" Type="System.Int16" />
@@ -552,6 +591,8 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.0.0.0</AssemblyVersion>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int16</ReturnType>
@@ -576,12 +617,14 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int16</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="inputMultiplexer" Type="Iot.Device.Ads1115.InputMultiplexer" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="inputMultiplexer" Type="Iot.Device.Ads1115.InputMultiplexer" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
       </Parameters>
       <Docs>
         <param name="inputMultiplexer">New input multiplexer setting</param>
@@ -605,14 +648,16 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int16</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="inputMultiplexer" Type="Iot.Device.Ads1115.InputMultiplexer" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="measuringRange" Type="Iot.Device.Ads1115.MeasuringRange" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="dataRate" Type="Iot.Device.Ads1115.DataRate" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="inputMultiplexer" Type="Iot.Device.Ads1115.InputMultiplexer" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="measuringRange" Type="Iot.Device.Ads1115.MeasuringRange" Index="1" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="dataRate" Type="Iot.Device.Ads1115.DataRate" Index="2" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
       </Parameters>
       <Docs>
         <param name="inputMultiplexer">New input multiplexer setting</param>
@@ -639,6 +684,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.ElectricPotential</ReturnType>
@@ -662,12 +709,14 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.ElectricPotential</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="inputMultiplexer" Type="Iot.Device.Ads1115.InputMultiplexer" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="inputMultiplexer" Type="Iot.Device.Ads1115.InputMultiplexer" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
       </Parameters>
       <Docs>
         <param name="inputMultiplexer">Channel to use</param>
@@ -688,12 +737,14 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int16</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="voltage" Type="UnitsNet.ElectricPotential" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="voltage" Type="UnitsNet.ElectricPotential" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
       </Parameters>
       <Docs>
         <param name="voltage">Input voltage</param>

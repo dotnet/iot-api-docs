@@ -1,0 +1,223 @@
+<Type Name="RequestDataObject" FullName="Iot.Device.Usb.RequestDataObject">
+  <TypeSignature Language="C#" Value="public class RequestDataObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RequestDataObject extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Usb.RequestDataObject" />
+  <TypeSignature Language="VB.NET" Value="Public Class RequestDataObject" />
+  <TypeSignature Language="F#" Value="type RequestDataObject = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Representation of a request data object (=RDO).
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RequestDataObject (uint rawValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int32 rawValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Usb.RequestDataObject.#ctor(System.UInt32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (rawValue As UInteger)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Usb.RequestDataObject : uint32 -&gt; Iot.Device.Usb.RequestDataObject" Usage="new Iot.Device.Usb.RequestDataObject rawValue" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rawValue" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="rawValue">The raw value received from the USB-PD controller which encodes all properties of this RDO. See USB-PD specification for details.</param>
+        <summary>Initializes a new instance of the <see cref="T:Iot.Device.Usb.RequestDataObject" /> class.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CapabilityMismatch">
+      <MemberSignature Language="C#" Value="public bool CapabilityMismatch { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool CapabilityMismatch" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.RequestDataObject.CapabilityMismatch" />
+      <MemberSignature Language="VB.NET" Value="Public Property CapabilityMismatch As Boolean" />
+      <MemberSignature Language="F#" Value="member this.CapabilityMismatch : bool with get, set" Usage="Iot.Device.Usb.RequestDataObject.CapabilityMismatch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a value indicating whether there is a capability mismatch.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GiveBackFlag">
+      <MemberSignature Language="C#" Value="public bool GiveBackFlag { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool GiveBackFlag" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.RequestDataObject.GiveBackFlag" />
+      <MemberSignature Language="VB.NET" Value="Public Property GiveBackFlag As Boolean" />
+      <MemberSignature Language="F#" Value="member this.GiveBackFlag : bool with get, set" Usage="Iot.Device.Usb.RequestDataObject.GiveBackFlag" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a value indicating whether the give back flag is set.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximalCurrent">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricCurrent MaximalCurrent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricCurrent MaximalCurrent" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.RequestDataObject.MaximalCurrent" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximalCurrent As ElectricCurrent" />
+      <MemberSignature Language="F#" Value="member this.MaximalCurrent : UnitsNet.ElectricCurrent with get, set" Usage="Iot.Device.Usb.RequestDataObject.MaximalCurrent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricCurrent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the maximal current.</summary>
+        <value>To be added.</value>
+        <remarks>This is stored with the factor 100 as a 10-bit value (range 0 - 1023) =&gt; 0...10.23A.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoUsbSuspend">
+      <MemberSignature Language="C#" Value="public bool NoUsbSuspend { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoUsbSuspend" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.RequestDataObject.NoUsbSuspend" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoUsbSuspend As Boolean" />
+      <MemberSignature Language="F#" Value="member this.NoUsbSuspend : bool with get, set" Usage="Iot.Device.Usb.RequestDataObject.NoUsbSuspend" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a value indicating whether the USB is not suspended.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ObjectPosition">
+      <MemberSignature Language="C#" Value="public byte ObjectPosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 ObjectPosition" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.RequestDataObject.ObjectPosition" />
+      <MemberSignature Language="VB.NET" Value="Public Property ObjectPosition As Byte" />
+      <MemberSignature Language="F#" Value="member this.ObjectPosition : byte with get, set" Usage="Iot.Device.Usb.RequestDataObject.ObjectPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the object position.</summary>
+        <value>To be added.</value>
+        <remarks>This is stored as a 3-bit value (range 0 - 7). 000b is Reserved and shall not be used.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperatingCurrent">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricCurrent OperatingCurrent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricCurrent OperatingCurrent" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.RequestDataObject.OperatingCurrent" />
+      <MemberSignature Language="VB.NET" Value="Public Property OperatingCurrent As ElectricCurrent" />
+      <MemberSignature Language="F#" Value="member this.OperatingCurrent : UnitsNet.ElectricCurrent with get, set" Usage="Iot.Device.Usb.RequestDataObject.OperatingCurrent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricCurrent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the operational current.</summary>
+        <value>To be added.</value>
+        <remarks>This is stored with the factor 100 as a 10-bit value (range 0 - 1023) =&gt; 0...10.23A.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnchunkedExtendedMessagesSupported">
+      <MemberSignature Language="C#" Value="public bool UnchunkedExtendedMessagesSupported { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UnchunkedExtendedMessagesSupported" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.RequestDataObject.UnchunkedExtendedMessagesSupported" />
+      <MemberSignature Language="VB.NET" Value="Public Property UnchunkedExtendedMessagesSupported As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UnchunkedExtendedMessagesSupported : bool with get, set" Usage="Iot.Device.Usb.RequestDataObject.UnchunkedExtendedMessagesSupported" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a value indicating whether unchunked extended messages are supported.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsbCommunicationsCapable">
+      <MemberSignature Language="C#" Value="public bool UsbCommunicationsCapable { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UsbCommunicationsCapable" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.RequestDataObject.UsbCommunicationsCapable" />
+      <MemberSignature Language="VB.NET" Value="Public Property UsbCommunicationsCapable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UsbCommunicationsCapable : bool with get, set" Usage="Iot.Device.Usb.RequestDataObject.UsbCommunicationsCapable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets a value indicating whether the port is capable of USB communications.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public uint Value { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 Value" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.RequestDataObject.Value" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Value As UInteger" />
+      <MemberSignature Language="F#" Value="member this.Value : uint32" Usage="Iot.Device.Usb.RequestDataObject.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the raw value received from the USB-PD controller which encodes all properties of this RDO. See USB-PD specification for details.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

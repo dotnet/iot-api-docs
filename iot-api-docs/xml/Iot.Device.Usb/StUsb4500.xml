@@ -1,0 +1,316 @@
+<Type Name="StUsb4500" FullName="Iot.Device.Usb.StUsb4500">
+  <TypeSignature Language="C#" Value="public class StUsb4500 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit StUsb4500 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Usb.StUsb4500" />
+  <TypeSignature Language="VB.NET" Value="Public Class StUsb4500&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type StUsb4500 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>USB PD sink controller STUSB4500.</summary>
+    <remarks>This is based on code from the official STUSB4500 repo (https://github.com/usb-c/STUSB4500/).</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public StUsb4500 (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Usb.StUsb4500.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Usb.StUsb4500 : System.Device.I2c.I2cDevice -&gt; Iot.Device.Usb.StUsb4500" Usage="new Iot.Device.Usb.StUsb4500 i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device used for communication.</param>
+        <summary>Initializes a new instance of the <see cref="T:Iot.Device.Usb.StUsb4500" /> class.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CableConnection">
+      <MemberSignature Language="C#" Value="public Iot.Device.Usb.UsbCCableConnection CableConnection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Usb.UsbCCableConnection CableConnection" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.StUsb4500.CableConnection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CableConnection As UsbCCableConnection" />
+      <MemberSignature Language="F#" Value="member this.CableConnection : Iot.Device.Usb.UsbCCableConnection" Usage="Iot.Device.Usb.StUsb4500.CableConnection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Usb.UsbCCableConnection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the cable connection state.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte DefaultI2cAddress = 40;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 DefaultI2cAddress = (40)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Usb.StUsb4500.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Byte  = 40" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : byte" Usage="Iot.Device.Usb.StUsb4500.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>40</MemberValue>
+      <Docs>
+        <summary>STUSB4500 default I2C address.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceId">
+      <MemberSignature Language="C#" Value="public byte DeviceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 DeviceId" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.StUsb4500.DeviceId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeviceId As Byte" />
+      <MemberSignature Language="F#" Value="member this.DeviceId : byte" Usage="Iot.Device.Usb.StUsb4500.DeviceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the device Id.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Usb.StUsb4500.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="stUsb4500.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Usb.StUsb4500.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="stUsb4500.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        <summary>Releases unmanaged and - optionally - managed resources.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Finalize">
+      <MemberSignature Language="C#" Value="~StUsb4500 ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Finalize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Usb.StUsb4500.Finalize" />
+      <MemberSignature Language="VB.NET" Value="Finalize ()" />
+      <MemberSignature Language="F#" Value="override this.Finalize : unit -&gt; unit" Usage="stUsb4500.Finalize " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Finalizes an instance of the <see cref="T:Iot.Device.Usb.StUsb4500" /> class.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NvmData">
+      <MemberSignature Language="C#" Value="public byte[] NvmData { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] NvmData" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.StUsb4500.NvmData" />
+      <MemberSignature Language="VB.NET" Value="Public Property NvmData As Byte()" />
+      <MemberSignature Language="F#" Value="member this.NvmData : byte[] with get, set" Usage="Iot.Device.Usb.StUsb4500.NvmData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets or sets the NVM data.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformUsbPdSoftwareReset">
+      <MemberSignature Language="C#" Value="public void PerformUsbPdSoftwareReset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PerformUsbPdSoftwareReset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Usb.StUsb4500.PerformUsbPdSoftwareReset" />
+      <MemberSignature Language="VB.NET" Value="Public Sub PerformUsbPdSoftwareReset ()" />
+      <MemberSignature Language="F#" Value="member this.PerformUsbPdSoftwareReset : unit -&gt; unit" Usage="stUsb4500.PerformUsbPdSoftwareReset " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>Performs a USB PD software reset.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestDataObject">
+      <MemberSignature Language="C#" Value="public Iot.Device.Usb.RequestDataObject RequestDataObject { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Usb.RequestDataObject RequestDataObject" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.StUsb4500.RequestDataObject" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequestDataObject As RequestDataObject" />
+      <MemberSignature Language="F#" Value="member this.RequestDataObject : Iot.Device.Usb.RequestDataObject" Usage="Iot.Device.Usb.StUsb4500.RequestDataObject" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Usb.RequestDataObject</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the request data object.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestedVoltage">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotentialDc RequestedVoltage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricPotentialDc RequestedVoltage" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.StUsb4500.RequestedVoltage" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequestedVoltage As ElectricPotentialDc" />
+      <MemberSignature Language="F#" Value="member this.RequestedVoltage : UnitsNet.ElectricPotentialDc" Usage="Iot.Device.Usb.StUsb4500.RequestedVoltage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotentialDc</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the requested voltage.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SinkPowerDeliveryObjects">
+      <MemberSignature Language="C#" Value="public Iot.Device.Usb.PowerDeliveryObject[] SinkPowerDeliveryObjects { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Usb.PowerDeliveryObject[] SinkPowerDeliveryObjects" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.StUsb4500.SinkPowerDeliveryObjects" />
+      <MemberSignature Language="VB.NET" Value="Public Property SinkPowerDeliveryObjects As PowerDeliveryObject()" />
+      <MemberSignature Language="F#" Value="member this.SinkPowerDeliveryObjects : Iot.Device.Usb.PowerDeliveryObject[] with get, set" Usage="Iot.Device.Usb.StUsb4500.SinkPowerDeliveryObjects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Usb.PowerDeliveryObject[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the power delivery objects from the sink.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourcePowerDeliveryObjects">
+      <MemberSignature Language="C#" Value="public Iot.Device.Usb.PowerDeliveryObject[] SourcePowerDeliveryObjects { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Usb.PowerDeliveryObject[] SourcePowerDeliveryObjects" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.StUsb4500.SourcePowerDeliveryObjects" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SourcePowerDeliveryObjects As PowerDeliveryObject()" />
+      <MemberSignature Language="F#" Value="member this.SourcePowerDeliveryObjects : Iot.Device.Usb.PowerDeliveryObject[]" Usage="Iot.Device.Usb.StUsb4500.SourcePowerDeliveryObjects" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Usb.PowerDeliveryObject[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the source power delivery objects.
+            ATTENTION: This triggers a new USB PD contract negotiation and can cause a short power-disruption.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteNvm">
+      <MemberSignature Language="C#" Value="public void WriteNvm (byte[] nvmData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteNvm(unsigned int8[] nvmData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Usb.StUsb4500.WriteNvm(System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteNvm (nvmData As Byte())" />
+      <MemberSignature Language="F#" Value="member this.WriteNvm : byte[] -&gt; unit" Usage="stUsb4500.WriteNvm nvmData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nvmData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="nvmData">The NVM data.</param>
+        <summary>Writes the NVM.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

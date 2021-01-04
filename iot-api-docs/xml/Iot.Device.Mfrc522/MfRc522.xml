@@ -1,0 +1,538 @@
+<Type Name="MfRc522" FullName="Iot.Device.Mfrc522.MfRc522">
+  <TypeSignature Language="C#" Value="public class MfRc522 : Iot.Device.Card.CardTransceiver, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MfRc522 extends Iot.Device.Card.CardTransceiver implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mfrc522.MfRc522" />
+  <TypeSignature Language="VB.NET" Value="Public Class MfRc522&#xA;Inherits CardTransceiver&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type MfRc522 = class&#xA;    inherit CardTransceiver&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Card.CardTransceiver</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            MfRc522 module
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MfRc522 (System.Device.I2c.I2cDevice i2cDevice, int pinReset = -1, System.Device.Gpio.GpioController? gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, int32 pinReset, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mfrc522.MfRc522.#ctor(System.Device.I2c.I2cDevice,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional pinReset As Integer = -1, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mfrc522.MfRc522 : System.Device.I2c.I2cDevice * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Mfrc522.MfRc522" Usage="new Iot.Device.Mfrc522.MfRc522 (i2cDevice, pinReset, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="pinReset" Type="System.Int32" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">An I2C device, note that there is no default address for this device, it can be programmed with pins.</param>
+        <param name="pinReset">A reset pin for the hardware reset.</param>
+        <param name="gpioController">A GpioController for the hardware reset.</param>
+        <param name="shouldDispose">True to dispose the GpioController.</param>
+        <summary>
+            Constructor for MFRC5222 with I2C interface.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MfRc522 (System.Device.Spi.SpiDevice spiDevice, int pinReset = -1, System.Device.Gpio.GpioController? gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, int32 pinReset, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mfrc522.MfRc522.#ctor(System.Device.Spi.SpiDevice,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (spiDevice As SpiDevice, Optional pinReset As Integer = -1, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mfrc522.MfRc522 : System.Device.Spi.SpiDevice * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Mfrc522.MfRc522" Usage="new Iot.Device.Mfrc522.MfRc522 (spiDevice, pinReset, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" />
+        <Parameter Name="pinReset" Type="System.Int32" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="spiDevice">A SPI device</param>
+        <param name="pinReset">A reset pin for the hardware reset.</param>
+        <param name="gpioController">A GpioController for the hardware reset.</param>
+        <param name="shouldDispose">True to dispose the GpioController.</param>
+        <summary>
+            Constructor for MFRC5222 with SPI interface.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MfRc522 (System.IO.Ports.SerialPort serialPort, int pinReset = -1, System.Device.Gpio.GpioController? gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Ports.SerialPort serialPort, int32 pinReset, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mfrc522.MfRc522.#ctor(System.IO.Ports.SerialPort,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (serialPort As SerialPort, Optional pinReset As Integer = -1, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mfrc522.MfRc522 : System.IO.Ports.SerialPort * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Mfrc522.MfRc522" Usage="new Iot.Device.Mfrc522.MfRc522 (serialPort, pinReset, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serialPort" Type="System.IO.Ports.SerialPort" />
+        <Parameter Name="pinReset" Type="System.Int32" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="serialPort">A Serial Port, default speed is 9600 baud, no parity, 1 bit stop.</param>
+        <param name="pinReset">A reset pin for the hardware reset.</param>
+        <param name="gpioController">A GpioController for the hardware reset.</param>
+        <param name="shouldDispose">True to dispose the GpioController.</param>
+        <summary>
+            Constructor for MFRC5222 with Serial Port interface.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MfRc522 (string serialPort, int pinReset = -1, System.Device.Gpio.GpioController gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string serialPort, int32 pinReset, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mfrc522.MfRc522.#ctor(System.String,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (serialPort As String, Optional pinReset As Integer = -1, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mfrc522.MfRc522 : string * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Mfrc522.MfRc522" Usage="new Iot.Device.Mfrc522.MfRc522 (serialPort, pinReset, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="serialPort" Type="System.String" />
+        <Parameter Name="pinReset" Type="System.Int32" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="serialPort">A Serial Port name, will construct a SerialPort with default speed of 9600 baud, no parity, 1 bit stop.</param>
+        <param name="pinReset">A reset pin for the hardware reset.</param>
+        <param name="gpioController">A GpioController for the hardware reset.</param>
+        <param name="shouldDispose">True to dispose the GpioController.</param>
+        <summary>
+            Constructor for MFRC5222 with Serial Port interface.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSpiMode">
+      <MemberSignature Language="C#" Value="public const System.Device.Spi.SpiMode DefaultSpiMode = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Device.Spi.SpiMode DefaultSpiMode = (0)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Mfrc522.MfRc522.DefaultSpiMode" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultSpiMode As SpiMode  = 0" />
+      <MemberSignature Language="F#" Value="val mutable DefaultSpiMode : System.Device.Spi.SpiMode" Usage="Iot.Device.Mfrc522.MfRc522.DefaultSpiMode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Spi.SpiMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Only SPI Mode supported is Mode0
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mfrc522.MfRc522.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="mfRc522.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mfrc522.MfRc522.Enabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property Enabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Enabled : bool with get, set" Usage="Iot.Device.Mfrc522.MfRc522.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Switch on or off the antenna.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Gain">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mfrc522.Gain Gain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Mfrc522.Gain Gain" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mfrc522.MfRc522.Gain" />
+      <MemberSignature Language="VB.NET" Value="Public Property Gain As Gain" />
+      <MemberSignature Language="F#" Value="member this.Gain : Iot.Device.Mfrc522.Gain with get, set" Usage="Iot.Device.Mfrc522.MfRc522.Gain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mfrc522.Gain</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or Set the gain.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Halt">
+      <MemberSignature Language="C#" Value="public bool Halt ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Halt() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mfrc522.MfRc522.Halt" />
+      <MemberSignature Language="VB.NET" Value="Public Function Halt () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Halt : unit -&gt; bool" Usage="mfRc522.Halt " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stop to communicate with a card.
+            </summary>
+        <returns>True if success.</returns>
+        <remarks>It's not because you don't get a positive result the card is not halt.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCardPresent">
+      <MemberSignature Language="C#" Value="public bool IsCardPresent (byte[] atqa);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsCardPresent(unsigned int8[] atqa) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mfrc522.MfRc522.IsCardPresent(System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsCardPresent (atqa As Byte()) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsCardPresent : byte[] -&gt; bool" Usage="mfRc522.IsCardPresent atqa" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="atqa" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="atqa">ATQA buffer must be 2 bytes length and will contain the ATQA answer if there is a card.</param>
+        <summary>
+            Check if a new card is present.
+            </summary>
+        <returns>true if there is a card, else false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ListenToCardIso14443TypeA">
+      <MemberSignature Language="C#" Value="public bool ListenToCardIso14443TypeA (out Iot.Device.Rfid.Data106kbpsTypeA card, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ListenToCardIso14443TypeA([out] class Iot.Device.Rfid.Data106kbpsTypeA&amp; card, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mfrc522.MfRc522.ListenToCardIso14443TypeA(Iot.Device.Rfid.Data106kbpsTypeA@,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ListenToCardIso14443TypeA (ByRef card As Data106kbpsTypeA, timeout As TimeSpan) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ListenToCardIso14443TypeA : Data106kbpsTypeA * TimeSpan -&gt; bool" Usage="mfRc522.ListenToCardIso14443TypeA (card, timeout)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="card" Type="Iot.Device.Rfid.Data106kbpsTypeA" RefType="out" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="card">A card once detected.</param>
+        <param name="timeout">A timeout for pulling the card.</param>
+        <summary>
+            Listen to any 14443 Type A card.
+            </summary>
+        <returns>True if success.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumSpiClockFrequency">
+      <MemberSignature Language="C#" Value="public const int MaximumSpiClockFrequency = 10000000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 MaximumSpiClockFrequency = (10000000)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Mfrc522.MfRc522.MaximumSpiClockFrequency" />
+      <MemberSignature Language="VB.NET" Value="Public Const MaximumSpiClockFrequency As Integer  = 10000000" />
+      <MemberSignature Language="F#" Value="val mutable MaximumSpiClockFrequency : int" Usage="Iot.Device.Mfrc522.MfRc522.MaximumSpiClockFrequency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>10000000</MemberValue>
+      <Docs>
+        <summary>
+            The maximum speed for SPI transfer speed
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MifareAuthenticate">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mfrc522.Status MifareAuthenticate (ReadOnlySpan&lt;byte&gt; key, Iot.Device.Card.Mifare.MifareCardCommand mifareCommand, byte blockAddress, ReadOnlySpan&lt;byte&gt; cardUid);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.Mfrc522.Status MifareAuthenticate(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; key, valuetype Iot.Device.Card.Mifare.MifareCardCommand mifareCommand, unsigned int8 blockAddress, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; cardUid) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mfrc522.MfRc522.MifareAuthenticate(System.ReadOnlySpan{System.Byte},Iot.Device.Card.Mifare.MifareCardCommand,System.Byte,System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function MifareAuthenticate (key As ReadOnlySpan(Of Byte), mifareCommand As MifareCardCommand, blockAddress As Byte, cardUid As ReadOnlySpan(Of Byte)) As Status" />
+      <MemberSignature Language="F#" Value="member this.MifareAuthenticate : ReadOnlySpan&lt;byte&gt; * Iot.Device.Card.Mifare.MifareCardCommand * byte * ReadOnlySpan&lt;byte&gt; -&gt; Iot.Device.Mfrc522.Status" Usage="mfRc522.MifareAuthenticate (key, mifareCommand, blockAddress, cardUid)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mfrc522.Status</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="key" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="mifareCommand" Type="Iot.Device.Card.Mifare.MifareCardCommand" />
+        <Parameter Name="blockAddress" Type="System.Byte" />
+        <Parameter Name="cardUid" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="key">A 6 bytes key</param>
+        <param name="mifareCommand">MifareCardCommand.AuthenticationA or MifareCardCommand.AuthenticationB</param>
+        <param name="blockAddress">The block address to authenticate.</param>
+        <param name="cardUid">The 4 bytes UUID of the card.</param>
+        <summary>
+            Specific function to authenticate Mifare cards
+            </summary>
+        <returns>True if success.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrepareForSleep">
+      <MemberSignature Language="C#" Value="public void PrepareForSleep ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PrepareForSleep() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mfrc522.MfRc522.PrepareForSleep" />
+      <MemberSignature Language="VB.NET" Value="Public Sub PrepareForSleep ()" />
+      <MemberSignature Language="F#" Value="member this.PrepareForSleep : unit -&gt; unit" Usage="mfRc522.PrepareForSleep " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Prepare for sleep, make sure cryptography is off and switch off the antenna.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReselectTarget">
+      <MemberSignature Language="C#" Value="public override bool ReselectTarget (byte targetNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ReselectTarget(unsigned int8 targetNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mfrc522.MfRc522.ReselectTarget(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ReselectTarget (targetNumber As Byte) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.ReselectTarget : byte -&gt; bool" Usage="mfRc522.ReselectTarget targetNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNumber" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="targetNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="SendAndReceiveData">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mfrc522.Status SendAndReceiveData (Iot.Device.Mfrc522.MfrcCommand command, ReadOnlySpan&lt;byte&gt; sendData, Span&lt;byte&gt; receiveData, byte numberValidBitsLastByte = 8);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.Mfrc522.Status SendAndReceiveData(valuetype Iot.Device.Mfrc522.MfrcCommand command, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; sendData, valuetype System.Span`1&lt;unsigned int8&gt; receiveData, unsigned int8 numberValidBitsLastByte) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mfrc522.MfRc522.SendAndReceiveData(Iot.Device.Mfrc522.MfrcCommand,System.ReadOnlySpan{System.Byte},System.Span{System.Byte},System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SendAndReceiveData (command As MfrcCommand, sendData As ReadOnlySpan(Of Byte), receiveData As Span(Of Byte), Optional numberValidBitsLastByte As Byte = 8) As Status" />
+      <MemberSignature Language="F#" Value="member this.SendAndReceiveData : Iot.Device.Mfrc522.MfrcCommand * ReadOnlySpan&lt;byte&gt; * Span&lt;byte&gt; * byte -&gt; Iot.Device.Mfrc522.Status" Usage="mfRc522.SendAndReceiveData (command, sendData, receiveData, numberValidBitsLastByte)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mfrc522.Status</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="Iot.Device.Mfrc522.MfrcCommand" />
+        <Parameter Name="sendData" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="receiveData" Type="System.Span&lt;System.Byte&gt;" />
+        <Parameter Name="numberValidBitsLastByte" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="command">The MFRC522 command.</param>
+        <param name="sendData">The data to send.</param>
+        <param name="receiveData">The data to receive. Note that you need to have at least the size of data you expect to receive.</param>
+        <param name="numberValidBitsLastByte">The number of bits valid in the last byte, 8 is the default.</param>
+        <summary>
+            Sand and Receive Data.
+            </summary>
+        <returns>True if the operation is successful.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SerialSpeed">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mfrc522.SerialSpeed SerialSpeed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Mfrc522.SerialSpeed SerialSpeed" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mfrc522.MfRc522.SerialSpeed" />
+      <MemberSignature Language="VB.NET" Value="Public Property SerialSpeed As SerialSpeed" />
+      <MemberSignature Language="F#" Value="member this.SerialSpeed : Iot.Device.Mfrc522.SerialSpeed with get, set" Usage="Iot.Device.Mfrc522.MfRc522.SerialSpeed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mfrc522.SerialSpeed</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set or Get the baud rate for the serial port communication.
+            Default is 9600 baud.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SoftReset">
+      <MemberSignature Language="C#" Value="public void SoftReset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SoftReset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mfrc522.MfRc522.SoftReset" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SoftReset ()" />
+      <MemberSignature Language="F#" Value="member this.SoftReset : unit -&gt; unit" Usage="mfRc522.SoftReset " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Perform a soft reset. The configuration data of the internal buffer
+            remains unchanged.All registers are set to the reset values.This command automatically
+            terminates when finished.
+            </summary>
+        <remarks>The SerialSpeedReg register is reset and therefore the serial data rate is set to 9600 baud.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Transceive">
+      <MemberSignature Language="C#" Value="public override int Transceive (byte targetNumber, ReadOnlySpan&lt;byte&gt; dataToSend, Span&lt;byte&gt; dataFromCard);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Transceive(unsigned int8 targetNumber, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; dataToSend, valuetype System.Span`1&lt;unsigned int8&gt; dataFromCard) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mfrc522.MfRc522.Transceive(System.Byte,System.ReadOnlySpan{System.Byte},System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Transceive (targetNumber As Byte, dataToSend As ReadOnlySpan(Of Byte), dataFromCard As Span(Of Byte)) As Integer" />
+      <MemberSignature Language="F#" Value="override this.Transceive : byte * ReadOnlySpan&lt;byte&gt; * Span&lt;byte&gt; -&gt; int" Usage="mfRc522.Transceive (targetNumber, dataToSend, dataFromCard)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNumber" Type="System.Byte" />
+        <Parameter Name="dataToSend" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="dataFromCard" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="targetNumber">To be added.</param>
+        <param name="dataToSend">To be added.</param>
+        <param name="dataFromCard">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public Version? Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mfrc522.MfRc522.Version" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Version As Version" />
+      <MemberSignature Language="F#" Value="member this.Version : Version" Usage="Iot.Device.Mfrc522.MfRc522.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the Version.
+            </summary>
+        <value>To be added.</value>
+        <remarks>Only versions 1.0 and  2.0 are valid for authentic MFRC522.
+            Some copies may not have a proper version but would just work.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

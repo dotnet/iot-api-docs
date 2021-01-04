@@ -1,0 +1,161 @@
+<Type Name="GeoRecord" FullName="Iot.Device.Ndef.GeoRecord">
+  <TypeSignature Language="C#" Value="public class GeoRecord : Iot.Device.Ndef.UriRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GeoRecord extends Iot.Device.Ndef.UriRecord" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ndef.GeoRecord" />
+  <TypeSignature Language="VB.NET" Value="Public Class GeoRecord&#xA;Inherits UriRecord" />
+  <TypeSignature Language="F#" Value="type GeoRecord = class&#xA;    inherit UriRecord" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Ndef.UriRecord</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Geo Record geo:latitude,longitude where both latitude and longitude are double with . for decimal point
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeoRecord (Iot.Device.Ndef.NdefRecord ndefRecord);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Ndef.NdefRecord ndefRecord) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ndef.GeoRecord.#ctor(Iot.Device.Ndef.NdefRecord)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ndefRecord As NdefRecord)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ndef.GeoRecord : Iot.Device.Ndef.NdefRecord -&gt; Iot.Device.Ndef.GeoRecord" Usage="new Iot.Device.Ndef.GeoRecord ndefRecord" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ndefRecord" Type="Iot.Device.Ndef.NdefRecord" />
+      </Parameters>
+      <Docs>
+        <param name="ndefRecord">The NDEF record to create the Geo Record</param>
+        <summary>
+            Create a Geo Record from a NDEF record
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeoRecord (ReadOnlySpan&lt;byte&gt; record);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; record) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ndef.GeoRecord.#ctor(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (record As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ndef.GeoRecord : ReadOnlySpan&lt;byte&gt; -&gt; Iot.Device.Ndef.GeoRecord" Usage="new Iot.Device.Ndef.GeoRecord record" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="record" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="record">A raw span of byte containing the Geo Record</param>
+        <summary>
+            Create a Geo Record from a span of bytes
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeoRecord (double latitude, double longitude);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 latitude, float64 longitude) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ndef.GeoRecord.#ctor(System.Double,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (latitude As Double, longitude As Double)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ndef.GeoRecord : double * double -&gt; Iot.Device.Ndef.GeoRecord" Usage="new Iot.Device.Ndef.GeoRecord (latitude, longitude)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="latitude" Type="System.Double" />
+        <Parameter Name="longitude" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="latitude">Latitude</param>
+        <param name="longitude">Longitude</param>
+        <summary>
+            Create a Geo Record from a latitude and a longitude
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsGeoRecord">
+      <MemberSignature Language="C#" Value="public static bool IsGeoRecord (Iot.Device.Ndef.NdefRecord ndefRecord);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsGeoRecord(class Iot.Device.Ndef.NdefRecord ndefRecord) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ndef.GeoRecord.IsGeoRecord(Iot.Device.Ndef.NdefRecord)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function IsGeoRecord (ndefRecord As NdefRecord) As Boolean" />
+      <MemberSignature Language="F#" Value="static member IsGeoRecord : Iot.Device.Ndef.NdefRecord -&gt; bool" Usage="Iot.Device.Ndef.GeoRecord.IsGeoRecord ndefRecord" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ndefRecord" Type="Iot.Device.Ndef.NdefRecord" />
+      </Parameters>
+      <Docs>
+        <param name="ndefRecord">A valid NDEF Record</param>
+        <summary>
+            Check if it's a valid NDEF Geo Record
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Latitude">
+      <MemberSignature Language="C#" Value="public double Latitude { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Latitude" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ndef.GeoRecord.Latitude" />
+      <MemberSignature Language="VB.NET" Value="Public Property Latitude As Double" />
+      <MemberSignature Language="F#" Value="member this.Latitude : double with get, set" Usage="Iot.Device.Ndef.GeoRecord.Latitude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The latitude
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Longitude">
+      <MemberSignature Language="C#" Value="public double Longitude { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Longitude" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ndef.GeoRecord.Longitude" />
+      <MemberSignature Language="VB.NET" Value="Public Property Longitude As Double" />
+      <MemberSignature Language="F#" Value="member this.Longitude : double with get, set" Usage="Iot.Device.Ndef.GeoRecord.Longitude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The longitude
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
