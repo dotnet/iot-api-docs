@@ -7,6 +7,8 @@
   <AssemblyInfo>
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Iot.Device.Card.CardTransceiver</BaseTypeName>
@@ -24,30 +26,6 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
-      <MemberSignature Language="C#" Value="public Pn532 (System.Device.I2c.I2cDevice i2CDevice, Iot.Device.Card.LogLevel logLevel = Iot.Device.Card.LogLevel.None);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2CDevice, valuetype Iot.Device.Card.LogLevel logLevel) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Card.LogLevel)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (i2CDevice As I2cDevice, Optional logLevel As LogLevel = Iot.Device.Card.LogLevel.None)" />
-      <MemberSignature Language="F#" Value="new Iot.Device.Pn532.Pn532 : System.Device.I2c.I2cDevice * Iot.Device.Card.LogLevel -&gt; Iot.Device.Pn532.Pn532" Usage="new Iot.Device.Pn532.Pn532 (i2CDevice, logLevel)" />
-      <MemberType>Constructor</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>1.1.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <Parameters>
-        <Parameter Name="i2CDevice" Type="System.Device.I2c.I2cDevice" />
-        <Parameter Name="logLevel" Type="Iot.Device.Card.LogLevel" />
-      </Parameters>
-      <Docs>
-        <param name="i2CDevice">The I2C device</param>
-        <param name="logLevel">The log level</param>
-        <summary>
-            Create a PN532 using I2C
-            </summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public Pn532 (System.Device.Spi.SpiDevice spiDevice, Iot.Device.Card.LogLevel logLevel = Iot.Device.Card.LogLevel.None);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, valuetype Iot.Device.Card.LogLevel logLevel) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.#ctor(System.Device.Spi.SpiDevice,Iot.Device.Card.LogLevel)" />
@@ -59,8 +37,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" />
-        <Parameter Name="logLevel" Type="Iot.Device.Card.LogLevel" />
+        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="logLevel" Type="Iot.Device.Card.LogLevel" Index="1" FrameworkAlternate="iot-dotnet-1.1" />
       </Parameters>
       <Docs>
         <param name="spiDevice">The SPI Device</param>
@@ -81,6 +59,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="portName" Type="System.String" />
@@ -95,6 +75,69 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pn532 (System.Device.I2c.I2cDevice i2CDevice, Iot.Device.Card.LogLevel logLevel = Iot.Device.Card.LogLevel.None);" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2CDevice, valuetype Iot.Device.Card.LogLevel logLevel) cil managed" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Card.LogLevel)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2CDevice As I2cDevice, Optional logLevel As LogLevel = Iot.Device.Card.LogLevel.None)" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Pn532.Pn532 : System.Device.I2c.I2cDevice * Iot.Device.Card.LogLevel -&gt; Iot.Device.Pn532.Pn532" Usage="new Iot.Device.Pn532.Pn532 (i2CDevice, logLevel)" FrameworkAlternate="iot-dotnet-1.1" />
+      <MemberSignature Language="C#" Value="public Pn532 (System.Device.I2c.I2cDevice i2cDevice, Iot.Device.Card.LogLevel logLevel = Iot.Device.Card.LogLevel.None);" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, valuetype Iot.Device.Card.LogLevel logLevel) cil managed" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional logLevel As LogLevel = Iot.Device.Card.LogLevel.None)" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Pn532.Pn532 : System.Device.I2c.I2cDevice * Iot.Device.Card.LogLevel -&gt; Iot.Device.Pn532.Pn532" Usage="new Iot.Device.Pn532.Pn532 (i2cDevice, logLevel)" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2CDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="logLevel" Type="Iot.Device.Card.LogLevel" Index="1" />
+      </Parameters>
+      <Docs>
+        <param name="i2CDevice">The I2C device</param>
+        <param name="i2cDevice">The I2C device</param>
+        <param name="logLevel">The log level</param>
+        <summary>
+            Create a PN532 using I2C
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pn532 (System.Device.Spi.SpiDevice spiDevice, int pinChipSelect, System.Device.Gpio.GpioController? controller = default, Iot.Device.Card.LogLevel logLevel = Iot.Device.Card.LogLevel.None, bool shouldDispose = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, int32 pinChipSelect, class System.Device.Gpio.GpioController controller, valuetype Iot.Device.Card.LogLevel logLevel, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.#ctor(System.Device.Spi.SpiDevice,System.Int32,System.Device.Gpio.GpioController,Iot.Device.Card.LogLevel,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (spiDevice As SpiDevice, pinChipSelect As Integer, Optional controller As GpioController = Nothing, Optional logLevel As LogLevel = Iot.Device.Card.LogLevel.None, Optional shouldDispose As Boolean = false)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Pn532.Pn532 : System.Device.Spi.SpiDevice * int * System.Device.Gpio.GpioController * Iot.Device.Card.LogLevel * bool -&gt; Iot.Device.Pn532.Pn532" Usage="new Iot.Device.Pn532.Pn532 (spiDevice, pinChipSelect, controller, logLevel, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" Index="0" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="pinChipSelect" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" Index="2" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="logLevel" Type="Iot.Device.Card.LogLevel" Index="3" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="4" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
+      </Parameters>
+      <Docs>
+        <param name="spiDevice">The SPI Device</param>
+        <param name="pinChipSelect">The GPIO pin number for the chip select</param>
+        <param name="controller">A GPIO controller</param>
+        <param name="logLevel">The log level</param>
+        <param name="shouldDispose">Dispose the GPIO Controller at the end</param>
+        <summary>
+            Create a PN532 using SPI
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="AutoPoll">
       <MemberSignature Language="C#" Value="public byte[]? AutoPoll (byte numberPolling, ushort periodMilliSecond, Iot.Device.Pn532.ListPassive.PollingType[] pollingType);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] AutoPoll(unsigned int8 numberPolling, unsigned int16 periodMilliSecond, valuetype Iot.Device.Pn532.ListPassive.PollingType[] pollingType) cil managed" />
@@ -105,6 +148,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -135,6 +180,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -164,6 +211,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -186,6 +235,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Pn532.FirmwareVersion</ReturnType>
@@ -208,6 +259,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte</ReturnType>
@@ -230,11 +283,13 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ValueTuple&lt;Iot.Device.Pn532.AsTarget.TargetModeInitialized,System.Byte[]&gt;</ReturnType>
         <Attributes>
-          <Attribute>
+          <Attribute FrameworkAlternate="iot-dotnet-1.1">
             <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "modeInialized", "initiator" })]</AttributeName>
             <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "modeInialized", "initiator" })&gt;]</AttributeName>
           </Attribute>
@@ -268,6 +323,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -300,6 +357,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -334,6 +393,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Card.LogLevel</ReturnType>
@@ -356,6 +417,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Card.LogTo</ReturnType>
@@ -378,6 +441,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Pn532.ParametersFlags</ReturnType>
@@ -400,6 +465,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -426,6 +493,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -452,6 +521,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -482,6 +553,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -510,6 +583,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -538,6 +613,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -566,6 +643,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -591,6 +670,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -607,6 +688,31 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ReselectTarget">
+      <MemberSignature Language="C#" Value="public override bool ReselectTarget (byte targetNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool ReselectTarget(unsigned int8 targetNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Pn532.Pn532.ReselectTarget(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ReselectTarget (targetNumber As Byte) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.ReselectTarget : byte -&gt; bool" Usage="pn532.ReselectTarget targetNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNumber" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-1.3" />
+      </Parameters>
+      <Docs>
+        <param name="targetNumber">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
     <Member MemberName="RunSelfTest">
       <MemberSignature Language="C#" Value="public bool RunSelfTest (Iot.Device.Pn532.DiagnoseMode diagnoseMode);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool RunSelfTest(valuetype Iot.Device.Pn532.DiagnoseMode diagnoseMode) cil managed" />
@@ -617,6 +723,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -644,6 +752,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Pn532.SecurityAccessModuleMode</ReturnType>
@@ -666,6 +776,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -692,6 +804,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -718,6 +832,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -744,6 +860,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -770,6 +888,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -796,6 +916,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -822,6 +944,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -848,6 +972,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -874,6 +1000,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -900,6 +1028,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -926,6 +1056,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -948,6 +1080,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Spi.SpiMode</ReturnType>
@@ -970,6 +1104,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -1000,6 +1136,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Rfid.Data106kbpsTypeA</ReturnType>
@@ -1027,6 +1165,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Rfid.Data106kbpsInnovisionJewel</ReturnType>
@@ -1054,6 +1194,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Rfid.Data106kbpsTypeB</ReturnType>
@@ -1081,6 +1223,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Rfid.Data212_424kbps</ReturnType>
@@ -1108,6 +1252,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt32</ReturnType>
@@ -1130,6 +1276,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1152,6 +1300,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1178,6 +1328,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1206,6 +1358,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -1235,6 +1389,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1263,6 +1419,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1291,6 +1449,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

@@ -1,0 +1,283 @@
+<Type Name="KeyMatrix" FullName="Iot.Device.KeyMatrix.KeyMatrix">
+  <TypeSignature Language="C#" Value="public class KeyMatrix : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit KeyMatrix extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.KeyMatrix.KeyMatrix" />
+  <TypeSignature Language="VB.NET" Value="Public Class KeyMatrix&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type KeyMatrix = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            GPIO key matrix Driver
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyMatrix (System.Collections.Generic.IEnumerable&lt;int&gt; outputPins, System.Collections.Generic.IEnumerable&lt;int&gt; inputPins, TimeSpan scanInterval, System.Device.Gpio.GpioController? gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;int32&gt; outputPins, class System.Collections.Generic.IEnumerable`1&lt;int32&gt; inputPins, valuetype System.TimeSpan scanInterval, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.KeyMatrix.KeyMatrix.#ctor(System.Collections.Generic.IEnumerable{System.Int32},System.Collections.Generic.IEnumerable{System.Int32},System.TimeSpan,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (outputPins As IEnumerable(Of Integer), inputPins As IEnumerable(Of Integer), scanInterval As TimeSpan, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.KeyMatrix.KeyMatrix : seq&lt;int&gt; * seq&lt;int&gt; * TimeSpan * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.KeyMatrix.KeyMatrix" Usage="new Iot.Device.KeyMatrix.KeyMatrix (outputPins, inputPins, scanInterval, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="outputPins" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" />
+        <Parameter Name="inputPins" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" />
+        <Parameter Name="scanInterval" Type="System.TimeSpan" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="outputPins">Output pins</param>
+        <param name="inputPins">Input pins</param>
+        <param name="scanInterval">Scanning interval in milliseconds</param>
+        <param name="gpioController">GPIO controller</param>
+        <param name="shouldDispose">True to dispose the GpioController</param>
+        <summary>
+            Initialize key matrix
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.KeyMatrix.KeyMatrix.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="keyMatrix.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="InputPins">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;int&gt; InputPins { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;int32&gt; InputPins" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.KeyMatrix.KeyMatrix.InputPins" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InputPins As IEnumerable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.InputPins : seq&lt;int&gt;" Usage="Iot.Device.KeyMatrix.KeyMatrix.InputPins" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get input pins
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public ReadOnlySpan&lt;System.Device.Gpio.PinValue&gt;? this[int output] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ReadOnlySpan`1&lt;valuetype System.Device.Gpio.PinValue&gt; Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.KeyMatrix.KeyMatrix.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(output As Integer) As ReadOnlySpan(Of PinValue)" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : ReadOnlySpan&lt;System.Device.Gpio.PinValue&gt;" Usage="Iot.Device.KeyMatrix.KeyMatrix.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ReadOnlySpan&lt;System.Device.Gpio.PinValue&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="output">Output index</param>
+        <summary>
+            Get buttons' values by output
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="KeyEvent">
+      <MemberSignature Language="C#" Value="public event Iot.Device.KeyMatrix.KeyMatrix.KeyEventHandler KeyEvent;" />
+      <MemberSignature Language="ILAsm" Value=".event class Iot.Device.KeyMatrix.KeyMatrix/KeyEventHandler KeyEvent" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.KeyMatrix.KeyMatrix.KeyEvent" />
+      <MemberSignature Language="VB.NET" Value="Public Event KeyEvent As KeyMatrix.KeyEventHandler " />
+      <MemberSignature Language="F#" Value="member this.KeyEvent : Iot.Device.KeyMatrix.KeyMatrix.KeyEventHandler " Usage="member this.KeyEvent : Iot.Device.KeyMatrix.KeyMatrix.KeyEventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.KeyMatrix.KeyMatrix+KeyEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The raised event
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OutputPins">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;int&gt; OutputPins { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;int32&gt; OutputPins" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.KeyMatrix.KeyMatrix.OutputPins" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OutputPins As IEnumerable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.OutputPins : seq&lt;int&gt;" Usage="Iot.Device.KeyMatrix.KeyMatrix.OutputPins" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get output pins
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadKey">
+      <MemberSignature Language="C#" Value="public Iot.Device.KeyMatrix.KeyMatrixEvent ReadKey ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.KeyMatrix.KeyMatrixEvent ReadKey() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.KeyMatrix.KeyMatrix.ReadKey" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadKey () As KeyMatrixEvent" />
+      <MemberSignature Language="F#" Value="member this.ReadKey : unit -&gt; Iot.Device.KeyMatrix.KeyMatrixEvent" Usage="keyMatrix.ReadKey " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.KeyMatrix.KeyMatrixEvent</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Blocks execution until a key event is received
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScanInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan ScanInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ScanInterval" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.KeyMatrix.KeyMatrix.ScanInterval" />
+      <MemberSignature Language="VB.NET" Value="Public Property ScanInterval As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.ScanInterval : TimeSpan with get, set" Usage="Iot.Device.KeyMatrix.KeyMatrix.ScanInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or set interval in milliseconds
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartListeningKeyEvent">
+      <MemberSignature Language="C#" Value="public void StartListeningKeyEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartListeningKeyEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.KeyMatrix.KeyMatrix.StartListeningKeyEvent" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StartListeningKeyEvent ()" />
+      <MemberSignature Language="F#" Value="member this.StartListeningKeyEvent : unit -&gt; unit" Usage="keyMatrix.StartListeningKeyEvent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Start listening to key events
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopListeningKeyEvent">
+      <MemberSignature Language="C#" Value="public void StopListeningKeyEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StopListeningKeyEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.KeyMatrix.KeyMatrix.StopListeningKeyEvent" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StopListeningKeyEvent ()" />
+      <MemberSignature Language="F#" Value="member this.StopListeningKeyEvent : unit -&gt; unit" Usage="keyMatrix.StopListeningKeyEvent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stop listening to key events
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Values">
+      <MemberSignature Language="C#" Value="public ReadOnlySpan&lt;System.Device.Gpio.PinValue&gt;? Values { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.ReadOnlySpan`1&lt;valuetype System.Device.Gpio.PinValue&gt; Values" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.KeyMatrix.KeyMatrix.Values" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Values As ReadOnlySpan(Of PinValue)" />
+      <MemberSignature Language="F#" Value="member this.Values : ReadOnlySpan&lt;System.Device.Gpio.PinValue&gt;" Usage="Iot.Device.KeyMatrix.KeyMatrix.Values" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ReadOnlySpan&lt;System.Device.Gpio.PinValue&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get all buttons' values
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

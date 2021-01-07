@@ -7,6 +7,8 @@
   <AssemblyInfo>
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -30,6 +32,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="rfid" Type="Iot.Device.Card.CardTransceiver" />
@@ -54,6 +58,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Card.Mifare.AccessType</ReturnType>
@@ -82,6 +88,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte</ReturnType>
@@ -104,6 +112,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Card.Mifare.MifareCardCapacity</ReturnType>
@@ -126,6 +136,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Card.Mifare.MifareCardCommand</ReturnType>
@@ -139,15 +151,18 @@
       </Docs>
     </Member>
     <Member MemberName="Data">
-      <MemberSignature Language="C#" Value="public byte[] Data { get; set; }" />
+      <MemberSignature Language="C#" Value="public byte[] Data { get; set; }" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2" />
       <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Data" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareCard.Data" />
       <MemberSignature Language="VB.NET" Value="Public Property Data As Byte()" />
       <MemberSignature Language="F#" Value="member this.Data : byte[] with get, set" Usage="Iot.Device.Card.Mifare.MifareCard.Data" />
+      <MemberSignature Language="C#" Value="public byte[]? Data { get; set; }" FrameworkAlternate="iot-dotnet-1.3" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -155,6 +170,94 @@
       <Docs>
         <summary>
             The Data which has been read or to write for the specific block
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultBlocksNdefKeyA">
+      <MemberSignature Language="C#" Value="public static ReadOnlySpan&lt;byte&gt;? DefaultBlocksNdefKeyA { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; DefaultBlocksNdefKeyA" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareCard.DefaultBlocksNdefKeyA" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property DefaultBlocksNdefKeyA As ReadOnlySpan(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.DefaultBlocksNdefKeyA : ReadOnlySpan&lt;byte&gt;" Usage="Iot.Device.Card.Mifare.MifareCard.DefaultBlocksNdefKeyA" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ReadOnlySpan&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Default block Key A for NDEF card
+            </summary>
+        <value>To be added.</value>
+        <remarks>See https://www.nxp.com/docs/en/application-note/AN1304.pdf for more information</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultFirstBlockNdefKeyA">
+      <MemberSignature Language="C#" Value="public static ReadOnlySpan&lt;byte&gt;? DefaultFirstBlockNdefKeyA { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; DefaultFirstBlockNdefKeyA" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareCard.DefaultFirstBlockNdefKeyA" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property DefaultFirstBlockNdefKeyA As ReadOnlySpan(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.DefaultFirstBlockNdefKeyA : ReadOnlySpan&lt;byte&gt;" Usage="Iot.Device.Card.Mifare.MifareCard.DefaultFirstBlockNdefKeyA" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ReadOnlySpan&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Default first block Key A for NDEF card
+            </summary>
+        <value>To be added.</value>
+        <remarks>See https://www.nxp.com/docs/en/application-note/AN1304.pdf for more information</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultKeyA">
+      <MemberSignature Language="C#" Value="public static ReadOnlySpan&lt;byte&gt;? DefaultKeyA { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; DefaultKeyA" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareCard.DefaultKeyA" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property DefaultKeyA As ReadOnlySpan(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.DefaultKeyA : ReadOnlySpan&lt;byte&gt;" Usage="Iot.Device.Card.Mifare.MifareCard.DefaultKeyA" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ReadOnlySpan&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Default Key A
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultKeyB">
+      <MemberSignature Language="C#" Value="public static ReadOnlySpan&lt;byte&gt;? DefaultKeyB { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; DefaultKeyB" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareCard.DefaultKeyB" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property DefaultKeyB As ReadOnlySpan(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.DefaultKeyB : ReadOnlySpan&lt;byte&gt;" Usage="Iot.Device.Card.Mifare.MifareCard.DefaultKeyB" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ReadOnlySpan&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Default Key B
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -170,11 +273,13 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ValueTuple&lt;System.Byte,System.Byte,System.Byte&gt;</ReturnType>
         <Attributes>
-          <Attribute>
+          <Attribute FrameworkAlternate="iot-dotnet-1.1">
             <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "b6", "b7", "b8" })]</AttributeName>
             <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "b6", "b7", "b8" })&gt;]</AttributeName>
           </Attribute>
@@ -199,11 +304,13 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ValueTuple&lt;System.Byte,System.Byte,System.Byte&gt;</ReturnType>
         <Attributes>
-          <Attribute>
+          <Attribute FrameworkAlternate="iot-dotnet-1.1">
             <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "b6", "b7", "b8" })]</AttributeName>
             <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "b6", "b7", "b8" })&gt;]</AttributeName>
           </Attribute>
@@ -233,11 +340,13 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ValueTuple&lt;System.Byte,System.Byte,System.Byte&gt;</ReturnType>
         <Attributes>
-          <Attribute>
+          <Attribute FrameworkAlternate="iot-dotnet-1.1">
             <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "b6", "b7", "b8" })]</AttributeName>
             <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "b6", "b7", "b8" })&gt;]</AttributeName>
           </Attribute>
@@ -265,11 +374,13 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ValueTuple&lt;System.Byte,System.Byte,System.Byte&gt;</ReturnType>
         <Attributes>
-          <Attribute>
+          <Attribute FrameworkAlternate="iot-dotnet-1.1">
             <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "b6", "b7", "b8" })]</AttributeName>
             <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "b6", "b7", "b8" })&gt;]</AttributeName>
           </Attribute>
@@ -289,6 +400,161 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="EraseSector">
+      <MemberSignature Language="C#" Value="public bool EraseSector (ReadOnlySpan&lt;byte&gt; newKeyA, ReadOnlySpan&lt;byte&gt; newKeyB, byte sector, bool authenticateWithKeyA, bool resetAccessBytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool EraseSector(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; newKeyA, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; newKeyB, unsigned int8 sector, bool authenticateWithKeyA, bool resetAccessBytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.EraseSector(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{System.Byte},System.Byte,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EraseSector (newKeyA As ReadOnlySpan(Of Byte), newKeyB As ReadOnlySpan(Of Byte), sector As Byte, authenticateWithKeyA As Boolean, resetAccessBytes As Boolean) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.EraseSector : ReadOnlySpan&lt;byte&gt; * ReadOnlySpan&lt;byte&gt; * byte * bool * bool -&gt; bool" Usage="mifareCard.EraseSector (newKeyA, newKeyB, sector, authenticateWithKeyA, resetAccessBytes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newKeyA" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="iot-dotnet-1.3" />
+        <Parameter Name="newKeyB" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="1" FrameworkAlternate="iot-dotnet-1.3" />
+        <Parameter Name="sector" Type="System.Byte" Index="2" FrameworkAlternate="iot-dotnet-1.3" />
+        <Parameter Name="authenticateWithKeyA" Type="System.Boolean" Index="3" FrameworkAlternate="iot-dotnet-1.3" />
+        <Parameter Name="resetAccessBytes" Type="System.Boolean" Index="4" FrameworkAlternate="iot-dotnet-1.3" />
+      </Parameters>
+      <Docs>
+        <param name="newKeyA">The new key A, empty to use current one</param>
+        <param name="newKeyB">The new key B, empty to use current one</param>
+        <param name="sector">The sector number. Refer to Mifare documentation to understand how blocks work especially for Mifare 2K and 4K</param>
+        <param name="authenticateWithKeyA">True to authenticate with current Key A, false to authenticate with Key B</param>
+        <param name="resetAccessBytes">True to reset all the access bytes</param>
+        <summary>
+            Erase one sector
+            </summary>
+        <returns>True if success</returns>
+        <remarks>Sector 0 can't be fully erase, only the blocks 1 and 2 will be erased</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatNdef">
+      <MemberSignature Language="C#" Value="public bool FormatNdef (ReadOnlySpan&lt;byte&gt; keyB = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool FormatNdef(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; keyB) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.FormatNdef(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function FormatNdef (Optional keyB As ReadOnlySpan(Of Byte) = Nothing) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.FormatNdef : ReadOnlySpan&lt;byte&gt; -&gt; bool" Usage="mifareCard.FormatNdef keyB" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyB" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="iot-dotnet-1.3" />
+      </Parameters>
+      <Docs>
+        <param name="keyB">The key B to be used for formatting, if empty, will use the default key B</param>
+        <summary>
+            Format the Card to NDEF
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNumberBlocks">
+      <MemberSignature Language="C#" Value="public int GetNumberBlocks ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetNumberBlocks() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.GetNumberBlocks" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetNumberBlocks () As Integer" />
+      <MemberSignature Language="F#" Value="member this.GetNumberBlocks : unit -&gt; int" Usage="mifareCard.GetNumberBlocks " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the number of blocks for a specific sector
+            </summary>
+        <returns>The number of blocks for this specific sector</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNumberBlocks">
+      <MemberSignature Language="C#" Value="public byte GetNumberBlocks (byte sectorNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8 GetNumberBlocks(unsigned int8 sectorNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.GetNumberBlocks(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetNumberBlocks (sectorNumber As Byte) As Byte" />
+      <MemberSignature Language="F#" Value="member this.GetNumberBlocks : byte -&gt; byte" Usage="mifareCard.GetNumberBlocks sectorNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sectorNumber" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-1.3" />
+      </Parameters>
+      <Docs>
+        <param name="sectorNumber">Input sector number</param>
+        <summary>
+            Get the number of blocks for a specific sector
+            </summary>
+        <returns>The number of blocks for this specific sector</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetNumberSectors">
+      <MemberSignature Language="C#" Value="public int GetNumberSectors ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetNumberSectors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.GetNumberSectors" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetNumberSectors () As Integer" />
+      <MemberSignature Language="F#" Value="member this.GetNumberSectors : unit -&gt; int" Usage="mifareCard.GetNumberSectors " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the number of sectors
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsFormattedNdef">
+      <MemberSignature Language="C#" Value="public bool IsFormattedNdef ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsFormattedNdef() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.IsFormattedNdef" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsFormattedNdef () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsFormattedNdef : unit -&gt; bool" Usage="mifareCard.IsFormattedNdef " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Check if the card formated to NDEF
+            </summary>
+        <returns>True if NDEF formated</returns>
+        <remarks>It will only check the first 2 block of the first sector and that the GPB is set properly</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="IsSectorBlock">
       <MemberSignature Language="C#" Value="public bool IsSectorBlock (byte blockNumber);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsSectorBlock(unsigned int8 blockNumber) cil managed" />
@@ -299,6 +565,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -316,15 +584,18 @@
       </Docs>
     </Member>
     <Member MemberName="KeyA">
-      <MemberSignature Language="C#" Value="public byte[] KeyA { get; set; }" />
+      <MemberSignature Language="C#" Value="public byte[] KeyA { get; set; }" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2" />
       <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] KeyA" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareCard.KeyA" />
       <MemberSignature Language="VB.NET" Value="Public Property KeyA As Byte()" />
       <MemberSignature Language="F#" Value="member this.KeyA : byte[] with get, set" Usage="Iot.Device.Card.Mifare.MifareCard.KeyA" />
+      <MemberSignature Language="C#" Value="public byte[]? KeyA { get; set; }" FrameworkAlternate="iot-dotnet-1.3" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -338,15 +609,18 @@
       </Docs>
     </Member>
     <Member MemberName="KeyB">
-      <MemberSignature Language="C#" Value="public byte[] KeyB { get; set; }" />
+      <MemberSignature Language="C#" Value="public byte[] KeyB { get; set; }" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2" />
       <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] KeyB" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareCard.KeyB" />
       <MemberSignature Language="VB.NET" Value="Public Property KeyB As Byte()" />
       <MemberSignature Language="F#" Value="member this.KeyB : byte[] with get, set" Usage="Iot.Device.Card.Mifare.MifareCard.KeyB" />
+      <MemberSignature Language="C#" Value="public byte[]? KeyB { get; set; }" FrameworkAlternate="iot-dotnet-1.3" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -356,6 +630,52 @@
             Key B Used for encryption/decryption
             </summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReselectCard">
+      <MemberSignature Language="C#" Value="public bool ReselectCard ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ReselectCard() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.ReselectCard" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReselectCard () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReselectCard : unit -&gt; bool" Usage="mifareCard.ReselectCard " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Select the card. Needed if authentication or read/write failed
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RunMifareCardCommand">
+      <MemberSignature Language="C#" Value="public int RunMifareCardCommand ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 RunMifareCardCommand() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.RunMifareCardCommand" />
+      <MemberSignature Language="VB.NET" Value="Public Function RunMifareCardCommand () As Integer" />
+      <MemberSignature Language="F#" Value="member this.RunMifareCardCommand : unit -&gt; int" Usage="mifareCard.RunMifareCardCommand " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Run the last setup command. In case of reading bytes, they are automatically pushed into the Data property
+            </summary>
+        <returns>-1 if the process fails otherwise the number of bytes read</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -369,6 +689,7 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -392,6 +713,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Card.Mifare.AccessSector</ReturnType>
@@ -411,15 +734,18 @@
       </Docs>
     </Member>
     <Member MemberName="SerialNumber">
-      <MemberSignature Language="C#" Value="public byte[] SerialNumber { get; set; }" />
+      <MemberSignature Language="C#" Value="public byte[] SerialNumber { get; set; }" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2" />
       <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] SerialNumber" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareCard.SerialNumber" />
       <MemberSignature Language="VB.NET" Value="Public Property SerialNumber As Byte()" />
       <MemberSignature Language="F#" Value="member this.SerialNumber : byte[] with get, set" Usage="Iot.Device.Card.Mifare.MifareCard.SerialNumber" />
+      <MemberSignature Language="C#" Value="public byte[]? SerialNumber { get; set; }" FrameworkAlternate="iot-dotnet-1.3" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -442,6 +768,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -469,6 +797,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte</ReturnType>
@@ -478,6 +808,86 @@
             The tag number detected by the reader, only 1 or 2
             </summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadNdefMessage">
+      <MemberSignature Language="C#" Value="public bool TryReadNdefMessage (out Iot.Device.Ndef.NdefMessage message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadNdefMessage([out] class Iot.Device.Ndef.NdefMessage&amp; message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.TryReadNdefMessage(Iot.Device.Ndef.NdefMessage@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadNdefMessage (ByRef message As NdefMessage) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadNdefMessage : NdefMessage -&gt; bool" Usage="mifareCard.TryReadNdefMessage message" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="Iot.Device.Ndef.NdefMessage" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-1.3" />
+      </Parameters>
+      <Docs>
+        <param name="message">The NDEF message</param>
+        <summary>
+            Try to read a NDEF Message from a Mifare card
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteDataBlock">
+      <MemberSignature Language="C#" Value="public bool WriteDataBlock (byte block);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool WriteDataBlock(unsigned int8 block) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.WriteDataBlock(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WriteDataBlock (block As Byte) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.WriteDataBlock : byte -&gt; bool" Usage="mifareCard.WriteDataBlock block" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="block" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-1.3" />
+      </Parameters>
+      <Docs>
+        <param name="block">The block number to write</param>
+        <summary>
+            Perform a write using the 16 bytes present in Data on a specific block
+            </summary>
+        <returns>True if success</returns>
+        <remarks>You will need to be authenticated properly before</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteNdefMessage">
+      <MemberSignature Language="C#" Value="public bool WriteNdefMessage (Iot.Device.Ndef.NdefMessage message, bool writeKeyA = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool WriteNdefMessage(class Iot.Device.Ndef.NdefMessage message, bool writeKeyA) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.WriteNdefMessage(Iot.Device.Ndef.NdefMessage,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WriteNdefMessage (message As NdefMessage, Optional writeKeyA As Boolean = true) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.WriteNdefMessage : Iot.Device.Ndef.NdefMessage * bool -&gt; bool" Usage="mifareCard.WriteNdefMessage (message, writeKeyA)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="Iot.Device.Ndef.NdefMessage" Index="0" FrameworkAlternate="iot-dotnet-1.3" />
+        <Parameter Name="writeKeyA" Type="System.Boolean" Index="1" FrameworkAlternate="iot-dotnet-1.3" />
+      </Parameters>
+      <Docs>
+        <param name="message">The NDEF Message to write</param>
+        <param name="writeKeyA">True to write with Key A</param>
+        <summary>
+            Write an NDEF Message
+            </summary>
+        <returns>True if success</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

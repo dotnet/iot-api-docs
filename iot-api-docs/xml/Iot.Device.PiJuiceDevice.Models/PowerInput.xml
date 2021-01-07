@@ -1,0 +1,448 @@
+<Type Name="PowerInput" FullName="Iot.Device.PiJuiceDevice.Models.PowerInput">
+  <TypeSignature Language="C#" Value="public class PowerInput : IEquatable&lt;Iot.Device.PiJuiceDevice.Models.PowerInput&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit PowerInput extends System.Object implements class System.IEquatable`1&lt;class Iot.Device.PiJuiceDevice.Models.PowerInput&gt;" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.PiJuiceDevice.Models.PowerInput" />
+  <TypeSignature Language="VB.NET" Value="Public Class PowerInput&#xA;Implements IEquatable(Of PowerInput)" />
+  <TypeSignature Language="F#" Value="type PowerInput = class&#xA;    interface IEquatable&lt;PowerInput&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Iot.Device.PiJuiceDevice.Models.PowerInput&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <param name="Precedence">Selects what power input will have precedence for charging and supplying VSYS output when both are present, PiJuice USB Micro Input, GPIO 5V Input. 5V_GPIO selected by default.</param>
+    <param name="GpioIn">Enables/disables powering PiJuice from 5V GPIO Input. Enabled by default.</param>
+    <param name="NoBatteryTurnOn">If enabled PiJuice will automatically power on 5V rail and trigger wake up as soon as power appears at USB Micro Input and there is no battery. Disabled by default.</param>
+    <param name="UsbMicroCurrentLimit">Maximum current that PiJuice can take from USB Micro connected power source. 2.5A selected by default</param>
+    <param name="UsbMicroDynamicPowerManagement">Minimum voltage at USB Micro power input for Dynamic Power Management Loop. 4.2V set by default.</param>
+    <param name="NonVolatile">Whether the power input configuration is stored in the non-volatile EEPROM.</param>
+    <summary>
+            PiJuice power input
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PowerInput (Iot.Device.PiJuiceDevice.Models.PowerInput original);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Iot.Device.PiJuiceDevice.Models.PowerInput original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.PowerInput.#ctor(Iot.Device.PiJuiceDevice.Models.PowerInput)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (original As PowerInput)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.PiJuiceDevice.Models.PowerInput : Iot.Device.PiJuiceDevice.Models.PowerInput -&gt; Iot.Device.PiJuiceDevice.Models.PowerInput" Usage="new Iot.Device.PiJuiceDevice.Models.PowerInput original" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="Iot.Device.PiJuiceDevice.Models.PowerInput" />
+      </Parameters>
+      <Docs>
+        <param name="original">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public PowerInput (Iot.Device.PiJuiceDevice.Models.PowerInputType Precedence, bool GpioIn, bool NoBatteryTurnOn, UnitsNet.ElectricCurrent UsbMicroCurrentLimit, UnitsNet.ElectricPotential UsbMicroDynamicPowerManagement, bool NonVolatile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.PiJuiceDevice.Models.PowerInputType Precedence, bool GpioIn, bool NoBatteryTurnOn, valuetype UnitsNet.ElectricCurrent UsbMicroCurrentLimit, valuetype UnitsNet.ElectricPotential UsbMicroDynamicPowerManagement, bool NonVolatile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.PowerInput.#ctor(Iot.Device.PiJuiceDevice.Models.PowerInputType,System.Boolean,System.Boolean,UnitsNet.ElectricCurrent,UnitsNet.ElectricPotential,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Precedence As PowerInputType, GpioIn As Boolean, NoBatteryTurnOn As Boolean, UsbMicroCurrentLimit As ElectricCurrent, UsbMicroDynamicPowerManagement As ElectricPotential, NonVolatile As Boolean)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.PiJuiceDevice.Models.PowerInput : Iot.Device.PiJuiceDevice.Models.PowerInputType * bool * bool * UnitsNet.ElectricCurrent * UnitsNet.ElectricPotential * bool -&gt; Iot.Device.PiJuiceDevice.Models.PowerInput" Usage="new Iot.Device.PiJuiceDevice.Models.PowerInput (Precedence, GpioIn, NoBatteryTurnOn, UsbMicroCurrentLimit, UsbMicroDynamicPowerManagement, NonVolatile)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Precedence" Type="Iot.Device.PiJuiceDevice.Models.PowerInputType" />
+        <Parameter Name="GpioIn" Type="System.Boolean" />
+        <Parameter Name="NoBatteryTurnOn" Type="System.Boolean" />
+        <Parameter Name="UsbMicroCurrentLimit" Type="UnitsNet.ElectricCurrent" />
+        <Parameter Name="UsbMicroDynamicPowerManagement" Type="UnitsNet.ElectricPotential" />
+        <Parameter Name="NonVolatile" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="Precedence">Selects what power input will have precedence for charging and supplying VSYS output when both are present, PiJuice USB Micro Input, GPIO 5V Input. 5V_GPIO selected by default.</param>
+        <param name="GpioIn">Enables/disables powering PiJuice from 5V GPIO Input. Enabled by default.</param>
+        <param name="NoBatteryTurnOn">If enabled PiJuice will automatically power on 5V rail and trigger wake up as soon as power appears at USB Micro Input and there is no battery. Disabled by default.</param>
+        <param name="UsbMicroCurrentLimit">Maximum current that PiJuice can take from USB Micro connected power source. 2.5A selected by default</param>
+        <param name="UsbMicroDynamicPowerManagement">Minimum voltage at USB Micro power input for Dynamic Power Management Loop. 4.2V set by default.</param>
+        <param name="NonVolatile">Whether the power input configuration is stored in the non-volatile EEPROM.</param>
+        <summary>
+            PiJuice power input
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="&lt;Clone&gt;$">
+      <MemberSignature Language="C#" Value="public virtual Iot.Device.PiJuiceDevice.Models.PowerInput &lt;Clone&gt;$ ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Iot.Device.PiJuiceDevice.Models.PowerInput &lt;Clone&gt;$() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.PowerInput.&lt;Clone&gt;$" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function &lt;Clone&gt;$ () As PowerInput" />
+      <MemberSignature Language="F#" Value="abstract member &lt;Clone&gt;$ : unit -&gt; Iot.Device.PiJuiceDevice.Models.PowerInput&#xA;override this.&lt;Clone&gt;$ : unit -&gt; Iot.Device.PiJuiceDevice.Models.PowerInput" Usage="powerInput.&lt;Clone&gt;$ " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.PiJuiceDevice.Models.PowerInput</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deconstruct">
+      <MemberSignature Language="C#" Value="public void Deconstruct (out Iot.Device.PiJuiceDevice.Models.PowerInputType Precedence, out bool GpioIn, out bool NoBatteryTurnOn, out UnitsNet.ElectricCurrent UsbMicroCurrentLimit, out UnitsNet.ElectricPotential UsbMicroDynamicPowerManagement, out bool NonVolatile);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Deconstruct([out] valuetype Iot.Device.PiJuiceDevice.Models.PowerInputType&amp; Precedence, [out] bool&amp; GpioIn, [out] bool&amp; NoBatteryTurnOn, [out] valuetype UnitsNet.ElectricCurrent&amp; UsbMicroCurrentLimit, [out] valuetype UnitsNet.ElectricPotential&amp; UsbMicroDynamicPowerManagement, [out] bool&amp; NonVolatile) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.PowerInput.Deconstruct(Iot.Device.PiJuiceDevice.Models.PowerInputType@,System.Boolean@,System.Boolean@,UnitsNet.ElectricCurrent@,UnitsNet.ElectricPotential@,System.Boolean@)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Deconstruct (ByRef Precedence As PowerInputType, ByRef GpioIn As Boolean, ByRef NoBatteryTurnOn As Boolean, ByRef UsbMicroCurrentLimit As ElectricCurrent, ByRef UsbMicroDynamicPowerManagement As ElectricPotential, ByRef NonVolatile As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.Deconstruct : PowerInputType * bool * bool * ElectricCurrent * ElectricPotential * bool -&gt; unit" Usage="powerInput.Deconstruct (Precedence, GpioIn, NoBatteryTurnOn, UsbMicroCurrentLimit, UsbMicroDynamicPowerManagement, NonVolatile)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Precedence" Type="Iot.Device.PiJuiceDevice.Models.PowerInputType" RefType="out" />
+        <Parameter Name="GpioIn" Type="System.Boolean" RefType="out" />
+        <Parameter Name="NoBatteryTurnOn" Type="System.Boolean" RefType="out" />
+        <Parameter Name="UsbMicroCurrentLimit" Type="UnitsNet.ElectricCurrent" RefType="out" />
+        <Parameter Name="UsbMicroDynamicPowerManagement" Type="UnitsNet.ElectricPotential" RefType="out" />
+        <Parameter Name="NonVolatile" Type="System.Boolean" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="Precedence">To be added.</param>
+        <param name="GpioIn">To be added.</param>
+        <param name="NoBatteryTurnOn">To be added.</param>
+        <param name="UsbMicroCurrentLimit">To be added.</param>
+        <param name="UsbMicroDynamicPowerManagement">To be added.</param>
+        <param name="NonVolatile">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EqualityContract">
+      <MemberSignature Language="C#" Value="protected virtual Type EqualityContract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EqualityContract" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.PowerInput.EqualityContract" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property EqualityContract As Type" />
+      <MemberSignature Language="F#" Value="member this.EqualityContract : Type" Usage="Iot.Device.PiJuiceDevice.Models.PowerInput.EqualityContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public virtual bool Equals (Iot.Device.PiJuiceDevice.Models.PowerInput other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Iot.Device.PiJuiceDevice.Models.PowerInput other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.PowerInput.Equals(Iot.Device.PiJuiceDevice.Models.PowerInput)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Equals (other As PowerInput) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Iot.Device.PiJuiceDevice.Models.PowerInput -&gt; bool" Usage="powerInput.Equals other" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Iot.Device.PiJuiceDevice.Models.PowerInput" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.PowerInput.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="powerInput.Equals obj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.PowerInput.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="powerInput.GetHashCode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GpioIn">
+      <MemberSignature Language="C#" Value="public bool GpioIn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool GpioIn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.PowerInput.GpioIn" />
+      <MemberSignature Language="VB.NET" Value="Public Property GpioIn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.GpioIn : bool with get, set" Usage="Iot.Device.PiJuiceDevice.Models.PowerInput.GpioIn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NoBatteryTurnOn">
+      <MemberSignature Language="C#" Value="public bool NoBatteryTurnOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NoBatteryTurnOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.PowerInput.NoBatteryTurnOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property NoBatteryTurnOn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.NoBatteryTurnOn : bool with get, set" Usage="Iot.Device.PiJuiceDevice.Models.PowerInput.NoBatteryTurnOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NonVolatile">
+      <MemberSignature Language="C#" Value="public bool NonVolatile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool NonVolatile" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.PowerInput.NonVolatile" />
+      <MemberSignature Language="VB.NET" Value="Public Property NonVolatile As Boolean" />
+      <MemberSignature Language="F#" Value="member this.NonVolatile : bool with get, set" Usage="Iot.Device.PiJuiceDevice.Models.PowerInput.NonVolatile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Iot.Device.PiJuiceDevice.Models.PowerInput r1, Iot.Device.PiJuiceDevice.Models.PowerInput r2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Iot.Device.PiJuiceDevice.Models.PowerInput r1, class Iot.Device.PiJuiceDevice.Models.PowerInput r2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.PowerInput.op_Equality(Iot.Device.PiJuiceDevice.Models.PowerInput,Iot.Device.PiJuiceDevice.Models.PowerInput)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (r1 As PowerInput, r2 As PowerInput) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Iot.Device.PiJuiceDevice.Models.PowerInput * Iot.Device.PiJuiceDevice.Models.PowerInput -&gt; bool" Usage="r1 = r2" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r1" Type="Iot.Device.PiJuiceDevice.Models.PowerInput" />
+        <Parameter Name="r2" Type="Iot.Device.PiJuiceDevice.Models.PowerInput" />
+      </Parameters>
+      <Docs>
+        <param name="r1">To be added.</param>
+        <param name="r2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Iot.Device.PiJuiceDevice.Models.PowerInput r1, Iot.Device.PiJuiceDevice.Models.PowerInput r2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Iot.Device.PiJuiceDevice.Models.PowerInput r1, class Iot.Device.PiJuiceDevice.Models.PowerInput r2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.PowerInput.op_Inequality(Iot.Device.PiJuiceDevice.Models.PowerInput,Iot.Device.PiJuiceDevice.Models.PowerInput)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (r1 As PowerInput, r2 As PowerInput) As Boolean" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Iot.Device.PiJuiceDevice.Models.PowerInput * Iot.Device.PiJuiceDevice.Models.PowerInput -&gt; bool" Usage="Iot.Device.PiJuiceDevice.Models.PowerInput.op_Inequality (r1, r2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r1" Type="Iot.Device.PiJuiceDevice.Models.PowerInput" />
+        <Parameter Name="r2" Type="Iot.Device.PiJuiceDevice.Models.PowerInput" />
+      </Parameters>
+      <Docs>
+        <param name="r1">To be added.</param>
+        <param name="r2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Precedence">
+      <MemberSignature Language="C#" Value="public Iot.Device.PiJuiceDevice.Models.PowerInputType Precedence { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.PiJuiceDevice.Models.PowerInputType Precedence" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.PowerInput.Precedence" />
+      <MemberSignature Language="VB.NET" Value="Public Property Precedence As PowerInputType" />
+      <MemberSignature Language="F#" Value="member this.Precedence : Iot.Device.PiJuiceDevice.Models.PowerInputType with get, set" Usage="Iot.Device.PiJuiceDevice.Models.PowerInput.Precedence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.PiJuiceDevice.Models.PowerInputType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintMembers">
+      <MemberSignature Language="C#" Value="protected virtual bool PrintMembers (System.Text.StringBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool PrintMembers(class System.Text.StringBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.PowerInput.PrintMembers(System.Text.StringBuilder)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function PrintMembers (builder As StringBuilder) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member PrintMembers : System.Text.StringBuilder -&gt; bool&#xA;override this.PrintMembers : System.Text.StringBuilder -&gt; bool" Usage="powerInput.PrintMembers builder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="System.Text.StringBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="builder">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.PowerInput.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="powerInput.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsbMicroCurrentLimit">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricCurrent UsbMicroCurrentLimit { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricCurrent UsbMicroCurrentLimit" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.PowerInput.UsbMicroCurrentLimit" />
+      <MemberSignature Language="VB.NET" Value="Public Property UsbMicroCurrentLimit As ElectricCurrent" />
+      <MemberSignature Language="F#" Value="member this.UsbMicroCurrentLimit : UnitsNet.ElectricCurrent with get, set" Usage="Iot.Device.PiJuiceDevice.Models.PowerInput.UsbMicroCurrentLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricCurrent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UsbMicroDynamicPowerManagement">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential UsbMicroDynamicPowerManagement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricPotential UsbMicroDynamicPowerManagement" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.PowerInput.UsbMicroDynamicPowerManagement" />
+      <MemberSignature Language="VB.NET" Value="Public Property UsbMicroDynamicPowerManagement As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.UsbMicroDynamicPowerManagement : UnitsNet.ElectricPotential with get, set" Usage="Iot.Device.PiJuiceDevice.Models.PowerInput.UsbMicroDynamicPowerManagement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

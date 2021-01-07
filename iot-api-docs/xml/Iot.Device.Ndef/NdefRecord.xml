@@ -1,0 +1,178 @@
+<Type Name="NdefRecord" FullName="Iot.Device.Ndef.NdefRecord">
+  <TypeSignature Language="C#" Value="public class NdefRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NdefRecord extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ndef.NdefRecord" />
+  <TypeSignature Language="VB.NET" Value="Public Class NdefRecord" />
+  <TypeSignature Language="F#" Value="type NdefRecord = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Create a NDEF Record class
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NdefRecord ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ndef.NdefRecord.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Create an empty NDEF Record, payload will be null
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NdefRecord (ReadOnlySpan&lt;byte&gt; record);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; record) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ndef.NdefRecord.#ctor(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (record As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ndef.NdefRecord : ReadOnlySpan&lt;byte&gt; -&gt; Iot.Device.Ndef.NdefRecord" Usage="new Iot.Device.Ndef.NdefRecord record" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="record" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="record">A span of bytes containing the NDEF Record</param>
+        <summary>
+            Create a NDEF Record from a span of bytes
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NdefRecord (ReadOnlySpan&lt;byte&gt; payload, Iot.Device.Ndef.RecordHeader? recordHeader = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; payload, class Iot.Device.Ndef.RecordHeader recordHeader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ndef.NdefRecord.#ctor(System.ReadOnlySpan{System.Byte},Iot.Device.Ndef.RecordHeader)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (payload As ReadOnlySpan(Of Byte), Optional recordHeader As RecordHeader = Nothing)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ndef.NdefRecord : ReadOnlySpan&lt;byte&gt; * Iot.Device.Ndef.RecordHeader -&gt; Iot.Device.Ndef.NdefRecord" Usage="new Iot.Device.Ndef.NdefRecord (payload, recordHeader)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="payload" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="recordHeader" Type="Iot.Device.Ndef.RecordHeader" />
+      </Parameters>
+      <Docs>
+        <param name="payload">The byte payload</param>
+        <param name="recordHeader">A header, if not header specify, a default empty header will be created</param>
+        <summary>
+            Create a NDEF Record from a Payload and a Header
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Header">
+      <MemberSignature Language="C#" Value="public Iot.Device.Ndef.RecordHeader? Header { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Ndef.RecordHeader Header" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ndef.NdefRecord.Header" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Header As RecordHeader" />
+      <MemberSignature Language="F#" Value="member this.Header : Iot.Device.Ndef.RecordHeader" Usage="Iot.Device.Ndef.NdefRecord.Header" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ndef.RecordHeader</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The record header
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ndef.NdefRecord.Length" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Length As Integer" />
+      <MemberSignature Language="F#" Value="member this.Length : int" Usage="Iot.Device.Ndef.NdefRecord.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The length of the NDEF Record
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Payload">
+      <MemberSignature Language="C#" Value="public byte[]? Payload { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] Payload" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ndef.NdefRecord.Payload" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Payload As Byte()" />
+      <MemberSignature Language="F#" Value="member this.Payload : byte[]" Usage="Iot.Device.Ndef.NdefRecord.Payload" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The record payload
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Serialize">
+      <MemberSignature Language="C#" Value="public void Serialize (Span&lt;byte&gt; record);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Serialize(valuetype System.Span`1&lt;unsigned int8&gt; record) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ndef.NdefRecord.Serialize(System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Serialize (record As Span(Of Byte))" />
+      <MemberSignature Language="F#" Value="member this.Serialize : Span&lt;byte&gt; -&gt; unit" Usage="ndefRecord.Serialize record" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="record" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="record">The serialized record in a byte span</param>
+        <summary>
+            Serialize the NDEF Record
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

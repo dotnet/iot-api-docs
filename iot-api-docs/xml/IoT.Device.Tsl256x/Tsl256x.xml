@@ -1,0 +1,443 @@
+<Type Name="Tsl256x" FullName="IoT.Device.Tsl256x.Tsl256x">
+  <TypeSignature Language="C#" Value="public class Tsl256x : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Tsl256x extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:IoT.Device.Tsl256x.Tsl256x" />
+  <TypeSignature Language="VB.NET" Value="Public Class Tsl256x&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Tsl256x = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Light to Digital Converter TSL2560 and TSL2561
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Tsl256x (System.Device.I2c.I2cDevice i2cDevice, IoT.Device.Tsl256x.PackageType packageType = IoT.Device.Tsl256x.PackageType.Other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, valuetype IoT.Device.Tsl256x.PackageType packageType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:IoT.Device.Tsl256x.Tsl256x.#ctor(System.Device.I2c.I2cDevice,IoT.Device.Tsl256x.PackageType)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional packageType As PackageType = IoT.Device.Tsl256x.PackageType.Other)" />
+      <MemberSignature Language="F#" Value="new IoT.Device.Tsl256x.Tsl256x : System.Device.I2c.I2cDevice * IoT.Device.Tsl256x.PackageType -&gt; IoT.Device.Tsl256x.Tsl256x" Usage="new IoT.Device.Tsl256x.Tsl256x (i2cDevice, packageType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="packageType" Type="IoT.Device.Tsl256x.PackageType" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">And I2C Device</param>
+        <param name="packageType">The type of package to have a proper illuminance calculation</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:IoT.Device.Tsl256x.Tsl256x" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const int DefaultI2cAddress = 57;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultI2cAddress = (57)" />
+      <MemberSignature Language="DocId" Value="F:IoT.Device.Tsl256x.Tsl256x.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Integer  = 57" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : int" Usage="IoT.Device.Tsl256x.Tsl256x.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>57</MemberValue>
+      <Docs>
+        <summary>
+            When the address select pin if float
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:IoT.Device.Tsl256x.Tsl256x.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="tsl256x.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:IoT.Device.Tsl256x.Tsl256x.Enabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property Enabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Enabled : bool with get, set" Usage="IoT.Device.Tsl256x.Tsl256x.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set power On or Off
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Gain">
+      <MemberSignature Language="C#" Value="public IoT.Device.Tsl256x.Gain Gain { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype IoT.Device.Tsl256x.Gain Gain" />
+      <MemberSignature Language="DocId" Value="P:IoT.Device.Tsl256x.Tsl256x.Gain" />
+      <MemberSignature Language="VB.NET" Value="Public Property Gain As Gain" />
+      <MemberSignature Language="F#" Value="member this.Gain : IoT.Device.Tsl256x.Gain with get, set" Usage="IoT.Device.Tsl256x.Tsl256x.Gain" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>IoT.Device.Tsl256x.Gain</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or Set the gain
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetIlluminance">
+      <MemberSignature Language="C#" Value="public UnitsNet.Illuminance GetIlluminance ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Illuminance GetIlluminance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:IoT.Device.Tsl256x.Tsl256x.GetIlluminance" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetIlluminance () As Illuminance" />
+      <MemberSignature Language="F#" Value="member this.GetIlluminance : unit -&gt; UnitsNet.Illuminance" Usage="tsl256x.GetIlluminance " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Illuminance</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the calculated Illuminance. Default range is Lux
+            </summary>
+        <returns>The illuminance</returns>
+        <remarks>If you have used the manual integration, you won't be able to use this formula</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRawChannels">
+      <MemberSignature Language="C#" Value="public void GetRawChannels (out ushort channel0, out ushort channel1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void GetRawChannels([out] unsigned int16&amp; channel0, [out] unsigned int16&amp; channel1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:IoT.Device.Tsl256x.Tsl256x.GetRawChannels(System.UInt16@,System.UInt16@)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub GetRawChannels (ByRef channel0 As UShort, ByRef channel1 As UShort)" />
+      <MemberSignature Language="F#" Value="member this.GetRawChannels : uint16 * uint16 -&gt; unit" Usage="tsl256x.GetRawChannels (channel0, channel1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel0" Type="System.UInt16" RefType="out" />
+        <Parameter Name="channel1" Type="System.UInt16" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="channel0">Channel 0</param>
+        <param name="channel1">Channel 1</param>
+        <summary>
+            Get the raw data from both channels
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRawLuminosity">
+      <MemberSignature Language="C#" Value="public ushort GetRawLuminosity (IoT.Device.Tsl256x.Channel channel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int16 GetRawLuminosity(valuetype IoT.Device.Tsl256x.Channel channel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:IoT.Device.Tsl256x.Tsl256x.GetRawLuminosity(IoT.Device.Tsl256x.Channel)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetRawLuminosity (channel As Channel) As UShort" />
+      <MemberSignature Language="F#" Value="member this.GetRawLuminosity : IoT.Device.Tsl256x.Channel -&gt; uint16" Usage="tsl256x.GetRawLuminosity channel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel" Type="IoT.Device.Tsl256x.Channel" />
+      </Parameters>
+      <Docs>
+        <param name="channel">The channel to get the luminosity</param>
+        <summary>
+            Get the raw luminosity for a specific channel
+            </summary>
+        <returns>The raw luminosity from the ADC</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntegrationTime">
+      <MemberSignature Language="C#" Value="public IoT.Device.Tsl256x.IntegrationTime IntegrationTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype IoT.Device.Tsl256x.IntegrationTime IntegrationTime" />
+      <MemberSignature Language="DocId" Value="P:IoT.Device.Tsl256x.Tsl256x.IntegrationTime" />
+      <MemberSignature Language="VB.NET" Value="Public Property IntegrationTime As IntegrationTime" />
+      <MemberSignature Language="F#" Value="member this.IntegrationTime : IoT.Device.Tsl256x.IntegrationTime with get, set" Usage="IoT.Device.Tsl256x.Tsl256x.IntegrationTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>IoT.Device.Tsl256x.IntegrationTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or Set the integration time
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterruptControl">
+      <MemberSignature Language="C#" Value="public IoT.Device.Tsl256x.InterruptControl InterruptControl { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype IoT.Device.Tsl256x.InterruptControl InterruptControl" />
+      <MemberSignature Language="DocId" Value="P:IoT.Device.Tsl256x.Tsl256x.InterruptControl" />
+      <MemberSignature Language="VB.NET" Value="Public Property InterruptControl As InterruptControl" />
+      <MemberSignature Language="F#" Value="member this.InterruptControl : IoT.Device.Tsl256x.InterruptControl with get, set" Usage="IoT.Device.Tsl256x.Tsl256x.InterruptControl" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>IoT.Device.Tsl256x.InterruptControl</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or Set the interrupt Control Select
+            </summary>
+        <value>To be added.</value>
+        <remarks>Interrupts are only on Channel 0</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterruptPersistence">
+      <MemberSignature Language="C#" Value="public IoT.Device.Tsl256x.InterruptPersistence InterruptPersistence { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype IoT.Device.Tsl256x.InterruptPersistence InterruptPersistence" />
+      <MemberSignature Language="DocId" Value="P:IoT.Device.Tsl256x.Tsl256x.InterruptPersistence" />
+      <MemberSignature Language="VB.NET" Value="Public Property InterruptPersistence As InterruptPersistence" />
+      <MemberSignature Language="F#" Value="member this.InterruptPersistence : IoT.Device.Tsl256x.InterruptPersistence with get, set" Usage="IoT.Device.Tsl256x.Tsl256x.InterruptPersistence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>IoT.Device.Tsl256x.InterruptPersistence</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or Set the interrupt Persistence Select
+            </summary>
+        <value>To be added.</value>
+        <remarks>Interrupts are only on Channel 0</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureAndGetIlluminance">
+      <MemberSignature Language="C#" Value="public UnitsNet.Illuminance MeasureAndGetIlluminance ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Illuminance MeasureAndGetIlluminance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:IoT.Device.Tsl256x.Tsl256x.MeasureAndGetIlluminance" />
+      <MemberSignature Language="VB.NET" Value="Public Function MeasureAndGetIlluminance () As Illuminance" />
+      <MemberSignature Language="F#" Value="member this.MeasureAndGetIlluminance : unit -&gt; UnitsNet.Illuminance" Usage="tsl256x.MeasureAndGetIlluminance " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Illuminance</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Measure the illuminance, will wait for the measurement based on integration time
+            </summary>
+        <returns>The illuminance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecondI2cAddress">
+      <MemberSignature Language="C#" Value="public const int SecondI2cAddress = 41;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 SecondI2cAddress = (41)" />
+      <MemberSignature Language="DocId" Value="F:IoT.Device.Tsl256x.Tsl256x.SecondI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const SecondI2cAddress As Integer  = 41" />
+      <MemberSignature Language="F#" Value="val mutable SecondI2cAddress : int" Usage="IoT.Device.Tsl256x.Tsl256x.SecondI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>41</MemberValue>
+      <Docs>
+        <summary>
+            When the address select pin is to ground
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetThreshold">
+      <MemberSignature Language="C#" Value="public void SetThreshold (ushort low, ushort high);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetThreshold(unsigned int16 low, unsigned int16 high) cil managed" />
+      <MemberSignature Language="DocId" Value="M:IoT.Device.Tsl256x.Tsl256x.SetThreshold(System.UInt16,System.UInt16)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetThreshold (low As UShort, high As UShort)" />
+      <MemberSignature Language="F#" Value="member this.SetThreshold : uint16 * uint16 -&gt; unit" Usage="tsl256x.SetThreshold (low, high)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="low" Type="System.UInt16" />
+        <Parameter Name="high" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="low">The low threshold</param>
+        <param name="high">The high threshold</param>
+        <summary>
+            This will set the threshold and enable the interrupt
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartManualIntegration">
+      <MemberSignature Language="C#" Value="public void StartManualIntegration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartManualIntegration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:IoT.Device.Tsl256x.Tsl256x.StartManualIntegration" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StartManualIntegration ()" />
+      <MemberSignature Language="F#" Value="member this.StartManualIntegration : unit -&gt; unit" Usage="tsl256x.StartManualIntegration " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Start the manual integration
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopManualIntegration">
+      <MemberSignature Language="C#" Value="public void StopManualIntegration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StopManualIntegration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:IoT.Device.Tsl256x.Tsl256x.StopManualIntegration" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StopManualIntegration ()" />
+      <MemberSignature Language="F#" Value="member this.StopManualIntegration : unit -&gt; unit" Usage="tsl256x.StopManualIntegration " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stop the manual integration
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThirdI2cAddress">
+      <MemberSignature Language="C#" Value="public const int ThirdI2cAddress = 73;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ThirdI2cAddress = (73)" />
+      <MemberSignature Language="DocId" Value="F:IoT.Device.Tsl256x.Tsl256x.ThirdI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const ThirdI2cAddress As Integer  = 73" />
+      <MemberSignature Language="F#" Value="val mutable ThirdI2cAddress : int" Usage="IoT.Device.Tsl256x.Tsl256x.ThirdI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>73</MemberValue>
+      <Docs>
+        <summary>
+            When the select pin is to VDD
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public Version Version { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Version Version" />
+      <MemberSignature Language="DocId" Value="P:IoT.Device.Tsl256x.Tsl256x.Version" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Version As Version" />
+      <MemberSignature Language="F#" Value="member this.Version : Version" Usage="IoT.Device.Tsl256x.Tsl256x.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Version</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the version 0 for major for TSL2560 and 1 for TSL2561, minor is devision number
+            </summary>
+        <value>The version</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
