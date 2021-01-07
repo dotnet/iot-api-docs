@@ -1,0 +1,115 @@
+<Type Name="PowerDeliveryObject" FullName="Iot.Device.Usb.PowerDeliveryObject">
+  <TypeSignature Language="C#" Value="public abstract class PowerDeliveryObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit PowerDeliveryObject extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Usb.PowerDeliveryObject" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class PowerDeliveryObject" />
+  <TypeSignature Language="F#" Value="type PowerDeliveryObject = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Base class for all the different power delivery objects (=PDO).
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected PowerDeliveryObject (uint rawValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(unsigned int32 rawValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Usb.PowerDeliveryObject.#ctor(System.UInt32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (rawValue As UInteger)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Usb.PowerDeliveryObject : uint32 -&gt; Iot.Device.Usb.PowerDeliveryObject" Usage="new Iot.Device.Usb.PowerDeliveryObject rawValue" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="rawValue" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="rawValue">The raw value which encodes all properties of this PDO. See USB-PD specification for details.</param>
+        <summary>Initializes a new instance of the <see cref="T:Iot.Device.Usb.PowerDeliveryObject" /> class.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromValue">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Usb.PowerDeliveryObject CreateFromValue (uint rawValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Usb.PowerDeliveryObject CreateFromValue(unsigned int32 rawValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Usb.PowerDeliveryObject.CreateFromValue(System.UInt32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromValue (rawValue As UInteger) As PowerDeliveryObject" />
+      <MemberSignature Language="F#" Value="static member CreateFromValue : uint32 -&gt; Iot.Device.Usb.PowerDeliveryObject" Usage="Iot.Device.Usb.PowerDeliveryObject.CreateFromValue rawValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Usb.PowerDeliveryObject</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawValue" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="rawValue">
+            The raw value received from or sent to the USB-PD controller which encodes all properties of this PDO. See USB-PD specification for details.
+            </param>
+        <summary>Creates a new PDO from the given value.</summary>
+        <returns>
+            A PDO of the type defined by the value,
+            which can be a <see cref="T:Iot.Device.Usb.FixedSupplyObject" />, <see cref="T:Iot.Device.Usb.VariableSupplyObject" /> or <see cref="T:Iot.Device.Usb.BatteryObject" />.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Power">
+      <MemberSignature Language="C#" Value="public abstract UnitsNet.Power Power { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Power Power" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.PowerDeliveryObject.Power" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Power As Power" />
+      <MemberSignature Language="F#" Value="member this.Power : UnitsNet.Power" Usage="Iot.Device.Usb.PowerDeliveryObject.Power" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Power</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Gets the power of this PDO.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public uint Value { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 Value" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Usb.PowerDeliveryObject.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Property Value As UInteger" />
+      <MemberSignature Language="F#" Value="member this.Value : uint32 with get, set" Usage="Iot.Device.Usb.PowerDeliveryObject.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the value which encodes all properties of this PDO and can be used to send this PDO to the USB-PD controller.
+            See USB-PD specification for details.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

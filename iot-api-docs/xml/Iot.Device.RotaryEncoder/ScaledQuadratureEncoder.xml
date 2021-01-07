@@ -1,0 +1,329 @@
+<Type Name="ScaledQuadratureEncoder" FullName="Iot.Device.RotaryEncoder.ScaledQuadratureEncoder">
+  <TypeSignature Language="C#" Value="public class ScaledQuadratureEncoder : Iot.Device.RotaryEncoder.QuadratureRotaryEncoder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ScaledQuadratureEncoder extends Iot.Device.RotaryEncoder.QuadratureRotaryEncoder" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.RotaryEncoder.ScaledQuadratureEncoder" />
+  <TypeSignature Language="VB.NET" Value="Public Class ScaledQuadratureEncoder&#xA;Inherits QuadratureRotaryEncoder" />
+  <TypeSignature Language="F#" Value="type ScaledQuadratureEncoder = class&#xA;    inherit QuadratureRotaryEncoder" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.RotaryEncoder.QuadratureRotaryEncoder</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Scaled Quadrature Rotary Controller binding
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScaledQuadratureEncoder (int pinA, int pinB, System.Device.Gpio.PinEventTypes edges, int pulsesPerRotation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 pinA, int32 pinB, valuetype System.Device.Gpio.PinEventTypes edges, int32 pulsesPerRotation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.RotaryEncoder.ScaledQuadratureEncoder.#ctor(System.Int32,System.Int32,System.Device.Gpio.PinEventTypes,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pinA As Integer, pinB As Integer, edges As PinEventTypes, pulsesPerRotation As Integer)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.RotaryEncoder.ScaledQuadratureEncoder : int * int * System.Device.Gpio.PinEventTypes * int -&gt; Iot.Device.RotaryEncoder.ScaledQuadratureEncoder" Usage="new Iot.Device.RotaryEncoder.ScaledQuadratureEncoder (pinA, pinB, edges, pulsesPerRotation)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pinA" Type="System.Int32" />
+        <Parameter Name="pinB" Type="System.Int32" />
+        <Parameter Name="edges" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="pulsesPerRotation" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinA">Pin A that is connected to the rotary encoder. Sometimes called clk</param>
+        <param name="pinB">Pin B that is connected to the rotary encoder. Sometimes called data</param>
+        <param name="edges">The pin event types to 'listen' for.</param>
+        <param name="pulsesPerRotation">The number of pulses to be received for every full rotation of the encoder.</param>
+        <summary>
+            ScaledQuadratureEncoder constructor for a 0..100 range with 100 steps
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScaledQuadratureEncoder (int pinA, int pinB, System.Device.Gpio.PinEventTypes edges, int pulsesPerRotation, System.Device.Gpio.GpioController controller = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 pinA, int32 pinB, valuetype System.Device.Gpio.PinEventTypes edges, int32 pulsesPerRotation, class System.Device.Gpio.GpioController controller, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.RotaryEncoder.ScaledQuadratureEncoder.#ctor(System.Int32,System.Int32,System.Device.Gpio.PinEventTypes,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pinA As Integer, pinB As Integer, edges As PinEventTypes, pulsesPerRotation As Integer, Optional controller As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.RotaryEncoder.ScaledQuadratureEncoder : int * int * System.Device.Gpio.PinEventTypes * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.RotaryEncoder.ScaledQuadratureEncoder" Usage="new Iot.Device.RotaryEncoder.ScaledQuadratureEncoder (pinA, pinB, edges, pulsesPerRotation, controller, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pinA" Type="System.Int32" />
+        <Parameter Name="pinB" Type="System.Int32" />
+        <Parameter Name="edges" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="pulsesPerRotation" Type="System.Int32" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pinA">Pin A that is connected to the rotary encoder. Sometimes called clk</param>
+        <param name="pinB">Pin B that is connected to the rotary encoder. Sometimes called data</param>
+        <param name="edges">The pin event types to 'listen' for.</param>
+        <param name="pulsesPerRotation">The number of pulses to be received for every full rotation of the encoder.</param>
+        <param name="controller">GpioController that hosts Pins A and B.</param>
+        <param name="shouldDispose">Dispose the controller if true</param>
+        <summary>
+            ScaledQuadratureEncoder constructor for a 0..100 range with 100 steps
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScaledQuadratureEncoder (int pinA, int pinB, System.Device.Gpio.PinEventTypes edges, int pulsesPerRotation, double pulseIncrement, double rangeMin, double rangeMax);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 pinA, int32 pinB, valuetype System.Device.Gpio.PinEventTypes edges, int32 pulsesPerRotation, float64 pulseIncrement, float64 rangeMin, float64 rangeMax) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.RotaryEncoder.ScaledQuadratureEncoder.#ctor(System.Int32,System.Int32,System.Device.Gpio.PinEventTypes,System.Int32,System.Double,System.Double,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pinA As Integer, pinB As Integer, edges As PinEventTypes, pulsesPerRotation As Integer, pulseIncrement As Double, rangeMin As Double, rangeMax As Double)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.RotaryEncoder.ScaledQuadratureEncoder : int * int * System.Device.Gpio.PinEventTypes * int * double * double * double -&gt; Iot.Device.RotaryEncoder.ScaledQuadratureEncoder" Usage="new Iot.Device.RotaryEncoder.ScaledQuadratureEncoder (pinA, pinB, edges, pulsesPerRotation, pulseIncrement, rangeMin, rangeMax)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pinA" Type="System.Int32" />
+        <Parameter Name="pinB" Type="System.Int32" />
+        <Parameter Name="edges" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="pulsesPerRotation" Type="System.Int32" />
+        <Parameter Name="pulseIncrement" Type="System.Double" />
+        <Parameter Name="rangeMin" Type="System.Double" />
+        <Parameter Name="rangeMax" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="pinA">Pin A that is connected to the rotary encoder. Sometimes called clk</param>
+        <param name="pinB">Pin B that is connected to the rotary encoder. Sometimes called data</param>
+        <param name="edges">The pin event types to 'listen' for.</param>
+        <param name="pulsesPerRotation">The number of pulses to be received for every full rotation of the encoder.</param>
+        <param name="pulseIncrement">The amount that the value increases or decreases on each pulse from the rotary encoder</param>
+        <param name="rangeMin">Minimum value permitted. The value is clamped to this.</param>
+        <param name="rangeMax">Maximum value permitted. The value is clamped to this.</param>
+        <summary>
+            ScaledQuadratureEncoder constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ScaledQuadratureEncoder (int pinA, int pinB, System.Device.Gpio.PinEventTypes edges, int pulsesPerRotation, double pulseIncrement, double rangeMin, double rangeMax, System.Device.Gpio.GpioController controller = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 pinA, int32 pinB, valuetype System.Device.Gpio.PinEventTypes edges, int32 pulsesPerRotation, float64 pulseIncrement, float64 rangeMin, float64 rangeMax, class System.Device.Gpio.GpioController controller, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.RotaryEncoder.ScaledQuadratureEncoder.#ctor(System.Int32,System.Int32,System.Device.Gpio.PinEventTypes,System.Int32,System.Double,System.Double,System.Double,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pinA As Integer, pinB As Integer, edges As PinEventTypes, pulsesPerRotation As Integer, pulseIncrement As Double, rangeMin As Double, rangeMax As Double, Optional controller As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.RotaryEncoder.ScaledQuadratureEncoder : int * int * System.Device.Gpio.PinEventTypes * int * double * double * double * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.RotaryEncoder.ScaledQuadratureEncoder" Usage="new Iot.Device.RotaryEncoder.ScaledQuadratureEncoder (pinA, pinB, edges, pulsesPerRotation, pulseIncrement, rangeMin, rangeMax, controller, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pinA" Type="System.Int32" />
+        <Parameter Name="pinB" Type="System.Int32" />
+        <Parameter Name="edges" Type="System.Device.Gpio.PinEventTypes" />
+        <Parameter Name="pulsesPerRotation" Type="System.Int32" />
+        <Parameter Name="pulseIncrement" Type="System.Double" />
+        <Parameter Name="rangeMin" Type="System.Double" />
+        <Parameter Name="rangeMax" Type="System.Double" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pinA">Pin A that is connected to the rotary encoder. Sometimes called clk</param>
+        <param name="pinB">Pin B that is connected to the rotary encoder. Sometimes called data</param>
+        <param name="edges">The pin event types to 'listen' for.</param>
+        <param name="pulsesPerRotation">The number of pulses to be received for every full rotation of the encoder.</param>
+        <param name="pulseIncrement">The amount that the value increases or decreases on each pulse from the rotary encoder</param>
+        <param name="rangeMin">Minimum value permitted. The value is clamped to this.</param>
+        <param name="rangeMax">Maximum value permitted. The value is clamped to this.</param>
+        <param name="controller">GpioController that hosts Pins A and B.</param>
+        <param name="shouldDispose">Dispose the controller if true</param>
+        <summary>
+            ScaledQuadratureEncoder constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Acceleration">
+      <MemberSignature Language="C#" Value="protected virtual int Acceleration (int milliSecondsSinceLastPulse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance int32 Acceleration(int32 milliSecondsSinceLastPulse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.RotaryEncoder.ScaledQuadratureEncoder.Acceleration(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function Acceleration (milliSecondsSinceLastPulse As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member Acceleration : int -&gt; int&#xA;override this.Acceleration : int -&gt; int" Usage="scaledQuadratureEncoder.Acceleration milliSecondsSinceLastPulse" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="milliSecondsSinceLastPulse" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="milliSecondsSinceLastPulse">The amount of time elapsed since the last data pulse from the encoder in milliseconds.</param>
+        <summary>
+            Calculate the amount of acceleration to be applied to the increment of the encoder.
+            </summary>
+        <returns>A value that can be used to apply acceleration to the rotary encoder.</returns>
+        <remarks>
+            This uses a straight line function output = input * AccelerationSlope + Acceleration offset but can be overridden
+            to perform different algorithms.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccelerationOffset">
+      <MemberSignature Language="C#" Value="public float AccelerationOffset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 AccelerationOffset" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.RotaryEncoder.ScaledQuadratureEncoder.AccelerationOffset" />
+      <MemberSignature Language="VB.NET" Value="Public Property AccelerationOffset As Single" />
+      <MemberSignature Language="F#" Value="member this.AccelerationOffset : single with get, set" Usage="Iot.Device.RotaryEncoder.ScaledQuadratureEncoder.AccelerationOffset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The AccelerationOffset property along with the AccelerationSlope property represents how the
+            increase or decrease in value should grow as the incremental encoder is turned faster.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccelerationSlope">
+      <MemberSignature Language="C#" Value="public float AccelerationSlope { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 AccelerationSlope" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.RotaryEncoder.ScaledQuadratureEncoder.AccelerationSlope" />
+      <MemberSignature Language="VB.NET" Value="Public Property AccelerationSlope As Single" />
+      <MemberSignature Language="F#" Value="member this.AccelerationSlope : single with get, set" Usage="Iot.Device.RotaryEncoder.ScaledQuadratureEncoder.AccelerationSlope" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The AccelerationSlope property along with the AccelerationOffset property represents how the
+            increase or decrease in value should grow as the incremental encoder is turned faster.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPulse">
+      <MemberSignature Language="C#" Value="protected override void OnPulse (bool blnUp, int milliSecondsSinceLastPulse);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void OnPulse(bool blnUp, int32 milliSecondsSinceLastPulse) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.RotaryEncoder.ScaledQuadratureEncoder.OnPulse(System.Boolean,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub OnPulse (blnUp As Boolean, milliSecondsSinceLastPulse As Integer)" />
+      <MemberSignature Language="F#" Value="override this.OnPulse : bool * int -&gt; unit" Usage="scaledQuadratureEncoder.OnPulse (blnUp, milliSecondsSinceLastPulse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="blnUp" Type="System.Boolean" />
+        <Parameter Name="milliSecondsSinceLastPulse" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="blnUp">When true then the value should be incremented otherwise it should be decremented.</param>
+        <param name="milliSecondsSinceLastPulse">The amount of time elapsed since the last data pulse from the encoder in milliseconds.</param>
+        <summary>
+            Modify the current value on receipt of a pulse from the encoder.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadValue">
+      <MemberSignature Language="C#" Value="public double ReadValue ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float64 ReadValue() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.RotaryEncoder.ScaledQuadratureEncoder.ReadValue" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadValue () As Double" />
+      <MemberSignature Language="F#" Value="member this.ReadValue : unit -&gt; double" Usage="scaledQuadratureEncoder.ReadValue " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read the current Value
+            </summary>
+        <returns>The value associated with the rotary encoder.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public double Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Value" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.RotaryEncoder.ScaledQuadratureEncoder.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Property Value As Double" />
+      <MemberSignature Language="F#" Value="member this.Value : double with get, set" Usage="Iot.Device.RotaryEncoder.ScaledQuadratureEncoder.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>The Value property represents current value associated with the RotaryEncoder.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Iot.Device.RotaryEncoder.RotaryEncoderEventArgs&gt;? ValueChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Iot.Device.RotaryEncoder.RotaryEncoderEventArgs&gt; ValueChanged" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.RotaryEncoder.ScaledQuadratureEncoder.ValueChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Event ValueChanged As EventHandler(Of RotaryEncoderEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.ValueChanged : EventHandler&lt;Iot.Device.RotaryEncoder.RotaryEncoderEventArgs&gt; " Usage="member this.ValueChanged : System.EventHandler&lt;Iot.Device.RotaryEncoder.RotaryEncoderEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Iot.Device.RotaryEncoder.RotaryEncoderEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            EventHandler to allow the notification of value changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

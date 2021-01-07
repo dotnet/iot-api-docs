@@ -1,0 +1,757 @@
+<Type Name="Amg88xx" FullName="Iot.Device.Amg88xx.Amg88xx">
+  <TypeSignature Language="C#" Value="public class Amg88xx : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Amg88xx extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Amg88xx.Amg88xx" />
+  <TypeSignature Language="VB.NET" Value="Public Class Amg88xx&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Amg88xx = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Binding for the AMG88xx family of infrared array sensors
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Amg88xx (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Amg88xx.Amg88xx.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Amg88xx.Amg88xx : System.Device.I2c.I2cDevice -&gt; Iot.Device.Amg88xx.Amg88xx" Usage="new Iot.Device.Amg88xx.Amg88xx i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">To be added.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Amg88xx.Amg88xx" /> binding.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlternativeI2cAddress">
+      <MemberSignature Language="C#" Value="public const int AlternativeI2cAddress = 105;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 AlternativeI2cAddress = (105)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Amg88xx.Amg88xx.AlternativeI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const AlternativeI2cAddress As Integer  = 105" />
+      <MemberSignature Language="F#" Value="val mutable AlternativeI2cAddress : int" Usage="Iot.Device.Amg88xx.Amg88xx.AlternativeI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>105</MemberValue>
+      <Docs>
+        <summary>
+            Alternative device address
+            (AD_SELECT pin is high, c.f. reference specification, pg. 11)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearAllFlags">
+      <MemberSignature Language="C#" Value="public void ClearAllFlags ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearAllFlags() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Amg88xx.Amg88xx.ClearAllFlags" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ClearAllFlags ()" />
+      <MemberSignature Language="F#" Value="member this.ClearAllFlags : unit -&gt; unit" Usage="amg88xx.ClearAllFlags " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clears all flags in the status register.
+            Note: it does not clear the interrupt flags of the individual pixels.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearInterrupt">
+      <MemberSignature Language="C#" Value="public void ClearInterrupt ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearInterrupt() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Amg88xx.Amg88xx.ClearInterrupt" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ClearInterrupt ()" />
+      <MemberSignature Language="F#" Value="member this.ClearInterrupt : unit -&gt; unit" Usage="amg88xx.ClearInterrupt " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clears the interrupt flag in the status register
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearTemperatureOverflow">
+      <MemberSignature Language="C#" Value="public void ClearTemperatureOverflow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearTemperatureOverflow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Amg88xx.Amg88xx.ClearTemperatureOverflow" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ClearTemperatureOverflow ()" />
+      <MemberSignature Language="F#" Value="member this.ClearTemperatureOverflow : unit -&gt; unit" Usage="amg88xx.ClearTemperatureOverflow " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clears the temperature overflow indication.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearThermistorOverflow">
+      <MemberSignature Language="C#" Value="public void ClearThermistorOverflow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearThermistorOverflow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Amg88xx.Amg88xx.ClearThermistorOverflow" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ClearThermistorOverflow ()" />
+      <MemberSignature Language="F#" Value="member this.ClearThermistorOverflow : unit -&gt; unit" Usage="amg88xx.ClearThermistorOverflow " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clears the temperature overflow indication.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeafultI2cAddress">
+      <MemberSignature Language="C#" Value="public const int DeafultI2cAddress = 104;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DeafultI2cAddress = (104)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Amg88xx.Amg88xx.DeafultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DeafultI2cAddress As Integer  = 104" />
+      <MemberSignature Language="F#" Value="val mutable DeafultI2cAddress : int" Usage="Iot.Device.Amg88xx.Amg88xx.DeafultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>104</MemberValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const int DefaultI2cAddress = 104;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultI2cAddress = (104)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Amg88xx.Amg88xx.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Integer  = 104" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : int" Usage="Iot.Device.Amg88xx.Amg88xx.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>104</MemberValue>
+      <Docs>
+        <summary>
+            Standard device address
+            (AD_SELECT pin is low, c.f. reference specification, pg. 11)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Amg88xx.Amg88xx.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="amg88xx.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="FrameRate">
+      <MemberSignature Language="C#" Value="public Iot.Device.Amg88xx.FrameRate FrameRate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Amg88xx.FrameRate FrameRate" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Amg88xx.Amg88xx.FrameRate" />
+      <MemberSignature Language="VB.NET" Value="Public Property FrameRate As FrameRate" />
+      <MemberSignature Language="F#" Value="member this.FrameRate : Iot.Device.Amg88xx.FrameRate with get, set" Usage="Iot.Device.Amg88xx.Amg88xx.FrameRate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Amg88xx.FrameRate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or sets the frame rate of the sensor internal thermal image update.
+            </summary>
+        <value>The frame rate for the pixel update interval (either 1 or 10fps). The default is 10fps.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown when attempting to set a frame rate other than 1 or 10 frames per second</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInterruptFlagTable">
+      <MemberSignature Language="C#" Value="public bool[,] GetInterruptFlagTable ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool[,] GetInterruptFlagTable() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Amg88xx.Amg88xx.GetInterruptFlagTable" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetInterruptFlagTable () As Boolean(,)" />
+      <MemberSignature Language="F#" Value="member this.GetInterruptFlagTable : unit -&gt; bool[,]" Usage="amg88xx.GetInterruptFlagTable " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean[,]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the interrupt flags of all pixels.
+            </summary>
+        <returns>Interrupt flags</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasInterrupt">
+      <MemberSignature Language="C#" Value="public bool HasInterrupt ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasInterrupt() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Amg88xx.Amg88xx.HasInterrupt" />
+      <MemberSignature Language="VB.NET" Value="Public Function HasInterrupt () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasInterrupt : unit -&gt; bool" Usage="amg88xx.HasInterrupt " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the interrupt flag from the status register
+            </summary>
+        <returns>Interrupt flag</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasTemperatureOverflow">
+      <MemberSignature Language="C#" Value="public bool HasTemperatureOverflow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasTemperatureOverflow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Amg88xx.Amg88xx.HasTemperatureOverflow" />
+      <MemberSignature Language="VB.NET" Value="Public Function HasTemperatureOverflow () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasTemperatureOverflow : unit -&gt; bool" Usage="amg88xx.HasTemperatureOverflow " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets whether any pixel measured a temperature higher than the normal operation range.
+            The event of an overflow does not prevent from continuing reading the sensor.
+            The overflow indication will last even if all pixels are returned to readings within normal range.
+            The indicator is reset using <see cfref="ClearTemperatureOverflow" />.
+            </summary>
+        <returns>True, if an overflow occured</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasThermistorOverflow">
+      <MemberSignature Language="C#" Value="public bool HasThermistorOverflow ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool HasThermistorOverflow() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Amg88xx.Amg88xx.HasThermistorOverflow" />
+      <MemberSignature Language="VB.NET" Value="Public Function HasThermistorOverflow () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasThermistorOverflow : unit -&gt; bool" Usage="amg88xx.HasThermistorOverflow " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the thermistor overflow flag from the status register.
+            The overflow indication will last even if the thermistor temperature returned to normal range.
+            The event of an overflow does not prevent from continuing reading the sensor.
+            The indicator is reset using <see cfref="ClearThermistorOverflow" />.
+            Note: the bit is only menthioned in early versions of the reference specification.
+            It is not clear whether this is a specification error or a change in a newer
+            revision of the sensor.
+            </summary>
+        <returns>True, if an overflow occured</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public const int Height = 8;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 Height = (8)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Amg88xx.Amg88xx.Height" />
+      <MemberSignature Language="VB.NET" Value="Public Const Height As Integer  = 8" />
+      <MemberSignature Language="F#" Value="val mutable Height : int" Usage="Iot.Device.Amg88xx.Amg88xx.Height" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>
+            Number of sensor pixel array rows
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterruptHysteresis">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature InterruptHysteresis { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature InterruptHysteresis" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Amg88xx.Amg88xx.InterruptHysteresis" />
+      <MemberSignature Language="VB.NET" Value="Public Property InterruptHysteresis As Temperature" />
+      <MemberSignature Language="F#" Value="member this.InterruptHysteresis : UnitsNet.Temperature with get, set" Usage="Iot.Device.Amg88xx.Amg88xx.InterruptHysteresis" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the pixel temperature interrupt hysteresis.
+            </summary>
+        <value>Temperature hysteresis for lower and upper interrupt triggering. The default is 0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterruptLowerLevel">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature InterruptLowerLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature InterruptLowerLevel" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Amg88xx.Amg88xx.InterruptLowerLevel" />
+      <MemberSignature Language="VB.NET" Value="Public Property InterruptLowerLevel As Temperature" />
+      <MemberSignature Language="F#" Value="member this.InterruptLowerLevel : UnitsNet.Temperature with get, set" Usage="Iot.Device.Amg88xx.Amg88xx.InterruptLowerLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the pixel temperature lower interrupt level.
+            </summary>
+        <value>Temperature level to trigger an interrupt if the any pixel falls below. The default is 0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterruptMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Amg88xx.InterruptMode InterruptMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Amg88xx.InterruptMode InterruptMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Amg88xx.Amg88xx.InterruptMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property InterruptMode As InterruptMode" />
+      <MemberSignature Language="F#" Value="member this.InterruptMode : Iot.Device.Amg88xx.InterruptMode with get, set" Usage="Iot.Device.Amg88xx.Amg88xx.InterruptMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Amg88xx.InterruptMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the pixel temperature interrupt mode.
+            </summary>
+        <value>The interrupt mode, which is either aboslute or differential. The default is ```Difference```.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterruptPinEnabled">
+      <MemberSignature Language="C#" Value="public bool InterruptPinEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InterruptPinEnabled" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Amg88xx.Amg88xx.InterruptPinEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property InterruptPinEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.InterruptPinEnabled : bool with get, set" Usage="Iot.Device.Amg88xx.Amg88xx.InterruptPinEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or sets whether the interrupt output  pin of the sensor is enabled.
+            If enabled, the pin is pulled down if an interrupt is active.
+            </summary>
+        <value>True, if the INT pin sould be enabled; otherwise false. The default is false."</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterruptUpperLevel">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature InterruptUpperLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature InterruptUpperLevel" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Amg88xx.Amg88xx.InterruptUpperLevel" />
+      <MemberSignature Language="VB.NET" Value="Public Property InterruptUpperLevel As Temperature" />
+      <MemberSignature Language="F#" Value="member this.InterruptUpperLevel : UnitsNet.Temperature with get, set" Usage="Iot.Device.Amg88xx.Amg88xx.InterruptUpperLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the pixel temperature upper interrupt level.
+            </summary>
+        <value>Temperature level to trigger an interrupt if the any pixel exceeds. The default is 0.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public short this[int n] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int16 Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Amg88xx.Amg88xx.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(n As Integer) As Short" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : int16" Usage="Iot.Device.Amg88xx.Amg88xx.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="n" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="n">The number of the pixel to retrieve.</param>
+        <summary>
+            Gets raw reading (12-bit two's complement format) of the specified pixel from the current thermal image.
+            </summary>
+        <value>Reading of the specified pixel.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">n is less than 0, or greater than or equal to PixelCount.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature this[int x, int y] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature Item(int32, int32)" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Amg88xx.Amg88xx.Item(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(x As Integer, y As Integer) As Temperature" />
+      <MemberSignature Language="F#" Value="member this.Item(int * int) : UnitsNet.Temperature" Usage="Iot.Device.Amg88xx.Amg88xx.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">The x-coordinate of the pixel to retrieve.</param>
+        <param name="y">The y-coordinate of the pixel to retrieve.</param>
+        <summary>
+            Gets temperature of the specified pixel from the current thermal image.
+            </summary>
+        <value>Temperature of the specified pixel.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">y is less than 0, or greater than or equal to Height.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="OperatingMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Amg88xx.OperatingMode OperatingMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Amg88xx.OperatingMode OperatingMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Amg88xx.Amg88xx.OperatingMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property OperatingMode As OperatingMode" />
+      <MemberSignature Language="F#" Value="member this.OperatingMode : Iot.Device.Amg88xx.OperatingMode with get, set" Usage="Iot.Device.Amg88xx.Amg88xx.OperatingMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Amg88xx.OperatingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the current operating mode
+            Refer to the sensor reference specification for a description of the mode
+            depending sensor bevaviour and the valid mode transistions.
+            </summary>
+        <value>The operating mode of the sensor. The default is Normal.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelCount">
+      <MemberSignature Language="C#" Value="public const int PixelCount = 64;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 PixelCount = (64)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Amg88xx.Amg88xx.PixelCount" />
+      <MemberSignature Language="VB.NET" Value="Public Const PixelCount As Integer  = 64" />
+      <MemberSignature Language="F#" Value="val mutable PixelCount : int" Usage="Iot.Device.Amg88xx.Amg88xx.PixelCount" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>64</MemberValue>
+      <Docs>
+        <summary>
+            Total number of pixels.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadImage">
+      <MemberSignature Language="C#" Value="public void ReadImage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ReadImage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Amg88xx.Amg88xx.ReadImage" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ReadImage ()" />
+      <MemberSignature Language="F#" Value="member this.ReadImage : unit -&gt; unit" Usage="amg88xx.ReadImage " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reads the current image from the sensor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Amg88xx.Amg88xx.Reset" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Reset ()" />
+      <MemberSignature Language="F#" Value="member this.Reset : unit -&gt; unit" Usage="amg88xx.Reset " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Performs an reset of the sensor. The flags and all configuration registers
+            are reset to default values.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetAllFlags">
+      <MemberSignature Language="C#" Value="public void ResetAllFlags ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetAllFlags() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Amg88xx.Amg88xx.ResetAllFlags" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ResetAllFlags ()" />
+      <MemberSignature Language="F#" Value="member this.ResetAllFlags : unit -&gt; unit" Usage="amg88xx.ResetAllFlags " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Performs a reset of all flags (status register, interrupt flag and interrupt table).
+            This method is useful, if using the interrupt mechanism for pixel temperatures.
+            If an upper and lower level has been set along with a hysteresis this reset can clear the interrupt state of all pixels
+            which are within the range between upper and lower level, but still above/below the hystersis level.
+            If this applies to ALL pixels the interrupt flag gets cleared as well.
+            Refer to the binding documentation for more details on interrupt level, hysteresis and flagging.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SensorTemperature">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature SensorTemperature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature SensorTemperature" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Amg88xx.Amg88xx.SensorTemperature" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SensorTemperature As Temperature" />
+      <MemberSignature Language="F#" Value="member this.SensorTemperature : UnitsNet.Temperature" Usage="Iot.Device.Amg88xx.Amg88xx.SensorTemperature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the temperature reading from the internal thermistor.
+            </summary>
+        <value>Temperature reading</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UseMovingAverageMode">
+      <MemberSignature Language="C#" Value="public bool UseMovingAverageMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UseMovingAverageMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Amg88xx.Amg88xx.UseMovingAverageMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property UseMovingAverageMode As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UseMovingAverageMode : bool with get, set" Usage="Iot.Device.Amg88xx.Amg88xx.UseMovingAverageMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or sets the state of the moving average mode
+            Important: the reference specification states that the current mode can be read,
+            but it doesn't seem to work at the time being.
+            In this case the property is always read as ```false```.
+            </summary>
+        <value>True if the moving average should be calculated; otherwise, false. The default is false.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public const int Width = 8;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 Width = (8)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Amg88xx.Amg88xx.Width" />
+      <MemberSignature Language="VB.NET" Value="Public Const Width As Integer  = 8" />
+      <MemberSignature Language="F#" Value="val mutable Width : int" Usage="Iot.Device.Amg88xx.Amg88xx.Width" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.2.0.0</AssemblyVersion>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>
+            Number of sensor pixel array columns
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

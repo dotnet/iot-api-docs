@@ -1,0 +1,573 @@
+<Type Name="BatteryProfile" FullName="Iot.Device.PiJuiceDevice.Models.BatteryProfile">
+  <TypeSignature Language="C#" Value="public class BatteryProfile : IEquatable&lt;Iot.Device.PiJuiceDevice.Models.BatteryProfile&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BatteryProfile extends System.Object implements class System.IEquatable`1&lt;class Iot.Device.PiJuiceDevice.Models.BatteryProfile&gt;" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.PiJuiceDevice.Models.BatteryProfile" />
+  <TypeSignature Language="VB.NET" Value="Public Class BatteryProfile&#xA;Implements IEquatable(Of BatteryProfile)" />
+  <TypeSignature Language="F#" Value="type BatteryProfile = class&#xA;    interface IEquatable&lt;BatteryProfile&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Iot.Device.PiJuiceDevice.Models.BatteryProfile&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <param name="Capacity">Charge capacity of battery.</param>
+    <param name="ChargeCurrent">[550mA – 2500mA] Constant current that PiJuice battery is charged in current regulation phase of charging process as milliamps.</param>
+    <param name="TerminationCurrent">[50mA – 400mA] When charging current drops below termination current threshold in voltage regulation phase charging process terminates as milliamps.</param>
+    <param name="RegulationVoltage">[3500mV – 4440mV] Voltage to which voltage over battery is regulated in voltage regulation phase of charging process as millivolts.</param>
+    <param name="CutOffVoltage">[0mV – 5100mV] Minimum voltage at which battery is fully discharged as millivolts.</param>
+    <param name="TemperatureCold">Temperature threshold according to JEITA standard below which charging is suspended as celsius.</param>
+    <param name="TemperatureCool">Temperature threshold according to JEITA standard below which charge current is reduced to half of programmed charge current. This threshold should be set above cold temperature as celsius.</param>
+    <param name="TemperatureWarm">Temperature threshold according to JEITA standard above which the battery regulation voltage is reduced by 140mV from the programmed regulation voltage. This threshold should be set above cool temperature as celsius.</param>
+    <param name="TemperatureHot">Temperature threshold according to JEITA standard above which charging is suspended. This threshold should be set above warm temperature as celsius.</param>
+    <param name="NegativeTemperatureCoefficientB">Thermistor B constant of NTC temperature sensor if it is integrated with battery.</param>
+    <param name="NegativeTemperatureCoefficientResistance">Nominal thermistor resistance at 25°C of NTC temperature sensor if it is integrated with battery as ohm.</param>
+    <summary>
+            Battery profile
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BatteryProfile (Iot.Device.PiJuiceDevice.Models.BatteryProfile original);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Iot.Device.PiJuiceDevice.Models.BatteryProfile original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.BatteryProfile.#ctor(Iot.Device.PiJuiceDevice.Models.BatteryProfile)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (original As BatteryProfile)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.PiJuiceDevice.Models.BatteryProfile : Iot.Device.PiJuiceDevice.Models.BatteryProfile -&gt; Iot.Device.PiJuiceDevice.Models.BatteryProfile" Usage="new Iot.Device.PiJuiceDevice.Models.BatteryProfile original" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="Iot.Device.PiJuiceDevice.Models.BatteryProfile" />
+      </Parameters>
+      <Docs>
+        <param name="original">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BatteryProfile (UnitsNet.ElectricCharge Capacity, UnitsNet.ElectricCurrent ChargeCurrent, UnitsNet.ElectricCurrent TerminationCurrent, UnitsNet.ElectricPotential RegulationVoltage, UnitsNet.ElectricPotential CutOffVoltage, UnitsNet.Temperature TemperatureCold, UnitsNet.Temperature TemperatureCool, UnitsNet.Temperature TemperatureWarm, UnitsNet.Temperature TemperatureHot, int NegativeTemperatureCoefficientB, UnitsNet.ElectricResistance NegativeTemperatureCoefficientResistance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype UnitsNet.ElectricCharge Capacity, valuetype UnitsNet.ElectricCurrent ChargeCurrent, valuetype UnitsNet.ElectricCurrent TerminationCurrent, valuetype UnitsNet.ElectricPotential RegulationVoltage, valuetype UnitsNet.ElectricPotential CutOffVoltage, valuetype UnitsNet.Temperature TemperatureCold, valuetype UnitsNet.Temperature TemperatureCool, valuetype UnitsNet.Temperature TemperatureWarm, valuetype UnitsNet.Temperature TemperatureHot, int32 NegativeTemperatureCoefficientB, valuetype UnitsNet.ElectricResistance NegativeTemperatureCoefficientResistance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.BatteryProfile.#ctor(UnitsNet.ElectricCharge,UnitsNet.ElectricCurrent,UnitsNet.ElectricCurrent,UnitsNet.ElectricPotential,UnitsNet.ElectricPotential,UnitsNet.Temperature,UnitsNet.Temperature,UnitsNet.Temperature,UnitsNet.Temperature,System.Int32,UnitsNet.ElectricResistance)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Capacity As ElectricCharge, ChargeCurrent As ElectricCurrent, TerminationCurrent As ElectricCurrent, RegulationVoltage As ElectricPotential, CutOffVoltage As ElectricPotential, TemperatureCold As Temperature, TemperatureCool As Temperature, TemperatureWarm As Temperature, TemperatureHot As Temperature, NegativeTemperatureCoefficientB As Integer, NegativeTemperatureCoefficientResistance As ElectricResistance)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.PiJuiceDevice.Models.BatteryProfile : UnitsNet.ElectricCharge * UnitsNet.ElectricCurrent * UnitsNet.ElectricCurrent * UnitsNet.ElectricPotential * UnitsNet.ElectricPotential * UnitsNet.Temperature * UnitsNet.Temperature * UnitsNet.Temperature * UnitsNet.Temperature * int * UnitsNet.ElectricResistance -&gt; Iot.Device.PiJuiceDevice.Models.BatteryProfile" Usage="new Iot.Device.PiJuiceDevice.Models.BatteryProfile (Capacity, ChargeCurrent, TerminationCurrent, RegulationVoltage, CutOffVoltage, TemperatureCold, TemperatureCool, TemperatureWarm, TemperatureHot, NegativeTemperatureCoefficientB, NegativeTemperatureCoefficientResistance)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Capacity" Type="UnitsNet.ElectricCharge" />
+        <Parameter Name="ChargeCurrent" Type="UnitsNet.ElectricCurrent" />
+        <Parameter Name="TerminationCurrent" Type="UnitsNet.ElectricCurrent" />
+        <Parameter Name="RegulationVoltage" Type="UnitsNet.ElectricPotential" />
+        <Parameter Name="CutOffVoltage" Type="UnitsNet.ElectricPotential" />
+        <Parameter Name="TemperatureCold" Type="UnitsNet.Temperature" />
+        <Parameter Name="TemperatureCool" Type="UnitsNet.Temperature" />
+        <Parameter Name="TemperatureWarm" Type="UnitsNet.Temperature" />
+        <Parameter Name="TemperatureHot" Type="UnitsNet.Temperature" />
+        <Parameter Name="NegativeTemperatureCoefficientB" Type="System.Int32" />
+        <Parameter Name="NegativeTemperatureCoefficientResistance" Type="UnitsNet.ElectricResistance" />
+      </Parameters>
+      <Docs>
+        <param name="Capacity">Charge capacity of battery.</param>
+        <param name="ChargeCurrent">[550mA – 2500mA] Constant current that PiJuice battery is charged in current regulation phase of charging process as milliamps.</param>
+        <param name="TerminationCurrent">[50mA – 400mA] When charging current drops below termination current threshold in voltage regulation phase charging process terminates as milliamps.</param>
+        <param name="RegulationVoltage">[3500mV – 4440mV] Voltage to which voltage over battery is regulated in voltage regulation phase of charging process as millivolts.</param>
+        <param name="CutOffVoltage">[0mV – 5100mV] Minimum voltage at which battery is fully discharged as millivolts.</param>
+        <param name="TemperatureCold">Temperature threshold according to JEITA standard below which charging is suspended as celsius.</param>
+        <param name="TemperatureCool">Temperature threshold according to JEITA standard below which charge current is reduced to half of programmed charge current. This threshold should be set above cold temperature as celsius.</param>
+        <param name="TemperatureWarm">Temperature threshold according to JEITA standard above which the battery regulation voltage is reduced by 140mV from the programmed regulation voltage. This threshold should be set above cool temperature as celsius.</param>
+        <param name="TemperatureHot">Temperature threshold according to JEITA standard above which charging is suspended. This threshold should be set above warm temperature as celsius.</param>
+        <param name="NegativeTemperatureCoefficientB">Thermistor B constant of NTC temperature sensor if it is integrated with battery.</param>
+        <param name="NegativeTemperatureCoefficientResistance">Nominal thermistor resistance at 25°C of NTC temperature sensor if it is integrated with battery as ohm.</param>
+        <summary>
+            Battery profile
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="&lt;Clone&gt;$">
+      <MemberSignature Language="C#" Value="public virtual Iot.Device.PiJuiceDevice.Models.BatteryProfile &lt;Clone&gt;$ ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Iot.Device.PiJuiceDevice.Models.BatteryProfile &lt;Clone&gt;$() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.BatteryProfile.&lt;Clone&gt;$" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function &lt;Clone&gt;$ () As BatteryProfile" />
+      <MemberSignature Language="F#" Value="abstract member &lt;Clone&gt;$ : unit -&gt; Iot.Device.PiJuiceDevice.Models.BatteryProfile&#xA;override this.&lt;Clone&gt;$ : unit -&gt; Iot.Device.PiJuiceDevice.Models.BatteryProfile" Usage="batteryProfile.&lt;Clone&gt;$ " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.PiJuiceDevice.Models.BatteryProfile</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Capacity">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricCharge Capacity { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricCharge Capacity" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.BatteryProfile.Capacity" />
+      <MemberSignature Language="VB.NET" Value="Public Property Capacity As ElectricCharge" />
+      <MemberSignature Language="F#" Value="member this.Capacity : UnitsNet.ElectricCharge with get, set" Usage="Iot.Device.PiJuiceDevice.Models.BatteryProfile.Capacity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricCharge</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ChargeCurrent">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricCurrent ChargeCurrent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricCurrent ChargeCurrent" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.BatteryProfile.ChargeCurrent" />
+      <MemberSignature Language="VB.NET" Value="Public Property ChargeCurrent As ElectricCurrent" />
+      <MemberSignature Language="F#" Value="member this.ChargeCurrent : UnitsNet.ElectricCurrent with get, set" Usage="Iot.Device.PiJuiceDevice.Models.BatteryProfile.ChargeCurrent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricCurrent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CutOffVoltage">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential CutOffVoltage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricPotential CutOffVoltage" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.BatteryProfile.CutOffVoltage" />
+      <MemberSignature Language="VB.NET" Value="Public Property CutOffVoltage As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.CutOffVoltage : UnitsNet.ElectricPotential with get, set" Usage="Iot.Device.PiJuiceDevice.Models.BatteryProfile.CutOffVoltage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deconstruct">
+      <MemberSignature Language="C#" Value="public void Deconstruct (out UnitsNet.ElectricCharge Capacity, out UnitsNet.ElectricCurrent ChargeCurrent, out UnitsNet.ElectricCurrent TerminationCurrent, out UnitsNet.ElectricPotential RegulationVoltage, out UnitsNet.ElectricPotential CutOffVoltage, out UnitsNet.Temperature TemperatureCold, out UnitsNet.Temperature TemperatureCool, out UnitsNet.Temperature TemperatureWarm, out UnitsNet.Temperature TemperatureHot, out int NegativeTemperatureCoefficientB, out UnitsNet.ElectricResistance NegativeTemperatureCoefficientResistance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Deconstruct([out] valuetype UnitsNet.ElectricCharge&amp; Capacity, [out] valuetype UnitsNet.ElectricCurrent&amp; ChargeCurrent, [out] valuetype UnitsNet.ElectricCurrent&amp; TerminationCurrent, [out] valuetype UnitsNet.ElectricPotential&amp; RegulationVoltage, [out] valuetype UnitsNet.ElectricPotential&amp; CutOffVoltage, [out] valuetype UnitsNet.Temperature&amp; TemperatureCold, [out] valuetype UnitsNet.Temperature&amp; TemperatureCool, [out] valuetype UnitsNet.Temperature&amp; TemperatureWarm, [out] valuetype UnitsNet.Temperature&amp; TemperatureHot, [out] int32&amp; NegativeTemperatureCoefficientB, [out] valuetype UnitsNet.ElectricResistance&amp; NegativeTemperatureCoefficientResistance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.BatteryProfile.Deconstruct(UnitsNet.ElectricCharge@,UnitsNet.ElectricCurrent@,UnitsNet.ElectricCurrent@,UnitsNet.ElectricPotential@,UnitsNet.ElectricPotential@,UnitsNet.Temperature@,UnitsNet.Temperature@,UnitsNet.Temperature@,UnitsNet.Temperature@,System.Int32@,UnitsNet.ElectricResistance@)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Deconstruct (ByRef Capacity As ElectricCharge, ByRef ChargeCurrent As ElectricCurrent, ByRef TerminationCurrent As ElectricCurrent, ByRef RegulationVoltage As ElectricPotential, ByRef CutOffVoltage As ElectricPotential, ByRef TemperatureCold As Temperature, ByRef TemperatureCool As Temperature, ByRef TemperatureWarm As Temperature, ByRef TemperatureHot As Temperature, ByRef NegativeTemperatureCoefficientB As Integer, ByRef NegativeTemperatureCoefficientResistance As ElectricResistance)" />
+      <MemberSignature Language="F#" Value="member this.Deconstruct : ElectricCharge * ElectricCurrent * ElectricCurrent * ElectricPotential * ElectricPotential * Temperature * Temperature * Temperature * Temperature * int * ElectricResistance -&gt; unit" Usage="batteryProfile.Deconstruct (Capacity, ChargeCurrent, TerminationCurrent, RegulationVoltage, CutOffVoltage, TemperatureCold, TemperatureCool, TemperatureWarm, TemperatureHot, NegativeTemperatureCoefficientB, NegativeTemperatureCoefficientResistance)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Capacity" Type="UnitsNet.ElectricCharge" RefType="out" />
+        <Parameter Name="ChargeCurrent" Type="UnitsNet.ElectricCurrent" RefType="out" />
+        <Parameter Name="TerminationCurrent" Type="UnitsNet.ElectricCurrent" RefType="out" />
+        <Parameter Name="RegulationVoltage" Type="UnitsNet.ElectricPotential" RefType="out" />
+        <Parameter Name="CutOffVoltage" Type="UnitsNet.ElectricPotential" RefType="out" />
+        <Parameter Name="TemperatureCold" Type="UnitsNet.Temperature" RefType="out" />
+        <Parameter Name="TemperatureCool" Type="UnitsNet.Temperature" RefType="out" />
+        <Parameter Name="TemperatureWarm" Type="UnitsNet.Temperature" RefType="out" />
+        <Parameter Name="TemperatureHot" Type="UnitsNet.Temperature" RefType="out" />
+        <Parameter Name="NegativeTemperatureCoefficientB" Type="System.Int32" RefType="out" />
+        <Parameter Name="NegativeTemperatureCoefficientResistance" Type="UnitsNet.ElectricResistance" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="Capacity">To be added.</param>
+        <param name="ChargeCurrent">To be added.</param>
+        <param name="TerminationCurrent">To be added.</param>
+        <param name="RegulationVoltage">To be added.</param>
+        <param name="CutOffVoltage">To be added.</param>
+        <param name="TemperatureCold">To be added.</param>
+        <param name="TemperatureCool">To be added.</param>
+        <param name="TemperatureWarm">To be added.</param>
+        <param name="TemperatureHot">To be added.</param>
+        <param name="NegativeTemperatureCoefficientB">To be added.</param>
+        <param name="NegativeTemperatureCoefficientResistance">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EqualityContract">
+      <MemberSignature Language="C#" Value="protected virtual Type EqualityContract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EqualityContract" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.BatteryProfile.EqualityContract" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property EqualityContract As Type" />
+      <MemberSignature Language="F#" Value="member this.EqualityContract : Type" Usage="Iot.Device.PiJuiceDevice.Models.BatteryProfile.EqualityContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public virtual bool Equals (Iot.Device.PiJuiceDevice.Models.BatteryProfile other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Iot.Device.PiJuiceDevice.Models.BatteryProfile other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.BatteryProfile.Equals(Iot.Device.PiJuiceDevice.Models.BatteryProfile)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Equals (other As BatteryProfile) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Iot.Device.PiJuiceDevice.Models.BatteryProfile -&gt; bool" Usage="batteryProfile.Equals other" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Iot.Device.PiJuiceDevice.Models.BatteryProfile" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.BatteryProfile.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="batteryProfile.Equals obj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.BatteryProfile.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="batteryProfile.GetHashCode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NegativeTemperatureCoefficientB">
+      <MemberSignature Language="C#" Value="public int NegativeTemperatureCoefficientB { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NegativeTemperatureCoefficientB" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.BatteryProfile.NegativeTemperatureCoefficientB" />
+      <MemberSignature Language="VB.NET" Value="Public Property NegativeTemperatureCoefficientB As Integer" />
+      <MemberSignature Language="F#" Value="member this.NegativeTemperatureCoefficientB : int with get, set" Usage="Iot.Device.PiJuiceDevice.Models.BatteryProfile.NegativeTemperatureCoefficientB" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NegativeTemperatureCoefficientResistance">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricResistance NegativeTemperatureCoefficientResistance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricResistance NegativeTemperatureCoefficientResistance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.BatteryProfile.NegativeTemperatureCoefficientResistance" />
+      <MemberSignature Language="VB.NET" Value="Public Property NegativeTemperatureCoefficientResistance As ElectricResistance" />
+      <MemberSignature Language="F#" Value="member this.NegativeTemperatureCoefficientResistance : UnitsNet.ElectricResistance with get, set" Usage="Iot.Device.PiJuiceDevice.Models.BatteryProfile.NegativeTemperatureCoefficientResistance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricResistance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Iot.Device.PiJuiceDevice.Models.BatteryProfile r1, Iot.Device.PiJuiceDevice.Models.BatteryProfile r2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Iot.Device.PiJuiceDevice.Models.BatteryProfile r1, class Iot.Device.PiJuiceDevice.Models.BatteryProfile r2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.BatteryProfile.op_Equality(Iot.Device.PiJuiceDevice.Models.BatteryProfile,Iot.Device.PiJuiceDevice.Models.BatteryProfile)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (r1 As BatteryProfile, r2 As BatteryProfile) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Iot.Device.PiJuiceDevice.Models.BatteryProfile * Iot.Device.PiJuiceDevice.Models.BatteryProfile -&gt; bool" Usage="r1 = r2" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r1" Type="Iot.Device.PiJuiceDevice.Models.BatteryProfile" />
+        <Parameter Name="r2" Type="Iot.Device.PiJuiceDevice.Models.BatteryProfile" />
+      </Parameters>
+      <Docs>
+        <param name="r1">To be added.</param>
+        <param name="r2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Iot.Device.PiJuiceDevice.Models.BatteryProfile r1, Iot.Device.PiJuiceDevice.Models.BatteryProfile r2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Iot.Device.PiJuiceDevice.Models.BatteryProfile r1, class Iot.Device.PiJuiceDevice.Models.BatteryProfile r2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.BatteryProfile.op_Inequality(Iot.Device.PiJuiceDevice.Models.BatteryProfile,Iot.Device.PiJuiceDevice.Models.BatteryProfile)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (r1 As BatteryProfile, r2 As BatteryProfile) As Boolean" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Iot.Device.PiJuiceDevice.Models.BatteryProfile * Iot.Device.PiJuiceDevice.Models.BatteryProfile -&gt; bool" Usage="Iot.Device.PiJuiceDevice.Models.BatteryProfile.op_Inequality (r1, r2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="r1" Type="Iot.Device.PiJuiceDevice.Models.BatteryProfile" />
+        <Parameter Name="r2" Type="Iot.Device.PiJuiceDevice.Models.BatteryProfile" />
+      </Parameters>
+      <Docs>
+        <param name="r1">To be added.</param>
+        <param name="r2">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintMembers">
+      <MemberSignature Language="C#" Value="protected virtual bool PrintMembers (System.Text.StringBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool PrintMembers(class System.Text.StringBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.BatteryProfile.PrintMembers(System.Text.StringBuilder)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function PrintMembers (builder As StringBuilder) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member PrintMembers : System.Text.StringBuilder -&gt; bool&#xA;override this.PrintMembers : System.Text.StringBuilder -&gt; bool" Usage="batteryProfile.PrintMembers builder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="System.Text.StringBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="builder">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegulationVoltage">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential RegulationVoltage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricPotential RegulationVoltage" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.BatteryProfile.RegulationVoltage" />
+      <MemberSignature Language="VB.NET" Value="Public Property RegulationVoltage As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.RegulationVoltage : UnitsNet.ElectricPotential with get, set" Usage="Iot.Device.PiJuiceDevice.Models.BatteryProfile.RegulationVoltage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemperatureCold">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature TemperatureCold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature TemperatureCold" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.BatteryProfile.TemperatureCold" />
+      <MemberSignature Language="VB.NET" Value="Public Property TemperatureCold As Temperature" />
+      <MemberSignature Language="F#" Value="member this.TemperatureCold : UnitsNet.Temperature with get, set" Usage="Iot.Device.PiJuiceDevice.Models.BatteryProfile.TemperatureCold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemperatureCool">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature TemperatureCool { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature TemperatureCool" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.BatteryProfile.TemperatureCool" />
+      <MemberSignature Language="VB.NET" Value="Public Property TemperatureCool As Temperature" />
+      <MemberSignature Language="F#" Value="member this.TemperatureCool : UnitsNet.Temperature with get, set" Usage="Iot.Device.PiJuiceDevice.Models.BatteryProfile.TemperatureCool" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemperatureHot">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature TemperatureHot { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature TemperatureHot" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.BatteryProfile.TemperatureHot" />
+      <MemberSignature Language="VB.NET" Value="Public Property TemperatureHot As Temperature" />
+      <MemberSignature Language="F#" Value="member this.TemperatureHot : UnitsNet.Temperature with get, set" Usage="Iot.Device.PiJuiceDevice.Models.BatteryProfile.TemperatureHot" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TemperatureWarm">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature TemperatureWarm { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature TemperatureWarm" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.BatteryProfile.TemperatureWarm" />
+      <MemberSignature Language="VB.NET" Value="Public Property TemperatureWarm As Temperature" />
+      <MemberSignature Language="F#" Value="member this.TemperatureWarm : UnitsNet.Temperature with get, set" Usage="Iot.Device.PiJuiceDevice.Models.BatteryProfile.TemperatureWarm" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TerminationCurrent">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricCurrent TerminationCurrent { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricCurrent TerminationCurrent" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.BatteryProfile.TerminationCurrent" />
+      <MemberSignature Language="VB.NET" Value="Public Property TerminationCurrent As ElectricCurrent" />
+      <MemberSignature Language="F#" Value="member this.TerminationCurrent : UnitsNet.ElectricCurrent with get, set" Usage="Iot.Device.PiJuiceDevice.Models.BatteryProfile.TerminationCurrent" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricCurrent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.BatteryProfile.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="batteryProfile.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

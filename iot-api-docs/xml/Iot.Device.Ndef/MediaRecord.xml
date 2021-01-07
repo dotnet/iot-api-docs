@@ -1,0 +1,165 @@
+<Type Name="MediaRecord" FullName="Iot.Device.Ndef.MediaRecord">
+  <TypeSignature Language="C#" Value="public class MediaRecord : Iot.Device.Ndef.NdefRecord" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MediaRecord extends Iot.Device.Ndef.NdefRecord" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ndef.MediaRecord" />
+  <TypeSignature Language="VB.NET" Value="Public Class MediaRecord&#xA;Inherits NdefRecord" />
+  <TypeSignature Language="F#" Value="type MediaRecord = class&#xA;    inherit NdefRecord" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Ndef.NdefRecord</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Create a Media NDEF Record class
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MediaRecord (Iot.Device.Ndef.NdefRecord ndefRecord);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Ndef.NdefRecord ndefRecord) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ndef.MediaRecord.#ctor(Iot.Device.Ndef.NdefRecord)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ndefRecord As NdefRecord)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ndef.MediaRecord : Iot.Device.Ndef.NdefRecord -&gt; Iot.Device.Ndef.MediaRecord" Usage="new Iot.Device.Ndef.MediaRecord ndefRecord" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ndefRecord" Type="Iot.Device.Ndef.NdefRecord" />
+      </Parameters>
+      <Docs>
+        <param name="ndefRecord">A valid NDEF Record</param>
+        <summary>
+            Create a Media Record from a NDEF Record
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MediaRecord (string? payloadType, ReadOnlySpan&lt;byte&gt; payload);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string payloadType, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; payload) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ndef.MediaRecord.#ctor(System.String,System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (payloadType As String, payload As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ndef.MediaRecord : string * ReadOnlySpan&lt;byte&gt; -&gt; Iot.Device.Ndef.MediaRecord" Usage="new Iot.Device.Ndef.MediaRecord (payloadType, payload)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="payloadType" Type="System.String" />
+        <Parameter Name="payload" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="payloadType">The payload type</param>
+        <param name="payload">The byte payload</param>
+        <summary>
+            Create a Media Record from the type and the payload
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMediaRecord">
+      <MemberSignature Language="C#" Value="public static bool IsMediaRecord (Iot.Device.Ndef.NdefRecord ndefRecord);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsMediaRecord(class Iot.Device.Ndef.NdefRecord ndefRecord) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ndef.MediaRecord.IsMediaRecord(Iot.Device.Ndef.NdefRecord)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function IsMediaRecord (ndefRecord As NdefRecord) As Boolean" />
+      <MemberSignature Language="F#" Value="static member IsMediaRecord : Iot.Device.Ndef.NdefRecord -&gt; bool" Usage="Iot.Device.Ndef.MediaRecord.IsMediaRecord ndefRecord" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ndefRecord" Type="Iot.Device.Ndef.NdefRecord" />
+      </Parameters>
+      <Docs>
+        <param name="ndefRecord">A valid NDEF Record</param>
+        <summary>
+            Check if it's a valid Media Record
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsTextType">
+      <MemberSignature Language="C#" Value="public bool IsTextType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsTextType" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ndef.MediaRecord.IsTextType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsTextType As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsTextType : bool" Usage="Iot.Device.Ndef.MediaRecord.IsTextType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the payload is text based
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PayloadType">
+      <MemberSignature Language="C#" Value="public string PayloadType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PayloadType" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ndef.MediaRecord.PayloadType" />
+      <MemberSignature Language="VB.NET" Value="Public Property PayloadType As String" />
+      <MemberSignature Language="F#" Value="member this.PayloadType : string with get, set" Usage="Iot.Device.Ndef.MediaRecord.PayloadType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the Media Payload type
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetPayloadAsText">
+      <MemberSignature Language="C#" Value="public bool TryGetPayloadAsText (out string payloadAsText);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetPayloadAsText([out] string&amp; payloadAsText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ndef.MediaRecord.TryGetPayloadAsText(System.String@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetPayloadAsText (ByRef payloadAsText As String) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetPayloadAsText : string -&gt; bool" Usage="mediaRecord.TryGetPayloadAsText payloadAsText" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="payloadAsText" Type="System.String" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="payloadAsText">The payload as a text</param>
+        <summary>
+            Try to get our the encoded text
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,170 @@
+<Type Name="I2cBus" FullName="System.Device.I2c.I2cBus">
+  <TypeSignature Language="C#" Value="public abstract class I2cBus : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit I2cBus extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Device.I2c.I2cBus" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class I2cBus&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type I2cBus = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>System.Device.Gpio</AssemblyName>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            I2C bus communication channel.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected I2cBus ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.I2c.I2cBus.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static System.Device.I2c.I2cBus Create (int busId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Device.I2c.I2cBus Create(int32 busId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.I2c.I2cBus.Create(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (busId As Integer) As I2cBus" />
+      <MemberSignature Language="F#" Value="static member Create : int -&gt; System.Device.I2c.I2cBus" Usage="System.Device.I2c.I2cBus.Create busId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.I2c.I2cBus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="busId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="busId">The bus ID.</param>
+        <summary>
+            Creates default I2cBus
+            </summary>
+        <returns>I2cBus instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDevice">
+      <MemberSignature Language="C#" Value="public abstract System.Device.I2c.I2cDevice CreateDevice (int deviceAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Device.I2c.I2cDevice CreateDevice(int32 deviceAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.I2c.I2cBus.CreateDevice(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function CreateDevice (deviceAddress As Integer) As I2cDevice" />
+      <MemberSignature Language="F#" Value="abstract member CreateDevice : int -&gt; System.Device.I2c.I2cDevice" Usage="i2cBus.CreateDevice deviceAddress" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.I2c.I2cDevice</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deviceAddress" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="deviceAddress">Device address related with the device to create.</param>
+        <summary>
+            Creates I2C device.
+            </summary>
+        <returns>I2cDevice instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.I2c.I2cBus.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="i2cBus.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:System.IDisposable.Dispose" />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.I2c.I2cBus.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="i2cBus.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">
+          <see langword="true" /> if explicitly disposing, <see langword="false" /> if in finalizer</param>
+        <summary>
+            Disposes this instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDevice">
+      <MemberSignature Language="C#" Value="public abstract void RemoveDevice (int deviceAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveDevice(int32 deviceAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.I2c.I2cBus.RemoveDevice(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub RemoveDevice (deviceAddress As Integer)" />
+      <MemberSignature Language="F#" Value="abstract member RemoveDevice : int -&gt; unit" Usage="i2cBus.RemoveDevice deviceAddress" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>1.3.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deviceAddress" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="deviceAddress">Device address to create</param>
+        <summary>
+            Removes I2C device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
