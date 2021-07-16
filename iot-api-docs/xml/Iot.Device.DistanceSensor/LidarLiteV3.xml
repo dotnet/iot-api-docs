@@ -1,0 +1,406 @@
+<Type Name="LidarLiteV3" FullName="Iot.Device.DistanceSensor.LidarLiteV3">
+  <TypeSignature Language="C#" Value="public class LidarLiteV3 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LidarLiteV3 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.DistanceSensor.LidarLiteV3" />
+  <TypeSignature Language="VB.NET" Value="Public Class LidarLiteV3&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type LidarLiteV3 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Lidar Lite v3 is a long-range fixed position distance sensor by Garmin.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LidarLiteV3 (System.Device.I2c.I2cDevice i2cDevice, System.Device.Gpio.GpioController? gpioController = default, int powerEnablePin = -1, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, class System.Device.Gpio.GpioController gpioController, int32 powerEnablePin, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DistanceSensor.LidarLiteV3.#ctor(System.Device.I2c.I2cDevice,System.Device.Gpio.GpioController,System.Int32,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional gpioController As GpioController = Nothing, Optional powerEnablePin As Integer = -1, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.DistanceSensor.LidarLiteV3 : System.Device.I2c.I2cDevice * System.Device.Gpio.GpioController * int * bool -&gt; Iot.Device.DistanceSensor.LidarLiteV3" Usage="new Iot.Device.DistanceSensor.LidarLiteV3 (i2cDevice, gpioController, powerEnablePin, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="powerEnablePin" Type="System.Int32" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">I2C device</param>
+        <param name="gpioController">GPIO controller</param>
+        <param name="powerEnablePin">The pin number used to control power to the device</param>
+        <param name="shouldDispose">True (the default) if the GPIO controller shall be disposed when disposing this instance.</param>
+        <summary>
+            Initialize the LidarLiteV3
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AcquisitionSettings">
+      <MemberSignature Language="C#" Value="public Iot.Device.DistanceSensor.Models.LidarLiteV3.AcquisitionSettings AcquisitionSettings { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.DistanceSensor.Models.LidarLiteV3.AcquisitionSettings AcquisitionSettings" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.DistanceSensor.LidarLiteV3.AcquisitionSettings" />
+      <MemberSignature Language="VB.NET" Value="Public Property AcquisitionSettings As AcquisitionSettings" />
+      <MemberSignature Language="F#" Value="member this.AcquisitionSettings : Iot.Device.DistanceSensor.Models.LidarLiteV3.AcquisitionSettings with get, set" Usage="Iot.Device.DistanceSensor.LidarLiteV3.AcquisitionSettings" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DistanceSensor.Models.LidarLiteV3.AcquisitionSettings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or set the various settings to control the acquistion behavior.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AlgorithmBypassThreshold">
+      <MemberSignature Language="C#" Value="public int AlgorithmBypassThreshold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AlgorithmBypassThreshold" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.DistanceSensor.LidarLiteV3.AlgorithmBypassThreshold" />
+      <MemberSignature Language="VB.NET" Value="Public Property AlgorithmBypassThreshold As Integer" />
+      <MemberSignature Language="F#" Value="member this.AlgorithmBypassThreshold : int with get, set" Usage="Iot.Device.DistanceSensor.LidarLiteV3.AlgorithmBypassThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Get or set the threshold of peak value that bypasses the internal algorithm.
+            
+             Recommended non-default values are 32 for higher sensitivity
+             but higher erronenous measurement and 96 for reduced
+             sensitivity and fewer erroneous measurements.
+             </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte DefaultI2cAddress = 98;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 DefaultI2cAddress = (98)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.DistanceSensor.LidarLiteV3.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Byte  = 98" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : byte" Usage="Iot.Device.DistanceSensor.LidarLiteV3.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>98</MemberValue>
+      <Docs>
+        <summary>
+            Default address for LidarLiteV3
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DifferenceBetweenLastTwoDistances">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length DifferenceBetweenLastTwoDistances { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Length DifferenceBetweenLastTwoDistances" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.DistanceSensor.LidarLiteV3.DifferenceBetweenLastTwoDistances" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DifferenceBetweenLastTwoDistances As Length" />
+      <MemberSignature Language="F#" Value="member this.DifferenceBetweenLastTwoDistances : UnitsNet.Length" Usage="Iot.Device.DistanceSensor.LidarLiteV3.DifferenceBetweenLastTwoDistances" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Length</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the difference between the current and last measurement resulting
+            in a signed (2's complement) 8-bit number.
+            Positive is away from the device.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DistanceSensor.LidarLiteV3.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="lidarLiteV3.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="LastDistance">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length LastDistance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Length LastDistance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.DistanceSensor.LidarLiteV3.LastDistance" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LastDistance As Length" />
+      <MemberSignature Language="F#" Value="member this.LastDistance : UnitsNet.Length" Usage="Iot.Device.DistanceSensor.LidarLiteV3.LastDistance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Length</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the last distance measurement.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MeasureDistance">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length MeasureDistance (bool withReceiverBiasCorrection = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Length MeasureDistance(bool withReceiverBiasCorrection) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DistanceSensor.LidarLiteV3.MeasureDistance(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function MeasureDistance (Optional withReceiverBiasCorrection As Boolean = true) As Length" />
+      <MemberSignature Language="F#" Value="member this.MeasureDistance : bool -&gt; UnitsNet.Length" Usage="lidarLiteV3.MeasureDistance withReceiverBiasCorrection" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Length</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="withReceiverBiasCorrection" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="withReceiverBiasCorrection">Faster without bias correction, but more prone to errors if condition changes.</param>
+        <summary>
+            Measure distance.
+            </summary>
+        <returns>Distance as a length unit.</returns>
+        <remarks>
+            Note: Do not call if running while in repetition mode.  It will block until
+            repetition finishes (forever if infinite).
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.DistanceSensor.Models.LidarLiteV3.PowerMode PowerMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.DistanceSensor.Models.LidarLiteV3.PowerMode PowerMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.DistanceSensor.LidarLiteV3.PowerMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property PowerMode As PowerMode" />
+      <MemberSignature Language="F#" Value="member this.PowerMode : Iot.Device.DistanceSensor.Models.LidarLiteV3.PowerMode with get, set" Usage="Iot.Device.DistanceSensor.LidarLiteV3.PowerMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DistanceSensor.Models.LidarLiteV3.PowerMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or set the power control option.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerOff">
+      <MemberSignature Language="C#" Value="public void PowerOff ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PowerOff() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DistanceSensor.LidarLiteV3.PowerOff" />
+      <MemberSignature Language="VB.NET" Value="Public Sub PowerOff ()" />
+      <MemberSignature Language="F#" Value="member this.PowerOff : unit -&gt; unit" Usage="lidarLiteV3.PowerOff " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Power off the device if GPIO controller and power enable pin is provided.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerOn">
+      <MemberSignature Language="C#" Value="public void PowerOn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PowerOn() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DistanceSensor.LidarLiteV3.PowerOn" />
+      <MemberSignature Language="VB.NET" Value="Public Sub PowerOn ()" />
+      <MemberSignature Language="F#" Value="member this.PowerOn : unit -&gt; unit" Usage="lidarLiteV3.PowerOn " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Power on the device if GPIO controller and power enable pin is provided.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DistanceSensor.LidarLiteV3.Reset" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Reset ()" />
+      <MemberSignature Language="F#" Value="member this.Reset : unit -&gt; unit" Usage="lidarLiteV3.Reset " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reset FPGA, all registers return to default values
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetI2cAddressAndDispose">
+      <MemberSignature Language="C#" Value="public void SetI2cAddressAndDispose (byte address);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetI2cAddressAndDispose(unsigned int8 address) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DistanceSensor.LidarLiteV3.SetI2cAddressAndDispose(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetI2cAddressAndDispose (address As Byte)" />
+      <MemberSignature Language="F#" Value="member this.SetI2cAddressAndDispose : byte -&gt; unit" Usage="lidarLiteV3.SetI2cAddressAndDispose address" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="address" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="address">new address, valid values are 7-bit values with 0 in the LSB.</param>
+        <summary>
+            Set a new I2C address and dispose the device.
+            </summary>
+        <remarks>
+            Note, if the device is powered off or reset, the IC2 address will reset to the default address.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMeasurementRepetitionMode">
+      <MemberSignature Language="C#" Value="public void SetMeasurementRepetitionMode (Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition measurementRepetition, int count = -1, int delay = -1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMeasurementRepetitionMode(valuetype Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition measurementRepetition, int32 count, int32 delay) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DistanceSensor.LidarLiteV3.SetMeasurementRepetitionMode(Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMeasurementRepetitionMode (measurementRepetition As MeasurementRepetition, Optional count As Integer = -1, Optional delay As Integer = -1)" />
+      <MemberSignature Language="F#" Value="member this.SetMeasurementRepetitionMode : Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition * int * int -&gt; unit" Usage="lidarLiteV3.SetMeasurementRepetitionMode (measurementRepetition, count, delay)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="measurementRepetition" Type="Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition" />
+        <Parameter Name="count" Type="System.Int32" />
+        <Parameter Name="delay" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="measurementRepetition">Repetition mode, either Off, Repeat, or RepeatInfinitely.</param>
+        <param name="count">If Repeat, the number of times to repeat the measurement.</param>
+        <param name="delay">The delay between each measurements. Note the unit does not directly to hz, a value of 20 maps to about 100 hz.</param>
+        <summary>
+            Set the repetition mode to enable automatic measurement.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public Iot.Device.DistanceSensor.Models.LidarLiteV3.SystemStatus Status { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.DistanceSensor.Models.LidarLiteV3.SystemStatus Status" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.DistanceSensor.LidarLiteV3.Status" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Status As SystemStatus" />
+      <MemberSignature Language="F#" Value="member this.Status : Iot.Device.DistanceSensor.Models.LidarLiteV3.SystemStatus" Usage="Iot.Device.DistanceSensor.LidarLiteV3.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DistanceSensor.Models.LidarLiteV3.SystemStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the system status
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

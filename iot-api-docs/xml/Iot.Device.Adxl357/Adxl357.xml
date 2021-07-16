@@ -1,0 +1,204 @@
+<Type Name="Adxl357" FullName="Iot.Device.Adxl357.Adxl357">
+  <TypeSignature Language="C#" Value="public class Adxl357 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Adxl357 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Adxl357.Adxl357" />
+  <TypeSignature Language="VB.NET" Value="Public Class Adxl357&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Adxl357 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            I2C Accelerometer ADXL357
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Adxl357 (System.Device.I2c.I2cDevice i2CDevice, Iot.Device.Adxl357.AccelerometerRange accelerometerRange = Iot.Device.Adxl357.AccelerometerRange.Range10G);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2CDevice, valuetype Iot.Device.Adxl357.AccelerometerRange accelerometerRange) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adxl357.Adxl357.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Adxl357.AccelerometerRange)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2CDevice As I2cDevice, Optional accelerometerRange As AccelerometerRange = Iot.Device.Adxl357.AccelerometerRange.Range10G)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Adxl357.Adxl357 : System.Device.I2c.I2cDevice * Iot.Device.Adxl357.AccelerometerRange -&gt; Iot.Device.Adxl357.Adxl357" Usage="new Iot.Device.Adxl357.Adxl357 (i2CDevice, accelerometerRange)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2CDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="accelerometerRange" Type="Iot.Device.Adxl357.AccelerometerRange" />
+      </Parameters>
+      <Docs>
+        <param name="i2CDevice">The I2C device used for communication.</param>
+        <param name="accelerometerRange">The sensitivity of the accelerometer.</param>
+        <summary>
+            Constructs a ADXL357 I2C device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Acceleration">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 Acceleration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector3 Acceleration" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Adxl357.Adxl357.Acceleration" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Acceleration As Vector3" />
+      <MemberSignature Language="F#" Value="member this.Acceleration : System.Numerics.Vector3" Usage="Iot.Device.Adxl357.Adxl357.Acceleration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current acceleration in g.
+            Range depends on the <see cref="T:Iot.Device.Adxl357.AccelerometerRange" /> passed to the constructor.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccelerometerRange">
+      <MemberSignature Language="C#" Value="public Iot.Device.Adxl357.AccelerometerRange AccelerometerRange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Adxl357.AccelerometerRange AccelerometerRange" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Adxl357.Adxl357.AccelerometerRange" />
+      <MemberSignature Language="VB.NET" Value="Public Property AccelerometerRange As AccelerometerRange" />
+      <MemberSignature Language="F#" Value="member this.AccelerometerRange : Iot.Device.Adxl357.AccelerometerRange with get, set" Usage="Iot.Device.Adxl357.Adxl357.AccelerometerRange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Adxl357.AccelerometerRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the sensitivity of the accelerometer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalibrateAccelerationSensor">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task CalibrateAccelerationSensor (int samples = 15, TimeSpan? calibrationInterval = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task CalibrateAccelerationSensor(int32 samples, valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; calibrationInterval) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adxl357.Adxl357.CalibrateAccelerationSensor(System.Int32,System.Nullable{System.TimeSpan})" />
+      <MemberSignature Language="VB.NET" Value="Public Function CalibrateAccelerationSensor (Optional samples As Integer = 15, Optional calibrationInterval As Nullable(Of TimeSpan) = Nothing) As Task" />
+      <MemberSignature Language="F#" Value="member this.CalibrateAccelerationSensor : int * Nullable&lt;TimeSpan&gt; -&gt; System.Threading.Tasks.Task" Usage="adxl357.CalibrateAccelerationSensor (samples, calibrationInterval)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="samples" Type="System.Int32" />
+        <Parameter Name="calibrationInterval" Type="System.Nullable&lt;System.TimeSpan&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="samples">The number of times every axis is measured. The average of these measurements is used to calibrate each axis.</param>
+        <param name="calibrationInterval">The time in milliseconds to wait between each measurement. If null is provided, <see cref="F:Iot.Device.Adxl357.Adxl357.CalibrationIntervalDefault" /> in milliseconds is used.</param>
+        <summary>
+            Calibrates the accelerometer.
+            You can override default <paramref name="samples" /> and <paramref name="calibrationInterval" /> if required.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>
+            Make sure that the sensor is placed horizontally when executing this method.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2CAddress">
+      <MemberSignature Language="C#" Value="public const byte DefaultI2CAddress = 29;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 DefaultI2CAddress = (29)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Adxl357.Adxl357.DefaultI2CAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2CAddress As Byte  = 29" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2CAddress : byte" Usage="Iot.Device.Adxl357.Adxl357.DefaultI2CAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>29</MemberValue>
+      <Docs>
+        <summary>
+            The default I2C address of ADXL357 device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Adxl357.Adxl357.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="adxl357.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Temperature">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature Temperature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature Temperature" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Adxl357.Adxl357.Temperature" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Temperature As Temperature" />
+      <MemberSignature Language="F#" Value="member this.Temperature : UnitsNet.Temperature" Usage="Iot.Device.Adxl357.Adxl357.Temperature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current temperature in °C.
+            Range is from −40°C to +125°C.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

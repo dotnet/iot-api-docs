@@ -1,0 +1,321 @@
+<Type Name="GpioOutputSegment" FullName="Iot.Device.Multiplexing.GpioOutputSegment">
+  <TypeSignature Language="C#" Value="public class GpioOutputSegment : IDisposable, Iot.Device.Multiplexing.IOutputSegment" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GpioOutputSegment extends System.Object implements class Iot.Device.Multiplexing.IOutputSegment, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Multiplexing.GpioOutputSegment" />
+  <TypeSignature Language="VB.NET" Value="Public Class GpioOutputSegment&#xA;Implements IDisposable, IOutputSegment" />
+  <TypeSignature Language="F#" Value="type GpioOutputSegment = class&#xA;    interface IOutputSegment&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.Multiplexing.IOutputSegment</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            IOutputSegment implementation that uses GpioController.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GpioOutputSegment (int[] pins, System.Device.Gpio.GpioController? gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32[] pins, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.GpioOutputSegment.#ctor(System.Int32[],System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pins As Integer(), Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Multiplexing.GpioOutputSegment : int[] * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Multiplexing.GpioOutputSegment" Usage="new Iot.Device.Multiplexing.GpioOutputSegment (pins, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pins" Type="System.Int32[]" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pins">The GPIO pins that should be used and are connected.</param>
+        <param name="gpioController">The GpioController to use. If one isn't provided, one will be created.</param>
+        <param name="shouldDispose">The policy to use (true, by default) for disposing the GPIO controller when disposing this instance.</param>
+        <summary>
+            IOutputSegment implementation that uses GpioController.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public void Display (System.Threading.CancellationToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Display(valuetype System.Threading.CancellationToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.GpioOutputSegment.Display(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Display (token As CancellationToken)" />
+      <MemberSignature Language="F#" Value="abstract member Display : System.Threading.CancellationToken -&gt; unit&#xA;override this.Display : System.Threading.CancellationToken -&gt; unit" Usage="gpioOutputSegment.Display token" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Multiplexing.IOutputSegment.Display(System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <summary>
+            Displays current state of segment.
+            Segment is displayed at least until token receives a cancellation signal, possibly due to a specified duration expiring.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task DisplayAsync (System.Threading.CancellationToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Threading.Tasks.Task DisplayAsync(valuetype System.Threading.CancellationToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.GpioOutputSegment.DisplayAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function DisplayAsync (token As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="abstract member DisplayAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&#xA;override this.DisplayAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="gpioOutputSegment.DisplayAsync token" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Multiplexing.IOutputSegment.DisplayAsync(System.Threading.CancellationToken)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">To be added.</param>
+        <summary>
+            Displays current state of segment.
+            Segment is displayed at least until token receives a cancellation signal, possibly due to a specified duration expiring.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.GpioOutputSegment.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="gpioOutputSegment.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disposes the underlying GpioController.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.PinValue this[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Device.Gpio.PinValue Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Multiplexing.GpioOutputSegment.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public Property Item(index As Integer) As PinValue" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : System.Device.Gpio.PinValue with get, set" Usage="Iot.Device.Multiplexing.GpioOutputSegment.Item" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Multiplexing.IOutputSegment.Item(System.Int32)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>
+            Segment values.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Multiplexing.GpioOutputSegment.Length" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Length As Integer" />
+      <MemberSignature Language="F#" Value="member this.Length : int" Usage="Iot.Device.Multiplexing.GpioOutputSegment.Length" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.Multiplexing.IOutputSegment.Length</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The length of the segment; the number of GPIO pins it exposes.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnOffAll">
+      <MemberSignature Language="C#" Value="public void TurnOffAll ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void TurnOffAll() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.GpioOutputSegment.TurnOffAll" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TurnOffAll ()" />
+      <MemberSignature Language="F#" Value="abstract member TurnOffAll : unit -&gt; unit&#xA;override this.TurnOffAll : unit -&gt; unit" Usage="gpioOutputSegment.TurnOffAll " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Multiplexing.IOutputSegment.TurnOffAll</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Writes a byte to the underlying GpioController.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.GpioOutputSegment.Write(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (value As Byte)" />
+      <MemberSignature Language="F#" Value="abstract member Write : byte -&gt; unit&#xA;override this.Write : byte -&gt; unit" Usage="gpioOutputSegment.Write value" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Multiplexing.IOutputSegment.Write(System.Byte)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>
+            Writes discrete underlying bits to a virtual segment.
+            Writes each bit, left to right. Least significant bit will written to index 0.
+            Does not display output.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (ReadOnlySpan&lt;byte&gt; value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.GpioOutputSegment.Write(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (value As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="abstract member Write : ReadOnlySpan&lt;byte&gt; -&gt; unit&#xA;override this.Write : ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="gpioOutputSegment.Write value" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Multiplexing.IOutputSegment.Write(System.ReadOnlySpan{System.Byte})</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>
+            Writes discrete underlying bits to a virtual segment.
+            Writes each byte, left to right. Least significant bit will written to index 0.
+            Does not display output.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (int pin, System.Device.Gpio.PinValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(int32 pin, valuetype System.Device.Gpio.PinValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Multiplexing.GpioOutputSegment.Write(System.Int32,System.Device.Gpio.PinValue)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (pin As Integer, value As PinValue)" />
+      <MemberSignature Language="F#" Value="abstract member Write : int * System.Device.Gpio.PinValue -&gt; unit&#xA;override this.Write : int * System.Device.Gpio.PinValue -&gt; unit" Usage="gpioOutputSegment.Write (pin, value)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.Multiplexing.IOutputSegment.Write(System.Int32,System.Device.Gpio.PinValue)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pin" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Device.Gpio.PinValue" />
+      </Parameters>
+      <Docs>
+        <param name="pin">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>
+            Writes a PinValue to a virtual segment.
+            Does not display output.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

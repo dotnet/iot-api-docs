@@ -1,0 +1,197 @@
+<Type Name="Max31856" FullName="Iot.Device.Max31856.Max31856">
+  <TypeSignature Language="C#" Value="public class Max31856 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Max31856 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Max31856.Max31856" />
+  <TypeSignature Language="VB.NET" Value="Public Class Max31856&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Max31856 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Max31856  - cold-junction compensated thermocouple to digital converter
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Max31856 (System.Device.Spi.SpiDevice spiDevice, Iot.Device.Max31856.ThermocoupleType thermocoupleType = Iot.Device.Max31856.ThermocoupleType.T);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, valuetype Iot.Device.Max31856.ThermocoupleType thermocoupleType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Max31856.Max31856.#ctor(System.Device.Spi.SpiDevice,Iot.Device.Max31856.ThermocoupleType)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (spiDevice As SpiDevice, Optional thermocoupleType As ThermocoupleType = Iot.Device.Max31856.ThermocoupleType.T)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Max31856.Max31856 : System.Device.Spi.SpiDevice * Iot.Device.Max31856.ThermocoupleType -&gt; Iot.Device.Max31856.Max31856" Usage="new Iot.Device.Max31856.Max31856 (spiDevice, thermocoupleType)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" />
+        <Parameter Name="thermocoupleType" Type="Iot.Device.Max31856.ThermocoupleType" />
+      </Parameters>
+      <Docs>
+        <param name="spiDevice">The communications channel to a device on a SPI bus</param>
+        <param name="thermocoupleType">Thermocouple type. It Defaults to T.</param>
+        <summary>
+            Creates a new instance of the Max31856.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Max31856.Max31856.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="max31856.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetColdJunctionTemperature">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature GetColdJunctionTemperature ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Temperature GetColdJunctionTemperature() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Max31856.Max31856.GetColdJunctionTemperature" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetColdJunctionTemperature () As Temperature" />
+      <MemberSignature Language="F#" Value="member this.GetColdJunctionTemperature : unit -&gt; UnitsNet.Temperature" Usage="max31856.GetColdJunctionTemperature " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+             Reads the temperature from the Cold-Junction sensor
+            </summary>
+        <returns>
+            Temperature, precision +- 0.7 Celsius range from -20 Celsius to +85 Celsius
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetTemperature">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature GetTemperature ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Temperature GetTemperature() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Max31856.Max31856.GetTemperature" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetTemperature () As Temperature" />
+      <MemberSignature Language="F#" Value="member this.GetTemperature : unit -&gt; UnitsNet.Temperature" Usage="max31856.GetTemperature " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Command to Get Temperature from the device
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiClockFrequency">
+      <MemberSignature Language="C#" Value="public const int SpiClockFrequency = 5000000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 SpiClockFrequency = (5000000)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Max31856.Max31856.SpiClockFrequency" />
+      <MemberSignature Language="VB.NET" Value="Public Const SpiClockFrequency As Integer  = 5000000" />
+      <MemberSignature Language="F#" Value="val mutable SpiClockFrequency : int" Usage="Iot.Device.Max31856.Max31856.SpiClockFrequency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>5000000</MemberValue>
+      <Docs>
+        <summary>
+            Spi Clock Frequency
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiDataFlow">
+      <MemberSignature Language="C#" Value="public const System.Device.Spi.DataFlow SpiDataFlow = 0;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Device.Spi.DataFlow SpiDataFlow = (0)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Max31856.Max31856.SpiDataFlow" />
+      <MemberSignature Language="VB.NET" Value="Public Const SpiDataFlow As DataFlow  = 0" />
+      <MemberSignature Language="F#" Value="val mutable SpiDataFlow : System.Device.Spi.DataFlow" Usage="Iot.Device.Max31856.Max31856.SpiDataFlow" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Spi.DataFlow</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            SPI data flow
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpiModeSetup">
+      <MemberSignature Language="C#" Value="public const System.Device.Spi.SpiMode SpiModeSetup = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Device.Spi.SpiMode SpiModeSetup = (1)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Max31856.Max31856.SpiModeSetup" />
+      <MemberSignature Language="VB.NET" Value="Public Const SpiModeSetup As SpiMode  = 1" />
+      <MemberSignature Language="F#" Value="val mutable SpiModeSetup : System.Device.Spi.SpiMode" Usage="Iot.Device.Max31856.Max31856.SpiModeSetup" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Spi.SpiMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            SPI Mode
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,285 @@
+<Type Name="RaspberryPiBoard" FullName="Iot.Device.Board.RaspberryPiBoard">
+  <TypeSignature Language="C#" Value="public class RaspberryPiBoard : Iot.Device.Board.GenericBoard" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RaspberryPiBoard extends Iot.Device.Board.GenericBoard" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Board.RaspberryPiBoard" />
+  <TypeSignature Language="VB.NET" Value="Public Class RaspberryPiBoard&#xA;Inherits GenericBoard" />
+  <TypeSignature Language="F#" Value="type RaspberryPiBoard = class&#xA;    inherit GenericBoard" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Board.GenericBoard</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Raspberry Pi specific board implementation.
+            Contains all the knowledge about which pins can be used for what purpose.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RaspberryPiBoard ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.RaspberryPiBoard.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an instance of a Rasperry Pi board.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivatePinMode">
+      <MemberSignature Language="C#" Value="protected override void ActivatePinMode (int pinNumber, Iot.Device.Board.PinUsage usage);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void ActivatePinMode(int32 pinNumber, valuetype Iot.Device.Board.PinUsage usage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.RaspberryPiBoard.ActivatePinMode(System.Int32,Iot.Device.Board.PinUsage)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub ActivatePinMode (pinNumber As Integer, usage As PinUsage)" />
+      <MemberSignature Language="F#" Value="override this.ActivatePinMode : int * Iot.Device.Board.PinUsage -&gt; unit" Usage="raspberryPiBoard.ActivatePinMode (pinNumber, usage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="usage" Type="Iot.Device.Board.PinUsage" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the logical scheme</param>
+        <param name="usage">The desired usage</param>
+        <summary>
+            Switches a pin to a certain alternate mode. (ALTn mode)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetermineCurrentPinUsage">
+      <MemberSignature Language="C#" Value="public override Iot.Device.Board.PinUsage DetermineCurrentPinUsage (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype Iot.Device.Board.PinUsage DetermineCurrentPinUsage(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.RaspberryPiBoard.DetermineCurrentPinUsage(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function DetermineCurrentPinUsage (pinNumber As Integer) As PinUsage" />
+      <MemberSignature Language="F#" Value="override this.DetermineCurrentPinUsage : int -&gt; Iot.Device.Board.PinUsage" Usage="raspberryPiBoard.DetermineCurrentPinUsage pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Board.PinUsage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">Pin number, in the logical scheme</param>
+        <summary>
+            Gets the current alternate pin mode. (ALTn mode)
+            </summary>
+        <returns>The current pin usage</returns>
+        <remarks>This also works for closed pins, but then uses a bit of heuristics to get the correct mode</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.RaspberryPiBoard.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="raspberryPiBoard.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultI2cBusNumber">
+      <MemberSignature Language="C#" Value="public override int GetDefaultI2cBusNumber ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDefaultI2cBusNumber() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.RaspberryPiBoard.GetDefaultI2cBusNumber" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetDefaultI2cBusNumber () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetDefaultI2cBusNumber : unit -&gt; int" Usage="raspberryPiBoard.GetDefaultI2cBusNumber " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultPinAssignmentForI2c">
+      <MemberSignature Language="C#" Value="public override int[] GetDefaultPinAssignmentForI2c (int busId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32[] GetDefaultPinAssignmentForI2c(int32 busId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.RaspberryPiBoard.GetDefaultPinAssignmentForI2c(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetDefaultPinAssignmentForI2c (busId As Integer) As Integer()" />
+      <MemberSignature Language="F#" Value="override this.GetDefaultPinAssignmentForI2c : int -&gt; int[]" Usage="raspberryPiBoard.GetDefaultPinAssignmentForI2c busId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="busId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="busId">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultPinAssignmentForPwm">
+      <MemberSignature Language="C#" Value="public override int GetDefaultPinAssignmentForPwm (int chip, int channel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDefaultPinAssignmentForPwm(int32 chip, int32 channel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.RaspberryPiBoard.GetDefaultPinAssignmentForPwm(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetDefaultPinAssignmentForPwm (chip As Integer, channel As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetDefaultPinAssignmentForPwm : int * int -&gt; int" Usage="raspberryPiBoard.GetDefaultPinAssignmentForPwm (chip, channel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chip" Type="System.Int32" />
+        <Parameter Name="channel" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="chip">To be added.</param>
+        <param name="channel">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultPinAssignmentForSpi">
+      <MemberSignature Language="C#" Value="public override int[] GetDefaultPinAssignmentForSpi (System.Device.Spi.SpiConnectionSettings connectionSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32[] GetDefaultPinAssignmentForSpi(class System.Device.Spi.SpiConnectionSettings connectionSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.RaspberryPiBoard.GetDefaultPinAssignmentForSpi(System.Device.Spi.SpiConnectionSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetDefaultPinAssignmentForSpi (connectionSettings As SpiConnectionSettings) As Integer()" />
+      <MemberSignature Language="F#" Value="override this.GetDefaultPinAssignmentForSpi : System.Device.Spi.SpiConnectionSettings -&gt; int[]" Usage="raspberryPiBoard.GetDefaultPinAssignmentForSpi connectionSettings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionSettings" Type="System.Device.Spi.SpiConnectionSettings" />
+      </Parameters>
+      <Docs>
+        <param name="connectionSettings">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected override void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.RaspberryPiBoard.Initialize" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Initialize ()" />
+      <MemberSignature Language="F#" Value="override this.Initialize : unit -&gt; unit" Usage="raspberryPiBoard.Initialize " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes this instance
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">The current hardware could not be identified as a valid Raspberry Pi type</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PinCount">
+      <MemberSignature Language="C#" Value="public int PinCount { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PinCount" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Board.RaspberryPiBoard.PinCount" />
+      <MemberSignature Language="VB.NET" Value="Public Property PinCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.PinCount : int with get, set" Usage="Iot.Device.Board.RaspberryPiBoard.PinCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Number of pins of the board
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryCreateBestGpioDriver">
+      <MemberSignature Language="C#" Value="protected override System.Device.Gpio.GpioDriver? TryCreateBestGpioDriver ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Device.Gpio.GpioDriver TryCreateBestGpioDriver() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.RaspberryPiBoard.TryCreateBestGpioDriver" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function TryCreateBestGpioDriver () As GpioDriver" />
+      <MemberSignature Language="F#" Value="override this.TryCreateBestGpioDriver : unit -&gt; System.Device.Gpio.GpioDriver" Usage="raspberryPiBoard.TryCreateBestGpioDriver " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.GpioDriver</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

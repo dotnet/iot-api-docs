@@ -1,0 +1,108 @@
+<Type Name="AD5328" FullName="Iot.Device.DAC.AD5328">
+  <TypeSignature Language="C#" Value="public class AD5328 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AD5328 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.DAC.AD5328" />
+  <TypeSignature Language="VB.NET" Value="Public Class AD5328&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type AD5328 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Driver for the AD5328 DAC.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AD5328 (System.Device.Spi.SpiDevice spiDevice, UnitsNet.ElectricPotential referenceVoltageA, UnitsNet.ElectricPotential referenceVoltageB);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, valuetype UnitsNet.ElectricPotential referenceVoltageA, valuetype UnitsNet.ElectricPotential referenceVoltageB) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DAC.AD5328.#ctor(System.Device.Spi.SpiDevice,UnitsNet.ElectricPotential,UnitsNet.ElectricPotential)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (spiDevice As SpiDevice, referenceVoltageA As ElectricPotential, referenceVoltageB As ElectricPotential)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.DAC.AD5328 : System.Device.Spi.SpiDevice * UnitsNet.ElectricPotential * UnitsNet.ElectricPotential -&gt; Iot.Device.DAC.AD5328" Usage="new Iot.Device.DAC.AD5328 (spiDevice, referenceVoltageA, referenceVoltageB)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" />
+        <Parameter Name="referenceVoltageA" Type="UnitsNet.ElectricPotential" />
+        <Parameter Name="referenceVoltageB" Type="UnitsNet.ElectricPotential" />
+      </Parameters>
+      <Docs>
+        <param name="spiDevice">The SPI device used for communication.</param>
+        <param name="referenceVoltageA">The reference voltage for the first 4 channels</param>
+        <param name="referenceVoltageB">The reference voltage for the last 4 channels</param>
+        <summary>
+            Initializes a new instance of the AD5328 device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DAC.AD5328.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="aD5328.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="SetVoltage">
+      <MemberSignature Language="C#" Value="public void SetVoltage (ushort channel, UnitsNet.ElectricPotential voltage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetVoltage(unsigned int16 channel, valuetype UnitsNet.ElectricPotential voltage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DAC.AD5328.SetVoltage(System.UInt16,UnitsNet.ElectricPotential)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetVoltage (channel As UShort, voltage As ElectricPotential)" />
+      <MemberSignature Language="F#" Value="member this.SetVoltage : uint16 * UnitsNet.ElectricPotential -&gt; unit" Usage="aD5328.SetVoltage (channel, voltage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel" Type="System.UInt16" />
+        <Parameter Name="voltage" Type="UnitsNet.ElectricPotential" />
+      </Parameters>
+      <Docs>
+        <param name="channel">The channel number. Zero based. channel A = 0</param>
+        <param name="voltage">The voltage</param>
+        <summary>
+            Sets the voltage of a certain channel
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

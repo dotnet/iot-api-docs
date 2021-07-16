@@ -9,6 +9,8 @@
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
     <AssemblyVersion>1.2.0.0</AssemblyVersion>
     <AssemblyVersion>1.3.0.0</AssemblyVersion>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -16,7 +18,8 @@
   <Interfaces />
   <Docs>
     <summary>
-            Helpers for weather
+            This class contains methods to calculate meteorological values from different
+            sensor measurements. Multiple sensor inputs are used to generate additional information.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -62,19 +65,21 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Density</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="airTemperature" Type="UnitsNet.Temperature" Index="0" FrameworkAlternate="iot-dotnet-1.3" />
-        <Parameter Name="relativeHumidity" Type="UnitsNet.RelativeHumidity" Index="1" FrameworkAlternate="iot-dotnet-1.3" />
+        <Parameter Name="airTemperature" Type="UnitsNet.Temperature" Index="0" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="relativeHumidity" Type="UnitsNet.RelativeHumidity" Index="1" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
       </Parameters>
       <Docs>
         <param name="airTemperature">The dry air temperature</param>
         <param name="relativeHumidity">The relative humidity (RH)</param>
         <summary>
-            Calculates the absolute humidity in g/m³
+            Calculates the absolute humidity in g/m³.
             </summary>
         <returns>The absolute humidity in g/m³</returns>
         <remarks>
@@ -121,13 +126,15 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="airTemperature" Type="UnitsNet.Temperature" Index="0" FrameworkAlternate="iot-dotnet-1.3" />
-        <Parameter Name="relativeHumidity" Type="UnitsNet.RelativeHumidity" Index="1" FrameworkAlternate="iot-dotnet-1.3" />
+        <Parameter Name="airTemperature" Type="UnitsNet.Temperature" Index="0" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="relativeHumidity" Type="UnitsNet.RelativeHumidity" Index="1" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
       </Parameters>
       <Docs>
         <param name="airTemperature">The dry air temperature</param>
@@ -151,6 +158,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Length</ReturnType>
@@ -179,6 +188,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Length</ReturnType>
@@ -209,6 +220,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Length</ReturnType>
@@ -239,6 +252,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Length</ReturnType>
@@ -253,7 +268,7 @@
         <param name="seaLevelPressure">The sea-level pressure</param>
         <param name="airTemperature">The dry air temperature at the point for which altitude is being calculated</param>
         <summary>
-            Calculates the altitude in meters from the given pressure, sea-level pressure and air temperature
+            Calculates the altitude in meters from the given pressure, sea-level pressure and air temperature.
             </summary>
         <returns>The altitude</returns>
         <remarks>To be added.</remarks>
@@ -271,6 +286,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>
@@ -285,7 +302,7 @@
         <param name="measuredTemperature">Measured temperature at the observation point</param>
         <param name="measurementAltitude">Height over sea level of the observation point (to be really precise, geopotential heights have
             to be used above ~750m). Do not use the height obtained by calling <see cref="M:Iot.Device.Common.WeatherHelper.CalculateAltitude(UnitsNet.Pressure)" />
-            or any of its overloads, since what would use redundant data.</param>
+            or any of its overloads, since that would use redundant data.</param>
         <summary>
             Calculates the barometric pressure from a raw reading, using the reduction formula from the german met service.
             This is a more complex variant of <see cref="M:Iot.Device.Common.WeatherHelper.CalculateSeaLevelPressure(UnitsNet.Pressure,UnitsNet.Length,UnitsNet.Temperature)" />. It gives the value that a weather station gives
@@ -349,15 +366,17 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="measuredPressure" Type="UnitsNet.Pressure" Index="0" FrameworkAlternate="iot-dotnet-1.3" />
-        <Parameter Name="measuredTemperature" Type="UnitsNet.Temperature" Index="1" FrameworkAlternate="iot-dotnet-1.3" />
-        <Parameter Name="measurementAltitude" Type="UnitsNet.Length" Index="2" FrameworkAlternate="iot-dotnet-1.3" />
-        <Parameter Name="relativeHumidity" Type="UnitsNet.RelativeHumidity" Index="3" FrameworkAlternate="iot-dotnet-1.3" />
+        <Parameter Name="measuredPressure" Type="UnitsNet.Pressure" Index="0" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="measuredTemperature" Type="UnitsNet.Temperature" Index="1" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="measurementAltitude" Type="UnitsNet.Length" Index="2" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="relativeHumidity" Type="UnitsNet.RelativeHumidity" Index="3" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
       </Parameters>
       <Docs>
         <param name="measuredPressure">Measured pressure at the observation point</param>
@@ -389,6 +408,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>
@@ -460,19 +481,22 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Temperature</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="airTemperature" Type="UnitsNet.Temperature" Index="0" FrameworkAlternate="iot-dotnet-1.3" />
-        <Parameter Name="relativeHumidity" Type="UnitsNet.RelativeHumidity" Index="1" FrameworkAlternate="iot-dotnet-1.3" />
+        <Parameter Name="airTemperature" Type="UnitsNet.Temperature" Index="0" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="relativeHumidity" Type="UnitsNet.RelativeHumidity" Index="1" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
       </Parameters>
       <Docs>
         <param name="airTemperature">The dry air temperature</param>
         <param name="relativeHumidity">The relative humidity (RH)</param>
         <summary>
-            Calculates the dew point.
+            Calculates the dew point. The dew point is the temperature at which, given the other values remain constant - dew or fog would start
+            building up.
             </summary>
         <returns>The dew point</returns>
         <remarks>
@@ -521,13 +545,15 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Temperature</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="airTemperature" Type="UnitsNet.Temperature" Index="0" FrameworkAlternate="iot-dotnet-1.3" />
-        <Parameter Name="relativeHumidity" Type="UnitsNet.RelativeHumidity" Index="1" FrameworkAlternate="iot-dotnet-1.3" />
+        <Parameter Name="airTemperature" Type="UnitsNet.Temperature" Index="0" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="relativeHumidity" Type="UnitsNet.RelativeHumidity" Index="1" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
       </Parameters>
       <Docs>
         <param name="airTemperature">The dry air temperature</param>
@@ -538,7 +564,9 @@
             than it actually is. The heat index is usually used for afternoon high temperatures.
             </summary>
         <returns>The heat index, also known as the apparent temperature</returns>
-        <remarks>To be added.</remarks>
+        <remarks>
+            Formula from https://www.wpc.ncep.noaa.gov/html/heatindex_equation.shtml
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="CalculatePressure">
@@ -553,6 +581,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>
@@ -585,6 +615,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>
@@ -616,6 +648,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>
@@ -647,6 +681,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>
@@ -680,6 +716,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Temperature</ReturnType>
@@ -747,14 +785,16 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.RelativeHumidity</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="airTemperatureFromHumiditySensor" Type="UnitsNet.Temperature" Index="0" FrameworkAlternate="iot-dotnet-1.3" />
-        <Parameter Name="relativeHumidityMeasured" Type="UnitsNet.RelativeHumidity" Index="1" FrameworkAlternate="iot-dotnet-1.3" />
-        <Parameter Name="airTemperatureFromBetterPlacedSensor" Type="UnitsNet.Temperature" Index="2" FrameworkAlternate="iot-dotnet-1.3" />
+        <Parameter Name="airTemperatureFromHumiditySensor" Type="UnitsNet.Temperature" Index="0" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="relativeHumidityMeasured" Type="UnitsNet.RelativeHumidity" Index="1" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="airTemperatureFromBetterPlacedSensor" Type="UnitsNet.Temperature" Index="2" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
       </Parameters>
       <Docs>
         <param name="airTemperatureFromHumiditySensor">Temperature measured by the humidity sensor</param>
@@ -784,6 +824,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>
