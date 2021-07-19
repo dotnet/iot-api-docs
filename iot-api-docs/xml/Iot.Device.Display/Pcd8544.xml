@@ -1,0 +1,992 @@
+<Type Name="Pcd8544" FullName="Iot.Device.Display.Pcd8544">
+  <TypeSignature Language="C#" Value="public class Pcd8544 : IDisposable, Iot.Device.CharacterLcd.ICharacterLcd" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Pcd8544 extends System.Object implements class Iot.Device.CharacterLcd.ICharacterLcd, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Display.Pcd8544" />
+  <TypeSignature Language="VB.NET" Value="Public Class Pcd8544&#xA;Implements ICharacterLcd, IDisposable" />
+  <TypeSignature Language="F#" Value="type Pcd8544 = class&#xA;    interface ICharacterLcd&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Iot.Device.CharacterLcd.ICharacterLcd</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            PCD8544 - 48 × 84 pixels matrix LCD, famous Nokia 5110 screen
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pcd8544 (int dataCommandPin, System.Device.Spi.SpiDevice spiDevice, int resetPin = -1, System.Device.Pwm.PwmChannel? pwmBacklight = default, System.Device.Gpio.GpioController? gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 dataCommandPin, class System.Device.Spi.SpiDevice spiDevice, int32 resetPin, class System.Device.Pwm.PwmChannel pwmBacklight, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.#ctor(System.Int32,System.Device.Spi.SpiDevice,System.Int32,System.Device.Pwm.PwmChannel,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (dataCommandPin As Integer, spiDevice As SpiDevice, Optional resetPin As Integer = -1, Optional pwmBacklight As PwmChannel = Nothing, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Display.Pcd8544 : int * System.Device.Spi.SpiDevice * int * System.Device.Pwm.PwmChannel * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Display.Pcd8544" Usage="new Iot.Device.Display.Pcd8544 (dataCommandPin, spiDevice, resetPin, pwmBacklight, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataCommandPin" Type="System.Int32" />
+        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" />
+        <Parameter Name="resetPin" Type="System.Int32" />
+        <Parameter Name="pwmBacklight" Type="System.Device.Pwm.PwmChannel" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dataCommandPin">The data command pin.</param>
+        <param name="spiDevice">The SPI device.</param>
+        <param name="resetPin">The reset pin. Use a negative number if you don't want to use it</param>
+        <param name="pwmBacklight">The PWM channel for the back light</param>
+        <param name="gpioController">The GPIO Controller.</param>
+        <param name="shouldDispose">True to dispose the GPIO controller</param>
+        <summary>
+            Create Pcd8544
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Pcd8544 (int dataCommandPin, System.Device.Spi.SpiDevice spiDevice, int resetPin = -1, int backlightPin = -1, System.Device.Gpio.GpioController? gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 dataCommandPin, class System.Device.Spi.SpiDevice spiDevice, int32 resetPin, int32 backlightPin, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.#ctor(System.Int32,System.Device.Spi.SpiDevice,System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (dataCommandPin As Integer, spiDevice As SpiDevice, Optional resetPin As Integer = -1, Optional backlightPin As Integer = -1, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Display.Pcd8544 : int * System.Device.Spi.SpiDevice * int * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Display.Pcd8544" Usage="new Iot.Device.Display.Pcd8544 (dataCommandPin, spiDevice, resetPin, backlightPin, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dataCommandPin" Type="System.Int32" />
+        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" />
+        <Parameter Name="resetPin" Type="System.Int32" />
+        <Parameter Name="backlightPin" Type="System.Int32" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dataCommandPin">The data command pin.</param>
+        <param name="spiDevice">The SPI device.</param>
+        <param name="resetPin">The reset pin. Use a negative number if you don't want to use it</param>
+        <param name="backlightPin">The pin back light</param>
+        <param name="gpioController">The GPIO Controller.</param>
+        <param name="shouldDispose">True to dispose the GPIO controller</param>
+        <summary>
+            Create Pcd8544
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BacklightBrightness">
+      <MemberSignature Language="C#" Value="public float BacklightBrightness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 BacklightBrightness" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Pcd8544.BacklightBrightness" />
+      <MemberSignature Language="VB.NET" Value="Public Property BacklightBrightness As Single" />
+      <MemberSignature Language="F#" Value="member this.BacklightBrightness : single with get, set" Usage="Iot.Device.Display.Pcd8544.BacklightBrightness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Change the back light from 0.0 to 1.0.
+            If a pin is used, the threshold for full light is more then 0.5.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BacklightOn">
+      <MemberSignature Language="C#" Value="public bool BacklightOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BacklightOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Pcd8544.BacklightOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property BacklightOn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.BacklightOn : bool with get, set" Usage="Iot.Device.Display.Pcd8544.BacklightOn" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.CharacterLcd.ICharacterLcd.BacklightOn</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Bias">
+      <MemberSignature Language="C#" Value="public byte Bias { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Bias" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Pcd8544.Bias" />
+      <MemberSignature Language="VB.NET" Value="Public Property Bias As Byte" />
+      <MemberSignature Language="F#" Value="member this.Bias : byte with get, set" Usage="Iot.Device.Display.Pcd8544.Bias" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The bias for 0 to 7. Bias represent the voltage applied to the LCD. The highest, the darker the screen will be.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlinkingCursorVisible">
+      <MemberSignature Language="C#" Value="public bool BlinkingCursorVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BlinkingCursorVisible" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Pcd8544.BlinkingCursorVisible" />
+      <MemberSignature Language="VB.NET" Value="Public Property BlinkingCursorVisible As Boolean" />
+      <MemberSignature Language="F#" Value="member this.BlinkingCursorVisible : bool with get, set" Usage="Iot.Device.Display.Pcd8544.BlinkingCursorVisible" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.CharacterLcd.ICharacterLcd.BlinkingCursorVisible</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is not supported on this screen, this function will have no effect
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.Clear" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
+      <MemberSignature Language="F#" Value="abstract member Clear : unit -&gt; unit&#xA;override this.Clear : unit -&gt; unit" Usage="pcd8544.Clear " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.CharacterLcd.ICharacterLcd.Clear</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clear the screen
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ColorBitPerPixel">
+      <MemberSignature Language="C#" Value="public const int ColorBitPerPixel = 1;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ColorBitPerPixel = (1)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Display.Pcd8544.ColorBitPerPixel" />
+      <MemberSignature Language="VB.NET" Value="Public Const ColorBitPerPixel As Integer  = 1" />
+      <MemberSignature Language="F#" Value="val mutable ColorBitPerPixel : int" Usage="Iot.Device.Display.Pcd8544.ColorBitPerPixel" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Number of bit per pixel for the color
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Contrast">
+      <MemberSignature Language="C#" Value="public byte Contrast { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 Contrast" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Pcd8544.Contrast" />
+      <MemberSignature Language="VB.NET" Value="Public Property Contrast As Byte" />
+      <MemberSignature Language="F#" Value="member this.Contrast : byte with get, set" Usage="Iot.Device.Display.Pcd8544.Contrast" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or set the contrast from 0 to 127
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCustomCharacter">
+      <MemberSignature Language="C#" Value="public void CreateCustomCharacter (int location, byte[] characterMap);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CreateCustomCharacter(int32 location, unsigned int8[] characterMap) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.CreateCustomCharacter(System.Int32,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CreateCustomCharacter (location As Integer, characterMap As Byte())" />
+      <MemberSignature Language="F#" Value="abstract member CreateCustomCharacter : int * byte[] -&gt; unit&#xA;override this.CreateCustomCharacter : int * byte[] -&gt; unit" Usage="pcd8544.CreateCustomCharacter (location, characterMap)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.CharacterLcd.ICharacterLcd.CreateCustomCharacter(System.Int32,System.Byte[])</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.5" />
+        <Parameter Name="characterMap" Type="System.Byte[]" Index="1" FrameworkAlternate="iot-dotnet-1.5" />
+      </Parameters>
+      <Docs>
+        <param name="location">Should be between 0 and <see cref="P:Iot.Device.Display.Pcd8544.NumberOfCustomCharactersSupported" />.</param>
+        <param name="characterMap">Provide an array of 8 bytes containing the pattern</param>
+        <summary>
+            Add a specific character to the font. It will replace existing embedded font character if it does already exist.
+            </summary>
+        <remarks>
+            Normal font character is a 5 bytes array aligned vertically. If the array is 8 bytes long, it will assume the
+            font encoding is then on the lower 5 bits of each bytes.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCustomCharacter">
+      <MemberSignature Language="C#" Value="public void CreateCustomCharacter (int location, ReadOnlySpan&lt;byte&gt; characterMap);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CreateCustomCharacter(int32 location, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; characterMap) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.CreateCustomCharacter(System.Int32,System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CreateCustomCharacter (location As Integer, characterMap As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="abstract member CreateCustomCharacter : int * ReadOnlySpan&lt;byte&gt; -&gt; unit&#xA;override this.CreateCustomCharacter : int * ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="pcd8544.CreateCustomCharacter (location, characterMap)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.CharacterLcd.ICharacterLcd.CreateCustomCharacter(System.Int32,System.ReadOnlySpan{System.Byte})</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Int32" />
+        <Parameter Name="characterMap" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="location">Should be between 0 and <see cref="P:Iot.Device.Display.Pcd8544.NumberOfCustomCharactersSupported" />.</param>
+        <param name="characterMap">Provide an array of 8 bytes containing the pattern</param>
+        <summary>
+            Add a specific character to the font. It will replace existing embedded font character if it does already exist.
+            </summary>
+        <remarks>
+            Normal font character is a 5 bytes array aligned vertically. If the array is 8 bytes long, it will assume the
+            font encoding is then on the lower 5 bits of each bytes.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayOn">
+      <MemberSignature Language="C#" Value="public bool DisplayOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool DisplayOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Pcd8544.DisplayOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property DisplayOn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DisplayOn : bool with get, set" Usage="Iot.Device.Display.Pcd8544.DisplayOn" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.CharacterLcd.ICharacterLcd.DisplayOn</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="pcd8544.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Draw">
+      <MemberSignature Language="C#" Value="public void Draw ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Draw() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.Draw" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Draw ()" />
+      <MemberSignature Language="F#" Value="member this.Draw : unit -&gt; unit" Usage="pcd8544.Draw " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Draw what's in memory to the the screen
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawLine">
+      <MemberSignature Language="C#" Value="public void DrawLine (SixLabors.ImageSharp.Point p1, SixLabors.ImageSharp.Point p2, bool isOn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawLine(valuetype SixLabors.ImageSharp.Point p1, valuetype SixLabors.ImageSharp.Point p2, bool isOn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.DrawLine(SixLabors.ImageSharp.Point,SixLabors.ImageSharp.Point,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DrawLine (p1 As Point, p2 As Point, isOn As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.DrawLine : SixLabors.ImageSharp.Point * SixLabors.ImageSharp.Point * bool -&gt; unit" Usage="pcd8544.DrawLine (p1, p2, isOn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p1" Type="SixLabors.ImageSharp.Point" />
+        <Parameter Name="p2" Type="SixLabors.ImageSharp.Point" />
+        <Parameter Name="isOn" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="p1">First point coordinate.</param>
+        <param name="p2">Second point coordinate.</param>
+        <param name="isOn">True if the line has pixels on, false for off.</param>
+        <summary>
+            Draw a line
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawLine">
+      <MemberSignature Language="C#" Value="public void DrawLine (int x1, int y1, int x2, int y2, bool isOn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawLine(int32 x1, int32 y1, int32 x2, int32 y2, bool isOn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.DrawLine(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DrawLine (x1 As Integer, y1 As Integer, x2 As Integer, y2 As Integer, isOn As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.DrawLine : int * int * int * int * bool -&gt; unit" Usage="pcd8544.DrawLine (x1, y1, x2, y2, isOn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x1" Type="System.Int32" />
+        <Parameter Name="y1" Type="System.Int32" />
+        <Parameter Name="x2" Type="System.Int32" />
+        <Parameter Name="y2" Type="System.Int32" />
+        <Parameter Name="isOn" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="x1">The first point X coordinate.</param>
+        <param name="y1">The first point Y coordinate.</param>
+        <param name="x2">The second point X coordinate.</param>
+        <param name="y2">The second point Y coordinate.</param>
+        <param name="isOn">True if the line has pixels on, false for off.</param>
+        <summary>
+            Draw a line
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawPoint">
+      <MemberSignature Language="C#" Value="public bool DrawPoint (SixLabors.ImageSharp.Point point, bool isOn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool DrawPoint(valuetype SixLabors.ImageSharp.Point point, bool isOn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.DrawPoint(SixLabors.ImageSharp.Point,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function DrawPoint (point As Point, isOn As Boolean) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DrawPoint : SixLabors.ImageSharp.Point * bool -&gt; bool" Usage="pcd8544.DrawPoint (point, isOn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="SixLabors.ImageSharp.Point" />
+        <Parameter Name="isOn" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="point">The point to draw.</param>
+        <param name="isOn">True if the point has pixels on, false for off.</param>
+        <summary>
+            Draw a point
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawPoint">
+      <MemberSignature Language="C#" Value="public bool DrawPoint (int x, int y, bool isOn);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool DrawPoint(int32 x, int32 y, bool isOn) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.DrawPoint(System.Int32,System.Int32,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function DrawPoint (x As Integer, y As Integer, isOn As Boolean) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.DrawPoint : int * int * bool -&gt; bool" Usage="pcd8544.DrawPoint (x, y, isOn)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="isOn" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">The X coordinate.</param>
+        <param name="y">The Y coordinate.</param>
+        <param name="isOn">True if the point has pixels on, false for off.</param>
+        <summary>
+            Draw a point
+            </summary>
+        <returns>True if success</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawRectangle">
+      <MemberSignature Language="C#" Value="public void DrawRectangle (SixLabors.ImageSharp.Rectangle rectangle, bool isOn, bool isFilled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawRectangle(valuetype SixLabors.ImageSharp.Rectangle rectangle, bool isOn, bool isFilled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.DrawRectangle(SixLabors.ImageSharp.Rectangle,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DrawRectangle (rectangle As Rectangle, isOn As Boolean, isFilled As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.DrawRectangle : SixLabors.ImageSharp.Rectangle * bool * bool -&gt; unit" Usage="pcd8544.DrawRectangle (rectangle, isOn, isFilled)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rectangle" Type="SixLabors.ImageSharp.Rectangle" />
+        <Parameter Name="isOn" Type="System.Boolean" />
+        <Parameter Name="isFilled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="rectangle">The rectangle.</param>
+        <param name="isOn">True if the rectangle has pixels on, false for off.</param>
+        <param name="isFilled">If it's filled or not.</param>
+        <summary>
+            Draw a rectangle
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawRectangle">
+      <MemberSignature Language="C#" Value="public void DrawRectangle (SixLabors.ImageSharp.Point p, SixLabors.ImageSharp.Size size, bool isOn, bool isFilled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawRectangle(valuetype SixLabors.ImageSharp.Point p, valuetype SixLabors.ImageSharp.Size size, bool isOn, bool isFilled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.DrawRectangle(SixLabors.ImageSharp.Point,SixLabors.ImageSharp.Size,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DrawRectangle (p As Point, size As Size, isOn As Boolean, isFilled As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.DrawRectangle : SixLabors.ImageSharp.Point * SixLabors.ImageSharp.Size * bool * bool -&gt; unit" Usage="pcd8544.DrawRectangle (p, size, isOn, isFilled)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="p" Type="SixLabors.ImageSharp.Point" />
+        <Parameter Name="size" Type="SixLabors.ImageSharp.Size" />
+        <Parameter Name="isOn" Type="System.Boolean" />
+        <Parameter Name="isFilled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="p">The coordinate of the point.</param>
+        <param name="size">The size of the rectangle.</param>
+        <param name="isOn">True if the rectangle has pixels on, false for off.</param>
+        <param name="isFilled">If it's filled or not.</param>
+        <summary>
+            Draw a rectangle
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawRectangle">
+      <MemberSignature Language="C#" Value="public void DrawRectangle (int x, int y, int width, int height, bool isOn, bool isFilled);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawRectangle(int32 x, int32 y, int32 width, int32 height, bool isOn, bool isFilled) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.DrawRectangle(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DrawRectangle (x As Integer, y As Integer, width As Integer, height As Integer, isOn As Boolean, isFilled As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.DrawRectangle : int * int * int * int * bool * bool -&gt; unit" Usage="pcd8544.DrawRectangle (x, y, width, height, isOn, isFilled)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="isOn" Type="System.Boolean" />
+        <Parameter Name="isFilled" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">The X coordinate.</param>
+        <param name="y">The Y coordinate.</param>
+        <param name="width">The width of the rectangle.</param>
+        <param name="height">The height of the rectangle.</param>
+        <param name="isOn">True if the rectangle has pixels on, false for off.</param>
+        <param name="isFilled">If it's filled or not.</param>
+        <summary>
+            Draw a rectangle
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Enabled">
+      <MemberSignature Language="C#" Value="public bool Enabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Enabled" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Pcd8544.Enabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property Enabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Enabled : bool with get, set" Usage="Iot.Device.Display.Pcd8544.Enabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enable the screen
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InvertedColors">
+      <MemberSignature Language="C#" Value="public bool InvertedColors { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool InvertedColors" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Pcd8544.InvertedColors" />
+      <MemberSignature Language="VB.NET" Value="Public Property InvertedColors As Boolean" />
+      <MemberSignature Language="F#" Value="member this.InvertedColors : bool with get, set" Usage="Iot.Device.Display.Pcd8544.InvertedColors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True to inverse the screen color
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfCustomCharactersSupported">
+      <MemberSignature Language="C#" Value="public int NumberOfCustomCharactersSupported { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumberOfCustomCharactersSupported" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Pcd8544.NumberOfCustomCharactersSupported" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NumberOfCustomCharactersSupported As Integer" />
+      <MemberSignature Language="F#" Value="member this.NumberOfCustomCharactersSupported : int" Usage="Iot.Device.Display.Pcd8544.NumberOfCustomCharactersSupported" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.CharacterLcd.ICharacterLcd.NumberOfCustomCharactersSupported</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="PixelScreenSize">
+      <MemberSignature Language="C#" Value="public static SixLabors.ImageSharp.Size PixelScreenSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype SixLabors.ImageSharp.Size PixelScreenSize" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Pcd8544.PixelScreenSize" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property PixelScreenSize As Size" />
+      <MemberSignature Language="F#" Value="member this.PixelScreenSize : SixLabors.ImageSharp.Size" Usage="Iot.Device.Display.Pcd8544.PixelScreenSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>SixLabors.ImageSharp.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The size of the screen in terms of pixels
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenBufferByteSize">
+      <MemberSignature Language="C#" Value="public const int ScreenBufferByteSize = 504;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 ScreenBufferByteSize = (504)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Display.Pcd8544.ScreenBufferByteSize" />
+      <MemberSignature Language="VB.NET" Value="Public Const ScreenBufferByteSize As Integer  = 504" />
+      <MemberSignature Language="F#" Value="val mutable ScreenBufferByteSize : int" Usage="Iot.Device.Display.Pcd8544.ScreenBufferByteSize" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>504</MemberValue>
+      <Docs>
+        <summary>
+            Size of the screen 48 x 84 / 8 in bytes
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetByteMap">
+      <MemberSignature Language="C#" Value="public void SetByteMap (ReadOnlySpan&lt;byte&gt; byteMap);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetByteMap(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; byteMap) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.SetByteMap(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetByteMap (byteMap As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="member this.SetByteMap : ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="pcd8544.SetByteMap byteMap" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="byteMap" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="byteMap">A 504 sized byte representing the full image</param>
+        <summary>
+            Set the byte map
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCursorPosition">
+      <MemberSignature Language="C#" Value="public void SetCursorPosition (int left, int top);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetCursorPosition(int32 left, int32 top) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.SetCursorPosition(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetCursorPosition (left As Integer, top As Integer)" />
+      <MemberSignature Language="F#" Value="abstract member SetCursorPosition : int * int -&gt; unit&#xA;override this.SetCursorPosition : int * int -&gt; unit" Usage="pcd8544.SetCursorPosition (left, top)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.CharacterLcd.ICharacterLcd.SetCursorPosition(System.Int32,System.Int32)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Int32" />
+        <Parameter Name="top" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="left">The column position from left to right starting with 0 to 83.</param>
+        <param name="top">The row position from the top starting with 0 to 5.</param>
+        <summary>
+            Moves the cursor to an explicit column and row position.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">The given position is not inside the display.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Size">
+      <MemberSignature Language="C#" Value="public SixLabors.ImageSharp.Size Size { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype SixLabors.ImageSharp.Size Size" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Pcd8544.Size" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Size As Size" />
+      <MemberSignature Language="F#" Value="member this.Size : SixLabors.ImageSharp.Size" Usage="Iot.Device.Display.Pcd8544.Size" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.CharacterLcd.ICharacterLcd.Size</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>SixLabors.ImageSharp.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The size of the screen in terms of characters
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Temperature">
+      <MemberSignature Language="C#" Value="public Iot.Device.Display.Pcd8544Enums.ScreenTemperature Temperature { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Display.Pcd8544Enums.ScreenTemperature Temperature" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Pcd8544.Temperature" />
+      <MemberSignature Language="VB.NET" Value="Public Property Temperature As ScreenTemperature" />
+      <MemberSignature Language="F#" Value="member this.Temperature : Iot.Device.Display.Pcd8544Enums.ScreenTemperature with get, set" Usage="Iot.Device.Display.Pcd8544.Temperature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Display.Pcd8544Enums.ScreenTemperature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or set the temperature coefficient
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UnderlineCursorVisible">
+      <MemberSignature Language="C#" Value="public bool UnderlineCursorVisible { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool UnderlineCursorVisible" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Pcd8544.UnderlineCursorVisible" />
+      <MemberSignature Language="VB.NET" Value="Public Property UnderlineCursorVisible As Boolean" />
+      <MemberSignature Language="F#" Value="member this.UnderlineCursorVisible : bool with get, set" Usage="Iot.Device.Display.Pcd8544.UnderlineCursorVisible" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:Iot.Device.CharacterLcd.ICharacterLcd.UnderlineCursorVisible</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (char[] text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(char[] text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.Write(System.Char[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (text As Char())" />
+      <MemberSignature Language="F#" Value="abstract member Write : char[] -&gt; unit&#xA;override this.Write : char[] -&gt; unit" Usage="pcd8544.Write text" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.CharacterLcd.ICharacterLcd.Write(System.Char[])</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.Char[]" Index="0" FrameworkAlternate="iot-dotnet-1.5" />
+      </Parameters>
+      <Docs>
+        <param name="text">Text to print</param>
+        <summary>
+            Write a raw byte stream to the display.
+            Used if character translation already took place.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (ReadOnlySpan&lt;char&gt; text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(valuetype System.ReadOnlySpan`1&lt;char&gt; text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.Write(System.ReadOnlySpan{System.Char})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (text As ReadOnlySpan(Of Char))" />
+      <MemberSignature Language="F#" Value="abstract member Write : ReadOnlySpan&lt;char&gt; -&gt; unit&#xA;override this.Write : ReadOnlySpan&lt;char&gt; -&gt; unit" Usage="pcd8544.Write text" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.CharacterLcd.ICharacterLcd.Write(System.ReadOnlySpan{System.Char})</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.ReadOnlySpan&lt;System.Char&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="text">Text to print</param>
+        <summary>
+            Write a raw byte stream to the display.
+            Used if character translation already took place.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.Write(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (text As String)" />
+      <MemberSignature Language="F#" Value="abstract member Write : string -&gt; unit&#xA;override this.Write : string -&gt; unit" Usage="pcd8544.Write text" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Iot.Device.CharacterLcd.ICharacterLcd.Write(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">The text to write</param>
+        <summary>
+            Write text
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteLine">
+      <MemberSignature Language="C#" Value="public void WriteLine (string text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteLine(string text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Pcd8544.WriteLine(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteLine (text As String)" />
+      <MemberSignature Language="F#" Value="member this.WriteLine : string -&gt; unit" Usage="pcd8544.WriteLine text" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="text">The text to write</param>
+        <summary>
+            Write text and set cursor position to next line
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

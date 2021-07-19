@@ -1,0 +1,246 @@
+<Type Name="SensorHub" FullName="Iot.Device.SensorHub.SensorHub">
+  <TypeSignature Language="C#" Value="public sealed class SensorHub" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit SensorHub extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.SensorHub.SensorHub" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class SensorHub" />
+  <TypeSignature Language="F#" Value="type SensorHub = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            SensorHub
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SensorHub (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SensorHub.SensorHub.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.SensorHub.SensorHub : System.Device.I2c.I2cDevice -&gt; Iot.Device.SensorHub.SensorHub" Usage="new Iot.Device.SensorHub.SensorHub i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">To be added.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.SensorHub.SensorHub" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const int DefaultI2cAddress = 23;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultI2cAddress = (23)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.SensorHub.SensorHub.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Integer  = 23" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : int" Usage="Iot.Device.SensorHub.SensorHub.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>23</MemberValue>
+      <Docs>
+        <summary>
+            Default I2C address
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMotionDetected">
+      <MemberSignature Language="C#" Value="public bool IsMotionDetected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsMotionDetected" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.SensorHub.SensorHub.IsMotionDetected" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsMotionDetected As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsMotionDetected : bool" Usage="Iot.Device.SensorHub.SensorHub.IsMotionDetected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Is motion detected by the on board sensor
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadBarometerPressure">
+      <MemberSignature Language="C#" Value="public bool TryReadBarometerPressure (out UnitsNet.Pressure pressure);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadBarometerPressure([out] valuetype UnitsNet.Pressure&amp; pressure) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SensorHub.SensorHub.TryReadBarometerPressure(UnitsNet.Pressure@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadBarometerPressure (ByRef pressure As Pressure) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadBarometerPressure : Pressure -&gt; bool" Usage="sensorHub.TryReadBarometerPressure pressure" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pressure" Type="UnitsNet.Pressure" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pressure">Pressure if successful</param>
+        <summary>
+            Try to read pressure from sensor.
+            </summary>
+        <returns />
+        <remarks>Range is 300Pa to 1100hPa</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadBarometerTemperature">
+      <MemberSignature Language="C#" Value="public bool TryReadBarometerTemperature (out UnitsNet.Temperature temperature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadBarometerTemperature([out] valuetype UnitsNet.Temperature&amp; temperature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SensorHub.SensorHub.TryReadBarometerTemperature(UnitsNet.Temperature@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadBarometerTemperature (ByRef temperature As Temperature) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadBarometerTemperature : Temperature -&gt; bool" Usage="sensorHub.TryReadBarometerTemperature temperature" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="temperature" Type="UnitsNet.Temperature" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="temperature">Temperature if successful</param>
+        <summary>
+            Try to read the temperature from the barometer sensor.
+            </summary>
+        <returns />
+        <remarks>Range is -40 to 80 Celsius.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadIlluminance">
+      <MemberSignature Language="C#" Value="public bool TryReadIlluminance (out UnitsNet.Illuminance illuminance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadIlluminance([out] valuetype UnitsNet.Illuminance&amp; illuminance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SensorHub.SensorHub.TryReadIlluminance(UnitsNet.Illuminance@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadIlluminance (ByRef illuminance As Illuminance) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadIlluminance : Illuminance -&gt; bool" Usage="sensorHub.TryReadIlluminance illuminance" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="illuminance" Type="UnitsNet.Illuminance" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="illuminance">Illuminance if successful</param>
+        <summary>
+            Try to read illuminance from sensor.
+            </summary>
+        <returns />
+        <remarks>Range is 0 to 1800 Lux.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadOffBoardTemperature">
+      <MemberSignature Language="C#" Value="public bool TryReadOffBoardTemperature (out UnitsNet.Temperature temperature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadOffBoardTemperature([out] valuetype UnitsNet.Temperature&amp; temperature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SensorHub.SensorHub.TryReadOffBoardTemperature(UnitsNet.Temperature@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadOffBoardTemperature (ByRef temperature As Temperature) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadOffBoardTemperature : Temperature -&gt; bool" Usage="sensorHub.TryReadOffBoardTemperature temperature" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="temperature" Type="UnitsNet.Temperature" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="temperature">The temperature if successful</param>
+        <summary>
+            Try to read the temperature from the off board thermometer.
+            </summary>
+        <returns />
+        <remarks>Range is -30 to 127 Celsius.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadOnBoardTemperature">
+      <MemberSignature Language="C#" Value="public bool TryReadOnBoardTemperature (out UnitsNet.Temperature temperature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadOnBoardTemperature([out] valuetype UnitsNet.Temperature&amp; temperature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SensorHub.SensorHub.TryReadOnBoardTemperature(UnitsNet.Temperature@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadOnBoardTemperature (ByRef temperature As Temperature) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadOnBoardTemperature : Temperature -&gt; bool" Usage="sensorHub.TryReadOnBoardTemperature temperature" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="temperature" Type="UnitsNet.Temperature" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="temperature">Temperature if successful</param>
+        <summary>
+            Try to read temperature from on board sensor
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+        <remakrs>Range is -20 to 60 Celsius</remakrs>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadRelativeHumidity">
+      <MemberSignature Language="C#" Value="public bool TryReadRelativeHumidity (out UnitsNet.RelativeHumidity humidity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadRelativeHumidity([out] valuetype UnitsNet.RelativeHumidity&amp; humidity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.SensorHub.SensorHub.TryReadRelativeHumidity(UnitsNet.RelativeHumidity@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadRelativeHumidity (ByRef humidity As RelativeHumidity) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadRelativeHumidity : RelativeHumidity -&gt; bool" Usage="sensorHub.TryReadRelativeHumidity humidity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="humidity" Type="UnitsNet.RelativeHumidity" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="humidity">Relative humidity if successful</param>
+        <summary>
+            Try to read relative humidity from sensor.
+            </summary>
+        <returns />
+        <remarks>Range is 25 to 95 percent</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,777 @@
+<Type Name="Board" FullName="Iot.Device.Board.Board">
+  <TypeSignature Language="C#" Value="public abstract class Board : MarshalByRefObject, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Board extends System.MarshalByRefObject implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Board.Board" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Board&#xA;Inherits MarshalByRefObject&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Board = class&#xA;    inherit MarshalByRefObject&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Base class for all board abstractions.
+            A "board" is a piece of hardware that offers low-level interfaces to other devices. Typically, it has GPIO pins and one or multiple SPI or I2C busses.
+            There should be exactly one instance of a board class per hardware component in an application, but it is possible to work with multiple boards
+            at once (i.e. when having a GPIO expander connected to the Raspberry Pi)
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Board ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Constructs a board instance with the given default numbering scheme.
+            All methods will use the given numbering scheme, unless another scheme is explicitly given in a call.
+            </summary>
+        <remarks>
+            The constructor will never throw an exception. Call any other method to initialize the hardware and check
+            whether an instance can actually run on the current hardware.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivatePinMode">
+      <MemberSignature Language="C#" Value="protected virtual void ActivatePinMode (int pinNumber, Iot.Device.Board.PinUsage usage);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void ActivatePinMode(int32 pinNumber, valuetype Iot.Device.Board.PinUsage usage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.ActivatePinMode(System.Int32,Iot.Device.Board.PinUsage)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub ActivatePinMode (pinNumber As Integer, usage As PinUsage)" />
+      <MemberSignature Language="F#" Value="abstract member ActivatePinMode : int * Iot.Device.Board.PinUsage -&gt; unit&#xA;override this.ActivatePinMode : int * Iot.Device.Board.PinUsage -&gt; unit" Usage="board.ActivatePinMode (pinNumber, usage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="usage" Type="Iot.Device.Board.PinUsage" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The logical pin number to use.</param>
+        <param name="usage">The intended usage</param>
+        <summary>
+            Override this method if something special needs to be done to use the pin for the given device.
+            Many devices support multiple functions per Pin, but not at the same time, so that some kind of
+            multiplexer needs to be set accordingly.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Board.Board Create ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Board.Board Create() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.Create" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create () As Board" />
+      <MemberSignature Language="F#" Value="static member Create : unit -&gt; Iot.Device.Board.Board" Usage="Iot.Device.Board.Board.Create " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Board.Board</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Create an instance of the best possible board abstraction.
+            </summary>
+        <returns>A board instance, to be used across the application</returns>
+        <remarks>The detection concept should be refined, but this requires a public detection api</remarks>
+        <exception cref="T:System.PlatformNotSupportedException">The board could not be identified</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateGpioController">
+      <MemberSignature Language="C#" Value="public virtual System.Device.Gpio.GpioController CreateGpioController ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Device.Gpio.GpioController CreateGpioController() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.CreateGpioController" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateGpioController () As GpioController" />
+      <MemberSignature Language="F#" Value="abstract member CreateGpioController : unit -&gt; System.Device.Gpio.GpioController&#xA;override this.CreateGpioController : unit -&gt; System.Device.Gpio.GpioController" Usage="board.CreateGpioController " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.GpioController</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Return an instance of a <see cref="T:System.Device.Gpio.GpioController" /> for the current board
+            </summary>
+        <returns>An instance of a GpioController. The controller used pin management to prevent reusing the same pin for different purposes
+            (or for purposes for which it is not suitable)</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotSupportedException">Rare: No GPIO Controller was found for the current hardware. The default implementation will return
+            a simulation interface if no hardware is available.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateI2cBusCore">
+      <MemberSignature Language="C#" Value="protected abstract Iot.Device.Board.I2cBusManager CreateI2cBusCore (int busNumber, int[]? pins);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class Iot.Device.Board.I2cBusManager CreateI2cBusCore(int32 busNumber, int32[] pins) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.CreateI2cBusCore(System.Int32,System.Int32[])" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function CreateI2cBusCore (busNumber As Integer, pins As Integer()) As I2cBusManager" />
+      <MemberSignature Language="F#" Value="abstract member CreateI2cBusCore : int * int[] -&gt; Iot.Device.Board.I2cBusManager" Usage="board.CreateI2cBusCore (busNumber, pins)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Board.I2cBusManager</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="busNumber" Type="System.Int32" />
+        <Parameter Name="pins" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="busNumber">The bus number to create</param>
+        <param name="pins">The pins that are used for the bus</param>
+        <summary>
+            Create an instance of an I2C bus in a derived class
+            </summary>
+        <returns>An <see cref="T:Iot.Device.Board.I2cBusManager" /> instance managing the bus</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateI2cDevice">
+      <MemberSignature Language="C#" Value="public System.Device.I2c.I2cDevice CreateI2cDevice (System.Device.I2c.I2cConnectionSettings connectionSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Device.I2c.I2cDevice CreateI2cDevice(class System.Device.I2c.I2cConnectionSettings connectionSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.CreateI2cDevice(System.Device.I2c.I2cConnectionSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateI2cDevice (connectionSettings As I2cConnectionSettings) As I2cDevice" />
+      <MemberSignature Language="F#" Value="member this.CreateI2cDevice : System.Device.I2c.I2cConnectionSettings -&gt; System.Device.I2c.I2cDevice" Usage="board.CreateI2cDevice connectionSettings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.I2c.I2cDevice</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionSettings" Type="System.Device.I2c.I2cConnectionSettings" />
+      </Parameters>
+      <Docs>
+        <param name="connectionSettings">Connection parameters (contains I2C address and bus number)</param>
+        <summary>
+            Create an I2C device instance on a default bus.
+            </summary>
+        <returns>An I2C device instance</returns>
+        <remarks>This method can only be used for bus numbers where the corresponding pins are hardwired
+            (i.e. bus 0 and 1 on the Raspi always use pins 0/1 and 2/3)</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOrGetI2cBus">
+      <MemberSignature Language="C#" Value="public System.Device.I2c.I2cBus CreateOrGetI2cBus (int busNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Device.I2c.I2cBus CreateOrGetI2cBus(int32 busNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.CreateOrGetI2cBus(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateOrGetI2cBus (busNumber As Integer) As I2cBus" />
+      <MemberSignature Language="F#" Value="member this.CreateOrGetI2cBus : int -&gt; System.Device.I2c.I2cBus" Usage="board.CreateOrGetI2cBus busNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.I2c.I2cBus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="busNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="busNumber">I2C bus number to create</param>
+        <summary>
+            Create an I2C bus instance or return the existing instance for this bus
+            </summary>
+        <returns>An I2C bus instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateOrGetI2cBus">
+      <MemberSignature Language="C#" Value="public virtual System.Device.I2c.I2cBus CreateOrGetI2cBus (int busNumber, int[]? pinAssignment);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Device.I2c.I2cBus CreateOrGetI2cBus(int32 busNumber, int32[] pinAssignment) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.CreateOrGetI2cBus(System.Int32,System.Int32[])" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateOrGetI2cBus (busNumber As Integer, pinAssignment As Integer()) As I2cBus" />
+      <MemberSignature Language="F#" Value="abstract member CreateOrGetI2cBus : int * int[] -&gt; System.Device.I2c.I2cBus&#xA;override this.CreateOrGetI2cBus : int * int[] -&gt; System.Device.I2c.I2cBus" Usage="board.CreateOrGetI2cBus (busNumber, pinAssignment)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.I2c.I2cBus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="busNumber" Type="System.Int32" />
+        <Parameter Name="pinAssignment" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="busNumber">I2C bus number to create</param>
+        <param name="pinAssignment">The set of pins to use for I2C. Can be null if the bus already exists</param>
+        <summary>
+            Create an I2C bus instance or return the existing instance for this bus
+            </summary>
+        <returns>An I2C bus instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePwmChannel">
+      <MemberSignature Language="C#" Value="public System.Device.Pwm.PwmChannel CreatePwmChannel (int chip, int channel, int frequency = 400, double dutyCyclePercentage = 0.5);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Device.Pwm.PwmChannel CreatePwmChannel(int32 chip, int32 channel, int32 frequency, float64 dutyCyclePercentage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.CreatePwmChannel(System.Int32,System.Int32,System.Int32,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreatePwmChannel (chip As Integer, channel As Integer, Optional frequency As Integer = 400, Optional dutyCyclePercentage As Double = 0.5) As PwmChannel" />
+      <MemberSignature Language="F#" Value="member this.CreatePwmChannel : int * int * int * double -&gt; System.Device.Pwm.PwmChannel" Usage="board.CreatePwmChannel (chip, channel, frequency, dutyCyclePercentage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Pwm.PwmChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chip" Type="System.Int32" />
+        <Parameter Name="channel" Type="System.Int32" />
+        <Parameter Name="frequency" Type="System.Int32" />
+        <Parameter Name="dutyCyclePercentage" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="chip">Chip number. Usually 0</param>
+        <param name="channel">Channel on the given chip</param>
+        <param name="frequency">Initial frequency</param>
+        <param name="dutyCyclePercentage">Initial duty cycle</param>
+        <summary>
+            Creates a PWM channel for the default pin assignment
+            </summary>
+        <returns>A pwm channel instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreatePwmChannel">
+      <MemberSignature Language="C#" Value="public System.Device.Pwm.PwmChannel CreatePwmChannel (int chip, int channel, int frequency, double dutyCyclePercentage, int pin, System.Device.Gpio.PinNumberingScheme pinNumberingScheme);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Device.Pwm.PwmChannel CreatePwmChannel(int32 chip, int32 channel, int32 frequency, float64 dutyCyclePercentage, int32 pin, valuetype System.Device.Gpio.PinNumberingScheme pinNumberingScheme) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.CreatePwmChannel(System.Int32,System.Int32,System.Int32,System.Double,System.Int32,System.Device.Gpio.PinNumberingScheme)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreatePwmChannel (chip As Integer, channel As Integer, frequency As Integer, dutyCyclePercentage As Double, pin As Integer, pinNumberingScheme As PinNumberingScheme) As PwmChannel" />
+      <MemberSignature Language="F#" Value="member this.CreatePwmChannel : int * int * int * double * int * System.Device.Gpio.PinNumberingScheme -&gt; System.Device.Pwm.PwmChannel" Usage="board.CreatePwmChannel (chip, channel, frequency, dutyCyclePercentage, pin, pinNumberingScheme)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Pwm.PwmChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chip" Type="System.Int32" />
+        <Parameter Name="channel" Type="System.Int32" />
+        <Parameter Name="frequency" Type="System.Int32" />
+        <Parameter Name="dutyCyclePercentage" Type="System.Double" />
+        <Parameter Name="pin" Type="System.Int32" />
+        <Parameter Name="pinNumberingScheme" Type="System.Device.Gpio.PinNumberingScheme" />
+      </Parameters>
+      <Docs>
+        <param name="chip">Chip number. Usually 0</param>
+        <param name="channel">Channel on the given chip</param>
+        <param name="frequency">Initial frequency</param>
+        <param name="dutyCyclePercentage">Initial duty cycle</param>
+        <param name="pin">The pin number for the pwm channel. Used if not hardwired (i.e. on the Raspi, it is possible to use different pins for the same PWM channel)</param>
+        <param name="pinNumberingScheme">The pin numbering scheme for the pin</param>
+        <summary>
+            Creates a PWM channel
+            </summary>
+        <returns>A pwm channel instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSimplePwmChannel">
+      <MemberSignature Language="C#" Value="protected abstract System.Device.Pwm.PwmChannel CreateSimplePwmChannel (int chip, int channel, int frequency, double dutyCyclePercentage);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Device.Pwm.PwmChannel CreateSimplePwmChannel(int32 chip, int32 channel, int32 frequency, float64 dutyCyclePercentage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.CreateSimplePwmChannel(System.Int32,System.Int32,System.Int32,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function CreateSimplePwmChannel (chip As Integer, channel As Integer, frequency As Integer, dutyCyclePercentage As Double) As PwmChannel" />
+      <MemberSignature Language="F#" Value="abstract member CreateSimplePwmChannel : int * int * int * double -&gt; System.Device.Pwm.PwmChannel" Usage="board.CreateSimplePwmChannel (chip, channel, frequency, dutyCyclePercentage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Pwm.PwmChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chip" Type="System.Int32" />
+        <Parameter Name="channel" Type="System.Int32" />
+        <Parameter Name="frequency" Type="System.Int32" />
+        <Parameter Name="dutyCyclePercentage" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="chip">To be added.</param>
+        <param name="channel">To be added.</param>
+        <param name="frequency">To be added.</param>
+        <param name="dutyCyclePercentage">To be added.</param>
+        <summary>
+            Overriden by derived implementations to provide the PWM device
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSimpleSpiDevice">
+      <MemberSignature Language="C#" Value="protected abstract System.Device.Spi.SpiDevice CreateSimpleSpiDevice (System.Device.Spi.SpiConnectionSettings settings, int[] pins);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Device.Spi.SpiDevice CreateSimpleSpiDevice(class System.Device.Spi.SpiConnectionSettings settings, int32[] pins) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.CreateSimpleSpiDevice(System.Device.Spi.SpiConnectionSettings,System.Int32[])" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function CreateSimpleSpiDevice (settings As SpiConnectionSettings, pins As Integer()) As SpiDevice" />
+      <MemberSignature Language="F#" Value="abstract member CreateSimpleSpiDevice : System.Device.Spi.SpiConnectionSettings * int[] -&gt; System.Device.Spi.SpiDevice" Usage="board.CreateSimpleSpiDevice (settings, pins)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Spi.SpiDevice</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="settings" Type="System.Device.Spi.SpiConnectionSettings" />
+        <Parameter Name="pins" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="settings">To be added.</param>
+        <param name="pins">To be added.</param>
+        <summary>
+            Overriden by derived implementations to create the base SPI device.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSpiDevice">
+      <MemberSignature Language="C#" Value="public System.Device.Spi.SpiDevice CreateSpiDevice (System.Device.Spi.SpiConnectionSettings connectionSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Device.Spi.SpiDevice CreateSpiDevice(class System.Device.Spi.SpiConnectionSettings connectionSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.CreateSpiDevice(System.Device.Spi.SpiConnectionSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateSpiDevice (connectionSettings As SpiConnectionSettings) As SpiDevice" />
+      <MemberSignature Language="F#" Value="member this.CreateSpiDevice : System.Device.Spi.SpiConnectionSettings -&gt; System.Device.Spi.SpiDevice" Usage="board.CreateSpiDevice connectionSettings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Spi.SpiDevice</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionSettings" Type="System.Device.Spi.SpiConnectionSettings" />
+      </Parameters>
+      <Docs>
+        <param name="connectionSettings">Connection parameters (contains SPI CS pin number and bus number)</param>
+        <summary>
+            Create an SPI device instance
+            </summary>
+        <returns>An SPI device instance</returns>
+        <remarks>This method can only be used for bus numbers where the corresponding pins are hardwired</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSpiDevice">
+      <MemberSignature Language="C#" Value="public System.Device.Spi.SpiDevice CreateSpiDevice (System.Device.Spi.SpiConnectionSettings connectionSettings, int[] pinAssignment, System.Device.Gpio.PinNumberingScheme pinNumberingScheme);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Device.Spi.SpiDevice CreateSpiDevice(class System.Device.Spi.SpiConnectionSettings connectionSettings, int32[] pinAssignment, valuetype System.Device.Gpio.PinNumberingScheme pinNumberingScheme) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.CreateSpiDevice(System.Device.Spi.SpiConnectionSettings,System.Int32[],System.Device.Gpio.PinNumberingScheme)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateSpiDevice (connectionSettings As SpiConnectionSettings, pinAssignment As Integer(), pinNumberingScheme As PinNumberingScheme) As SpiDevice" />
+      <MemberSignature Language="F#" Value="member this.CreateSpiDevice : System.Device.Spi.SpiConnectionSettings * int[] * System.Device.Gpio.PinNumberingScheme -&gt; System.Device.Spi.SpiDevice" Usage="board.CreateSpiDevice (connectionSettings, pinAssignment, pinNumberingScheme)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Spi.SpiDevice</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionSettings" Type="System.Device.Spi.SpiConnectionSettings" />
+        <Parameter Name="pinAssignment" Type="System.Int32[]" />
+        <Parameter Name="pinNumberingScheme" Type="System.Device.Gpio.PinNumberingScheme" />
+      </Parameters>
+      <Docs>
+        <param name="connectionSettings">Connection parameters (contains bus number and CS pin number)</param>
+        <param name="pinAssignment">The set of pins to use for SPI. The parameter can be null if the hardware requires a fixed mapping from
+            pins to SPI for the given bus.</param>
+        <param name="pinNumberingScheme">The numbering scheme in which the <paramref name="pinAssignment" /> is given</param>
+        <summary>
+            Create an SPI device instance
+            </summary>
+        <returns>An SPI device instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultPinNumberingScheme">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.PinNumberingScheme DefaultPinNumberingScheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Device.Gpio.PinNumberingScheme DefaultPinNumberingScheme" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Board.Board.DefaultPinNumberingScheme" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DefaultPinNumberingScheme As PinNumberingScheme" />
+      <MemberSignature Language="F#" Value="member this.DefaultPinNumberingScheme : System.Device.Gpio.PinNumberingScheme" Usage="Iot.Device.Board.Board.DefaultPinNumberingScheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinNumberingScheme</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The default pin numbering scheme for this board.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DetermineCurrentPinUsage">
+      <MemberSignature Language="C#" Value="public virtual Iot.Device.Board.PinUsage DetermineCurrentPinUsage (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype Iot.Device.Board.PinUsage DetermineCurrentPinUsage(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.DetermineCurrentPinUsage(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function DetermineCurrentPinUsage (pinNumber As Integer) As PinUsage" />
+      <MemberSignature Language="F#" Value="abstract member DetermineCurrentPinUsage : int -&gt; Iot.Device.Board.PinUsage&#xA;override this.DetermineCurrentPinUsage : int -&gt; Iot.Device.Board.PinUsage" Usage="board.DetermineCurrentPinUsage pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Board.PinUsage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">Pin number in the current numbering scheme</param>
+        <summary>
+            Returns the current usage of a pin
+            </summary>
+        <returns>The current usage of a pin</returns>
+        <remarks>Note for implementations: An implementation of this method shall try to query the hardware if the cache reports <see cref="F:Iot.Device.Board.PinUsage.Unknown" />.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="board.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:System.IDisposable.Dispose" />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="board.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:System.IDisposable.Dispose" />
+      </Docs>
+    </Member>
+    <Member MemberName="Disposed">
+      <MemberSignature Language="C#" Value="protected bool Disposed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Disposed" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Board.Board.Disposed" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property Disposed As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Disposed : bool" Usage="Iot.Device.Board.Board.Disposed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if this instance is disposed.
+            Any attempt to use it after this becomes true results in undefined behavior.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultI2cBusNumber">
+      <MemberSignature Language="C#" Value="public abstract int GetDefaultI2cBusNumber ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetDefaultI2cBusNumber() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.GetDefaultI2cBusNumber" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetDefaultI2cBusNumber () As Integer" />
+      <MemberSignature Language="F#" Value="abstract member GetDefaultI2cBusNumber : unit -&gt; int" Usage="board.GetDefaultI2cBusNumber " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates the default I2C bus for this board or returns the existing bus
+            </summary>
+        <returns>The number of the default I2C bus</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultPinAssignmentForI2c">
+      <MemberSignature Language="C#" Value="public abstract int[] GetDefaultPinAssignmentForI2c (int busId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32[] GetDefaultPinAssignmentForI2c(int32 busId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.GetDefaultPinAssignmentForI2c(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetDefaultPinAssignmentForI2c (busId As Integer) As Integer()" />
+      <MemberSignature Language="F#" Value="abstract member GetDefaultPinAssignmentForI2c : int -&gt; int[]" Usage="board.GetDefaultPinAssignmentForI2c busId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="busId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="busId">Bus Id</param>
+        <summary>
+            Overriden by derived classes: Provides the default pin assignment for the given I2C bus
+            </summary>
+        <returns>The set of pins for the given I2C bus</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultPinAssignmentForPwm">
+      <MemberSignature Language="C#" Value="public abstract int GetDefaultPinAssignmentForPwm (int chip, int channel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetDefaultPinAssignmentForPwm(int32 chip, int32 channel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.GetDefaultPinAssignmentForPwm(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetDefaultPinAssignmentForPwm (chip As Integer, channel As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member GetDefaultPinAssignmentForPwm : int * int -&gt; int" Usage="board.GetDefaultPinAssignmentForPwm (chip, channel)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chip" Type="System.Int32" />
+        <Parameter Name="channel" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="chip">Chip number</param>
+        <param name="channel">Channel number</param>
+        <summary>
+            Overriden by derived class. Provides the default pin for a given channel.
+            </summary>
+        <returns>The default pin for the given PWM channel</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultPinAssignmentForSpi">
+      <MemberSignature Language="C#" Value="public abstract int[] GetDefaultPinAssignmentForSpi (System.Device.Spi.SpiConnectionSettings connectionSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32[] GetDefaultPinAssignmentForSpi(class System.Device.Spi.SpiConnectionSettings connectionSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.GetDefaultPinAssignmentForSpi(System.Device.Spi.SpiConnectionSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetDefaultPinAssignmentForSpi (connectionSettings As SpiConnectionSettings) As Integer()" />
+      <MemberSignature Language="F#" Value="abstract member GetDefaultPinAssignmentForSpi : System.Device.Spi.SpiConnectionSettings -&gt; int[]" Usage="board.GetDefaultPinAssignmentForSpi connectionSettings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionSettings" Type="System.Device.Spi.SpiConnectionSettings" />
+      </Parameters>
+      <Docs>
+        <param name="connectionSettings">Connection settings to check</param>
+        <summary>
+            Overriden by derived classes: Provides the default pin assignment for the given SPI bus
+            </summary>
+        <returns>The set of pins for the given SPI bus</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="protected virtual void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.Initialize" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Initialize ()" />
+      <MemberSignature Language="F#" Value="abstract member Initialize : unit -&gt; unit&#xA;override this.Initialize : unit -&gt; unit" Usage="board.Initialize " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initialize the board and test whether it works on the current hardware.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.PlatformNotSupportedException">The required hardware cannot be found</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialized">
+      <MemberSignature Language="C#" Value="protected bool Initialized { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Initialized" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Board.Board.Initialized" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property Initialized As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Initialized : bool" Usage="Iot.Device.Board.Board.Initialized" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the board instance is initialized
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReleasePin">
+      <MemberSignature Language="C#" Value="public virtual void ReleasePin (int pinNumber, Iot.Device.Board.PinUsage usage, object owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReleasePin(int32 pinNumber, valuetype Iot.Device.Board.PinUsage usage, object owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.ReleasePin(System.Int32,Iot.Device.Board.PinUsage,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub ReleasePin (pinNumber As Integer, usage As PinUsage, owner As Object)" />
+      <MemberSignature Language="F#" Value="abstract member ReleasePin : int * Iot.Device.Board.PinUsage * obj -&gt; unit&#xA;override this.ReleasePin : int * Iot.Device.Board.PinUsage * obj -&gt; unit" Usage="board.ReleasePin (pinNumber, usage, owner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="usage" Type="Iot.Device.Board.PinUsage" />
+        <Parameter Name="owner" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number to free, in the numbering scheme of the board</param>
+        <param name="usage">The current pin usage</param>
+        <param name="owner">The current pin owner</param>
+        <summary>
+            Removes the reservation for a pin.
+            See <see cref="M:Iot.Device.Board.Board.ReservePin(System.Int32,Iot.Device.Board.PinUsage,System.Object)" /> for details.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">The pin is not reserved, or the owner is not correct</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="ReservePin">
+      <MemberSignature Language="C#" Value="public virtual void ReservePin (int pinNumber, Iot.Device.Board.PinUsage usage, object owner);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReservePin(int32 pinNumber, valuetype Iot.Device.Board.PinUsage usage, object owner) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.ReservePin(System.Int32,Iot.Device.Board.PinUsage,System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub ReservePin (pinNumber As Integer, usage As PinUsage, owner As Object)" />
+      <MemberSignature Language="F#" Value="abstract member ReservePin : int * Iot.Device.Board.PinUsage * obj -&gt; unit&#xA;override this.ReservePin : int * Iot.Device.Board.PinUsage * obj -&gt; unit" Usage="board.ReservePin (pinNumber, usage, owner)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="usage" Type="Iot.Device.Board.PinUsage" />
+        <Parameter Name="owner" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number, in the boards default numbering scheme</param>
+        <param name="usage">Intended usage of the pin</param>
+        <param name="owner">Class that owns the pin (use "this")</param>
+        <summary>
+            Reserves a pin for a specific usage. This is done automatically if a known interface (i.e. GpioController) is
+            used to open the pin, but may be used to block a pin explicitly, i.e. for UART.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">The pin is already reserved</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="TryCreateBestGpioDriver">
+      <MemberSignature Language="C#" Value="protected virtual System.Device.Gpio.GpioDriver? TryCreateBestGpioDriver ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Device.Gpio.GpioDriver TryCreateBestGpioDriver() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.Board.TryCreateBestGpioDriver" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function TryCreateBestGpioDriver () As GpioDriver" />
+      <MemberSignature Language="F#" Value="abstract member TryCreateBestGpioDriver : unit -&gt; System.Device.Gpio.GpioDriver&#xA;override this.TryCreateBestGpioDriver : unit -&gt; System.Device.Gpio.GpioDriver" Usage="board.TryCreateBestGpioDriver " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.GpioDriver</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Tries to create the best possible GPIO driver for this hardware.
+            </summary>
+        <returns>An instance to the optimal Gpio Driver for this board, or null if none was found</returns>
+        <remarks>The base implementation will never return null, but create a dummy instance instead</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,94 @@
+<Type Name="MeasurementRepetition" FullName="Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition">
+  <TypeSignature Language="C#" Value="public enum MeasurementRepetition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MeasurementRepetition extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition" />
+  <TypeSignature Language="VB.NET" Value="Public Enum MeasurementRepetition" />
+  <TypeSignature Language="F#" Value="type MeasurementRepetition = " />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Measurement repetition modes
+            </summary>
+    <remarks>
+            The device by default does measurements on-demand, this conserves power usage. However, it can
+            be configured to run in a loop or infinite loop on the device itself.  Since there's less overhead,
+            it will have more accurate timing and lead to more accurate velocity measurements.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Off">
+      <MemberSignature Language="C#" Value="Off" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition Off = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition.Off" />
+      <MemberSignature Language="VB.NET" Value="Off" />
+      <MemberSignature Language="F#" Value="Off = 0" Usage="Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition.Off" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Disabled, measurements are done once per acq command.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Repeat">
+      <MemberSignature Language="C#" Value="Repeat" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition Repeat = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition.Repeat" />
+      <MemberSignature Language="VB.NET" Value="Repeat" />
+      <MemberSignature Language="F#" Value="Repeat = 1" Usage="Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition.Repeat" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            Measurements are done repetitively n number of times per acq command as
+            defined in OUTER_LOOP_COUNT (0x11).
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="RepeatIndefinitely">
+      <MemberSignature Language="C#" Value="RepeatIndefinitely" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition RepeatIndefinitely = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition.RepeatIndefinitely" />
+      <MemberSignature Language="VB.NET" Value="RepeatIndefinitely" />
+      <MemberSignature Language="F#" Value="RepeatIndefinitely = 2" Usage="Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition.RepeatIndefinitely" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.DistanceSensor.Models.LidarLiteV3.MeasurementRepetition</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            Measurements are done repetitively forever.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

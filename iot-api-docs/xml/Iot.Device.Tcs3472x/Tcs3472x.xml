@@ -10,6 +10,8 @@
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
     <AssemblyVersion>1.2.0.0</AssemblyVersion>
     <AssemblyVersion>1.3.0.0</AssemblyVersion>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -19,9 +21,15 @@
       <InterfaceName>System.IDisposable</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+      <AttributeName Language="C#">[System.Device.Model.Interface("Tcs3472x - color sensor")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Device.Model.Interface("Tcs3472x - color sensor")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
-            Represents Tcs3472x I2C color sensor
+            Tcs3472x - color sensor
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -32,10 +40,10 @@
       <MemberSignature Language="DocId" Value="M:Iot.Device.Tcs3472x.Tcs3472x.#ctor(System.Device.I2c.I2cDevice,System.Double,Iot.Device.Tcs3472x.Gain,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional integrationTime As Double = 0.0024, Optional gain As Gain = Iot.Device.Tcs3472x.Gain.Gain16X, Optional autoDisposable As Boolean = true)" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1" />
       <MemberSignature Language="F#" Value="new Iot.Device.Tcs3472x.Tcs3472x : System.Device.I2c.I2cDevice * double * Iot.Device.Tcs3472x.Gain * bool -&gt; Iot.Device.Tcs3472x.Tcs3472x" Usage="new Iot.Device.Tcs3472x.Tcs3472x (i2cDevice, integrationTime, gain, autoDisposable)" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1" />
-      <MemberSignature Language="C#" Value="public Tcs3472x (System.Device.I2c.I2cDevice i2cDevice, double integrationTime = 0.0024, Iot.Device.Tcs3472x.Gain gain = Iot.Device.Tcs3472x.Gain.Gain16X, bool shouldDispose = true);" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, float64 integrationTime, valuetype Iot.Device.Tcs3472x.Gain gain, bool shouldDispose) cil managed" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional integrationTime As Double = 0.0024, Optional gain As Gain = Iot.Device.Tcs3472x.Gain.Gain16X, Optional shouldDispose As Boolean = true)" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
-      <MemberSignature Language="F#" Value="new Iot.Device.Tcs3472x.Tcs3472x : System.Device.I2c.I2cDevice * double * Iot.Device.Tcs3472x.Gain * bool -&gt; Iot.Device.Tcs3472x.Tcs3472x" Usage="new Iot.Device.Tcs3472x.Tcs3472x (i2cDevice, integrationTime, gain, shouldDispose)" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
+      <MemberSignature Language="C#" Value="public Tcs3472x (System.Device.I2c.I2cDevice i2cDevice, double integrationTime = 0.0024, Iot.Device.Tcs3472x.Gain gain = Iot.Device.Tcs3472x.Gain.Gain16X, bool shouldDispose = true);" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, float64 integrationTime, valuetype Iot.Device.Tcs3472x.Gain gain, bool shouldDispose) cil managed" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional integrationTime As Double = 0.0024, Optional gain As Gain = Iot.Device.Tcs3472x.Gain.Gain16X, Optional shouldDispose As Boolean = true)" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Tcs3472x.Tcs3472x : System.Device.I2c.I2cDevice * double * Iot.Device.Tcs3472x.Gain * bool -&gt; Iot.Device.Tcs3472x.Tcs3472x" Usage="new Iot.Device.Tcs3472x.Tcs3472x (i2cDevice, integrationTime, gain, shouldDispose)" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -43,13 +51,15 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" Index="0" />
         <Parameter Name="integrationTime" Type="System.Double" Index="1" />
         <Parameter Name="gain" Type="Iot.Device.Tcs3472x.Gain" Index="2" />
         <Parameter Name="autoDisposable" Type="System.Boolean" Index="3" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1" />
-        <Parameter Name="shouldDispose" Type="System.Boolean" Index="3" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="3" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
       </Parameters>
       <Docs>
         <param name="autoDisposable">true to dispose the I2C Device class at dispose</param>
@@ -76,7 +86,15 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Iot.Device.Tcs3472x.TCS3472Type</ReturnType>
       </ReturnValue>
@@ -101,7 +119,15 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+          <AttributeName Language="C#">[System.Device.Model.Telemetry(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Drawing.Color</ReturnType>
       </ReturnValue>
@@ -126,6 +152,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte</ReturnType>
@@ -154,6 +182,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -178,7 +208,15 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Iot.Device.Tcs3472x.Gain</ReturnType>
       </ReturnValue>
@@ -203,6 +241,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Drawing.Color</ReturnType>
@@ -232,7 +272,15 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Double</ReturnType>
       </ReturnValue>
@@ -260,6 +308,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -285,6 +335,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -310,6 +362,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -338,6 +392,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

@@ -10,6 +10,8 @@
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
     <AssemblyVersion>1.2.0.0</AssemblyVersion>
     <AssemblyVersion>1.3.0.0</AssemblyVersion>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -33,10 +35,10 @@
       <MemberSignature Language="VB.NET" Value="Public Sub New (device As I2cDevice, Optional periodRefresh As Integer = -1, Optional configuration As Mpr121Configuration = Nothing)" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1" />
       <MemberSignature Language="F#" Value="new Iot.Device.Mpr121.Mpr121 : System.Device.I2c.I2cDevice * int * Iot.Device.Mpr121.Mpr121Configuration -&gt; Iot.Device.Mpr121.Mpr121" Usage="new Iot.Device.Mpr121.Mpr121 (device, periodRefresh, configuration)" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1" />
       <MemberSignature Language="C#" Value="public Mpr121 (System.Device.I2c.I2cDevice device, int periodRefresh = -1, Iot.Device.Mpr121.Mpr121Configuration? configuration = default);" FrameworkAlternate="iot-dotnet-1.1" />
-      <MemberSignature Language="C#" Value="public Mpr121 (System.Device.I2c.I2cDevice i2cDevice, int periodRefresh = -1, Iot.Device.Mpr121.Mpr121Configuration? configuration = default);" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, int32 periodRefresh, class Iot.Device.Mpr121.Mpr121Configuration configuration) cil managed" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional periodRefresh As Integer = -1, Optional configuration As Mpr121Configuration = Nothing)" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
-      <MemberSignature Language="F#" Value="new Iot.Device.Mpr121.Mpr121 : System.Device.I2c.I2cDevice * int * Iot.Device.Mpr121.Mpr121Configuration -&gt; Iot.Device.Mpr121.Mpr121" Usage="new Iot.Device.Mpr121.Mpr121 (i2cDevice, periodRefresh, configuration)" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
+      <MemberSignature Language="C#" Value="public Mpr121 (System.Device.I2c.I2cDevice i2cDevice, int periodRefresh = -1, Iot.Device.Mpr121.Mpr121Configuration? configuration = default);" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, int32 periodRefresh, class Iot.Device.Mpr121.Mpr121Configuration configuration) cil managed" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional periodRefresh As Integer = -1, Optional configuration As Mpr121Configuration = Nothing)" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mpr121.Mpr121 : System.Device.I2c.I2cDevice * int * Iot.Device.Mpr121.Mpr121Configuration -&gt; Iot.Device.Mpr121.Mpr121" Usage="new Iot.Device.Mpr121.Mpr121 (i2cDevice, periodRefresh, configuration)" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -44,10 +46,12 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="device" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1" />
-        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
         <Parameter Name="periodRefresh" Type="System.Int32" Index="1" />
         <Parameter Name="configuration" Type="Iot.Device.Mpr121.Mpr121Configuration" Index="2" />
       </Parameters>
@@ -68,7 +72,7 @@
       <MemberSignature Language="DocId" Value="E:Iot.Device.Mpr121.Mpr121.ChannelStatusesChanged" />
       <MemberSignature Language="VB.NET" Value="Public Event ChannelStatusesChanged As EventHandler(Of ChannelStatusesChangedEventArgs) " />
       <MemberSignature Language="F#" Value="member this.ChannelStatusesChanged : EventHandler&lt;Iot.Device.Mpr121.ChannelStatusesChangedEventArgs&gt; " Usage="member this.ChannelStatusesChanged : System.EventHandler&lt;Iot.Device.Mpr121.ChannelStatusesChangedEventArgs&gt; " />
-      <MemberSignature Language="C#" Value="public event EventHandler&lt;Iot.Device.Mpr121.ChannelStatusesChangedEventArgs&gt;? ChannelStatusesChanged;" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Iot.Device.Mpr121.ChannelStatusesChangedEventArgs&gt;? ChannelStatusesChanged;" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -76,6 +80,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.EventHandler&lt;Iot.Device.Mpr121.ChannelStatusesChangedEventArgs&gt;</ReturnType>
@@ -101,6 +107,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte</ReturnType>
@@ -128,6 +136,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -152,6 +162,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -180,6 +192,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -213,6 +227,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;Iot.Device.Mpr121.Channels,System.Boolean&gt;</ReturnType>

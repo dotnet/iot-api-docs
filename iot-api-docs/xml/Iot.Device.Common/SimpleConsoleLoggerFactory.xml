@@ -1,0 +1,131 @@
+<Type Name="SimpleConsoleLoggerFactory" FullName="Iot.Device.Common.SimpleConsoleLoggerFactory">
+  <TypeSignature Language="C#" Value="public class SimpleConsoleLoggerFactory : IDisposable, Microsoft.Extensions.Logging.ILoggerFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SimpleConsoleLoggerFactory extends System.Object implements class Microsoft.Extensions.Logging.ILoggerFactory, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Common.SimpleConsoleLoggerFactory" />
+  <TypeSignature Language="VB.NET" Value="Public Class SimpleConsoleLoggerFactory&#xA;Implements IDisposable, ILoggerFactory" />
+  <TypeSignature Language="F#" Value="type SimpleConsoleLoggerFactory = class&#xA;    interface ILoggerFactory&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>Microsoft.Extensions.Logging.ILoggerFactory</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Provides a very simple console logger that does not require a reference to Microsoft.Extensions.Logging.dll
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SimpleConsoleLoggerFactory ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.SimpleConsoleLoggerFactory.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddProvider">
+      <MemberSignature Language="C#" Value="public void AddProvider (Microsoft.Extensions.Logging.ILoggerProvider provider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddProvider(class Microsoft.Extensions.Logging.ILoggerProvider provider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.SimpleConsoleLoggerFactory.AddProvider(Microsoft.Extensions.Logging.ILoggerProvider)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddProvider (provider As ILoggerProvider)" />
+      <MemberSignature Language="F#" Value="abstract member AddProvider : Microsoft.Extensions.Logging.ILoggerProvider -&gt; unit&#xA;override this.AddProvider : Microsoft.Extensions.Logging.ILoggerProvider -&gt; unit" Usage="simpleConsoleLoggerFactory.AddProvider provider" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Extensions.Logging.ILoggerFactory.AddProvider(Microsoft.Extensions.Logging.ILoggerProvider)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="provider" Type="Microsoft.Extensions.Logging.ILoggerProvider" />
+      </Parameters>
+      <Docs>
+        <param name="provider">Argument is ignored</param>
+        <summary>
+            The console logger is built-in here
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateLogger">
+      <MemberSignature Language="C#" Value="public Microsoft.Extensions.Logging.ILogger CreateLogger (string categoryName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Microsoft.Extensions.Logging.ILogger CreateLogger(string categoryName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.SimpleConsoleLoggerFactory.CreateLogger(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateLogger (categoryName As String) As ILogger" />
+      <MemberSignature Language="F#" Value="abstract member CreateLogger : string -&gt; Microsoft.Extensions.Logging.ILogger&#xA;override this.CreateLogger : string -&gt; Microsoft.Extensions.Logging.ILogger" Usage="simpleConsoleLoggerFactory.CreateLogger categoryName" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:Microsoft.Extensions.Logging.ILoggerFactory.CreateLogger(System.String)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.Logging.ILogger</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="categoryName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="categoryName">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.SimpleConsoleLoggerFactory.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="simpleConsoleLoggerFactory.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

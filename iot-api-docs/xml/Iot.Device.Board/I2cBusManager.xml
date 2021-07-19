@@ -1,0 +1,154 @@
+<Type Name="I2cBusManager" FullName="Iot.Device.Board.I2cBusManager">
+  <TypeSignature Language="C#" Value="public class I2cBusManager : System.Device.I2c.I2cBus, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit I2cBusManager extends System.Device.I2c.I2cBus implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Board.I2cBusManager" />
+  <TypeSignature Language="VB.NET" Value="Public Class I2cBusManager&#xA;Inherits I2cBus&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type I2cBusManager = class&#xA;    inherit I2cBus&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Device.I2c.I2cBus</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Manages an I2C bus instance
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public I2cBusManager (Iot.Device.Board.Board board, int bus, int[]? pins, System.Device.I2c.I2cBus busInstance);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Board.Board board, int32 bus, int32[] pins, class System.Device.I2c.I2cBus busInstance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.I2cBusManager.#ctor(Iot.Device.Board.Board,System.Int32,System.Int32[],System.Device.I2c.I2cBus)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (board As Board, bus As Integer, pins As Integer(), busInstance As I2cBus)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Board.I2cBusManager : Iot.Device.Board.Board * int * int[] * System.Device.I2c.I2cBus -&gt; Iot.Device.Board.I2cBusManager" Usage="new Iot.Device.Board.I2cBusManager (board, bus, pins, busInstance)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="board" Type="Iot.Device.Board.Board" />
+        <Parameter Name="bus" Type="System.Int32" />
+        <Parameter Name="pins" Type="System.Int32[]" />
+        <Parameter Name="busInstance" Type="System.Device.I2c.I2cBus" />
+      </Parameters>
+      <Docs>
+        <param name="board">The board that provides this bus</param>
+        <param name="bus">The bus number</param>
+        <param name="pins">The pins, in the logical scheme of the board. This must be an array of exactly two pins (for SCL and SDA)</param>
+        <param name="busInstance">The wrapped bus instance</param>
+        <summary>
+            Creates an instance of an I2C bus, given the pins used for that bus
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BusId">
+      <MemberSignature Language="C#" Value="public int BusId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BusId" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Board.I2cBusManager.BusId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BusId As Integer" />
+      <MemberSignature Language="F#" Value="member this.BusId : int" Usage="Iot.Device.Board.I2cBusManager.BusId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The Bus Id of this bus
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDevice">
+      <MemberSignature Language="C#" Value="public override System.Device.I2c.I2cDevice CreateDevice (int deviceAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Device.I2c.I2cDevice CreateDevice(int32 deviceAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.I2cBusManager.CreateDevice(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function CreateDevice (deviceAddress As Integer) As I2cDevice" />
+      <MemberSignature Language="F#" Value="override this.CreateDevice : int -&gt; System.Device.I2c.I2cDevice" Usage="i2cBusManager.CreateDevice deviceAddress" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.I2c.I2cDevice</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deviceAddress" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="deviceAddress">The device address</param>
+        <summary>
+            Creates a device on this bus
+            </summary>
+        <returns>An I2C device</returns>
+        <remarks>No test is performed whether the given device exists and is usable</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.I2cBusManager.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="i2cBusManager.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>
+            Disposes this I2C bus instance. Also disposes all devices associated with this bus.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveDevice">
+      <MemberSignature Language="C#" Value="public override void RemoveDevice (int deviceAddress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void RemoveDevice(int32 deviceAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.I2cBusManager.RemoveDevice(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub RemoveDevice (deviceAddress As Integer)" />
+      <MemberSignature Language="F#" Value="override this.RemoveDevice : int -&gt; unit" Usage="i2cBusManager.RemoveDevice deviceAddress" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deviceAddress" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="deviceAddress">Address of the device to dispose</param>
+        <summary>
+            Disposes and removes a device from the bus.
+            No exception is thrown if the device is not open
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

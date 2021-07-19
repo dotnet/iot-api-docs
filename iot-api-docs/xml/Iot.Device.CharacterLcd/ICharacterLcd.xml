@@ -9,6 +9,8 @@
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
     <AssemblyVersion>1.2.0.0</AssemblyVersion>
     <AssemblyVersion>1.3.0.0</AssemblyVersion>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Interfaces>
     <Interface>
@@ -34,6 +36,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -58,6 +62,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -82,6 +88,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -111,8 +119,99 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="location" Type="System.Byte" />
-        <Parameter Name="characterMap" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="location" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+        <Parameter Name="characterMap" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="1" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+      </Parameters>
+      <Docs>
+        <param name="location">Should be between 0 and <see cref="P:Iot.Device.CharacterLcd.ICharacterLcd.NumberOfCustomCharactersSupported" />.</param>
+        <param name="characterMap">Provide an array of 8 bytes containing the pattern</param>
+        <summary>
+             Fill one of the 8 CGRAM locations (character codes 0 - 7) with custom characters.
+             </summary>
+        <remarks>
+             The custom characters also occupy character codes 8 - 15.
+            
+             You can find help designing characters at https://www.quinapalus.com/hd44780udg.html.
+            
+             The datasheet description for custom characters is very difficult to follow. Here is
+             a rehash of the technical details that is hopefully easier:
+            
+             Only 6 bits of addresses are available for character ram. That makes for 64 bytes of
+             available character data. 8 bytes of data are used for each character, which is where
+             the 8 total custom characters comes from (64/8).
+            
+             Each byte corresponds to a character line. Characters are only 5 bits wide so only
+             bits 0-4 are used for display. Whatever is in bits 5-7 is just ignored. Store bits
+             there if it makes you happy, but it won't impact the display. '1' is on, '0' is off.
+            
+             In the built-in characters the 8th byte is usually empty as this is where the underline
+             cursor will be if enabled. You can put data there if you like, which gives you the full
+             5x8 character. The underline cursor just turns on the entire bottom row.
+            
+             5x10 mode is effectively useless as displays aren't available that utilize it. In 5x10
+             mode *16* bytes of data are used for each character. That leaves room for only *4*
+             custom characters. The first character is addressable from code 0, 1, 8, and 9. The
+             second is 2, 3, 10, 11 and so on...
+            
+             In this mode *11* bytes of data are actually used for the character data, which
+             effectively gives you a 5x11 character, although typically the last line is blank to
+             leave room for the underline cursor. Why the modes are referred to as 5x8 and 5x10 as
+             opposed to 5x7 and 5x10 or 5x8 and 5x11 is a mystery. In an early pre-release data
+             book 5x7 and 5x10 is used (Advance Copy #AP4 from July 1985). Perhaps it was a
+             marketing change?
+            
+             As only 11 bytes are used in 5x10 mode, but 16 bytes are reserved, the last 5 bytes
+             are useless. The datasheet helpfully suggests that you can store your own data there.
+             The same would be true for bits 5-7 of lines that matter for both 5x8 and 5x10.
+             </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCustomCharacter">
+      <MemberSignature Language="C#" Value="public void CreateCustomCharacter (int location, byte[] characterMap);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CreateCustomCharacter(int32 location, unsigned int8[] characterMap) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.ICharacterLcd.CreateCustomCharacter(System.Int32,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CreateCustomCharacter (location As Integer, characterMap As Byte())" />
+      <MemberSignature Language="F#" Value="abstract member CreateCustomCharacter : int * byte[] -&gt; unit" Usage="iCharacterLcd.CreateCustomCharacter (location, characterMap)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.5" />
+        <Parameter Name="characterMap" Type="System.Byte[]" Index="1" FrameworkAlternate="iot-dotnet-1.5" />
+      </Parameters>
+      <Docs>
+        <param name="location">Should be between 0 and <see cref="P:Iot.Device.CharacterLcd.ICharacterLcd.NumberOfCustomCharactersSupported" />.</param>
+        <param name="characterMap">Provide an array of 8 bytes containing the pattern</param>
+        <summary>
+            Fill one of the 8 CGRAM locations (character codes 0 - 7) with custom characters.
+            See <see cref="M:Iot.Device.CharacterLcd.ICharacterLcd.CreateCustomCharacter(System.Int32,System.ReadOnlySpan{System.Byte})" /> for details.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCustomCharacter">
+      <MemberSignature Language="C#" Value="public void CreateCustomCharacter (int location, ReadOnlySpan&lt;byte&gt; characterMap);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CreateCustomCharacter(int32 location, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; characterMap) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.ICharacterLcd.CreateCustomCharacter(System.Int32,System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CreateCustomCharacter (location As Integer, characterMap As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="abstract member CreateCustomCharacter : int * ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="iCharacterLcd.CreateCustomCharacter (location, characterMap)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="location" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="characterMap" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="1" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5" />
       </Parameters>
       <Docs>
         <param name="location">Should be between 0 and <see cref="P:Iot.Device.CharacterLcd.ICharacterLcd.NumberOfCustomCharactersSupported" />.</param>
@@ -170,6 +269,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -194,6 +295,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -201,7 +304,7 @@
       <Docs>
         <summary>
             Returns the number of custom characters for this display.
-            A custom character is one that can be user-defined and assigned to a slot using <see cref="M:Iot.Device.CharacterLcd.ICharacterLcd.CreateCustomCharacter(System.Byte,System.ReadOnlySpan{System.Byte})" /></summary>
+            A custom character is one that can be user-defined and assigned to a slot using <see cref="M:Iot.Device.CharacterLcd.ICharacterLcd.CreateCustomCharacter(System.Int32,System.ReadOnlySpan{System.Byte})" /></summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -218,6 +321,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -237,20 +342,26 @@
       </Docs>
     </Member>
     <Member MemberName="Size">
-      <MemberSignature Language="C#" Value="public System.Drawing.Size Size { get; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size Size" />
+      <MemberSignature Language="C#" Value="public System.Drawing.Size Size { get; }" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size Size" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.ICharacterLcd.Size" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Size As Size" />
-      <MemberSignature Language="F#" Value="member this.Size : System.Drawing.Size" Usage="Iot.Device.CharacterLcd.ICharacterLcd.Size" />
+      <MemberSignature Language="F#" Value="member this.Size : System.Drawing.Size" Usage="Iot.Device.CharacterLcd.ICharacterLcd.Size" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+      <MemberSignature Language="C#" Value="public SixLabors.ImageSharp.Size Size { get; }" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype SixLabors.ImageSharp.Size Size" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="F#" Value="member this.Size : SixLabors.ImageSharp.Size" Usage="Iot.Device.CharacterLcd.ICharacterLcd.Size" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>System.Drawing.Size</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3">System.Drawing.Size</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">SixLabors.ImageSharp.Size</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -272,6 +383,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -281,6 +394,32 @@
             Enable/disable the underline cursor.
             </summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (char[] text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(char[] text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.ICharacterLcd.Write(System.Char[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (text As Char())" />
+      <MemberSignature Language="F#" Value="abstract member Write : char[] -&gt; unit" Usage="iCharacterLcd.Write text" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.Char[]" Index="0" FrameworkAlternate="iot-dotnet-1.5" />
+      </Parameters>
+      <Docs>
+        <param name="text">Text to print</param>
+        <summary>
+            Write a raw byte stream to the display.
+            Used if character translation already took place.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -301,7 +440,34 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="text" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="text" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+      </Parameters>
+      <Docs>
+        <param name="text">Text to print</param>
+        <summary>
+            Write a raw byte stream to the display.
+            Used if character translation already took place.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (ReadOnlySpan&lt;char&gt; text);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(valuetype System.ReadOnlySpan`1&lt;char&gt; text) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.ICharacterLcd.Write(System.ReadOnlySpan{System.Char})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (text As ReadOnlySpan(Of Char))" />
+      <MemberSignature Language="F#" Value="abstract member Write : ReadOnlySpan&lt;char&gt; -&gt; unit" Usage="iCharacterLcd.Write text" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.ReadOnlySpan&lt;System.Char&gt;" Index="0" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5" />
       </Parameters>
       <Docs>
         <param name="text">Text to print</param>
@@ -324,6 +490,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

@@ -1,0 +1,361 @@
+<Type Name="AnalogController" FullName="System.Device.Analog.AnalogController">
+  <TypeSignature Language="C#" Value="public abstract class AnalogController : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AnalogController extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Device.Analog.AnalogController" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class AnalogController&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type AnalogController = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Base class for Analog Controllers.
+            These control analog input pins.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AnalogController (System.Device.Gpio.PinNumberingScheme numberingScheme);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype System.Device.Gpio.PinNumberingScheme numberingScheme) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogController.#ctor(System.Device.Gpio.PinNumberingScheme)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (numberingScheme As PinNumberingScheme)" />
+      <MemberSignature Language="F#" Value="new System.Device.Analog.AnalogController : System.Device.Gpio.PinNumberingScheme -&gt; System.Device.Analog.AnalogController" Usage="new System.Device.Analog.AnalogController numberingScheme" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="numberingScheme" Type="System.Device.Gpio.PinNumberingScheme" />
+      </Parameters>
+      <Docs>
+        <param name="numberingScheme">The numbering scheme used to represent pins provided by the controller.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:System.Device.Gpio.GpioController" /> class that will use the specified numbering scheme and driver.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClosePin">
+      <MemberSignature Language="C#" Value="public virtual void ClosePin (System.Device.Analog.AnalogInputPin pin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ClosePin(class System.Device.Analog.AnalogInputPin pin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogController.ClosePin(System.Device.Analog.AnalogInputPin)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub ClosePin (pin As AnalogInputPin)" />
+      <MemberSignature Language="F#" Value="abstract member ClosePin : System.Device.Analog.AnalogInputPin -&gt; unit&#xA;override this.ClosePin : System.Device.Analog.AnalogInputPin -&gt; unit" Usage="analogController.ClosePin pin" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pin" Type="System.Device.Analog.AnalogInputPin" />
+      </Parameters>
+      <Docs>
+        <param name="pin">The pin to close</param>
+        <summary>
+            Closes the given pin
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertLogicalNumberingSchemeToPinNumber">
+      <MemberSignature Language="C#" Value="public virtual int ConvertLogicalNumberingSchemeToPinNumber (int logicalPinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 ConvertLogicalNumberingSchemeToPinNumber(int32 logicalPinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogController.ConvertLogicalNumberingSchemeToPinNumber(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ConvertLogicalNumberingSchemeToPinNumber (logicalPinNumber As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member ConvertLogicalNumberingSchemeToPinNumber : int -&gt; int&#xA;override this.ConvertLogicalNumberingSchemeToPinNumber : int -&gt; int" Usage="analogController.ConvertLogicalNumberingSchemeToPinNumber logicalPinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="logicalPinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="logicalPinNumber">Logical pin numbering of the board</param>
+        <summary>
+            Convert logical pin to caller's pin numbering scheme.
+            </summary>
+        <returns>Pin number in the scheme of the parent analog controller</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertPinNumberToLogicalNumberingScheme">
+      <MemberSignature Language="C#" Value="public virtual int ConvertPinNumberToLogicalNumberingScheme (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 ConvertPinNumberToLogicalNumberingScheme(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogController.ConvertPinNumberToLogicalNumberingScheme(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ConvertPinNumberToLogicalNumberingScheme (pinNumber As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member ConvertPinNumberToLogicalNumberingScheme : int -&gt; int&#xA;override this.ConvertPinNumberToLogicalNumberingScheme : int -&gt; int" Usage="analogController.ConvertPinNumberToLogicalNumberingScheme pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">Pin Number, in the numbering scheme of the analog controller</param>
+        <summary>
+            Convert the input pin number to logical pin numbers.
+            </summary>
+        <returns>Logical pin number</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogController.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="analogController.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogController.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="analogController.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>
+            Disposes this instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPinOpen">
+      <MemberSignature Language="C#" Value="public virtual bool IsPinOpen (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsPinOpen(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogController.IsPinOpen(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsPinOpen (pinNumber As Integer) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member IsPinOpen : int -&gt; bool&#xA;override this.IsPinOpen : int -&gt; bool" Usage="analogController.IsPinOpen pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <summary>
+            Checks if a specific pin is open.
+            </summary>
+        <returns>The status if the pin is open or closed.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberingScheme">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.PinNumberingScheme NumberingScheme { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Device.Gpio.PinNumberingScheme NumberingScheme" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Analog.AnalogController.NumberingScheme" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NumberingScheme As PinNumberingScheme" />
+      <MemberSignature Language="F#" Value="member this.NumberingScheme : System.Device.Gpio.PinNumberingScheme" Usage="System.Device.Analog.AnalogController.NumberingScheme" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinNumberingScheme</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The numbering scheme used to represent pins provided by the controller.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenPin">
+      <MemberSignature Language="C#" Value="public System.Device.Analog.AnalogInputPin OpenPin (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Device.Analog.AnalogInputPin OpenPin(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogController.OpenPin(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function OpenPin (pinNumber As Integer) As AnalogInputPin" />
+      <MemberSignature Language="F#" Value="member this.OpenPin : int -&gt; System.Device.Analog.AnalogInputPin" Usage="analogController.OpenPin pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Analog.AnalogInputPin</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <summary>
+            Opens a pin in order for it to be ready to use.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OpenPinCore">
+      <MemberSignature Language="C#" Value="protected abstract System.Device.Analog.AnalogInputPin OpenPinCore (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance class System.Device.Analog.AnalogInputPin OpenPinCore(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogController.OpenPinCore(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Function OpenPinCore (pinNumber As Integer) As AnalogInputPin" />
+      <MemberSignature Language="F#" Value="abstract member OpenPinCore : int -&gt; System.Device.Analog.AnalogInputPin" Usage="analogController.OpenPinCore pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Analog.AnalogInputPin</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">Pin number, in the logical pin numbering scheme</param>
+        <summary>
+            Overriden by derived classes: Returns an instance of the <see cref="T:System.Device.Analog.AnalogInputPin" /> for the specified pin.
+            </summary>
+        <returns>An instance of a pin</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PinCount">
+      <MemberSignature Language="C#" Value="public abstract int PinCount { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PinCount" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Analog.AnalogController.PinCount" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property PinCount As Integer" />
+      <MemberSignature Language="F#" Value="member this.PinCount : int" Usage="System.Device.Analog.AnalogController.PinCount" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The number of pins provided by the controller.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportsAnalogInput">
+      <MemberSignature Language="C#" Value="public abstract bool SupportsAnalogInput (int pin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool SupportsAnalogInput(int32 pin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogController.SupportsAnalogInput(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function SupportsAnalogInput (pin As Integer) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member SupportsAnalogInput : int -&gt; bool" Usage="analogController.SupportsAnalogInput pin" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pin" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pin">Number of the pin</param>
+        <summary>
+            Returns true if the given pin supports analog input
+            </summary>
+        <returns>True if the pin supports analog input</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VoltageReference">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential VoltageReference { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricPotential VoltageReference" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Analog.AnalogController.VoltageReference" />
+      <MemberSignature Language="VB.NET" Value="Public Property VoltageReference As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.VoltageReference : UnitsNet.ElectricPotential with get, set" Usage="System.Device.Analog.AnalogController.VoltageReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Reference voltage (the maximum voltage measurable).
+            For some hardware, it might be necessary to manually set this value for the <see cref="M:System.Device.Analog.AnalogInputPin.ReadVoltage" /> method to return correct values.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

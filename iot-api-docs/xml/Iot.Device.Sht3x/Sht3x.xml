@@ -10,6 +10,8 @@
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
     <AssemblyVersion>1.2.0.0</AssemblyVersion>
     <AssemblyVersion>1.3.0.0</AssemblyVersion>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -19,6 +21,12 @@
       <InterfaceName>System.IDisposable</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+      <AttributeName Language="C#">[System.Device.Model.Interface("Humidity and Temperature Sensor SHT3x")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Device.Model.Interface("Humidity and Temperature Sensor SHT3x")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
             Humidity and Temperature Sensor SHT3x
@@ -39,6 +47,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
@@ -69,6 +79,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -94,7 +106,15 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -116,10 +136,10 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Ratio Humidity" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Humidity As Ratio" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2" />
       <MemberSignature Language="F#" Value="member this.Humidity : UnitsNet.Ratio" Usage="Iot.Device.Sht3x.Sht3x.Humidity" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2" />
-      <MemberSignature Language="C#" Value="public UnitsNet.RelativeHumidity Humidity { get; }" FrameworkAlternate="iot-dotnet-1.3" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.RelativeHumidity Humidity" FrameworkAlternate="iot-dotnet-1.3" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Humidity As RelativeHumidity" FrameworkAlternate="iot-dotnet-1.3" />
-      <MemberSignature Language="F#" Value="member this.Humidity : UnitsNet.RelativeHumidity" Usage="Iot.Device.Sht3x.Sht3x.Humidity" FrameworkAlternate="iot-dotnet-1.3" />
+      <MemberSignature Language="C#" Value="public UnitsNet.RelativeHumidity Humidity { get; }" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.RelativeHumidity Humidity" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Humidity As RelativeHumidity" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="F#" Value="member this.Humidity : UnitsNet.RelativeHumidity" Usage="Iot.Device.Sht3x.Sht3x.Humidity" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -127,11 +147,19 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+          <AttributeName Language="C#">[System.Device.Model.Telemetry(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType FrameworkAlternate="iot-dotnet-1.0">System.Double</ReturnType>
         <ReturnType FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2">UnitsNet.Ratio</ReturnType>
-        <ReturnType FrameworkAlternate="iot-dotnet-1.3">UnitsNet.RelativeHumidity</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5">UnitsNet.RelativeHumidity</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -154,6 +182,8 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -179,7 +209,15 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>Iot.Device.Sht3x.Resolution</ReturnType>
       </ReturnValue>
@@ -197,9 +235,9 @@
       <MemberSignature Language="DocId" Value="P:Iot.Device.Sht3x.Sht3x.Temperature" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Temperature As Temperature" />
       <MemberSignature Language="F#" Value="member this.Temperature : Iot.Units.Temperature" Usage="Iot.Device.Sht3x.Sht3x.Temperature" FrameworkAlternate="iot-dotnet-1.0" />
-      <MemberSignature Language="C#" Value="public UnitsNet.Temperature Temperature { get; }" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature Temperature" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
-      <MemberSignature Language="F#" Value="member this.Temperature : UnitsNet.Temperature" Usage="Iot.Device.Sht3x.Sht3x.Temperature" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature Temperature { get; }" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature Temperature" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="F#" Value="member this.Temperature : UnitsNet.Temperature" Usage="Iot.Device.Sht3x.Sht3x.Temperature" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -207,10 +245,18 @@
         <AssemblyVersion>1.1.0.0</AssemblyVersion>
         <AssemblyVersion>1.2.0.0</AssemblyVersion>
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+          <AttributeName Language="C#">[System.Device.Model.Telemetry(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType FrameworkAlternate="iot-dotnet-1.0">Iot.Units.Temperature</ReturnType>
-        <ReturnType FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3">UnitsNet.Temperature</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5">UnitsNet.Temperature</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>

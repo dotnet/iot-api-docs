@@ -1,0 +1,182 @@
+<Type Name="CustomBoard" FullName="Iot.Device.Board.CustomBoard">
+  <TypeSignature Language="C#" Value="public class CustomBoard : Iot.Device.Board.GenericBoard" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CustomBoard extends Iot.Device.Board.GenericBoard" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Board.CustomBoard" />
+  <TypeSignature Language="VB.NET" Value="Public Class CustomBoard&#xA;Inherits GenericBoard" />
+  <TypeSignature Language="F#" Value="type CustomBoard = class&#xA;    inherit GenericBoard" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Board.GenericBoard</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A board that can be customized with user-specified drivers.
+            This should only be used if the drivers can't be auto-detected properly.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CustomBoard (System.Device.Gpio.GpioDriver gpioDriver, Func&lt;int,System.Device.I2c.I2cBus&gt; i2cBusCreator, Func&lt;System.Device.Spi.SpiConnectionSettings,System.Device.Spi.SpiDevice&gt; spiDeviceCreator, Func&lt;int,System.Device.Pwm.PwmChannel&gt; pwmChannelCreator);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Gpio.GpioDriver gpioDriver, class System.Func`2&lt;int32, class System.Device.I2c.I2cBus&gt; i2cBusCreator, class System.Func`2&lt;class System.Device.Spi.SpiConnectionSettings, class System.Device.Spi.SpiDevice&gt; spiDeviceCreator, class System.Func`2&lt;int32, class System.Device.Pwm.PwmChannel&gt; pwmChannelCreator) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.CustomBoard.#ctor(System.Device.Gpio.GpioDriver,System.Func{System.Int32,System.Device.I2c.I2cBus},System.Func{System.Device.Spi.SpiConnectionSettings,System.Device.Spi.SpiDevice},System.Func{System.Int32,System.Device.Pwm.PwmChannel})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (gpioDriver As GpioDriver, i2cBusCreator As Func(Of Integer, I2cBus), spiDeviceCreator As Func(Of SpiConnectionSettings, SpiDevice), pwmChannelCreator As Func(Of Integer, PwmChannel))" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Board.CustomBoard : System.Device.Gpio.GpioDriver * Func&lt;int, System.Device.I2c.I2cBus&gt; * Func&lt;System.Device.Spi.SpiConnectionSettings, System.Device.Spi.SpiDevice&gt; * Func&lt;int, System.Device.Pwm.PwmChannel&gt; -&gt; Iot.Device.Board.CustomBoard" Usage="new Iot.Device.Board.CustomBoard (gpioDriver, i2cBusCreator, spiDeviceCreator, pwmChannelCreator)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="gpioDriver" Type="System.Device.Gpio.GpioDriver" />
+        <Parameter Name="i2cBusCreator" Type="System.Func&lt;System.Int32,System.Device.I2c.I2cBus&gt;" />
+        <Parameter Name="spiDeviceCreator" Type="System.Func&lt;System.Device.Spi.SpiConnectionSettings,System.Device.Spi.SpiDevice&gt;" />
+        <Parameter Name="pwmChannelCreator" Type="System.Func&lt;System.Int32,System.Device.Pwm.PwmChannel&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="gpioDriver">GPIO driver to use</param>
+        <param name="i2cBusCreator">Function to create an I2C bus instance</param>
+        <param name="spiDeviceCreator">Function to create an SPI device</param>
+        <param name="pwmChannelCreator">Function to create a PWM channel</param>
+        <summary>
+            Creates a new custom board.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateI2cBusCore">
+      <MemberSignature Language="C#" Value="protected override Iot.Device.Board.I2cBusManager CreateI2cBusCore (int busNumber, int[]? pins);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class Iot.Device.Board.I2cBusManager CreateI2cBusCore(int32 busNumber, int32[] pins) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.CustomBoard.CreateI2cBusCore(System.Int32,System.Int32[])" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateI2cBusCore (busNumber As Integer, pins As Integer()) As I2cBusManager" />
+      <MemberSignature Language="F#" Value="override this.CreateI2cBusCore : int * int[] -&gt; Iot.Device.Board.I2cBusManager" Usage="customBoard.CreateI2cBusCore (busNumber, pins)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Board.I2cBusManager</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="busNumber" Type="System.Int32" />
+        <Parameter Name="pins" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="busNumber">To be added.</param>
+        <param name="pins">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSimplePwmChannel">
+      <MemberSignature Language="C#" Value="protected override System.Device.Pwm.PwmChannel CreateSimplePwmChannel (int chip, int channel, int frequency, double dutyCyclePercentage);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Device.Pwm.PwmChannel CreateSimplePwmChannel(int32 chip, int32 channel, int32 frequency, float64 dutyCyclePercentage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.CustomBoard.CreateSimplePwmChannel(System.Int32,System.Int32,System.Int32,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateSimplePwmChannel (chip As Integer, channel As Integer, frequency As Integer, dutyCyclePercentage As Double) As PwmChannel" />
+      <MemberSignature Language="F#" Value="override this.CreateSimplePwmChannel : int * int * int * double -&gt; System.Device.Pwm.PwmChannel" Usage="customBoard.CreateSimplePwmChannel (chip, channel, frequency, dutyCyclePercentage)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Pwm.PwmChannel</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="chip" Type="System.Int32" />
+        <Parameter Name="channel" Type="System.Int32" />
+        <Parameter Name="frequency" Type="System.Int32" />
+        <Parameter Name="dutyCyclePercentage" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="chip">To be added.</param>
+        <param name="channel">To be added.</param>
+        <param name="frequency">To be added.</param>
+        <param name="dutyCyclePercentage">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSimpleSpiDevice">
+      <MemberSignature Language="C#" Value="protected override System.Device.Spi.SpiDevice CreateSimpleSpiDevice (System.Device.Spi.SpiConnectionSettings settings, int[] pins);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Device.Spi.SpiDevice CreateSimpleSpiDevice(class System.Device.Spi.SpiConnectionSettings settings, int32[] pins) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.CustomBoard.CreateSimpleSpiDevice(System.Device.Spi.SpiConnectionSettings,System.Int32[])" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateSimpleSpiDevice (settings As SpiConnectionSettings, pins As Integer()) As SpiDevice" />
+      <MemberSignature Language="F#" Value="override this.CreateSimpleSpiDevice : System.Device.Spi.SpiConnectionSettings * int[] -&gt; System.Device.Spi.SpiDevice" Usage="customBoard.CreateSimpleSpiDevice (settings, pins)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Spi.SpiDevice</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="settings" Type="System.Device.Spi.SpiConnectionSettings" />
+        <Parameter Name="pins" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="settings">To be added.</param>
+        <param name="pins">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultI2cBusNumber">
+      <MemberSignature Language="C#" Value="public override int GetDefaultI2cBusNumber ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDefaultI2cBusNumber() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.CustomBoard.GetDefaultI2cBusNumber" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetDefaultI2cBusNumber () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetDefaultI2cBusNumber : unit -&gt; int" Usage="customBoard.GetDefaultI2cBusNumber " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="TryCreateBestGpioDriver">
+      <MemberSignature Language="C#" Value="protected override System.Device.Gpio.GpioDriver? TryCreateBestGpioDriver ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Device.Gpio.GpioDriver TryCreateBestGpioDriver() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.CustomBoard.TryCreateBestGpioDriver" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function TryCreateBestGpioDriver () As GpioDriver" />
+      <MemberSignature Language="F#" Value="override this.TryCreateBestGpioDriver : unit -&gt; System.Device.Gpio.GpioDriver" Usage="customBoard.TryCreateBestGpioDriver " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.GpioDriver</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the GPIO driver
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
