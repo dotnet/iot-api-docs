@@ -1,0 +1,421 @@
+<Type Name="AnalogInputPin" FullName="System.Device.Analog.AnalogInputPin">
+  <TypeSignature Language="C#" Value="public abstract class AnalogInputPin : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit AnalogInputPin extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:System.Device.Analog.AnalogInputPin" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class AnalogInputPin&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type AnalogInputPin = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.4.0.0</AssemblyVersion>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Driver for analog input pins
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AnalogInputPin (System.Device.Analog.AnalogController controller, int pinNumber, UnitsNet.ElectricPotential voltageReference);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Analog.AnalogController controller, int32 pinNumber, valuetype UnitsNet.ElectricPotential voltageReference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogInputPin.#ctor(System.Device.Analog.AnalogController,System.Int32,UnitsNet.ElectricPotential)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (controller As AnalogController, pinNumber As Integer, voltageReference As ElectricPotential)" />
+      <MemberSignature Language="F#" Value="new System.Device.Analog.AnalogInputPin : System.Device.Analog.AnalogController * int * UnitsNet.ElectricPotential -&gt; System.Device.Analog.AnalogInputPin" Usage="new System.Device.Analog.AnalogInputPin (controller, pinNumber, voltageReference)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="controller" Type="System.Device.Analog.AnalogController" />
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="voltageReference" Type="UnitsNet.ElectricPotential" />
+      </Parameters>
+      <Docs>
+        <param name="controller">To be added.</param>
+        <param name="pinNumber">To be added.</param>
+        <param name="voltageReference">To be added.</param>
+        <summary>
+            Construct an instance of an analog pin.
+            This is not usually called directly. Use <see cref="M:System.Device.Analog.AnalogController.OpenPin(System.Int32)" /> instead.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdcResolutionBits">
+      <MemberSignature Language="C#" Value="public abstract int AdcResolutionBits { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AdcResolutionBits" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Analog.AnalogInputPin.AdcResolutionBits" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property AdcResolutionBits As Integer" />
+      <MemberSignature Language="F#" Value="member this.AdcResolutionBits : int" Usage="System.Device.Analog.AnalogInputPin.AdcResolutionBits" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Resolution of the Analog-to-Digital converter in bits. If the ADC supports negative values, the sign bit is also counted.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Controller">
+      <MemberSignature Language="C#" Value="protected System.Device.Analog.AnalogController Controller { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Device.Analog.AnalogController Controller" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Analog.AnalogInputPin.Controller" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property Controller As AnalogController" />
+      <MemberSignature Language="F#" Value="member this.Controller : System.Device.Analog.AnalogController" Usage="System.Device.Analog.AnalogInputPin.Controller" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Analog.AnalogController</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Reference to the controller for this pin
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertToVoltage">
+      <MemberSignature Language="C#" Value="protected virtual UnitsNet.ElectricPotential ConvertToVoltage (uint rawValue);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance valuetype UnitsNet.ElectricPotential ConvertToVoltage(unsigned int32 rawValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogInputPin.ConvertToVoltage(System.UInt32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function ConvertToVoltage (rawValue As UInteger) As ElectricPotential" />
+      <MemberSignature Language="F#" Value="abstract member ConvertToVoltage : uint32 -&gt; UnitsNet.ElectricPotential&#xA;override this.ConvertToVoltage : uint32 -&gt; UnitsNet.ElectricPotential" Usage="analogInputPin.ConvertToVoltage rawValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawValue" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="rawValue">To be added.</param>
+        <summary>
+            Converts an input raw value to a voltage
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableAnalogValueChangedEvent">
+      <MemberSignature Language="C#" Value="public abstract void DisableAnalogValueChangedEvent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void DisableAnalogValueChangedEvent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogInputPin.DisableAnalogValueChangedEvent" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub DisableAnalogValueChangedEvent ()" />
+      <MemberSignature Language="F#" Value="abstract member DisableAnalogValueChangedEvent : unit -&gt; unit" Usage="analogInputPin.DisableAnalogValueChangedEvent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disables the event callback
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogInputPin.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="analogInputPin.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose this instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogInputPin.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="analogInputPin.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>
+            Dispose this instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableAnalogValueChangedEvent">
+      <MemberSignature Language="C#" Value="public abstract void EnableAnalogValueChangedEvent (System.Device.Gpio.GpioController? masterController, int masterPin);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void EnableAnalogValueChangedEvent(class System.Device.Gpio.GpioController masterController, int32 masterPin) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogInputPin.EnableAnalogValueChangedEvent(System.Device.Gpio.GpioController,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub EnableAnalogValueChangedEvent (masterController As GpioController, masterPin As Integer)" />
+      <MemberSignature Language="F#" Value="abstract member EnableAnalogValueChangedEvent : System.Device.Gpio.GpioController * int -&gt; unit" Usage="analogInputPin.EnableAnalogValueChangedEvent (masterController, masterPin)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="masterController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="masterPin" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="masterController">If an external interrupt handler is required, it can be provided here. Can be null if another interrupt feature is available</param>
+        <param name="masterPin">Input pin on the master controller.</param>
+        <summary>
+            Enable event callback when the value of this pin changes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FireValueChanged">
+      <MemberSignature Language="C#" Value="protected void FireValueChanged (System.Device.Analog.ValueChangedEventArgs eventArgs);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void FireValueChanged(class System.Device.Analog.ValueChangedEventArgs eventArgs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogInputPin.FireValueChanged(System.Device.Analog.ValueChangedEventArgs)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub FireValueChanged (eventArgs As ValueChangedEventArgs)" />
+      <MemberSignature Language="F#" Value="member this.FireValueChanged : System.Device.Analog.ValueChangedEventArgs -&gt; unit" Usage="analogInputPin.FireValueChanged eventArgs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eventArgs" Type="System.Device.Analog.ValueChangedEventArgs" />
+      </Parameters>
+      <Docs>
+        <param name="eventArgs">New value</param>
+        <summary>
+            Fires a value changed event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaxVoltage">
+      <MemberSignature Language="C#" Value="public abstract UnitsNet.ElectricPotential MaxVoltage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricPotential MaxVoltage" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Analog.AnalogInputPin.MaxVoltage" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property MaxVoltage As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.MaxVoltage : UnitsNet.ElectricPotential" Usage="System.Device.Analog.AnalogInputPin.MaxVoltage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The largest measurable voltage.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinVoltage">
+      <MemberSignature Language="C#" Value="public abstract UnitsNet.ElectricPotential MinVoltage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricPotential MinVoltage" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Analog.AnalogInputPin.MinVoltage" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property MinVoltage As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.MinVoltage : UnitsNet.ElectricPotential" Usage="System.Device.Analog.AnalogInputPin.MinVoltage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The minimum measurable voltage. May be negative.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PinNumber">
+      <MemberSignature Language="C#" Value="public int PinNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PinNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Analog.AnalogInputPin.PinNumber" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PinNumber As Integer" />
+      <MemberSignature Language="F#" Value="member this.PinNumber : int" Usage="System.Device.Analog.AnalogInputPin.PinNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The logical pin number of this instance.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadRaw">
+      <MemberSignature Language="C#" Value="public abstract uint ReadRaw ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int32 ReadRaw() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogInputPin.ReadRaw" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function ReadRaw () As UInteger" />
+      <MemberSignature Language="F#" Value="abstract member ReadRaw : unit -&gt; uint32" Usage="analogInputPin.ReadRaw " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read a raw value from the pin
+            </summary>
+        <returns>Raw value of the analog input. Scale depends on hardware.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadVoltage">
+      <MemberSignature Language="C#" Value="public virtual UnitsNet.ElectricPotential ReadVoltage ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype UnitsNet.ElectricPotential ReadVoltage() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogInputPin.ReadVoltage" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ReadVoltage () As ElectricPotential" />
+      <MemberSignature Language="F#" Value="abstract member ReadVoltage : unit -&gt; UnitsNet.ElectricPotential&#xA;override this.ReadVoltage : unit -&gt; UnitsNet.ElectricPotential" Usage="analogInputPin.ReadVoltage " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read a raw value and convert it to a voltage
+            </summary>
+        <returns>Reads a new value from the input and converts it to a voltage. For many boards, the <see cref="P:System.Device.Analog.AnalogInputPin.VoltageReference" /> needs to be correctly set for this to work.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueChanged">
+      <MemberSignature Language="C#" Value="public event System.Device.Analog.ValueChangedEventHandler? ValueChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Device.Analog.ValueChangedEventHandler ValueChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Device.Analog.AnalogInputPin.ValueChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Event ValueChanged As ValueChangedEventHandler " />
+      <MemberSignature Language="F#" Value="member this.ValueChanged : System.Device.Analog.ValueChangedEventHandler " Usage="member this.ValueChanged : System.Device.Analog.ValueChangedEventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Analog.ValueChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Fires when a value is changed for which a trigger is registered
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VoltageReference">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential VoltageReference { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricPotential VoltageReference" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Analog.AnalogInputPin.VoltageReference" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property VoltageReference As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.VoltageReference : UnitsNet.ElectricPotential" Usage="System.Device.Analog.AnalogInputPin.VoltageReference" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.4.0.0</AssemblyVersion>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The reference voltage level to convert raw values into voltages.
+            Some boards (i.e. the ADS111x series) always return an absolute voltage. Then this value is meaningless.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

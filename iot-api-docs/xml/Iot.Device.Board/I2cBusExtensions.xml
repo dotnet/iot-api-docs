@@ -1,0 +1,54 @@
+<Type Name="I2cBusExtensions" FullName="Iot.Device.Board.I2cBusExtensions">
+  <TypeSignature Language="C#" Value="public static class I2cBusExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit I2cBusExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Board.I2cBusExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module I2cBusExtensions" />
+  <TypeSignature Language="F#" Value="type I2cBusExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Contains extension methods that operate on the I2c bus
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="PerformBusScan">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.List&lt;int&gt; PerformBusScan (this System.Device.I2c.I2cBus bus, int lowest = 3, int highest = 119);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.List`1&lt;int32&gt; PerformBusScan(class System.Device.I2c.I2cBus bus, int32 lowest, int32 highest) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.I2cBusExtensions.PerformBusScan(System.Device.I2c.I2cBus,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function PerformBusScan (bus As I2cBus, Optional lowest As Integer = 3, Optional highest As Integer = 119) As List(Of Integer)" />
+      <MemberSignature Language="F#" Value="static member PerformBusScan : System.Device.I2c.I2cBus * int * int -&gt; System.Collections.Generic.List&lt;int&gt;" Usage="Iot.Device.Board.I2cBusExtensions.PerformBusScan (bus, lowest, highest)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bus" Type="System.Device.I2c.I2cBus" RefType="this" />
+        <Parameter Name="lowest" Type="System.Int32" />
+        <Parameter Name="highest" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bus">The bus to scan</param>
+        <param name="lowest">The lowest address to scan. Default 0x03</param>
+        <param name="highest">The highest address to scan. Default 0x77</param>
+        <summary>
+            Performs a scan on the I2C bus, returning the addresses for all connected devices.
+            </summary>
+        <returns>A list of bus addresses that are in use, an empty list if no device was found</returns>
+        <remarks>This method should never throw an exception. Bus scanning may interfere with normal device operation,
+            so this should not be done while devices are being used.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

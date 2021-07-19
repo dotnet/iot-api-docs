@@ -1,0 +1,230 @@
+<Type Name="LcdValueUnitDisplay" FullName="Iot.Device.CharacterLcd.LcdValueUnitDisplay">
+  <TypeSignature Language="C#" Value="public class LcdValueUnitDisplay" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit LcdValueUnitDisplay extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.CharacterLcd.LcdValueUnitDisplay" />
+  <TypeSignature Language="VB.NET" Value="Public Class LcdValueUnitDisplay" />
+  <TypeSignature Language="F#" Value="type LcdValueUnitDisplay = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>1.5.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Displays a value and an unit in a big font on an LCD Display.
+            Requires a display with at least 20x4 characters
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LcdValueUnitDisplay (Iot.Device.CharacterLcd.ICharacterLcd lcd, System.Globalization.CultureInfo culture);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.CharacterLcd.ICharacterLcd lcd, class System.Globalization.CultureInfo culture) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdValueUnitDisplay.#ctor(Iot.Device.CharacterLcd.ICharacterLcd,System.Globalization.CultureInfo)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (lcd As ICharacterLcd, culture As CultureInfo)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.CharacterLcd.LcdValueUnitDisplay : Iot.Device.CharacterLcd.ICharacterLcd * System.Globalization.CultureInfo -&gt; Iot.Device.CharacterLcd.LcdValueUnitDisplay" Usage="new Iot.Device.CharacterLcd.LcdValueUnitDisplay (lcd, culture)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="lcd" Type="Iot.Device.CharacterLcd.ICharacterLcd" />
+        <Parameter Name="culture" Type="System.Globalization.CultureInfo" />
+      </Parameters>
+      <Docs>
+        <param name="lcd">Interface to the display</param>
+        <param name="culture">User culture</param>
+        <summary>
+            Creates an instance of <see cref="T:Iot.Device.CharacterLcd.LcdValueUnitDisplay" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdValueUnitDisplay.Clear" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
+      <MemberSignature Language="F#" Value="member this.Clear : unit -&gt; unit" Usage="lcdValueUnitDisplay.Clear " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clears the display
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Culture">
+      <MemberSignature Language="C#" Value="public System.Globalization.CultureInfo Culture { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Globalization.CultureInfo Culture" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.CharacterLcd.LcdValueUnitDisplay.Culture" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Culture As CultureInfo" />
+      <MemberSignature Language="F#" Value="member this.Culture : System.Globalization.CultureInfo" Usage="Iot.Device.CharacterLcd.LcdValueUnitDisplay.Culture" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Globalization.CultureInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the active culture.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayBigTextAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task DisplayBigTextAsync (string text, TimeSpan scrollSpeed, System.Threading.CancellationToken cancellationToken);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task DisplayBigTextAsync(string text, valuetype System.TimeSpan scrollSpeed, valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdValueUnitDisplay.DisplayBigTextAsync(System.String,System.TimeSpan,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function DisplayBigTextAsync (text As String, scrollSpeed As TimeSpan, cancellationToken As CancellationToken) As Task" />
+      <MemberSignature Language="F#" Value="member this.DisplayBigTextAsync : string * TimeSpan * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task" Usage="lcdValueUnitDisplay.DisplayBigTextAsync (text, scrollSpeed, cancellationToken)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="text" Type="System.String" />
+        <Parameter Name="scrollSpeed" Type="System.TimeSpan" />
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="text">Text to display</param>
+        <param name="scrollSpeed">Speed between scroll steps (one step being one display cell width)</param>
+        <param name="cancellationToken">Token for cancelling the operation</param>
+        <summary>
+            Scrolls a text in big font trough the display
+            </summary>
+        <returns>A task handle</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayTime">
+      <MemberSignature Language="C#" Value="public void DisplayTime (DateTime dateTime, string format = &quot;t&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DisplayTime(valuetype System.DateTime dateTime, string format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdValueUnitDisplay.DisplayTime(System.DateTime,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DisplayTime (dateTime As DateTime, Optional format As String = &quot;t&quot;)" />
+      <MemberSignature Language="F#" Value="member this.DisplayTime : DateTime * string -&gt; unit" Usage="lcdValueUnitDisplay.DisplayTime (dateTime, format)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dateTime" Type="System.DateTime" />
+        <Parameter Name="format" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="dateTime">Time to display</param>
+        <param name="format">Time format specifier, default "t" (default short time format with hours and minutes and eventually AM/PM).
+            Anything after the first space in the formatted string is printed as small text. This will for instance be AM/PM when the format specifier "T" is used,
+            since only 6 chars (and two separators) fit on the display.</param>
+        <summary>
+            Display the current time
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayValue">
+      <MemberSignature Language="C#" Value="public void DisplayValue (string formattedValue, string unitText = &quot;&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DisplayValue(string formattedValue, string unitText) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdValueUnitDisplay.DisplayValue(System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DisplayValue (formattedValue As String, Optional unitText As String = &quot;&quot;)" />
+      <MemberSignature Language="F#" Value="member this.DisplayValue : string * string -&gt; unit" Usage="lcdValueUnitDisplay.DisplayValue (formattedValue, unitText)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="formattedValue" Type="System.String" />
+        <Parameter Name="unitText" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="formattedValue">Pre-formatted value to print</param>
+        <param name="unitText">Unit or name of value. This is printed in normal small font on the bottom right corner of the display. </param>
+        <summary>
+            Display the given value/unit pair. The value must be pre-formatted with the required number of digits, ie. "2.01".
+            The value should only contain one of ".", ":" or ",", or the printed result may be unexpected.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitForRom">
+      <MemberSignature Language="C#" Value="public void InitForRom (string romName, Iot.Device.Graphics.LcdCharacterEncodingFactory? factory = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void InitForRom(string romName, class Iot.Device.Graphics.LcdCharacterEncodingFactory factory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdValueUnitDisplay.InitForRom(System.String,Iot.Device.Graphics.LcdCharacterEncodingFactory)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub InitForRom (romName As String, Optional factory As LcdCharacterEncodingFactory = Nothing)" />
+      <MemberSignature Language="F#" Value="member this.InitForRom : string * Iot.Device.Graphics.LcdCharacterEncodingFactory -&gt; unit" Usage="lcdValueUnitDisplay.InitForRom (romName, factory)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="romName" Type="System.String" />
+        <Parameter Name="factory" Type="Iot.Device.Graphics.LcdCharacterEncodingFactory" />
+      </Parameters>
+      <Docs>
+        <param name="romName">Name of the character Rom, required to properly print culture-specific characters in the small text display</param>
+        <param name="factory">Encoding factory or null</param>
+        <summary>
+            Initializes the display for use as a big-number display.
+            Configures the display with some graphic blocks for the display of big numbers.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopShowing">
+      <MemberSignature Language="C#" Value="public void StopShowing ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StopShowing() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.CharacterLcd.LcdValueUnitDisplay.StopShowing" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StopShowing ()" />
+      <MemberSignature Language="F#" Value="member this.StopShowing : unit -&gt; unit" Usage="lcdValueUnitDisplay.StopShowing " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>1.5.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stop showing big characters.
+            This method can be used to signal that the display will be used for different purposes. Before a Display method is used,
+            <see cref="M:Iot.Device.CharacterLcd.LcdValueUnitDisplay.InitForRom(System.String,Iot.Device.Graphics.LcdCharacterEncodingFactory)" /> needs to be called again. This clears the display.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
