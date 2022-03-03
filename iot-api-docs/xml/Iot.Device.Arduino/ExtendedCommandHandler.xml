@@ -1,0 +1,394 @@
+<Type Name="ExtendedCommandHandler" FullName="Iot.Device.Arduino.ExtendedCommandHandler">
+  <TypeSignature Language="C#" Value="public abstract class ExtendedCommandHandler : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ExtendedCommandHandler extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Arduino.ExtendedCommandHandler" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ExtendedCommandHandler&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type ExtendedCommandHandler = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Base class for specific command handlers for the Arduino firmware
+            This class can be derived to support special features of the Arduino firmware
+            for a specific board. See <see cref="T:Iot.Device.Arduino.DhtSensor" /> or <see cref="T:Iot.Device.Arduino.FrequencySensor" /> as examples.
+            See https://github.com/firmata/ConfigurableFirmata for a list of possible extensions.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ExtendedCommandHandler ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ExtendedCommandHandler.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Constructs an instance of this class without a specific pin assignment.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ExtendedCommandHandler (Iot.Device.Arduino.SupportedMode? handlesMode);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Arduino.SupportedMode handlesMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ExtendedCommandHandler.#ctor(Iot.Device.Arduino.SupportedMode)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (handlesMode As SupportedMode)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Arduino.ExtendedCommandHandler : Iot.Device.Arduino.SupportedMode -&gt; Iot.Device.Arduino.ExtendedCommandHandler" Usage="new Iot.Device.Arduino.ExtendedCommandHandler handlesMode" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="handlesMode" Type="Iot.Device.Arduino.SupportedMode" />
+      </Parameters>
+      <Docs>
+        <param name="handlesMode">The pin mode that this handler uses. Can be null for software-only
+            modules (such as the FirmataScheduler)</param>
+        <summary>
+            Constructs an instance of this class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Board">
+      <MemberSignature Language="C#" Value="public Iot.Device.Arduino.ArduinoBoard Board { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Arduino.ArduinoBoard Board" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Arduino.ExtendedCommandHandler.Board" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Board As ArduinoBoard" />
+      <MemberSignature Language="F#" Value="member this.Board : Iot.Device.Arduino.ArduinoBoard" Usage="Iot.Device.Arduino.ExtendedCommandHandler.Board" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Arduino.ArduinoBoard</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The reference to the arduino board
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ExtendedCommandHandler.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="extendedCommandHandler.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ExtendedCommandHandler.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="extendedCommandHandler.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>
+            Disposes this instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandlesMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Arduino.SupportedMode? HandlesMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Arduino.SupportedMode HandlesMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Arduino.ExtendedCommandHandler.HandlesMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HandlesMode As SupportedMode" />
+      <MemberSignature Language="F#" Value="member this.HandlesMode : Iot.Device.Arduino.SupportedMode" Usage="Iot.Device.Arduino.ExtendedCommandHandler.HandlesMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Arduino.SupportedMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The pin mode this handler supports.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsRegistered">
+      <MemberSignature Language="C#" Value="protected bool IsRegistered { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsRegistered" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Arduino.ExtendedCommandHandler.IsRegistered" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property IsRegistered As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsRegistered : bool" Usage="Iot.Device.Arduino.ExtendedCommandHandler.IsRegistered" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if this command handler is registered.
+            This might need to be checked in Dispose, to make sure an uninitialized component doesn't attempt
+            to send a command.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Logger">
+      <MemberSignature Language="C#" Value="public Microsoft.Extensions.Logging.ILogger Logger { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Extensions.Logging.ILogger Logger" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Arduino.ExtendedCommandHandler.Logger" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Logger As ILogger" />
+      <MemberSignature Language="F#" Value="member this.Logger : Microsoft.Extensions.Logging.ILogger" Usage="Iot.Device.Arduino.ExtendedCommandHandler.Logger" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.Logging.ILogger</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The class-specific logger instance
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnConnected">
+      <MemberSignature Language="C#" Value="protected internal virtual void OnConnected ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void OnConnected() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ExtendedCommandHandler.OnConnected" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Sub OnConnected ()" />
+      <MemberSignature Language="F#" Value="abstract member OnConnected : unit -&gt; unit&#xA;override this.OnConnected : unit -&gt; unit" Usage="extendedCommandHandler.OnConnected " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            This method is called when a connection to the hardware is
+            established.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnSysexData">
+      <MemberSignature Language="C#" Value="protected virtual void OnSysexData (Iot.Device.Arduino.ReplyType type, byte[] data);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void OnSysexData(valuetype Iot.Device.Arduino.ReplyType type, unsigned int8[] data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ExtendedCommandHandler.OnSysexData(Iot.Device.Arduino.ReplyType,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub OnSysexData (type As ReplyType, data As Byte())" />
+      <MemberSignature Language="F#" Value="abstract member OnSysexData : Iot.Device.Arduino.ReplyType * byte[] -&gt; unit&#xA;override this.OnSysexData : Iot.Device.Arduino.ReplyType * byte[] -&gt; unit" Usage="extendedCommandHandler.OnSysexData (type, data)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="type" Type="Iot.Device.Arduino.ReplyType" />
+        <Parameter Name="data" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="type">Type of data received from the hardware. This should normally be <see cref="F:Iot.Device.Arduino.ReplyType.SysexCommand" />,
+            unless the hardware sends unencoded Ascii messages</param>
+        <param name="data">The binary representation of the received data</param>
+        <summary>
+            This is called when a sysex command is received from the board.
+            This can include the reply to a command sent by a <see cref="M:Iot.Device.Arduino.ExtendedCommandHandler.SendCommandAndWait(Iot.Device.Arduino.FirmataCommandSequence)" /> before, in which case
+            the reply should be ignored, as it is returned as result of the call itself.
+            </summary>
+        <remarks>The implementation needs to check whether the data is for itself. The messages are not filtered by requester!</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendCommand">
+      <MemberSignature Language="C#" Value="protected void SendCommand (Iot.Device.Arduino.FirmataCommandSequence commandSequence);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void SendCommand(class Iot.Device.Arduino.FirmataCommandSequence commandSequence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ExtendedCommandHandler.SendCommand(Iot.Device.Arduino.FirmataCommandSequence)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub SendCommand (commandSequence As FirmataCommandSequence)" />
+      <MemberSignature Language="F#" Value="member this.SendCommand : Iot.Device.Arduino.FirmataCommandSequence -&gt; unit" Usage="extendedCommandHandler.SendCommand commandSequence" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandSequence" Type="Iot.Device.Arduino.FirmataCommandSequence" />
+      </Parameters>
+      <Docs>
+        <param name="commandSequence">A command sequence. This
+            should normally be a sysex command.</param>
+        <summary>
+            Sends a command to the device, not expecting an answer.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendCommandAndWait">
+      <MemberSignature Language="C#" Value="protected byte[] SendCommandAndWait (Iot.Device.Arduino.FirmataCommandSequence commandSequence);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance unsigned int8[] SendCommandAndWait(class Iot.Device.Arduino.FirmataCommandSequence commandSequence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ExtendedCommandHandler.SendCommandAndWait(Iot.Device.Arduino.FirmataCommandSequence)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function SendCommandAndWait (commandSequence As FirmataCommandSequence) As Byte()" />
+      <MemberSignature Language="F#" Value="member this.SendCommandAndWait : Iot.Device.Arduino.FirmataCommandSequence -&gt; byte[]" Usage="extendedCommandHandler.SendCommandAndWait commandSequence" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandSequence" Type="Iot.Device.Arduino.FirmataCommandSequence" />
+      </Parameters>
+      <Docs>
+        <param name="commandSequence">Command to send. This
+            should normally be a sysex command.</param>
+        <summary>
+            Send a command to the device, expecting a reply. This uses a default timeout.
+            </summary>
+        <returns>The reply packet</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TimeoutException">The timeout elapsed before a reply was received.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendCommandAndWait">
+      <MemberSignature Language="C#" Value="protected byte[] SendCommandAndWait (Iot.Device.Arduino.FirmataCommandSequence commandSequence, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance unsigned int8[] SendCommandAndWait(class Iot.Device.Arduino.FirmataCommandSequence commandSequence, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ExtendedCommandHandler.SendCommandAndWait(Iot.Device.Arduino.FirmataCommandSequence,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function SendCommandAndWait (commandSequence As FirmataCommandSequence, timeout As TimeSpan) As Byte()" />
+      <MemberSignature Language="F#" Value="member this.SendCommandAndWait : Iot.Device.Arduino.FirmataCommandSequence * TimeSpan -&gt; byte[]" Usage="extendedCommandHandler.SendCommandAndWait (commandSequence, timeout)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandSequence" Type="Iot.Device.Arduino.FirmataCommandSequence" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="commandSequence">Command to send. This
+            should normally be a sysex command.</param>
+        <param name="timeout">Command timeout</param>
+        <summary>
+            Send a command to the device, expecting a reply.
+            </summary>
+        <returns>The reply packet</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TimeoutException">The timeout elapsed before a reply was received.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SendCommandAndWait">
+      <MemberSignature Language="C#" Value="protected byte[] SendCommandAndWait (Iot.Device.Arduino.FirmataCommandSequence commandSequence, TimeSpan timeout, out Iot.Device.Arduino.CommandError error);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance unsigned int8[] SendCommandAndWait(class Iot.Device.Arduino.FirmataCommandSequence commandSequence, valuetype System.TimeSpan timeout, [out] valuetype Iot.Device.Arduino.CommandError&amp; error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ExtendedCommandHandler.SendCommandAndWait(Iot.Device.Arduino.FirmataCommandSequence,System.TimeSpan,Iot.Device.Arduino.CommandError@)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function SendCommandAndWait (commandSequence As FirmataCommandSequence, timeout As TimeSpan, ByRef error As CommandError) As Byte()" />
+      <MemberSignature Language="F#" Value="member this.SendCommandAndWait : Iot.Device.Arduino.FirmataCommandSequence * TimeSpan * CommandError -&gt; byte[]" Usage="extendedCommandHandler.SendCommandAndWait (commandSequence, timeout, error)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="commandSequence" Type="Iot.Device.Arduino.FirmataCommandSequence" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="error" Type="Iot.Device.Arduino.CommandError" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="commandSequence">Command to send. This
+            should normally be a sysex command.</param>
+        <param name="timeout">Command timeout</param>
+        <param name="error">An error code in case of a failure</param>
+        <summary>
+            Send a command to the device, expecting a reply.
+            </summary>
+        <returns>The reply packet</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.TimeoutException">The timeout elapsed before a reply was received.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

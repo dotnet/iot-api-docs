@@ -7,6 +7,8 @@
   <AssemblyInfo>
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>1.5.0.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -29,6 +31,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
@@ -51,6 +55,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -73,6 +79,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -95,6 +103,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -107,7 +117,8 @@
         <summary>
             Try to read pressure from sensor.
             </summary>
-        <returns />
+        <returns>
+          <c>True</c> on success, <c>False</c> otherwise</returns>
         <remarks>Range is 300Pa to 1100hPa</remarks>
       </Docs>
     </Member>
@@ -121,6 +132,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -133,7 +146,8 @@
         <summary>
             Try to read the temperature from the barometer sensor.
             </summary>
-        <returns />
+        <returns>
+          <c>True</c> on success, <c>False</c> otherwise</returns>
         <remarks>Range is -40 to 80 Celsius.</remarks>
       </Docs>
     </Member>
@@ -147,6 +161,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -159,7 +175,8 @@
         <summary>
             Try to read illuminance from sensor.
             </summary>
-        <returns />
+        <returns>
+          <c>True</c> on success, <c>False</c> otherwise</returns>
         <remarks>Range is 0 to 1800 Lux.</remarks>
       </Docs>
     </Member>
@@ -173,6 +190,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -185,8 +204,10 @@
         <summary>
             Try to read the temperature from the off board thermometer.
             </summary>
-        <returns />
+        <returns>
+          <c>True</c> on success, <c>False</c> otherwise</returns>
         <remarks>Range is -30 to 127 Celsius.</remarks>
+        <exception cref="T:System.IO.IOException">Thrown when ext. temperature sensor not found.</exception>
       </Docs>
     </Member>
     <Member MemberName="TryReadOnBoardTemperature">
@@ -199,6 +220,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -211,7 +234,8 @@
         <summary>
             Try to read temperature from on board sensor
             </summary>
-        <returns />
+        <returns>
+          <c>True</c> on success, <c>False</c> otherwise</returns>
         <remarks>To be added.</remarks>
         <remakrs>Range is -20 to 60 Celsius</remakrs>
       </Docs>
@@ -226,6 +250,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -238,7 +264,8 @@
         <summary>
             Try to read relative humidity from sensor.
             </summary>
-        <returns />
+        <returns>
+          <c>True</c> on success, <c>False</c> otherwise</returns>
         <remarks>Range is 25 to 95 percent</remarks>
       </Docs>
     </Member>

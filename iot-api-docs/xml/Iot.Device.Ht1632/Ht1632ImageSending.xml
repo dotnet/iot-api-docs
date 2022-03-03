@@ -1,0 +1,129 @@
+<Type Name="Ht1632ImageSending" FullName="Iot.Device.Ht1632.Ht1632ImageSending">
+  <TypeSignature Language="C#" Value="public static class Ht1632ImageSending" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Ht1632ImageSending extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ht1632.Ht1632ImageSending" />
+  <TypeSignature Language="VB.NET" Value="Public Module Ht1632ImageSending" />
+  <TypeSignature Language="F#" Value="type Ht1632ImageSending = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Extension for sending image
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="LinearBrightnessConvertor">
+      <MemberSignature Language="C#" Value="public static bool LinearBrightnessConvertor (SixLabors.ImageSharp.PixelFormats.IPixel pixel);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool LinearBrightnessConvertor(class SixLabors.ImageSharp.PixelFormats.IPixel pixel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ht1632.Ht1632ImageSending.LinearBrightnessConvertor(SixLabors.ImageSharp.PixelFormats.IPixel)" />
+      <MemberSignature Language="VB.NET" Value="Public Function LinearBrightnessConvertor (pixel As IPixel) As Boolean" />
+      <MemberSignature Language="F#" Value="static member LinearBrightnessConvertor : SixLabors.ImageSharp.PixelFormats.IPixel -&gt; bool" Usage="Iot.Device.Ht1632.Ht1632ImageSending.LinearBrightnessConvertor pixel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pixel" Type="SixLabors.ImageSharp.PixelFormats.IPixel" />
+      </Parameters>
+      <Docs>
+        <param name="pixel">Input pixel</param>
+        <summary>
+            Lit if average value of RGB is greater than half.
+            </summary>
+        <returns>True if average value of RGB is greater than half.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowImageWith16Com&lt;TPixel&gt;">
+      <MemberSignature Language="C#" Value="public static void ShowImageWith16Com&lt;TPixel&gt; (this Iot.Device.Ht1632.Ht1632 ht1632, SixLabors.ImageSharp.Image&lt;TPixel&gt; image, Iot.Device.Ht1632.Ht1632ImageSending.BrightnessConvertor? brightnessConvertor = default) where TPixel : struct;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShowImageWith16Com&lt;struct .ctor (class System.ValueType, class SixLabors.ImageSharp.PixelFormats.IPixel`1&lt;!!TPixel&gt;) TPixel&gt;(class Iot.Device.Ht1632.Ht1632 ht1632, class SixLabors.ImageSharp.Image`1&lt;!!TPixel&gt; image, class Iot.Device.Ht1632.Ht1632ImageSending/BrightnessConvertor brightnessConvertor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ht1632.Ht1632ImageSending.ShowImageWith16Com``1(Iot.Device.Ht1632.Ht1632,SixLabors.ImageSharp.Image{``0},Iot.Device.Ht1632.Ht1632ImageSending.BrightnessConvertor)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub ShowImageWith16Com(Of TPixel As Structure) (ht1632 As Ht1632, image As Image(Of TPixel), Optional brightnessConvertor As Ht1632ImageSending.BrightnessConvertor = Nothing)" />
+      <MemberSignature Language="F#" Value="static member ShowImageWith16Com : Iot.Device.Ht1632.Ht1632 * SixLabors.ImageSharp.Image&lt;'Pixel (requires 'Pixel : struct)&gt; * Iot.Device.Ht1632.Ht1632ImageSending.BrightnessConvertor -&gt; unit (requires 'Pixel : struct)" Usage="Iot.Device.Ht1632.Ht1632ImageSending.ShowImageWith16Com (ht1632, image, brightnessConvertor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TPixel">
+          <Constraints>
+            <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+            <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+            <BaseTypeName>System.ValueType</BaseTypeName>
+            <InterfaceName>SixLabors.ImageSharp.PixelFormats.IPixel&lt;TPixel&gt;</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="ht1632" Type="Iot.Device.Ht1632.Ht1632" RefType="this" />
+        <Parameter Name="image" Type="SixLabors.ImageSharp.Image&lt;TPixel&gt;" />
+        <Parameter Name="brightnessConvertor" Type="Iot.Device.Ht1632.Ht1632ImageSending+BrightnessConvertor" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TPixel">To be added.</typeparam>
+        <param name="ht1632">HT1632 device</param>
+        <param name="image">Image to show. Width at least 16 pixels, height at least 24 pixels </param>
+        <param name="brightnessConvertor">Method for whether pixel is lit or not. Use <see cref="M:Iot.Device.Ht1632.Ht1632ImageSending.LinearBrightnessConvertor(SixLabors.ImageSharp.PixelFormats.IPixel)" /> if null.</param>
+        <summary>
+            Show image with 16-Com mode
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowImageWith8Com&lt;TPixel&gt;">
+      <MemberSignature Language="C#" Value="public static void ShowImageWith8Com&lt;TPixel&gt; (this Iot.Device.Ht1632.Ht1632 ht1632, SixLabors.ImageSharp.Image&lt;TPixel&gt; image, Iot.Device.Ht1632.Ht1632ImageSending.BrightnessConvertor? brightnessConvertor = default) where TPixel : struct;" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShowImageWith8Com&lt;struct .ctor (class System.ValueType, class SixLabors.ImageSharp.PixelFormats.IPixel`1&lt;!!TPixel&gt;) TPixel&gt;(class Iot.Device.Ht1632.Ht1632 ht1632, class SixLabors.ImageSharp.Image`1&lt;!!TPixel&gt; image, class Iot.Device.Ht1632.Ht1632ImageSending/BrightnessConvertor brightnessConvertor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ht1632.Ht1632ImageSending.ShowImageWith8Com``1(Iot.Device.Ht1632.Ht1632,SixLabors.ImageSharp.Image{``0},Iot.Device.Ht1632.Ht1632ImageSending.BrightnessConvertor)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub ShowImageWith8Com(Of TPixel As Structure) (ht1632 As Ht1632, image As Image(Of TPixel), Optional brightnessConvertor As Ht1632ImageSending.BrightnessConvertor = Nothing)" />
+      <MemberSignature Language="F#" Value="static member ShowImageWith8Com : Iot.Device.Ht1632.Ht1632 * SixLabors.ImageSharp.Image&lt;'Pixel (requires 'Pixel : struct)&gt; * Iot.Device.Ht1632.Ht1632ImageSending.BrightnessConvertor -&gt; unit (requires 'Pixel : struct)" Usage="Iot.Device.Ht1632.Ht1632ImageSending.ShowImageWith8Com (ht1632, image, brightnessConvertor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="TPixel">
+          <Constraints>
+            <ParameterAttribute>DefaultConstructorConstraint</ParameterAttribute>
+            <ParameterAttribute>NotNullableValueTypeConstraint</ParameterAttribute>
+            <BaseTypeName>System.ValueType</BaseTypeName>
+            <InterfaceName>SixLabors.ImageSharp.PixelFormats.IPixel&lt;TPixel&gt;</InterfaceName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="ht1632" Type="Iot.Device.Ht1632.Ht1632" RefType="this" />
+        <Parameter Name="image" Type="SixLabors.ImageSharp.Image&lt;TPixel&gt;" />
+        <Parameter Name="brightnessConvertor" Type="Iot.Device.Ht1632.Ht1632ImageSending+BrightnessConvertor" />
+      </Parameters>
+      <Docs>
+        <typeparam name="TPixel">To be added.</typeparam>
+        <param name="ht1632">HT1632 device</param>
+        <param name="image">Image to show. Width at least 8 pixels, height at least 32 pixels </param>
+        <param name="brightnessConvertor">Method for whether pixel is lit or not. Use <see cref="M:Iot.Device.Ht1632.Ht1632ImageSending.LinearBrightnessConvertor(SixLabors.ImageSharp.PixelFormats.IPixel)" /> if null.</param>
+        <summary>
+            Show image with 8-Com mode
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

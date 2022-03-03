@@ -1,0 +1,462 @@
+<Type Name="GeographicPosition" FullName="Iot.Device.Common.GeographicPosition">
+  <TypeSignature Language="C#" Value="public sealed class GeographicPosition : ICloneable, IEquatable&lt;Iot.Device.Common.GeographicPosition&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable sealed beforefieldinit GeographicPosition extends System.Object implements class System.ICloneable, class System.IEquatable`1&lt;class Iot.Device.Common.GeographicPosition&gt;" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Common.GeographicPosition" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class GeographicPosition&#xA;Implements ICloneable, IEquatable(Of GeographicPosition)" />
+  <TypeSignature Language="F#" Value="type GeographicPosition = class&#xA;    interface ICloneable&#xA;    interface IEquatable&lt;GeographicPosition&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.ICloneable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Iot.Device.Common.GeographicPosition&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Serializable]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Serializable&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Represents a position in WGS84 coordinates. This is the standard coordinate format for most GNSS receivers currently available.
+            An instance with Latitude = Longitude = Height = 0 is considered invalid. A real GNSS receiver will never output this exact value
+            and that position is far out in the ocean.
+            </summary>
+    <remarks>
+            This object stores ellipsoidal height, depending on the GNSS receiver and the application, this needs to be transformed to geoidal height.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeographicPosition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPosition.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes an empty geographic position
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeographicPosition (Iot.Device.Common.GeographicPosition pos);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Common.GeographicPosition pos) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPosition.#ctor(Iot.Device.Common.GeographicPosition)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pos As GeographicPosition)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Common.GeographicPosition : Iot.Device.Common.GeographicPosition -&gt; Iot.Device.Common.GeographicPosition" Usage="new Iot.Device.Common.GeographicPosition pos" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pos" Type="Iot.Device.Common.GeographicPosition" />
+      </Parameters>
+      <Docs>
+        <param name="pos">Input position</param>
+        <summary>
+            Copy constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GeographicPosition (double latitude, double longitude, double ellipsoidalHeight);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(float64 latitude, float64 longitude, float64 ellipsoidalHeight) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPosition.#ctor(System.Double,System.Double,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (latitude As Double, longitude As Double, ellipsoidalHeight As Double)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Common.GeographicPosition : double * double * double -&gt; Iot.Device.Common.GeographicPosition" Usage="new Iot.Device.Common.GeographicPosition (latitude, longitude, ellipsoidalHeight)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="latitude" Type="System.Double" />
+        <Parameter Name="longitude" Type="System.Double" />
+        <Parameter Name="ellipsoidalHeight" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="latitude">Latitude of position, in degrees. Valid values are -90 - +90</param>
+        <param name="longitude">Longitude of position, in degrees. Valid values are -180 to +180 or 0 to 360, depending on application</param>
+        <param name="ellipsoidalHeight">Height over the WGS84 ellipsoid.</param>
+        <summary>
+            Creates a <see cref="T:Iot.Device.Common.GeographicPosition" /> instance from latitude, longitude and ellipsoidal height.
+            </summary>
+        <remarks>No exception is thrown on denormalized or out-of-range positions.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clone">
+      <MemberSignature Language="C#" Value="public Iot.Device.Common.GeographicPosition Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Common.GeographicPosition Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPosition.Clone" />
+      <MemberSignature Language="VB.NET" Value="Public Function Clone () As GeographicPosition" />
+      <MemberSignature Language="F#" Value="member this.Clone : unit -&gt; Iot.Device.Common.GeographicPosition" Usage="geographicPosition.Clone " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Common.GeographicPosition</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a copy of this instance
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContainsValidPosition">
+      <MemberSignature Language="C#" Value="public bool ContainsValidPosition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool ContainsValidPosition() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPosition.ContainsValidPosition" />
+      <MemberSignature Language="VB.NET" Value="Public Function ContainsValidPosition () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ContainsValidPosition : unit -&gt; bool" Usage="geographicPosition.ContainsValidPosition " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns true if this instance contains a valid position.
+            An invalid position is either when <see cref="P:Iot.Device.Common.GeographicPosition.Latitude" /> and <see cref="P:Iot.Device.Common.GeographicPosition.Longitude" /> and <see cref="P:Iot.Device.Common.GeographicPosition.EllipsoidalHeight" /> are exactly zero,
+            when either value is NaN or when the position is out of range.
+            </summary>
+        <returns>See above</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EllipsoidalHeight">
+      <MemberSignature Language="C#" Value="public double EllipsoidalHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 EllipsoidalHeight" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Common.GeographicPosition.EllipsoidalHeight" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EllipsoidalHeight As Double" />
+      <MemberSignature Language="F#" Value="member this.EllipsoidalHeight : double" Usage="Iot.Device.Common.GeographicPosition.EllipsoidalHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Height over the WGS84 ellipsoid
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EqualPosition">
+      <MemberSignature Language="C#" Value="public bool EqualPosition (Iot.Device.Common.GeographicPosition position, double delta = 1E-08);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool EqualPosition(class Iot.Device.Common.GeographicPosition position, float64 delta) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPosition.EqualPosition(Iot.Device.Common.GeographicPosition,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Function EqualPosition (position As GeographicPosition, Optional delta As Double = 1E-08) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.EqualPosition : Iot.Device.Common.GeographicPosition * double -&gt; bool" Usage="geographicPosition.EqualPosition (position, delta)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="delta" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="position">Position to compare with</param>
+        <param name="delta">Allowed delta, in degrees</param>
+        <summary>
+            Returns true if the two positions are (almost) equal. This ignores the altitude.
+            </summary>
+        <returns>True if the two positions are closer than the delta. The default value is around 1cm</returns>
+        <remarks>This does a simple comparison based on the floating point values, it should not be used with large deltas.
+            To get the distance between two positions, use <see cref="M:Iot.Device.Common.GeographicPositionExtensions.DistanceTo(Iot.Device.Common.GeographicPosition,Iot.Device.Common.GeographicPosition)" /> instead.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Iot.Device.Common.GeographicPosition? position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Iot.Device.Common.GeographicPosition position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPosition.Equals(Iot.Device.Common.GeographicPosition)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (position As GeographicPosition) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Iot.Device.Common.GeographicPosition -&gt; bool" Usage="geographicPosition.Equals position" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="Iot.Device.Common.GeographicPosition" />
+      </Parameters>
+      <Docs>
+        <param name="position">The other position</param>
+        <summary>
+            Equality comparer. Compares the two positions for equality within about 1cm.
+            </summary>
+        <returns>True if the two positions are almost identical</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPosition.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="geographicPosition.Equals obj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">The other position</param>
+        <summary>
+            Equality comparer. Compares the two positions for equality within about 1cm.
+            </summary>
+        <returns>True if the two positions are almost identical</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDegreesMinutesSeconds">
+      <MemberSignature Language="C#" Value="public static void GetDegreesMinutesSeconds (double angle, int secDigits, out double normalizedVal, out double degrees, out double minutes, out double seconds);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void GetDegreesMinutesSeconds(float64 angle, int32 secDigits, [out] float64&amp; normalizedVal, [out] float64&amp; degrees, [out] float64&amp; minutes, [out] float64&amp; seconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPosition.GetDegreesMinutesSeconds(System.Double,System.Int32,System.Double@,System.Double@,System.Double@,System.Double@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub GetDegreesMinutesSeconds (angle As Double, secDigits As Integer, ByRef normalizedVal As Double, ByRef degrees As Double, ByRef minutes As Double, ByRef seconds As Double)" />
+      <MemberSignature Language="F#" Value="static member GetDegreesMinutesSeconds : double * int * double * double * double * double -&gt; unit" Usage="Iot.Device.Common.GeographicPosition.GetDegreesMinutesSeconds (angle, secDigits, normalizedVal, degrees, minutes, seconds)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Double" />
+        <Parameter Name="secDigits" Type="System.Int32" />
+        <Parameter Name="normalizedVal" Type="System.Double" RefType="out" />
+        <Parameter Name="degrees" Type="System.Double" RefType="out" />
+        <Parameter Name="minutes" Type="System.Double" RefType="out" />
+        <Parameter Name="seconds" Type="System.Double" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="angle">Input angle, in degrees</param>
+        <param name="secDigits">Number of digits for the second</param>
+        <param name="normalizedVal">Normalized angle value (to -180 to 180)</param>
+        <param name="degrees">Full degrees</param>
+        <param name="minutes">Full minutes</param>
+        <param name="seconds">Seconds including requested number of digits</param>
+        <summary>
+            Returns the given angle as degrees, minutes and seconds
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPosition.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="geographicPosition.GetHashCode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Latitude">
+      <MemberSignature Language="C#" Value="public double Latitude { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Latitude" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Common.GeographicPosition.Latitude" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Latitude As Double" />
+      <MemberSignature Language="F#" Value="member this.Latitude : double" Usage="Iot.Device.Common.GeographicPosition.Latitude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Latitude. Positive for north of equator, negative for south.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Longitude">
+      <MemberSignature Language="C#" Value="public double Longitude { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Longitude" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Common.GeographicPosition.Longitude" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Longitude As Double" />
+      <MemberSignature Language="F#" Value="member this.Longitude : double" Usage="Iot.Device.Common.GeographicPosition.Longitude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Longitude. Positive for east of Greenwich, negative for west.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Iot.Device.Common.GeographicPosition? a, Iot.Device.Common.GeographicPosition? b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Iot.Device.Common.GeographicPosition a, class Iot.Device.Common.GeographicPosition b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPosition.op_Equality(Iot.Device.Common.GeographicPosition,Iot.Device.Common.GeographicPosition)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (a As GeographicPosition, b As GeographicPosition) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Iot.Device.Common.GeographicPosition * Iot.Device.Common.GeographicPosition -&gt; bool" Usage="a = b" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="b" Type="Iot.Device.Common.GeographicPosition" />
+      </Parameters>
+      <Docs>
+        <param name="a">First instance to compare</param>
+        <param name="b">Second instance to compare</param>
+        <summary>
+            Equality operator. See <see cref="M:Iot.Device.Common.GeographicPosition.Equals(Iot.Device.Common.GeographicPosition)" /></summary>
+        <returns>True on equality, false otherwise</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Iot.Device.Common.GeographicPosition? a, Iot.Device.Common.GeographicPosition? b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Iot.Device.Common.GeographicPosition a, class Iot.Device.Common.GeographicPosition b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPosition.op_Inequality(Iot.Device.Common.GeographicPosition,Iot.Device.Common.GeographicPosition)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (a As GeographicPosition, b As GeographicPosition) As Boolean" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Iot.Device.Common.GeographicPosition * Iot.Device.Common.GeographicPosition -&gt; bool" Usage="Iot.Device.Common.GeographicPosition.op_Inequality (a, b)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="b" Type="Iot.Device.Common.GeographicPosition" />
+      </Parameters>
+      <Docs>
+        <param name="a">First instance to compare</param>
+        <param name="b">Second instance to compare</param>
+        <summary>
+            Inequality operator. See <see cref="M:Iot.Device.Common.GeographicPosition.Equals(Iot.Device.Common.GeographicPosition)" /></summary>
+        <returns>True on inequality, false otherwise</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.ICloneable.Clone">
+      <MemberSignature Language="C#" Value="object ICloneable.Clone ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance object System.ICloneable.Clone() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPosition.System#ICloneable#Clone" />
+      <MemberSignature Language="VB.NET" Value="Function Clone () As Object Implements ICloneable.Clone" />
+      <MemberSignature Language="F#" Value="abstract member System.ICloneable.Clone : unit -&gt; obj&#xA;override this.System.ICloneable.Clone : unit -&gt; obj" Usage="geographicPosition.System.ICloneable.Clone " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.ICloneable.Clone</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPosition.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="geographicPosition.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a string representation of this position.
+            </summary>
+        <returns>A string representation in degrees, minutes and seconds for both latitude and longitude</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

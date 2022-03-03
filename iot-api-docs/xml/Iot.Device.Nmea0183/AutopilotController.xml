@@ -1,0 +1,263 @@
+<Type Name="AutopilotController" FullName="Iot.Device.Nmea0183.AutopilotController">
+  <TypeSignature Language="C#" Value="public sealed class AutopilotController : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit AutopilotController extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.AutopilotController" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class AutopilotController&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type AutopilotController = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            This class controls an auto pilot, given an input and an output stream.
+            Depending on the input, it either refines the sequences to a higher resolution (many navigation programs will e.g. only
+            output XTE messages with a cross track error accuracy of 0.1nm, which is useless for precise navigation) or create the
+            sequences based on input waypoints.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AutopilotController (Iot.Device.Nmea0183.NmeaSinkAndSource input, Iot.Device.Nmea0183.NmeaSinkAndSource output, Iot.Device.Nmea0183.SentenceCache? cache = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Nmea0183.NmeaSinkAndSource input, class Iot.Device.Nmea0183.NmeaSinkAndSource output, class Iot.Device.Nmea0183.SentenceCache cache) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.AutopilotController.#ctor(Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.SentenceCache)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (input As NmeaSinkAndSource, output As NmeaSinkAndSource, Optional cache As SentenceCache = Nothing)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.AutopilotController : Iot.Device.Nmea0183.NmeaSinkAndSource * Iot.Device.Nmea0183.NmeaSinkAndSource * Iot.Device.Nmea0183.SentenceCache -&gt; Iot.Device.Nmea0183.AutopilotController" Usage="new Iot.Device.Nmea0183.AutopilotController (input, output, cache)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="input" Type="Iot.Device.Nmea0183.NmeaSinkAndSource" />
+        <Parameter Name="output" Type="Iot.Device.Nmea0183.NmeaSinkAndSource" />
+        <Parameter Name="cache" Type="Iot.Device.Nmea0183.SentenceCache" />
+      </Parameters>
+      <Docs>
+        <param name="input">Input stream (GPS device and plotter)</param>
+        <param name="output">Output stream (emits rmb, xte, vtg, bwc, bod)</param>
+        <param name="cache">Sentence cache, optional</param>
+        <summary>
+            This class can control an autopilot, given an external input (of mainly WPT and RTE sentences)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActivateRoute">
+      <MemberSignature Language="C#" Value="public void ActivateRoute (Iot.Device.Nmea0183.Route route);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ActivateRoute(class Iot.Device.Nmea0183.Route route) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.AutopilotController.ActivateRoute(Iot.Device.Nmea0183.Route)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ActivateRoute (route As Route)" />
+      <MemberSignature Language="F#" Value="member this.ActivateRoute : Iot.Device.Nmea0183.Route -&gt; unit" Usage="autopilotController.ActivateRoute route" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="route" Type="Iot.Device.Nmea0183.Route" />
+      </Parameters>
+      <Docs>
+        <param name="route">The new route</param>
+        <summary>
+            Activates the given route.
+            Note that it is cloned. The <see cref="P:Iot.Device.Nmea0183.Route.NextPoint" /> property is not updated automatically as the route progresses.
+            Investigate <see cref="P:Iot.Device.Nmea0183.AutopilotController.NextWaypoint" /> regularly instead.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableActiveRoute">
+      <MemberSignature Language="C#" Value="public void DisableActiveRoute ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DisableActiveRoute() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.AutopilotController.DisableActiveRoute" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DisableActiveRoute ()" />
+      <MemberSignature Language="F#" Value="member this.DisableActiveRoute : unit -&gt; unit" Usage="autopilotController.DisableActiveRoute " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disables a manually activated route.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.AutopilotController.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="autopilotController.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stops and disposes the component
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextWaypoint">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.RoutePoint? NextWaypoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Nmea0183.RoutePoint NextWaypoint" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.AutopilotController.NextWaypoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NextWaypoint As RoutePoint" />
+      <MemberSignature Language="F#" Value="member this.NextWaypoint : Iot.Device.Nmea0183.RoutePoint" Usage="Iot.Device.Nmea0183.AutopilotController.NextWaypoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.RoutePoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the next waypoint
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperationState">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.AutopilotErrorState OperationState { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nmea0183.AutopilotErrorState OperationState" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.AutopilotController.OperationState" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OperationState As AutopilotErrorState" />
+      <MemberSignature Language="F#" Value="member this.OperationState : Iot.Device.Nmea0183.AutopilotErrorState" Usage="Iot.Device.Nmea0183.AutopilotController.OperationState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.AutopilotErrorState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Current operating state of the autopilot controller
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Running">
+      <MemberSignature Language="C#" Value="public bool Running { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Running" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.AutopilotController.Running" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Running As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Running : bool" Usage="Iot.Device.Nmea0183.AutopilotController.Running" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if the processing thread is running
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Start">
+      <MemberSignature Language="C#" Value="public void Start ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Start() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.AutopilotController.Start" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Start ()" />
+      <MemberSignature Language="F#" Value="member this.Start : unit -&gt; unit" Usage="autopilotController.Start " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Starts the processing thread
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stop">
+      <MemberSignature Language="C#" Value="public void Stop ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Stop() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.AutopilotController.Stop" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Stop ()" />
+      <MemberSignature Language="F#" Value="member this.Stop : unit -&gt; unit" Usage="autopilotController.Stop " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stops the processing thread.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaypointSwitchDistance">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length WaypointSwitchDistance { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Length WaypointSwitchDistance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.AutopilotController.WaypointSwitchDistance" />
+      <MemberSignature Language="VB.NET" Value="Public Property WaypointSwitchDistance As Length" />
+      <MemberSignature Language="F#" Value="member this.WaypointSwitchDistance : UnitsNet.Length with get, set" Usage="Iot.Device.Nmea0183.AutopilotController.WaypointSwitchDistance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Length</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When routing ourselves (no RMB message as input), we switch to the next waypoint
+            when closer than this distance or over the bisecting angle to the next leg
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

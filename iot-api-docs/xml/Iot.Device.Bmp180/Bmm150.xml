@@ -1,0 +1,405 @@
+<Type Name="Bmm150" FullName="Iot.Device.Bmp180.Bmm150">
+  <TypeSignature Language="C#" Value="public sealed class Bmm150 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Bmm150 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Bmp180.Bmm150" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Bmm150&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Bmm150 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Device.Model.Interface("Bmm150 class implementing a magnetometer")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Device.Model.Interface("Bmm150 class implementing a magnetometer")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Bmm150 class implementing a magnetometer
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bmm150 (System.Device.I2c.I2cDevice i2CDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2CDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmm150.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2CDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Bmp180.Bmm150 : System.Device.I2c.I2cDevice -&gt; Iot.Device.Bmp180.Bmm150" Usage="new Iot.Device.Bmp180.Bmm150 i2CDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2CDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2CDevice">The I2C device</param>
+        <summary>
+            Default constructor for an independent Bmm150
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bmm150 (System.Device.I2c.I2cDevice i2cDevice, Iot.Device.Bmp180.Bmm150I2cBase Bmm150Interface, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, class Iot.Device.Bmp180.Bmm150I2cBase Bmm150Interface, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmm150.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Bmp180.Bmm150I2cBase,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Bmm150Interface As Bmm150I2cBase, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Bmp180.Bmm150 : System.Device.I2c.I2cDevice * Iot.Device.Bmp180.Bmm150I2cBase * bool -&gt; Iot.Device.Bmp180.Bmm150" Usage="new Iot.Device.Bmp180.Bmm150 (i2cDevice, Bmm150Interface, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="Bmm150Interface" Type="Iot.Device.Bmp180.Bmm150I2cBase" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device</param>
+        <param name="Bmm150Interface">The specific interface to communicate with the Bmm150</param>
+        <param name="shouldDispose">True to dispose the I2C device when class is disposed</param>
+        <summary>
+            Constructor to use if Bmm150 is behind another element and need a special I2C protocol like
+            when used with the MPU9250
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalibrateMagnetometer">
+      <MemberSignature Language="C#" Value="public void CalibrateMagnetometer (int numberOfMeasurements = 100);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CalibrateMagnetometer(int32 numberOfMeasurements) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmm150.CalibrateMagnetometer(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CalibrateMagnetometer (Optional numberOfMeasurements As Integer = 100)" />
+      <MemberSignature Language="F#" Value="member this.CalibrateMagnetometer : int -&gt; unit" Usage="bmm150.CalibrateMagnetometer numberOfMeasurements" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numberOfMeasurements" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="numberOfMeasurements">Number of measurement for the calibration, default is 100</param>
+        <summary>
+            Calibrate the magnetometer.
+            Please make sure you are not close to any magnetic field like magnet or phone
+            Please make sure you are moving the magnetometer all over space, rotating it.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalibrationCompensation">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 CalibrationCompensation { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector3 CalibrationCompensation" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bmp180.Bmm150.CalibrationCompensation" />
+      <MemberSignature Language="VB.NET" Value="Public Property CalibrationCompensation As Vector3" />
+      <MemberSignature Language="F#" Value="member this.CalibrationCompensation : System.Numerics.Vector3 with get, set" Usage="Iot.Device.Bmp180.Bmm150.CalibrationCompensation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets Magnetometer calibration compensation vector
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan DefaultTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultTimeout" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bmp180.Bmm150.DefaultTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property DefaultTimeout As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.DefaultTimeout : TimeSpan with get, set" Usage="Iot.Device.Bmp180.Bmm150.DefaultTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Default timeout to use when timeout is not provided in the reading methods
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmm150.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="bmm150.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Cleanup everything
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDeviceInfo">
+      <MemberSignature Language="C#" Value="public byte GetDeviceInfo ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8 GetDeviceInfo() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmm150.GetDeviceInfo" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetDeviceInfo () As Byte" />
+      <MemberSignature Language="F#" Value="member this.GetDeviceInfo : unit -&gt; byte" Usage="bmm150.GetDeviceInfo " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get the device information
+            </summary>
+        <returns>The device information</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasDataToRead">
+      <MemberSignature Language="C#" Value="public bool HasDataToRead { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasDataToRead" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Bmp180.Bmm150.HasDataToRead" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasDataToRead As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasDataToRead : bool" Usage="Iot.Device.Bmp180.Bmm150.HasDataToRead" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if there is a data to read
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrimaryI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte PrimaryI2cAddress = 19;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 PrimaryI2cAddress = (19)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Bmp180.Bmm150.PrimaryI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const PrimaryI2cAddress As Byte  = 19" />
+      <MemberSignature Language="F#" Value="val mutable PrimaryI2cAddress : byte" Usage="Iot.Device.Bmp180.Bmm150.PrimaryI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>19</MemberValue>
+      <Docs>
+        <summary>
+            Primary I2C address for the Bmm150
+            In the official sheet (P36) states that address is 0x13: https://github.com/m5stack/M5_BMM150/blob/master/src/M5_BMM150_DEFS.h#L163
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadMagnetometer">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 ReadMagnetometer (bool waitForData = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Numerics.Vector3 ReadMagnetometer(bool waitForData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmm150.ReadMagnetometer(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadMagnetometer (Optional waitForData As Boolean = true) As Vector3" />
+      <MemberSignature Language="F#" Value="member this.ReadMagnetometer : bool -&gt; System.Numerics.Vector3" Usage="bmm150.ReadMagnetometer waitForData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Telemetry("Magnetometer", null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry("Magnetometer", null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitForData" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="waitForData">true to wait for new data</param>
+        <summary>
+            Read the magnetometer with bias correction and can wait for new data to be present
+            </summary>
+        <returns>The data from the magnetometer</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadMagnetometer">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 ReadMagnetometer (bool waitForData, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Numerics.Vector3 ReadMagnetometer(bool waitForData, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmm150.ReadMagnetometer(System.Boolean,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadMagnetometer (waitForData As Boolean, timeout As TimeSpan) As Vector3" />
+      <MemberSignature Language="F#" Value="member this.ReadMagnetometer : bool * TimeSpan -&gt; System.Numerics.Vector3" Usage="bmm150.ReadMagnetometer (waitForData, timeout)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitForData" Type="System.Boolean" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="waitForData">true to wait for new data</param>
+        <param name="timeout">timeout for waiting the data, ignored if waitForData is false</param>
+        <summary>
+            Read the magnetometer with compensation calculation and can wait for new data to be present
+            </summary>
+        <returns>The data from the magnetometer</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadMagnetometerWithoutCorrection">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 ReadMagnetometerWithoutCorrection (bool waitForData = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Numerics.Vector3 ReadMagnetometerWithoutCorrection(bool waitForData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmm150.ReadMagnetometerWithoutCorrection(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadMagnetometerWithoutCorrection (Optional waitForData As Boolean = true) As Vector3" />
+      <MemberSignature Language="F#" Value="member this.ReadMagnetometerWithoutCorrection : bool -&gt; System.Numerics.Vector3" Usage="bmm150.ReadMagnetometerWithoutCorrection waitForData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitForData" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="waitForData">true to wait for new data</param>
+        <summary>
+            Read the magnetometer without Bias correction and can wait for new data to be present
+            </summary>
+        <returns>The data from the magnetometer</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadMagnetometerWithoutCorrection">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 ReadMagnetometerWithoutCorrection (bool waitForData, TimeSpan timeout);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Numerics.Vector3 ReadMagnetometerWithoutCorrection(bool waitForData, valuetype System.TimeSpan timeout) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmm150.ReadMagnetometerWithoutCorrection(System.Boolean,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadMagnetometerWithoutCorrection (waitForData As Boolean, timeout As TimeSpan) As Vector3" />
+      <MemberSignature Language="F#" Value="member this.ReadMagnetometerWithoutCorrection : bool * TimeSpan -&gt; System.Numerics.Vector3" Usage="bmm150.ReadMagnetometerWithoutCorrection (waitForData, timeout)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="waitForData" Type="System.Boolean" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="waitForData">true to wait for new data</param>
+        <param name="timeout">timeout for waiting the data, ignored if waitForData is false</param>
+        <summary>
+            Read the magnetometer without Bias correction and can wait for new data to be present
+            More info, permalink: https://github.com/BoschSensortec/BMM150-Sensor-API/blob/a20641f216057f0c54de115fe81b57368e119c01/bmm150.c#L921
+            </summary>
+        <returns>The data from the magnetometer</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecondaryI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte SecondaryI2cAddress = 16;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 SecondaryI2cAddress = (16)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Bmp180.Bmm150.SecondaryI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const SecondaryI2cAddress As Byte  = 16" />
+      <MemberSignature Language="F#" Value="val mutable SecondaryI2cAddress : byte" Usage="Iot.Device.Bmp180.Bmm150.SecondaryI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>16</MemberValue>
+      <Docs>
+        <summary>
+            Secondary I2C address for the Bmm150
+            In the official sheet (P36) states that address is 0x13, alhtough for m5stack is 0x10
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

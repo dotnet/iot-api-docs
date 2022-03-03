@@ -1,0 +1,164 @@
+<Type Name="QuerySentence" FullName="Iot.Device.Nmea0183.QuerySentence">
+  <TypeSignature Language="C#" Value="public class QuerySentence" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit QuerySentence extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.QuerySentence" />
+  <TypeSignature Language="VB.NET" Value="Public Class QuerySentence" />
+  <TypeSignature Language="F#" Value="type QuerySentence = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents NMEA0183 query sentence
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public QuerySentence (Iot.Device.Nmea0183.TalkerId requesterId, Iot.Device.Nmea0183.TalkerId deviceId, Iot.Device.Nmea0183.SentenceId requestedSentence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Nmea0183.TalkerId requesterId, valuetype Iot.Device.Nmea0183.TalkerId deviceId, valuetype Iot.Device.Nmea0183.SentenceId requestedSentence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.QuerySentence.#ctor(Iot.Device.Nmea0183.TalkerId,Iot.Device.Nmea0183.TalkerId,Iot.Device.Nmea0183.SentenceId)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (requesterId As TalkerId, deviceId As TalkerId, requestedSentence As SentenceId)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.QuerySentence : Iot.Device.Nmea0183.TalkerId * Iot.Device.Nmea0183.TalkerId * Iot.Device.Nmea0183.SentenceId -&gt; Iot.Device.Nmea0183.QuerySentence" Usage="new Iot.Device.Nmea0183.QuerySentence (requesterId, deviceId, requestedSentence)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="requesterId" Type="Iot.Device.Nmea0183.TalkerId" />
+        <Parameter Name="deviceId" Type="Iot.Device.Nmea0183.TalkerId" />
+        <Parameter Name="requestedSentence" Type="Iot.Device.Nmea0183.SentenceId" />
+      </Parameters>
+      <Docs>
+        <param name="requesterId">Talker identifier of the requester</param>
+        <param name="deviceId">Talker identifier of the device</param>
+        <param name="requestedSentence">Requested sentence</param>
+        <summary>
+            Constructs NMEA0183 query sentence
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceId">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.TalkerId DeviceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nmea0183.TalkerId DeviceId" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.QuerySentence.DeviceId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeviceId As TalkerId" />
+      <MemberSignature Language="F#" Value="member this.DeviceId : Iot.Device.Nmea0183.TalkerId" Usage="Iot.Device.Nmea0183.QuerySentence.DeviceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.TalkerId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The talker id of the device to query
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromSentenceString">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Nmea0183.QuerySentence FromSentenceString (string sentence);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Nmea0183.QuerySentence FromSentenceString(string sentence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.QuerySentence.FromSentenceString(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FromSentenceString (sentence As String) As QuerySentence" />
+      <MemberSignature Language="F#" Value="static member FromSentenceString : string -&gt; Iot.Device.Nmea0183.QuerySentence" Usage="Iot.Device.Nmea0183.QuerySentence.FromSentenceString sentence" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.QuerySentence</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sentence" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="sentence">NMEA0183 query sentence</param>
+        <summary>
+            Reads NMEA0183 query sentence from provided string
+            </summary>
+        <returns>QuerySentence instance</returns>
+        <remarks>
+          <paramref name="sentence" /> does not include new line characters</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequestedSentence">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.SentenceId RequestedSentence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nmea0183.SentenceId RequestedSentence" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.QuerySentence.RequestedSentence" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequestedSentence As SentenceId" />
+      <MemberSignature Language="F#" Value="member this.RequestedSentence : Iot.Device.Nmea0183.SentenceId" Usage="Iot.Device.Nmea0183.QuerySentence.RequestedSentence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the sequence to request
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RequesterId">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.TalkerId RequesterId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nmea0183.TalkerId RequesterId" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.QuerySentence.RequesterId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RequesterId As TalkerId" />
+      <MemberSignature Language="F#" Value="member this.RequesterId : Iot.Device.Nmea0183.TalkerId" Usage="Iot.Device.Nmea0183.QuerySentence.RequesterId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.TalkerId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The talker ID of the requester
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.QuerySentence.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="querySentence.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

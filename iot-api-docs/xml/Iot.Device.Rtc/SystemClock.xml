@@ -1,0 +1,176 @@
+<Type Name="SystemClock" FullName="Iot.Device.Rtc.SystemClock">
+  <TypeSignature Language="C#" Value="public class SystemClock : Iot.Device.Rtc.RtcBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit SystemClock extends Iot.Device.Rtc.RtcBase" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Rtc.SystemClock" />
+  <TypeSignature Language="VB.NET" Value="Public Class SystemClock&#xA;Inherits RtcBase" />
+  <TypeSignature Language="F#" Value="type SystemClock = class&#xA;    inherit RtcBase" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Rtc.RtcBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Contains methods to access and update the system real time clock ("Bios clock")
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SystemClock ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Rtc.SystemClock.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSystemTimeUtc">
+      <MemberSignature Language="C#" Value="public static DateTime GetSystemTimeUtc ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.DateTime GetSystemTimeUtc() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Rtc.SystemClock.GetSystemTimeUtc" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetSystemTimeUtc () As DateTime" />
+      <MemberSignature Language="F#" Value="static member GetSystemTimeUtc : unit -&gt; DateTime" Usage="Iot.Device.Rtc.SystemClock.GetSystemTimeUtc " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the current system time directly using OS calls.
+            Normally, this should return the same as <see cref="P:System.DateTime.UtcNow" /></summary>
+        <returns>The current system time</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalTimeZone">
+      <MemberSignature Language="C#" Value="public override TimeZoneInfo LocalTimeZone { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.TimeZoneInfo LocalTimeZone" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Rtc.SystemClock.LocalTimeZone" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property LocalTimeZone As TimeZoneInfo" />
+      <MemberSignature Language="F#" Value="member this.LocalTimeZone : TimeZoneInfo with get, set" Usage="Iot.Device.Rtc.SystemClock.LocalTimeZone" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeZoneInfo</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            We always use UTC when reading/writing the system clock, makes things easier.
+            Technically, the BIOS RTC is configured in local time by default on Windows, but in UTC on Linux (causing
+            weird effects when dual-booting). Both systems allow changing this setting, though.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadTime">
+      <MemberSignature Language="C#" Value="protected override DateTime ReadTime ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance valuetype System.DateTime ReadTime() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Rtc.SystemClock.ReadTime" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function ReadTime () As DateTime" />
+      <MemberSignature Language="F#" Value="override this.ReadTime : unit -&gt; DateTime" Usage="systemClock.ReadTime " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTime</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="SetSystemTimeUtc">
+      <MemberSignature Language="C#" Value="public static void SetSystemTimeUtc (DateTime dt);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void SetSystemTimeUtc(valuetype System.DateTime dt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Rtc.SystemClock.SetSystemTimeUtc(System.DateTime)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub SetSystemTimeUtc (dt As DateTime)" />
+      <MemberSignature Language="F#" Value="static member SetSystemTimeUtc : DateTime -&gt; unit" Usage="Iot.Device.Rtc.SystemClock.SetSystemTimeUtc dt" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="dt" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="dt">Date/time to set the system clock to. This must be in UTC</param>
+        <summary>
+            Set the system time to the given date/time.
+            The time must be given in utc.
+            The method requires elevated permissions. On Windows, the calling user must either be administrator or the right
+            "Change the system clock" must have been granted to the "Users" group (in Security policy management).
+            On Unix and MacOs, the current user must be root or the "date" command must have the setUid bit set.
+            </summary>
+        <remarks>
+            This method is primarily intended for setting the system clock from an external clock source, such as a DS1307 or a GNSS source when no
+            internet connection is available. If an internet connection is available, most operating systems will by default automatically sync the
+            time to a network server, which might interfere with this operation. So when using this method, the clock synchronization should be disabled,
+            or it should only be done if the time difference is large.
+            </remarks>
+        <exception cref="T:System.PlatformNotSupportedException">This method is not supported on this platform</exception>
+        <exception cref="T:System.IO.IOException">There was an error executing a system command</exception>
+        <exception cref="T:System.UnauthorizedAccessException">The user does not have permissions to set the system clock</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetTime">
+      <MemberSignature Language="C#" Value="protected override void SetTime (DateTime time);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void SetTime(valuetype System.DateTime time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Rtc.SystemClock.SetTime(System.DateTime)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub SetTime (time As DateTime)" />
+      <MemberSignature Language="F#" Value="override this.SetTime : DateTime -&gt; unit" Usage="systemClock.SetTime time" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="time" Type="System.DateTime" />
+      </Parameters>
+      <Docs>
+        <param name="time">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

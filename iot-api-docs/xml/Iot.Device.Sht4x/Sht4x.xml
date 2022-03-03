@@ -1,0 +1,283 @@
+<Type Name="Sht4x" FullName="Iot.Device.Sht4x.Sht4x">
+  <TypeSignature Language="C#" Value="public sealed class Sht4x : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Sht4x extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Sht4x.Sht4x" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Sht4x&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Sht4x = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Device.Model.Interface("Humidity and Temperature Sensor SHT4x")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Device.Model.Interface("Humidity and Temperature Sensor SHT4x")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Humidity and Temperature Sensor SHT4x
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Sht4x (System.Device.I2c.I2cDevice device);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice device) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Sht4x.Sht4x.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (device As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Sht4x.Sht4x : System.Device.I2c.I2cDevice -&gt; Iot.Device.Sht4x.Sht4x" Usage="new Iot.Device.Sht4x.Sht4x device" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="device" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="device">The I²C device to operate on.</param>
+        <summary>
+            Instantiates a new <see cref="T:Iot.Device.Sht4x.Sht4x" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const int DefaultI2cAddress = 68;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultI2cAddress = (68)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Sht4x.Sht4x.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Integer  = 68" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : int" Usage="Iot.Device.Sht4x.Sht4x.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>68</MemberValue>
+      <Docs>
+        <summary>
+            The default I²C address of this device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Sht4x.Sht4x.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="sht4x.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ReadHumidityAndTemperature">
+      <MemberSignature Language="C#" Value="public (UnitsNet.RelativeHumidity?,UnitsNet.Temperature?) ReadHumidityAndTemperature (Iot.Device.Sht4x.Sht4xRepeatability repeatability = Iot.Device.Sht4x.Sht4xRepeatability.High);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.ValueTuple`2&lt;valuetype System.Nullable`1&lt;valuetype UnitsNet.RelativeHumidity&gt;, valuetype System.Nullable`1&lt;valuetype UnitsNet.Temperature&gt;&gt; ReadHumidityAndTemperature(valuetype Iot.Device.Sht4x.Sht4xRepeatability repeatability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Sht4x.Sht4x.ReadHumidityAndTemperature(Iot.Device.Sht4x.Sht4xRepeatability)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadHumidityAndTemperature (Optional repeatability As Sht4xRepeatability = Iot.Device.Sht4x.Sht4xRepeatability.High) As ValueTuple(Of Nullable(Of RelativeHumidity), Nullable(Of Temperature))" />
+      <MemberSignature Language="F#" Value="member this.ReadHumidityAndTemperature : Iot.Device.Sht4x.Sht4xRepeatability -&gt; ValueTuple&lt;Nullable&lt;UnitsNet.RelativeHumidity&gt;, Nullable&lt;UnitsNet.Temperature&gt;&gt;" Usage="sht4x.ReadHumidityAndTemperature repeatability" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;System.Nullable&lt;UnitsNet.RelativeHumidity&gt;,System.Nullable&lt;UnitsNet.Temperature&gt;&gt;</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="iot-dotnet-2.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "RelativeHumidity", "Temperature" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "RelativeHumidity", "Temperature" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="repeatability" Type="Iot.Device.Sht4x.Sht4xRepeatability" />
+      </Parameters>
+      <Docs>
+        <param name="repeatability">To be added.</param>
+        <summary>
+            Reads relative humidity and temperature.
+            </summary>
+        <returns>
+            A tuple of relative humidity and temperature.
+            If a CRC check failed for a measurement, it will be <see langword="null" />.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadHumidityAndTemperatureAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.ValueTask&lt;(UnitsNet.RelativeHumidity?,UnitsNet.Temperature?)&gt; ReadHumidityAndTemperatureAsync (Iot.Device.Sht4x.Sht4xRepeatability repeatability = Iot.Device.Sht4x.Sht4xRepeatability.High);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Threading.Tasks.ValueTask`1&lt;valuetype System.ValueTuple`2&lt;valuetype System.Nullable`1&lt;valuetype UnitsNet.RelativeHumidity&gt;, valuetype System.Nullable`1&lt;valuetype UnitsNet.Temperature&gt;&gt;&gt; ReadHumidityAndTemperatureAsync(valuetype Iot.Device.Sht4x.Sht4xRepeatability repeatability) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Sht4x.Sht4x.ReadHumidityAndTemperatureAsync(Iot.Device.Sht4x.Sht4xRepeatability)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadHumidityAndTemperatureAsync (Optional repeatability As Sht4xRepeatability = Iot.Device.Sht4x.Sht4xRepeatability.High) As ValueTask(Of ValueTuple(Of Nullable(Of RelativeHumidity), Nullable(Of Temperature)))" />
+      <MemberSignature Language="F#" Value="member this.ReadHumidityAndTemperatureAsync : Iot.Device.Sht4x.Sht4xRepeatability -&gt; System.Threading.Tasks.ValueTask&lt;ValueTuple&lt;Nullable&lt;UnitsNet.RelativeHumidity&gt;, Nullable&lt;UnitsNet.Temperature&gt;&gt;&gt;" Usage="sht4x.ReadHumidityAndTemperatureAsync repeatability" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask&lt;System.ValueTuple&lt;System.Nullable&lt;UnitsNet.RelativeHumidity&gt;,System.Nullable&lt;UnitsNet.Temperature&gt;&gt;&gt;</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="iot-dotnet-2.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "RelativeHumidity", "Temperature" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "RelativeHumidity", "Temperature" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="repeatability" Type="Iot.Device.Sht4x.Sht4xRepeatability" />
+      </Parameters>
+      <Docs>
+        <param name="repeatability">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:Iot.Device.Sht4x.Sht4x.ReadHumidityAndTemperature(Iot.Device.Sht4x.Sht4xRepeatability)" />
+      </Docs>
+    </Member>
+    <Member MemberName="RelativeHumidity">
+      <MemberSignature Language="C#" Value="public UnitsNet.RelativeHumidity RelativeHumidity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.RelativeHumidity RelativeHumidity" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Sht4x.Sht4x.RelativeHumidity" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RelativeHumidity As RelativeHumidity" />
+      <MemberSignature Language="F#" Value="member this.RelativeHumidity : UnitsNet.RelativeHumidity" Usage="Iot.Device.Sht4x.Sht4x.RelativeHumidity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Telemetry(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>UnitsNet.RelativeHumidity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The most recent relative humidity measurement.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Repeatability">
+      <MemberSignature Language="C#" Value="public Iot.Device.Sht4x.Sht4xRepeatability Repeatability { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Sht4x.Sht4xRepeatability Repeatability" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Sht4x.Sht4x.Repeatability" />
+      <MemberSignature Language="VB.NET" Value="Public Property Repeatability As Sht4xRepeatability" />
+      <MemberSignature Language="F#" Value="member this.Repeatability : Iot.Device.Sht4x.Sht4xRepeatability with get, set" Usage="Iot.Device.Sht4x.Sht4x.Repeatability" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Sht4x.Sht4xRepeatability</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The level of repeatability to use when measuring relative humidity.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Sht4x.Sht4x.Reset" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Reset ()" />
+      <MemberSignature Language="F#" Value="member this.Reset : unit -&gt; unit" Usage="sht4x.Reset " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resets the device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Temperature">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature Temperature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature Temperature" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Sht4x.Sht4x.Temperature" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Temperature As Temperature" />
+      <MemberSignature Language="F#" Value="member this.Temperature : UnitsNet.Temperature" Usage="Iot.Device.Sht4x.Sht4x.Temperature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Telemetry(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The most recent temperature measurement.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

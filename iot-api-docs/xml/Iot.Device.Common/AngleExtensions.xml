@@ -1,0 +1,165 @@
+<Type Name="AngleExtensions" FullName="Iot.Device.Common.AngleExtensions">
+  <TypeSignature Language="C#" Value="public static class AngleExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit AngleExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Common.AngleExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module AngleExtensions" />
+  <TypeSignature Language="F#" Value="type AngleExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides extension methods for <see cref="T:UnitsNet.Angle" /></summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Difference">
+      <MemberSignature Language="C#" Value="public static UnitsNet.Angle Difference (UnitsNet.Angle currentTrack, UnitsNet.Angle destinationTrack);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Angle Difference(valuetype UnitsNet.Angle currentTrack, valuetype UnitsNet.Angle destinationTrack) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.AngleExtensions.Difference(UnitsNet.Angle,UnitsNet.Angle)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Difference (currentTrack As Angle, destinationTrack As Angle) As Angle" />
+      <MemberSignature Language="F#" Value="static member Difference : UnitsNet.Angle * UnitsNet.Angle -&gt; UnitsNet.Angle" Usage="Iot.Device.Common.AngleExtensions.Difference (currentTrack, destinationTrack)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Angle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="currentTrack" Type="UnitsNet.Angle" />
+        <Parameter Name="destinationTrack" Type="UnitsNet.Angle" />
+      </Parameters>
+      <Docs>
+        <param name="currentTrack">First angle, actual direction</param>
+        <param name="destinationTrack">Second angle, desired direction</param>
+        <summary>
+            Calculate the difference between two angles. Useful to compute the angle error between a desired and an actual track.
+            </summary>
+        <returns>The normalized result of <paramref name="currentTrack" />-<paramref name="destinationTrack" />. The value is negative if
+            the current track is to port (left) of the the desired track and positive otherwise</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MagneticToTrue">
+      <MemberSignature Language="C#" Value="public static UnitsNet.Angle MagneticToTrue (this UnitsNet.Angle angleMagnetic, UnitsNet.Angle variation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Angle MagneticToTrue(valuetype UnitsNet.Angle angleMagnetic, valuetype UnitsNet.Angle variation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.AngleExtensions.MagneticToTrue(UnitsNet.Angle,UnitsNet.Angle)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function MagneticToTrue (angleMagnetic As Angle, variation As Angle) As Angle" />
+      <MemberSignature Language="F#" Value="static member MagneticToTrue : UnitsNet.Angle * UnitsNet.Angle -&gt; UnitsNet.Angle" Usage="Iot.Device.Common.AngleExtensions.MagneticToTrue (angleMagnetic, variation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Angle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angleMagnetic" Type="UnitsNet.Angle" RefType="this" />
+        <Parameter Name="variation" Type="UnitsNet.Angle" />
+      </Parameters>
+      <Docs>
+        <param name="angleMagnetic">Magnetic north angle</param>
+        <param name="variation">Variation (positive east)</param>
+        <summary>
+            Convert magnetic angle to true angle, given the variation
+            </summary>
+        <returns>True north angle</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Normalize">
+      <MemberSignature Language="C#" Value="public static UnitsNet.Angle Normalize (this UnitsNet.Angle self, bool toFullCircle);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Angle Normalize(valuetype UnitsNet.Angle self, bool toFullCircle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.AngleExtensions.Normalize(UnitsNet.Angle,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Normalize (self As Angle, toFullCircle As Boolean) As Angle" />
+      <MemberSignature Language="F#" Value="static member Normalize : UnitsNet.Angle * bool -&gt; UnitsNet.Angle" Usage="Iot.Device.Common.AngleExtensions.Normalize (self, toFullCircle)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Angle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="self" Type="UnitsNet.Angle" RefType="this" />
+        <Parameter Name="toFullCircle" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="self">Instance to normalize</param>
+        <param name="toFullCircle">Set to true to normalize to 0-360°, otherwise normalizes to +/-180°</param>
+        <summary>
+            Normalizes the angle so it is between 0° and 360° or between -180° and +180° respectively.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TrueToMagnetic">
+      <MemberSignature Language="C#" Value="public static UnitsNet.Angle TrueToMagnetic (this UnitsNet.Angle angleTrue, UnitsNet.Angle variation);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Angle TrueToMagnetic(valuetype UnitsNet.Angle angleTrue, valuetype UnitsNet.Angle variation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.AngleExtensions.TrueToMagnetic(UnitsNet.Angle,UnitsNet.Angle)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function TrueToMagnetic (angleTrue As Angle, variation As Angle) As Angle" />
+      <MemberSignature Language="F#" Value="static member TrueToMagnetic : UnitsNet.Angle * UnitsNet.Angle -&gt; UnitsNet.Angle" Usage="Iot.Device.Common.AngleExtensions.TrueToMagnetic (angleTrue, variation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Angle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angleTrue" Type="UnitsNet.Angle" RefType="this" />
+        <Parameter Name="variation" Type="UnitsNet.Angle" />
+      </Parameters>
+      <Docs>
+        <param name="angleTrue">Course relative to true north</param>
+        <param name="variation">Variation. Positive for east</param>
+        <summary>
+            Helper method to convert a true angle to a magnetic one, given the variation.
+            </summary>
+        <returns>The magnetic course</returns>
+        <remarks>Remember: From true to false with the wrong sign</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryAverageAngle">
+      <MemberSignature Language="C#" Value="public static bool TryAverageAngle (this System.Collections.Generic.IEnumerable&lt;UnitsNet.Angle&gt; inputAngles, out UnitsNet.Angle result);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryAverageAngle(class System.Collections.Generic.IEnumerable`1&lt;valuetype UnitsNet.Angle&gt; inputAngles, [out] valuetype UnitsNet.Angle&amp; result) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.AngleExtensions.TryAverageAngle(System.Collections.Generic.IEnumerable{UnitsNet.Angle},UnitsNet.Angle@)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function TryAverageAngle (inputAngles As IEnumerable(Of Angle), ByRef result As Angle) As Boolean" />
+      <MemberSignature Language="F#" Value="static member TryAverageAngle : seq&lt;UnitsNet.Angle&gt; * Angle -&gt; bool" Usage="Iot.Device.Common.AngleExtensions.TryAverageAngle (inputAngles, result)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="inputAngles" Type="System.Collections.Generic.IEnumerable&lt;UnitsNet.Angle&gt;" RefType="this" />
+        <Parameter Name="result" Type="UnitsNet.Angle" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="inputAngles">A set of angles</param>
+        <param name="result">The angle that is the mean of the given angles.</param>
+        <summary>
+            Calculates the average (medium) of a set of points.
+            See https://en.wikipedia.org/wiki/Mean_of_circular_quantities
+            This method fails if an empty input set is provided or the inputs are evenly distributed over the circle.
+            </summary>
+        <returns>True on success, false otherwise.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

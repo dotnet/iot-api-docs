@@ -1,0 +1,280 @@
+<Type Name="HeadingAndDeclination" FullName="Iot.Device.Nmea0183.Sentences.HeadingAndDeclination">
+  <TypeSignature Language="C#" Value="public class HeadingAndDeclination : Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HeadingAndDeclination extends Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Sentences.HeadingAndDeclination" />
+  <TypeSignature Language="VB.NET" Value="Public Class HeadingAndDeclination&#xA;Inherits NmeaSentence" />
+  <TypeSignature Language="F#" Value="type HeadingAndDeclination = class&#xA;    inherit NmeaSentence" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Nmea0183.Sentences.NmeaSentence</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            HDG Sentence (Heading, declination, variation)
+            Usually measured using an electronic compass. Can be used instead of HDM or HDT (the variation is also included
+            in message RMC)
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HeadingAndDeclination (Iot.Device.Nmea0183.TalkerSentence sentence, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Nmea0183.TalkerSentence sentence, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sentence As TalkerSentence, time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.HeadingAndDeclination : Iot.Device.Nmea0183.TalkerSentence * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.HeadingAndDeclination" Usage="new Iot.Device.Nmea0183.Sentences.HeadingAndDeclination (sentence, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sentence" Type="Iot.Device.Nmea0183.TalkerSentence" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="sentence">To be added.</param>
+        <param name="time">To be added.</param>
+        <summary>
+            Internal constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HeadingAndDeclination (Iot.Device.Nmea0183.TalkerId talkerId, System.Collections.Generic.IEnumerable&lt;string&gt; fields, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Nmea0183.TalkerId talkerId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; fields, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (talkerId As TalkerId, fields As IEnumerable(Of String), time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.HeadingAndDeclination : Iot.Device.Nmea0183.TalkerId * seq&lt;string&gt; * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.HeadingAndDeclination" Usage="new Iot.Device.Nmea0183.Sentences.HeadingAndDeclination (talkerId, fields, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="talkerId" Type="Iot.Device.Nmea0183.TalkerId" />
+        <Parameter Name="fields" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="talkerId">To be added.</param>
+        <param name="fields">To be added.</param>
+        <param name="time">To be added.</param>
+        <summary>
+            Magnetic heading message
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HeadingAndDeclination (UnitsNet.Angle headingTrue, UnitsNet.Angle? deviation, UnitsNet.Angle? variation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype UnitsNet.Angle headingTrue, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; deviation, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; variation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.#ctor(UnitsNet.Angle,System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Angle})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (headingTrue As Angle, deviation As Nullable(Of Angle), variation As Nullable(Of Angle))" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.HeadingAndDeclination : UnitsNet.Angle * Nullable&lt;UnitsNet.Angle&gt; * Nullable&lt;UnitsNet.Angle&gt; -&gt; Iot.Device.Nmea0183.Sentences.HeadingAndDeclination" Usage="new Iot.Device.Nmea0183.Sentences.HeadingAndDeclination (headingTrue, deviation, variation)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="headingTrue" Type="UnitsNet.Angle" />
+        <Parameter Name="deviation" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+        <Parameter Name="variation" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="headingTrue">To be added.</param>
+        <param name="deviation">To be added.</param>
+        <param name="variation">To be added.</param>
+        <summary>
+            Constructs a new HDG sentence
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Declination">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? Declination { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; Declination" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.Declination" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Declination As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.Declination : Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.Declination" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Magnetic declination (sometimes also called variation) at current location. Usually derived from the NOAA magnetic field model by one
+            of the attached devices.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deviation">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? Deviation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; Deviation" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.Deviation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Deviation As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.Deviation : Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.Deviation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Deviation at current location. Usually unknown (empty). Not sure what this field means. The deviation is a property
+            of the actual compass and the current orientation, not the location.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeadingMagnetic">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? HeadingMagnetic { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; HeadingMagnetic" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.HeadingMagnetic" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HeadingMagnetic As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.HeadingMagnetic : Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.HeadingMagnetic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Magnetic heading (derived from true heading and declination)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeadingTrue">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle HeadingTrue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Angle HeadingTrue" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.HeadingTrue" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HeadingTrue As Angle" />
+      <MemberSignature Language="F#" Value="member this.HeadingTrue : UnitsNet.Angle" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.HeadingTrue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Angle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Angle of the wind
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Nmea0183.SentenceId Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype Iot.Device.Nmea0183.SentenceId Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Id As SentenceId" />
+      <MemberSignature Language="F#" Value="member this.Id : Iot.Device.Nmea0183.SentenceId" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This sentence's id
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplacesOlderInstance">
+      <MemberSignature Language="C#" Value="public override bool ReplacesOlderInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReplacesOlderInstance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.ReplacesOlderInstance" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ReplacesOlderInstance As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReplacesOlderInstance : bool" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.ReplacesOlderInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is true for this message type
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToNmeaParameterList">
+      <MemberSignature Language="C#" Value="public override string ToNmeaParameterList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToNmeaParameterList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.ToNmeaParameterList" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToNmeaParameterList () As String" />
+      <MemberSignature Language="F#" Value="override this.ToNmeaParameterList : unit -&gt; string" Usage="headingAndDeclination.ToNmeaParameterList " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Presents this message as output
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToReadableContent">
+      <MemberSignature Language="C#" Value="public override string ToReadableContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToReadableContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.ToReadableContent" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToReadableContent () As String" />
+      <MemberSignature Language="F#" Value="override this.ToReadableContent : unit -&gt; string" Usage="headingAndDeclination.ToReadableContent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

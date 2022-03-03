@@ -1,0 +1,255 @@
+<Type Name="TrackMadeGood" FullName="Iot.Device.Nmea0183.Sentences.TrackMadeGood">
+  <TypeSignature Language="C#" Value="public class TrackMadeGood : Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TrackMadeGood extends Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Sentences.TrackMadeGood" />
+  <TypeSignature Language="VB.NET" Value="Public Class TrackMadeGood&#xA;Inherits NmeaSentence" />
+  <TypeSignature Language="F#" Value="type TrackMadeGood = class&#xA;    inherit NmeaSentence" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Nmea0183.Sentences.NmeaSentence</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            VTG Sentence: Speed and course
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrackMadeGood (Iot.Device.Nmea0183.TalkerSentence sentence, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Nmea0183.TalkerSentence sentence, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.TrackMadeGood.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sentence As TalkerSentence, time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.TrackMadeGood : Iot.Device.Nmea0183.TalkerSentence * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.TrackMadeGood" Usage="new Iot.Device.Nmea0183.Sentences.TrackMadeGood (sentence, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sentence" Type="Iot.Device.Nmea0183.TalkerSentence" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="sentence">To be added.</param>
+        <param name="time">To be added.</param>
+        <summary>
+            Internal constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrackMadeGood (Iot.Device.Nmea0183.TalkerId talkerId, System.Collections.Generic.IEnumerable&lt;string&gt; fields, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Nmea0183.TalkerId talkerId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; fields, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.TrackMadeGood.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (talkerId As TalkerId, fields As IEnumerable(Of String), time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.TrackMadeGood : Iot.Device.Nmea0183.TalkerId * seq&lt;string&gt; * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.TrackMadeGood" Usage="new Iot.Device.Nmea0183.Sentences.TrackMadeGood (talkerId, fields, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="talkerId" Type="Iot.Device.Nmea0183.TalkerId" />
+        <Parameter Name="fields" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="talkerId">Talker Id</param>
+        <param name="fields">List of fields</param>
+        <param name="time">Time this message was valid</param>
+        <summary>
+            Creates a VTG sentence from decoded fields
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TrackMadeGood (UnitsNet.Angle courseOverGroundTrue, UnitsNet.Angle? courseOverGroundMagnetic, UnitsNet.Speed speed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype UnitsNet.Angle courseOverGroundTrue, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; courseOverGroundMagnetic, valuetype UnitsNet.Speed speed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.TrackMadeGood.#ctor(UnitsNet.Angle,System.Nullable{UnitsNet.Angle},UnitsNet.Speed)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (courseOverGroundTrue As Angle, courseOverGroundMagnetic As Nullable(Of Angle), speed As Speed)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.TrackMadeGood : UnitsNet.Angle * Nullable&lt;UnitsNet.Angle&gt; * UnitsNet.Speed -&gt; Iot.Device.Nmea0183.Sentences.TrackMadeGood" Usage="new Iot.Device.Nmea0183.Sentences.TrackMadeGood (courseOverGroundTrue, courseOverGroundMagnetic, speed)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="courseOverGroundTrue" Type="UnitsNet.Angle" />
+        <Parameter Name="courseOverGroundMagnetic" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+        <Parameter Name="speed" Type="UnitsNet.Speed" />
+      </Parameters>
+      <Docs>
+        <param name="courseOverGroundTrue">To be added.</param>
+        <param name="courseOverGroundMagnetic">To be added.</param>
+        <param name="speed">To be added.</param>
+        <summary>
+            Constructs a new VTG sentence
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CourseOverGroundMagnetic">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? CourseOverGroundMagnetic { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; CourseOverGroundMagnetic" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.TrackMadeGood.CourseOverGroundMagnetic" />
+      <MemberSignature Language="VB.NET" Value="Public Property CourseOverGroundMagnetic As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.CourseOverGroundMagnetic : Nullable&lt;UnitsNet.Angle&gt; with get, set" Usage="Iot.Device.Nmea0183.Sentences.TrackMadeGood.CourseOverGroundMagnetic" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Course over ground, degrees magnetic.
+            Note: Usually derived from <see cref="P:Iot.Device.Nmea0183.Sentences.TrackMadeGood.CourseOverGroundTrue" />, the current position and a magnetic variation model.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CourseOverGroundTrue">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle CourseOverGroundTrue { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Angle CourseOverGroundTrue" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.TrackMadeGood.CourseOverGroundTrue" />
+      <MemberSignature Language="VB.NET" Value="Public Property CourseOverGroundTrue As Angle" />
+      <MemberSignature Language="F#" Value="member this.CourseOverGroundTrue : UnitsNet.Angle with get, set" Usage="Iot.Device.Nmea0183.Sentences.TrackMadeGood.CourseOverGroundTrue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Angle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Course over ground, degrees true
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Nmea0183.SentenceId Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype Iot.Device.Nmea0183.SentenceId Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.TrackMadeGood.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Id As SentenceId" />
+      <MemberSignature Language="F#" Value="member this.Id : Iot.Device.Nmea0183.SentenceId" Usage="Iot.Device.Nmea0183.Sentences.TrackMadeGood.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This sentence's id
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplacesOlderInstance">
+      <MemberSignature Language="C#" Value="public override bool ReplacesOlderInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReplacesOlderInstance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.TrackMadeGood.ReplacesOlderInstance" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ReplacesOlderInstance As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReplacesOlderInstance : bool" Usage="Iot.Device.Nmea0183.Sentences.TrackMadeGood.ReplacesOlderInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is true for this message type
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Speed">
+      <MemberSignature Language="C#" Value="public UnitsNet.Speed Speed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Speed Speed" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.TrackMadeGood.Speed" />
+      <MemberSignature Language="VB.NET" Value="Public Property Speed As Speed" />
+      <MemberSignature Language="F#" Value="member this.Speed : UnitsNet.Speed with get, set" Usage="Iot.Device.Nmea0183.Sentences.TrackMadeGood.Speed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Speed</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Speed over ground
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToNmeaParameterList">
+      <MemberSignature Language="C#" Value="public override string ToNmeaParameterList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToNmeaParameterList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.TrackMadeGood.ToNmeaParameterList" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToNmeaParameterList () As String" />
+      <MemberSignature Language="F#" Value="override this.ToNmeaParameterList : unit -&gt; string" Usage="trackMadeGood.ToNmeaParameterList " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Presents this message as output
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToReadableContent">
+      <MemberSignature Language="C#" Value="public override string ToReadableContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToReadableContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.TrackMadeGood.ToReadableContent" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToReadableContent () As String" />
+      <MemberSignature Language="F#" Value="override this.ToReadableContent : unit -&gt; string" Usage="trackMadeGood.ToReadableContent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

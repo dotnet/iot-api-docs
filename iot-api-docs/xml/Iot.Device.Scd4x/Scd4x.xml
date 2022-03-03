@@ -1,0 +1,411 @@
+<Type Name="Scd4x" FullName="Iot.Device.Scd4x.Scd4x">
+  <TypeSignature Language="C#" Value="public sealed class Scd4x : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Scd4x extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Scd4x.Scd4x" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Scd4x&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Scd4x = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Device.Model.Interface("CO₂, Humidity, and Temperature sensor SCD4x")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Device.Model.Interface("CO₂, Humidity, and Temperature sensor SCD4x")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            CO₂, Humidity, and Temperature sensor SCD4x
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Scd4x (System.Device.I2c.I2cDevice device);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice device) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Scd4x.Scd4x.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (device As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Scd4x.Scd4x : System.Device.I2c.I2cDevice -&gt; Iot.Device.Scd4x.Scd4x" Usage="new Iot.Device.Scd4x.Scd4x device" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="device" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="device">The I²C device to operate on.</param>
+        <summary>
+            Instantiates a new <see cref="T:Iot.Device.Scd4x.Scd4x" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Co2">
+      <MemberSignature Language="C#" Value="public UnitsNet.VolumeConcentration Co2 { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.VolumeConcentration Co2" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Scd4x.Scd4x.Co2" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Co2 As VolumeConcentration" />
+      <MemberSignature Language="F#" Value="member this.Co2 : UnitsNet.VolumeConcentration" Usage="Iot.Device.Scd4x.Scd4x.Co2" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Telemetry(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>UnitsNet.VolumeConcentration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The most recent CO₂ measurement.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const int DefaultI2cAddress = 98;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultI2cAddress = (98)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Scd4x.Scd4x.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Integer  = 98" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : int" Usage="Iot.Device.Scd4x.Scd4x.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>98</MemberValue>
+      <Docs>
+        <summary>
+            The default I²C address of this device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Scd4x.Scd4x.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="scd4x.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="MeasurementPeriod">
+      <MemberSignature Language="C#" Value="public static TimeSpan MeasurementPeriod { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype System.TimeSpan MeasurementPeriod" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Scd4x.Scd4x.MeasurementPeriod" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property MeasurementPeriod As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.MeasurementPeriod : TimeSpan" Usage="Iot.Device.Scd4x.Scd4x.MeasurementPeriod" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The period to wait for each measurement: five seconds.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadPeriodicMeasurement">
+      <MemberSignature Language="C#" Value="public (UnitsNet.VolumeConcentration?,UnitsNet.RelativeHumidity?,UnitsNet.Temperature?) ReadPeriodicMeasurement ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.ValueTuple`3&lt;valuetype System.Nullable`1&lt;valuetype UnitsNet.VolumeConcentration&gt;, valuetype System.Nullable`1&lt;valuetype UnitsNet.RelativeHumidity&gt;, valuetype System.Nullable`1&lt;valuetype UnitsNet.Temperature&gt;&gt; ReadPeriodicMeasurement() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Scd4x.Scd4x.ReadPeriodicMeasurement" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadPeriodicMeasurement () As ValueTuple(Of Nullable(Of VolumeConcentration), Nullable(Of RelativeHumidity), Nullable(Of Temperature))" />
+      <MemberSignature Language="F#" Value="member this.ReadPeriodicMeasurement : unit -&gt; ValueTuple&lt;Nullable&lt;UnitsNet.VolumeConcentration&gt;, Nullable&lt;UnitsNet.RelativeHumidity&gt;, Nullable&lt;UnitsNet.Temperature&gt;&gt;" Usage="scd4x.ReadPeriodicMeasurement " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;System.Nullable&lt;UnitsNet.VolumeConcentration&gt;,System.Nullable&lt;UnitsNet.RelativeHumidity&gt;,System.Nullable&lt;UnitsNet.Temperature&gt;&gt;</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="iot-dotnet-2.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "CarbonDioxide", "RelativeHumidity", "Temperature" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "CarbonDioxide", "RelativeHumidity", "Temperature" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <para>
+            Reads the next periodic CO₂, humidity, and temperature measurement from the sensor.
+            </para>
+        </summary>
+        <returns>
+            A tuple of CO₂, humidity, and temperature.
+            If a CRC check failed for a measurement, it will be <see langword="null" />.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadPeriodicMeasurementAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.ValueTask&lt;(UnitsNet.VolumeConcentration?,UnitsNet.RelativeHumidity?,UnitsNet.Temperature?)&gt; ReadPeriodicMeasurementAsync (System.Threading.CancellationToken cancellationToken = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Threading.Tasks.ValueTask`1&lt;valuetype System.ValueTuple`3&lt;valuetype System.Nullable`1&lt;valuetype UnitsNet.VolumeConcentration&gt;, valuetype System.Nullable`1&lt;valuetype UnitsNet.RelativeHumidity&gt;, valuetype System.Nullable`1&lt;valuetype UnitsNet.Temperature&gt;&gt;&gt; ReadPeriodicMeasurementAsync(valuetype System.Threading.CancellationToken cancellationToken) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Scd4x.Scd4x.ReadPeriodicMeasurementAsync(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadPeriodicMeasurementAsync (Optional cancellationToken As CancellationToken = Nothing) As ValueTask(Of ValueTuple(Of Nullable(Of VolumeConcentration), Nullable(Of RelativeHumidity), Nullable(Of Temperature)))" />
+      <MemberSignature Language="F#" Value="member this.ReadPeriodicMeasurementAsync : System.Threading.CancellationToken -&gt; System.Threading.Tasks.ValueTask&lt;ValueTuple&lt;Nullable&lt;UnitsNet.VolumeConcentration&gt;, Nullable&lt;UnitsNet.RelativeHumidity&gt;, Nullable&lt;UnitsNet.Temperature&gt;&gt;&gt;" Usage="scd4x.ReadPeriodicMeasurementAsync cancellationToken" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.ValueTask&lt;System.ValueTuple&lt;System.Nullable&lt;UnitsNet.VolumeConcentration&gt;,System.Nullable&lt;UnitsNet.RelativeHumidity&gt;,System.Nullable&lt;UnitsNet.Temperature&gt;&gt;&gt;</ReturnType>
+        <Attributes>
+          <Attribute FrameworkAlternate="iot-dotnet-2.0">
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "CarbonDioxide", "RelativeHumidity", "Temperature" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "CarbonDioxide", "RelativeHumidity", "Temperature" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="cancellationToken" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="cancellationToken">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:Iot.Device.Scd4x.Scd4x.ReadPeriodicMeasurement" />
+      </Docs>
+    </Member>
+    <Member MemberName="RelativeHumidity">
+      <MemberSignature Language="C#" Value="public UnitsNet.RelativeHumidity RelativeHumidity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.RelativeHumidity RelativeHumidity" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Scd4x.Scd4x.RelativeHumidity" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RelativeHumidity As RelativeHumidity" />
+      <MemberSignature Language="F#" Value="member this.RelativeHumidity : UnitsNet.RelativeHumidity" Usage="Iot.Device.Scd4x.Scd4x.RelativeHumidity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Telemetry(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>UnitsNet.RelativeHumidity</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The most recent relative humidity measurement.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Scd4x.Scd4x.Reset" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Reset ()" />
+      <MemberSignature Language="F#" Value="member this.Reset : unit -&gt; unit" Usage="scd4x.Reset " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resets the device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPressureCalibration">
+      <MemberSignature Language="C#" Value="public void SetPressureCalibration (UnitsNet.Pressure pressure);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPressureCalibration(valuetype UnitsNet.Pressure pressure) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Scd4x.Scd4x.SetPressureCalibration(UnitsNet.Pressure)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetPressureCalibration (pressure As Pressure)" />
+      <MemberSignature Language="F#" Value="member this.SetPressureCalibration : UnitsNet.Pressure -&gt; unit" Usage="scd4x.SetPressureCalibration pressure" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pressure" Type="UnitsNet.Pressure" />
+      </Parameters>
+      <Docs>
+        <param name="pressure">The pressure to use when calibrating the sensor.</param>
+        <summary>
+            Calibrates the sensor to operate at a specific barometric pressure.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPressureCalibrationAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task SetPressureCalibrationAsync (UnitsNet.Pressure pressure);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task SetPressureCalibrationAsync(valuetype UnitsNet.Pressure pressure) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Scd4x.Scd4x.SetPressureCalibrationAsync(UnitsNet.Pressure)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetPressureCalibrationAsync (pressure As Pressure) As Task" />
+      <MemberSignature Language="F#" Value="member this.SetPressureCalibrationAsync : UnitsNet.Pressure -&gt; System.Threading.Tasks.Task" Usage="scd4x.SetPressureCalibrationAsync pressure" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pressure" Type="UnitsNet.Pressure" />
+      </Parameters>
+      <Docs>
+        <param name="pressure">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:Iot.Device.Scd4x.Scd4x.SetPressureCalibration(UnitsNet.Pressure)" />
+      </Docs>
+    </Member>
+    <Member MemberName="StartPeriodicMeasurements">
+      <MemberSignature Language="C#" Value="public void StartPeriodicMeasurements ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartPeriodicMeasurements() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Scd4x.Scd4x.StartPeriodicMeasurements" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StartPeriodicMeasurements ()" />
+      <MemberSignature Language="F#" Value="member this.StartPeriodicMeasurements : unit -&gt; unit" Usage="scd4x.StartPeriodicMeasurements " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+          <para>
+             Instructs the sensor to start performing periodic measurements.
+             </para>
+          <para>
+             Every period, the length of which is available in <see cref="P:Iot.Device.Scd4x.Scd4x.MeasurementPeriod" />, the measurement can then be read via <see cref="M:Iot.Device.Scd4x.Scd4x.ReadPeriodicMeasurement" />.
+             </para>
+          <para>
+             Periodic measurement can be stopped with <see cref="M:Iot.Device.Scd4x.Scd4x.StopPeriodicMeasurements" />.
+             </para>
+        </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopPeriodicMeasurements">
+      <MemberSignature Language="C#" Value="public void StopPeriodicMeasurements ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StopPeriodicMeasurements() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Scd4x.Scd4x.StopPeriodicMeasurements" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StopPeriodicMeasurements ()" />
+      <MemberSignature Language="F#" Value="member this.StopPeriodicMeasurements : unit -&gt; unit" Usage="scd4x.StopPeriodicMeasurements " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Instructs the sensor to stop performing periodic measurements.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Temperature">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature Temperature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature Temperature" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Scd4x.Scd4x.Temperature" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Temperature As Temperature" />
+      <MemberSignature Language="F#" Value="member this.Temperature : UnitsNet.Temperature" Usage="Iot.Device.Scd4x.Scd4x.Temperature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Telemetry(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The most recent temperature measurement.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

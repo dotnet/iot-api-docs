@@ -1,0 +1,863 @@
+<Type Name="Brick" FullName="Iot.Device.BuildHat.Brick">
+  <TypeSignature Language="C#" Value="public class Brick : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Brick extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.BuildHat.Brick" />
+  <TypeSignature Language="VB.NET" Value="Public Class Brick&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Brick = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            The main Brick class allowing low level access to motors and sensors
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Brick (System.IO.Ports.SerialPort port, System.Device.Gpio.GpioController? controller = default, int reset = -1, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Ports.SerialPort port, class System.Device.Gpio.GpioController controller, int32 reset, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.#ctor(System.IO.Ports.SerialPort,System.Device.Gpio.GpioController,System.Int32,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (port As SerialPort, Optional controller As GpioController = Nothing, Optional reset As Integer = -1, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.BuildHat.Brick : System.IO.Ports.SerialPort * System.Device.Gpio.GpioController * int * bool -&gt; Iot.Device.BuildHat.Brick" Usage="new Iot.Device.BuildHat.Brick (port, controller, reset, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="port" Type="System.IO.Ports.SerialPort" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="reset" Type="System.Int32" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="port">The serial port</param>
+        <param name="controller">A GPIO Controller.</param>
+        <param name="reset">The rest pin.</param>
+        <param name="shouldDispose">True to dispose the GPIO Controller.</param>
+        <summary>
+            Creates a Brick with a serial port
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Brick (string port, System.Device.Gpio.GpioController? controller = default, int reset = -1, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string port, class System.Device.Gpio.GpioController controller, int32 reset, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.#ctor(System.String,System.Device.Gpio.GpioController,System.Int32,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (port As String, Optional controller As GpioController = Nothing, Optional reset As Integer = -1, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.BuildHat.Brick : string * System.Device.Gpio.GpioController * int * bool -&gt; Iot.Device.BuildHat.Brick" Usage="new Iot.Device.BuildHat.Brick (port, controller, reset, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="port" Type="System.String" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="reset" Type="System.Int32" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="port">The serial port name.</param>
+        <param name="controller">A GPIO Controller.</param>
+        <param name="reset">The rest pin.</param>
+        <param name="shouldDispose">True to dispose the GPIO Controller.</param>
+        <summary>
+            Creates a Brick with a serial port.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BuildHatInformation">
+      <MemberSignature Language="C#" Value="public BuildHat.Models.BuildHatInformation BuildHatInformation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class BuildHat.Models.BuildHatInformation BuildHatInformation" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Brick.BuildHatInformation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BuildHatInformation As BuildHatInformation" />
+      <MemberSignature Language="F#" Value="member this.BuildHatInformation : BuildHat.Models.BuildHatInformation" Usage="Iot.Device.BuildHat.Brick.BuildHatInformation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>BuildHat.Models.BuildHatInformation</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Build Hat information.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearFaults">
+      <MemberSignature Language="C#" Value="public void ClearFaults ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearFaults() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.ClearFaults" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ClearFaults ()" />
+      <MemberSignature Language="F#" Value="member this.ClearFaults : unit -&gt; unit" Usage="brick.ClearFaults " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clears any fault.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="brick.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="FloatMotor">
+      <MemberSignature Language="C#" Value="public void FloatMotor (Iot.Device.BuildHat.Models.SensorPort port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FloatMotor(valuetype Iot.Device.BuildHat.Models.SensorPort port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.FloatMotor(Iot.Device.BuildHat.Models.SensorPort)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub FloatMotor (port As SensorPort)" />
+      <MemberSignature Language="F#" Value="member this.FloatMotor : Iot.Device.BuildHat.Models.SensorPort -&gt; unit" Usage="brick.FloatMotor port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+      </Parameters>
+      <Docs>
+        <param name="port">The port.</param>
+        <summary>
+            Floats the motors and stop all constrains on it.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetActiveSensor">
+      <MemberSignature Language="C#" Value="public Iot.Device.BuildHat.Sensors.ActiveSensor GetActiveSensor (Iot.Device.BuildHat.Models.SensorPort port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.BuildHat.Sensors.ActiveSensor GetActiveSensor(valuetype Iot.Device.BuildHat.Models.SensorPort port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.GetActiveSensor(Iot.Device.BuildHat.Models.SensorPort)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetActiveSensor (port As SensorPort) As ActiveSensor" />
+      <MemberSignature Language="F#" Value="member this.GetActiveSensor : Iot.Device.BuildHat.Models.SensorPort -&gt; Iot.Device.BuildHat.Sensors.ActiveSensor" Usage="brick.GetActiveSensor port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.BuildHat.Sensors.ActiveSensor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+      </Parameters>
+      <Docs>
+        <param name="port">The port.</param>
+        <summary>
+            Gets the sensor connected.
+            </summary>
+        <returns>A sensor.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Exception">A motor or no sensor is connected</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetMotor">
+      <MemberSignature Language="C#" Value="public Iot.Device.BuildHat.Motors.IMotor GetMotor (Iot.Device.BuildHat.Models.SensorPort port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.BuildHat.Motors.IMotor GetMotor(valuetype Iot.Device.BuildHat.Models.SensorPort port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.GetMotor(Iot.Device.BuildHat.Models.SensorPort)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetMotor (port As SensorPort) As IMotor" />
+      <MemberSignature Language="F#" Value="member this.GetMotor : Iot.Device.BuildHat.Models.SensorPort -&gt; Iot.Device.BuildHat.Motors.IMotor" Usage="brick.GetMotor port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.BuildHat.Motors.IMotor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+      </Parameters>
+      <Docs>
+        <param name="port">The port.</param>
+        <summary>
+            Gets the attached motor to a port.
+            </summary>
+        <returns>A motor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSensor">
+      <MemberSignature Language="C#" Value="public Iot.Device.BuildHat.Sensors.Sensor GetSensor (Iot.Device.BuildHat.Models.SensorPort port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.BuildHat.Sensors.Sensor GetSensor(valuetype Iot.Device.BuildHat.Models.SensorPort port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.GetSensor(Iot.Device.BuildHat.Models.SensorPort)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSensor (port As SensorPort) As Sensor" />
+      <MemberSignature Language="F#" Value="member this.GetSensor : Iot.Device.BuildHat.Models.SensorPort -&gt; Iot.Device.BuildHat.Sensors.Sensor" Usage="brick.GetSensor port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.BuildHat.Sensors.Sensor</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+      </Parameters>
+      <Docs>
+        <param name="port">The port.</param>
+        <summary>
+            Gets the sensor connected.
+            </summary>
+        <returns>A sensor.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.Exception">A motor or no sensor is connected</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetSensorType">
+      <MemberSignature Language="C#" Value="public Iot.Device.BuildHat.Models.SensorType GetSensorType (Iot.Device.BuildHat.Models.SensorPort port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.BuildHat.Models.SensorType GetSensorType(valuetype Iot.Device.BuildHat.Models.SensorPort port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.GetSensorType(Iot.Device.BuildHat.Models.SensorPort)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetSensorType (port As SensorPort) As SensorType" />
+      <MemberSignature Language="F#" Value="member this.GetSensorType : Iot.Device.BuildHat.Models.SensorPort -&gt; Iot.Device.BuildHat.Models.SensorType" Usage="brick.GetSensorType port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.BuildHat.Models.SensorType</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+      </Parameters>
+      <Docs>
+        <param name="port">The port to check.</param>
+        <summary>
+            Gets the sensor type connected at a specific port.
+            </summary>
+        <returns>The sensor type connected.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InputVoltage">
+      <MemberSignature Language="C#" Value="public UnitsNet.ElectricPotential InputVoltage { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.ElectricPotential InputVoltage" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Brick.InputVoltage" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InputVoltage As ElectricPotential" />
+      <MemberSignature Language="F#" Value="member this.InputVoltage : UnitsNet.ElectricPotential" Usage="Iot.Device.BuildHat.Brick.InputVoltage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.ElectricPotential</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the input voltage.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsActiveSensor">
+      <MemberSignature Language="C#" Value="public static bool IsActiveSensor (Iot.Device.BuildHat.Models.SensorType sensorType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsActiveSensor(valuetype Iot.Device.BuildHat.Models.SensorType sensorType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.IsActiveSensor(Iot.Device.BuildHat.Models.SensorType)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function IsActiveSensor (sensorType As SensorType) As Boolean" />
+      <MemberSignature Language="F#" Value="static member IsActiveSensor : Iot.Device.BuildHat.Models.SensorType -&gt; bool" Usage="Iot.Device.BuildHat.Brick.IsActiveSensor sensorType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sensorType" Type="Iot.Device.BuildHat.Models.SensorType" />
+      </Parameters>
+      <Docs>
+        <param name="sensorType">The sensor type.</param>
+        <summary>
+            Checks if the sensor is an active one.
+            </summary>
+        <returns>True if active</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMotor">
+      <MemberSignature Language="C#" Value="public static bool IsMotor (Iot.Device.BuildHat.Models.SensorType sensorType);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool IsMotor(valuetype Iot.Device.BuildHat.Models.SensorType sensorType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.IsMotor(Iot.Device.BuildHat.Models.SensorType)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function IsMotor (sensorType As SensorType) As Boolean" />
+      <MemberSignature Language="F#" Value="static member IsMotor : Iot.Device.BuildHat.Models.SensorType -&gt; bool" Usage="Iot.Device.BuildHat.Brick.IsMotor sensorType" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sensorType" Type="Iot.Device.BuildHat.Models.SensorType" />
+      </Parameters>
+      <Docs>
+        <param name="sensorType">The sensor type.</param>
+        <summary>
+            Checks if the sensor is a motor.
+            </summary>
+        <returns>True if it's a motor.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LedMode">
+      <MemberSignature Language="C#" Value="public BuildHat.Models.LedMode LedMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype BuildHat.Models.LedMode LedMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Brick.LedMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property LedMode As LedMode" />
+      <MemberSignature Language="F#" Value="member this.LedMode : BuildHat.Models.LedMode with get, set" Usage="Iot.Device.BuildHat.Brick.LedMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>BuildHat.Models.LedMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the led mode.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveMotorForDegrees">
+      <MemberSignature Language="C#" Value="public void MoveMotorForDegrees (Iot.Device.BuildHat.Models.SensorPort port, int targetPosition, int speed, bool blocking = false, System.Threading.CancellationToken token = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MoveMotorForDegrees(valuetype Iot.Device.BuildHat.Models.SensorPort port, int32 targetPosition, int32 speed, bool blocking, valuetype System.Threading.CancellationToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.MoveMotorForDegrees(Iot.Device.BuildHat.Models.SensorPort,System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub MoveMotorForDegrees (port As SensorPort, targetPosition As Integer, speed As Integer, Optional blocking As Boolean = false, Optional token As CancellationToken = Nothing)" />
+      <MemberSignature Language="F#" Value="member this.MoveMotorForDegrees : Iot.Device.BuildHat.Models.SensorPort * int * int * bool * System.Threading.CancellationToken -&gt; unit" Usage="brick.MoveMotorForDegrees (port, targetPosition, speed, blocking, token)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+        <Parameter Name="targetPosition" Type="System.Int32" />
+        <Parameter Name="speed" Type="System.Int32" />
+        <Parameter Name="blocking" Type="System.Boolean" />
+        <Parameter Name="token" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="port">The port.</param>
+        <param name="targetPosition">The target angle in degrees.</param>
+        <param name="speed">The speed from - 100 to 100.</param>
+        <param name="blocking">True to block the function and wait for the execution.</param>
+        <param name="token">A cancellation token.</param>
+        <summary>
+            Run the motor for a specific number of degrees.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Not a motor or not an active motor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveMotorForSeconds">
+      <MemberSignature Language="C#" Value="public void MoveMotorForSeconds (Iot.Device.BuildHat.Models.SensorPort port, double seconds, int speed, bool blocking = false, System.Threading.CancellationToken token = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MoveMotorForSeconds(valuetype Iot.Device.BuildHat.Models.SensorPort port, float64 seconds, int32 speed, bool blocking, valuetype System.Threading.CancellationToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.MoveMotorForSeconds(Iot.Device.BuildHat.Models.SensorPort,System.Double,System.Int32,System.Boolean,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub MoveMotorForSeconds (port As SensorPort, seconds As Double, speed As Integer, Optional blocking As Boolean = false, Optional token As CancellationToken = Nothing)" />
+      <MemberSignature Language="F#" Value="member this.MoveMotorForSeconds : Iot.Device.BuildHat.Models.SensorPort * double * int * bool * System.Threading.CancellationToken -&gt; unit" Usage="brick.MoveMotorForSeconds (port, seconds, speed, blocking, token)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+        <Parameter Name="seconds" Type="System.Double" />
+        <Parameter Name="speed" Type="System.Int32" />
+        <Parameter Name="blocking" Type="System.Boolean" />
+        <Parameter Name="token" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port</param>
+        <param name="seconds">The amount of seconds.</param>
+        <param name="speed">&gt;The speed from - 100 to 100.</param>
+        <param name="blocking">True to block the function and wait for the execution.</param>
+        <param name="token">A cancellation token.</param>
+        <summary>
+            Run the specified motors for an amount of seconds.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveMotorToAbsolutePosition">
+      <MemberSignature Language="C#" Value="public void MoveMotorToAbsolutePosition (Iot.Device.BuildHat.Models.SensorPort port, int targetPosition, Iot.Device.BuildHat.Models.PositionWay way, int speed, bool blocking = false, System.Threading.CancellationToken token = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MoveMotorToAbsolutePosition(valuetype Iot.Device.BuildHat.Models.SensorPort port, int32 targetPosition, valuetype Iot.Device.BuildHat.Models.PositionWay way, int32 speed, bool blocking, valuetype System.Threading.CancellationToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.MoveMotorToAbsolutePosition(Iot.Device.BuildHat.Models.SensorPort,System.Int32,Iot.Device.BuildHat.Models.PositionWay,System.Int32,System.Boolean,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub MoveMotorToAbsolutePosition (port As SensorPort, targetPosition As Integer, way As PositionWay, speed As Integer, Optional blocking As Boolean = false, Optional token As CancellationToken = Nothing)" />
+      <MemberSignature Language="F#" Value="member this.MoveMotorToAbsolutePosition : Iot.Device.BuildHat.Models.SensorPort * int * Iot.Device.BuildHat.Models.PositionWay * int * bool * System.Threading.CancellationToken -&gt; unit" Usage="brick.MoveMotorToAbsolutePosition (port, targetPosition, way, speed, blocking, token)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+        <Parameter Name="targetPosition" Type="System.Int32" />
+        <Parameter Name="way" Type="Iot.Device.BuildHat.Models.PositionWay" />
+        <Parameter Name="speed" Type="System.Int32" />
+        <Parameter Name="blocking" Type="System.Boolean" />
+        <Parameter Name="token" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="port">The port.</param>
+        <param name="targetPosition">The target angle from -180 to +179.</param>
+        <param name="way">The way to go to the position.</param>
+        <param name="speed">The speed from - 100 to 100.</param>
+        <param name="blocking">True to block the function and wait for the execution.</param>
+        <param name="token">A cancellation token.</param>
+        <summary>
+            Run the motor to an absolute position.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Not a motor or not an active motor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveMotorToPosition">
+      <MemberSignature Language="C#" Value="public void MoveMotorToPosition (Iot.Device.BuildHat.Models.SensorPort port, int targetPosition, int speed, bool blocking = false, System.Threading.CancellationToken token = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void MoveMotorToPosition(valuetype Iot.Device.BuildHat.Models.SensorPort port, int32 targetPosition, int32 speed, bool blocking, valuetype System.Threading.CancellationToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.MoveMotorToPosition(Iot.Device.BuildHat.Models.SensorPort,System.Int32,System.Int32,System.Boolean,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub MoveMotorToPosition (port As SensorPort, targetPosition As Integer, speed As Integer, Optional blocking As Boolean = false, Optional token As CancellationToken = Nothing)" />
+      <MemberSignature Language="F#" Value="member this.MoveMotorToPosition : Iot.Device.BuildHat.Models.SensorPort * int * int * bool * System.Threading.CancellationToken -&gt; unit" Usage="brick.MoveMotorToPosition (port, targetPosition, speed, blocking, token)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+        <Parameter Name="targetPosition" Type="System.Int32" />
+        <Parameter Name="speed" Type="System.Int32" />
+        <Parameter Name="blocking" Type="System.Boolean" />
+        <Parameter Name="token" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="port">The port.</param>
+        <param name="targetPosition">The target angle from -180 to +180.</param>
+        <param name="speed">The speed from - 100 to 100.</param>
+        <param name="blocking">True to block the function and wait for the execution.</param>
+        <param name="token">A cancellation token.</param>
+        <summary>
+            Run the motor to an absolute position.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Not a motor or not an active motor.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerFault">
+      <MemberSignature Language="C#" Value="public event EventHandler? PowerFault;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler PowerFault" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.BuildHat.Brick.PowerFault" />
+      <MemberSignature Language="VB.NET" Value="Public Event PowerFault As EventHandler " />
+      <MemberSignature Language="F#" Value="member this.PowerFault : EventHandler " Usage="member this.PowerFault : System.EventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Events raised in case of power fault.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectCombiModesAndRead">
+      <MemberSignature Language="C#" Value="public void SelectCombiModesAndRead (Iot.Device.BuildHat.Models.SensorPort port, int[] modes, bool readOnce);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SelectCombiModesAndRead(valuetype Iot.Device.BuildHat.Models.SensorPort port, int32[] modes, bool readOnce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.SelectCombiModesAndRead(Iot.Device.BuildHat.Models.SensorPort,System.Int32[],System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SelectCombiModesAndRead (port As SensorPort, modes As Integer(), readOnce As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.SelectCombiModesAndRead : Iot.Device.BuildHat.Models.SensorPort * int[] * bool -&gt; unit" Usage="brick.SelectCombiModesAndRead (port, modes, readOnce)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+        <Parameter Name="modes" Type="System.Int32[]" />
+        <Parameter Name="readOnce" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="port">The port.</param>
+        <param name="modes">The modes.</param>
+        <param name="readOnce">True to read the sensor once or false to have continuous reading enabled.</param>
+        <summary>
+            Select modes on a specific port. This is only possible on active sensors and motors.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectModeAndRead">
+      <MemberSignature Language="C#" Value="public void SelectModeAndRead (Iot.Device.BuildHat.Models.SensorPort port, int mode, bool readOnce);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SelectModeAndRead(valuetype Iot.Device.BuildHat.Models.SensorPort port, int32 mode, bool readOnce) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.SelectModeAndRead(Iot.Device.BuildHat.Models.SensorPort,System.Int32,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SelectModeAndRead (port As SensorPort, mode As Integer, readOnce As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.SelectModeAndRead : Iot.Device.BuildHat.Models.SensorPort * int * bool -&gt; unit" Usage="brick.SelectModeAndRead (port, mode, readOnce)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+        <Parameter Name="mode" Type="System.Int32" />
+        <Parameter Name="readOnce" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="port">The port.</param>
+        <param name="mode">The modes.</param>
+        <param name="readOnce">True to read the sensor once or false to have continuous reading enabled.</param>
+        <summary>
+            Select modes on a specific port. This is only possible on active sensors and motors.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendRawCommand">
+      <MemberSignature Language="C#" Value="public void SendRawCommand (string command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendRawCommand(string command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.SendRawCommand(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendRawCommand (command As String)" />
+      <MemberSignature Language="F#" Value="member this.SendRawCommand : string -&gt; unit" Usage="brick.SendRawCommand command" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="command">The command.</param>
+        <summary>
+            Send a raw command. This can be used for specific sensors or setup sensors.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMotorBias">
+      <MemberSignature Language="C#" Value="public void SetMotorBias (Iot.Device.BuildHat.Models.SensorPort port, double bias = 0.1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMotorBias(valuetype Iot.Device.BuildHat.Models.SensorPort port, float64 bias) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.SetMotorBias(Iot.Device.BuildHat.Models.SensorPort,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMotorBias (port As SensorPort, Optional bias As Double = 0.1)" />
+      <MemberSignature Language="F#" Value="member this.SetMotorBias : Iot.Device.BuildHat.Models.SensorPort * double -&gt; unit" Usage="brick.SetMotorBias (port, bias)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+        <Parameter Name="bias" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port.</param>
+        <param name="bias">The bias between 0 and 1.</param>
+        <summary>
+            Set the motor bias
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMotorLimits">
+      <MemberSignature Language="C#" Value="public void SetMotorLimits (Iot.Device.BuildHat.Models.SensorPort port, double powerLimit = 0.1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMotorLimits(valuetype Iot.Device.BuildHat.Models.SensorPort port, float64 powerLimit) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.SetMotorLimits(Iot.Device.BuildHat.Models.SensorPort,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMotorLimits (port As SensorPort, Optional powerLimit As Double = 0.1)" />
+      <MemberSignature Language="F#" Value="member this.SetMotorLimits : Iot.Device.BuildHat.Models.SensorPort * double -&gt; unit" Usage="brick.SetMotorLimits (port, powerLimit)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+        <Parameter Name="powerLimit" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port.</param>
+        <param name="powerLimit">The power limit between 0 and 1.</param>
+        <summary>
+            Set the motor speed limit
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMotorPower">
+      <MemberSignature Language="C#" Value="public void SetMotorPower (Iot.Device.BuildHat.Models.SensorPort port, int powerPercent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMotorPower(valuetype Iot.Device.BuildHat.Models.SensorPort port, int32 powerPercent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.SetMotorPower(Iot.Device.BuildHat.Models.SensorPort,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMotorPower (port As SensorPort, powerPercent As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SetMotorPower : Iot.Device.BuildHat.Models.SensorPort * int -&gt; unit" Usage="brick.SetMotorPower (port, powerPercent)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+        <Parameter Name="powerPercent" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="port">The Motor port.</param>
+        <param name="powerPercent">The power from - 100 to 100</param>
+        <summary>
+            Set the motor power in percent
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopContinuousReadingSensor">
+      <MemberSignature Language="C#" Value="public void StopContinuousReadingSensor (Iot.Device.BuildHat.Models.SensorPort port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StopContinuousReadingSensor(valuetype Iot.Device.BuildHat.Models.SensorPort port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.StopContinuousReadingSensor(Iot.Device.BuildHat.Models.SensorPort)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StopContinuousReadingSensor (port As SensorPort)" />
+      <MemberSignature Language="F#" Value="member this.StopContinuousReadingSensor : Iot.Device.BuildHat.Models.SensorPort -&gt; unit" Usage="brick.StopContinuousReadingSensor port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+      </Parameters>
+      <Docs>
+        <param name="port">The port.</param>
+        <summary>
+            Stop reading continuous data from a specific sensor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SwitchSensorOff">
+      <MemberSignature Language="C#" Value="public void SwitchSensorOff (Iot.Device.BuildHat.Models.SensorPort port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SwitchSensorOff(valuetype Iot.Device.BuildHat.Models.SensorPort port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.SwitchSensorOff(Iot.Device.BuildHat.Models.SensorPort)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SwitchSensorOff (port As SensorPort)" />
+      <MemberSignature Language="F#" Value="member this.SwitchSensorOff : Iot.Device.BuildHat.Models.SensorPort -&gt; unit" Usage="brick.SwitchSensorOff port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+      </Parameters>
+      <Docs>
+        <param name="port">The port.</param>
+        <summary>
+            Switches a sensor off.
+            </summary>
+        <remarks>In case of a motor, this will switch off the motor.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SwitchSensorOn">
+      <MemberSignature Language="C#" Value="public void SwitchSensorOn (Iot.Device.BuildHat.Models.SensorPort port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SwitchSensorOn(valuetype Iot.Device.BuildHat.Models.SensorPort port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.SwitchSensorOn(Iot.Device.BuildHat.Models.SensorPort)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SwitchSensorOn (port As SensorPort)" />
+      <MemberSignature Language="F#" Value="member this.SwitchSensorOn : Iot.Device.BuildHat.Models.SensorPort -&gt; unit" Usage="brick.SwitchSensorOn port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+      </Parameters>
+      <Docs>
+        <param name="port">The port.</param>
+        <summary>
+            Switches a sensor on.
+            </summary>
+        <remarks>In case of a motor, this will switch the motor on full speed.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaitForSensorToConnect">
+      <MemberSignature Language="C#" Value="public void WaitForSensorToConnect (Iot.Device.BuildHat.Models.SensorPort port, System.Threading.CancellationToken token = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WaitForSensorToConnect(valuetype Iot.Device.BuildHat.Models.SensorPort port, valuetype System.Threading.CancellationToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.WaitForSensorToConnect(Iot.Device.BuildHat.Models.SensorPort,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WaitForSensorToConnect (port As SensorPort, Optional token As CancellationToken = Nothing)" />
+      <MemberSignature Language="F#" Value="member this.WaitForSensorToConnect : Iot.Device.BuildHat.Models.SensorPort * System.Threading.CancellationToken -&gt; unit" Usage="brick.WaitForSensorToConnect (port, token)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+        <Parameter Name="token" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="port">The port.</param>
+        <param name="token">A cancellatin token</param>
+        <summary>
+            Wait to get a sensor connected on a specific port.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteBytesToSensor">
+      <MemberSignature Language="C#" Value="public void WriteBytesToSensor (Iot.Device.BuildHat.Models.SensorPort port, ReadOnlySpan&lt;byte&gt; data, bool singleHeader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteBytesToSensor(valuetype Iot.Device.BuildHat.Models.SensorPort port, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; data, bool singleHeader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Brick.WriteBytesToSensor(Iot.Device.BuildHat.Models.SensorPort,System.ReadOnlySpan{System.Byte},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteBytesToSensor (port As SensorPort, data As ReadOnlySpan(Of Byte), singleHeader As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.WriteBytesToSensor : Iot.Device.BuildHat.Models.SensorPort * ReadOnlySpan&lt;byte&gt; * bool -&gt; unit" Usage="brick.WriteBytesToSensor (port, data, singleHeader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+        <Parameter Name="data" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="singleHeader" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="port">The port.</param>
+        <param name="data">The buffer to send.</param>
+        <param name="singleHeader">True for single header byte.</param>
+        <summary>
+            Writes directly to the sensor. The bytes to the current port, the first one or two bytes being header bytes. The message is padded if
+            necessary, and length and checksum fields are automatically populated.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

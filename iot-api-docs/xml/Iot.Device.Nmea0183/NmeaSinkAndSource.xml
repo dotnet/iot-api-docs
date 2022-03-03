@@ -1,0 +1,382 @@
+<Type Name="NmeaSinkAndSource" FullName="Iot.Device.Nmea0183.NmeaSinkAndSource">
+  <TypeSignature Language="C#" Value="public abstract class NmeaSinkAndSource : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit NmeaSinkAndSource extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.NmeaSinkAndSource" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class NmeaSinkAndSource&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type NmeaSinkAndSource = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            This abstract class describes an NMEA data source or data sink.
+            It can be a connection, a data processor or an output device.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NmeaSinkAndSource (string interfaceName);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(string interfaceName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.NmeaSinkAndSource.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (interfaceName As String)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.NmeaSinkAndSource : string -&gt; Iot.Device.Nmea0183.NmeaSinkAndSource" Usage="new Iot.Device.Nmea0183.NmeaSinkAndSource interfaceName" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="interfaceName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="interfaceName">Name of the interface (mostly used for logging purposes)</param>
+        <summary>
+            Constructs a message sink
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DispatchSentenceEvents">
+      <MemberSignature Language="C#" Value="protected virtual void DispatchSentenceEvents (Iot.Device.Nmea0183.Sentences.NmeaSentence? typedSequence);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void DispatchSentenceEvents(class Iot.Device.Nmea0183.Sentences.NmeaSentence typedSequence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.NmeaSinkAndSource.DispatchSentenceEvents(Iot.Device.Nmea0183.Sentences.NmeaSentence)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub DispatchSentenceEvents (typedSequence As NmeaSentence)" />
+      <MemberSignature Language="F#" Value="abstract member DispatchSentenceEvents : Iot.Device.Nmea0183.Sentences.NmeaSentence -&gt; unit&#xA;override this.DispatchSentenceEvents : Iot.Device.Nmea0183.Sentences.NmeaSentence -&gt; unit" Usage="nmeaSinkAndSource.DispatchSentenceEvents typedSequence" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="typedSequence" Type="Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+      </Parameters>
+      <Docs>
+        <param name="typedSequence">The sentences to process</param>
+        <summary>
+            Forwards the given sentence to listeners, as needed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.NmeaSinkAndSource.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="nmeaSinkAndSource.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Standard dispose method
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.NmeaSinkAndSource.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="nmeaSinkAndSource.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>
+            Dispose this instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FireOnParserError">
+      <MemberSignature Language="C#" Value="protected void FireOnParserError (string message, Iot.Device.Nmea0183.NmeaError error);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void FireOnParserError(string message, valuetype Iot.Device.Nmea0183.NmeaError error) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.NmeaSinkAndSource.FireOnParserError(System.String,Iot.Device.Nmea0183.NmeaError)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub FireOnParserError (message As String, error As NmeaError)" />
+      <MemberSignature Language="F#" Value="member this.FireOnParserError : string * Iot.Device.Nmea0183.NmeaError -&gt; unit" Usage="nmeaSinkAndSource.FireOnParserError (message, error)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="System.String" />
+        <Parameter Name="error" Type="Iot.Device.Nmea0183.NmeaError" />
+      </Parameters>
+      <Docs>
+        <param name="message">The message to write</param>
+        <param name="error">The kind of error seen</param>
+        <summary>
+            Fire an event informing about parser errors
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InterfaceName">
+      <MemberSignature Language="C#" Value="public string InterfaceName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string InterfaceName" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.NmeaSinkAndSource.InterfaceName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property InterfaceName As String" />
+      <MemberSignature Language="F#" Value="member this.InterfaceName : string" Usage="Iot.Device.Nmea0183.NmeaSinkAndSource.InterfaceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the interface
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNewPosition">
+      <MemberSignature Language="C#" Value="public virtual event Iot.Device.Nmea0183.PositionUpdate? OnNewPosition;" />
+      <MemberSignature Language="ILAsm" Value=".event class Iot.Device.Nmea0183.PositionUpdate OnNewPosition" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Nmea0183.NmeaSinkAndSource.OnNewPosition" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Event OnNewPosition As PositionUpdate " />
+      <MemberSignature Language="F#" Value="member this.OnNewPosition : Iot.Device.Nmea0183.PositionUpdate " Usage="member this.OnNewPosition : Iot.Device.Nmea0183.PositionUpdate " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.PositionUpdate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is fired when a new position is available
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNewSequence">
+      <MemberSignature Language="C#" Value="public virtual event Action&lt;Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.Sentences.NmeaSentence&gt;? OnNewSequence;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action`2&lt;class Iot.Device.Nmea0183.NmeaSinkAndSource, class Iot.Device.Nmea0183.Sentences.NmeaSentence&gt; OnNewSequence" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Nmea0183.NmeaSinkAndSource.OnNewSequence" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Event OnNewSequence As Action(Of NmeaSinkAndSource, NmeaSentence) " />
+      <MemberSignature Language="F#" Value="member this.OnNewSequence : Action&lt;Iot.Device.Nmea0183.NmeaSinkAndSource, Iot.Device.Nmea0183.Sentences.NmeaSentence&gt; " Usage="member this.OnNewSequence : System.Action&lt;Iot.Device.Nmea0183.NmeaSinkAndSource, Iot.Device.Nmea0183.Sentences.NmeaSentence&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.Sentences.NmeaSentence&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is fired on every new sentence
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnNewTime">
+      <MemberSignature Language="C#" Value="public virtual event Action&lt;DateTimeOffset&gt;? OnNewTime;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action`1&lt;valuetype System.DateTimeOffset&gt; OnNewTime" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Nmea0183.NmeaSinkAndSource.OnNewTime" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Event OnNewTime As Action(Of DateTimeOffset) " />
+      <MemberSignature Language="F#" Value="member this.OnNewTime : Action&lt;DateTimeOffset&gt; " Usage="member this.OnNewTime : System.Action&lt;System.DateTimeOffset&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;System.DateTimeOffset&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is fired when the time is updated
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnParserError">
+      <MemberSignature Language="C#" Value="public virtual event Action&lt;Iot.Device.Nmea0183.NmeaSinkAndSource,string,Iot.Device.Nmea0183.NmeaError&gt;? OnParserError;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action`3&lt;class Iot.Device.Nmea0183.NmeaSinkAndSource, string, valuetype Iot.Device.Nmea0183.NmeaError&gt; OnParserError" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Nmea0183.NmeaSinkAndSource.OnParserError" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Event OnParserError As Action(Of NmeaSinkAndSource, String, NmeaError) " />
+      <MemberSignature Language="F#" Value="member this.OnParserError : Action&lt;Iot.Device.Nmea0183.NmeaSinkAndSource, string, Iot.Device.Nmea0183.NmeaError&gt; " Usage="member this.OnParserError : System.Action&lt;Iot.Device.Nmea0183.NmeaSinkAndSource, System.string, Iot.Device.Nmea0183.NmeaError&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;Iot.Device.Nmea0183.NmeaSinkAndSource,System.String,Iot.Device.Nmea0183.NmeaError&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is fired when a message couldn't be parsed
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendSentence">
+      <MemberSignature Language="C#" Value="public void SendSentence (Iot.Device.Nmea0183.Sentences.NmeaSentence sentence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendSentence(class Iot.Device.Nmea0183.Sentences.NmeaSentence sentence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.NmeaSinkAndSource.SendSentence(Iot.Device.Nmea0183.Sentences.NmeaSentence)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendSentence (sentence As NmeaSentence)" />
+      <MemberSignature Language="F#" Value="member this.SendSentence : Iot.Device.Nmea0183.Sentences.NmeaSentence -&gt; unit" Usage="nmeaSinkAndSource.SendSentence sentence" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sentence" Type="Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+      </Parameters>
+      <Docs>
+        <param name="sentence">Sentence to send</param>
+        <summary>
+            Send the given sentence to the interface.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendSentence">
+      <MemberSignature Language="C#" Value="public abstract void SendSentence (Iot.Device.Nmea0183.NmeaSinkAndSource source, Iot.Device.Nmea0183.Sentences.NmeaSentence sentence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SendSentence(class Iot.Device.Nmea0183.NmeaSinkAndSource source, class Iot.Device.Nmea0183.Sentences.NmeaSentence sentence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.NmeaSinkAndSource.SendSentence(Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.Sentences.NmeaSentence)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SendSentence (source As NmeaSinkAndSource, sentence As NmeaSentence)" />
+      <MemberSignature Language="F#" Value="abstract member SendSentence : Iot.Device.Nmea0183.NmeaSinkAndSource * Iot.Device.Nmea0183.Sentences.NmeaSentence -&gt; unit" Usage="nmeaSinkAndSource.SendSentence (source, sentence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Iot.Device.Nmea0183.NmeaSinkAndSource" />
+        <Parameter Name="sentence" Type="Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+      </Parameters>
+      <Docs>
+        <param name="source">Source of message</param>
+        <param name="sentence">Sentence to send</param>
+        <summary>
+            Send the message to the device.
+            For an implementation, this is the input data!
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendSentences">
+      <MemberSignature Language="C#" Value="public virtual void SendSentences (System.Collections.Generic.IEnumerable&lt;Iot.Device.Nmea0183.Sentences.NmeaSentence&gt; sentencesToSend);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SendSentences(class System.Collections.Generic.IEnumerable`1&lt;class Iot.Device.Nmea0183.Sentences.NmeaSentence&gt; sentencesToSend) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.NmeaSinkAndSource.SendSentences(System.Collections.Generic.IEnumerable{Iot.Device.Nmea0183.Sentences.NmeaSentence})" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SendSentences (sentencesToSend As IEnumerable(Of NmeaSentence))" />
+      <MemberSignature Language="F#" Value="abstract member SendSentences : seq&lt;Iot.Device.Nmea0183.Sentences.NmeaSentence&gt; -&gt; unit&#xA;override this.SendSentences : seq&lt;Iot.Device.Nmea0183.Sentences.NmeaSentence&gt; -&gt; unit" Usage="nmeaSinkAndSource.SendSentences sentencesToSend" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sentencesToSend" Type="System.Collections.Generic.IEnumerable&lt;Iot.Device.Nmea0183.Sentences.NmeaSentence&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="sentencesToSend">The list of sentences to send</param>
+        <summary>
+            Sends a list of messages at once
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartDecode">
+      <MemberSignature Language="C#" Value="public abstract void StartDecode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StartDecode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.NmeaSinkAndSource.StartDecode" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub StartDecode ()" />
+      <MemberSignature Language="F#" Value="abstract member StartDecode : unit -&gt; unit" Usage="nmeaSinkAndSource.StartDecode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Start receiving messages from this interface.
+            An implementation should open streams, connect to sockets or create receiver threads, as appropriate.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopDecode">
+      <MemberSignature Language="C#" Value="public abstract void StopDecode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void StopDecode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.NmeaSinkAndSource.StopDecode" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub StopDecode ()" />
+      <MemberSignature Language="F#" Value="abstract member StopDecode : unit -&gt; unit" Usage="nmeaSinkAndSource.StopDecode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stops sending or receiving messages from and to this interface.
+            Any pending messages are discarded.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
