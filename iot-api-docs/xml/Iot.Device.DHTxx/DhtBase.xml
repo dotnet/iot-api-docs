@@ -12,6 +12,8 @@
     <AssemblyVersion>1.3.0.0</AssemblyVersion>
     <AssemblyVersion>1.4.0.0</AssemblyVersion>
     <AssemblyVersion>1.5.0.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -22,7 +24,7 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+    <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1">
       <AttributeName Language="C#">[System.Device.Model.Interface("Temperature and Humidity Sensor DHTxx")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Device.Model.Interface("Temperature and Humidity Sensor DHTxx")&gt;]</AttributeName>
     </Attribute>
@@ -49,6 +51,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
@@ -97,12 +101,14 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="pin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
-        <Parameter Name="pinNumberingScheme" Type="System.Device.Gpio.PinNumberingScheme" Index="1" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
-        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" Index="2" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
-        <Parameter Name="shouldDispose" Type="System.Boolean" Index="3" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="pin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="pinNumberingScheme" Type="System.Device.Gpio.PinNumberingScheme" Index="1" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" Index="2" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="3" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="pin">The pin number (GPIO number)</param>
@@ -122,9 +128,9 @@
       <MemberSignature Language="DocId" Value="F:Iot.Device.DHTxx.DhtBase._controller" />
       <MemberSignature Language="VB.NET" Value="Protected ReadOnly _controller As GpioController " FrameworkAlternate="iot-dotnet-1.0" />
       <MemberSignature Language="F#" Value="val mutable _controller : System.Device.Gpio.GpioController" Usage="Iot.Device.DHTxx.DhtBase._controller" />
-      <MemberSignature Language="C#" Value="protected System.Device.Gpio.GpioController? _controller;" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
-      <MemberSignature Language="ILAsm" Value=".field family class System.Device.Gpio.GpioController _controller" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
-      <MemberSignature Language="VB.NET" Value="Protected _controller As GpioController " FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="C#" Value="protected System.Device.Gpio.GpioController? _controller;" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Device.Gpio.GpioController _controller" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="VB.NET" Value="Protected _controller As GpioController " FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -134,6 +140,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Gpio.GpioController</ReturnType>
@@ -151,9 +159,9 @@
       <MemberSignature Language="DocId" Value="F:Iot.Device.DHTxx.DhtBase._i2cDevice" />
       <MemberSignature Language="VB.NET" Value="Protected ReadOnly _i2cDevice As I2cDevice " FrameworkAlternate="iot-dotnet-1.0" />
       <MemberSignature Language="F#" Value="val mutable _i2cDevice : System.Device.I2c.I2cDevice" Usage="Iot.Device.DHTxx.DhtBase._i2cDevice" />
-      <MemberSignature Language="C#" Value="protected System.Device.I2c.I2cDevice? _i2cDevice;" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
-      <MemberSignature Language="ILAsm" Value=".field family class System.Device.I2c.I2cDevice _i2cDevice" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
-      <MemberSignature Language="VB.NET" Value="Protected _i2cDevice As I2cDevice " FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="C#" Value="protected System.Device.I2c.I2cDevice? _i2cDevice;" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="ILAsm" Value=".field family class System.Device.I2c.I2cDevice _i2cDevice" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="VB.NET" Value="Protected _i2cDevice As I2cDevice " FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -163,6 +171,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.I2c.I2cDevice</ReturnType>
@@ -170,6 +180,28 @@
       <Docs>
         <summary>
             I2C device used to communicate with the device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="_isLastReadSuccessful">
+      <MemberSignature Language="C#" Value="protected bool _isLastReadSuccessful;" />
+      <MemberSignature Language="ILAsm" Value=".field family bool _isLastReadSuccessful" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.DHTxx.DhtBase._isLastReadSuccessful" />
+      <MemberSignature Language="VB.NET" Value="Protected _isLastReadSuccessful As Boolean " />
+      <MemberSignature Language="F#" Value="val mutable _isLastReadSuccessful : bool" Usage="Iot.Device.DHTxx.DhtBase._isLastReadSuccessful" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True when the last read values are valid
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -189,6 +221,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -240,6 +274,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -269,6 +305,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -290,10 +328,10 @@
       <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Ratio Humidity" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Humidity As Ratio" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2" />
       <MemberSignature Language="F#" Value="member this.Humidity : UnitsNet.Ratio" Usage="Iot.Device.DHTxx.DhtBase.Humidity" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2" />
-      <MemberSignature Language="C#" Value="public virtual UnitsNet.RelativeHumidity Humidity { get; }" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.RelativeHumidity Humidity" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
-      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Humidity As RelativeHumidity" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
-      <MemberSignature Language="F#" Value="member this.Humidity : UnitsNet.RelativeHumidity" Usage="Iot.Device.DHTxx.DhtBase.Humidity" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="C#" Value="public virtual UnitsNet.RelativeHumidity Humidity { get; }" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.RelativeHumidity Humidity" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Humidity As RelativeHumidity" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="F#" Value="member this.Humidity : UnitsNet.RelativeHumidity" Usage="Iot.Device.DHTxx.DhtBase.Humidity" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -303,17 +341,23 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
           <AttributeName Language="C#">[System.Device.Model.Telemetry(null, null)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry(null, null)&gt;]</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1">
+          <AttributeName Language="C#">[System.Obsolete("This property will be removed in a future release. Use TryGetHumidity instead.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This property will be removed in a future release. Use TryGetHumidity instead.")&gt;]</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType FrameworkAlternate="iot-dotnet-1.0">System.Double</ReturnType>
         <ReturnType FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2">UnitsNet.Ratio</ReturnType>
-        <ReturnType FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5">UnitsNet.RelativeHumidity</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1">UnitsNet.RelativeHumidity</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -339,7 +383,15 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1">
+          <AttributeName Language="C#">[System.Obsolete("This property will be removed in a future release.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This property will be removed in a future release.")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
@@ -351,15 +403,39 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="MinTimeBetweenReads">
+      <MemberSignature Language="C#" Value="public TimeSpan MinTimeBetweenReads { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan MinTimeBetweenReads" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.DHTxx.DhtBase.MinTimeBetweenReads" />
+      <MemberSignature Language="VB.NET" Value="Public Property MinTimeBetweenReads As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.MinTimeBetweenReads : TimeSpan with get, set" Usage="Iot.Device.DHTxx.DhtBase.MinTimeBetweenReads" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the minimum time between sensor reads.
+            When querying the sensor faster than this, the last values will be returned (whether valid or not)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Temperature">
       <MemberSignature Language="C#" Value="public virtual Iot.Units.Temperature Temperature { get; }" FrameworkAlternate="iot-dotnet-1.0" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Units.Temperature Temperature" FrameworkAlternate="iot-dotnet-1.0" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.DHTxx.DhtBase.Temperature" />
       <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property Temperature As Temperature" />
       <MemberSignature Language="F#" Value="member this.Temperature : Iot.Units.Temperature" Usage="Iot.Device.DHTxx.DhtBase.Temperature" FrameworkAlternate="iot-dotnet-1.0" />
-      <MemberSignature Language="C#" Value="public virtual UnitsNet.Temperature Temperature { get; }" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature Temperature" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
-      <MemberSignature Language="F#" Value="member this.Temperature : UnitsNet.Temperature" Usage="Iot.Device.DHTxx.DhtBase.Temperature" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="C#" Value="public virtual UnitsNet.Temperature Temperature { get; }" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Temperature Temperature" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="F#" Value="member this.Temperature : UnitsNet.Temperature" Usage="Iot.Device.DHTxx.DhtBase.Temperature" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -369,16 +445,22 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
         <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
           <AttributeName Language="C#">[System.Device.Model.Telemetry(null, null)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry(null, null)&gt;]</AttributeName>
         </Attribute>
+        <Attribute FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1">
+          <AttributeName Language="C#">[System.Obsolete("This property will be removed in the a future release. Use TryGetTemperature instead.")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("This property will be removed in the a future release. Use TryGetTemperature instead.")&gt;]</AttributeName>
+        </Attribute>
       </Attributes>
       <ReturnValue>
         <ReturnType FrameworkAlternate="iot-dotnet-1.0">Iot.Units.Temperature</ReturnType>
-        <ReturnType FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5">UnitsNet.Temperature</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1">UnitsNet.Temperature</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
@@ -387,6 +469,72 @@
         <value>To be added.</value>
         <remarks>
             If last read was not successful, it returns <code>default(Temperature)</code></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadHumidity">
+      <MemberSignature Language="C#" Value="public bool TryReadHumidity (out UnitsNet.RelativeHumidity humidity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadHumidity([out] valuetype UnitsNet.RelativeHumidity&amp; humidity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DHTxx.DhtBase.TryReadHumidity(UnitsNet.RelativeHumidity@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadHumidity (ByRef humidity As RelativeHumidity) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadHumidity : RelativeHumidity -&gt; bool" Usage="dhtBase.TryReadHumidity humidity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1">
+          <AttributeName Language="C#">[System.Device.Model.Telemetry("Humidity", null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry("Humidity", null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="humidity" Type="UnitsNet.RelativeHumidity" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+      </Parameters>
+      <Docs>
+        <param name="humidity">[Out] The current relative humidity on success</param>
+        <summary>
+            Returns the current relative humidity
+            </summary>
+        <returns>True on success, false if reading failed</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadTemperature">
+      <MemberSignature Language="C#" Value="public bool TryReadTemperature (out UnitsNet.Temperature temperature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadTemperature([out] valuetype UnitsNet.Temperature&amp; temperature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.DHTxx.DhtBase.TryReadTemperature(UnitsNet.Temperature@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadTemperature (ByRef temperature As Temperature) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadTemperature : Temperature -&gt; bool" Usage="dhtBase.TryReadTemperature temperature" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1">
+          <AttributeName Language="C#">[System.Device.Model.Telemetry("Temperature", null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry("Temperature", null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="temperature" Type="UnitsNet.Temperature" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+      </Parameters>
+      <Docs>
+        <param name="temperature">[Out] The current temperature on success</param>
+        <summary>
+            Returns the current temperature
+            </summary>
+        <returns>True on success, false if reading failed</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

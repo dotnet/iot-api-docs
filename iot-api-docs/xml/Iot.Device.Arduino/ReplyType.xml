@@ -1,0 +1,93 @@
+<Type Name="ReplyType" FullName="Iot.Device.Arduino.ReplyType">
+  <TypeSignature Language="C#" Value="public enum ReplyType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed ReplyType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Arduino.ReplyType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum ReplyType" />
+  <TypeSignature Language="F#" Value="type ReplyType = " />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            Type of a message returned from the board
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AsciiData">
+      <MemberSignature Language="C#" Value="AsciiData" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Arduino.ReplyType AsciiData = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Arduino.ReplyType.AsciiData" />
+      <MemberSignature Language="VB.NET" Value="AsciiData" />
+      <MemberSignature Language="F#" Value="AsciiData = 2" Usage="Iot.Device.Arduino.ReplyType.AsciiData" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Arduino.ReplyType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            A text message was received.
+            This may happen if a special script runs on the firmata device that prints raw ASCII characters to the console.
+            One occasion where this also happens is if an ESP32 is printing a crash dump.
+            The payload contains the raw message in unicode bytes.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="None">
+      <MemberSignature Language="C#" Value="None" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Arduino.ReplyType None = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Arduino.ReplyType.None" />
+      <MemberSignature Language="VB.NET" Value="None" />
+      <MemberSignature Language="F#" Value="None = 0" Usage="Iot.Device.Arduino.ReplyType.None" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Arduino.ReplyType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            Not a valid message
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SysexCommand">
+      <MemberSignature Language="C#" Value="SysexCommand" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Arduino.ReplyType SysexCommand = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Arduino.ReplyType.SysexCommand" />
+      <MemberSignature Language="VB.NET" Value="SysexCommand" />
+      <MemberSignature Language="F#" Value="SysexCommand = 1" Usage="Iot.Device.Arduino.ReplyType.SysexCommand" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Arduino.ReplyType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            A sysex message was received. This is the default.
+            The message buffer contains the binary reply data without the sysex byte.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

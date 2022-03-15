@@ -1,0 +1,138 @@
+<Type Name="LoggingSink" FullName="Iot.Device.Nmea0183.LoggingSink">
+  <TypeSignature Language="C#" Value="public sealed class LoggingSink : Iot.Device.Nmea0183.NmeaSinkAndSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit LoggingSink extends Iot.Device.Nmea0183.NmeaSinkAndSource" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.LoggingSink" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class LoggingSink&#xA;Inherits NmeaSinkAndSource" />
+  <TypeSignature Language="F#" Value="type LoggingSink = class&#xA;    inherit NmeaSinkAndSource" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Nmea0183.NmeaSinkAndSource</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This is a sink for writing received NMEA sentences to a log file. The log file
+            can be used for later analysis or replay.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LoggingSink (string name, Iot.Device.Nmea0183.LoggingConfiguration? configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class Iot.Device.Nmea0183.LoggingConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.LoggingSink.#ctor(System.String,Iot.Device.Nmea0183.LoggingConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, configuration As LoggingConfiguration)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.LoggingSink : string * Iot.Device.Nmea0183.LoggingConfiguration -&gt; Iot.Device.Nmea0183.LoggingSink" Usage="new Iot.Device.Nmea0183.LoggingSink (name, configuration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="configuration" Type="Iot.Device.Nmea0183.LoggingConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="name">Name of the sink</param>
+        <param name="configuration">Logging configuration</param>
+        <summary>
+            Creates an instance of this class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Configuration">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.LoggingConfiguration Configuration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Nmea0183.LoggingConfiguration Configuration" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.LoggingSink.Configuration" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Configuration As LoggingConfiguration" />
+      <MemberSignature Language="F#" Value="member this.Configuration : Iot.Device.Nmea0183.LoggingConfiguration" Usage="Iot.Device.Nmea0183.LoggingSink.Configuration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.LoggingConfiguration</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the active logging configuration
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendSentence">
+      <MemberSignature Language="C#" Value="public override void SendSentence (Iot.Device.Nmea0183.NmeaSinkAndSource source, Iot.Device.Nmea0183.Sentences.NmeaSentence sentence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SendSentence(class Iot.Device.Nmea0183.NmeaSinkAndSource source, class Iot.Device.Nmea0183.Sentences.NmeaSentence sentence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.LoggingSink.SendSentence(Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.Sentences.NmeaSentence)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub SendSentence (source As NmeaSinkAndSource, sentence As NmeaSentence)" />
+      <MemberSignature Language="F#" Value="override this.SendSentence : Iot.Device.Nmea0183.NmeaSinkAndSource * Iot.Device.Nmea0183.Sentences.NmeaSentence -&gt; unit" Usage="loggingSink.SendSentence (source, sentence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Iot.Device.Nmea0183.NmeaSinkAndSource" />
+        <Parameter Name="sentence" Type="Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <param name="sentence">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="StartDecode">
+      <MemberSignature Language="C#" Value="public override void StartDecode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void StartDecode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.LoggingSink.StartDecode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub StartDecode ()" />
+      <MemberSignature Language="F#" Value="override this.StartDecode : unit -&gt; unit" Usage="loggingSink.StartDecode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="StopDecode">
+      <MemberSignature Language="C#" Value="public override void StopDecode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void StopDecode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.LoggingSink.StopDecode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub StopDecode ()" />
+      <MemberSignature Language="F#" Value="override this.StopDecode : unit -&gt; unit" Usage="loggingSink.StopDecode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

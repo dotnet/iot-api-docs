@@ -1,0 +1,139 @@
+<Type Name="Bmm150Compensation" FullName="Iot.Device.Bmp180.Bmm150Compensation">
+  <TypeSignature Language="C#" Value="public class Bmm150Compensation" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Bmm150Compensation extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Bmp180.Bmm150Compensation" />
+  <TypeSignature Language="VB.NET" Value="Public Class Bmm150Compensation" />
+  <TypeSignature Language="F#" Value="type Bmm150Compensation = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Implements the Bmm150 magnetic field data (off-chip) temperature compensation functions
+            https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bmm150-ds001.pdf
+            Page 15
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Bmm150Compensation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmm150Compensation.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompensateX">
+      <MemberSignature Language="C#" Value="public static double CompensateX (double x, uint rhall, Iot.Device.Bmp180.Bmm150TrimRegisterData trimData);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 CompensateX(float64 x, unsigned int32 rhall, class Iot.Device.Bmp180.Bmm150TrimRegisterData trimData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmm150Compensation.CompensateX(System.Double,System.UInt32,Iot.Device.Bmp180.Bmm150TrimRegisterData)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CompensateX (x As Double, rhall As UInteger, trimData As Bmm150TrimRegisterData) As Double" />
+      <MemberSignature Language="F#" Value="static member CompensateX : double * uint32 * Iot.Device.Bmp180.Bmm150TrimRegisterData -&gt; double" Usage="Iot.Device.Bmp180.Bmm150Compensation.CompensateX (x, rhall, trimData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Double" />
+        <Parameter Name="rhall" Type="System.UInt32" />
+        <Parameter Name="trimData" Type="Iot.Device.Bmp180.Bmm150TrimRegisterData" />
+      </Parameters>
+      <Docs>
+        <param name="x">axis raw value</param>
+        <param name="rhall">temperature compensation value (RHALL) </param>
+        <param name="trimData">trim registers values</param>
+        <summary>
+            Returns the compensated magnetometer x axis data(micro-tesla) in float.
+            More details, permalink: https://github.com/BoschSensortec/BMM150-Sensor-API/blob/a20641f216057f0c54de115fe81b57368e119c01/bmm150.c#L1614
+            </summary>
+        <returns>compensated magnetometer x axis data(micro-tesla) in float</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompensateY">
+      <MemberSignature Language="C#" Value="public static double CompensateY (double y, uint rhall, Iot.Device.Bmp180.Bmm150TrimRegisterData trimData);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 CompensateY(float64 y, unsigned int32 rhall, class Iot.Device.Bmp180.Bmm150TrimRegisterData trimData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmm150Compensation.CompensateY(System.Double,System.UInt32,Iot.Device.Bmp180.Bmm150TrimRegisterData)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CompensateY (y As Double, rhall As UInteger, trimData As Bmm150TrimRegisterData) As Double" />
+      <MemberSignature Language="F#" Value="static member CompensateY : double * uint32 * Iot.Device.Bmp180.Bmm150TrimRegisterData -&gt; double" Usage="Iot.Device.Bmp180.Bmm150Compensation.CompensateY (y, rhall, trimData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="y" Type="System.Double" />
+        <Parameter Name="rhall" Type="System.UInt32" />
+        <Parameter Name="trimData" Type="Iot.Device.Bmp180.Bmm150TrimRegisterData" />
+      </Parameters>
+      <Docs>
+        <param name="y">axis raw value</param>
+        <param name="rhall">temperature compensation value (RHALL) </param>
+        <param name="trimData">trim registers values</param>
+        <summary>
+            Returns the compensated magnetometer y axis data(micro-tesla) in float.
+            More details, permalink: https://github.com/BoschSensortec/BMM150-Sensor-API/blob/a20641f216057f0c54de115fe81b57368e119c01/bmm150.c#L1648
+            </summary>
+        <returns>compensated magnetometer y axis data(micro-tesla) in float</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CompensateZ">
+      <MemberSignature Language="C#" Value="public static double CompensateZ (double z, uint rhall, Iot.Device.Bmp180.Bmm150TrimRegisterData trimData);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 CompensateZ(float64 z, unsigned int32 rhall, class Iot.Device.Bmp180.Bmm150TrimRegisterData trimData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmm150Compensation.CompensateZ(System.Double,System.UInt32,Iot.Device.Bmp180.Bmm150TrimRegisterData)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CompensateZ (z As Double, rhall As UInteger, trimData As Bmm150TrimRegisterData) As Double" />
+      <MemberSignature Language="F#" Value="static member CompensateZ : double * uint32 * Iot.Device.Bmp180.Bmm150TrimRegisterData -&gt; double" Usage="Iot.Device.Bmp180.Bmm150Compensation.CompensateZ (z, rhall, trimData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="z" Type="System.Double" />
+        <Parameter Name="rhall" Type="System.UInt32" />
+        <Parameter Name="trimData" Type="Iot.Device.Bmp180.Bmm150TrimRegisterData" />
+      </Parameters>
+      <Docs>
+        <param name="z">axis raw value</param>
+        <param name="rhall">temperature compensation value (RHALL) </param>
+        <param name="trimData">trim registers values</param>
+        <summary>
+            Returns the compensated magnetometer z axis data(micro-tesla) in float.
+            More details, permalink: https://github.com/BoschSensortec/BMM150-Sensor-API/blob/a20641f216057f0c54de115fe81b57368e119c01/bmm150.c#L1682
+            </summary>
+        <returns>compensated magnetometer z axis data(micro-tesla) in float</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

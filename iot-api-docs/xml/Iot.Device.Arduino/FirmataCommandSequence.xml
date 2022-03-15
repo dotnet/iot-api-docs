@@ -1,0 +1,357 @@
+<Type Name="FirmataCommandSequence" FullName="Iot.Device.Arduino.FirmataCommandSequence">
+  <TypeSignature Language="C#" Value="public class FirmataCommandSequence" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FirmataCommandSequence extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Arduino.FirmataCommandSequence" />
+  <TypeSignature Language="VB.NET" Value="Public Class FirmataCommandSequence" />
+  <TypeSignature Language="F#" Value="type FirmataCommandSequence = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A firmata command sequence
+            Intended to be changed to public visibility later
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FirmataCommandSequence ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.FirmataCommandSequence.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Create a new sysex command sequence. The <see cref="F:Iot.Device.Arduino.FirmataCommandSequence.StartSysex" /> byte is added automatically.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecodeInt32">
+      <MemberSignature Language="C#" Value="public static int DecodeInt32 (ReadOnlySpan&lt;byte&gt; data, int fromOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 DecodeInt32(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; data, int32 fromOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.FirmataCommandSequence.DecodeInt32(System.ReadOnlySpan{System.Byte},System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DecodeInt32 (data As ReadOnlySpan(Of Byte), fromOffset As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="static member DecodeInt32 : ReadOnlySpan&lt;byte&gt; * int -&gt; int" Usage="Iot.Device.Arduino.FirmataCommandSequence.DecodeInt32 (data, fromOffset)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="fromOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="data">Data. 5 bytes expected</param>
+        <param name="fromOffset">Start offset in data</param>
+        <summary>
+            Decode an int from packed 7-bit data.
+            This way of encoding uints is only used in extension modules.
+            </summary>
+        <returns>The decoded number</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecodeUInt32">
+      <MemberSignature Language="C#" Value="public static uint DecodeUInt32 (ReadOnlySpan&lt;byte&gt; data, int fromOffset);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int32 DecodeUInt32(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; data, int32 fromOffset) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.FirmataCommandSequence.DecodeUInt32(System.ReadOnlySpan{System.Byte},System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DecodeUInt32 (data As ReadOnlySpan(Of Byte), fromOffset As Integer) As UInteger" />
+      <MemberSignature Language="F#" Value="static member DecodeUInt32 : ReadOnlySpan&lt;byte&gt; * int -&gt; uint32" Usage="Iot.Device.Arduino.FirmataCommandSequence.DecodeUInt32 (data, fromOffset)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="fromOffset" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="data">Data. 5 bytes expected</param>
+        <param name="fromOffset">Start offset in data</param>
+        <summary>
+            Decode an uint from packed 7-bit data.
+            This way of encoding uints is only used in extension modules.
+            </summary>
+        <returns>The decoded unsigned integer</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.InvalidDataException">The received data is invalid</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndSysex">
+      <MemberSignature Language="C#" Value="public const byte EndSysex = 247;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 EndSysex = (247)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Arduino.FirmataCommandSequence.EndSysex" />
+      <MemberSignature Language="VB.NET" Value="Public Const EndSysex As Byte  = 247" />
+      <MemberSignature Language="F#" Value="val mutable EndSysex : byte" Usage="Iot.Device.Arduino.FirmataCommandSequence.EndSysex" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>247</MemberValue>
+      <Docs>
+        <summary>
+            End of sysex command byte. Must end all sysex commands.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public int Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Length" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Arduino.FirmataCommandSequence.Length" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Length As Integer" />
+      <MemberSignature Language="F#" Value="member this.Length : int" Usage="Iot.Device.Arduino.FirmataCommandSequence.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The current length of the sequence
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendInt32">
+      <MemberSignature Language="C#" Value="public void SendInt32 (int value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendInt32(int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.FirmataCommandSequence.SendInt32(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendInt32 (value As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SendInt32 : int -&gt; unit" Usage="firmataCommandSequence.SendInt32 value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="value">The 32-Bit value to transmit</param>
+        <summary>
+            Send an Int32 as 5 x 7 bits. This form of transmitting integers is only supported by extension modules
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendUInt32">
+      <MemberSignature Language="C#" Value="public void SendUInt32 (uint value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendUInt32(unsigned int32 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.FirmataCommandSequence.SendUInt32(System.UInt32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendUInt32 (value As UInteger)" />
+      <MemberSignature Language="F#" Value="member this.SendUInt32 : uint32 -&gt; unit" Usage="firmataCommandSequence.SendUInt32 value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="value">The 32-Bit value to transmit</param>
+        <summary>
+            Send an Uint32 as 5 x 7 bits. This form of transmitting integers is only supported by extension modules
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sequence">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;byte&gt; Sequence { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;unsigned int8&gt; Sequence" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Arduino.FirmataCommandSequence.Sequence" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Sequence As IReadOnlyList(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.Sequence : System.Collections.Generic.IReadOnlyList&lt;byte&gt;" Usage="Iot.Device.Arduino.FirmataCommandSequence.Sequence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The current sequence
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartSysex">
+      <MemberSignature Language="C#" Value="public const byte StartSysex = 240;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 StartSysex = (240)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Arduino.FirmataCommandSequence.StartSysex" />
+      <MemberSignature Language="VB.NET" Value="Public Const StartSysex As Byte  = 240" />
+      <MemberSignature Language="F#" Value="val mutable StartSysex : byte" Usage="Iot.Device.Arduino.FirmataCommandSequence.StartSysex" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>240</MemberValue>
+      <Docs>
+        <summary>
+            Start of sysex command byte. Used as start byte for almost all extended commands.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (byte[] bytesToSend);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(unsigned int8[] bytesToSend) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.FirmataCommandSequence.Write(System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (bytesToSend As Byte())" />
+      <MemberSignature Language="F#" Value="member this.Write : byte[] -&gt; unit" Usage="firmataCommandSequence.Write bytesToSend" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytesToSend" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="bytesToSend">The raw block to send</param>
+        <summary>
+            Add a sequence of bytes to the command sequence. The bytes must be encoded already.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (byte[] bytesToSend, int startIndex, int length);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(unsigned int8[] bytesToSend, int32 startIndex, int32 length) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.FirmataCommandSequence.Write(System.Byte[],System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (bytesToSend As Byte(), startIndex As Integer, length As Integer)" />
+      <MemberSignature Language="F#" Value="member this.Write : byte[] * int * int -&gt; unit" Usage="firmataCommandSequence.Write (bytesToSend, startIndex, length)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytesToSend" Type="System.Byte[]" />
+        <Parameter Name="startIndex" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="bytesToSend">The raw block to send</param>
+        <param name="startIndex">Start index</param>
+        <param name="length">Number of bytes to send</param>
+        <summary>
+            Add a sequence of bytes to the command sequence. The bytes must be encoded already.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteByte">
+      <MemberSignature Language="C#" Value="public void WriteByte (byte b);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteByte(unsigned int8 b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.FirmataCommandSequence.WriteByte(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteByte (b As Byte)" />
+      <MemberSignature Language="F#" Value="member this.WriteByte : byte -&gt; unit" Usage="firmataCommandSequence.WriteByte b" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="b" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="b">The byte to add</param>
+        <summary>
+            Add a byte to the command sequence
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteBytesAsTwo7bitBytes">
+      <MemberSignature Language="C#" Value="public void WriteBytesAsTwo7bitBytes (ReadOnlySpan&lt;byte&gt; values);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteBytesAsTwo7bitBytes(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; values) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.FirmataCommandSequence.WriteBytesAsTwo7bitBytes(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteBytesAsTwo7bitBytes (values As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="member this.WriteBytesAsTwo7bitBytes : ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="firmataCommandSequence.WriteBytesAsTwo7bitBytes values" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="values" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="values">Binary data to add</param>
+        <summary>
+            Encodes a set of bytes with 7 bits and adds them to the sequence. Each input byte is encoded in 2 bytes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

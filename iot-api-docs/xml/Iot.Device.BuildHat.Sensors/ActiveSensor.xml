@@ -1,0 +1,439 @@
+<Type Name="ActiveSensor" FullName="Iot.Device.BuildHat.Sensors.ActiveSensor">
+  <TypeSignature Language="C#" Value="public class ActiveSensor : Iot.Device.BuildHat.Sensors.Sensor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ActiveSensor extends Iot.Device.BuildHat.Sensors.Sensor" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.BuildHat.Sensors.ActiveSensor" />
+  <TypeSignature Language="VB.NET" Value="Public Class ActiveSensor&#xA;Inherits Sensor" />
+  <TypeSignature Language="F#" Value="type ActiveSensor = class&#xA;    inherit Sensor" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.BuildHat.Sensors.Sensor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Interface that all active elements implement
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected internal ActiveSensor (Iot.Device.BuildHat.Brick brick, Iot.Device.BuildHat.Models.SensorPort port, Iot.Device.BuildHat.Models.SensorType type);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(class Iot.Device.BuildHat.Brick brick, valuetype Iot.Device.BuildHat.Models.SensorPort port, valuetype Iot.Device.BuildHat.Models.SensorType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Sensors.ActiveSensor.#ctor(Iot.Device.BuildHat.Brick,Iot.Device.BuildHat.Models.SensorPort,Iot.Device.BuildHat.Models.SensorType)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Sub New (brick As Brick, port As SensorPort, type As SensorType)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.BuildHat.Sensors.ActiveSensor : Iot.Device.BuildHat.Brick * Iot.Device.BuildHat.Models.SensorPort * Iot.Device.BuildHat.Models.SensorType -&gt; Iot.Device.BuildHat.Sensors.ActiveSensor" Usage="new Iot.Device.BuildHat.Sensors.ActiveSensor (brick, port, type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="brick" Type="Iot.Device.BuildHat.Brick" />
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+        <Parameter Name="type" Type="Iot.Device.BuildHat.Models.SensorType" />
+      </Parameters>
+      <Docs>
+        <param name="brick">The brick.</param>
+        <param name="port">The port.</param>
+        <param name="type">The sensor type.</param>
+        <summary>
+            Creates an active element.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BaudRate">
+      <MemberSignature Language="C#" Value="public int BaudRate { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 BaudRate" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.ActiveSensor.BaudRate" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BaudRate As Integer" />
+      <MemberSignature Language="F#" Value="member this.BaudRate : int" Usage="Iot.Device.BuildHat.Sensors.ActiveSensor.BaudRate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Baud rate the sensor is connected
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CombiModes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Iot.Device.BuildHat.Models.CombiModes&gt; CombiModes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;valuetype Iot.Device.BuildHat.Models.CombiModes&gt; CombiModes" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.ActiveSensor.CombiModes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CombiModes As IEnumerable(Of CombiModes)" />
+      <MemberSignature Language="F#" Value="member this.CombiModes : seq&lt;Iot.Device.BuildHat.Models.CombiModes&gt;" Usage="Iot.Device.BuildHat.Sensors.ActiveSensor.CombiModes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Iot.Device.BuildHat.Models.CombiModes&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the possible combi modes. Note, is will be empty if none.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HardwareVersion">
+      <MemberSignature Language="C#" Value="public uint HardwareVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 HardwareVersion" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.ActiveSensor.HardwareVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HardwareVersion As UInteger" />
+      <MemberSignature Language="F#" Value="member this.HardwareVersion : uint32" Usage="Iot.Device.BuildHat.Sensors.ActiveSensor.HardwareVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Hardware version
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ModeDetails">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Iot.Device.BuildHat.Models.ModeDetail&gt; ModeDetails { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;valuetype Iot.Device.BuildHat.Models.ModeDetail&gt; ModeDetails" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.ActiveSensor.ModeDetails" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ModeDetails As IEnumerable(Of ModeDetail)" />
+      <MemberSignature Language="F#" Value="member this.ModeDetails : seq&lt;Iot.Device.BuildHat.Models.ModeDetail&gt;" Usage="Iot.Device.BuildHat.Sensors.ActiveSensor.ModeDetails" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Iot.Device.BuildHat.Models.ModeDetail&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the mode details of the sensor.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfModes">
+      <MemberSignature Language="C#" Value="public int NumberOfModes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumberOfModes" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.ActiveSensor.NumberOfModes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NumberOfModes As Integer" />
+      <MemberSignature Language="F#" Value="member this.NumberOfModes : int" Usage="Iot.Device.BuildHat.Sensors.ActiveSensor.NumberOfModes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Numbers the of modes.
+            </summary>
+        <value>The number of modes</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PositionPid">
+      <MemberSignature Language="C#" Value="public Iot.Device.BuildHat.Models.RecommendedPid PositionPid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.BuildHat.Models.RecommendedPid PositionPid" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.ActiveSensor.PositionPid" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PositionPid As RecommendedPid" />
+      <MemberSignature Language="F#" Value="member this.PositionPid : Iot.Device.BuildHat.Models.RecommendedPid" Usage="Iot.Device.BuildHat.Sensors.ActiveSensor.PositionPid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.BuildHat.Models.RecommendedPid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the recommended Speed PID settings
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectCombiModesAndRead">
+      <MemberSignature Language="C#" Value="public void SelectCombiModesAndRead (int[] modes, bool once);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SelectCombiModesAndRead(int32[] modes, bool once) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Sensors.ActiveSensor.SelectCombiModesAndRead(System.Int32[],System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SelectCombiModesAndRead (modes As Integer(), once As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.SelectCombiModesAndRead : int[] * bool -&gt; unit" Usage="activeSensor.SelectCombiModesAndRead (modes, once)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="modes" Type="System.Int32[]" />
+        <Parameter Name="once" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="modes">The mode to select</param>
+        <param name="once">True to read only once, false to set the continuous reading</param>
+        <summary>
+            Returned the name of the selectd mode
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SelectModeAndRead">
+      <MemberSignature Language="C#" Value="public void SelectModeAndRead (int mode, bool once);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SelectModeAndRead(int32 mode, bool once) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Sensors.ActiveSensor.SelectModeAndRead(System.Int32,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SelectModeAndRead (mode As Integer, once As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.SelectModeAndRead : int * bool -&gt; unit" Usage="activeSensor.SelectModeAndRead (mode, once)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="System.Int32" />
+        <Parameter Name="once" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="mode">The mode to select</param>
+        <param name="once">True to read only once, false to set the continuous reading</param>
+        <summary>
+            Returned the name of the selectd mode
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SensorName">
+      <MemberSignature Language="C#" Value="public override string SensorName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SensorName" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.ActiveSensor.SensorName" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SensorName As String" />
+      <MemberSignature Language="F#" Value="member this.SensorName : string" Usage="Iot.Device.BuildHat.Sensors.ActiveSensor.SensorName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="SoftwareVersion">
+      <MemberSignature Language="C#" Value="public uint SoftwareVersion { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 SoftwareVersion" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.ActiveSensor.SoftwareVersion" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SoftwareVersion As UInteger" />
+      <MemberSignature Language="F#" Value="member this.SoftwareVersion : uint32" Usage="Iot.Device.BuildHat.Sensors.ActiveSensor.SoftwareVersion" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Software version
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SpeedPid">
+      <MemberSignature Language="C#" Value="public Iot.Device.BuildHat.Models.RecommendedPid SpeedPid { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.BuildHat.Models.RecommendedPid SpeedPid" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.ActiveSensor.SpeedPid" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SpeedPid As RecommendedPid" />
+      <MemberSignature Language="F#" Value="member this.SpeedPid : Iot.Device.BuildHat.Models.RecommendedPid" Usage="Iot.Device.BuildHat.Sensors.ActiveSensor.SpeedPid" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.BuildHat.Models.RecommendedPid</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the recommended Speed PID settings
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StopReading">
+      <MemberSignature Language="C#" Value="public void StopReading ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StopReading() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Sensors.ActiveSensor.StopReading" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StopReading ()" />
+      <MemberSignature Language="F#" Value="member this.StopReading : unit -&gt; unit" Usage="activeSensor.StopReading " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Stop reading continuous data from a specific sensor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SwitchOff">
+      <MemberSignature Language="C#" Value="public void SwitchOff (Iot.Device.BuildHat.Models.SensorPort port);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SwitchOff(valuetype Iot.Device.BuildHat.Models.SensorPort port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Sensors.ActiveSensor.SwitchOff(Iot.Device.BuildHat.Models.SensorPort)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SwitchOff (port As SensorPort)" />
+      <MemberSignature Language="F#" Value="member this.SwitchOff : Iot.Device.BuildHat.Models.SensorPort -&gt; unit" Usage="activeSensor.SwitchOff port" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+      </Parameters>
+      <Docs>
+        <param name="port">To be added.</param>
+        <summary>
+            Switches a sensor off.
+            </summary>
+        <remarks>In case of a motor, this will switch off the motor.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SwitchOn">
+      <MemberSignature Language="C#" Value="public void SwitchOn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SwitchOn() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Sensors.ActiveSensor.SwitchOn" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SwitchOn ()" />
+      <MemberSignature Language="F#" Value="member this.SwitchOn : unit -&gt; unit" Usage="activeSensor.SwitchOn " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Switches a sensor on.
+            </summary>
+        <remarks>In case of a motor, this will switch the motor on full speed.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValuesAsString">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; ValuesAsString { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; ValuesAsString" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.ActiveSensor.ValuesAsString" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ValuesAsString As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ValuesAsString : seq&lt;string&gt;" Usage="Iot.Device.BuildHat.Sensors.ActiveSensor.ValuesAsString" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Property to return the raw value of the sensort as a string. It will contains as the first elements PxCy.
+            x = the port number, y = 0 for continuous reading, 1 for single reading.
+            The rest are the measures.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteBytes">
+      <MemberSignature Language="C#" Value="public void WriteBytes (ReadOnlySpan&lt;byte&gt; data, bool singleHeader);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteBytes(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; data, bool singleHeader) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Sensors.ActiveSensor.WriteBytes(System.ReadOnlySpan{System.Byte},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteBytes (data As ReadOnlySpan(Of Byte), singleHeader As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.WriteBytes : ReadOnlySpan&lt;byte&gt; * bool -&gt; unit" Usage="activeSensor.WriteBytes (data, singleHeader)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="singleHeader" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="data">The buffer to send.</param>
+        <param name="singleHeader">True for single header byte.</param>
+        <summary>
+            Writes directly to the sensor. The bytes to the current port, the first one or two bytes being header bytes. The message is padded if
+            necessary, and length and checksum fields are automatically populated.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

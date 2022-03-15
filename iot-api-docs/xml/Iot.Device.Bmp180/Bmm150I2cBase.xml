@@ -1,0 +1,133 @@
+<Type Name="Bmm150I2cBase" FullName="Iot.Device.Bmp180.Bmm150I2cBase">
+  <TypeSignature Language="C#" Value="public abstract class Bmm150I2cBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Bmm150I2cBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Bmp180.Bmm150I2cBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Bmm150I2cBase" />
+  <TypeSignature Language="F#" Value="type Bmm150I2cBase = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Abstract class for Bmm150 the I2C interface. This sensor can be found as a sub
+            I2C sensor like in the MPU9250. The access is done thru another I2C device and the
+            core I2C primitive are different. Use those 3 primitive to define the access to read
+            and write bytes to the Bmm150
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Bmm150I2cBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmm150I2cBase.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadByte">
+      <MemberSignature Language="C#" Value="public abstract byte ReadByte (System.Device.I2c.I2cDevice i2CDevice, byte reg);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance unsigned int8 ReadByte(class System.Device.I2c.I2cDevice i2CDevice, unsigned int8 reg) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmm150I2cBase.ReadByte(System.Device.I2c.I2cDevice,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function ReadByte (i2CDevice As I2cDevice, reg As Byte) As Byte" />
+      <MemberSignature Language="F#" Value="abstract member ReadByte : System.Device.I2c.I2cDevice * byte -&gt; byte" Usage="bmm150I2cBase.ReadByte (i2CDevice, reg)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i2CDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="reg" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="i2CDevice">I2C device</param>
+        <param name="reg">The register to read</param>
+        <summary>
+            Read a byte on a specific register
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadBytes">
+      <MemberSignature Language="C#" Value="public abstract void ReadBytes (System.Device.I2c.I2cDevice i2CDevice, byte reg, Span&lt;byte&gt; readBytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ReadBytes(class System.Device.I2c.I2cDevice i2CDevice, unsigned int8 reg, valuetype System.Span`1&lt;unsigned int8&gt; readBytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmm150I2cBase.ReadBytes(System.Device.I2c.I2cDevice,System.Byte,System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ReadBytes (i2CDevice As I2cDevice, reg As Byte, readBytes As Span(Of Byte))" />
+      <MemberSignature Language="F#" Value="abstract member ReadBytes : System.Device.I2c.I2cDevice * byte * Span&lt;byte&gt; -&gt; unit" Usage="bmm150I2cBase.ReadBytes (i2CDevice, reg, readBytes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i2CDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="reg" Type="System.Byte" />
+        <Parameter Name="readBytes" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="i2CDevice">I2C device</param>
+        <param name="reg">The register to read</param>
+        <param name="readBytes">Span of byte to store the data read</param>
+        <summary>
+            Read bytes on a specific Bmm150 register
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteRegister">
+      <MemberSignature Language="C#" Value="public abstract void WriteRegister (System.Device.I2c.I2cDevice i2CDevice, byte reg, byte data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void WriteRegister(class System.Device.I2c.I2cDevice i2CDevice, unsigned int8 reg, unsigned int8 data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Bmp180.Bmm150I2cBase.WriteRegister(System.Device.I2c.I2cDevice,System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub WriteRegister (i2CDevice As I2cDevice, reg As Byte, data As Byte)" />
+      <MemberSignature Language="F#" Value="abstract member WriteRegister : System.Device.I2c.I2cDevice * byte * byte -&gt; unit" Usage="bmm150I2cBase.WriteRegister (i2CDevice, reg, data)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i2CDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="reg" Type="System.Byte" />
+        <Parameter Name="data" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="i2CDevice">I2C device</param>
+        <param name="reg">The register to write</param>
+        <param name="data">The data byte to write</param>
+        <summary>
+            Write a register of the Bmm150
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

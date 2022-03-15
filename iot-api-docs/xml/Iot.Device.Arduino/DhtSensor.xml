@@ -1,0 +1,78 @@
+<Type Name="DhtSensor" FullName="Iot.Device.Arduino.DhtSensor">
+  <TypeSignature Language="C#" Value="public class DhtSensor : Iot.Device.Arduino.ExtendedCommandHandler" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit DhtSensor extends Iot.Device.Arduino.ExtendedCommandHandler" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Arduino.DhtSensor" />
+  <TypeSignature Language="VB.NET" Value="Public Class DhtSensor&#xA;Inherits ExtendedCommandHandler" />
+  <TypeSignature Language="F#" Value="type DhtSensor = class&#xA;    inherit ExtendedCommandHandler" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Arduino.ExtendedCommandHandler</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class supports the DhtFirmata extensions to read DHT sensors over the firmata protocol.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public DhtSensor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.DhtSensor.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initializes a new instance of the DhtSensor extended command handler.
+            This handler requires pins with DHT support. This is typically the case for all GPIO pins if the
+            firmata client has the DhtFirmata extension loaded.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadDht">
+      <MemberSignature Language="C#" Value="public bool TryReadDht (int pinNumber, int dhtType, out UnitsNet.Temperature temperature, out UnitsNet.RelativeHumidity humidity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadDht(int32 pinNumber, int32 dhtType, [out] valuetype UnitsNet.Temperature&amp; temperature, [out] valuetype UnitsNet.RelativeHumidity&amp; humidity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.DhtSensor.TryReadDht(System.Int32,System.Int32,UnitsNet.Temperature@,UnitsNet.RelativeHumidity@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadDht (pinNumber As Integer, dhtType As Integer, ByRef temperature As Temperature, ByRef humidity As RelativeHumidity) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadDht : int * int * Temperature * RelativeHumidity -&gt; bool" Usage="dhtSensor.TryReadDht (pinNumber, dhtType, temperature, humidity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="dhtType" Type="System.Int32" />
+        <Parameter Name="temperature" Type="UnitsNet.Temperature" RefType="out" />
+        <Parameter Name="humidity" Type="UnitsNet.RelativeHumidity" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">Pin Number</param>
+        <param name="dhtType">Type of DHT Sensor: 11 = DHT11, 22 = DHT22, etc.</param>
+        <param name="temperature">Temperature</param>
+        <param name="humidity">Relative humidity</param>
+        <summary>
+            Special function to read DHT sensor, if supported
+            </summary>
+        <returns>True on success, false otherwise</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

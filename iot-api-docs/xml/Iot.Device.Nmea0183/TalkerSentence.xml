@@ -1,0 +1,328 @@
+<Type Name="TalkerSentence" FullName="Iot.Device.Nmea0183.TalkerSentence">
+  <TypeSignature Language="C#" Value="public class TalkerSentence" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi TalkerSentence extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.TalkerSentence" />
+  <TypeSignature Language="VB.NET" Value="Public Class TalkerSentence" />
+  <TypeSignature Language="F#" Value="type TalkerSentence = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents NMEA0183 talker sentence
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TalkerSentence (Iot.Device.Nmea0183.Sentences.NmeaSentence sentence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Nmea0183.Sentences.NmeaSentence sentence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.TalkerSentence.#ctor(Iot.Device.Nmea0183.Sentences.NmeaSentence)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sentence As NmeaSentence)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.TalkerSentence : Iot.Device.Nmea0183.Sentences.NmeaSentence -&gt; Iot.Device.Nmea0183.TalkerSentence" Usage="new Iot.Device.Nmea0183.TalkerSentence sentence" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sentence" Type="Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+      </Parameters>
+      <Docs>
+        <param name="sentence">Sentence to send. It must be valid</param>
+        <summary>
+            Constructs a message from a typed sentence
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public TalkerSentence (Iot.Device.Nmea0183.TalkerId talkerId, Iot.Device.Nmea0183.SentenceId sentenceId, System.Collections.Generic.IEnumerable&lt;string&gt; fields);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Nmea0183.TalkerId talkerId, valuetype Iot.Device.Nmea0183.SentenceId sentenceId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; fields) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.TalkerSentence.#ctor(Iot.Device.Nmea0183.TalkerId,Iot.Device.Nmea0183.SentenceId,System.Collections.Generic.IEnumerable{System.String})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (talkerId As TalkerId, sentenceId As SentenceId, fields As IEnumerable(Of String))" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.TalkerSentence : Iot.Device.Nmea0183.TalkerId * Iot.Device.Nmea0183.SentenceId * seq&lt;string&gt; -&gt; Iot.Device.Nmea0183.TalkerSentence" Usage="new Iot.Device.Nmea0183.TalkerSentence (talkerId, sentenceId, fields)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="talkerId" Type="Iot.Device.Nmea0183.TalkerId" />
+        <Parameter Name="sentenceId" Type="Iot.Device.Nmea0183.SentenceId" />
+        <Parameter Name="fields" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="talkerId">NMEA0183 talker identifier of the device sending the sentence</param>
+        <param name="sentenceId">NMEA0183 sentence identifier</param>
+        <param name="fields">fields related to the sentence</param>
+        <summary>
+            Constructs NMEA0183 talker identifier
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateChecksum">
+      <MemberSignature Language="C#" Value="public static byte CalculateChecksum (string messageWithoutChecksum);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8 CalculateChecksum(string messageWithoutChecksum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.TalkerSentence.CalculateChecksum(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateChecksum (messageWithoutChecksum As String) As Byte" />
+      <MemberSignature Language="F#" Value="static member CalculateChecksum : string -&gt; byte" Usage="Iot.Device.Nmea0183.TalkerSentence.CalculateChecksum messageWithoutChecksum" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageWithoutChecksum" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="messageWithoutChecksum">The message, including the leading $ letter</param>
+        <summary>
+            Calculates the NMEA checksum from a sentence (that includes everything except the checksum)
+            </summary>
+        <returns>The checksum as a byte</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fields">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; Fields { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; Fields" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.TalkerSentence.Fields" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Fields As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Fields : seq&lt;string&gt;" Usage="Iot.Device.Nmea0183.TalkerSentence.Fields" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Fields of the NMEA0183 sentence
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromSentenceString">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Nmea0183.TalkerSentence? FromSentenceString (string sentence, out Iot.Device.Nmea0183.NmeaError errorCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Nmea0183.TalkerSentence FromSentenceString(string sentence, [out] valuetype Iot.Device.Nmea0183.NmeaError&amp; errorCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.TalkerSentence.FromSentenceString(System.String,Iot.Device.Nmea0183.NmeaError@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FromSentenceString (sentence As String, ByRef errorCode As NmeaError) As TalkerSentence" />
+      <MemberSignature Language="F#" Value="static member FromSentenceString : string * NmeaError -&gt; Iot.Device.Nmea0183.TalkerSentence" Usage="Iot.Device.Nmea0183.TalkerSentence.FromSentenceString (sentence, errorCode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.TalkerSentence</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sentence" Type="System.String" />
+        <Parameter Name="errorCode" Type="Iot.Device.Nmea0183.NmeaError" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="sentence">NMEA0183 talker sentence</param>
+        <param name="errorCode">Returns an error code, if the parsing failed</param>
+        <summary>
+            Reads NMEA0183 talker sentence from provided string
+            </summary>
+        <returns>TalkerSentence instance, or null in case of an error</returns>
+        <remarks>
+          <paramref name="sentence" /> does not include new line characters</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromSentenceString">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Nmea0183.TalkerSentence? FromSentenceString (string sentence, Iot.Device.Nmea0183.TalkerId expectedTalkerId, out Iot.Device.Nmea0183.NmeaError errorCode);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Nmea0183.TalkerSentence FromSentenceString(string sentence, valuetype Iot.Device.Nmea0183.TalkerId expectedTalkerId, [out] valuetype Iot.Device.Nmea0183.NmeaError&amp; errorCode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.TalkerSentence.FromSentenceString(System.String,Iot.Device.Nmea0183.TalkerId,Iot.Device.Nmea0183.NmeaError@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function FromSentenceString (sentence As String, expectedTalkerId As TalkerId, ByRef errorCode As NmeaError) As TalkerSentence" />
+      <MemberSignature Language="F#" Value="static member FromSentenceString : string * Iot.Device.Nmea0183.TalkerId * NmeaError -&gt; Iot.Device.Nmea0183.TalkerSentence" Usage="Iot.Device.Nmea0183.TalkerSentence.FromSentenceString (sentence, expectedTalkerId, errorCode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.TalkerSentence</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sentence" Type="System.String" />
+        <Parameter Name="expectedTalkerId" Type="Iot.Device.Nmea0183.TalkerId" />
+        <Parameter Name="errorCode" Type="Iot.Device.Nmea0183.NmeaError" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="sentence">NMEA0183 talker sentence</param>
+        <param name="expectedTalkerId">If this is not TalkerId.Any, only messages with this talker id are parsed,
+            all others are ignored. This reduces workload if a source acts as repeater, but the repeated messages are not needed.</param>
+        <param name="errorCode">Returns an error code, if the parsing failed</param>
+        <summary>
+            Reads NMEA0183 talker sentence from provided string
+            </summary>
+        <returns>TalkerSentence instance, or null in case of an error</returns>
+        <remarks>
+          <paramref name="sentence" /> does not include new line characters</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAsRawSentence">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.Sentences.RawSentence GetAsRawSentence (ref DateTimeOffset lastMessageTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Nmea0183.Sentences.RawSentence GetAsRawSentence(valuetype System.DateTimeOffset&amp; lastMessageTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.TalkerSentence.GetAsRawSentence(System.DateTimeOffset@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAsRawSentence (ByRef lastMessageTime As DateTimeOffset) As RawSentence" />
+      <MemberSignature Language="F#" Value="member this.GetAsRawSentence : DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.RawSentence" Usage="talkerSentence.GetAsRawSentence lastMessageTime" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Sentences.RawSentence</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lastMessageTime" Type="System.DateTimeOffset" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="lastMessageTime">To be added.</param>
+        <summary>
+            Returns this sentence without parsing its contents
+            </summary>
+        <returns>A raw sentence</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.SentenceId Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nmea0183.SentenceId Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.TalkerSentence.Id" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Id As SentenceId" />
+      <MemberSignature Language="F#" Value="member this.Id : Iot.Device.Nmea0183.SentenceId" Usage="Iot.Device.Nmea0183.TalkerSentence.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            NMEA0183 sentence identifier
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterSentence">
+      <MemberSignature Language="C#" Value="public static void RegisterSentence (Iot.Device.Nmea0183.SentenceId id, Func&lt;Iot.Device.Nmea0183.TalkerSentence,DateTimeOffset,Iot.Device.Nmea0183.Sentences.NmeaSentence&gt; producer);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterSentence(valuetype Iot.Device.Nmea0183.SentenceId id, class System.Func`3&lt;class Iot.Device.Nmea0183.TalkerSentence, valuetype System.DateTimeOffset, class Iot.Device.Nmea0183.Sentences.NmeaSentence&gt; producer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.TalkerSentence.RegisterSentence(Iot.Device.Nmea0183.SentenceId,System.Func{Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset,Iot.Device.Nmea0183.Sentences.NmeaSentence})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub RegisterSentence (id As SentenceId, producer As Func(Of TalkerSentence, DateTimeOffset, NmeaSentence))" />
+      <MemberSignature Language="F#" Value="static member RegisterSentence : Iot.Device.Nmea0183.SentenceId * Func&lt;Iot.Device.Nmea0183.TalkerSentence, DateTimeOffset, Iot.Device.Nmea0183.Sentences.NmeaSentence&gt; -&gt; unit" Usage="Iot.Device.Nmea0183.TalkerSentence.RegisterSentence (id, producer)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="id" Type="Iot.Device.Nmea0183.SentenceId" />
+        <Parameter Name="producer" Type="System.Func&lt;Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset,Iot.Device.Nmea0183.Sentences.NmeaSentence&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="id">NMEA0183 sentence identifier</param>
+        <param name="producer">Function which produces typed object given <see cref="T:Iot.Device.Nmea0183.TalkerSentence" />.</param>
+        <summary>
+            Registers sentence identifier as known. Registered sentences are used by <see cref="M:Iot.Device.Nmea0183.TalkerSentence.TryGetTypedValue(System.DateTimeOffset@)" />.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TalkerId">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.TalkerId TalkerId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nmea0183.TalkerId TalkerId" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.TalkerSentence.TalkerId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TalkerId As TalkerId" />
+      <MemberSignature Language="F#" Value="member this.TalkerId : Iot.Device.Nmea0183.TalkerId" Usage="Iot.Device.Nmea0183.TalkerSentence.TalkerId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.TalkerId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            NMEA0183 talker identifier (identifier of the sender)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.TalkerSentence.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="talkerSentence.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetTypedValue">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.Sentences.NmeaSentence? TryGetTypedValue (ref DateTimeOffset lastMessageTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Nmea0183.Sentences.NmeaSentence TryGetTypedValue(valuetype System.DateTimeOffset&amp; lastMessageTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.TalkerSentence.TryGetTypedValue(System.DateTimeOffset@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetTypedValue (ByRef lastMessageTime As DateTimeOffset) As NmeaSentence" />
+      <MemberSignature Language="F#" Value="member this.TryGetTypedValue : DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.NmeaSentence" Usage="talkerSentence.TryGetTypedValue lastMessageTime" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Sentences.NmeaSentence</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lastMessageTime" Type="System.DateTimeOffset" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="lastMessageTime">The date/time the last packet was seen. Used to time-tag packets that do not provide
+            their own time or only a time but not a date</param>
+        <summary>
+            Compares sentence identifier with all known identifiers.
+            If found returns typed object corresponding to the identifier.
+            If not found returns a raw sentence instead. Also returns a raw sentence on a parser error (e.g. invalid date/time field)
+            </summary>
+        <returns>Object corresponding to the identifier</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,239 @@
+<Type Name="Sensor" FullName="Iot.Device.BuildHat.Sensors.Sensor">
+  <TypeSignature Language="C#" Value="public class Sensor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Sensor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.BuildHat.Sensors.Sensor" />
+  <TypeSignature Language="VB.NET" Value="Public Class Sensor" />
+  <TypeSignature Language="F#" Value="type Sensor = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Interface for a sensor
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected internal Sensor (Iot.Device.BuildHat.Brick brick, Iot.Device.BuildHat.Models.SensorPort port, Iot.Device.BuildHat.Models.SensorType type);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(class Iot.Device.BuildHat.Brick brick, valuetype Iot.Device.BuildHat.Models.SensorPort port, valuetype Iot.Device.BuildHat.Models.SensorType type) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Sensors.Sensor.#ctor(Iot.Device.BuildHat.Brick,Iot.Device.BuildHat.Models.SensorPort,Iot.Device.BuildHat.Models.SensorType)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Sub New (brick As Brick, port As SensorPort, type As SensorType)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.BuildHat.Sensors.Sensor : Iot.Device.BuildHat.Brick * Iot.Device.BuildHat.Models.SensorPort * Iot.Device.BuildHat.Models.SensorType -&gt; Iot.Device.BuildHat.Sensors.Sensor" Usage="new Iot.Device.BuildHat.Sensors.Sensor (brick, port, type)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="brick" Type="Iot.Device.BuildHat.Brick" />
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+        <Parameter Name="type" Type="Iot.Device.BuildHat.Models.SensorType" />
+      </Parameters>
+      <Docs>
+        <param name="brick">The brick.</param>
+        <param name="port">The port.</param>
+        <param name="type">The sensor type.</param>
+        <summary>
+            Creates a sensor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsConnected">
+      <MemberSignature Language="C#" Value="public bool IsConnected { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsConnected" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.Sensor.IsConnected" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsConnected As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsConnected : bool" Usage="Iot.Device.BuildHat.Sensors.Sensor.IsConnected" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets true if the sensor is connected.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyChanged">
+      <MemberSignature Language="C#" Value="protected internal void OnPropertyChanged (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnPropertyChanged(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Sensors.Sensor.OnPropertyChanged(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Sub OnPropertyChanged (name As String)" />
+      <MemberSignature Language="F#" Value="member this.OnPropertyChanged : string -&gt; unit" Usage="sensor.OnPropertyChanged name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The property name.</param>
+        <summary>
+            Raises the on property changed event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OnPropertyUpdated">
+      <MemberSignature Language="C#" Value="protected internal void OnPropertyUpdated (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig instance void OnPropertyUpdated(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Sensors.Sensor.OnPropertyUpdated(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Sub OnPropertyUpdated (name As String)" />
+      <MemberSignature Language="F#" Value="member this.OnPropertyUpdated : string -&gt; unit" Usage="sensor.OnPropertyUpdated name" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">The property name.</param>
+        <summary>
+            Raises the on property updated event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Port">
+      <MemberSignature Language="C#" Value="public Iot.Device.BuildHat.Models.SensorPort Port { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.BuildHat.Models.SensorPort Port" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.Sensor.Port" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Port As SensorPort" />
+      <MemberSignature Language="F#" Value="member this.Port : Iot.Device.BuildHat.Models.SensorPort" Usage="Iot.Device.BuildHat.Sensors.Sensor.Port" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.BuildHat.Models.SensorPort</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the Sensor port
+            </summary>
+        <value>The sensor port</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyChanged">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.PropertyChangedEventHandler? PropertyChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.PropertyChangedEventHandler PropertyChanged" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.BuildHat.Sensors.Sensor.PropertyChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Event PropertyChanged As PropertyChangedEventHandler " />
+      <MemberSignature Language="F#" Value="member this.PropertyChanged : System.ComponentModel.PropertyChangedEventHandler " Usage="member this.PropertyChanged : System.ComponentModel.PropertyChangedEventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            To notify a property has changed. It means the value has changed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PropertyUpdated">
+      <MemberSignature Language="C#" Value="public event System.ComponentModel.PropertyChangedEventHandler? PropertyUpdated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.ComponentModel.PropertyChangedEventHandler PropertyUpdated" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.BuildHat.Sensors.Sensor.PropertyUpdated" />
+      <MemberSignature Language="VB.NET" Value="Public Event PropertyUpdated As PropertyChangedEventHandler " />
+      <MemberSignature Language="F#" Value="member this.PropertyUpdated : System.ComponentModel.PropertyChangedEventHandler " Usage="member this.PropertyUpdated : System.ComponentModel.PropertyChangedEventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ComponentModel.PropertyChangedEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            To notify a property has been updated. It means the property has been updated regardeless of a change in its value.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SensorName">
+      <MemberSignature Language="C#" Value="public virtual string SensorName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SensorName" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.Sensor.SensorName" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property SensorName As String" />
+      <MemberSignature Language="F#" Value="member this.SensorName : string" Usage="Iot.Device.BuildHat.Sensors.Sensor.SensorName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the name of the sensor.
+            </summary>
+        <value>The sensor name.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SensorType">
+      <MemberSignature Language="C#" Value="public Iot.Device.BuildHat.Models.SensorType SensorType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.BuildHat.Models.SensorType SensorType" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.Sensor.SensorType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SensorType As SensorType" />
+      <MemberSignature Language="F#" Value="member this.SensorType : Iot.Device.BuildHat.Models.SensorType" Usage="Iot.Device.BuildHat.Sensors.Sensor.SensorType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.BuildHat.Models.SensorType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the sensor type
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

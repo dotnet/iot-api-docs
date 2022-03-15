@@ -11,6 +11,8 @@
     <AssemblyVersion>1.3.0.0</AssemblyVersion>
     <AssemblyVersion>1.4.0.0</AssemblyVersion>
     <AssemblyVersion>1.5.0.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -21,7 +23,7 @@
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+    <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1">
       <AttributeName Language="C#">[System.Device.Model.Interface("AK8963 class implementing a magnetometer")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Device.Model.Interface("AK8963 class implementing a magnetometer")&gt;]</AttributeName>
     </Attribute>
@@ -47,6 +49,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="i2CDevice" Type="System.Device.I2c.I2cDevice" />
@@ -65,10 +69,10 @@
       <MemberSignature Language="DocId" Value="M:Iot.Device.Magnetometer.Ak8963.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Magnetometer.Ak8963I2cBase,System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Public Sub New (i2CDevice As I2cDevice, ak8963Interface As Ak8963I2cBase, Optional autoDispose As Boolean = true)" FrameworkAlternate="iot-dotnet-1.1" />
       <MemberSignature Language="F#" Value="new Iot.Device.Magnetometer.Ak8963 : System.Device.I2c.I2cDevice * Iot.Device.Magnetometer.Ak8963I2cBase * bool -&gt; Iot.Device.Magnetometer.Ak8963" Usage="new Iot.Device.Magnetometer.Ak8963 (i2CDevice, ak8963Interface, autoDispose)" FrameworkAlternate="iot-dotnet-1.1" />
-      <MemberSignature Language="C#" Value="public Ak8963 (System.Device.I2c.I2cDevice i2cDevice, Iot.Device.Magnetometer.Ak8963I2cBase ak8963Interface, bool shouldDispose = true);" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, class Iot.Device.Magnetometer.Ak8963I2cBase ak8963Interface, bool shouldDispose) cil managed" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, ak8963Interface As Ak8963I2cBase, Optional shouldDispose As Boolean = true)" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
-      <MemberSignature Language="F#" Value="new Iot.Device.Magnetometer.Ak8963 : System.Device.I2c.I2cDevice * Iot.Device.Magnetometer.Ak8963I2cBase * bool -&gt; Iot.Device.Magnetometer.Ak8963" Usage="new Iot.Device.Magnetometer.Ak8963 (i2cDevice, ak8963Interface, shouldDispose)" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="C#" Value="public Ak8963 (System.Device.I2c.I2cDevice i2cDevice, Iot.Device.Magnetometer.Ak8963I2cBase ak8963Interface, bool shouldDispose = true);" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, class Iot.Device.Magnetometer.Ak8963I2cBase ak8963Interface, bool shouldDispose) cil managed" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, ak8963Interface As Ak8963I2cBase, Optional shouldDispose As Boolean = true)" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Magnetometer.Ak8963 : System.Device.I2c.I2cDevice * Iot.Device.Magnetometer.Ak8963I2cBase * bool -&gt; Iot.Device.Magnetometer.Ak8963" Usage="new Iot.Device.Magnetometer.Ak8963 (i2cDevice, ak8963Interface, shouldDispose)" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -77,13 +81,15 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="i2CDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" Index="0" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
         <Parameter Name="ak8963Interface" Type="Iot.Device.Magnetometer.Ak8963I2cBase" Index="1" />
         <Parameter Name="autoDispose" Type="System.Boolean" Index="2" FrameworkAlternate="iot-dotnet-1.1" />
-        <Parameter Name="shouldDispose" Type="System.Boolean" Index="2" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="2" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="i2CDevice">The I2C device</param>
@@ -112,6 +118,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Numerics.Vector3</ReturnType>
@@ -144,6 +152,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte</ReturnType>
@@ -167,9 +177,11 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1">
           <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
         </Attribute>
@@ -202,6 +214,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -228,6 +242,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte</ReturnType>
@@ -255,6 +271,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -281,6 +299,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -310,9 +330,11 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1">
           <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
         </Attribute>
@@ -350,9 +372,11 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1">
           <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
         </Attribute>
@@ -382,9 +406,11 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1">
           <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
         </Attribute>
@@ -414,9 +440,11 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1">
           <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
         </Attribute>
@@ -446,9 +474,11 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1">
           <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
         </Attribute>
@@ -475,9 +505,11 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1">
           <AttributeName Language="C#">[System.Device.Model.Telemetry("Magnetometer", null)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry("Magnetometer", null)&gt;]</AttributeName>
         </Attribute>
@@ -486,8 +518,8 @@
         <ReturnType>System.Numerics.Vector3</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="waitForData" Type="System.Boolean" Index="0" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5" />
-        <Parameter Name="timeout" Type="System.Nullable&lt;System.TimeSpan&gt;" Index="1" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="waitForData" Type="System.Boolean" Index="0" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="timeout" Type="System.Nullable&lt;System.TimeSpan&gt;" Index="1" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="waitForData">true to wait for new data</param>
@@ -560,13 +592,15 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Numerics.Vector3</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="waitForData" Type="System.Boolean" Index="0" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5" />
-        <Parameter Name="timeout" Type="System.Nullable&lt;System.TimeSpan&gt;" Index="1" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="waitForData" Type="System.Boolean" Index="0" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="timeout" Type="System.Nullable&lt;System.TimeSpan&gt;" Index="1" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="waitForData">true to wait for new data</param>
@@ -642,9 +676,11 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5">
+        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1">
           <AttributeName Language="C#">[System.Device.Model.Command(null, null)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Device.Model.Command(null, null)&gt;]</AttributeName>
         </Attribute>

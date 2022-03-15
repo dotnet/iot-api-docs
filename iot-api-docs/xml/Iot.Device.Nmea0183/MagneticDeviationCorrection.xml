@@ -1,0 +1,337 @@
+<Type Name="MagneticDeviationCorrection" FullName="Iot.Device.Nmea0183.MagneticDeviationCorrection">
+  <TypeSignature Language="C#" Value="public class MagneticDeviationCorrection : IEquatable&lt;Iot.Device.Nmea0183.MagneticDeviationCorrection&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MagneticDeviationCorrection extends System.Object implements class System.IEquatable`1&lt;class Iot.Device.Nmea0183.MagneticDeviationCorrection&gt;" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.MagneticDeviationCorrection" />
+  <TypeSignature Language="VB.NET" Value="Public Class MagneticDeviationCorrection&#xA;Implements IEquatable(Of MagneticDeviationCorrection)" />
+  <TypeSignature Language="F#" Value="type MagneticDeviationCorrection = class&#xA;    interface IEquatable&lt;MagneticDeviationCorrection&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Iot.Device.Nmea0183.MagneticDeviationCorrection&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Corrects the magnetic deviation of an electronic compass.
+            This calculates the corrected magnetic heading from the measurement of an actual instrument and vice-versa.
+            Neither input nor output of the calculation are true headings! The magnetic heading needs to still be converted to
+            a true heading by adding the magnetic declination at the point of observation.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MagneticDeviationCorrection ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MagneticDeviationCorrection.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Create an instance of this class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MagneticDeviationCorrection (string fileName);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string fileName) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MagneticDeviationCorrection.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (fileName As String)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.MagneticDeviationCorrection : string -&gt; Iot.Device.Nmea0183.MagneticDeviationCorrection" Usage="new Iot.Device.Nmea0183.MagneticDeviationCorrection fileName" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="fileName" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="fileName">The file name to parse</param>
+        <summary>
+            Creates a magnetic deviation correction from the given XML file
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCorrectionTable">
+      <MemberSignature Language="C#" Value="public void CreateCorrectionTable (string file);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateCorrectionTable(string file) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MagneticDeviationCorrection.CreateCorrectionTable(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CreateCorrectionTable (file As String)" />
+      <MemberSignature Language="F#" Value="member this.CreateCorrectionTable : string -&gt; unit" Usage="magneticDeviationCorrection.CreateCorrectionTable file" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="file" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="file">The recorded nmea file (from a logged session)</param>
+        <summary>
+            Tries to calculate a correction from the given recorded file.
+            The recorded file should contain a data set where the vessel is turning two slow circles, one with the clock and one against the clock,
+            in calm conditions and with no current.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCorrectionTable">
+      <MemberSignature Language="C#" Value="public void CreateCorrectionTable (string[] fileSet, DateTimeOffset beginCalibration, DateTimeOffset endCalibration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateCorrectionTable(string[] fileSet, valuetype System.DateTimeOffset beginCalibration, valuetype System.DateTimeOffset endCalibration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MagneticDeviationCorrection.CreateCorrectionTable(System.String[],System.DateTimeOffset,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CreateCorrectionTable (fileSet As String(), beginCalibration As DateTimeOffset, endCalibration As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="member this.CreateCorrectionTable : string[] * DateTimeOffset * DateTimeOffset -&gt; unit" Usage="magneticDeviationCorrection.CreateCorrectionTable (fileSet, beginCalibration, endCalibration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileSet" Type="System.String[]" />
+        <Parameter Name="beginCalibration" Type="System.DateTimeOffset" />
+        <Parameter Name="endCalibration" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="fileSet">The recorded nmea files (from a logged session)</param>
+        <param name="beginCalibration">The start time of the calibration loops</param>
+        <param name="endCalibration">The end time of the calibration loops</param>
+        <summary>
+            Tries to calculate a correction from the given recorded file, indicating the timespan where the calibration loops were performed.
+            The recorded file should contain a data set where the vessel is turning two slow circles, one with the clock and one against the clock,
+            in calm conditions and with no current.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Iot.Device.Nmea0183.MagneticDeviationCorrection? other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Iot.Device.Nmea0183.MagneticDeviationCorrection other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MagneticDeviationCorrection.Equals(Iot.Device.Nmea0183.MagneticDeviationCorrection)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As MagneticDeviationCorrection) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Iot.Device.Nmea0183.MagneticDeviationCorrection -&gt; bool" Usage="magneticDeviationCorrection.Equals other" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Iot.Device.Nmea0183.MagneticDeviationCorrection" />
+      </Parameters>
+      <Docs>
+        <param name="other">The other object</param>
+        <summary>
+            Compares two deviation data sets for equality. Minor differences are ignored.
+            </summary>
+        <returns>True on equality, false otherwise</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Iot.Device.Nmea0183.MagneticDeviationCorrection? other, out string firstDifference);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool Equals(class Iot.Device.Nmea0183.MagneticDeviationCorrection other, [out] string&amp; firstDifference) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MagneticDeviationCorrection.Equals(Iot.Device.Nmea0183.MagneticDeviationCorrection,System.String@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As MagneticDeviationCorrection, ByRef firstDifference As String) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Iot.Device.Nmea0183.MagneticDeviationCorrection * string -&gt; bool" Usage="magneticDeviationCorrection.Equals (other, firstDifference)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Iot.Device.Nmea0183.MagneticDeviationCorrection" />
+        <Parameter Name="firstDifference" Type="System.String" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="other">The other object</param>
+        <param name="firstDifference">A short error message where the error is</param>
+        <summary>
+            Compares two deviation data sets for equality. Minor differences are ignored.
+            </summary>
+        <returns>True on equality, false otherwise</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromMagneticHeading">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle FromMagneticHeading (UnitsNet.Angle magneticHeading);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Angle FromMagneticHeading(valuetype UnitsNet.Angle magneticHeading) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MagneticDeviationCorrection.FromMagneticHeading(UnitsNet.Angle)" />
+      <MemberSignature Language="VB.NET" Value="Public Function FromMagneticHeading (magneticHeading As Angle) As Angle" />
+      <MemberSignature Language="F#" Value="member this.FromMagneticHeading : UnitsNet.Angle -&gt; UnitsNet.Angle" Usage="magneticDeviationCorrection.FromMagneticHeading magneticHeading" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Angle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="magneticHeading" Type="UnitsNet.Angle" />
+      </Parameters>
+      <Docs>
+        <param name="magneticHeading">Magnetic heading input</param>
+        <summary>
+            Convert a magnetic heading to a compass reading (to tell the helmsman what he should steer on the compass for the desired magnetic course)
+            </summary>
+        <returns>The compass reading for the given magnetic heading</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identification">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.Identification? Identification { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Nmea0183.Identification Identification" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.MagneticDeviationCorrection.Identification" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Identification As Identification" />
+      <MemberSignature Language="F#" Value="member this.Identification : Iot.Device.Nmea0183.Identification" Usage="Iot.Device.Nmea0183.MagneticDeviationCorrection.Identification" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Identification</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the identification of the vessel for which the loaded calibration is valid
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (string file);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Load(string file) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MagneticDeviationCorrection.Load(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Load (file As String)" />
+      <MemberSignature Language="F#" Value="member this.Load : string -&gt; unit" Usage="magneticDeviationCorrection.Load file" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="file" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="file">The file from which to load</param>
+        <summary>
+            Loads a previously saved calibration set
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Save">
+      <MemberSignature Language="C#" Value="public void Save (string file, string shipName, string callSign, string mmsi);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Save(string file, string shipName, string callSign, string mmsi) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MagneticDeviationCorrection.Save(System.String,System.String,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Save (file As String, shipName As String, callSign As String, mmsi As String)" />
+      <MemberSignature Language="F#" Value="member this.Save : string * string * string * string -&gt; unit" Usage="magneticDeviationCorrection.Save (file, shipName, callSign, mmsi)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="file" Type="System.String" />
+        <Parameter Name="shipName" Type="System.String" />
+        <Parameter Name="callSign" Type="System.String" />
+        <Parameter Name="mmsi" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="file">The file name (should be ending in XML)</param>
+        <param name="shipName">The name of the vessel</param>
+        <param name="callSign">The callsign of the vessel</param>
+        <param name="mmsi">The MMSI of the vessel</param>
+        <summary>
+            Saves the calculated calibration set to a file
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SentencesUsed">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Iot.Device.Nmea0183.Sentences.NmeaSentence&gt; SentencesUsed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Iot.Device.Nmea0183.Sentences.NmeaSentence&gt; SentencesUsed" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.MagneticDeviationCorrection.SentencesUsed" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SentencesUsed As List(Of NmeaSentence)" />
+      <MemberSignature Language="F#" Value="member this.SentencesUsed : System.Collections.Generic.List&lt;Iot.Device.Nmea0183.Sentences.NmeaSentence&gt;" Usage="Iot.Device.Nmea0183.MagneticDeviationCorrection.SentencesUsed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Iot.Device.Nmea0183.Sentences.NmeaSentence&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            BLahafasel
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToMagneticHeading">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle ToMagneticHeading (UnitsNet.Angle compassReading);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Angle ToMagneticHeading(valuetype UnitsNet.Angle compassReading) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MagneticDeviationCorrection.ToMagneticHeading(UnitsNet.Angle)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ToMagneticHeading (compassReading As Angle) As Angle" />
+      <MemberSignature Language="F#" Value="member this.ToMagneticHeading : UnitsNet.Angle -&gt; UnitsNet.Angle" Usage="magneticDeviationCorrection.ToMagneticHeading compassReading" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Angle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="compassReading" Type="UnitsNet.Angle" />
+      </Parameters>
+      <Docs>
+        <param name="compassReading">Reading of the compass</param>
+        <summary>
+            Convert a compass reading to a magnetic heading.
+            </summary>
+        <returns>The corrected magnetic heading</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

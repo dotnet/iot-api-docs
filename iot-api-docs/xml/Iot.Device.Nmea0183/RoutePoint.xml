@@ -1,0 +1,297 @@
+<Type Name="RoutePoint" FullName="Iot.Device.Nmea0183.RoutePoint">
+  <TypeSignature Language="C#" Value="public sealed class RoutePoint : IEquatable&lt;Iot.Device.Nmea0183.RoutePoint&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit RoutePoint extends System.Object implements class System.IEquatable`1&lt;class Iot.Device.Nmea0183.RoutePoint&gt;" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.RoutePoint" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class RoutePoint&#xA;Implements IEquatable(Of RoutePoint)" />
+  <TypeSignature Language="F#" Value="type RoutePoint = class&#xA;    interface IEquatable&lt;RoutePoint&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Iot.Device.Nmea0183.RoutePoint&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            A point along a route. This is used to construct <see cref="T:Iot.Device.Nmea0183.Sentences.RoutePart" /> and <see cref="T:Iot.Device.Nmea0183.Sentences.Waypoint" /> sentences
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RoutePoint (string routeName, int indexInRoute, int totalPointsInRoute, string waypointName, Iot.Device.Common.GeographicPosition position, UnitsNet.Angle? bearingToNextWaypoint, UnitsNet.Length? distanceToNextWaypoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string routeName, int32 indexInRoute, int32 totalPointsInRoute, string waypointName, class Iot.Device.Common.GeographicPosition position, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; bearingToNextWaypoint, valuetype System.Nullable`1&lt;valuetype UnitsNet.Length&gt; distanceToNextWaypoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.RoutePoint.#ctor(System.String,System.Int32,System.Int32,System.String,Iot.Device.Common.GeographicPosition,System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Length})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (routeName As String, indexInRoute As Integer, totalPointsInRoute As Integer, waypointName As String, position As GeographicPosition, bearingToNextWaypoint As Nullable(Of Angle), distanceToNextWaypoint As Nullable(Of Length))" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.RoutePoint : string * int * int * string * Iot.Device.Common.GeographicPosition * Nullable&lt;UnitsNet.Angle&gt; * Nullable&lt;UnitsNet.Length&gt; -&gt; Iot.Device.Nmea0183.RoutePoint" Usage="new Iot.Device.Nmea0183.RoutePoint (routeName, indexInRoute, totalPointsInRoute, waypointName, position, bearingToNextWaypoint, distanceToNextWaypoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="routeName" Type="System.String" />
+        <Parameter Name="indexInRoute" Type="System.Int32" />
+        <Parameter Name="totalPointsInRoute" Type="System.Int32" />
+        <Parameter Name="waypointName" Type="System.String" />
+        <Parameter Name="position" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="bearingToNextWaypoint" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+        <Parameter Name="distanceToNextWaypoint" Type="System.Nullable&lt;UnitsNet.Length&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="routeName">Name of the route</param>
+        <param name="indexInRoute">The index of this point</param>
+        <param name="totalPointsInRoute">The total number of points on this route</param>
+        <param name="waypointName">The name of this waypoint</param>
+        <param name="position">The position of the waypoint</param>
+        <param name="bearingToNextWaypoint">The direction to the next waypoint (optional, will be calculated when the route is constructed)</param>
+        <param name="distanceToNextWaypoint">The distance to the next waypoint (optional, will be calculated when the route is constructed)</param>
+        <summary>
+            Creates a new route point.
+            </summary>
+        <remarks>
+            Route and point names should use ASCII characters only. Some devices may understand the extended ASCII code page (values &gt; 127),
+            but this is rare. Most devices will silently truncate any names longer than 10 chars.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BearingToNextWaypoint">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? BearingToNextWaypoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; BearingToNextWaypoint" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.RoutePoint.BearingToNextWaypoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property BearingToNextWaypoint As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.BearingToNextWaypoint : Nullable&lt;UnitsNet.Angle&gt; with get, set" Usage="Iot.Device.Nmea0183.RoutePoint.BearingToNextWaypoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True bearing from this waypoint to the next
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistanceToNextWaypoint">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length? DistanceToNextWaypoint { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Length&gt; DistanceToNextWaypoint" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.RoutePoint.DistanceToNextWaypoint" />
+      <MemberSignature Language="VB.NET" Value="Public Property DistanceToNextWaypoint As Nullable(Of Length)" />
+      <MemberSignature Language="F#" Value="member this.DistanceToNextWaypoint : Nullable&lt;UnitsNet.Length&gt; with get, set" Usage="Iot.Device.Nmea0183.RoutePoint.DistanceToNextWaypoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Length&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The distance to the next waypoint
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Iot.Device.Nmea0183.RoutePoint? other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Iot.Device.Nmea0183.RoutePoint other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.RoutePoint.Equals(Iot.Device.Nmea0183.RoutePoint)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As RoutePoint) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Iot.Device.Nmea0183.RoutePoint -&gt; bool" Usage="routePoint.Equals other" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Iot.Device.Nmea0183.RoutePoint" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>
+            Two points are considered equal if the name and the position are equal. The other properties are NMEA-internals and are
+            not directly related to the function of the waypoint for the user
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.RoutePoint.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="routePoint.Equals obj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>
+            Equality comparer
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.RoutePoint.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="routePoint.GetHashCode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Standard hash function
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IndexInRoute">
+      <MemberSignature Language="C#" Value="public int IndexInRoute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 IndexInRoute" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.RoutePoint.IndexInRoute" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IndexInRoute As Integer" />
+      <MemberSignature Language="F#" Value="member this.IndexInRoute : int" Usage="Iot.Device.Nmea0183.RoutePoint.IndexInRoute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The index within the route
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public Iot.Device.Common.GeographicPosition Position { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Common.GeographicPosition Position" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.RoutePoint.Position" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Position As GeographicPosition" />
+      <MemberSignature Language="F#" Value="member this.Position : Iot.Device.Common.GeographicPosition" Usage="Iot.Device.Nmea0183.RoutePoint.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Common.GeographicPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The position of this point
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RouteName">
+      <MemberSignature Language="C#" Value="public string RouteName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string RouteName" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.RoutePoint.RouteName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RouteName As String" />
+      <MemberSignature Language="F#" Value="member this.RouteName : string" Usage="Iot.Device.Nmea0183.RoutePoint.RouteName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the route
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TotalPointsInRoute">
+      <MemberSignature Language="C#" Value="public int TotalPointsInRoute { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TotalPointsInRoute" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.RoutePoint.TotalPointsInRoute" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TotalPointsInRoute As Integer" />
+      <MemberSignature Language="F#" Value="member this.TotalPointsInRoute : int" Usage="Iot.Device.Nmea0183.RoutePoint.TotalPointsInRoute" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The total number of points on the route
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WaypointName">
+      <MemberSignature Language="C#" Value="public string WaypointName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string WaypointName" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.RoutePoint.WaypointName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WaypointName As String" />
+      <MemberSignature Language="F#" Value="member this.WaypointName : string" Usage="Iot.Device.Nmea0183.RoutePoint.WaypointName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of this point
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

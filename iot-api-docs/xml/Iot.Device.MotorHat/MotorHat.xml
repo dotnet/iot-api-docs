@@ -11,6 +11,8 @@
     <AssemblyVersion>1.3.0.0</AssemblyVersion>
     <AssemblyVersion>1.4.0.0</AssemblyVersion>
     <AssemblyVersion>1.5.0.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -41,6 +43,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="settings" Type="System.Device.I2c.I2cConnectionSettings" />
@@ -73,6 +77,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="frequency" Type="System.Double" />
@@ -91,6 +97,36 @@
             </remarks>
       </Docs>
     </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MotorHat (System.Device.I2c.I2cConnectionSettings settings, double frequency = 1600, Iot.Device.MotorHat.IMotorPinProvider? pinProvider = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cConnectionSettings settings, float64 frequency, class Iot.Device.MotorHat.IMotorPinProvider pinProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.MotorHat.MotorHat.#ctor(System.Device.I2c.I2cConnectionSettings,System.Double,Iot.Device.MotorHat.IMotorPinProvider)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (settings As I2cConnectionSettings, Optional frequency As Double = 1600, Optional pinProvider As IMotorPinProvider = Nothing)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.MotorHat.MotorHat : System.Device.I2c.I2cConnectionSettings * double * Iot.Device.MotorHat.IMotorPinProvider -&gt; Iot.Device.MotorHat.MotorHat" Usage="new Iot.Device.MotorHat.MotorHat (settings, frequency, pinProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="settings" Type="System.Device.I2c.I2cConnectionSettings" Index="0" FrameworkAlternate="iot-dotnet-2.1" />
+        <Parameter Name="frequency" Type="System.Double" Index="1" FrameworkAlternate="iot-dotnet-2.1" />
+        <Parameter Name="pinProvider" Type="Iot.Device.MotorHat.IMotorPinProvider" Index="2" FrameworkAlternate="iot-dotnet-2.1" />
+      </Parameters>
+      <Docs>
+        <param name="settings">The I2C settings of the MotorHat.</param>
+        <param name="frequency">The frequency in Hz to set the PWM controller.</param>
+        <param name="pinProvider">The <see cref="T:Iot.Device.MotorHat.IMotorPinProvider" /> that provides <see cref="T:Iot.Device.MotorHat.MotorPins" /> for various hats.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.MotorHat.MotorHat" /> class with the specified I2C settings and PWM frequency.
+            </summary>
+        <remarks>
+            The default i2c address is 0x60, but the HAT can be configured in hardware to any address from 0x60 to 0x7f.
+            The PWM hardware used by this HAT is a PCA9685. It has a total possible frequency range of 24 to 1526 Hz.
+            Setting the frequency above or below this range will cause PWM hardware to be set at its maximum or minimum setting.
+            </remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CreateDCMotor">
       <MemberSignature Language="C#" Value="public Iot.Device.DCMotor.DCMotor CreateDCMotor (int motorNumber);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.DCMotor.DCMotor CreateDCMotor(int32 motorNumber) cil managed" />
@@ -105,6 +141,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.DCMotor.DCMotor</ReturnType>
@@ -137,6 +175,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Pwm.PwmChannel</ReturnType>
@@ -169,6 +209,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.ServoMotor.ServoMotor</ReturnType>
@@ -210,6 +252,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -235,6 +279,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>

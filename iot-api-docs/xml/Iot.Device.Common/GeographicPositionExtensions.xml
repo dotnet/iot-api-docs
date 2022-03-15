@@ -1,0 +1,165 @@
+<Type Name="GeographicPositionExtensions" FullName="Iot.Device.Common.GeographicPositionExtensions">
+  <TypeSignature Language="C#" Value="public static class GeographicPositionExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit GeographicPositionExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Common.GeographicPositionExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module GeographicPositionExtensions" />
+  <TypeSignature Language="F#" Value="type GeographicPositionExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Extensions for positions
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DirectionTo">
+      <MemberSignature Language="C#" Value="public static UnitsNet.Angle DirectionTo (this Iot.Device.Common.GeographicPosition position1, Iot.Device.Common.GeographicPosition position2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Angle DirectionTo(class Iot.Device.Common.GeographicPosition position1, class Iot.Device.Common.GeographicPosition position2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPositionExtensions.DirectionTo(Iot.Device.Common.GeographicPosition,Iot.Device.Common.GeographicPosition)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DirectionTo (position1 As GeographicPosition, position2 As GeographicPosition) As Angle" />
+      <MemberSignature Language="F#" Value="static member DirectionTo : Iot.Device.Common.GeographicPosition * Iot.Device.Common.GeographicPosition -&gt; UnitsNet.Angle" Usage="Iot.Device.Common.GeographicPositionExtensions.DirectionTo (position1, position2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Angle</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position1" Type="Iot.Device.Common.GeographicPosition" RefType="this" />
+        <Parameter Name="position2" Type="Iot.Device.Common.GeographicPosition" />
+      </Parameters>
+      <Docs>
+        <param name="position1">The initial position. This argument can be implicitly given</param>
+        <param name="position2">The destination position</param>
+        <summary>
+            Calculates the initial angle to travel to get to another position.
+            Calculates on the great circle, therefore the direction to the target is not constant along the path
+            </summary>
+        <returns>The angle to travel</returns>
+        <remarks>If both distance and direction are required, prefer to use <see cref="M:Iot.Device.Common.GreatCircle.DistAndDir(Iot.Device.Common.GeographicPosition,Iot.Device.Common.GeographicPosition,UnitsNet.Length@,UnitsNet.Angle@)" /></remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistanceTo">
+      <MemberSignature Language="C#" Value="public static UnitsNet.Length DistanceTo (this Iot.Device.Common.GeographicPosition position1, Iot.Device.Common.GeographicPosition position2);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Length DistanceTo(class Iot.Device.Common.GeographicPosition position1, class Iot.Device.Common.GeographicPosition position2) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPositionExtensions.DistanceTo(Iot.Device.Common.GeographicPosition,Iot.Device.Common.GeographicPosition)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DistanceTo (position1 As GeographicPosition, position2 As GeographicPosition) As Length" />
+      <MemberSignature Language="F#" Value="static member DistanceTo : Iot.Device.Common.GeographicPosition * Iot.Device.Common.GeographicPosition -&gt; UnitsNet.Length" Usage="Iot.Device.Common.GeographicPositionExtensions.DistanceTo (position1, position2)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Length</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position1" Type="Iot.Device.Common.GeographicPosition" RefType="this" />
+        <Parameter Name="position2" Type="Iot.Device.Common.GeographicPosition" />
+      </Parameters>
+      <Docs>
+        <param name="position1">The first position. This argument can be implicitly given</param>
+        <param name="position2">The position to go to</param>
+        <summary>
+            Calculate the distance to another position
+            </summary>
+        <returns>The distance between the two points</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveBy">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Common.GeographicPosition MoveBy (this Iot.Device.Common.GeographicPosition position, UnitsNet.Angle direction, UnitsNet.Length distance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Common.GeographicPosition MoveBy(class Iot.Device.Common.GeographicPosition position, valuetype UnitsNet.Angle direction, valuetype UnitsNet.Length distance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPositionExtensions.MoveBy(Iot.Device.Common.GeographicPosition,UnitsNet.Angle,UnitsNet.Length)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function MoveBy (position As GeographicPosition, direction As Angle, distance As Length) As GeographicPosition" />
+      <MemberSignature Language="F#" Value="static member MoveBy : Iot.Device.Common.GeographicPosition * UnitsNet.Angle * UnitsNet.Length -&gt; Iot.Device.Common.GeographicPosition" Usage="Iot.Device.Common.GeographicPositionExtensions.MoveBy (position, direction, distance)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Common.GeographicPosition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="Iot.Device.Common.GeographicPosition" RefType="this" />
+        <Parameter Name="direction" Type="UnitsNet.Angle" />
+        <Parameter Name="distance" Type="UnitsNet.Length" />
+      </Parameters>
+      <Docs>
+        <param name="position">Start position.</param>
+        <param name="direction">Direction to travel</param>
+        <param name="distance">Distance to travel</param>
+        <summary>
+            Move a certain distance into a direction. Where do I end?
+            </summary>
+        <returns>The destination position</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NormalizeLongitudeTo180Degrees">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Common.GeographicPosition NormalizeLongitudeTo180Degrees (this Iot.Device.Common.GeographicPosition position);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Common.GeographicPosition NormalizeLongitudeTo180Degrees(class Iot.Device.Common.GeographicPosition position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPositionExtensions.NormalizeLongitudeTo180Degrees(Iot.Device.Common.GeographicPosition)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function NormalizeLongitudeTo180Degrees (position As GeographicPosition) As GeographicPosition" />
+      <MemberSignature Language="F#" Value="static member NormalizeLongitudeTo180Degrees : Iot.Device.Common.GeographicPosition -&gt; Iot.Device.Common.GeographicPosition" Usage="Iot.Device.Common.GeographicPositionExtensions.NormalizeLongitudeTo180Degrees position" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Common.GeographicPosition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="Iot.Device.Common.GeographicPosition" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="position">To be added.</param>
+        <summary>
+            Normalizes the longitude to +/- 180°
+            This is the common form for displaying longitudes. <see cref="M:Iot.Device.Common.GeographicPositionExtensions.NormalizeLongitudeTo360Degrees(Iot.Device.Common.GeographicPosition)" /> is used when the area of interest
+            is close to the date border (in the pacific ocean)
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NormalizeLongitudeTo360Degrees">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Common.GeographicPosition NormalizeLongitudeTo360Degrees (this Iot.Device.Common.GeographicPosition position);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Common.GeographicPosition NormalizeLongitudeTo360Degrees(class Iot.Device.Common.GeographicPosition position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GeographicPositionExtensions.NormalizeLongitudeTo360Degrees(Iot.Device.Common.GeographicPosition)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function NormalizeLongitudeTo360Degrees (position As GeographicPosition) As GeographicPosition" />
+      <MemberSignature Language="F#" Value="static member NormalizeLongitudeTo360Degrees : Iot.Device.Common.GeographicPosition -&gt; Iot.Device.Common.GeographicPosition" Usage="Iot.Device.Common.GeographicPositionExtensions.NormalizeLongitudeTo360Degrees position" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Common.GeographicPosition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="Iot.Device.Common.GeographicPosition" RefType="this" />
+      </Parameters>
+      <Docs>
+        <param name="position">To be added.</param>
+        <summary>
+            Normalizes the longitude to [0..360°)
+            This coordinate form is advised if working in an area near the date border in the pacific ocean.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

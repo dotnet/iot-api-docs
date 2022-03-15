@@ -1,0 +1,263 @@
+<Type Name="Ft4222Device" FullName="Iot.Device.Ft4222.Ft4222Device">
+  <TypeSignature Language="C#" Value="public class Ft4222Device : Iot.Device.FtCommon.FtDevice" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Ft4222Device extends Iot.Device.FtCommon.FtDevice" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ft4222.Ft4222Device" />
+  <TypeSignature Language="VB.NET" Value="Public Class Ft4222Device&#xA;Inherits FtDevice" />
+  <TypeSignature Language="F#" Value="type Ft4222Device = class&#xA;    inherit FtDevice" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.FtCommon.FtDevice</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            FT4222 device information
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ft4222Device (Iot.Device.FtCommon.FtDevice ftdevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.FtCommon.FtDevice ftdevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Device.#ctor(Iot.Device.FtCommon.FtDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (ftdevice As FtDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ft4222.Ft4222Device : Iot.Device.FtCommon.FtDevice -&gt; Iot.Device.Ft4222.Ft4222Device" Usage="new Iot.Device.Ft4222.Ft4222Device ftdevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="ftdevice" Type="Iot.Device.FtCommon.FtDevice" />
+      </Parameters>
+      <Docs>
+        <param name="ftdevice">a FT Device</param>
+        <summary>
+            Instantiates a FT4222 Device object.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ft4222Device (Iot.Device.FtCommon.FtFlag flags, Iot.Device.FtCommon.FtDeviceType type, uint id, uint locId, string serialNumber, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.FtCommon.FtFlag flags, valuetype Iot.Device.FtCommon.FtDeviceType type, unsigned int32 id, unsigned int32 locId, string serialNumber, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Device.#ctor(Iot.Device.FtCommon.FtFlag,Iot.Device.FtCommon.FtDeviceType,System.UInt32,System.UInt32,System.String,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (flags As FtFlag, type As FtDeviceType, id As UInteger, locId As UInteger, serialNumber As String, description As String)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ft4222.Ft4222Device : Iot.Device.FtCommon.FtFlag * Iot.Device.FtCommon.FtDeviceType * uint32 * uint32 * string * string -&gt; Iot.Device.Ft4222.Ft4222Device" Usage="new Iot.Device.Ft4222.Ft4222Device (flags, type, id, locId, serialNumber, description)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="flags" Type="Iot.Device.FtCommon.FtFlag" />
+        <Parameter Name="type" Type="Iot.Device.FtCommon.FtDeviceType" />
+        <Parameter Name="id" Type="System.UInt32" />
+        <Parameter Name="locId" Type="System.UInt32" />
+        <Parameter Name="serialNumber" Type="System.String" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="flags">Indicates device state.</param>
+        <param name="type">Indicates the device type.</param>
+        <param name="id">The Vendor ID and Product ID of the device.</param>
+        <param name="locId">The physical location identifier of the device.</param>
+        <param name="serialNumber">The device serial number.</param>
+        <param name="description">The device description.</param>
+        <summary>
+            Instantiates a FT4222 Device object.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateI2cBusCore">
+      <MemberSignature Language="C#" Value="protected override Iot.Device.Board.I2cBusManager CreateI2cBusCore (int busNumber, int[]? pins);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class Iot.Device.Board.I2cBusManager CreateI2cBusCore(int32 busNumber, int32[] pins) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Device.CreateI2cBusCore(System.Int32,System.Int32[])" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateI2cBusCore (busNumber As Integer, pins As Integer()) As I2cBusManager" />
+      <MemberSignature Language="F#" Value="override this.CreateI2cBusCore : int * int[] -&gt; Iot.Device.Board.I2cBusManager" Usage="ft4222Device.CreateI2cBusCore (busNumber, pins)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Board.I2cBusManager</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="busNumber" Type="System.Int32" />
+        <Parameter Name="pins" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="busNumber">The I2C bus number to create. Must be 0</param>
+        <param name="pins">The pins for I2C (0 and 1)</param>
+        <summary>
+            Creates an I2C Bus
+            </summary>
+        <returns>An I2C bus</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateSimpleSpiDevice">
+      <MemberSignature Language="C#" Value="protected override System.Device.Spi.SpiDevice CreateSimpleSpiDevice (System.Device.Spi.SpiConnectionSettings settings, int[] pins);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Device.Spi.SpiDevice CreateSimpleSpiDevice(class System.Device.Spi.SpiConnectionSettings settings, int32[] pins) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Device.CreateSimpleSpiDevice(System.Device.Spi.SpiConnectionSettings,System.Int32[])" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function CreateSimpleSpiDevice (settings As SpiConnectionSettings, pins As Integer()) As SpiDevice" />
+      <MemberSignature Language="F#" Value="override this.CreateSimpleSpiDevice : System.Device.Spi.SpiConnectionSettings * int[] -&gt; System.Device.Spi.SpiDevice" Usage="ft4222Device.CreateSimpleSpiDevice (settings, pins)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Spi.SpiDevice</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="settings" Type="System.Device.Spi.SpiConnectionSettings" />
+        <Parameter Name="pins" Type="System.Int32[]" />
+      </Parameters>
+      <Docs>
+        <param name="settings">The SPI settings</param>
+        <param name="pins">The pins used for SPI (0-3)</param>
+        <summary>
+            Creates SPI device related to this device
+            </summary>
+        <returns>a SPI device</returns>
+        <remarks>You can create either an I2C or an SPI device.
+            You can create multiple SPI devices, the first one will be the one used for the clock frequency.
+            They all have to have different Chip Select. You can use any of the 3 to 15 pin for this function.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultI2cBusNumber">
+      <MemberSignature Language="C#" Value="public override int GetDefaultI2cBusNumber ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetDefaultI2cBusNumber() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Device.GetDefaultI2cBusNumber" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetDefaultI2cBusNumber () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetDefaultI2cBusNumber : unit -&gt; int" Usage="ft4222Device.GetDefaultI2cBusNumber " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultPinAssignmentForI2c">
+      <MemberSignature Language="C#" Value="public override int[] GetDefaultPinAssignmentForI2c (int busId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32[] GetDefaultPinAssignmentForI2c(int32 busId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Device.GetDefaultPinAssignmentForI2c(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetDefaultPinAssignmentForI2c (busId As Integer) As Integer()" />
+      <MemberSignature Language="F#" Value="override this.GetDefaultPinAssignmentForI2c : int -&gt; int[]" Usage="ft4222Device.GetDefaultPinAssignmentForI2c busId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="busId" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="busId">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetDefaultPinAssignmentForSpi">
+      <MemberSignature Language="C#" Value="public override int[] GetDefaultPinAssignmentForSpi (System.Device.Spi.SpiConnectionSettings connectionSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32[] GetDefaultPinAssignmentForSpi(class System.Device.Spi.SpiConnectionSettings connectionSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Device.GetDefaultPinAssignmentForSpi(System.Device.Spi.SpiConnectionSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetDefaultPinAssignmentForSpi (connectionSettings As SpiConnectionSettings) As Integer()" />
+      <MemberSignature Language="F#" Value="override this.GetDefaultPinAssignmentForSpi : System.Device.Spi.SpiConnectionSettings -&gt; int[]" Usage="ft4222Device.GetDefaultPinAssignmentForSpi connectionSettings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionSettings" Type="System.Device.Spi.SpiConnectionSettings" />
+      </Parameters>
+      <Docs>
+        <param name="connectionSettings">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetFt4222">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.List&lt;Iot.Device.Ft4222.Ft4222Device&gt; GetFt4222 ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.List`1&lt;class Iot.Device.Ft4222.Ft4222Device&gt; GetFt4222() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Device.GetFt4222" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetFt4222 () As List(Of Ft4222Device)" />
+      <MemberSignature Language="F#" Value="static member GetFt4222 : unit -&gt; System.Collections.Generic.List&lt;Iot.Device.Ft4222.Ft4222Device&gt;" Usage="Iot.Device.Ft4222.Ft4222Device.GetFt4222 " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Iot.Device.Ft4222.Ft4222Device&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets all the FT4222 connected
+            </summary>
+        <returns>A list of FT4222</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryCreateBestGpioDriver">
+      <MemberSignature Language="C#" Value="protected override System.Device.Gpio.GpioDriver? TryCreateBestGpioDriver ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance class System.Device.Gpio.GpioDriver TryCreateBestGpioDriver() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft4222.Ft4222Device.TryCreateBestGpioDriver" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function TryCreateBestGpioDriver () As GpioDriver" />
+      <MemberSignature Language="F#" Value="override this.TryCreateBestGpioDriver : unit -&gt; System.Device.Gpio.GpioDriver" Usage="ft4222Device.TryCreateBestGpioDriver " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.GpioDriver</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates the <see cref="T:Iot.Device.Ft4222.Ft4222Gpio" /> controller
+            </summary>
+        <returns>A new GPIO driver</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
