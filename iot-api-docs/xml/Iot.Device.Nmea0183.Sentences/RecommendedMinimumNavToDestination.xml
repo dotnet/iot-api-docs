@@ -1,0 +1,377 @@
+<Type Name="RecommendedMinimumNavToDestination" FullName="Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination">
+  <TypeSignature Language="C#" Value="public class RecommendedMinimumNavToDestination : Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RecommendedMinimumNavToDestination extends Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination" />
+  <TypeSignature Language="VB.NET" Value="Public Class RecommendedMinimumNavToDestination&#xA;Inherits NmeaSentence" />
+  <TypeSignature Language="F#" Value="type RecommendedMinimumNavToDestination = class&#xA;    inherit NmeaSentence" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Nmea0183.Sentences.NmeaSentence</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            RMB sentence: Recommended minimum navigation information (current leg).
+            This sentence is the bare minimum a navigation system should send to the autopilot.
+            Normally, you would also send at least BWC, XTE and MWV
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RecommendedMinimumNavToDestination (Iot.Device.Nmea0183.TalkerSentence sentence, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Nmea0183.TalkerSentence sentence, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sentence As TalkerSentence, time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination : Iot.Device.Nmea0183.TalkerSentence * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination" Usage="new Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination (sentence, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sentence" Type="Iot.Device.Nmea0183.TalkerSentence" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="sentence">To be added.</param>
+        <param name="time">To be added.</param>
+        <summary>
+            See <see cref="T:Iot.Device.Nmea0183.Sentences.NmeaSentence" /> for constructor usage
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RecommendedMinimumNavToDestination (Iot.Device.Nmea0183.TalkerId talkerId, System.Collections.Generic.IEnumerable&lt;string&gt; fields, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Nmea0183.TalkerId talkerId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; fields, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (talkerId As TalkerId, fields As IEnumerable(Of String), time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination : Iot.Device.Nmea0183.TalkerId * seq&lt;string&gt; * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination" Usage="new Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination (talkerId, fields, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="talkerId" Type="Iot.Device.Nmea0183.TalkerId" />
+        <Parameter Name="fields" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="talkerId">To be added.</param>
+        <param name="fields">To be added.</param>
+        <param name="time">To be added.</param>
+        <summary>
+            See <see cref="T:Iot.Device.Nmea0183.Sentences.NmeaSentence" /> for constructor usage
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RecommendedMinimumNavToDestination (DateTimeOffset dateTime, UnitsNet.Length crossTrackError, string previousWayPointName, string nextWayPointName, Iot.Device.Common.GeographicPosition nextWayPoint, UnitsNet.Length distanceToWayPoint, UnitsNet.Angle bearingToWayPoint, UnitsNet.Speed approachSpeedToWayPoint, bool arrived);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DateTimeOffset dateTime, valuetype UnitsNet.Length crossTrackError, string previousWayPointName, string nextWayPointName, class Iot.Device.Common.GeographicPosition nextWayPoint, valuetype UnitsNet.Length distanceToWayPoint, valuetype UnitsNet.Angle bearingToWayPoint, valuetype UnitsNet.Speed approachSpeedToWayPoint, bool arrived) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.#ctor(System.DateTimeOffset,UnitsNet.Length,System.String,System.String,Iot.Device.Common.GeographicPosition,UnitsNet.Length,UnitsNet.Angle,UnitsNet.Speed,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (dateTime As DateTimeOffset, crossTrackError As Length, previousWayPointName As String, nextWayPointName As String, nextWayPoint As GeographicPosition, distanceToWayPoint As Length, bearingToWayPoint As Angle, approachSpeedToWayPoint As Speed, arrived As Boolean)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination : DateTimeOffset * UnitsNet.Length * string * string * Iot.Device.Common.GeographicPosition * UnitsNet.Length * UnitsNet.Angle * UnitsNet.Speed * bool -&gt; Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination" Usage="new Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination (dateTime, crossTrackError, previousWayPointName, nextWayPointName, nextWayPoint, distanceToWayPoint, bearingToWayPoint, approachSpeedToWayPoint, arrived)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dateTime" Type="System.DateTimeOffset" />
+        <Parameter Name="crossTrackError" Type="UnitsNet.Length" />
+        <Parameter Name="previousWayPointName" Type="System.String" />
+        <Parameter Name="nextWayPointName" Type="System.String" />
+        <Parameter Name="nextWayPoint" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="distanceToWayPoint" Type="UnitsNet.Length" />
+        <Parameter Name="bearingToWayPoint" Type="UnitsNet.Angle" />
+        <Parameter Name="approachSpeedToWayPoint" Type="UnitsNet.Speed" />
+        <Parameter Name="arrived" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="dateTime">To be added.</param>
+        <param name="crossTrackError">To be added.</param>
+        <param name="previousWayPointName">To be added.</param>
+        <param name="nextWayPointName">To be added.</param>
+        <param name="nextWayPoint">To be added.</param>
+        <param name="distanceToWayPoint">To be added.</param>
+        <param name="bearingToWayPoint">To be added.</param>
+        <param name="approachSpeedToWayPoint">To be added.</param>
+        <param name="arrived">To be added.</param>
+        <summary>
+            See <see cref="T:Iot.Device.Nmea0183.Sentences.NmeaSentence" /> for constructor usage
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApproachSpeed">
+      <MemberSignature Language="C#" Value="public UnitsNet.Speed? ApproachSpeed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Speed&gt; ApproachSpeed" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.ApproachSpeed" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ApproachSpeed As Nullable(Of Speed)" />
+      <MemberSignature Language="F#" Value="member this.ApproachSpeed : Nullable&lt;UnitsNet.Speed&gt;" Usage="Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.ApproachSpeed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Speed&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Speed of approach to the waypoint
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Arrived">
+      <MemberSignature Language="C#" Value="public bool Arrived { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Arrived" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.Arrived" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Arrived As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Arrived : bool" Usage="Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.Arrived" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True: Within arrival circle of waypoint
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BearingToWayPoint">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? BearingToWayPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; BearingToWayPoint" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.BearingToWayPoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BearingToWayPoint As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.BearingToWayPoint : Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.BearingToWayPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True bearing to waypoint
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CrossTrackError">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length CrossTrackError { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Length CrossTrackError" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.CrossTrackError" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CrossTrackError As Length" />
+      <MemberSignature Language="F#" Value="member this.CrossTrackError : UnitsNet.Length" Usage="Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.CrossTrackError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Length</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Cross track error. Positive: we are to the right of the desired route
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistanceToWayPoint">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length? DistanceToWayPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Length&gt; DistanceToWayPoint" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.DistanceToWayPoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DistanceToWayPoint As Nullable(Of Length)" />
+      <MemberSignature Language="F#" Value="member this.DistanceToWayPoint : Nullable&lt;UnitsNet.Length&gt;" Usage="Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.DistanceToWayPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Length&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Distance to next waypoint
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Nmea0183.SentenceId Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype Iot.Device.Nmea0183.SentenceId Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Id As SentenceId" />
+      <MemberSignature Language="F#" Value="member this.Id : Iot.Device.Nmea0183.SentenceId" Usage="Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The sentence id "RMB"
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextWayPoint">
+      <MemberSignature Language="C#" Value="public Iot.Device.Common.GeographicPosition NextWayPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Common.GeographicPosition NextWayPoint" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.NextWayPoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NextWayPoint As GeographicPosition" />
+      <MemberSignature Language="F#" Value="member this.NextWayPoint : Iot.Device.Common.GeographicPosition" Usage="Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.NextWayPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Common.GeographicPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Position of next waypoint (the waypoint we're heading to)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextWayPointName">
+      <MemberSignature Language="C#" Value="public string NextWayPointName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NextWayPointName" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.NextWayPointName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NextWayPointName As String" />
+      <MemberSignature Language="F#" Value="member this.NextWayPointName : string" Usage="Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.NextWayPointName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of next waypoint
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PreviousWayPointName">
+      <MemberSignature Language="C#" Value="public string PreviousWayPointName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PreviousWayPointName" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.PreviousWayPointName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PreviousWayPointName As String" />
+      <MemberSignature Language="F#" Value="member this.PreviousWayPointName : string" Usage="Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.PreviousWayPointName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of previous waypoint
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplacesOlderInstance">
+      <MemberSignature Language="C#" Value="public override bool ReplacesOlderInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReplacesOlderInstance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.ReplacesOlderInstance" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ReplacesOlderInstance As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReplacesOlderInstance : bool" Usage="Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.ReplacesOlderInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is true for this message type
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToNmeaParameterList">
+      <MemberSignature Language="C#" Value="public override string ToNmeaParameterList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToNmeaParameterList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.ToNmeaParameterList" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToNmeaParameterList () As String" />
+      <MemberSignature Language="F#" Value="override this.ToNmeaParameterList : unit -&gt; string" Usage="recommendedMinimumNavToDestination.ToNmeaParameterList " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ToReadableContent">
+      <MemberSignature Language="C#" Value="public override string ToReadableContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToReadableContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.RecommendedMinimumNavToDestination.ToReadableContent" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToReadableContent () As String" />
+      <MemberSignature Language="F#" Value="override this.ToReadableContent : unit -&gt; string" Usage="recommendedMinimumNavToDestination.ToReadableContent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

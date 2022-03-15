@@ -1,0 +1,292 @@
+<Type Name="Route" FullName="Iot.Device.Nmea0183.Route">
+  <TypeSignature Language="C#" Value="public sealed class Route" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Route extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Route" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Route" />
+  <TypeSignature Language="F#" Value="type Route = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            High-level representation of a route (a list of waypoints)
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Route (string name);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Route.#ctor(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Route : string -&gt; Iot.Device.Nmea0183.Route" Usage="new Iot.Device.Nmea0183.Route name" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="name">Name of new route</param>
+        <summary>
+            Starts with an empty route
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Route (string name, params Iot.Device.Common.GeographicPosition[] points);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class Iot.Device.Common.GeographicPosition[] points) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Route.#ctor(System.String,Iot.Device.Common.GeographicPosition[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, ParamArray points As GeographicPosition())" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Route : string * Iot.Device.Common.GeographicPosition[] -&gt; Iot.Device.Nmea0183.Route" Usage="new Iot.Device.Nmea0183.Route (name, points)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="points" Type="Iot.Device.Common.GeographicPosition[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="name">Name of the new route</param>
+        <param name="points">Points of the route (ordered)</param>
+        <summary>
+            Creates a route from an ordered set of points
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Route (string name, System.Collections.Generic.List&lt;Iot.Device.Nmea0183.RoutePoint&gt; route, Iot.Device.Nmea0183.RoutePoint? nextPoint = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, class System.Collections.Generic.List`1&lt;class Iot.Device.Nmea0183.RoutePoint&gt; route, class Iot.Device.Nmea0183.RoutePoint nextPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Route.#ctor(System.String,System.Collections.Generic.List{Iot.Device.Nmea0183.RoutePoint},Iot.Device.Nmea0183.RoutePoint)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, route As List(Of RoutePoint), Optional nextPoint As RoutePoint = Nothing)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Route : string * System.Collections.Generic.List&lt;Iot.Device.Nmea0183.RoutePoint&gt; * Iot.Device.Nmea0183.RoutePoint -&gt; Iot.Device.Nmea0183.Route" Usage="new Iot.Device.Nmea0183.Route (name, route, nextPoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" />
+        <Parameter Name="route" Type="System.Collections.Generic.List&lt;Iot.Device.Nmea0183.RoutePoint&gt;" />
+        <Parameter Name="nextPoint" Type="Iot.Device.Nmea0183.RoutePoint" />
+      </Parameters>
+      <Docs>
+        <param name="name">Name of route</param>
+        <param name="route">The new route</param>
+        <param name="nextPoint">The next point on the route that is to be reached (optional, defaults to the first point)</param>
+        <summary>
+            Construct a route from a list of points. This gets precedence over an externally defined route.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Different semantic errors with the definition of the route.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="AddPoint">
+      <MemberSignature Language="C#" Value="public void AddPoint (Iot.Device.Nmea0183.RoutePoint pt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddPoint(class Iot.Device.Nmea0183.RoutePoint pt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Route.AddPoint(Iot.Device.Nmea0183.RoutePoint)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddPoint (pt As RoutePoint)" />
+      <MemberSignature Language="F#" Value="member this.AddPoint : Iot.Device.Nmea0183.RoutePoint -&gt; unit" Usage="route.AddPoint pt" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="Iot.Device.Nmea0183.RoutePoint" />
+      </Parameters>
+      <Docs>
+        <param name="pt">Point to insert</param>
+        <summary>
+            Adds the given point to the end of the route
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Duplicate waypoint name, undefined position, etc.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="HasPoints">
+      <MemberSignature Language="C#" Value="public bool HasPoints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasPoints" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Route.HasPoints" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasPoints As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasPoints : bool" Usage="Iot.Device.Nmea0183.Route.HasPoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the route is not empty
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Route.Name" />
+      <MemberSignature Language="VB.NET" Value="Public Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string with get, set" Usage="Iot.Device.Nmea0183.Route.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the route
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextPoint">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.RoutePoint? NextPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Nmea0183.RoutePoint NextPoint" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Route.NextPoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NextPoint As RoutePoint" />
+      <MemberSignature Language="F#" Value="member this.NextPoint : Iot.Device.Nmea0183.RoutePoint" Usage="Iot.Device.Nmea0183.Route.NextPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.RoutePoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The next point on the route
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Points">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Iot.Device.Nmea0183.RoutePoint&gt; Points { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.List`1&lt;class Iot.Device.Nmea0183.RoutePoint&gt; Points" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Route.Points" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Points As List(Of RoutePoint)" />
+      <MemberSignature Language="F#" Value="member this.Points : System.Collections.Generic.List&lt;Iot.Device.Nmea0183.RoutePoint&gt;" Usage="Iot.Device.Nmea0183.Route.Points" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Iot.Device.Nmea0183.RoutePoint&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The points on the route
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNextPoint">
+      <MemberSignature Language="C#" Value="public bool SetNextPoint (Iot.Device.Common.GeographicPosition position);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetNextPoint(class Iot.Device.Common.GeographicPosition position) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Route.SetNextPoint(Iot.Device.Common.GeographicPosition)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetNextPoint (position As GeographicPosition) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetNextPoint : Iot.Device.Common.GeographicPosition -&gt; bool" Usage="route.SetNextPoint position" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="Iot.Device.Common.GeographicPosition" />
+      </Parameters>
+      <Docs>
+        <param name="position">Position of next waypoint</param>
+        <summary>
+            Sets the next point on the route (i.e. to skip a missed waypoint)
+            </summary>
+        <returns>True on success, false otherwise. This returns false if the given position is not part of the route.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetNextPoint">
+      <MemberSignature Language="C#" Value="public bool SetNextPoint (Iot.Device.Nmea0183.RoutePoint pt);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetNextPoint(class Iot.Device.Nmea0183.RoutePoint pt) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Route.SetNextPoint(Iot.Device.Nmea0183.RoutePoint)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetNextPoint (pt As RoutePoint) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetNextPoint : Iot.Device.Nmea0183.RoutePoint -&gt; bool" Usage="route.SetNextPoint pt" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pt" Type="Iot.Device.Nmea0183.RoutePoint" />
+      </Parameters>
+      <Docs>
+        <param name="pt">The next point</param>
+        <summary>
+            Sets the next point on the route (i.e. to skip a missed waypoint)
+            </summary>
+        <returns>True on success, false otherwise. This returns false if the given position is not part of the route.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartPoint">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.RoutePoint StartPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Nmea0183.RoutePoint StartPoint" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Route.StartPoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property StartPoint As RoutePoint" />
+      <MemberSignature Language="F#" Value="member this.StartPoint : Iot.Device.Nmea0183.RoutePoint" Usage="Iot.Device.Nmea0183.Route.StartPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.RoutePoint</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the first point of the route
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">The route is empty</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

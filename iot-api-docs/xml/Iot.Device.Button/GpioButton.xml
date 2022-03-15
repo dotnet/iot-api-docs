@@ -1,0 +1,117 @@
+<Type Name="GpioButton" FullName="Iot.Device.Button.GpioButton">
+  <TypeSignature Language="C#" Value="public class GpioButton : Iot.Device.Button.ButtonBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GpioButton extends Iot.Device.Button.ButtonBase" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Button.GpioButton" />
+  <TypeSignature Language="VB.NET" Value="Public Class GpioButton&#xA;Inherits ButtonBase" />
+  <TypeSignature Language="F#" Value="type GpioButton = class&#xA;    inherit ButtonBase" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Button.ButtonBase</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            GPIO implementation of Button.
+            Inherits from ButtonBase.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GpioButton (int buttonPin, System.Device.Gpio.GpioController? gpio = default, bool shouldDispose = true, System.Device.Gpio.PinMode pinMode = System.Device.Gpio.PinMode.InputPullUp, TimeSpan debounceTime = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 buttonPin, class System.Device.Gpio.GpioController gpio, bool shouldDispose, valuetype System.Device.Gpio.PinMode pinMode, valuetype System.TimeSpan debounceTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Button.GpioButton.#ctor(System.Int32,System.Device.Gpio.GpioController,System.Boolean,System.Device.Gpio.PinMode,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (buttonPin As Integer, Optional gpio As GpioController = Nothing, Optional shouldDispose As Boolean = true, Optional pinMode As PinMode = System.Device.Gpio.PinMode.InputPullUp, Optional debounceTime As TimeSpan = Nothing)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Button.GpioButton : int * System.Device.Gpio.GpioController * bool * System.Device.Gpio.PinMode * TimeSpan -&gt; Iot.Device.Button.GpioButton" Usage="new Iot.Device.Button.GpioButton (buttonPin, gpio, shouldDispose, pinMode, debounceTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buttonPin" Type="System.Int32" />
+        <Parameter Name="gpio" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+        <Parameter Name="pinMode" Type="System.Device.Gpio.PinMode" />
+        <Parameter Name="debounceTime" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="buttonPin">GPIO pin of the button.</param>
+        <param name="pinMode">Pin mode of the system.</param>
+        <param name="gpio">Gpio Controller.</param>
+        <param name="shouldDispose">True to dispose the GpioController.</param>
+        <param name="debounceTime">The amount of time during which the transitions are ignored, or zero</param>
+        <summary>
+            Initialization of the button.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GpioButton (int buttonPin, TimeSpan doublePress, TimeSpan holding, System.Device.Gpio.GpioController? gpio = default, bool shouldDispose = true, System.Device.Gpio.PinMode pinMode = System.Device.Gpio.PinMode.InputPullUp, TimeSpan debounceTime = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 buttonPin, valuetype System.TimeSpan doublePress, valuetype System.TimeSpan holding, class System.Device.Gpio.GpioController gpio, bool shouldDispose, valuetype System.Device.Gpio.PinMode pinMode, valuetype System.TimeSpan debounceTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Button.GpioButton.#ctor(System.Int32,System.TimeSpan,System.TimeSpan,System.Device.Gpio.GpioController,System.Boolean,System.Device.Gpio.PinMode,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (buttonPin As Integer, doublePress As TimeSpan, holding As TimeSpan, Optional gpio As GpioController = Nothing, Optional shouldDispose As Boolean = true, Optional pinMode As PinMode = System.Device.Gpio.PinMode.InputPullUp, Optional debounceTime As TimeSpan = Nothing)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Button.GpioButton : int * TimeSpan * TimeSpan * System.Device.Gpio.GpioController * bool * System.Device.Gpio.PinMode * TimeSpan -&gt; Iot.Device.Button.GpioButton" Usage="new Iot.Device.Button.GpioButton (buttonPin, doublePress, holding, gpio, shouldDispose, pinMode, debounceTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buttonPin" Type="System.Int32" />
+        <Parameter Name="doublePress" Type="System.TimeSpan" />
+        <Parameter Name="holding" Type="System.TimeSpan" />
+        <Parameter Name="gpio" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+        <Parameter Name="pinMode" Type="System.Device.Gpio.PinMode" />
+        <Parameter Name="debounceTime" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="buttonPin">GPIO pin of the button.</param>
+        <param name="pinMode">Pin mode of the system.</param>
+        <param name="doublePress">Max ticks between button presses to count as doublepress.</param>
+        <param name="holding">Min ms a button is pressed to count as holding.</param>
+        <param name="gpio">Gpio Controller.</param>
+        <param name="shouldDispose">True to dispose the GpioController.</param>
+        <param name="debounceTime">The amount of time during which the transitions are ignored, or zero</param>
+        <summary>
+            Initialization of the button.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Button.GpioButton.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="gpioButton.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">Disposing.</param>
+        <summary>
+            Internal cleanup.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

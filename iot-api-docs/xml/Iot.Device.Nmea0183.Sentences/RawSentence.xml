@@ -1,0 +1,119 @@
+<Type Name="RawSentence" FullName="Iot.Device.Nmea0183.Sentences.RawSentence">
+  <TypeSignature Language="C#" Value="public class RawSentence : Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit RawSentence extends Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Sentences.RawSentence" />
+  <TypeSignature Language="VB.NET" Value="Public Class RawSentence&#xA;Inherits NmeaSentence" />
+  <TypeSignature Language="F#" Value="type RawSentence = class&#xA;    inherit NmeaSentence" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Nmea0183.Sentences.NmeaSentence</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This sentence type is used either if no better matching type is known or as placeholder for whole messages.
+            This allows forwarding of messages even if we don't need/understand them.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public RawSentence (Iot.Device.Nmea0183.TalkerId talkerId, Iot.Device.Nmea0183.SentenceId id, System.Collections.Generic.IEnumerable&lt;string&gt; fields, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Nmea0183.TalkerId talkerId, valuetype Iot.Device.Nmea0183.SentenceId id, class System.Collections.Generic.IEnumerable`1&lt;string&gt; fields, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.RawSentence.#ctor(Iot.Device.Nmea0183.TalkerId,Iot.Device.Nmea0183.SentenceId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (talkerId As TalkerId, id As SentenceId, fields As IEnumerable(Of String), time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.RawSentence : Iot.Device.Nmea0183.TalkerId * Iot.Device.Nmea0183.SentenceId * seq&lt;string&gt; * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.RawSentence" Usage="new Iot.Device.Nmea0183.Sentences.RawSentence (talkerId, id, fields, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="talkerId" Type="Iot.Device.Nmea0183.TalkerId" />
+        <Parameter Name="id" Type="Iot.Device.Nmea0183.SentenceId" />
+        <Parameter Name="fields" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="talkerId">To be added.</param>
+        <param name="id">To be added.</param>
+        <param name="fields">To be added.</param>
+        <param name="time">To be added.</param>
+        <summary>
+            Creates an unknown sentence from a split of parameters
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplacesOlderInstance">
+      <MemberSignature Language="C#" Value="public override bool ReplacesOlderInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReplacesOlderInstance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.RawSentence.ReplacesOlderInstance" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ReplacesOlderInstance As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReplacesOlderInstance : bool" Usage="Iot.Device.Nmea0183.Sentences.RawSentence.ReplacesOlderInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is false for this message type
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToNmeaParameterList">
+      <MemberSignature Language="C#" Value="public override string ToNmeaParameterList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToNmeaParameterList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.RawSentence.ToNmeaParameterList" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToNmeaParameterList () As String" />
+      <MemberSignature Language="F#" Value="override this.ToNmeaParameterList : unit -&gt; string" Usage="rawSentence.ToNmeaParameterList " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the formatted payload
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToReadableContent">
+      <MemberSignature Language="C#" Value="public override string ToReadableContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToReadableContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.RawSentence.ToReadableContent" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToReadableContent () As String" />
+      <MemberSignature Language="F#" Value="override this.ToReadableContent : unit -&gt; string" Usage="rawSentence.ToReadableContent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

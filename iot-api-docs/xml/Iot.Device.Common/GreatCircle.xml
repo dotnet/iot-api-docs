@@ -1,0 +1,545 @@
+<Type Name="GreatCircle" FullName="Iot.Device.Common.GreatCircle">
+  <TypeSignature Language="C#" Value="public static class GreatCircle" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed GreatCircle extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Common.GreatCircle" />
+  <TypeSignature Language="VB.NET" Value="Public Class GreatCircle" />
+  <TypeSignature Language="F#" Value="type GreatCircle = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This class provides some basic geodetic calculations on the WGS84 ellipsoid.
+            This returns exact distances between two points, considering the non-spherical shape of the earth.
+            The results are accurate for distances greater than about 1cm.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AngleDifferenceSignedDegrees">
+      <MemberSignature Language="C#" Value="public static double AngleDifferenceSignedDegrees (double a, double b);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 AngleDifferenceSignedDegrees(float64 a, float64 b) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GreatCircle.AngleDifferenceSignedDegrees(System.Double,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AngleDifferenceSignedDegrees (a As Double, b As Double) As Double" />
+      <MemberSignature Language="F#" Value="static member AngleDifferenceSignedDegrees : double * double -&gt; double" Usage="Iot.Device.Common.GreatCircle.AngleDifferenceSignedDegrees (a, b)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a" Type="System.Double" />
+        <Parameter Name="b" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="a">First angle, in degrees</param>
+        <param name="b">Second angle, in degrees</param>
+        <summary>
+            Calculate the difference between two angles, return degrees.
+            </summary>
+        <returns>Difference, ranging -180 to +180, in degrees.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AviaticToRadians">
+      <MemberSignature Language="C#" Value="public static double AviaticToRadians (double val);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 AviaticToRadians(float64 val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GreatCircle.AviaticToRadians(System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function AviaticToRadians (val As Double) As Double" />
+      <MemberSignature Language="F#" Value="static member AviaticToRadians : double -&gt; double" Usage="Iot.Device.Common.GreatCircle.AviaticToRadians val" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="val">Aviatic angle, degrees</param>
+        <summary>
+            Converts an angle in aviatic definition to mathematic definition.
+            Aviatic angles are in degrees, where 0 degrees is north, counting clockwise, mathematic angles
+            are in radians, starting east and going counterclockwise.
+            </summary>
+        <returns>Mathematic angle, radians, fast-normalized to 0..2Pi</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalcCoords">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Common.GeographicPosition CalcCoords (Iot.Device.Common.GeographicPosition start, UnitsNet.Angle direction, UnitsNet.Length distance);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Common.GeographicPosition CalcCoords(class Iot.Device.Common.GeographicPosition start, valuetype UnitsNet.Angle direction, valuetype UnitsNet.Length distance) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GreatCircle.CalcCoords(Iot.Device.Common.GeographicPosition,UnitsNet.Angle,UnitsNet.Length)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalcCoords (start As GeographicPosition, direction As Angle, distance As Length) As GeographicPosition" />
+      <MemberSignature Language="F#" Value="static member CalcCoords : Iot.Device.Common.GeographicPosition * UnitsNet.Angle * UnitsNet.Length -&gt; Iot.Device.Common.GeographicPosition" Usage="Iot.Device.Common.GreatCircle.CalcCoords (start, direction, distance)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Common.GeographicPosition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="start" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="direction" Type="UnitsNet.Angle" />
+        <Parameter Name="distance" Type="UnitsNet.Length" />
+      </Parameters>
+      <Docs>
+        <param name="start">Starting point</param>
+        <param name="direction">Initial direction</param>
+        <param name="distance">Distance to travel</param>
+        <summary>
+            Calculate the coordinate one will be when traveling for the given distance in the given direction
+            </summary>
+        <returns>The new position</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">The start position is null</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CalcCoords">
+      <MemberSignature Language="C#" Value="public static void CalcCoords (double startLatitude, double startLongitude, double direction, double distance, out double resultLatitude, out double resultLongitude);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CalcCoords(float64 startLatitude, float64 startLongitude, float64 direction, float64 distance, [out] float64&amp; resultLatitude, [out] float64&amp; resultLongitude) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GreatCircle.CalcCoords(System.Double,System.Double,System.Double,System.Double,System.Double@,System.Double@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub CalcCoords (startLatitude As Double, startLongitude As Double, direction As Double, distance As Double, ByRef resultLatitude As Double, ByRef resultLongitude As Double)" />
+      <MemberSignature Language="F#" Value="static member CalcCoords : double * double * double * double * double * double -&gt; unit" Usage="Iot.Device.Common.GreatCircle.CalcCoords (startLatitude, startLongitude, direction, distance, resultLatitude, resultLongitude)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="startLatitude" Type="System.Double" />
+        <Parameter Name="startLongitude" Type="System.Double" />
+        <Parameter Name="direction" Type="System.Double" />
+        <Parameter Name="distance" Type="System.Double" />
+        <Parameter Name="resultLatitude" Type="System.Double" RefType="out" />
+        <Parameter Name="resultLongitude" Type="System.Double" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="startLatitude">Starting point latitude</param>
+        <param name="startLongitude">Starting point longitude</param>
+        <param name="direction">Initial direction</param>
+        <param name="distance">Distance to travel</param>
+        <param name="resultLatitude">End point latitude</param>
+        <param name="resultLongitude">End point longitude</param>
+        <summary>
+            Calculate the coordinate one will be when traveling for the given distance in the given direction
+            </summary>
+        <remarks>Prefer using <see cref="M:Iot.Device.Common.GreatCircle.CalcCoords(Iot.Device.Common.GeographicPosition,UnitsNet.Angle,UnitsNet.Length)" /> to avoid errors from exchanged parameters or wrong units</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateRoute">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;Iot.Device.Common.GeographicPosition&gt; CalculateRoute (Iot.Device.Common.GeographicPosition start, Iot.Device.Common.GeographicPosition end, double distanceStep);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class Iot.Device.Common.GeographicPosition&gt; CalculateRoute(class Iot.Device.Common.GeographicPosition start, class Iot.Device.Common.GeographicPosition end, float64 distanceStep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GreatCircle.CalculateRoute(Iot.Device.Common.GeographicPosition,Iot.Device.Common.GeographicPosition,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateRoute (start As GeographicPosition, end As GeographicPosition, distanceStep As Double) As IList(Of GeographicPosition)" />
+      <MemberSignature Language="F#" Value="static member CalculateRoute : Iot.Device.Common.GeographicPosition * Iot.Device.Common.GeographicPosition * double -&gt; System.Collections.Generic.IList&lt;Iot.Device.Common.GeographicPosition&gt;" Usage="Iot.Device.Common.GreatCircle.CalculateRoute (start, end, distanceStep)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Iot.Device.Common.GeographicPosition&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="start" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="end" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="distanceStep" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="start">Starting position</param>
+        <param name="end">End position</param>
+        <param name="distanceStep">Distance between waypoints</param>
+        <summary>
+            Calculate a list of waypoints along the route from start to end.
+            </summary>
+        <returns>A list of waypoints</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateRoute">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.IList&lt;Iot.Device.Common.GeographicPosition&gt; CalculateRoute (Iot.Device.Common.GeographicPosition start, double direction, double distance, double distanceStep);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.IList`1&lt;class Iot.Device.Common.GeographicPosition&gt; CalculateRoute(class Iot.Device.Common.GeographicPosition start, float64 direction, float64 distance, float64 distanceStep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GreatCircle.CalculateRoute(Iot.Device.Common.GeographicPosition,System.Double,System.Double,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateRoute (start As GeographicPosition, direction As Double, distance As Double, distanceStep As Double) As IList(Of GeographicPosition)" />
+      <MemberSignature Language="F#" Value="static member CalculateRoute : Iot.Device.Common.GeographicPosition * double * double * double -&gt; System.Collections.Generic.IList&lt;Iot.Device.Common.GeographicPosition&gt;" Usage="Iot.Device.Common.GreatCircle.CalculateRoute (start, direction, distance, distanceStep)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IList&lt;Iot.Device.Common.GeographicPosition&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="start" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="direction" Type="System.Double" />
+        <Parameter Name="distance" Type="System.Double" />
+        <Parameter Name="distanceStep" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="start">Starting position</param>
+        <param name="direction">Starting direction</param>
+        <param name="distance">Distance to travel</param>
+        <param name="distanceStep">Waypoint step distance</param>
+        <summary>
+            Calculate waypoints along a route
+            </summary>
+        <returns>A list of waypoints</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateVelocityTowardsTarget">
+      <MemberSignature Language="C#" Value="public static UnitsNet.Speed CalculateVelocityTowardsTarget (Iot.Device.Common.GeographicPosition destination, Iot.Device.Common.GeographicPosition currentPosition, UnitsNet.Speed currentSpeed, UnitsNet.Angle currentTrack);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Speed CalculateVelocityTowardsTarget(class Iot.Device.Common.GeographicPosition destination, class Iot.Device.Common.GeographicPosition currentPosition, valuetype UnitsNet.Speed currentSpeed, valuetype UnitsNet.Angle currentTrack) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GreatCircle.CalculateVelocityTowardsTarget(Iot.Device.Common.GeographicPosition,Iot.Device.Common.GeographicPosition,UnitsNet.Speed,UnitsNet.Angle)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateVelocityTowardsTarget (destination As GeographicPosition, currentPosition As GeographicPosition, currentSpeed As Speed, currentTrack As Angle) As Speed" />
+      <MemberSignature Language="F#" Value="static member CalculateVelocityTowardsTarget : Iot.Device.Common.GeographicPosition * Iot.Device.Common.GeographicPosition * UnitsNet.Speed * UnitsNet.Angle -&gt; UnitsNet.Speed" Usage="Iot.Device.Common.GreatCircle.CalculateVelocityTowardsTarget (destination, currentPosition, currentSpeed, currentTrack)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Speed</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="destination" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="currentPosition" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="currentSpeed" Type="UnitsNet.Speed" />
+        <Parameter Name="currentTrack" Type="UnitsNet.Angle" />
+      </Parameters>
+      <Docs>
+        <param name="destination">Target waypoint</param>
+        <param name="currentPosition">Current position</param>
+        <param name="currentSpeed">Current speed over ground</param>
+        <param name="currentTrack">Current track (course over ground)</param>
+        <summary>
+            Calculate the velocity towards (or away from) the target. This is often also called VMG (=Velocity made good)
+            </summary>
+        <returns>Speed towards target. Negative if moving away from target</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CrossTrackError">
+      <MemberSignature Language="C#" Value="public static void CrossTrackError (Iot.Device.Common.GeographicPosition origin, Iot.Device.Common.GeographicPosition destination, Iot.Device.Common.GeographicPosition currentPosition, out UnitsNet.Length crossTrackError, out UnitsNet.Length distanceTogoAlongRoute);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void CrossTrackError(class Iot.Device.Common.GeographicPosition origin, class Iot.Device.Common.GeographicPosition destination, class Iot.Device.Common.GeographicPosition currentPosition, [out] valuetype UnitsNet.Length&amp; crossTrackError, [out] valuetype UnitsNet.Length&amp; distanceTogoAlongRoute) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GreatCircle.CrossTrackError(Iot.Device.Common.GeographicPosition,Iot.Device.Common.GeographicPosition,Iot.Device.Common.GeographicPosition,UnitsNet.Length@,UnitsNet.Length@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub CrossTrackError (origin As GeographicPosition, destination As GeographicPosition, currentPosition As GeographicPosition, ByRef crossTrackError As Length, ByRef distanceTogoAlongRoute As Length)" />
+      <MemberSignature Language="F#" Value="static member CrossTrackError : Iot.Device.Common.GeographicPosition * Iot.Device.Common.GeographicPosition * Iot.Device.Common.GeographicPosition * Length * Length -&gt; unit" Usage="Iot.Device.Common.GreatCircle.CrossTrackError (origin, destination, currentPosition, crossTrackError, distanceTogoAlongRoute)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="origin" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="destination" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="currentPosition" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="crossTrackError" Type="UnitsNet.Length" RefType="out" />
+        <Parameter Name="distanceTogoAlongRoute" Type="UnitsNet.Length" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="origin">Start of current leg</param>
+        <param name="destination">End of current leg</param>
+        <param name="currentPosition">Current position</param>
+        <param name="crossTrackError">The distance perpendicular to the leg. Positive if the current position is to the right of the leg.</param>
+        <param name="distanceTogoAlongRoute">Distance to go on track (with current position projected back to the leg)</param>
+        <summary>
+            Computes cross-track error, that is the distance the current position is away from the route from origin to destination
+            </summary>
+        <remarks>Accuracy may be limited for distances &gt; 100km</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DegreesToRadians">
+      <MemberSignature Language="C#" Value="public static double DegreesToRadians (double val);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 DegreesToRadians(float64 val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GreatCircle.DegreesToRadians(System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DegreesToRadians (val As Double) As Double" />
+      <MemberSignature Language="F#" Value="static member DegreesToRadians : double -&gt; double" Usage="Iot.Device.Common.GreatCircle.DegreesToRadians val" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="val">To be added.</param>
+        <summary>
+            Convert a value to radians.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistAndDir">
+      <MemberSignature Language="C#" Value="public static void DistAndDir (Iot.Device.Common.GeographicPosition position1, Iot.Device.Common.GeographicPosition position2, out UnitsNet.Length distance, out UnitsNet.Angle direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DistAndDir(class Iot.Device.Common.GeographicPosition position1, class Iot.Device.Common.GeographicPosition position2, [out] valuetype UnitsNet.Length&amp; distance, [out] valuetype UnitsNet.Angle&amp; direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GreatCircle.DistAndDir(Iot.Device.Common.GeographicPosition,Iot.Device.Common.GeographicPosition,UnitsNet.Length@,UnitsNet.Angle@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub DistAndDir (position1 As GeographicPosition, position2 As GeographicPosition, ByRef distance As Length, ByRef direction As Angle)" />
+      <MemberSignature Language="F#" Value="static member DistAndDir : Iot.Device.Common.GeographicPosition * Iot.Device.Common.GeographicPosition * Length * Angle -&gt; unit" Usage="Iot.Device.Common.GreatCircle.DistAndDir (position1, position2, distance, direction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position1" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="position2" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="distance" Type="UnitsNet.Length" RefType="out" />
+        <Parameter Name="direction" Type="UnitsNet.Angle" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="position1">Input position 1</param>
+        <param name="position2">Input position 2</param>
+        <param name="distance">Great circle distance between the positions</param>
+        <param name="direction">Initial direction to travel, in degrees true</param>
+        <summary>
+            Returns the distance and direction between two points on the globe
+            </summary>
+        <remarks>The distance and direction are calculated for the great circle. That is the shortest distance between two points on the globe.
+            This path does not follow a constant direction (for large distances)</remarks>
+        <exception cref="T:System.ArgumentNullException">Either <paramref name="position1" /> or <paramref name="position2" /> are null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DistAndDir">
+      <MemberSignature Language="C#" Value="public static void DistAndDir (Iot.Device.Common.GeographicPosition position1, Iot.Device.Common.GeographicPosition position2, out UnitsNet.Length distance, out UnitsNet.Angle directionAtStart, out UnitsNet.Angle directionAtEnd);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DistAndDir(class Iot.Device.Common.GeographicPosition position1, class Iot.Device.Common.GeographicPosition position2, [out] valuetype UnitsNet.Length&amp; distance, [out] valuetype UnitsNet.Angle&amp; directionAtStart, [out] valuetype UnitsNet.Angle&amp; directionAtEnd) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GreatCircle.DistAndDir(Iot.Device.Common.GeographicPosition,Iot.Device.Common.GeographicPosition,UnitsNet.Length@,UnitsNet.Angle@,UnitsNet.Angle@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub DistAndDir (position1 As GeographicPosition, position2 As GeographicPosition, ByRef distance As Length, ByRef directionAtStart As Angle, ByRef directionAtEnd As Angle)" />
+      <MemberSignature Language="F#" Value="static member DistAndDir : Iot.Device.Common.GeographicPosition * Iot.Device.Common.GeographicPosition * Length * Angle * Angle -&gt; unit" Usage="Iot.Device.Common.GreatCircle.DistAndDir (position1, position2, distance, directionAtStart, directionAtEnd)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position1" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="position2" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="distance" Type="UnitsNet.Length" RefType="out" />
+        <Parameter Name="directionAtStart" Type="UnitsNet.Angle" RefType="out" />
+        <Parameter Name="directionAtEnd" Type="UnitsNet.Angle" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="position1">Input position 1</param>
+        <param name="position2">Input position 2</param>
+        <param name="distance">Great circle distance between the positions</param>
+        <param name="directionAtStart">Initial direction to travel, in degrees true</param>
+        <param name="directionAtEnd">Angle in which the voyage should start. True angle in which the direction lies when standing at the start position.</param>
+        <summary>
+            Returns the distance and direction between two points on the globe
+            </summary>
+        <remarks>This path does not follow a constant direction (for large distances)</remarks>
+        <exception cref="T:System.ArgumentNullException">Either <paramref name="position1" /> or <paramref name="position2" /> are null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="DistAndDir">
+      <MemberSignature Language="C#" Value="public static void DistAndDir (double latitude1, double longitude1, double latitude2, double longitude2, out double distance, out double direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void DistAndDir(float64 latitude1, float64 longitude1, float64 latitude2, float64 longitude2, [out] float64&amp; distance, [out] float64&amp; direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GreatCircle.DistAndDir(System.Double,System.Double,System.Double,System.Double,System.Double@,System.Double@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub DistAndDir (latitude1 As Double, longitude1 As Double, latitude2 As Double, longitude2 As Double, ByRef distance As Double, ByRef direction As Double)" />
+      <MemberSignature Language="F#" Value="static member DistAndDir : double * double * double * double * double * double -&gt; unit" Usage="Iot.Device.Common.GreatCircle.DistAndDir (latitude1, longitude1, latitude2, longitude2, distance, direction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="latitude1" Type="System.Double" />
+        <Parameter Name="longitude1" Type="System.Double" />
+        <Parameter Name="latitude2" Type="System.Double" />
+        <Parameter Name="longitude2" Type="System.Double" />
+        <Parameter Name="distance" Type="System.Double" RefType="out" />
+        <Parameter Name="direction" Type="System.Double" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="latitude1">Input latitude 1, in degrees</param>
+        <param name="longitude1">Input longitude 1, in degrees</param>
+        <param name="latitude2">Input latitude 2, in degrees</param>
+        <param name="longitude2">Input longitude 2, in degrees</param>
+        <param name="distance">Distance between points, on the great circle, in meters.</param>
+        <param name="direction">Angle in which the voyage should start. True angle in which the direction lies when standing at the start position.</param>
+        <summary>
+            Returns the distance and direction between two points on the globe
+            </summary>
+        <remarks>This path does not follow a constant direction (for large distances).
+            Prefer using the method <see cref="M:Iot.Device.Common.GreatCircle.DistAndDir(Iot.Device.Common.GeographicPosition,Iot.Device.Common.GeographicPosition,UnitsNet.Length@,UnitsNet.Angle@)" /> instead,
+            to avoid errors from exchanged parameters or wrong units</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetersPerDegreeeLatitude">
+      <MemberSignature Language="C#" Value="public const double MetersPerDegreeeLatitude = 110563.789;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 MetersPerDegreeeLatitude = (110563.789)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Common.GreatCircle.MetersPerDegreeeLatitude" />
+      <MemberSignature Language="VB.NET" Value="Public Const MetersPerDegreeeLatitude As Double  = 110563.789" />
+      <MemberSignature Language="F#" Value="val mutable MetersPerDegreeeLatitude : double" Usage="Iot.Device.Common.GreatCircle.MetersPerDegreeeLatitude" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>110563.789</MemberValue>
+      <Docs>
+        <summary>
+            m per degree latitude
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MetersPerDegreeLongitude">
+      <MemberSignature Language="C#" Value="public const double MetersPerDegreeLongitude = 111312.267;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 MetersPerDegreeLongitude = (111312.267)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Common.GreatCircle.MetersPerDegreeLongitude" />
+      <MemberSignature Language="VB.NET" Value="Public Const MetersPerDegreeLongitude As Double  = 111312.267" />
+      <MemberSignature Language="F#" Value="val mutable MetersPerDegreeLongitude : double" Usage="Iot.Device.Common.GreatCircle.MetersPerDegreeLongitude" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>111312.267</MemberValue>
+      <Docs>
+        <summary>
+            m per degree longitude on the equator
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RadiansToAviatic">
+      <MemberSignature Language="C#" Value="public static double RadiansToAviatic (double val);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 RadiansToAviatic(float64 val) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GreatCircle.RadiansToAviatic(System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RadiansToAviatic (val As Double) As Double" />
+      <MemberSignature Language="F#" Value="static member RadiansToAviatic : double -&gt; double" Usage="Iot.Device.Common.GreatCircle.RadiansToAviatic val" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="val" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="val">Mathematic value in radians</param>
+        <summary>
+            Convert angle from mathematic to aviatic.
+            See also AviaticToRadians()
+            </summary>
+        <returns>Aviatic value in degrees</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RadiansToDegrees">
+      <MemberSignature Language="C#" Value="public static double RadiansToDegrees (double radians);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig float64 RadiansToDegrees(float64 radians) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.GreatCircle.RadiansToDegrees(System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function RadiansToDegrees (radians As Double) As Double" />
+      <MemberSignature Language="F#" Value="static member RadiansToDegrees : double -&gt; double" Usage="Iot.Device.Common.GreatCircle.RadiansToDegrees radians" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="radians" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="radians">Angle in radians (0-2*Pi)</param>
+        <summary>
+            Converts an angle in radians to angle in decimal degrees
+            </summary>
+        <returns>Angle in decimal degrees (0-360)</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wgs84A">
+      <MemberSignature Language="C#" Value="public const double Wgs84A = 6378137;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 Wgs84A = (6378137)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Common.GreatCircle.Wgs84A" />
+      <MemberSignature Language="VB.NET" Value="Public Const Wgs84A As Double  = 6378137" />
+      <MemberSignature Language="F#" Value="val mutable Wgs84A : double" Usage="Iot.Device.Common.GreatCircle.Wgs84A" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>6378137</MemberValue>
+      <Docs>
+        <summary>
+            Semi-Mayor Axis of the WGS ellipsoid
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Wgs84F">
+      <MemberSignature Language="C#" Value="public const double Wgs84F = 0.00335281066474;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float64 Wgs84F = (0.00335281066474)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Common.GreatCircle.Wgs84F" />
+      <MemberSignature Language="VB.NET" Value="Public Const Wgs84F As Double  = 0.00335281066474" />
+      <MemberSignature Language="F#" Value="val mutable Wgs84F : double" Usage="Iot.Device.Common.GreatCircle.Wgs84F" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <MemberValue>0.00335281066474</MemberValue>
+      <Docs>
+        <summary>
+            Flattening "f" of the WGS84 ellipsoid (1.0 / 298.25722357)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

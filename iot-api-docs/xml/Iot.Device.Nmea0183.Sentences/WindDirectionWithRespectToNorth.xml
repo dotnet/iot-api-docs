@@ -1,0 +1,256 @@
+<Type Name="WindDirectionWithRespectToNorth" FullName="Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth">
+  <TypeSignature Language="C#" Value="public class WindDirectionWithRespectToNorth : Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit WindDirectionWithRespectToNorth extends Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth" />
+  <TypeSignature Language="VB.NET" Value="Public Class WindDirectionWithRespectToNorth&#xA;Inherits NmeaSentence" />
+  <TypeSignature Language="F#" Value="type WindDirectionWithRespectToNorth = class&#xA;    inherit NmeaSentence" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Nmea0183.Sentences.NmeaSentence</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            The MWD sequence gives the wind direction and speed in true directions. That means the direction is given in
+            degrees from true north and the speed is the true wind speed. Calculating the input data for this sentence
+            requires heading or, as a backup, COG. However, with COG, the data is unreliable when the ship is moored.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindDirectionWithRespectToNorth (Iot.Device.Nmea0183.TalkerSentence sentence, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Nmea0183.TalkerSentence sentence, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sentence As TalkerSentence, time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth : Iot.Device.Nmea0183.TalkerSentence * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth" Usage="new Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth (sentence, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sentence" Type="Iot.Device.Nmea0183.TalkerSentence" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="sentence">To be added.</param>
+        <param name="time">To be added.</param>
+        <summary>
+            Internal constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindDirectionWithRespectToNorth (Iot.Device.Nmea0183.TalkerId talkerId, System.Collections.Generic.IEnumerable&lt;string&gt; fields, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Nmea0183.TalkerId talkerId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; fields, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (talkerId As TalkerId, fields As IEnumerable(Of String), time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth : Iot.Device.Nmea0183.TalkerId * seq&lt;string&gt; * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth" Usage="new Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth (talkerId, fields, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="talkerId" Type="Iot.Device.Nmea0183.TalkerId" />
+        <Parameter Name="fields" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="talkerId">To be added.</param>
+        <param name="fields">To be added.</param>
+        <param name="time">To be added.</param>
+        <summary>
+            Decode a message
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WindDirectionWithRespectToNorth (UnitsNet.Angle? trueWindDirection, UnitsNet.Angle? magneticWindDirection, UnitsNet.Speed? windSpeed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; trueWindDirection, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; magneticWindDirection, valuetype System.Nullable`1&lt;valuetype UnitsNet.Speed&gt; windSpeed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth.#ctor(System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Speed})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (trueWindDirection As Nullable(Of Angle), magneticWindDirection As Nullable(Of Angle), windSpeed As Nullable(Of Speed))" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth : Nullable&lt;UnitsNet.Angle&gt; * Nullable&lt;UnitsNet.Angle&gt; * Nullable&lt;UnitsNet.Speed&gt; -&gt; Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth" Usage="new Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth (trueWindDirection, magneticWindDirection, windSpeed)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="trueWindDirection" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+        <Parameter Name="magneticWindDirection" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+        <Parameter Name="windSpeed" Type="System.Nullable&lt;UnitsNet.Speed&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="trueWindDirection">To be added.</param>
+        <param name="magneticWindDirection">To be added.</param>
+        <param name="windSpeed">To be added.</param>
+        <summary>
+            Constructs a new MDA sentence
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Nmea0183.SentenceId Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype Iot.Device.Nmea0183.SentenceId Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Id As SentenceId" />
+      <MemberSignature Language="F#" Value="member this.Id : Iot.Device.Nmea0183.SentenceId" Usage="Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This sentence's id
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MagneticWindDirection">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? MagneticWindDirection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; MagneticWindDirection" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth.MagneticWindDirection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property MagneticWindDirection As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.MagneticWindDirection : Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth.MagneticWindDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Wind direction, in degrees magnetic, from north
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplacesOlderInstance">
+      <MemberSignature Language="C#" Value="public override bool ReplacesOlderInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReplacesOlderInstance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth.ReplacesOlderInstance" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ReplacesOlderInstance As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReplacesOlderInstance : bool" Usage="Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth.ReplacesOlderInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is true for this message type
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToNmeaParameterList">
+      <MemberSignature Language="C#" Value="public override string ToNmeaParameterList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToNmeaParameterList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth.ToNmeaParameterList" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToNmeaParameterList () As String" />
+      <MemberSignature Language="F#" Value="override this.ToNmeaParameterList : unit -&gt; string" Usage="windDirectionWithRespectToNorth.ToNmeaParameterList " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Presents this message as output
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToReadableContent">
+      <MemberSignature Language="C#" Value="public override string ToReadableContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToReadableContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth.ToReadableContent" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToReadableContent () As String" />
+      <MemberSignature Language="F#" Value="override this.ToReadableContent : unit -&gt; string" Usage="windDirectionWithRespectToNorth.ToReadableContent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="TrueWindDirection">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? TrueWindDirection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; TrueWindDirection" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth.TrueWindDirection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TrueWindDirection As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.TrueWindDirection : Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth.TrueWindDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Wind direction, in degrees true, from north.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WindSpeed">
+      <MemberSignature Language="C#" Value="public UnitsNet.Speed? WindSpeed { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Speed&gt; WindSpeed" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth.WindSpeed" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WindSpeed As Nullable(Of Speed)" />
+      <MemberSignature Language="F#" Value="member this.WindSpeed : Nullable&lt;UnitsNet.Speed&gt;" Usage="Iot.Device.Nmea0183.Sentences.WindDirectionWithRespectToNorth.WindSpeed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Speed&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Wind Speed, true
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

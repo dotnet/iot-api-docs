@@ -1,0 +1,304 @@
+<Type Name="MeteorologicalComposite" FullName="Iot.Device.Nmea0183.Sentences.MeteorologicalComposite">
+  <TypeSignature Language="C#" Value="public class MeteorologicalComposite : Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MeteorologicalComposite extends Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Sentences.MeteorologicalComposite" />
+  <TypeSignature Language="VB.NET" Value="Public Class MeteorologicalComposite&#xA;Inherits NmeaSentence" />
+  <TypeSignature Language="F#" Value="type MeteorologicalComposite = class&#xA;    inherit NmeaSentence" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Nmea0183.Sentences.NmeaSentence</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Provides meteorological information.
+            This class does not parse or send the wind information, which is also part of this message. Use <see cref="T:Iot.Device.Nmea0183.Sentences.WindSpeedAndAngle" /> (MWV sentence)
+            instead.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MeteorologicalComposite (Iot.Device.Nmea0183.TalkerSentence sentence, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Nmea0183.TalkerSentence sentence, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sentence As TalkerSentence, time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.MeteorologicalComposite : Iot.Device.Nmea0183.TalkerSentence * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.MeteorologicalComposite" Usage="new Iot.Device.Nmea0183.Sentences.MeteorologicalComposite (sentence, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sentence" Type="Iot.Device.Nmea0183.TalkerSentence" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="sentence">To be added.</param>
+        <param name="time">To be added.</param>
+        <summary>
+            Internal constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MeteorologicalComposite (Iot.Device.Nmea0183.TalkerId talkerId, System.Collections.Generic.IEnumerable&lt;string&gt; fields, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Nmea0183.TalkerId talkerId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; fields, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (talkerId As TalkerId, fields As IEnumerable(Of String), time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.MeteorologicalComposite : Iot.Device.Nmea0183.TalkerId * seq&lt;string&gt; * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.MeteorologicalComposite" Usage="new Iot.Device.Nmea0183.Sentences.MeteorologicalComposite (talkerId, fields, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="talkerId" Type="Iot.Device.Nmea0183.TalkerId" />
+        <Parameter Name="fields" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="talkerId">To be added.</param>
+        <param name="fields">To be added.</param>
+        <param name="time">To be added.</param>
+        <summary>
+            Date and time message (ZDA). This should not normally need the last time as argument, because it defines it.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MeteorologicalComposite (UnitsNet.Pressure? pressure, UnitsNet.Temperature? airTemperature, UnitsNet.Temperature? waterTemperature, UnitsNet.RelativeHumidity? relativeHumidity, UnitsNet.Temperature? dewPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype UnitsNet.Pressure&gt; pressure, valuetype System.Nullable`1&lt;valuetype UnitsNet.Temperature&gt; airTemperature, valuetype System.Nullable`1&lt;valuetype UnitsNet.Temperature&gt; waterTemperature, valuetype System.Nullable`1&lt;valuetype UnitsNet.RelativeHumidity&gt; relativeHumidity, valuetype System.Nullable`1&lt;valuetype UnitsNet.Temperature&gt; dewPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.#ctor(System.Nullable{UnitsNet.Pressure},System.Nullable{UnitsNet.Temperature},System.Nullable{UnitsNet.Temperature},System.Nullable{UnitsNet.RelativeHumidity},System.Nullable{UnitsNet.Temperature})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pressure As Nullable(Of Pressure), airTemperature As Nullable(Of Temperature), waterTemperature As Nullable(Of Temperature), relativeHumidity As Nullable(Of RelativeHumidity), dewPoint As Nullable(Of Temperature))" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.MeteorologicalComposite : Nullable&lt;UnitsNet.Pressure&gt; * Nullable&lt;UnitsNet.Temperature&gt; * Nullable&lt;UnitsNet.Temperature&gt; * Nullable&lt;UnitsNet.RelativeHumidity&gt; * Nullable&lt;UnitsNet.Temperature&gt; -&gt; Iot.Device.Nmea0183.Sentences.MeteorologicalComposite" Usage="new Iot.Device.Nmea0183.Sentences.MeteorologicalComposite (pressure, airTemperature, waterTemperature, relativeHumidity, dewPoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pressure" Type="System.Nullable&lt;UnitsNet.Pressure&gt;" />
+        <Parameter Name="airTemperature" Type="System.Nullable&lt;UnitsNet.Temperature&gt;" />
+        <Parameter Name="waterTemperature" Type="System.Nullable&lt;UnitsNet.Temperature&gt;" />
+        <Parameter Name="relativeHumidity" Type="System.Nullable&lt;UnitsNet.RelativeHumidity&gt;" />
+        <Parameter Name="dewPoint" Type="System.Nullable&lt;UnitsNet.Temperature&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="pressure">Barometric pressure</param>
+        <param name="airTemperature">Temperature of air</param>
+        <param name="waterTemperature">Water temperature</param>
+        <param name="relativeHumidity">Relative humidity, percent</param>
+        <param name="dewPoint">Dew point</param>
+        <summary>
+            Constructs a new MDA sentence
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AirTemperature">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature? AirTemperature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Temperature&gt; AirTemperature" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.AirTemperature" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AirTemperature As Nullable(Of Temperature)" />
+      <MemberSignature Language="F#" Value="member this.AirTemperature : Nullable&lt;UnitsNet.Temperature&gt;" Usage="Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.AirTemperature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Temperature&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Air temperature
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BarometricPressure">
+      <MemberSignature Language="C#" Value="public UnitsNet.Pressure? BarometricPressure { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Pressure&gt; BarometricPressure" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.BarometricPressure" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BarometricPressure As Nullable(Of Pressure)" />
+      <MemberSignature Language="F#" Value="member this.BarometricPressure : Nullable&lt;UnitsNet.Pressure&gt;" Usage="Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.BarometricPressure" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Pressure&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Barometric pressure (corrected for station altitude)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DewPoint">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature? DewPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Temperature&gt; DewPoint" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.DewPoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DewPoint As Nullable(Of Temperature)" />
+      <MemberSignature Language="F#" Value="member this.DewPoint : Nullable&lt;UnitsNet.Temperature&gt;" Usage="Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.DewPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Temperature&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Dew point
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Nmea0183.SentenceId Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype Iot.Device.Nmea0183.SentenceId Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Id As SentenceId" />
+      <MemberSignature Language="F#" Value="member this.Id : Iot.Device.Nmea0183.SentenceId" Usage="Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This sentence's id
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativeHumidity">
+      <MemberSignature Language="C#" Value="public UnitsNet.RelativeHumidity? RelativeHumidity { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.RelativeHumidity&gt; RelativeHumidity" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.RelativeHumidity" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RelativeHumidity As Nullable(Of RelativeHumidity)" />
+      <MemberSignature Language="F#" Value="member this.RelativeHumidity : Nullable&lt;UnitsNet.RelativeHumidity&gt;" Usage="Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.RelativeHumidity" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.RelativeHumidity&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Relative humidity
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplacesOlderInstance">
+      <MemberSignature Language="C#" Value="public override bool ReplacesOlderInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReplacesOlderInstance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.ReplacesOlderInstance" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ReplacesOlderInstance As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReplacesOlderInstance : bool" Usage="Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.ReplacesOlderInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is true for this message type
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToNmeaParameterList">
+      <MemberSignature Language="C#" Value="public override string ToNmeaParameterList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToNmeaParameterList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.ToNmeaParameterList" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToNmeaParameterList () As String" />
+      <MemberSignature Language="F#" Value="override this.ToNmeaParameterList : unit -&gt; string" Usage="meteorologicalComposite.ToNmeaParameterList " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Presents this message as output
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToReadableContent">
+      <MemberSignature Language="C#" Value="public override string ToReadableContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToReadableContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.ToReadableContent" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToReadableContent () As String" />
+      <MemberSignature Language="F#" Value="override this.ToReadableContent : unit -&gt; string" Usage="meteorologicalComposite.ToReadableContent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="WaterTemperature">
+      <MemberSignature Language="C#" Value="public UnitsNet.Temperature? WaterTemperature { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Temperature&gt; WaterTemperature" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.WaterTemperature" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WaterTemperature As Nullable(Of Temperature)" />
+      <MemberSignature Language="F#" Value="member this.WaterTemperature : Nullable&lt;UnitsNet.Temperature&gt;" Usage="Iot.Device.Nmea0183.Sentences.MeteorologicalComposite.WaterTemperature" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Temperature&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Water temperature
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

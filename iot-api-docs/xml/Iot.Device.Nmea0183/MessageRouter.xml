@@ -1,0 +1,232 @@
+<Type Name="MessageRouter" FullName="Iot.Device.Nmea0183.MessageRouter">
+  <TypeSignature Language="C#" Value="public sealed class MessageRouter : Iot.Device.Nmea0183.NmeaSinkAndSource" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit MessageRouter extends Iot.Device.Nmea0183.NmeaSinkAndSource" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.MessageRouter" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class MessageRouter&#xA;Inherits NmeaSinkAndSource" />
+  <TypeSignature Language="F#" Value="type MessageRouter = class&#xA;    inherit NmeaSinkAndSource" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Nmea0183.NmeaSinkAndSource</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Message routing for NMEA messages. See the Readme for an usage example.
+            This is used to route messages between different NMEA sources and sinks. Instances of <see cref="T:Iot.Device.Nmea0183.FilterRule" /> can be used
+            to describe which messages need to go from where to where.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MessageRouter (Iot.Device.Nmea0183.LoggingConfiguration? loggingConfiguration = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Nmea0183.LoggingConfiguration loggingConfiguration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MessageRouter.#ctor(Iot.Device.Nmea0183.LoggingConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional loggingConfiguration As LoggingConfiguration = Nothing)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.MessageRouter : Iot.Device.Nmea0183.LoggingConfiguration -&gt; Iot.Device.Nmea0183.MessageRouter" Usage="new Iot.Device.Nmea0183.MessageRouter loggingConfiguration" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="loggingConfiguration" Type="Iot.Device.Nmea0183.LoggingConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="loggingConfiguration">(Optional) Logging configuration. This can be used to log all incoming messages to a file.</param>
+        <summary>
+            Creates a message router, optionally configuring the logging options
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddEndPoint">
+      <MemberSignature Language="C#" Value="public bool AddEndPoint (Iot.Device.Nmea0183.NmeaSinkAndSource parser);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool AddEndPoint(class Iot.Device.Nmea0183.NmeaSinkAndSource parser) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MessageRouter.AddEndPoint(Iot.Device.Nmea0183.NmeaSinkAndSource)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AddEndPoint (parser As NmeaSinkAndSource) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AddEndPoint : Iot.Device.Nmea0183.NmeaSinkAndSource -&gt; bool" Usage="messageRouter.AddEndPoint parser" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="parser" Type="Iot.Device.Nmea0183.NmeaSinkAndSource" />
+      </Parameters>
+      <Docs>
+        <param name="parser">The new end point</param>
+        <summary>
+            Adds a routing end point
+            </summary>
+        <returns>True on success, false if an interface with the same name has already been registered.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddFilterRule">
+      <MemberSignature Language="C#" Value="public void AddFilterRule (Iot.Device.Nmea0183.FilterRule rule);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddFilterRule(class Iot.Device.Nmea0183.FilterRule rule) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MessageRouter.AddFilterRule(Iot.Device.Nmea0183.FilterRule)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddFilterRule (rule As FilterRule)" />
+      <MemberSignature Language="F#" Value="member this.AddFilterRule : Iot.Device.Nmea0183.FilterRule -&gt; unit" Usage="messageRouter.AddFilterRule rule" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rule" Type="Iot.Device.Nmea0183.FilterRule" />
+      </Parameters>
+      <Docs>
+        <param name="rule">The rule to add</param>
+        <summary>
+            Adds a filter rule to the end of the rule set
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">The filter rule cannot be added because it is invalid (i.e. an attempt to
+            add a rule for an inexistent interface was made)</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EndPoints">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyDictionary&lt;string,Iot.Device.Nmea0183.NmeaSinkAndSource&gt; EndPoints { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyDictionary`2&lt;string, class Iot.Device.Nmea0183.NmeaSinkAndSource&gt; EndPoints" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.MessageRouter.EndPoints" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EndPoints As IReadOnlyDictionary(Of String, NmeaSinkAndSource)" />
+      <MemberSignature Language="F#" Value="member this.EndPoints : System.Collections.Generic.IReadOnlyDictionary&lt;string, Iot.Device.Nmea0183.NmeaSinkAndSource&gt;" Usage="Iot.Device.Nmea0183.MessageRouter.EndPoints" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyDictionary&lt;System.String,Iot.Device.Nmea0183.NmeaSinkAndSource&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of routing endpoints
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LocalMessageSource">
+      <MemberSignature Language="C#" Value="public const string LocalMessageSource;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string LocalMessageSource" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Nmea0183.MessageRouter.LocalMessageSource" />
+      <MemberSignature Language="VB.NET" Value="Public Const LocalMessageSource As String " />
+      <MemberSignature Language="F#" Value="val mutable LocalMessageSource : string" Usage="Iot.Device.Nmea0183.MessageRouter.LocalMessageSource" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the local message source. This field is constant.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoggingSinkName">
+      <MemberSignature Language="C#" Value="public const string LoggingSinkName;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal string LoggingSinkName" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Nmea0183.MessageRouter.LoggingSinkName" />
+      <MemberSignature Language="VB.NET" Value="Public Const LoggingSinkName As String " />
+      <MemberSignature Language="F#" Value="val mutable LoggingSinkName : string" Usage="Iot.Device.Nmea0183.MessageRouter.LoggingSinkName" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the default logger. This field is constant.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendSentence">
+      <MemberSignature Language="C#" Value="public override void SendSentence (Iot.Device.Nmea0183.NmeaSinkAndSource source, Iot.Device.Nmea0183.Sentences.NmeaSentence sentence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SendSentence(class Iot.Device.Nmea0183.NmeaSinkAndSource source, class Iot.Device.Nmea0183.Sentences.NmeaSentence sentence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MessageRouter.SendSentence(Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.Sentences.NmeaSentence)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub SendSentence (source As NmeaSinkAndSource, sentence As NmeaSentence)" />
+      <MemberSignature Language="F#" Value="override this.SendSentence : Iot.Device.Nmea0183.NmeaSinkAndSource * Iot.Device.Nmea0183.Sentences.NmeaSentence -&gt; unit" Usage="messageRouter.SendSentence (source, sentence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Iot.Device.Nmea0183.NmeaSinkAndSource" />
+        <Parameter Name="sentence" Type="Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <param name="sentence">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="StartDecode">
+      <MemberSignature Language="C#" Value="public override void StartDecode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void StartDecode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MessageRouter.StartDecode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub StartDecode ()" />
+      <MemberSignature Language="F#" Value="override this.StartDecode : unit -&gt; unit" Usage="messageRouter.StartDecode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="StopDecode">
+      <MemberSignature Language="C#" Value="public override void StopDecode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void StopDecode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MessageRouter.StopDecode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub StopDecode ()" />
+      <MemberSignature Language="F#" Value="override this.StopDecode : unit -&gt; unit" Usage="messageRouter.StopDecode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

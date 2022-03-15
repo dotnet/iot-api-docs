@@ -4,18 +4,20 @@
   <TypeSignature Language="DocId" Value="T:Iot.Device.Arduino.ArduinoBoard" />
   <TypeSignature Language="VB.NET" Value="Public Class ArduinoBoard&#xA;Implements IDisposable" FrameworkAlternate="iot-dotnet-1.4" />
   <TypeSignature Language="F#" Value="type ArduinoBoard = class&#xA;    interface IDisposable" FrameworkAlternate="iot-dotnet-1.4" />
-  <TypeSignature Language="C#" Value="public class ArduinoBoard : Iot.Device.Board.Board, IDisposable" FrameworkAlternate="iot-dotnet-1.5" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ArduinoBoard extends Iot.Device.Board.Board implements class System.IDisposable" FrameworkAlternate="iot-dotnet-1.5" />
-  <TypeSignature Language="VB.NET" Value="Public Class ArduinoBoard&#xA;Inherits Board&#xA;Implements IDisposable" FrameworkAlternate="iot-dotnet-1.5" />
-  <TypeSignature Language="F#" Value="type ArduinoBoard = class&#xA;    inherit Board&#xA;    interface IDisposable" FrameworkAlternate="iot-dotnet-1.5" />
+  <TypeSignature Language="C#" Value="public class ArduinoBoard : Iot.Device.Board.Board, IDisposable" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ArduinoBoard extends Iot.Device.Board.Board implements class System.IDisposable" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+  <TypeSignature Language="VB.NET" Value="Public Class ArduinoBoard&#xA;Inherits Board&#xA;Implements IDisposable" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+  <TypeSignature Language="F#" Value="type ArduinoBoard = class&#xA;    inherit Board&#xA;    interface IDisposable" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
   <AssemblyInfo>
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>1.4.0.0</AssemblyVersion>
     <AssemblyVersion>1.5.0.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
-    <BaseTypeName FrameworkAlternate="iot-dotnet-1.5">Iot.Device.Board.Board</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1">Iot.Device.Board.Board</BaseTypeName>
   </Base>
   <Interfaces>
     <Interface>
@@ -43,6 +45,8 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="serialPortStream" Type="System.IO.Stream" />
@@ -68,6 +72,8 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="portName" Type="System.String" />
@@ -83,6 +89,41 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AddCommandHandler&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public void AddCommandHandler&lt;T&gt; (T newCommandHandler) where T : Iot.Device.Arduino.ExtendedCommandHandler;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AddCommandHandler&lt;(class Iot.Device.Arduino.ExtendedCommandHandler) T&gt;(!!T newCommandHandler) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ArduinoBoard.AddCommandHandler``1(``0)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AddCommandHandler(Of T As ExtendedCommandHandler) (newCommandHandler As T)" />
+      <MemberSignature Language="F#" Value="member this.AddCommandHandler : 'T -&gt; unit (requires 'T :&gt; Iot.Device.Arduino.ExtendedCommandHandler)" Usage="arduinoBoard.AddCommandHandler newCommandHandler" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>Iot.Device.Arduino.ExtendedCommandHandler</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="newCommandHandler" Type="T" Index="0" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">An instance of <see cref="T:Iot.Device.Arduino.ExtendedCommandHandler" />.</typeparam>
+        <param name="newCommandHandler">The new handler</param>
+        <summary>
+            Adds a new command handler.
+            A command handler can support extended commands.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="CommonBaudRates">
       <MemberSignature Language="C#" Value="public static System.Collections.Generic.List&lt;int&gt; CommonBaudRates ();" />
       <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.List`1&lt;int32&gt; CommonBaudRates() cil managed" />
@@ -94,6 +135,8 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
@@ -118,6 +161,8 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Analog.AnalogController</ReturnType>
@@ -140,15 +185,17 @@
       <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ArduinoBoard.CreateGpioController" />
       <MemberSignature Language="VB.NET" Value="Public Function CreateGpioController () As GpioController" FrameworkAlternate="iot-dotnet-1.4" />
       <MemberSignature Language="F#" Value="member this.CreateGpioController : unit -&gt; System.Device.Gpio.GpioController" Usage="arduinoBoard.CreateGpioController " FrameworkAlternate="iot-dotnet-1.4" />
-      <MemberSignature Language="C#" Value="public override System.Device.Gpio.GpioController CreateGpioController ();" FrameworkAlternate="iot-dotnet-1.5" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Device.Gpio.GpioController CreateGpioController() cil managed" FrameworkAlternate="iot-dotnet-1.5" />
-      <MemberSignature Language="VB.NET" Value="Public Overrides Function CreateGpioController () As GpioController" FrameworkAlternate="iot-dotnet-1.5" />
-      <MemberSignature Language="F#" Value="override this.CreateGpioController : unit -&gt; System.Device.Gpio.GpioController" Usage="arduinoBoard.CreateGpioController " FrameworkAlternate="iot-dotnet-1.5" />
+      <MemberSignature Language="C#" Value="public override System.Device.Gpio.GpioController CreateGpioController ();" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Device.Gpio.GpioController CreateGpioController() cil managed" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function CreateGpioController () As GpioController" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="F#" Value="override this.CreateGpioController : unit -&gt; System.Device.Gpio.GpioController" Usage="arduinoBoard.CreateGpioController " FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Gpio.GpioController</ReturnType>
@@ -172,13 +219,15 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Board.I2cBusManager</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="busNumber" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.5" />
-        <Parameter Name="pins" Type="System.Int32[]" Index="1" FrameworkAlternate="iot-dotnet-1.5" />
+        <Parameter Name="busNumber" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="pins" Type="System.Int32[]" Index="1" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="busNumber">To be added.</param>
@@ -253,15 +302,17 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Pwm.PwmChannel</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="chip" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.5" />
-        <Parameter Name="channel" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.5" />
-        <Parameter Name="frequency" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.5" />
-        <Parameter Name="dutyCyclePercentage" Type="System.Double" Index="3" FrameworkAlternate="iot-dotnet-1.5" />
+        <Parameter Name="chip" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="channel" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="frequency" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="dutyCyclePercentage" Type="System.Double" Index="3" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="chip">Must be 0.</param>
@@ -285,13 +336,15 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Spi.SpiDevice</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="settings" Type="System.Device.Spi.SpiConnectionSettings" Index="0" FrameworkAlternate="iot-dotnet-1.5" />
-        <Parameter Name="pins" Type="System.Int32[]" Index="1" FrameworkAlternate="iot-dotnet-1.5" />
+        <Parameter Name="settings" Type="System.Device.Spi.SpiConnectionSettings" Index="0" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="pins" Type="System.Int32[]" Index="1" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="settings">Spi Connection settings</param>
@@ -339,12 +392,14 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Board.PinUsage</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="pinNumber" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.5" />
+        <Parameter Name="pinNumber" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="pinNumber">Pin number to query</param>
@@ -384,15 +439,17 @@
       <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ArduinoBoard.Dispose(System.Boolean)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" FrameworkAlternate="iot-dotnet-1.4" />
       <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="arduinoBoard.Dispose disposing" FrameworkAlternate="iot-dotnet-1.4" />
-      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" FrameworkAlternate="iot-dotnet-1.5" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" FrameworkAlternate="iot-dotnet-1.5" />
-      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" FrameworkAlternate="iot-dotnet-1.5" />
-      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="arduinoBoard.Dispose disposing" FrameworkAlternate="iot-dotnet-1.5" />
+      <MemberSignature Language="C#" Value="protected override void Dispose (bool disposing);" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Dispose(bool disposing) cil managed" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Dispose (disposing As Boolean)" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="F#" Value="override this.Dispose : bool -&gt; unit" Usage="arduinoBoard.Dispose disposing" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -419,6 +476,8 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Version</ReturnType>
@@ -442,6 +501,8 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -465,6 +526,8 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Version</ReturnType>
@@ -474,6 +537,38 @@
             Firmware version on the device
             </summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCommandHandler&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public T? GetCommandHandler&lt;T&gt; () where T : Iot.Device.Arduino.ExtendedCommandHandler;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance !!T GetCommandHandler&lt;(class Iot.Device.Arduino.ExtendedCommandHandler) T&gt;() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ArduinoBoard.GetCommandHandler``1" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCommandHandler(Of T As ExtendedCommandHandler) () As T" />
+      <MemberSignature Language="F#" Value="member this.GetCommandHandler : unit -&gt; 'T (requires 'T :&gt; Iot.Device.Arduino.ExtendedCommandHandler)" Usage="arduinoBoard.GetCommandHandler " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>T</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>Iot.Device.Arduino.ExtendedCommandHandler</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters />
+      <Docs>
+        <typeparam name="T">The type to query</typeparam>
+        <summary>
+            Gets the command handler with the provided type. An exact type match is performed.
+            </summary>
+        <returns>The command handler, or null if none was found</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -487,6 +582,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -509,12 +606,14 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="busId" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.5" />
+        <Parameter Name="busId" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="busId">To be added.</param>
@@ -534,13 +633,15 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="chip" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.5" />
-        <Parameter Name="channel" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.5" />
+        <Parameter Name="chip" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="channel" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="chip">To be added.</param>
@@ -561,12 +662,14 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="connectionSettings" Type="System.Device.Spi.SpiConnectionSettings" Index="0" FrameworkAlternate="iot-dotnet-1.5" />
+        <Parameter Name="connectionSettings" Type="System.Device.Spi.SpiConnectionSettings" Index="0" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="connectionSettings">To be added.</param>
@@ -576,21 +679,50 @@
         <inheritdoc />
       </Docs>
     </Member>
+    <Member MemberName="GetPinMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Arduino.SupportedMode GetPinMode (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Arduino.SupportedMode GetPinMode(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ArduinoBoard.GetPinMode(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPinMode (pinNumber As Integer) As SupportedMode" />
+      <MemberSignature Language="F#" Value="member this.GetPinMode : int -&gt; Iot.Device.Arduino.SupportedMode" Usage="arduinoBoard.GetPinMode pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Arduino.SupportedMode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">Pin number to query</param>
+        <summary>
+            Returns the current assignment of the given pin
+            </summary>
+        <returns>An instance of <see cref="T:Iot.Device.Arduino.SupportedMode" /> from the list of known modes (or a new instance for an unknown mode)</returns>
+        <remarks>Thi is the opposite of <see cref="M:Iot.Device.Arduino.ArduinoBoard.SetPinMode(System.Int32,Iot.Device.Arduino.SupportedMode)" />. See there for usage limitations.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Initialize">
       <MemberSignature Language="C#" Value="protected virtual void Initialize ();" FrameworkAlternate="iot-dotnet-1.4" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Initialize() cil managed" FrameworkAlternate="iot-dotnet-1.4" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ArduinoBoard.Initialize" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Initialize ()" FrameworkAlternate="iot-dotnet-1.4" />
       <MemberSignature Language="F#" Value="abstract member Initialize : unit -&gt; unit&#xA;override this.Initialize : unit -&gt; unit" Usage="arduinoBoard.Initialize " FrameworkAlternate="iot-dotnet-1.4" />
-      <MemberSignature Language="C#" Value="protected override void Initialize ();" FrameworkAlternate="iot-dotnet-1.5" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Initialize() cil managed" FrameworkAlternate="iot-dotnet-1.5" />
-      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Initialize ()" FrameworkAlternate="iot-dotnet-1.5" />
-      <MemberSignature Language="F#" Value="override this.Initialize : unit -&gt; unit" Usage="arduinoBoard.Initialize " FrameworkAlternate="iot-dotnet-1.5" />
+      <MemberSignature Language="C#" Value="protected override void Initialize ();" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Initialize() cil managed" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub Initialize ()" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="F#" Value="override this.Initialize : unit -&gt; unit" Usage="arduinoBoard.Initialize " FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -605,6 +737,30 @@
         <exception cref="T:System.TimeoutException">There was no answer from the board</exception>
       </Docs>
     </Member>
+    <Member MemberName="KnownModes">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;Iot.Device.Arduino.SupportedMode&gt; KnownModes { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;class Iot.Device.Arduino.SupportedMode&gt; KnownModes" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Arduino.ArduinoBoard.KnownModes" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property KnownModes As IReadOnlyList(Of SupportedMode)" />
+      <MemberSignature Language="F#" Value="member this.KnownModes : System.Collections.Generic.IReadOnlyList&lt;Iot.Device.Arduino.SupportedMode&gt;" Usage="Iot.Device.Arduino.ArduinoBoard.KnownModes" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Iot.Device.Arduino.SupportedMode&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of supported pin modes.
+            This list can be extended by adding special modes using <see cref="M:Iot.Device.Arduino.ArduinoBoard.AddCommandHandler``1(``0)" />.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Logger">
       <MemberSignature Language="C#" Value="protected Microsoft.Extensions.Logging.ILogger Logger { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class Microsoft.Extensions.Logging.ILogger Logger" />
@@ -615,6 +771,8 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.ILogger</ReturnType>
@@ -657,6 +815,8 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -672,6 +832,38 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="SetPinMode">
+      <MemberSignature Language="C#" Value="public void SetPinMode (int pin, Iot.Device.Arduino.SupportedMode arduinoMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetPinMode(int32 pin, class Iot.Device.Arduino.SupportedMode arduinoMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ArduinoBoard.SetPinMode(System.Int32,Iot.Device.Arduino.SupportedMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetPinMode (pin As Integer, arduinoMode As SupportedMode)" />
+      <MemberSignature Language="F#" Value="member this.SetPinMode : int * Iot.Device.Arduino.SupportedMode -&gt; unit" Usage="arduinoBoard.SetPinMode (pin, arduinoMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="arduinoMode" Type="Iot.Device.Arduino.SupportedMode" Index="1" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+      </Parameters>
+      <Docs>
+        <param name="pin">The pin to configure</param>
+        <param name="arduinoMode">The mode to set</param>
+        <summary>
+            Sets the internal pin mode to the given value, if supported.
+            </summary>
+        <remarks>This method is intended for use by <see cref="T:Iot.Device.Arduino.ExtendedCommandHandler" /> instances. Users should not
+            call this method directly. It is the responsibility of the command handler to use the capabilities table to check
+            that the mode is actually supported</remarks>
+        <exception cref="T:System.TimeoutException">The mode was not updated, either because the command was not understood or
+            the mode is unknown by the firmware</exception>
+      </Docs>
+    </Member>
     <Member MemberName="SupportedPinConfigurations">
       <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;Iot.Device.Arduino.SupportedPinConfiguration&gt; SupportedPinConfigurations { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;class Iot.Device.Arduino.SupportedPinConfiguration&gt; SupportedPinConfigurations" />
@@ -683,6 +875,8 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyList&lt;Iot.Device.Arduino.SupportedPinConfiguration&gt;</ReturnType>
@@ -692,6 +886,38 @@
             Returns the list of capabilities per pin
             </summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryConnectToNetworkedBoard">
+      <MemberSignature Language="C#" Value="public static bool TryConnectToNetworkedBoard (System.Net.IPAddress boardAddress, int port, out Iot.Device.Arduino.ArduinoBoard? board);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool TryConnectToNetworkedBoard(class System.Net.IPAddress boardAddress, int32 port, [out] class Iot.Device.Arduino.ArduinoBoard&amp; board) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.ArduinoBoard.TryConnectToNetworkedBoard(System.Net.IPAddress,System.Int32,Iot.Device.Arduino.ArduinoBoard@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function TryConnectToNetworkedBoard (boardAddress As IPAddress, port As Integer, ByRef board As ArduinoBoard) As Boolean" />
+      <MemberSignature Language="F#" Value="static member TryConnectToNetworkedBoard : System.Net.IPAddress * int * ArduinoBoard -&gt; bool" Usage="Iot.Device.Arduino.ArduinoBoard.TryConnectToNetworkedBoard (boardAddress, port, board)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="boardAddress" Type="System.Net.IPAddress" Index="0" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="port" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="board" Type="Iot.Device.Arduino.ArduinoBoard" RefType="out" Index="2" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+      </Parameters>
+      <Docs>
+        <param name="boardAddress">The IP address of the board</param>
+        <param name="port">The network port to use</param>
+        <param name="board">Returns the board if successful</param>
+        <summary>
+            Tries to connect to an arduino over network.
+            This requires an arduino with an ethernet shield or an ESP32 with enabled WIFI support.
+            </summary>
+        <returns>True on success, false otherwise</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -706,6 +932,8 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -736,6 +964,8 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -775,10 +1005,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="pinNumber" Type="System.Int32" />
-        <Parameter Name="dhtType" Type="System.Int32" />
-        <Parameter Name="temperature" Type="UnitsNet.Temperature" RefType="out" />
-        <Parameter Name="humidity" Type="UnitsNet.RelativeHumidity" RefType="out" />
+        <Parameter Name="pinNumber" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="dhtType" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="temperature" Type="UnitsNet.Temperature" RefType="out" Index="2" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5" />
+        <Parameter Name="humidity" Type="UnitsNet.RelativeHumidity" RefType="out" Index="3" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5" />
       </Parameters>
       <Docs>
         <param name="pinNumber">Pin Number</param>

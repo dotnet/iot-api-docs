@@ -1,0 +1,194 @@
+<Type Name="NmeaParser" FullName="Iot.Device.Nmea0183.NmeaParser">
+  <TypeSignature Language="C#" Value="public class NmeaParser : Iot.Device.Nmea0183.NmeaSinkAndSource, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NmeaParser extends Iot.Device.Nmea0183.NmeaSinkAndSource implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.NmeaParser" />
+  <TypeSignature Language="VB.NET" Value="Public Class NmeaParser&#xA;Inherits NmeaSinkAndSource&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type NmeaParser = class&#xA;    inherit NmeaSinkAndSource&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Nmea0183.NmeaSinkAndSource</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Parses Nmea Sequences
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NmeaParser (string interfaceName, System.IO.Stream dataSource, System.IO.Stream? dataSink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string interfaceName, class System.IO.Stream dataSource, class System.IO.Stream dataSink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.NmeaParser.#ctor(System.String,System.IO.Stream,System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (interfaceName As String, dataSource As Stream, dataSink As Stream)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.NmeaParser : string * System.IO.Stream * System.IO.Stream -&gt; Iot.Device.Nmea0183.NmeaParser" Usage="new Iot.Device.Nmea0183.NmeaParser (interfaceName, dataSource, dataSink)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="interfaceName" Type="System.String" />
+        <Parameter Name="dataSource" Type="System.IO.Stream" />
+        <Parameter Name="dataSink" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="interfaceName">Friendly name of this interface (used for filtering and eventually logging)</param>
+        <param name="dataSource">Data source (may be connected to a serial port, a network interface, or whatever). It is recommended to use a blocking Stream,
+            to prevent unnecessary polling</param>
+        <param name="dataSink">Optional data sink, to send information. Can be null, and can be identical to the source stream</param>
+        <summary>
+            Creates a new instance of the NmeaParser, taking an input and an output stream
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExclusiveTalkerId">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.TalkerId ExclusiveTalkerId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nmea0183.TalkerId ExclusiveTalkerId" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.NmeaParser.ExclusiveTalkerId" />
+      <MemberSignature Language="VB.NET" Value="Public Property ExclusiveTalkerId As TalkerId" />
+      <MemberSignature Language="F#" Value="member this.ExclusiveTalkerId : Iot.Device.Nmea0183.TalkerId with get, set" Usage="Iot.Device.Nmea0183.NmeaParser.ExclusiveTalkerId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.TalkerId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set this to anything other than <see cref="P:Iot.Device.Nmea0183.TalkerId.Any" /> to receive only that specific ID from this parser
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LastPacketTime">
+      <MemberSignature Language="C#" Value="public DateTimeOffset LastPacketTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset LastPacketTime" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.NmeaParser.LastPacketTime" />
+      <MemberSignature Language="VB.NET" Value="Public Property LastPacketTime As DateTimeOffset" />
+      <MemberSignature Language="F#" Value="member this.LastPacketTime : DateTimeOffset with get, set" Usage="Iot.Device.Nmea0183.NmeaParser.LastPacketTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Time the last packet was received.
+            This is writable to configure the initial value (defaults to current system time)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendSentence">
+      <MemberSignature Language="C#" Value="public override void SendSentence (Iot.Device.Nmea0183.NmeaSinkAndSource source, Iot.Device.Nmea0183.Sentences.NmeaSentence sentence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void SendSentence(class Iot.Device.Nmea0183.NmeaSinkAndSource source, class Iot.Device.Nmea0183.Sentences.NmeaSentence sentence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.NmeaParser.SendSentence(Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.Sentences.NmeaSentence)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub SendSentence (source As NmeaSinkAndSource, sentence As NmeaSentence)" />
+      <MemberSignature Language="F#" Value="override this.SendSentence : Iot.Device.Nmea0183.NmeaSinkAndSource * Iot.Device.Nmea0183.Sentences.NmeaSentence -&gt; unit" Usage="nmeaParser.SendSentence (source, sentence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="Iot.Device.Nmea0183.NmeaSinkAndSource" />
+        <Parameter Name="sentence" Type="Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+      </Parameters>
+      <Docs>
+        <param name="source">To be added.</param>
+        <param name="sentence">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="StartDecode">
+      <MemberSignature Language="C#" Value="public override void StartDecode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void StartDecode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.NmeaParser.StartDecode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub StartDecode ()" />
+      <MemberSignature Language="F#" Value="override this.StartDecode : unit -&gt; unit" Usage="nmeaParser.StartDecode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="StopDecode">
+      <MemberSignature Language="C#" Value="public override void StopDecode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance void StopDecode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.NmeaParser.StopDecode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Sub StopDecode ()" />
+      <MemberSignature Language="F#" Value="override this.StopDecode : unit -&gt; unit" Usage="nmeaParser.StopDecode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="SuppressOutdatedMessages">
+      <MemberSignature Language="C#" Value="public bool SuppressOutdatedMessages { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SuppressOutdatedMessages" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.NmeaParser.SuppressOutdatedMessages" />
+      <MemberSignature Language="VB.NET" Value="Public Property SuppressOutdatedMessages As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SuppressOutdatedMessages : bool with get, set" Usage="Iot.Device.Nmea0183.NmeaParser.SuppressOutdatedMessages" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True (the default) to suppress forwarding messages when a newer message with the same <see cref="T:Iot.Device.Nmea0183.SentenceId" /> and <see cref="T:Iot.Device.Nmea0183.TalkerId" />
+            is already in the outgoing queue. Only affects messages that have <see cref="P:Iot.Device.Nmea0183.Sentences.NmeaSentence.ReplacesOlderInstance" /> set to true.
+            Set to false to forward all messages.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Setting this to false may overflow send queues when more messages should be sent per time than the outgoing interface permits. This will result
+            in massive message delivery delays and eventually a low memory situation.
+            </remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

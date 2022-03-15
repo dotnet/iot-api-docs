@@ -1,0 +1,352 @@
+<Type Name="ButtonBase" FullName="Iot.Device.Button.ButtonBase">
+  <TypeSignature Language="C#" Value="public class ButtonBase : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ButtonBase extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Button.ButtonBase" />
+  <TypeSignature Language="VB.NET" Value="Public Class ButtonBase&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type ButtonBase = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Base implementation of Button logic.
+            Hardware independent. Inherit for specific hardware handling.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ButtonBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Button.ButtonBase.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initialization of the button.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ButtonBase (TimeSpan doublePress, TimeSpan holding, TimeSpan debounceTime = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.TimeSpan doublePress, valuetype System.TimeSpan holding, valuetype System.TimeSpan debounceTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Button.ButtonBase.#ctor(System.TimeSpan,System.TimeSpan,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (doublePress As TimeSpan, holding As TimeSpan, Optional debounceTime As TimeSpan = Nothing)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Button.ButtonBase : TimeSpan * TimeSpan * TimeSpan -&gt; Iot.Device.Button.ButtonBase" Usage="new Iot.Device.Button.ButtonBase (doublePress, holding, debounceTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="doublePress" Type="System.TimeSpan" />
+        <Parameter Name="holding" Type="System.TimeSpan" />
+        <Parameter Name="debounceTime" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="doublePress">Max ticks between button presses to count as doublepress.</param>
+        <param name="holding">Min ms a button is pressed to count as holding.</param>
+        <param name="debounceTime">The amount of time during which the transitions are ignored, or zero</param>
+        <summary>
+            Initialization of the button.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonDown">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;EventArgs&gt;? ButtonDown;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.EventArgs&gt; ButtonDown" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Button.ButtonBase.ButtonDown" />
+      <MemberSignature Language="VB.NET" Value="Public Event ButtonDown As EventHandler(Of EventArgs) " />
+      <MemberSignature Language="F#" Value="member this.ButtonDown : EventHandler&lt;EventArgs&gt; " Usage="member this.ButtonDown : System.EventHandler&lt;System.EventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.EventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Delegate for button down event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonUp">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;EventArgs&gt;? ButtonUp;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.EventArgs&gt; ButtonUp" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Button.ButtonBase.ButtonUp" />
+      <MemberSignature Language="VB.NET" Value="Public Event ButtonUp As EventHandler(Of EventArgs) " />
+      <MemberSignature Language="F#" Value="member this.ButtonUp : EventHandler&lt;EventArgs&gt; " Usage="member this.ButtonUp : System.EventHandler&lt;System.EventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.EventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Delegate for button up event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Button.ButtonBase.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="buttonBase.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Public dispose method for IDisposable interface.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Button.ButtonBase.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="buttonBase.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">Disposing.</param>
+        <summary>
+            Cleanup resources.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DoublePress">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;EventArgs&gt;? DoublePress;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.EventArgs&gt; DoublePress" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Button.ButtonBase.DoublePress" />
+      <MemberSignature Language="VB.NET" Value="Public Event DoublePress As EventHandler(Of EventArgs) " />
+      <MemberSignature Language="F#" Value="member this.DoublePress : EventHandler&lt;EventArgs&gt; " Usage="member this.DoublePress : System.EventHandler&lt;System.EventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.EventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Delegate for button double pressed event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleButtonPressed">
+      <MemberSignature Language="C#" Value="protected void HandleButtonPressed ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void HandleButtonPressed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Button.ButtonBase.HandleButtonPressed" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub HandleButtonPressed ()" />
+      <MemberSignature Language="F#" Value="member this.HandleButtonPressed : unit -&gt; unit" Usage="buttonBase.HandleButtonPressed " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Handler for pressing the button.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HandleButtonReleased">
+      <MemberSignature Language="C#" Value="protected void HandleButtonReleased ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance void HandleButtonReleased() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Button.ButtonBase.HandleButtonReleased" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub HandleButtonReleased ()" />
+      <MemberSignature Language="F#" Value="member this.HandleButtonReleased : unit -&gt; unit" Usage="buttonBase.HandleButtonReleased " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Handler for releasing the button.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Holding">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Iot.Device.Button.ButtonHoldingEventArgs&gt;? Holding;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Iot.Device.Button.ButtonHoldingEventArgs&gt; Holding" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Button.ButtonBase.Holding" />
+      <MemberSignature Language="VB.NET" Value="Public Event Holding As EventHandler(Of ButtonHoldingEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.Holding : EventHandler&lt;Iot.Device.Button.ButtonHoldingEventArgs&gt; " Usage="member this.Holding : System.EventHandler&lt;Iot.Device.Button.ButtonHoldingEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Iot.Device.Button.ButtonHoldingEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Delegate for button holding event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsDoublePressEnabled">
+      <MemberSignature Language="C#" Value="public bool IsDoublePressEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsDoublePressEnabled" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Button.ButtonBase.IsDoublePressEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsDoublePressEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsDoublePressEnabled : bool with get, set" Usage="Iot.Device.Button.ButtonBase.IsDoublePressEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Define if double press event is enabled or disabled on the button.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsHoldingEnabled">
+      <MemberSignature Language="C#" Value="public bool IsHoldingEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsHoldingEnabled" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Button.ButtonBase.IsHoldingEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsHoldingEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsHoldingEnabled : bool with get, set" Usage="Iot.Device.Button.ButtonBase.IsHoldingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Define if holding event is enabled or disabled on the button.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPressed">
+      <MemberSignature Language="C#" Value="public bool IsPressed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsPressed" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Button.ButtonBase.IsPressed" />
+      <MemberSignature Language="VB.NET" Value="Public Property IsPressed As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsPressed : bool with get, set" Usage="Iot.Device.Button.ButtonBase.IsPressed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Define if single press event is enabled or disabled on the button.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Press">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;EventArgs&gt;? Press;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class System.EventArgs&gt; Press" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Button.ButtonBase.Press" />
+      <MemberSignature Language="VB.NET" Value="Public Event Press As EventHandler(Of EventArgs) " />
+      <MemberSignature Language="F#" Value="member this.Press : EventHandler&lt;EventArgs&gt; " Usage="member this.Press : System.EventHandler&lt;System.EventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;System.EventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Delegate for button pressed event.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

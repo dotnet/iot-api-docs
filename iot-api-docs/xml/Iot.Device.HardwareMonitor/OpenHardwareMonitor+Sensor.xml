@@ -1,9 +1,12 @@
 <Type Name="OpenHardwareMonitor+Sensor" FullName="Iot.Device.HardwareMonitor.OpenHardwareMonitor+Sensor">
-  <TypeSignature Language="C#" Value="public sealed class OpenHardwareMonitor.Sensor : IDisposable" />
-  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed beforefieldinit OpenHardwareMonitor/Sensor extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="C#" Value="public sealed class OpenHardwareMonitor.Sensor : IDisposable" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed beforefieldinit OpenHardwareMonitor/Sensor extends System.Object implements class System.IDisposable" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0" />
   <TypeSignature Language="DocId" Value="T:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor" />
-  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class OpenHardwareMonitor.Sensor&#xA;Implements IDisposable" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class OpenHardwareMonitor.Sensor&#xA;Implements IDisposable" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0" />
   <TypeSignature Language="F#" Value="type OpenHardwareMonitor.Sensor = class&#xA;    interface IDisposable" />
+  <TypeSignature Language="C#" Value="public class OpenHardwareMonitor.Sensor : IDisposable" FrameworkAlternate="iot-dotnet-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi beforefieldinit OpenHardwareMonitor/Sensor extends System.Object implements class System.IDisposable" FrameworkAlternate="iot-dotnet-2.1" />
+  <TypeSignature Language="VB.NET" Value="Public Class OpenHardwareMonitor.Sensor&#xA;Implements IDisposable" FrameworkAlternate="iot-dotnet-2.1" />
   <AssemblyInfo>
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
@@ -11,6 +14,8 @@
     <AssemblyVersion>1.3.0.0</AssemblyVersion>
     <AssemblyVersion>1.4.0.0</AssemblyVersion>
     <AssemblyVersion>1.5.0.0</AssemblyVersion>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -28,12 +33,44 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Sensor (string name, string identifier, string? parent, Iot.Device.HardwareMonitor.SensorType typeEnum);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string name, string identifier, string parent, valuetype Iot.Device.HardwareMonitor.SensorType typeEnum) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.#ctor(System.String,System.String,System.String,Iot.Device.HardwareMonitor.SensorType)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (name As String, identifier As String, parent As String, typeEnum As SensorType)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor : string * string * string * Iot.Device.HardwareMonitor.SensorType -&gt; Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor" Usage="new Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor (name, identifier, parent, typeEnum)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="iot-dotnet-2.1" />
+        <Parameter Name="identifier" Type="System.String" Index="1" FrameworkAlternate="iot-dotnet-2.1" />
+        <Parameter Name="parent" Type="System.String" Index="2" FrameworkAlternate="iot-dotnet-2.1" />
+        <Parameter Name="typeEnum" Type="Iot.Device.HardwareMonitor.SensorType" Index="3" FrameworkAlternate="iot-dotnet-2.1" />
+      </Parameters>
+      <Docs>
+        <param name="name">To be added.</param>
+        <param name="identifier">To be added.</param>
+        <param name="parent">To be added.</param>
+        <param name="typeEnum">To be added.</param>
+        <summary>
+            Creates a sensor instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public Sensor (System.Management.ManagementObject instance, string? name, string? identifier, string? parent, Iot.Device.HardwareMonitor.SensorType typeEnum);" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.ManagementObject instance, string name, string identifier, string parent, valuetype Iot.Device.HardwareMonitor.SensorType typeEnum) cil managed" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.ManagementObject instance, string name, string identifier, string parent, valuetype Iot.Device.HardwareMonitor.SensorType typeEnum) cil managed" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.#ctor(System.Management.ManagementObject,System.String,System.String,System.String,Iot.Device.HardwareMonitor.SensorType)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub New (instance As ManagementObject, name As String, identifier As String, parent As String, typeEnum As SensorType)" />
-      <MemberSignature Language="F#" Value="new Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor : System.Management.ManagementObject * string * string * string * Iot.Device.HardwareMonitor.SensorType -&gt; Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor" Usage="new Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor (instance, name, identifier, parent, typeEnum)" />
-      <MemberSignature Language="C#" Value="public Sensor (System.Management.ManagementObject instance, string name, string identifier, string? parent, Iot.Device.HardwareMonitor.SensorType typeEnum);" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (instance As ManagementObject, name As String, identifier As String, parent As String, typeEnum As SensorType)" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0" />
+      <MemberSignature Language="F#" Value="new Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor : System.Management.ManagementObject * string * string * string * Iot.Device.HardwareMonitor.SensorType -&gt; Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor" Usage="new Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor (instance, name, identifier, parent, typeEnum)" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0" />
+      <MemberSignature Language="C#" Value="public Sensor (System.Management.ManagementObject instance, string name, string identifier, string? parent, Iot.Device.HardwareMonitor.SensorType typeEnum);" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0" />
+      <MemberSignature Language="C#" Value="public Sensor (System.Management.ManagementObject dummy, string name, string identifier, string? parent, Iot.Device.HardwareMonitor.SensorType typeEnum);" FrameworkAlternate="iot-dotnet-2.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Management.ManagementObject dummy, string name, string identifier, string parent, valuetype Iot.Device.HardwareMonitor.SensorType typeEnum) cil managed" FrameworkAlternate="iot-dotnet-2.1" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (dummy As ManagementObject, name As String, identifier As String, parent As String, typeEnum As SensorType)" FrameworkAlternate="iot-dotnet-2.1" />
+      <MemberSignature Language="F#" Value="new Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor : System.Management.ManagementObject * string * string * string * Iot.Device.HardwareMonitor.SensorType -&gt; Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor" Usage="new Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor (dummy, name, identifier, parent, typeEnum)" FrameworkAlternate="iot-dotnet-2.1" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -42,22 +79,33 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="iot-dotnet-2.1">
+          <AttributeName Language="C#">[System.Obsolete("Use Sensor(string name, string identifier, string? parent, SensorType typeEnum) instead")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("Use Sensor(string name, string identifier, string? parent, SensorType typeEnum) instead")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <Parameters>
-        <Parameter Name="instance" Type="System.Management.ManagementObject" />
-        <Parameter Name="name" Type="System.String" />
-        <Parameter Name="identifier" Type="System.String" />
-        <Parameter Name="parent" Type="System.String" />
-        <Parameter Name="typeEnum" Type="Iot.Device.HardwareMonitor.SensorType" />
+        <Parameter Name="instance" Type="System.Management.ManagementObject" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0" />
+        <Parameter Name="dummy" Type="System.Management.ManagementObject" Index="0" FrameworkAlternate="iot-dotnet-2.1" />
+        <Parameter Name="name" Type="System.String" Index="1" />
+        <Parameter Name="identifier" Type="System.String" Index="2" />
+        <Parameter Name="parent" Type="System.String" Index="3" />
+        <Parameter Name="typeEnum" Type="Iot.Device.HardwareMonitor.SensorType" Index="4" />
       </Parameters>
       <Docs>
         <param name="instance">To be added.</param>
+        <param name="dummy">To be added.</param>
         <param name="name">To be added.</param>
         <param name="identifier">To be added.</param>
         <param name="parent">To be added.</param>
         <param name="typeEnum">To be added.</param>
         <summary>
-            Creates a sensor instance
+            Create a sensor instance from a management object.
+            This member is obsolete, use another constructor instead or a derived class.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -79,6 +127,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -90,13 +140,38 @@
         <inheritdoc />
       </Docs>
     </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="sensor.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" Index="0" FrameworkAlternate="iot-dotnet-2.1" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>
+            Disposes this instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Identifier">
       <MemberSignature Language="C#" Value="public string? Identifier { get; }" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3" />
       <MemberSignature Language="ILAsm" Value=".property instance string Identifier" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.Identifier" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Identifier As String" />
       <MemberSignature Language="F#" Value="member this.Identifier : string" Usage="Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.Identifier" />
-      <MemberSignature Language="C#" Value="public string Identifier { get; }" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="C#" Value="public string Identifier { get; }" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -105,6 +180,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -123,7 +200,7 @@
       <MemberSignature Language="DocId" Value="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.Name" />
       <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
       <MemberSignature Language="F#" Value="member this.Name : string" Usage="Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.Name" />
-      <MemberSignature Language="C#" Value="public string Name { get; }" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5" />
+      <MemberSignature Language="C#" Value="public string Name { get; }" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -132,6 +209,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -158,6 +237,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -184,6 +265,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.HardwareMonitor.SensorType</ReturnType>
@@ -210,6 +293,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -236,6 +321,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -266,6 +353,8 @@
         <AssemblyVersion>1.3.0.0</AssemblyVersion>
         <AssemblyVersion>1.4.0.0</AssemblyVersion>
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -287,6 +376,56 @@
             Attempt to get a value of the provided type
             </summary>
         <returns>True if a value of type T could be retrieved</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateValue">
+      <MemberSignature Language="C#" Value="protected virtual bool UpdateValue (out double value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool UpdateValue([out] float64&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.UpdateValue(System.Double@)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function UpdateValue (ByRef value As Double) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member UpdateValue : double -&gt; bool&#xA;override this.UpdateValue : double -&gt; bool" Usage="sensor.UpdateValue value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Double" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-2.1" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>
+            Read the value from the underlying transport. This is expected to be overridden by derived classes, unless they use
+            <see cref="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.Value" /> to set the content.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Value">
+      <MemberSignature Language="C#" Value="public double Value { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Value" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.Value" />
+      <MemberSignature Language="VB.NET" Value="Public Property Value As Double" />
+      <MemberSignature Language="F#" Value="member this.Value : double with get, set" Usage="Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.Value" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sets or gets the last value of the sensor. To get an updated value, use <see cref="M:Iot.Device.HardwareMonitor.OpenHardwareMonitor.Sensor.TryGetValue(UnitsNet.IQuantity@)" /> instead.
+            The setter is intended for implementations of derived sensors only.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

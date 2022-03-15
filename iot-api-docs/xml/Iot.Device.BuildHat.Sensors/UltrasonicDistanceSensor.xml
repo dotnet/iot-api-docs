@@ -1,0 +1,167 @@
+<Type Name="UltrasonicDistanceSensor" FullName="Iot.Device.BuildHat.Sensors.UltrasonicDistanceSensor">
+  <TypeSignature Language="C#" Value="public class UltrasonicDistanceSensor : Iot.Device.BuildHat.Sensors.ActiveSensor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit UltrasonicDistanceSensor extends Iot.Device.BuildHat.Sensors.ActiveSensor" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.BuildHat.Sensors.UltrasonicDistanceSensor" />
+  <TypeSignature Language="VB.NET" Value="Public Class UltrasonicDistanceSensor&#xA;Inherits ActiveSensor" />
+  <TypeSignature Language="F#" Value="type UltrasonicDistanceSensor = class&#xA;    inherit ActiveSensor" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.BuildHat.Sensors.ActiveSensor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Spike distance sensor.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected internal UltrasonicDistanceSensor (Iot.Device.BuildHat.Brick brick, Iot.Device.BuildHat.Models.SensorPort port);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(class Iot.Device.BuildHat.Brick brick, valuetype Iot.Device.BuildHat.Models.SensorPort port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Sensors.UltrasonicDistanceSensor.#ctor(Iot.Device.BuildHat.Brick,Iot.Device.BuildHat.Models.SensorPort)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Sub New (brick As Brick, port As SensorPort)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.BuildHat.Sensors.UltrasonicDistanceSensor : Iot.Device.BuildHat.Brick * Iot.Device.BuildHat.Models.SensorPort -&gt; Iot.Device.BuildHat.Sensors.UltrasonicDistanceSensor" Usage="new Iot.Device.BuildHat.Sensors.UltrasonicDistanceSensor (brick, port)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="brick" Type="Iot.Device.BuildHat.Brick" />
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+      </Parameters>
+      <Docs>
+        <param name="brick">The brick.</param>
+        <param name="port">The port.</param>
+        <summary>
+            Ultrasonic distance sensor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdjustEyesBrightness">
+      <MemberSignature Language="C#" Value="public void AdjustEyesBrightness (ReadOnlySpan&lt;byte&gt; eyes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AdjustEyesBrightness(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; eyes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Sensors.UltrasonicDistanceSensor.AdjustEyesBrightness(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AdjustEyesBrightness (eyes As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="member this.AdjustEyesBrightness : ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="ultrasonicDistanceSensor.AdjustEyesBrightness eyes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="eyes" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="eyes">The brighness percentage for each of the 4 leds from 0 to 100.</param>
+        <summary>
+            Adjust the brightness of the eyes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinousMeasurement">
+      <MemberSignature Language="C#" Value="public bool ContinousMeasurement { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContinousMeasurement" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.UltrasonicDistanceSensor.ContinousMeasurement" />
+      <MemberSignature Language="VB.NET" Value="Public Property ContinousMeasurement As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ContinousMeasurement : bool with get, set" Usage="Iot.Device.BuildHat.Sensors.UltrasonicDistanceSensor.ContinousMeasurement" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the continuous measurement for this sensor.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Distance">
+      <MemberSignature Language="C#" Value="public int Distance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Distance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.UltrasonicDistanceSensor.Distance" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Distance As Integer" />
+      <MemberSignature Language="F#" Value="member this.Distance : int" Usage="Iot.Device.BuildHat.Sensors.UltrasonicDistanceSensor.Distance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the distance. A number is in millimeters.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDistance">
+      <MemberSignature Language="C#" Value="public int GetDistance ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetDistance() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Sensors.UltrasonicDistanceSensor.GetDistance" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetDistance () As Integer" />
+      <MemberSignature Language="F#" Value="member this.GetDistance : unit -&gt; int" Usage="ultrasonicDistanceSensor.GetDistance " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the distance. From 0 to +10 cm.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SensorName">
+      <MemberSignature Language="C#" Value="public override string SensorName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SensorName" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.UltrasonicDistanceSensor.SensorName" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SensorName As String" />
+      <MemberSignature Language="F#" Value="member this.SensorName : string" Usage="Iot.Device.BuildHat.Sensors.UltrasonicDistanceSensor.SensorName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

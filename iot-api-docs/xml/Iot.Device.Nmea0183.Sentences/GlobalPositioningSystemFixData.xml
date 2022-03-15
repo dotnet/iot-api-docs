@@ -1,0 +1,392 @@
+<Type Name="GlobalPositioningSystemFixData" FullName="Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData">
+  <TypeSignature Language="C#" Value="public class GlobalPositioningSystemFixData : Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GlobalPositioningSystemFixData extends Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData" />
+  <TypeSignature Language="VB.NET" Value="Public Class GlobalPositioningSystemFixData&#xA;Inherits NmeaSentence" />
+  <TypeSignature Language="F#" Value="type GlobalPositioningSystemFixData = class&#xA;    inherit NmeaSentence" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Nmea0183.Sentences.NmeaSentence</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents GlobalPositioningSystemFixData (GGA) NMEA0183 sentence
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GlobalPositioningSystemFixData (Iot.Device.Nmea0183.TalkerSentence sentence, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Nmea0183.TalkerSentence sentence, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sentence As TalkerSentence, time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData : Iot.Device.Nmea0183.TalkerSentence * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData" Usage="new Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData (sentence, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sentence" Type="Iot.Device.Nmea0183.TalkerSentence" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="sentence">To be added.</param>
+        <param name="time">To be added.</param>
+        <summary>
+            Manually decode the given sentence
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GlobalPositioningSystemFixData (Iot.Device.Nmea0183.TalkerId talkerId, System.Collections.Generic.IEnumerable&lt;string&gt; fields, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Nmea0183.TalkerId talkerId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; fields, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (talkerId As TalkerId, fields As IEnumerable(Of String), time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData : Iot.Device.Nmea0183.TalkerId * seq&lt;string&gt; * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData" Usage="new Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData (talkerId, fields, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="talkerId" Type="Iot.Device.Nmea0183.TalkerId" />
+        <Parameter Name="fields" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="talkerId">Talker id to use</param>
+        <param name="fields">The list of fields</param>
+        <param name="time">The current time</param>
+        <summary>
+            Construct a new sentence from the given fields. This is used by the parser
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GlobalPositioningSystemFixData (DateTimeOffset dateTime, Iot.Device.Nmea0183.Sentences.GpsQuality status, Iot.Device.Common.GeographicPosition position, double? geoidAltitude, double hdop, int numberOfSatellites);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DateTimeOffset dateTime, valuetype Iot.Device.Nmea0183.Sentences.GpsQuality status, class Iot.Device.Common.GeographicPosition position, valuetype System.Nullable`1&lt;float64&gt; geoidAltitude, float64 hdop, int32 numberOfSatellites) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.#ctor(System.DateTimeOffset,Iot.Device.Nmea0183.Sentences.GpsQuality,Iot.Device.Common.GeographicPosition,System.Nullable{System.Double},System.Double,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (dateTime As DateTimeOffset, status As GpsQuality, position As GeographicPosition, geoidAltitude As Nullable(Of Double), hdop As Double, numberOfSatellites As Integer)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData : DateTimeOffset * Iot.Device.Nmea0183.Sentences.GpsQuality * Iot.Device.Common.GeographicPosition * Nullable&lt;double&gt; * double * int -&gt; Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData" Usage="new Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData (dateTime, status, position, geoidAltitude, hdop, numberOfSatellites)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dateTime" Type="System.DateTimeOffset" />
+        <Parameter Name="status" Type="Iot.Device.Nmea0183.Sentences.GpsQuality" />
+        <Parameter Name="position" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="geoidAltitude" Type="System.Nullable&lt;System.Double&gt;" />
+        <Parameter Name="hdop" Type="System.Double" />
+        <Parameter Name="numberOfSatellites" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="dateTime">The current time</param>
+        <param name="status">The GNSS status</param>
+        <param name="position">The position</param>
+        <param name="geoidAltitude">Geoid altitude</param>
+        <param name="hdop">HDOP</param>
+        <param name="numberOfSatellites">The number of satellites visible</param>
+        <summary>
+            Construct a message with the given values
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EllipsoidAltitude">
+      <MemberSignature Language="C#" Value="public double? EllipsoidAltitude { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; EllipsoidAltitude" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.EllipsoidAltitude" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property EllipsoidAltitude As Nullable(Of Double)" />
+      <MemberSignature Language="F#" Value="member this.EllipsoidAltitude : Nullable&lt;double&gt;" Usage="Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.EllipsoidAltitude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Altitude above the WGS84 ellipsoid. This is following a calculation model of the earth, which is used by the satellite systems
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GeoidAltitude">
+      <MemberSignature Language="C#" Value="public double? GeoidAltitude { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; GeoidAltitude" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.GeoidAltitude" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property GeoidAltitude As Nullable(Of Double)" />
+      <MemberSignature Language="F#" Value="member this.GeoidAltitude : Nullable&lt;double&gt;" Usage="Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.GeoidAltitude" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Altitude over the geoid. This is commonly called "altitude above sea level" and corrects for the change in
+            gravitational pull on different places of the globe.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Hdop">
+      <MemberSignature Language="C#" Value="public double Hdop { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Hdop" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.Hdop" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Hdop As Double" />
+      <MemberSignature Language="F#" Value="member this.Hdop : double" Usage="Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.Hdop" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Horizontal dilution of precision. A number representing the quality of the GPS fix. Lower is better.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Nmea0183.SentenceId Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype Iot.Device.Nmea0183.SentenceId Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Id As SentenceId" />
+      <MemberSignature Language="F#" Value="member this.Id : Iot.Device.Nmea0183.SentenceId" Usage="Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The GGA sentence identifer
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LatitudeDegrees">
+      <MemberSignature Language="C#" Value="public double? LatitudeDegrees { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; LatitudeDegrees" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.LatitudeDegrees" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LatitudeDegrees As Nullable(Of Double)" />
+      <MemberSignature Language="F#" Value="member this.LatitudeDegrees : Nullable&lt;double&gt;" Usage="Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.LatitudeDegrees" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Latitude in degrees. Positive value means north, negative means south.
+            </summary>
+        <value>Value of latitude in degrees or null when value is not provided</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LongitudeDegrees">
+      <MemberSignature Language="C#" Value="public double? LongitudeDegrees { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; LongitudeDegrees" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.LongitudeDegrees" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property LongitudeDegrees As Nullable(Of Double)" />
+      <MemberSignature Language="F#" Value="member this.LongitudeDegrees : Nullable&lt;double&gt;" Usage="Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.LongitudeDegrees" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Longitude in degrees. Positive value means east, negative means west.
+            </summary>
+        <value>Value of longitude in degrees or null when value is not provided</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfSatellites">
+      <MemberSignature Language="C#" Value="public int NumberOfSatellites { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 NumberOfSatellites" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.NumberOfSatellites" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NumberOfSatellites As Integer" />
+      <MemberSignature Language="F#" Value="member this.NumberOfSatellites : int" Usage="Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.NumberOfSatellites" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Number of satellites in view. A maximum of 12 is reported by this message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Position">
+      <MemberSignature Language="C#" Value="public Iot.Device.Common.GeographicPosition Position { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Common.GeographicPosition Position" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.Position" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Position As GeographicPosition" />
+      <MemberSignature Language="F#" Value="member this.Position : Iot.Device.Common.GeographicPosition" Usage="Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.Position" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Common.GeographicPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The position
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplacesOlderInstance">
+      <MemberSignature Language="C#" Value="public override bool ReplacesOlderInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReplacesOlderInstance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.ReplacesOlderInstance" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ReplacesOlderInstance As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReplacesOlderInstance : bool" Usage="Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.ReplacesOlderInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is true for this message type
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.Sentences.GpsQuality Status { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nmea0183.Sentences.GpsQuality Status" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.Status" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Status As GpsQuality" />
+      <MemberSignature Language="F#" Value="member this.Status : Iot.Device.Nmea0183.Sentences.GpsQuality" Usage="Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Sentences.GpsQuality</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            GPS quality. The position is valid when this does not return <see cref="F:Iot.Device.Nmea0183.Sentences.GpsQuality.NoFix" /></summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToNmeaParameterList">
+      <MemberSignature Language="C#" Value="public override string ToNmeaParameterList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToNmeaParameterList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.ToNmeaParameterList" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToNmeaParameterList () As String" />
+      <MemberSignature Language="F#" Value="override this.ToNmeaParameterList : unit -&gt; string" Usage="globalPositioningSystemFixData.ToNmeaParameterList " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ToReadableContent">
+      <MemberSignature Language="C#" Value="public override string ToReadableContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToReadableContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.ToReadableContent" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToReadableContent () As String" />
+      <MemberSignature Language="F#" Value="override this.ToReadableContent : unit -&gt; string" Usage="globalPositioningSystemFixData.ToReadableContent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Undulation">
+      <MemberSignature Language="C#" Value="public double? Undulation { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;float64&gt; Undulation" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.Undulation" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Undulation As Nullable(Of Double)" />
+      <MemberSignature Language="F#" Value="member this.Undulation : Nullable&lt;double&gt;" Usage="Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.Undulation" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Undulation value reported. This is the difference between the geodetic and the elipsoid height at the current location and
+            usually provided by the GNSS receiver trough a build-in adjustment table.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

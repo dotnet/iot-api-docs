@@ -1,0 +1,303 @@
+<Type Name="BearingAndDistanceToWayPoint" FullName="Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint">
+  <TypeSignature Language="C#" Value="public class BearingAndDistanceToWayPoint : Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit BearingAndDistanceToWayPoint extends Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint" />
+  <TypeSignature Language="VB.NET" Value="Public Class BearingAndDistanceToWayPoint&#xA;Inherits NmeaSentence" />
+  <TypeSignature Language="F#" Value="type BearingAndDistanceToWayPoint = class&#xA;    inherit NmeaSentence" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Nmea0183.Sentences.NmeaSentence</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            BWC message: Contains direction to the next waypoint, calculated on the great circle
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BearingAndDistanceToWayPoint (Iot.Device.Nmea0183.TalkerSentence sentence, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Nmea0183.TalkerSentence sentence, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sentence As TalkerSentence, time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint : Iot.Device.Nmea0183.TalkerSentence * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint" Usage="new Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint (sentence, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sentence" Type="Iot.Device.Nmea0183.TalkerSentence" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="sentence">Sentence to decompose</param>
+        <param name="time">Current time</param>
+        <summary>
+            Create a new instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BearingAndDistanceToWayPoint (Iot.Device.Nmea0183.TalkerId talkerId, System.Collections.Generic.IEnumerable&lt;string&gt; fields, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Nmea0183.TalkerId talkerId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; fields, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (talkerId As TalkerId, fields As IEnumerable(Of String), time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint : Iot.Device.Nmea0183.TalkerId * seq&lt;string&gt; * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint" Usage="new Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint (talkerId, fields, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="talkerId" Type="Iot.Device.Nmea0183.TalkerId" />
+        <Parameter Name="fields" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="talkerId">To be added.</param>
+        <param name="fields">To be added.</param>
+        <param name="time">To be added.</param>
+        <summary>
+            Internal ctor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public BearingAndDistanceToWayPoint (DateTimeOffset dateTime, string nextWayPointName, Iot.Device.Common.GeographicPosition nextWayPoint, UnitsNet.Length distanceToWayPoint, UnitsNet.Angle bearingTrueToWayPoint, UnitsNet.Angle bearingMagneticToWayPoint);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.DateTimeOffset dateTime, string nextWayPointName, class Iot.Device.Common.GeographicPosition nextWayPoint, valuetype UnitsNet.Length distanceToWayPoint, valuetype UnitsNet.Angle bearingTrueToWayPoint, valuetype UnitsNet.Angle bearingMagneticToWayPoint) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.#ctor(System.DateTimeOffset,System.String,Iot.Device.Common.GeographicPosition,UnitsNet.Length,UnitsNet.Angle,UnitsNet.Angle)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (dateTime As DateTimeOffset, nextWayPointName As String, nextWayPoint As GeographicPosition, distanceToWayPoint As Length, bearingTrueToWayPoint As Angle, bearingMagneticToWayPoint As Angle)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint : DateTimeOffset * string * Iot.Device.Common.GeographicPosition * UnitsNet.Length * UnitsNet.Angle * UnitsNet.Angle -&gt; Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint" Usage="new Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint (dateTime, nextWayPointName, nextWayPoint, distanceToWayPoint, bearingTrueToWayPoint, bearingMagneticToWayPoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="dateTime" Type="System.DateTimeOffset" />
+        <Parameter Name="nextWayPointName" Type="System.String" />
+        <Parameter Name="nextWayPoint" Type="Iot.Device.Common.GeographicPosition" />
+        <Parameter Name="distanceToWayPoint" Type="UnitsNet.Length" />
+        <Parameter Name="bearingTrueToWayPoint" Type="UnitsNet.Angle" />
+        <Parameter Name="bearingMagneticToWayPoint" Type="UnitsNet.Angle" />
+      </Parameters>
+      <Docs>
+        <param name="dateTime">Current time</param>
+        <param name="nextWayPointName">Name of next waypoint</param>
+        <param name="nextWayPoint">Position of next waypoint</param>
+        <param name="distanceToWayPoint">Distance to next waypoint</param>
+        <param name="bearingTrueToWayPoint">Bearing to next waypoint, in degrees true</param>
+        <param name="bearingMagneticToWayPoint">Bearing to next waypoint, in degrees magnetic</param>
+        <summary>
+            Create a new sentence
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BearingMagneticToWayPoint">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? BearingMagneticToWayPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; BearingMagneticToWayPoint" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.BearingMagneticToWayPoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BearingMagneticToWayPoint As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.BearingMagneticToWayPoint : Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.BearingMagneticToWayPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Magnetic bearing to the waypoint
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BearingTrueToWayPoint">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? BearingTrueToWayPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; BearingTrueToWayPoint" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.BearingTrueToWayPoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property BearingTrueToWayPoint As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.BearingTrueToWayPoint : Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.BearingTrueToWayPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True bearing to waypoint
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistanceToWayPoint">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length? DistanceToWayPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Length&gt; DistanceToWayPoint" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.DistanceToWayPoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DistanceToWayPoint As Nullable(Of Length)" />
+      <MemberSignature Language="F#" Value="member this.DistanceToWayPoint : Nullable&lt;UnitsNet.Length&gt;" Usage="Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.DistanceToWayPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Length&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Distance to next waypoint
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Nmea0183.SentenceId Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype Iot.Device.Nmea0183.SentenceId Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Id As SentenceId" />
+      <MemberSignature Language="F#" Value="member this.Id : Iot.Device.Nmea0183.SentenceId" Usage="Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The id of this message is "BWC"
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextWayPoint">
+      <MemberSignature Language="C#" Value="public Iot.Device.Common.GeographicPosition NextWayPoint { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Common.GeographicPosition NextWayPoint" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.NextWayPoint" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NextWayPoint As GeographicPosition" />
+      <MemberSignature Language="F#" Value="member this.NextWayPoint : Iot.Device.Common.GeographicPosition" Usage="Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.NextWayPoint" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Common.GeographicPosition</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Position of next waypoint (the waypoint we're heading to)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NextWayPointName">
+      <MemberSignature Language="C#" Value="public string NextWayPointName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string NextWayPointName" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.NextWayPointName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NextWayPointName As String" />
+      <MemberSignature Language="F#" Value="member this.NextWayPointName : string" Usage="Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.NextWayPointName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of next waypoint
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplacesOlderInstance">
+      <MemberSignature Language="C#" Value="public override bool ReplacesOlderInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReplacesOlderInstance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.ReplacesOlderInstance" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ReplacesOlderInstance As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReplacesOlderInstance : bool" Usage="Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.ReplacesOlderInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This is true for this message type
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToNmeaParameterList">
+      <MemberSignature Language="C#" Value="public override string ToNmeaParameterList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToNmeaParameterList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.ToNmeaParameterList" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToNmeaParameterList () As String" />
+      <MemberSignature Language="F#" Value="override this.ToNmeaParameterList : unit -&gt; string" Usage="bearingAndDistanceToWayPoint.ToNmeaParameterList " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ToReadableContent">
+      <MemberSignature Language="C#" Value="public override string ToReadableContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToReadableContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.ToReadableContent" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToReadableContent () As String" />
+      <MemberSignature Language="F#" Value="override this.ToReadableContent : unit -&gt; string" Usage="bearingAndDistanceToWayPoint.ToReadableContent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

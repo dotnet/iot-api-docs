@@ -1,0 +1,256 @@
+<Type Name="FilterRule" FullName="Iot.Device.Nmea0183.FilterRule">
+  <TypeSignature Language="C#" Value="public class FilterRule" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FilterRule extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.FilterRule" />
+  <TypeSignature Language="VB.NET" Value="Public Class FilterRule" />
+  <TypeSignature Language="F#" Value="type FilterRule = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            A filter rule for the <see cref="T:Iot.Device.Nmea0183.MessageRouter" />.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FilterRule (string sourceName, Iot.Device.Nmea0183.TalkerId talkerId, Iot.Device.Nmea0183.SentenceId sentenceId, System.Collections.Generic.IEnumerable&lt;string&gt; sinks, bool rawMessagesOnly = true, bool continueAfterMatch = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sourceName, valuetype Iot.Device.Nmea0183.TalkerId talkerId, valuetype Iot.Device.Nmea0183.SentenceId sentenceId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; sinks, bool rawMessagesOnly, bool continueAfterMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.FilterRule.#ctor(System.String,Iot.Device.Nmea0183.TalkerId,Iot.Device.Nmea0183.SentenceId,System.Collections.Generic.IEnumerable{System.String},System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sourceName As String, talkerId As TalkerId, sentenceId As SentenceId, sinks As IEnumerable(Of String), Optional rawMessagesOnly As Boolean = true, Optional continueAfterMatch As Boolean = false)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.FilterRule : string * Iot.Device.Nmea0183.TalkerId * Iot.Device.Nmea0183.SentenceId * seq&lt;string&gt; * bool * bool -&gt; Iot.Device.Nmea0183.FilterRule" Usage="new Iot.Device.Nmea0183.FilterRule (sourceName, talkerId, sentenceId, sinks, rawMessagesOnly, continueAfterMatch)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceName" Type="System.String" />
+        <Parameter Name="talkerId" Type="Iot.Device.Nmea0183.TalkerId" />
+        <Parameter Name="sentenceId" Type="Iot.Device.Nmea0183.SentenceId" />
+        <Parameter Name="sinks" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="rawMessagesOnly" Type="System.Boolean" />
+        <Parameter Name="continueAfterMatch" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sourceName">Name of the source (Nmea stream name) for which the filter applies or * for all</param>
+        <param name="talkerId">TalkerId for which the rule applies or <see cref="P:Iot.Device.Nmea0183.TalkerId.Any" /></param>
+        <param name="sentenceId">SentenceId for which the rule applies or <see cref="P:Iot.Device.Nmea0183.SentenceId.Any" /></param>
+        <param name="sinks">Where to send the message when the filter matches</param>
+        <param name="rawMessagesOnly">The filter matches raw messages only. This is the default, because otherwise known message
+            types would be implicitly duplicated on forwarding</param>
+        <param name="continueAfterMatch">True to continue processing after a match, false to stop processing this message</param>
+        <summary>
+            A standard filter rule. When the filter matches
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FilterRule (string sourceName, Iot.Device.Nmea0183.TalkerId talkerId, Iot.Device.Nmea0183.SentenceId sentenceId, System.Collections.Generic.IEnumerable&lt;string&gt; sinks, Func&lt;Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.Sentences.NmeaSentence,Iot.Device.Nmea0183.Sentences.NmeaSentence&gt; forwardingAction, bool rawMessagesOnly = true, bool continueAfterMatch = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string sourceName, valuetype Iot.Device.Nmea0183.TalkerId talkerId, valuetype Iot.Device.Nmea0183.SentenceId sentenceId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; sinks, class System.Func`4&lt;class Iot.Device.Nmea0183.NmeaSinkAndSource, class Iot.Device.Nmea0183.NmeaSinkAndSource, class Iot.Device.Nmea0183.Sentences.NmeaSentence, class Iot.Device.Nmea0183.Sentences.NmeaSentence&gt; forwardingAction, bool rawMessagesOnly, bool continueAfterMatch) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.FilterRule.#ctor(System.String,Iot.Device.Nmea0183.TalkerId,Iot.Device.Nmea0183.SentenceId,System.Collections.Generic.IEnumerable{System.String},System.Func{Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.Sentences.NmeaSentence,Iot.Device.Nmea0183.Sentences.NmeaSentence},System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sourceName As String, talkerId As TalkerId, sentenceId As SentenceId, sinks As IEnumerable(Of String), forwardingAction As Func(Of NmeaSinkAndSource, NmeaSinkAndSource, NmeaSentence, NmeaSentence), Optional rawMessagesOnly As Boolean = true, Optional continueAfterMatch As Boolean = false)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.FilterRule : string * Iot.Device.Nmea0183.TalkerId * Iot.Device.Nmea0183.SentenceId * seq&lt;string&gt; * Func&lt;Iot.Device.Nmea0183.NmeaSinkAndSource, Iot.Device.Nmea0183.NmeaSinkAndSource, Iot.Device.Nmea0183.Sentences.NmeaSentence, Iot.Device.Nmea0183.Sentences.NmeaSentence&gt; * bool * bool -&gt; Iot.Device.Nmea0183.FilterRule" Usage="new Iot.Device.Nmea0183.FilterRule (sourceName, talkerId, sentenceId, sinks, forwardingAction, rawMessagesOnly, continueAfterMatch)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sourceName" Type="System.String" />
+        <Parameter Name="talkerId" Type="Iot.Device.Nmea0183.TalkerId" />
+        <Parameter Name="sentenceId" Type="Iot.Device.Nmea0183.SentenceId" />
+        <Parameter Name="sinks" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="forwardingAction" Type="System.Func&lt;Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.Sentences.NmeaSentence,Iot.Device.Nmea0183.Sentences.NmeaSentence&gt;" />
+        <Parameter Name="rawMessagesOnly" Type="System.Boolean" />
+        <Parameter Name="continueAfterMatch" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="sourceName">Name of the source (Nmea stream name) for which the filter applies or * for all</param>
+        <param name="talkerId">TalkerId for which the rule applies or <see cref="P:Iot.Device.Nmea0183.TalkerId.Any" /></param>
+        <param name="sentenceId">SentenceId for which the rule applies or <see cref="P:Iot.Device.Nmea0183.SentenceId.Any" /></param>
+        <param name="sinks">Where to send the message when the filter matches</param>
+        <param name="forwardingAction">When the message is about to be sent, this method is called that can modify the
+            message. First arg is the source of the message, second the designated sink.</param>
+        <param name="rawMessagesOnly">The filter matches raw messages only. This is the default, because otherwise known message
+            types would be implicitly duplicated on forwarding</param>
+        <param name="continueAfterMatch">True to continue processing after a match, false to stop processing this message</param>
+        <summary>
+            A standard filter rule. When the filter matches
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinueAfterMatch">
+      <MemberSignature Language="C#" Value="public bool ContinueAfterMatch { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ContinueAfterMatch" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.FilterRule.ContinueAfterMatch" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ContinueAfterMatch As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ContinueAfterMatch : bool" Usage="Iot.Device.Nmea0183.FilterRule.ContinueAfterMatch" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If this is true, filter testing is continued even after a match.
+            If it is false (the default), no further filters are tested after the first match (which typically means
+            that a message is only matching one filter)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ForwardingAction">
+      <MemberSignature Language="C#" Value="public Func&lt;Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.Sentences.NmeaSentence,Iot.Device.Nmea0183.Sentences.NmeaSentence&gt;? ForwardingAction { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Func`4&lt;class Iot.Device.Nmea0183.NmeaSinkAndSource, class Iot.Device.Nmea0183.NmeaSinkAndSource, class Iot.Device.Nmea0183.Sentences.NmeaSentence, class Iot.Device.Nmea0183.Sentences.NmeaSentence&gt; ForwardingAction" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.FilterRule.ForwardingAction" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ForwardingAction As Func(Of NmeaSinkAndSource, NmeaSinkAndSource, NmeaSentence, NmeaSentence)" />
+      <MemberSignature Language="F#" Value="member this.ForwardingAction : Func&lt;Iot.Device.Nmea0183.NmeaSinkAndSource, Iot.Device.Nmea0183.NmeaSinkAndSource, Iot.Device.Nmea0183.Sentences.NmeaSentence, Iot.Device.Nmea0183.Sentences.NmeaSentence&gt;" Usage="Iot.Device.Nmea0183.FilterRule.ForwardingAction" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Func&lt;Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.Sentences.NmeaSentence,Iot.Device.Nmea0183.Sentences.NmeaSentence&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If non-null, this action can modify the message before it is being sent to the
+            indicated sink.
+            Note that the input message shall not be modified, clone it if necessary.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SentenceId">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.SentenceId SentenceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nmea0183.SentenceId SentenceId" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.FilterRule.SentenceId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SentenceId As SentenceId" />
+      <MemberSignature Language="F#" Value="member this.SentenceId : Iot.Device.Nmea0183.SentenceId" Usage="Iot.Device.Nmea0183.FilterRule.SentenceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            SentenceId for which this filter applies
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SentenceMatch">
+      <MemberSignature Language="C#" Value="public bool SentenceMatch (string nmeaSource, Iot.Device.Nmea0183.Sentences.NmeaSentence sentence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SentenceMatch(string nmeaSource, class Iot.Device.Nmea0183.Sentences.NmeaSentence sentence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.FilterRule.SentenceMatch(System.String,Iot.Device.Nmea0183.Sentences.NmeaSentence)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SentenceMatch (nmeaSource As String, sentence As NmeaSentence) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SentenceMatch : string * Iot.Device.Nmea0183.Sentences.NmeaSentence -&gt; bool" Usage="filterRule.SentenceMatch (nmeaSource, sentence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="nmeaSource" Type="System.String" />
+        <Parameter Name="sentence" Type="Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+      </Parameters>
+      <Docs>
+        <param name="nmeaSource">To be added.</param>
+        <param name="sentence">To be added.</param>
+        <summary>
+            True if this filter matches the given sentence and source
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sinks">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;string&gt; Sinks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IEnumerable`1&lt;string&gt; Sinks" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.FilterRule.Sinks" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Sinks As IEnumerable(Of String)" />
+      <MemberSignature Language="F#" Value="member this.Sinks : seq&lt;string&gt;" Usage="Iot.Device.Nmea0183.FilterRule.Sinks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Action this filter performs
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SourceName">
+      <MemberSignature Language="C#" Value="public string SourceName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SourceName" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.FilterRule.SourceName" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SourceName As String" />
+      <MemberSignature Language="F#" Value="member this.SourceName : string" Usage="Iot.Device.Nmea0183.FilterRule.SourceName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Name of the source for which this filter shall apply
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TalkerId">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.TalkerId TalkerId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nmea0183.TalkerId TalkerId" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.FilterRule.TalkerId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TalkerId As TalkerId" />
+      <MemberSignature Language="F#" Value="member this.TalkerId : Iot.Device.Nmea0183.TalkerId" Usage="Iot.Device.Nmea0183.FilterRule.TalkerId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.TalkerId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            TalkerId for which this filter applies
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

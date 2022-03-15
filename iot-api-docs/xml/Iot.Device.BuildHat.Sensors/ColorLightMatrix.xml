@@ -1,0 +1,151 @@
+<Type Name="ColorLightMatrix" FullName="Iot.Device.BuildHat.Sensors.ColorLightMatrix">
+  <TypeSignature Language="C#" Value="public class ColorLightMatrix : Iot.Device.BuildHat.Sensors.ActiveSensor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ColorLightMatrix extends Iot.Device.BuildHat.Sensors.ActiveSensor" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.BuildHat.Sensors.ColorLightMatrix" />
+  <TypeSignature Language="VB.NET" Value="Public Class ColorLightMatrix&#xA;Inherits ActiveSensor" />
+  <TypeSignature Language="F#" Value="type ColorLightMatrix = class&#xA;    inherit ActiveSensor" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <AssemblyVersion>2.1.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.BuildHat.Sensors.ActiveSensor</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            SPIKE 3x3 color light matrix.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected internal ColorLightMatrix (Iot.Device.BuildHat.Brick brick, Iot.Device.BuildHat.Models.SensorPort port);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig specialname rtspecialname instance void .ctor(class Iot.Device.BuildHat.Brick brick, valuetype Iot.Device.BuildHat.Models.SensorPort port) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Sensors.ColorLightMatrix.#ctor(Iot.Device.BuildHat.Brick,Iot.Device.BuildHat.Models.SensorPort)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Sub New (brick As Brick, port As SensorPort)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.BuildHat.Sensors.ColorLightMatrix : Iot.Device.BuildHat.Brick * Iot.Device.BuildHat.Models.SensorPort -&gt; Iot.Device.BuildHat.Sensors.ColorLightMatrix" Usage="new Iot.Device.BuildHat.Sensors.ColorLightMatrix (brick, port)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="brick" Type="Iot.Device.BuildHat.Brick" />
+        <Parameter Name="port" Type="Iot.Device.BuildHat.Models.SensorPort" />
+      </Parameters>
+      <Docs>
+        <param name="brick">The brick.</param>
+        <param name="port">The port.</param>
+        <summary>
+            Color light matrix.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayColor">
+      <MemberSignature Language="C#" Value="public void DisplayColor (Iot.Device.BuildHat.Models.LedColor color);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DisplayColor(valuetype Iot.Device.BuildHat.Models.LedColor color) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Sensors.ColorLightMatrix.DisplayColor(Iot.Device.BuildHat.Models.LedColor)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DisplayColor (color As LedColor)" />
+      <MemberSignature Language="F#" Value="member this.DisplayColor : Iot.Device.BuildHat.Models.LedColor -&gt; unit" Usage="colorLightMatrix.DisplayColor color" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="color" Type="Iot.Device.BuildHat.Models.LedColor" />
+      </Parameters>
+      <Docs>
+        <param name="color">The color to use.</param>
+        <summary>
+            Displays the 9 leds with the same color.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayColorPerPixel">
+      <MemberSignature Language="C#" Value="public void DisplayColorPerPixel (ReadOnlySpan&lt;byte&gt; brightness, ReadOnlySpan&lt;Iot.Device.BuildHat.Models.LedColor&gt; colors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DisplayColorPerPixel(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; brightness, valuetype System.ReadOnlySpan`1&lt;valuetype Iot.Device.BuildHat.Models.LedColor&gt; colors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Sensors.ColorLightMatrix.DisplayColorPerPixel(System.ReadOnlySpan{System.Byte},System.ReadOnlySpan{Iot.Device.BuildHat.Models.LedColor})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DisplayColorPerPixel (brightness As ReadOnlySpan(Of Byte), colors As ReadOnlySpan(Of LedColor))" />
+      <MemberSignature Language="F#" Value="member this.DisplayColorPerPixel : ReadOnlySpan&lt;byte&gt; * ReadOnlySpan&lt;Iot.Device.BuildHat.Models.LedColor&gt; -&gt; unit" Usage="colorLightMatrix.DisplayColorPerPixel (brightness, colors)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="brightness" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+        <Parameter Name="colors" Type="System.ReadOnlySpan&lt;Iot.Device.BuildHat.Models.LedColor&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="brightness">The brichtness from 0 (off) to 10 (full). Must be 9 elements.</param>
+        <param name="colors">The color. Must be 9 elements.</param>
+        <summary>
+            Displays each pixel with a color and brightness
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisplayProgressBar">
+      <MemberSignature Language="C#" Value="public void DisplayProgressBar (byte progress);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DisplayProgressBar(unsigned int8 progress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.BuildHat.Sensors.ColorLightMatrix.DisplayProgressBar(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DisplayProgressBar (progress As Byte)" />
+      <MemberSignature Language="F#" Value="member this.DisplayProgressBar : byte -&gt; unit" Usage="colorLightMatrix.DisplayProgressBar progress" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="progress" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="progress">The progress bar from 0 to 9.</param>
+        <summary>
+            Displays a progress bar style from 0 to 9.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SensorName">
+      <MemberSignature Language="C#" Value="public override string SensorName { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string SensorName" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.BuildHat.Sensors.ColorLightMatrix.SensorName" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property SensorName As String" />
+      <MemberSignature Language="F#" Value="member this.SensorName : string" Usage="Iot.Device.BuildHat.Sensors.ColorLightMatrix.SensorName" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.0.0.0</AssemblyVersion>
+        <AssemblyVersion>2.1.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>
