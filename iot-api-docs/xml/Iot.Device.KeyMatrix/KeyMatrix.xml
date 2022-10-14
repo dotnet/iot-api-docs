@@ -11,6 +11,7 @@
     <AssemblyVersion>1.5.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -41,6 +42,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="outputPins" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" />
@@ -54,6 +56,38 @@
         <param name="inputPins">Input pins</param>
         <param name="scanInterval">Scanning interval in milliseconds</param>
         <param name="gpioController">GPIO controller</param>
+        <param name="shouldDispose">True to dispose the GpioController</param>
+        <summary>
+            Initialize key matrix
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public KeyMatrix (System.Collections.Generic.IEnumerable&lt;int&gt; outputPins, System.Collections.Generic.IEnumerable&lt;int&gt; inputPins, TimeSpan scanInterval, System.Device.Gpio.PinMode inputPinMode, System.Device.Gpio.GpioController? gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Collections.Generic.IEnumerable`1&lt;int32&gt; outputPins, class System.Collections.Generic.IEnumerable`1&lt;int32&gt; inputPins, valuetype System.TimeSpan scanInterval, valuetype System.Device.Gpio.PinMode inputPinMode, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.KeyMatrix.KeyMatrix.#ctor(System.Collections.Generic.IEnumerable{System.Int32},System.Collections.Generic.IEnumerable{System.Int32},System.TimeSpan,System.Device.Gpio.PinMode,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (outputPins As IEnumerable(Of Integer), inputPins As IEnumerable(Of Integer), scanInterval As TimeSpan, inputPinMode As PinMode, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.KeyMatrix.KeyMatrix : seq&lt;int&gt; * seq&lt;int&gt; * TimeSpan * System.Device.Gpio.PinMode * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.KeyMatrix.KeyMatrix" Usage="new Iot.Device.KeyMatrix.KeyMatrix (outputPins, inputPins, scanInterval, inputPinMode, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="outputPins" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="inputPins" Type="System.Collections.Generic.IEnumerable&lt;System.Int32&gt;" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="scanInterval" Type="System.TimeSpan" Index="2" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="inputPinMode" Type="System.Device.Gpio.PinMode" Index="3" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" Index="4" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="5" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="outputPins">Output pins</param>
+        <param name="inputPins">Input pins</param>
+        <param name="scanInterval">Scanning interval in milliseconds</param>
+        <param name="gpioController">GPIO controller</param>
+        <param name="inputPinMode">Mode for input pins - Input / InputPullDown</param>
         <param name="shouldDispose">True to dispose the GpioController</param>
         <summary>
             Initialize key matrix
@@ -78,6 +112,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -103,6 +138,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Int32&gt;</ReturnType>
@@ -129,6 +165,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ReadOnlySpan&lt;System.Device.Gpio.PinValue&gt;</ReturnType>
@@ -159,6 +196,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.KeyMatrix.KeyMatrix+KeyEventHandler</ReturnType>
@@ -184,6 +222,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Int32&gt;</ReturnType>
@@ -210,6 +249,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.KeyMatrix.KeyMatrixEvent</ReturnType>
@@ -237,6 +277,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -263,6 +304,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -289,6 +331,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -315,6 +358,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ReadOnlySpan&lt;System.Device.Gpio.PinValue&gt;</ReturnType>
