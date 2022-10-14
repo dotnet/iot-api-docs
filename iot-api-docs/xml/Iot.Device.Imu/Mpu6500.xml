@@ -1,9 +1,13 @@
 <Type Name="Mpu6500" FullName="Iot.Device.Imu.Mpu6500">
-  <TypeSignature Language="C#" Value="public class Mpu6500 : IDisposable" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Mpu6500 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="C#" Value="public class Mpu6500 : IDisposable" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Mpu6500 extends System.Object implements class System.IDisposable" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
   <TypeSignature Language="DocId" Value="T:Iot.Device.Imu.Mpu6500" />
-  <TypeSignature Language="VB.NET" Value="Public Class Mpu6500&#xA;Implements IDisposable" />
-  <TypeSignature Language="F#" Value="type Mpu6500 = class&#xA;    interface IDisposable" />
+  <TypeSignature Language="VB.NET" Value="Public Class Mpu6500&#xA;Implements IDisposable" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+  <TypeSignature Language="F#" Value="type Mpu6500 = class&#xA;    interface IDisposable" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+  <TypeSignature Language="C#" Value="public class Mpu6500 : Iot.Device.Imu.Mpu6050" FrameworkAlternate="iot-dotnet-latest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Mpu6500 extends Iot.Device.Imu.Mpu6050" FrameworkAlternate="iot-dotnet-latest" />
+  <TypeSignature Language="VB.NET" Value="Public Class Mpu6500&#xA;Inherits Mpu6050" FrameworkAlternate="iot-dotnet-latest" />
+  <TypeSignature Language="F#" Value="type Mpu6500 = class&#xA;    inherit Mpu6050" FrameworkAlternate="iot-dotnet-latest" />
   <AssemblyInfo>
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>1.1.0.0</AssemblyVersion>
@@ -13,17 +17,19 @@
     <AssemblyVersion>1.5.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="iot-dotnet-latest">Iot.Device.Imu.Mpu6050</BaseTypeName>
   </Base>
   <Interfaces>
-    <Interface>
+    <Interface FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1">
       <InterfaceName>System.IDisposable</InterfaceName>
     </Interface>
   </Interfaces>
   <Attributes>
-    <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1">
+    <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest">
       <AttributeName Language="C#">[System.Device.Model.Interface("MPU6500 - gyroscope, accelerometer and temperature sensor")]</AttributeName>
       <AttributeName Language="F#">[&lt;System.Device.Model.Interface("MPU6500 - gyroscope, accelerometer and temperature sensor")&gt;]</AttributeName>
     </Attribute>
@@ -51,6 +57,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
@@ -235,11 +242,12 @@
       </Docs>
     </Member>
     <Member MemberName="CalibrateGyroscopeAccelerometer">
-      <MemberSignature Language="C#" Value="public (System.Numerics.Vector3,System.Numerics.Vector3) CalibrateGyroscopeAccelerometer ();" />
+      <MemberSignature Language="C#" Value="public (System.Numerics.Vector3 gyroscopeBias, System.Numerics.Vector3 accelerometerBias) CalibrateGyroscopeAccelerometer ();" FrameworkAlternate="iot-dotnet-1.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.ValueTuple`2&lt;valuetype System.Numerics.Vector3, valuetype System.Numerics.Vector3&gt; CalibrateGyroscopeAccelerometer() cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Imu.Mpu6500.CalibrateGyroscopeAccelerometer" />
       <MemberSignature Language="VB.NET" Value="Public Function CalibrateGyroscopeAccelerometer () As ValueTuple(Of Vector3, Vector3)" />
       <MemberSignature Language="F#" Value="member this.CalibrateGyroscopeAccelerometer : unit -&gt; ValueTuple&lt;System.Numerics.Vector3, System.Numerics.Vector3&gt;" Usage="mpu6500.CalibrateGyroscopeAccelerometer " />
+      <MemberSignature Language="C#" Value="public (System.Numerics.Vector3 GyroscopeBias, System.Numerics.Vector3 AccelerometerBias) CalibrateGyroscopeAccelerometer ();" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -771,7 +779,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="readData" Type="System.Span&lt;System.Byte&gt;" />
+        <Parameter Name="readData" Type="System.Span&lt;System.Byte&gt;" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="readData">Data which will be read</param>
@@ -794,11 +802,12 @@
       </Docs>
     </Member>
     <Member MemberName="RunGyroscopeAccelerometerSelfTest">
-      <MemberSignature Language="C#" Value="public (System.Numerics.Vector3,System.Numerics.Vector3) RunGyroscopeAccelerometerSelfTest ();" />
+      <MemberSignature Language="C#" Value="public (System.Numerics.Vector3 gyroscopeAverage, System.Numerics.Vector3 accelerometerAverage) RunGyroscopeAccelerometerSelfTest ();" FrameworkAlternate="iot-dotnet-1.1" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.ValueTuple`2&lt;valuetype System.Numerics.Vector3, valuetype System.Numerics.Vector3&gt; RunGyroscopeAccelerometerSelfTest() cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Imu.Mpu6500.RunGyroscopeAccelerometerSelfTest" />
       <MemberSignature Language="VB.NET" Value="Public Function RunGyroscopeAccelerometerSelfTest () As ValueTuple(Of Vector3, Vector3)" />
       <MemberSignature Language="F#" Value="member this.RunGyroscopeAccelerometerSelfTest : unit -&gt; ValueTuple&lt;System.Numerics.Vector3, System.Numerics.Vector3&gt;" Usage="mpu6500.RunGyroscopeAccelerometerSelfTest " />
+      <MemberSignature Language="C#" Value="public (System.Numerics.Vector3 GyroscopeAverage, System.Numerics.Vector3 AccelerometerAverage) RunGyroscopeAccelerometerSelfTest ();" FrameworkAlternate="iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -809,9 +818,10 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Attributes>
-        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1">
+        <Attribute FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest">
           <AttributeName Language="C#">[System.Device.Model.Command(null, null)]</AttributeName>
           <AttributeName Language="F#">[&lt;System.Device.Model.Command(null, null)&gt;]</AttributeName>
         </Attribute>
@@ -947,8 +957,8 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="accelerometerThreshold" Type="System.UInt32" />
-        <Parameter Name="acceleratorLowPower" Type="Iot.Device.Imu.AccelerometerLowPowerFrequency" />
+        <Parameter Name="accelerometerThreshold" Type="System.UInt32" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="acceleratorLowPower" Type="Iot.Device.Imu.AccelerometerLowPowerFrequency" Index="1" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="accelerometerThreshold">Threshold of magnetometer x/y/z axes. LSB = 4mg. Range is 0mg to 1020mg</param>

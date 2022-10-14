@@ -10,6 +10,7 @@
     <AssemblyVersion>1.5.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -41,10 +42,35 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
-        <summary>To be added.</summary>
+        <summary>
+            Constructs a console logger with the default log level.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public SimpleConsoleLoggerFactory (Microsoft.Extensions.Logging.LogLevel minLogLevel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Microsoft.Extensions.Logging.LogLevel minLogLevel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.SimpleConsoleLoggerFactory.#ctor(Microsoft.Extensions.Logging.LogLevel)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (minLogLevel As LogLevel)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Common.SimpleConsoleLoggerFactory : Microsoft.Extensions.Logging.LogLevel -&gt; Iot.Device.Common.SimpleConsoleLoggerFactory" Usage="new Iot.Device.Common.SimpleConsoleLoggerFactory minLogLevel" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="minLogLevel" Type="Microsoft.Extensions.Logging.LogLevel" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="minLogLevel">Minimum log level to use</param>
+        <summary>
+            Constructs a logger factory that creates loggers with the given log level
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -64,6 +90,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -95,6 +122,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Microsoft.Extensions.Logging.ILogger</ReturnType>
@@ -126,6 +154,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -135,6 +164,29 @@
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
         <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="MinLogLevel">
+      <MemberSignature Language="C#" Value="public Microsoft.Extensions.Logging.LogLevel MinLogLevel { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Microsoft.Extensions.Logging.LogLevel MinLogLevel" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Common.SimpleConsoleLoggerFactory.MinLogLevel" />
+      <MemberSignature Language="VB.NET" Value="Public Property MinLogLevel As LogLevel" />
+      <MemberSignature Language="F#" Value="member this.MinLogLevel : Microsoft.Extensions.Logging.LogLevel with get, set" Usage="Iot.Device.Common.SimpleConsoleLoggerFactory.MinLogLevel" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Microsoft.Extensions.Logging.LogLevel</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sets the log level for new loggers.
+            Note that changing this value will only affect new loggers
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>

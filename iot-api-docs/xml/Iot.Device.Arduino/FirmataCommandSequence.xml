@@ -1,18 +1,27 @@
 <Type Name="FirmataCommandSequence" FullName="Iot.Device.Arduino.FirmataCommandSequence">
-  <TypeSignature Language="C#" Value="public class FirmataCommandSequence" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FirmataCommandSequence extends System.Object" />
+  <TypeSignature Language="C#" Value="public class FirmataCommandSequence" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FirmataCommandSequence extends System.Object" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
   <TypeSignature Language="DocId" Value="T:Iot.Device.Arduino.FirmataCommandSequence" />
-  <TypeSignature Language="VB.NET" Value="Public Class FirmataCommandSequence" />
-  <TypeSignature Language="F#" Value="type FirmataCommandSequence = class" />
+  <TypeSignature Language="VB.NET" Value="Public Class FirmataCommandSequence" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+  <TypeSignature Language="F#" Value="type FirmataCommandSequence = class" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+  <TypeSignature Language="C#" Value="public class FirmataCommandSequence : IEquatable&lt;Iot.Device.Arduino.FirmataCommandSequence&gt;" FrameworkAlternate="iot-dotnet-latest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FirmataCommandSequence extends System.Object implements class System.IEquatable`1&lt;class Iot.Device.Arduino.FirmataCommandSequence&gt;" FrameworkAlternate="iot-dotnet-latest" />
+  <TypeSignature Language="VB.NET" Value="Public Class FirmataCommandSequence&#xA;Implements IEquatable(Of FirmataCommandSequence)" FrameworkAlternate="iot-dotnet-latest" />
+  <TypeSignature Language="F#" Value="type FirmataCommandSequence = class&#xA;    interface IEquatable&lt;FirmataCommandSequence&gt;" FrameworkAlternate="iot-dotnet-latest" />
   <AssemblyInfo>
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface FrameworkAlternate="iot-dotnet-latest">
+      <InterfaceName>System.IEquatable&lt;Iot.Device.Arduino.FirmataCommandSequence&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Docs>
     <summary>
             A firmata command sequence
@@ -31,12 +40,41 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>
             Create a new sysex command sequence. The <see cref="F:Iot.Device.Arduino.FirmataCommandSequence.StartSysex" /> byte is added automatically.
             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DecodeInt14">
+      <MemberSignature Language="C#" Value="public static short DecodeInt14 (byte[] data, int idx);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int16 DecodeInt14(unsigned int8[] data, int32 idx) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.FirmataCommandSequence.DecodeInt14(System.Byte[],System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function DecodeInt14 (data As Byte(), idx As Integer) As Short" />
+      <MemberSignature Language="F#" Value="static member DecodeInt14 : byte[] * int -&gt; int16" Usage="Iot.Device.Arduino.FirmataCommandSequence.DecodeInt14 (data, idx)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="idx" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="data">Data array</param>
+        <param name="idx">Start offset</param>
+        <summary>
+            Decodes a 14-bit integer into a short
+            </summary>
+        <returns />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -51,6 +89,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -81,6 +120,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt32</ReturnType>
@@ -112,6 +152,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte</ReturnType>
@@ -122,6 +163,81 @@
             End of sysex command byte. Must end all sysex commands.
             </summary>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Iot.Device.Arduino.FirmataCommandSequence? other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Iot.Device.Arduino.FirmataCommandSequence other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.FirmataCommandSequence.Equals(Iot.Device.Arduino.FirmataCommandSequence)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As FirmataCommandSequence) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Iot.Device.Arduino.FirmataCommandSequence -&gt; bool" Usage="firmataCommandSequence.Equals other" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Iot.Device.Arduino.FirmataCommandSequence" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.FirmataCommandSequence.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="firmataCommandSequence.Equals obj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.FirmataCommandSequence.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="firmataCommandSequence.GetHashCode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="Length">
@@ -135,6 +251,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -158,6 +275,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -184,6 +302,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -210,6 +329,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IReadOnlyList&lt;System.Byte&gt;</ReturnType>
@@ -233,6 +353,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte</ReturnType>
@@ -243,6 +364,28 @@
             Start of sysex command byte. Used as start byte for almost all extended commands.
             </summary>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Arduino.FirmataCommandSequence.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="firmataCommandSequence.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="Write">
@@ -256,6 +399,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -282,6 +426,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -312,6 +457,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -338,6 +484,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

@@ -14,6 +14,7 @@
     <AssemblyVersion>1.5.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -47,6 +48,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
@@ -77,6 +79,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt16</ReturnType>
@@ -91,6 +94,32 @@
             </summary>
         <returns>A value between 0..1023 that represents the analog value.</returns>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableEncoderInterrupt">
+      <MemberSignature Language="C#" Value="public void DisableEncoderInterrupt (byte encoder = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DisableEncoderInterrupt(unsigned int8 encoder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.DisableEncoderInterrupt(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DisableEncoderInterrupt (Optional encoder As Byte = 0)" />
+      <MemberSignature Language="F#" Value="member this.DisableEncoderInterrupt : byte -&gt; unit" Usage="seesaw.DisableEncoderInterrupt encoder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Which encoder to use, defaults to 0.</param>
+        <summary>
+            Disable the interrupt from firing when the encoder changes.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">The hardware does not support Adafruit SeeSaw encoder functionality.</exception>
       </Docs>
     </Member>
     <Member MemberName="Dispose">
@@ -113,6 +142,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -122,6 +152,86 @@
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
         <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="EnableEncoderInterrupt">
+      <MemberSignature Language="C#" Value="public void EnableEncoderInterrupt (byte encoder = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnableEncoderInterrupt(unsigned int8 encoder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.EnableEncoderInterrupt(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EnableEncoderInterrupt (Optional encoder As Byte = 0)" />
+      <MemberSignature Language="F#" Value="member this.EnableEncoderInterrupt : byte -&gt; unit" Usage="seesaw.EnableEncoderInterrupt encoder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Which encoder to use, defaults to 0.</param>
+        <summary>
+            Enable the interrupt to fire when the encoder changes position.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">The hardware does not support Adafruit SeeSaw encoder functionality.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEncoderDelta">
+      <MemberSignature Language="C#" Value="public int GetEncoderDelta (byte encoder = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetEncoderDelta(unsigned int8 encoder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.GetEncoderDelta(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetEncoderDelta (Optional encoder As Byte = 0) As Integer" />
+      <MemberSignature Language="F#" Value="member this.GetEncoderDelta : byte -&gt; int" Usage="seesaw.GetEncoderDelta encoder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Which encoder to use, defaults to 0.</param>
+        <summary>
+            The change in encoder position since it was last read.
+            </summary>
+        <returns>The encoder change as a 32 bit signed integer.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">The hardware does not support Adafruit SeeSaw encoder functionality.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEncoderPosition">
+      <MemberSignature Language="C#" Value="public int GetEncoderPosition (byte encoder = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetEncoderPosition(unsigned int8 encoder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.GetEncoderPosition(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetEncoderPosition (Optional encoder As Byte = 0) As Integer" />
+      <MemberSignature Language="F#" Value="member this.GetEncoderPosition : byte -&gt; int" Usage="seesaw.GetEncoderPosition encoder" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="encoder" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="encoder">Which encoder to use, defaults to 0.</param>
+        <summary>
+            Read the current position of the encoder.
+            </summary>
+        <returns>The encoder position as a 32 bit signed integer.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">The hardware does not support Adafruit SeeSaw encoder functionality.</exception>
       </Docs>
     </Member>
     <Member MemberName="GetOptions">
@@ -141,6 +251,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt32</ReturnType>
@@ -171,6 +282,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Single</ReturnType>
@@ -201,6 +313,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt32</ReturnType>
@@ -231,6 +344,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -264,6 +378,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.I2c.I2cDevice</ReturnType>
@@ -293,6 +408,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -325,6 +441,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -364,6 +481,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte</ReturnType>
@@ -401,6 +519,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte</ReturnType>
@@ -434,6 +553,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -467,6 +587,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt64</ReturnType>
@@ -500,6 +621,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt32</ReturnType>
@@ -513,6 +635,34 @@
             A 32bit integer containing 1 bit for each for the first 32 bins. If a bit is set to 1 then the interrupt is signaled for the associated pin..
             </returns>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetEncoderPosition">
+      <MemberSignature Language="C#" Value="public void SetEncoderPosition (int position, byte encoder = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetEncoderPosition(int32 position, unsigned int8 encoder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seesaw.Seesaw.SetEncoderPosition(System.Int32,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetEncoderPosition (position As Integer, Optional encoder As Byte = 0)" />
+      <MemberSignature Language="F#" Value="member this.SetEncoderPosition : int * byte -&gt; unit" Usage="seesaw.SetEncoderPosition (position, encoder)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="position" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="encoder" Type="System.Byte" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="position">Encoder position.</param>
+        <param name="encoder">Which encoder to use, defaults to 0.</param>
+        <summary>
+            Set the current position of the encoder.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">The hardware does not support Adafruit SeeSaw encoder functionality.</exception>
       </Docs>
     </Member>
     <Member MemberName="SetGpioInterrupts">
@@ -532,6 +682,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -566,6 +717,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -600,6 +752,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -634,6 +787,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -667,6 +821,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -696,6 +851,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt16</ReturnType>
@@ -729,6 +885,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt32</ReturnType>
@@ -758,6 +915,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -794,6 +952,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -830,6 +989,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -864,6 +1024,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -898,6 +1059,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -932,6 +1094,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

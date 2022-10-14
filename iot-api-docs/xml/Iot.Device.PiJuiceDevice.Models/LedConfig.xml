@@ -11,6 +11,7 @@
     <AssemblyVersion>1.5.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -41,7 +42,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Iot.Device.PiJuiceDevice.Models.LedConfig original) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.LedConfig.#ctor(Iot.Device.PiJuiceDevice.Models.LedConfig)" />
       <MemberSignature Language="VB.NET" Value="Protected Sub New (original As LedConfig)" />
-      <MemberSignature Language="F#" Value="new Iot.Device.PiJuiceDevice.Models.LedConfig : Iot.Device.PiJuiceDevice.Models.LedConfig -&gt; Iot.Device.PiJuiceDevice.Models.LedConfig" Usage="new Iot.Device.PiJuiceDevice.Models.LedConfig original" />
+      <MemberSignature Language="F#" Value="new Iot.Device.PiJuiceDevice.Models.LedConfig : Iot.Device.PiJuiceDevice.Models.LedConfig -&gt; Iot.Device.PiJuiceDevice.Models.LedConfig" Usage="new Iot.Device.PiJuiceDevice.Models.LedConfig original" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -50,6 +51,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="original" Type="Iot.Device.PiJuiceDevice.Models.LedConfig" />
@@ -74,6 +76,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="Led" Type="Iot.Device.PiJuiceDevice.Models.Led" />
@@ -101,7 +104,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Iot.Device.PiJuiceDevice.Models.LedConfig &lt;Clone&gt;$() cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.LedConfig.&lt;Clone&gt;$" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function &lt;Clone&gt;$ () As LedConfig" />
-      <MemberSignature Language="F#" Value="abstract member &lt;Clone&gt;$ : unit -&gt; Iot.Device.PiJuiceDevice.Models.LedConfig&#xA;override this.&lt;Clone&gt;$ : unit -&gt; Iot.Device.PiJuiceDevice.Models.LedConfig" Usage="ledConfig.&lt;Clone&gt;$ " />
+      <MemberSignature Language="F#" Value="abstract member &lt;Clone&gt;$ : unit -&gt; Iot.Device.PiJuiceDevice.Models.LedConfig&#xA;override this.&lt;Clone&gt;$ : unit -&gt; Iot.Device.PiJuiceDevice.Models.LedConfig" Usage="ledConfig.&lt;Clone&gt;$ " FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -110,6 +113,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.PiJuiceDevice.Models.LedConfig</ReturnType>
@@ -122,7 +126,7 @@
       </Docs>
     </Member>
     <Member MemberName="Color">
-      <MemberSignature Language="C#" Value="public System.Drawing.Color Color { get; set; }" />
+      <MemberSignature Language="C#" Value="public System.Drawing.Color Color { get; init; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color Color" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.LedConfig.Color" />
       <MemberSignature Language="VB.NET" Value="Public Property Color As Color" />
@@ -135,12 +139,19 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Drawing.Color</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Color for Led.
+            If LedFunction is ChargeStatus
+            Red - parameter defines color component level of red below 15%
+            Green - parameter defines color component charge level over 50%
+            Blue - parameter defines color component for charging(blink) and fully charged states(constant)
+            Red Led and Green Led will show the charge status between 15% - 50%
+            </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -150,7 +161,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Deconstruct([out] valuetype Iot.Device.PiJuiceDevice.Models.Led&amp; Led, [out] valuetype Iot.Device.PiJuiceDevice.Models.LedFunction&amp; LedFunction, [out] valuetype System.Drawing.Color&amp; Color) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.LedConfig.Deconstruct(Iot.Device.PiJuiceDevice.Models.Led@,Iot.Device.PiJuiceDevice.Models.LedFunction@,System.Drawing.Color@)" />
       <MemberSignature Language="VB.NET" Value="Public Sub Deconstruct (ByRef Led As Led, ByRef LedFunction As LedFunction, ByRef Color As Color)" />
-      <MemberSignature Language="F#" Value="member this.Deconstruct : Led * LedFunction * Color -&gt; unit" Usage="ledConfig.Deconstruct (Led, LedFunction, Color)" />
+      <MemberSignature Language="F#" Value="member this.Deconstruct : Led * LedFunction * Color -&gt; unit" Usage="ledConfig.Deconstruct (Led, LedFunction, Color)" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -159,6 +170,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -190,6 +202,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Type</ReturnType>
@@ -205,7 +218,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Iot.Device.PiJuiceDevice.Models.LedConfig other) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.LedConfig.Equals(Iot.Device.PiJuiceDevice.Models.LedConfig)" />
       <MemberSignature Language="VB.NET" Value="Public Overridable Function Equals (other As LedConfig) As Boolean" />
-      <MemberSignature Language="F#" Value="override this.Equals : Iot.Device.PiJuiceDevice.Models.LedConfig -&gt; bool" Usage="ledConfig.Equals other" />
+      <MemberSignature Language="F#" Value="override this.Equals : Iot.Device.PiJuiceDevice.Models.LedConfig -&gt; bool" Usage="ledConfig.Equals other" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Method</MemberType>
       <Implements>
         <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
@@ -217,6 +230,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -236,7 +250,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.LedConfig.Equals(System.Object)" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
-      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="ledConfig.Equals obj" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="ledConfig.Equals obj" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -245,6 +259,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -264,7 +279,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.LedConfig.GetHashCode" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
-      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="ledConfig.GetHashCode " />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="ledConfig.GetHashCode " FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -273,6 +288,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -285,7 +301,7 @@
       </Docs>
     </Member>
     <Member MemberName="Led">
-      <MemberSignature Language="C#" Value="public Iot.Device.PiJuiceDevice.Models.Led Led { get; set; }" />
+      <MemberSignature Language="C#" Value="public Iot.Device.PiJuiceDevice.Models.Led Led { get; init; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.PiJuiceDevice.Models.Led Led" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.LedConfig.Led" />
       <MemberSignature Language="VB.NET" Value="Public Property Led As Led" />
@@ -298,18 +314,19 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.PiJuiceDevice.Models.Led</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Led designator</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="LedFunction">
-      <MemberSignature Language="C#" Value="public Iot.Device.PiJuiceDevice.Models.LedFunction LedFunction { get; set; }" />
+      <MemberSignature Language="C#" Value="public Iot.Device.PiJuiceDevice.Models.LedFunction LedFunction { get; init; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.PiJuiceDevice.Models.LedFunction LedFunction" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.PiJuiceDevice.Models.LedConfig.LedFunction" />
       <MemberSignature Language="VB.NET" Value="Public Property LedFunction As LedFunction" />
@@ -322,12 +339,13 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.PiJuiceDevice.Models.LedFunction</ReturnType>
       </ReturnValue>
       <Docs>
-        <summary>To be added.</summary>
+        <summary>Led function type</summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
@@ -338,9 +356,9 @@
       <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.LedConfig.op_Equality(Iot.Device.PiJuiceDevice.Models.LedConfig,Iot.Device.PiJuiceDevice.Models.LedConfig)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator == (r1 As LedConfig, r2 As LedConfig) As Boolean" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4" />
       <MemberSignature Language="F#" Value="static member ( = ) : Iot.Device.PiJuiceDevice.Models.LedConfig * Iot.Device.PiJuiceDevice.Models.LedConfig -&gt; bool" Usage="r1 = r2" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4" />
-      <MemberSignature Language="C#" Value="public static bool operator == (Iot.Device.PiJuiceDevice.Models.LedConfig? left, Iot.Device.PiJuiceDevice.Models.LedConfig? right);" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Iot.Device.PiJuiceDevice.Models.LedConfig left, class Iot.Device.PiJuiceDevice.Models.LedConfig right) cil managed" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As LedConfig, right As LedConfig) As Boolean" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="C#" Value="public static bool operator == (Iot.Device.PiJuiceDevice.Models.LedConfig? left, Iot.Device.PiJuiceDevice.Models.LedConfig? right);" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Iot.Device.PiJuiceDevice.Models.LedConfig left, class Iot.Device.PiJuiceDevice.Models.LedConfig right) cil managed" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As LedConfig, right As LedConfig) As Boolean" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest" />
       <MemberSignature Language="F#" Value="static member ( = ) : Iot.Device.PiJuiceDevice.Models.LedConfig * Iot.Device.PiJuiceDevice.Models.LedConfig -&gt; bool" Usage="left = right" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -350,15 +368,16 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="r1" Type="Iot.Device.PiJuiceDevice.Models.LedConfig" Index="0" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4" />
-        <Parameter Name="left" Type="Iot.Device.PiJuiceDevice.Models.LedConfig" Index="0" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="left" Type="Iot.Device.PiJuiceDevice.Models.LedConfig" Index="0" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest" />
         <Parameter Name="r2" Type="Iot.Device.PiJuiceDevice.Models.LedConfig" Index="1" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4" />
-        <Parameter Name="right" Type="Iot.Device.PiJuiceDevice.Models.LedConfig" Index="1" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="right" Type="Iot.Device.PiJuiceDevice.Models.LedConfig" Index="1" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest" />
       </Parameters>
       <Docs>
         <param name="r1">To be added.</param>
@@ -376,9 +395,9 @@
       <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.LedConfig.op_Inequality(Iot.Device.PiJuiceDevice.Models.LedConfig,Iot.Device.PiJuiceDevice.Models.LedConfig)" />
       <MemberSignature Language="VB.NET" Value="Public Shared Operator != (r1 As LedConfig, r2 As LedConfig) As Boolean" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4" />
       <MemberSignature Language="F#" Value="static member op_Inequality : Iot.Device.PiJuiceDevice.Models.LedConfig * Iot.Device.PiJuiceDevice.Models.LedConfig -&gt; bool" Usage="Iot.Device.PiJuiceDevice.Models.LedConfig.op_Inequality (r1, r2)" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4" />
-      <MemberSignature Language="C#" Value="public static bool operator != (Iot.Device.PiJuiceDevice.Models.LedConfig? left, Iot.Device.PiJuiceDevice.Models.LedConfig? right);" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
-      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Iot.Device.PiJuiceDevice.Models.LedConfig left, class Iot.Device.PiJuiceDevice.Models.LedConfig right) cil managed" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
-      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As LedConfig, right As LedConfig) As Boolean" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="C#" Value="public static bool operator != (Iot.Device.PiJuiceDevice.Models.LedConfig? left, Iot.Device.PiJuiceDevice.Models.LedConfig? right);" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Iot.Device.PiJuiceDevice.Models.LedConfig left, class Iot.Device.PiJuiceDevice.Models.LedConfig right) cil managed" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As LedConfig, right As LedConfig) As Boolean" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest" />
       <MemberSignature Language="F#" Value="static member op_Inequality : Iot.Device.PiJuiceDevice.Models.LedConfig * Iot.Device.PiJuiceDevice.Models.LedConfig -&gt; bool" Usage="Iot.Device.PiJuiceDevice.Models.LedConfig.op_Inequality (left, right)" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
@@ -388,15 +407,16 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="r1" Type="Iot.Device.PiJuiceDevice.Models.LedConfig" Index="0" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4" />
-        <Parameter Name="left" Type="Iot.Device.PiJuiceDevice.Models.LedConfig" Index="0" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="left" Type="Iot.Device.PiJuiceDevice.Models.LedConfig" Index="0" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest" />
         <Parameter Name="r2" Type="Iot.Device.PiJuiceDevice.Models.LedConfig" Index="1" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4" />
-        <Parameter Name="right" Type="Iot.Device.PiJuiceDevice.Models.LedConfig" Index="1" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="right" Type="Iot.Device.PiJuiceDevice.Models.LedConfig" Index="1" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest" />
       </Parameters>
       <Docs>
         <param name="r1">To be added.</param>
@@ -413,7 +433,7 @@
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool PrintMembers(class System.Text.StringBuilder builder) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.LedConfig.PrintMembers(System.Text.StringBuilder)" />
       <MemberSignature Language="VB.NET" Value="Protected Overridable Function PrintMembers (builder As StringBuilder) As Boolean" />
-      <MemberSignature Language="F#" Value="abstract member PrintMembers : System.Text.StringBuilder -&gt; bool&#xA;override this.PrintMembers : System.Text.StringBuilder -&gt; bool" Usage="ledConfig.PrintMembers builder" />
+      <MemberSignature Language="F#" Value="abstract member PrintMembers : System.Text.StringBuilder -&gt; bool&#xA;override this.PrintMembers : System.Text.StringBuilder -&gt; bool" Usage="ledConfig.PrintMembers builder" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -422,6 +442,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -441,7 +462,7 @@
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.PiJuiceDevice.Models.LedConfig.ToString" />
       <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
-      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="ledConfig.ToString " />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="ledConfig.ToString " FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -450,6 +471,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
