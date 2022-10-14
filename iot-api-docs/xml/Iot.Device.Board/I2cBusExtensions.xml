@@ -9,6 +9,7 @@
     <AssemblyVersion>1.5.0.0</AssemblyVersion>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -33,6 +34,7 @@
         <AssemblyVersion>1.5.0.0</AssemblyVersion>
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
@@ -52,6 +54,80 @@
         <returns>A list of bus addresses that are in use, an empty list if no device was found</returns>
         <remarks>This method should never throw an exception. Bus scanning may interfere with normal device operation,
             so this should not be done while devices are being used.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PerformBusScan">
+      <MemberSignature Language="C#" Value="public static (System.Collections.Generic.List&lt;int&gt; FoundDevices, int LowestAddress, int HighestAddress) PerformBusScan (this System.Device.I2c.I2cBus bus, IProgress&lt;float&gt;? progress, int lowestAddress = 3, int highestAddress = 119);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.ValueTuple`3&lt;class System.Collections.Generic.List`1&lt;int32&gt;, int32, int32&gt; PerformBusScan(class System.Device.I2c.I2cBus bus, class System.IProgress`1&lt;float32&gt; progress, int32 lowestAddress, int32 highestAddress) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.I2cBusExtensions.PerformBusScan(System.Device.I2c.I2cBus,System.IProgress{System.Single},System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function PerformBusScan (bus As I2cBus, progress As IProgress(Of Single), Optional lowestAddress As Integer = 3, Optional highestAddress As Integer = 119) As ValueTuple(Of List(Of Integer), Integer, Integer)" />
+      <MemberSignature Language="F#" Value="static member PerformBusScan : System.Device.I2c.I2cBus * IProgress&lt;single&gt; * int * int -&gt; ValueTuple&lt;System.Collections.Generic.List&lt;int&gt;, int, int&gt;" Usage="Iot.Device.Board.I2cBusExtensions.PerformBusScan (bus, progress, lowestAddress, highestAddress)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;System.Collections.Generic.List&lt;System.Int32&gt;,System.Int32,System.Int32&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "FoundDevices", "LowestAddress", "HighestAddress" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "FoundDevices", "LowestAddress", "HighestAddress" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bus" Type="System.Device.I2c.I2cBus" Index="0" FrameworkAlternate="iot-dotnet-latest" RefType="this" />
+        <Parameter Name="progress" Type="System.IProgress&lt;System.Single&gt;" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="lowestAddress" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="highestAddress" Type="System.Int32" Index="3" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="bus">The bus to scan</param>
+        <param name="progress">Progress feedback provider. Receives scan progress in percent</param>
+        <param name="lowestAddress">The lowest address to scan. Default 0x03</param>
+        <param name="highestAddress">The highest address to scan. Default 0x77</param>
+        <summary>
+            Performs a scan on the I2C bus, returning the addresses for all connected devices.
+            </summary>
+        <returns>A list of bus addresses that are in use, an empty list if no device was found</returns>
+        <remarks>This method should never throw an exception. Bus scanning may interfere with normal device operation,
+            so this should not be done while devices are being used.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToUserReadableTable">
+      <MemberSignature Language="C#" Value="public static string ToUserReadableTable (this (System.Collections.Generic.List&lt;int&gt; FoundDevices, int LowestAddress, int HighestAddress) data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig string ToUserReadableTable(valuetype System.ValueTuple`3&lt;class System.Collections.Generic.List`1&lt;int32&gt;, int32, int32&gt; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.I2cBusExtensions.ToUserReadableTable(System.ValueTuple{System.Collections.Generic.List{System.Int32},System.Int32,System.Int32})" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function ToUserReadableTable (data As ValueTuple(Of List(Of Integer), Integer, Integer)) As String" />
+      <MemberSignature Language="F#" Value="static member ToUserReadableTable : ValueTuple&lt;System.Collections.Generic.List&lt;int&gt;, int, int&gt; -&gt; string" Usage="Iot.Device.Board.I2cBusExtensions.ToUserReadableTable data" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ValueTuple&lt;System.Collections.Generic.List&lt;System.Int32&gt;,System.Int32,System.Int32&gt;" Index="0" FrameworkAlternate="iot-dotnet-latest" RefType="this">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "FoundDevices", "LowestAddress", "HighestAddress" })]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "FoundDevices", "LowestAddress", "HighestAddress" })&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="data">The result of a bus scan</param>
+        <summary>
+            Converts the output of <see cref="M:Iot.Device.Board.I2cBusExtensions.PerformBusScan(System.Device.I2c.I2cBus,System.IProgress{System.Single},System.Int32,System.Int32)" /> into a user-readable table, corresponding to the output of the standard
+            linux command i2cdetect.
+            </summary>
+        <returns>A table in form of a multiline string for the first 127 possible devices. An empty field represents an address that was not tested, a -- means no device
+            found and a number means there was a device at that address</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
   </Members>
