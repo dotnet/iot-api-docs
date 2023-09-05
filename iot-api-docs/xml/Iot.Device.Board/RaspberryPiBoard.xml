@@ -10,6 +10,7 @@
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Iot.Device.Board.GenericBoard</BaseTypeName>
@@ -35,6 +36,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -57,6 +59,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -74,6 +77,28 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="ConfigurationFile">
+      <MemberSignature Language="C#" Value="public string ConfigurationFile { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string ConfigurationFile" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Board.RaspberryPiBoard.ConfigurationFile" />
+      <MemberSignature Language="VB.NET" Value="Public Property ConfigurationFile As String" />
+      <MemberSignature Language="F#" Value="member this.ConfigurationFile : string with get, set" Usage="Iot.Device.Board.RaspberryPiBoard.ConfigurationFile" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the path to the configuration file for Raspberry PI.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="DetermineCurrentPinUsage">
       <MemberSignature Language="C#" Value="public override Iot.Device.Board.PinUsage DetermineCurrentPinUsage (int pinNumber);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance valuetype Iot.Device.Board.PinUsage DetermineCurrentPinUsage(int32 pinNumber) cil managed" />
@@ -87,6 +112,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Board.PinUsage</ReturnType>
@@ -116,6 +142,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -143,6 +170,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -168,6 +196,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32[]</ReturnType>
@@ -196,6 +225,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -226,6 +256,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32[]</ReturnType>
@@ -241,6 +272,84 @@
         <inheritdoc />
       </Docs>
     </Member>
+    <Member MemberName="GetOverlayPinAssignmentForI2c">
+      <MemberSignature Language="C#" Value="public int[] GetOverlayPinAssignmentForI2c (int busId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32[] GetOverlayPinAssignmentForI2c(int32 busId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.RaspberryPiBoard.GetOverlayPinAssignmentForI2c(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOverlayPinAssignmentForI2c (busId As Integer) As Integer()" />
+      <MemberSignature Language="F#" Value="member this.GetOverlayPinAssignmentForI2c : int -&gt; int[]" Usage="raspberryPiBoard.GetOverlayPinAssignmentForI2c busId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="busId" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="busId">Bus Id.</param>
+        <summary>
+            Gets the overlay pin assignment for I2C.
+            </summary>
+        <returns>The set of pins for the given I2C bus.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOverlayPinAssignmentForPwm">
+      <MemberSignature Language="C#" Value="public int GetOverlayPinAssignmentForPwm (int pwmChannel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32 GetOverlayPinAssignmentForPwm(int32 pwmChannel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.RaspberryPiBoard.GetOverlayPinAssignmentForPwm(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOverlayPinAssignmentForPwm (pwmChannel As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="member this.GetOverlayPinAssignmentForPwm : int -&gt; int" Usage="raspberryPiBoard.GetOverlayPinAssignmentForPwm pwmChannel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pwmChannel" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="pwmChannel">The PWM channel.</param>
+        <summary>
+            Gets the overlay pin assignment for Pwm.
+            </summary>
+        <returns>The set of pins for the given Pwm bus on chipn 0 as only one supported.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetOverlayPinAssignmentForSpi">
+      <MemberSignature Language="C#" Value="public int[] GetOverlayPinAssignmentForSpi (System.Device.Spi.SpiConnectionSettings connectionSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance int32[] GetOverlayPinAssignmentForSpi(class System.Device.Spi.SpiConnectionSettings connectionSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.RaspberryPiBoard.GetOverlayPinAssignmentForSpi(System.Device.Spi.SpiConnectionSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetOverlayPinAssignmentForSpi (connectionSettings As SpiConnectionSettings) As Integer()" />
+      <MemberSignature Language="F#" Value="member this.GetOverlayPinAssignmentForSpi : System.Device.Spi.SpiConnectionSettings -&gt; int[]" Usage="raspberryPiBoard.GetOverlayPinAssignmentForSpi connectionSettings" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32[]</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="connectionSettings" Type="System.Device.Spi.SpiConnectionSettings" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="connectionSettings">Connection settings to check.</param>
+        <summary>
+            Gets the overlay pin assignment for Spi.
+            </summary>
+        <returns>The set of pins for the given SPI bus. If no miso, it will be marked as -1.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Initialize">
       <MemberSignature Language="C#" Value="protected override void Initialize ();" />
       <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void Initialize() cil managed" />
@@ -254,6 +363,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -265,6 +375,75 @@
             </summary>
         <remarks>To be added.</remarks>
         <exception cref="T:System.NotSupportedException">The current hardware could not be identified as a valid Raspberry Pi type</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="IsI2cActivated">
+      <MemberSignature Language="C#" Value="public bool IsI2cActivated ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsI2cActivated() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.RaspberryPiBoard.IsI2cActivated" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsI2cActivated () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsI2cActivated : unit -&gt; bool" Usage="raspberryPiBoard.IsI2cActivated " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Checks if the I2C overlay is activated in the configuraztion file.
+            </summary>
+        <returns>True if it is.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPwmActivated">
+      <MemberSignature Language="C#" Value="public bool IsPwmActivated ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsPwmActivated() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.RaspberryPiBoard.IsPwmActivated" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsPwmActivated () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsPwmActivated : unit -&gt; bool" Usage="raspberryPiBoard.IsPwmActivated " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Checks if the I2C overlay is activated in the configuraztion file.
+            </summary>
+        <returns>True if it is.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsSpiActivated">
+      <MemberSignature Language="C#" Value="public bool IsSpiActivated ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsSpiActivated() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.RaspberryPiBoard.IsSpiActivated" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsSpiActivated () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsSpiActivated : unit -&gt; bool" Usage="raspberryPiBoard.IsSpiActivated " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Checks if the SPI overlay is activated in the configuraztion file.
+            </summary>
+        <returns>True if it is.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="PinCount">
@@ -280,6 +459,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -290,6 +470,28 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryComponentInformation">
+      <MemberSignature Language="C#" Value="public override System.Device.ComponentInformation QueryComponentInformation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Device.ComponentInformation QueryComponentInformation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Board.RaspberryPiBoard.QueryComponentInformation" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function QueryComponentInformation () As ComponentInformation" />
+      <MemberSignature Language="F#" Value="override this.QueryComponentInformation : unit -&gt; System.Device.ComponentInformation" Usage="raspberryPiBoard.QueryComponentInformation " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.ComponentInformation</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="TryCreateBestGpioDriver">
@@ -305,6 +507,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Gpio.GpioDriver</ReturnType>

@@ -1,0 +1,122 @@
+<Type Name="Ili9342" FullName="Iot.Device.Ili934x.Ili9342">
+  <TypeSignature Language="C#" Value="public class Ili9342 : Iot.Device.Ili934x.Ili9341" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Ili9342 extends Iot.Device.Ili934x.Ili9341" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ili934x.Ili9342" />
+  <TypeSignature Language="VB.NET" Value="Public Class Ili9342&#xA;Inherits Ili9341" />
+  <TypeSignature Language="F#" Value="type Ili9342 = class&#xA;    inherit Ili9341" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Ili934x.Ili9341</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Ili9342 QVGA display
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ili9342 (System.Device.Spi.SpiDevice spiDevice, int dataCommandPin, int resetPin, int backlightPin = -1, int spiBufferSize = 4096, System.Device.Gpio.GpioController? gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, int32 dataCommandPin, int32 resetPin, int32 backlightPin, int32 spiBufferSize, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9342.#ctor(System.Device.Spi.SpiDevice,System.Int32,System.Int32,System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (spiDevice As SpiDevice, dataCommandPin As Integer, resetPin As Integer, Optional backlightPin As Integer = -1, Optional spiBufferSize As Integer = 4096, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ili934x.Ili9342 : System.Device.Spi.SpiDevice * int * int * int * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Ili934x.Ili9342" Usage="new Iot.Device.Ili934x.Ili9342 (spiDevice, dataCommandPin, resetPin, backlightPin, spiBufferSize, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" />
+        <Parameter Name="dataCommandPin" Type="System.Int32" />
+        <Parameter Name="resetPin" Type="System.Int32" />
+        <Parameter Name="backlightPin" Type="System.Int32" />
+        <Parameter Name="spiBufferSize" Type="System.Int32" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="spiDevice">The SPI device used for communication. This Spi device will be displayed along with the ILI9341 device.</param>
+        <param name="dataCommandPin">The id of the GPIO pin used to control the DC line (data/command). This pin must be provided.</param>
+        <param name="resetPin">The id of the GPIO pin used to control the /RESET line (RST). Can be -1 if not connected</param>
+        <param name="backlightPin">The pin for turning the backlight on and off, or -1 if not connected.</param>
+        <param name="spiBufferSize">The size of the SPI buffer. If data larger than the buffer is sent then it is split up into multiple transmissions. The default value is 4096.</param>
+        <param name="gpioController">The GPIO controller used for communication and controls the the <paramref name="resetPin" /> and the <paramref name="dataCommandPin" />
+            If no Gpio controller is passed in then a default one will be created and disposed when ILI9341 device is disposed.</param>
+        <param name="shouldDispose">True to dispose the Gpio Controller when done</param>
+        <summary>
+            Initializes new instance of ILI9342 device that will communicate using SPI bus.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitDisplayParameters">
+      <MemberSignature Language="C#" Value="protected override void InitDisplayParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance void InitDisplayParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9342.InitDisplayParameters" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Sub InitDisplayParameters ()" />
+      <MemberSignature Language="F#" Value="override this.InitDisplayParameters : unit -&gt; unit" Usage="ili9342.InitDisplayParameters " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Configure the Ili9342 (it uses a different color format than the 9341 and by default is used in landscape mode)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenHeight">
+      <MemberSignature Language="C#" Value="public override int ScreenHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ScreenHeight" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ili934x.Ili9342.ScreenHeight" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ScreenHeight As Integer" />
+      <MemberSignature Language="F#" Value="member this.ScreenHeight : int" Usage="Iot.Device.Ili934x.Ili9342.ScreenHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenWidth">
+      <MemberSignature Language="C#" Value="public override int ScreenWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ScreenWidth" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ili934x.Ili9342.ScreenWidth" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ScreenWidth As Integer" />
+      <MemberSignature Language="F#" Value="member this.ScreenWidth : int" Usage="Iot.Device.Ili934x.Ili9342.ScreenWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,179 @@
+<Type Name="ProprietaryMessage" FullName="Iot.Device.Nmea0183.Sentences.ProprietaryMessage">
+  <TypeSignature Language="C#" Value="public abstract class ProprietaryMessage : Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit ProprietaryMessage extends Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Sentences.ProprietaryMessage" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class ProprietaryMessage&#xA;Inherits NmeaSentence" />
+  <TypeSignature Language="F#" Value="type ProprietaryMessage = class&#xA;    inherit NmeaSentence" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Nmea0183.Sentences.NmeaSentence</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Proprietary message used to pass NMEA2000 messages over NMEA0183, only supported
+            by some converters and for some messages, for instance engine parameters.
+            The messages are usually not fully documented, but the SeaSmart (v1.6.0) protocol
+            specification may help (and some trying around)
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ProprietaryMessage ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.ProprietaryMessage.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a default message of this type
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ProprietaryMessage (Iot.Device.Nmea0183.TalkerId talker, Iot.Device.Nmea0183.SentenceId id, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Nmea0183.TalkerId talker, valuetype Iot.Device.Nmea0183.SentenceId id, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.ProprietaryMessage.#ctor(Iot.Device.Nmea0183.TalkerId,Iot.Device.Nmea0183.SentenceId,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (talker As TalkerId, id As SentenceId, time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.ProprietaryMessage : Iot.Device.Nmea0183.TalkerId * Iot.Device.Nmea0183.SentenceId * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.ProprietaryMessage" Usage="new Iot.Device.Nmea0183.Sentences.ProprietaryMessage (talker, id, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="talker" Type="Iot.Device.Nmea0183.TalkerId" />
+        <Parameter Name="id" Type="Iot.Device.Nmea0183.SentenceId" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="talker">To be added.</param>
+        <param name="id">To be added.</param>
+        <param name="time">To be added.</param>
+        <summary>
+            Used to create a message while decoding, see base class implementation
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Nmea0183.SentenceId Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype Iot.Device.Nmea0183.SentenceId Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.ProprietaryMessage.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Id As SentenceId" />
+      <MemberSignature Language="F#" Value="static member Id : Iot.Device.Nmea0183.SentenceId" Usage="Iot.Device.Nmea0183.Sentences.ProprietaryMessage.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This sentence's id
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Identifier">
+      <MemberSignature Language="C#" Value="public abstract int Identifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Identifier" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.ProprietaryMessage.Identifier" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride ReadOnly Property Identifier As Integer" />
+      <MemberSignature Language="F#" Value="member this.Identifier : int" Usage="Iot.Device.Nmea0183.Sentences.ProprietaryMessage.Identifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The hex identifier of this message type (first field of a PCDIN message)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Matches">
+      <MemberSignature Language="C#" Value="protected static bool Matches (Iot.Device.Nmea0183.TalkerSentence sentence);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig bool Matches(class Iot.Device.Nmea0183.TalkerSentence sentence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.ProprietaryMessage.Matches(Iot.Device.Nmea0183.TalkerSentence)" />
+      <MemberSignature Language="VB.NET" Value="Protected Shared Function Matches (sentence As TalkerSentence) As Boolean" />
+      <MemberSignature Language="F#" Value="static member Matches : Iot.Device.Nmea0183.TalkerSentence -&gt; bool" Usage="Iot.Device.Nmea0183.Sentences.ProprietaryMessage.Matches sentence" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sentence" Type="Iot.Device.Nmea0183.TalkerSentence" />
+      </Parameters>
+      <Docs>
+        <param name="sentence">The sentence to check</param>
+        <summary>
+            Checks this message has the correct talker id
+            </summary>
+        <returns>True if this input sentence matches this message type (but be careful that this message
+            type needs further division by arguments)</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadFromHexString">
+      <MemberSignature Language="C#" Value="protected bool ReadFromHexString (string input, int start, int length, bool inverseEndianess, out int value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool ReadFromHexString(string input, int32 start, int32 length, bool inverseEndianess, [out] int32&amp; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.ProprietaryMessage.ReadFromHexString(System.String,System.Int32,System.Int32,System.Boolean,System.Int32@)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function ReadFromHexString (input As String, start As Integer, length As Integer, inverseEndianess As Boolean, ByRef value As Integer) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReadFromHexString : string * int * int * bool * int -&gt; bool" Usage="proprietaryMessage.ReadFromHexString (input, start, length, inverseEndianess, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="input" Type="System.String" />
+        <Parameter Name="start" Type="System.Int32" />
+        <Parameter Name="length" Type="System.Int32" />
+        <Parameter Name="inverseEndianess" Type="System.Boolean" />
+        <Parameter Name="value" Type="System.Int32" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="input">Input string</param>
+        <param name="start">Start offset of required number</param>
+        <param name="length">Length of required number. Must be 2, 4 or 8</param>
+        <param name="inverseEndianess">True to inverse the endianess of the number (reverse the partial string)</param>
+        <param name="value">The output value</param>
+        <summary>
+            Decodes a value from a longer hex string (PRDIN messages contain one blob of stringly-typed hex numbers)
+            </summary>
+        <returns>True on success, false otherwise</returns>
+        <remarks>
+            Other erroneous inputs don't throw an exception but return false, e.g. string shorter than expected or
+            value is not a hex number. This is to prevent an exception in case of a malformed message.
+            </remarks>
+        <exception cref="T:System.ArgumentException">Length is not 2, 4 or 8</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

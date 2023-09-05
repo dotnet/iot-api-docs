@@ -15,6 +15,7 @@
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -49,6 +50,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -74,6 +76,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -111,6 +114,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -144,6 +148,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -181,6 +186,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -211,6 +217,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -244,6 +251,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Gpio.PinMode</ReturnType>
@@ -278,6 +286,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -314,6 +323,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -348,6 +358,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -358,6 +369,33 @@
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryComponentInformation">
+      <MemberSignature Language="C#" Value="public virtual System.Device.ComponentInformation QueryComponentInformation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Device.ComponentInformation QueryComponentInformation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioDriver.QueryComponentInformation" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function QueryComponentInformation () As ComponentInformation" />
+      <MemberSignature Language="F#" Value="abstract member QueryComponentInformation : unit -&gt; System.Device.ComponentInformation&#xA;override this.QueryComponentInformation : unit -&gt; System.Device.ComponentInformation" Usage="gpioDriver.QueryComponentInformation " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.ComponentInformation</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Query information about a component and its children.
+            </summary>
+        <returns>A tree of <see cref="T:System.Device.ComponentInformation" /> instances.</returns>
+        <remarks>
+            The returned data structure (or rather, its string representation) can be used to diagnose problems with incorrect driver types or
+            other system configuration problems.
+            This method is currently reserved for debugging purposes. Its behavior its and signature are subject to change.
+            </remarks>
       </Docs>
     </Member>
     <Member MemberName="Read">
@@ -378,6 +416,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Gpio.PinValue</ReturnType>
@@ -412,6 +451,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -447,6 +487,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -477,6 +518,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -493,6 +535,31 @@
             changing from input to output.</param>
         <summary>
             Sets the mode to a pin and sets an initial value for an output pin.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Toggle">
+      <MemberSignature Language="C#" Value="protected internal virtual void Toggle (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method familyorassemblyhidebysig newslot virtual instance void Toggle(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioDriver.Toggle(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Friend Overridable Sub Toggle (pinNumber As Integer)" />
+      <MemberSignature Language="F#" Value="abstract member Toggle : int -&gt; unit&#xA;override this.Toggle : int -&gt; unit" Usage="gpioDriver.Toggle pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">The pin number in the driver's logical numbering scheme.</param>
+        <summary>
+            Toggle the current value of a pin.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -515,6 +582,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Gpio.WaitForEventResult</ReturnType>
@@ -553,6 +621,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.ValueTask&lt;System.Device.Gpio.WaitForEventResult&gt;</ReturnType>
@@ -591,6 +660,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

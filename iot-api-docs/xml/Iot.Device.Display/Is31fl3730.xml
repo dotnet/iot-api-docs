@@ -1,0 +1,403 @@
+<Type Name="Is31fl3730" FullName="Iot.Device.Display.Is31fl3730">
+  <TypeSignature Language="C#" Value="public class Is31fl3730" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Is31fl3730 extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Display.Is31fl3730" />
+  <TypeSignature Language="VB.NET" Value="Public Class Is31fl3730" />
+  <TypeSignature Language="F#" Value="type Is31fl3730 = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents an IS31FL3730 LED Matrix driver
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Is31fl3730 (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3730.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Display.Is31fl3730 : System.Device.I2c.I2cDevice -&gt; Iot.Device.Display.Is31fl3730" Usage="new Iot.Device.Display.Is31fl3730 i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The <see cref="T:System.Device.I2c.I2cDevice" /> to create with.</param>
+        <summary>
+            Initialize IS31FL3730 device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BufferingEnabled">
+      <MemberSignature Language="C#" Value="public bool BufferingEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BufferingEnabled" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Is31fl3730.BufferingEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property BufferingEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.BufferingEnabled : bool with get, set" Usage="Iot.Device.Display.Is31fl3730.BufferingEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enables or disables auto-buffering.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const int DefaultI2cAddress = 97;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultI2cAddress = (97)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Display.Is31fl3730.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Integer  = 97" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : int" Usage="Iot.Device.Display.Is31fl3730.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>97</MemberValue>
+      <Docs>
+        <summary>
+            Default I2C address for device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="public void Fill (System.Device.Gpio.PinValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Fill(valuetype System.Device.Gpio.PinValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3730.Fill(System.Device.Gpio.PinValue)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Fill (value As PinValue)" />
+      <MemberSignature Language="F#" Value="member this.Fill : System.Device.Gpio.PinValue -&gt; unit" Usage="is31fl3730.Fill value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Device.Gpio.PinValue" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>
+            Fill LEDs with value.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="public void Fill (int matrix, System.Device.Gpio.PinValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Fill(int32 matrix, valuetype System.Device.Gpio.PinValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3730.Fill(System.Int32,System.Device.Gpio.PinValue)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Fill (matrix As Integer, value As PinValue)" />
+      <MemberSignature Language="F#" Value="member this.Fill : int * System.Device.Gpio.PinValue -&gt; unit" Usage="is31fl3730.Fill (matrix, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Device.Gpio.PinValue" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>
+            Fill LEDs with value, per matrix.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public void Flush ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Flush() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3730.Flush" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Flush ()" />
+      <MemberSignature Language="F#" Value="member this.Flush : unit -&gt; unit" Usage="is31fl3730.Flush " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Fill LEDs with value.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Flush">
+      <MemberSignature Language="C#" Value="public void Flush (int matrix);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Flush(int32 matrix) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3730.Flush(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Flush (matrix As Integer)" />
+      <MemberSignature Language="F#" Value="member this.Flush : int -&gt; unit" Usage="is31fl3730.Flush matrix" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">To be added.</param>
+        <summary>
+            Fill LEDs with value, per matrix.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public Iot.Device.Display.DotMatrix5x7 this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Display.DotMatrix5x7 Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Is31fl3730.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(index As Integer) As DotMatrix5x7" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Iot.Device.Display.DotMatrix5x7" Usage="Iot.Device.Display.Is31fl3730.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Display.DotMatrix5x7</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>
+            Indexer for matrices.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.PinValue Read (int matrix, int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Device.Gpio.PinValue Read(int32 matrix, int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3730.Read(System.Int32,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Read (matrix As Integer, x As Integer, y As Integer) As PinValue" />
+      <MemberSignature Language="F#" Value="member this.Read : int * int * int -&gt; System.Device.Gpio.PinValue" Usage="is31fl3730.Read (matrix, x, y)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Int32" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">The matrix to use.</param>
+        <param name="x">The x dimension for the LED.</param>
+        <param name="y">The y dimension for the LED.</param>
+        <summary>
+            Read value of LED for matrix.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetRegisters">
+      <MemberSignature Language="C#" Value="public void ResetRegisters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetRegisters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3730.ResetRegisters" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ResetRegisters ()" />
+      <MemberSignature Language="F#" Value="member this.ResetRegisters : unit -&gt; unit" Usage="is31fl3730.ResetRegisters " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resets all registers to default value.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateBrightness">
+      <MemberSignature Language="C#" Value="public void UpdateBrightness (byte value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateBrightness(unsigned int8 value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3730.UpdateBrightness(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub UpdateBrightness (value As Byte)" />
+      <MemberSignature Language="F#" Value="member this.UpdateBrightness : byte -&gt; unit" Usage="is31fl3730.UpdateBrightness value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>
+            Update bright of LED matrix for each of 128 items.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateConfiguration">
+      <MemberSignature Language="C#" Value="public void UpdateConfiguration (Iot.Device.Display.ShowdownMode shutdown, Iot.Device.Display.MatrixMode matrix, Iot.Device.Display.DisplayMode display);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateConfiguration(valuetype Iot.Device.Display.ShowdownMode shutdown, valuetype Iot.Device.Display.MatrixMode matrix, valuetype Iot.Device.Display.DisplayMode display) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3730.UpdateConfiguration(Iot.Device.Display.ShowdownMode,Iot.Device.Display.MatrixMode,Iot.Device.Display.DisplayMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub UpdateConfiguration (shutdown As ShowdownMode, matrix As MatrixMode, display As DisplayMode)" />
+      <MemberSignature Language="F#" Value="member this.UpdateConfiguration : Iot.Device.Display.ShowdownMode * Iot.Device.Display.MatrixMode * Iot.Device.Display.DisplayMode -&gt; unit" Usage="is31fl3730.UpdateConfiguration (shutdown, matrix, display)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="shutdown" Type="Iot.Device.Display.ShowdownMode" />
+        <Parameter Name="matrix" Type="Iot.Device.Display.MatrixMode" />
+        <Parameter Name="display" Type="Iot.Device.Display.DisplayMode" />
+      </Parameters>
+      <Docs>
+        <param name="shutdown">To be added.</param>
+        <param name="matrix">To be added.</param>
+        <param name="display">To be added.</param>
+        <summary>
+            Update configuration register, which controls shutdown, matrix, and display modes.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateCurrent">
+      <MemberSignature Language="C#" Value="public void UpdateCurrent (Iot.Device.Display.Current value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void UpdateCurrent(valuetype Iot.Device.Display.Current value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3730.UpdateCurrent(Iot.Device.Display.Current)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub UpdateCurrent (value As Current)" />
+      <MemberSignature Language="F#" Value="member this.UpdateCurrent : Iot.Device.Display.Current -&gt; unit" Usage="is31fl3730.UpdateCurrent value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="Iot.Device.Display.Current" />
+      </Parameters>
+      <Docs>
+        <param name="value">To be added.</param>
+        <summary>
+            Update current setting for each row output of LED matrix (default value is 40 mA).
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public void Write (int matrix, int x, int y, System.Device.Gpio.PinValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Write(int32 matrix, int32 x, int32 y, valuetype System.Device.Gpio.PinValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3730.Write(System.Int32,System.Int32,System.Int32,System.Device.Gpio.PinValue)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Write (matrix As Integer, x As Integer, y As Integer, value As PinValue)" />
+      <MemberSignature Language="F#" Value="member this.Write : int * int * int * System.Device.Gpio.PinValue -&gt; unit" Usage="is31fl3730.Write (matrix, x, y, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Int32" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Device.Gpio.PinValue" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">The matrix to use.</param>
+        <param name="x">The x dimension for the LED.</param>
+        <param name="y">The y dimension for the LED.</param>
+        <param name="value">The value to write.</param>
+        <summary>
+            Write LED for matrix.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WriteDecimalPoint">
+      <MemberSignature Language="C#" Value="public void WriteDecimalPoint (int matrix, System.Device.Gpio.PinValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WriteDecimalPoint(int32 matrix, valuetype System.Device.Gpio.PinValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3730.WriteDecimalPoint(System.Int32,System.Device.Gpio.PinValue)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WriteDecimalPoint (matrix As Integer, value As PinValue)" />
+      <MemberSignature Language="F#" Value="member this.WriteDecimalPoint : int * System.Device.Gpio.PinValue -&gt; unit" Usage="is31fl3730.WriteDecimalPoint (matrix, value)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matrix" Type="System.Int32" />
+        <Parameter Name="value" Type="System.Device.Gpio.PinValue" />
+      </Parameters>
+      <Docs>
+        <param name="matrix">To be added.</param>
+        <param name="value">To be added.</param>
+        <summary>
+            Update decimal point for matrix.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

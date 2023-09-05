@@ -1,9 +1,13 @@
 <Type Name="BitmapImage" FullName="Iot.Device.Graphics.BitmapImage">
-  <TypeSignature Language="C#" Value="public abstract class BitmapImage" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BitmapImage extends System.Object" />
+  <TypeSignature Language="C#" Value="public abstract class BitmapImage" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BitmapImage extends System.Object" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
   <TypeSignature Language="DocId" Value="T:Iot.Device.Graphics.BitmapImage" />
-  <TypeSignature Language="VB.NET" Value="Public MustInherit Class BitmapImage" />
-  <TypeSignature Language="F#" Value="type BitmapImage = class" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class BitmapImage" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+  <TypeSignature Language="F#" Value="type BitmapImage = class" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+  <TypeSignature Language="C#" Value="public abstract class BitmapImage : IDisposable" FrameworkAlternate="iot-dotnet-latest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit BitmapImage extends System.Object implements class System.IDisposable" FrameworkAlternate="iot-dotnet-latest" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class BitmapImage&#xA;Implements IDisposable" FrameworkAlternate="iot-dotnet-latest" />
+  <TypeSignature Language="F#" Value="type BitmapImage = class&#xA;    interface IDisposable" FrameworkAlternate="iot-dotnet-latest" />
   <AssemblyInfo>
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -15,16 +19,27 @@
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
   </Base>
-  <Interfaces />
+  <Interfaces>
+    <Interface FrameworkAlternate="iot-dotnet-latest">
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
   <Docs>
     <summary>
-            Represents bitmap image
+            An abstract class for a bitmap image, to be implemented by an image provider.
+            This class is also the factory to create new bitmaps with the current image factory.
+            The image factory must implement <see cref="T:Iot.Device.Graphics.IImageFactory" /> and must be registered using a call to
+            <see cref="M:Iot.Device.Graphics.BitmapImage.RegisterImageFactory(Iot.Device.Graphics.IImageFactory)" />.
             </summary>
-    <remarks>To be added.</remarks>
+    <remarks>
+            This class does not have an implementation within Iot.Device.Bindings.dll. You can use the Iot.Device.Bindings.SkiaSharpAdapter.dll
+            as a supported operating-system independent implementation of this class or write your own implementation.
+            </remarks>
   </Docs>
   <Members>
     <Member MemberName=".ctor">
@@ -47,10 +62,10 @@
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="data" Type="System.Byte[]" />
-        <Parameter Name="width" Type="System.Int32" />
-        <Parameter Name="height" Type="System.Int32" />
-        <Parameter Name="stride" Type="System.Int32" />
+        <Parameter Name="data" Type="System.Byte[]" Index="0" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="width" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="height" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="stride" Type="System.Int32" Index="3" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="data">Data representing the image (derived class defines a specific format)</param>
@@ -60,6 +75,57 @@
         <summary>
             Initializes a <see cref="T:Iot.Device.Graphics.BitmapImage" /> instance with the specified data, width, height and stride.
             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected BitmapImage (int width, int height, int stride, Iot.Device.Graphics.PixelFormat pixelFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(int32 width, int32 height, int32 stride, valuetype Iot.Device.Graphics.PixelFormat pixelFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BitmapImage.#ctor(System.Int32,System.Int32,System.Int32,Iot.Device.Graphics.PixelFormat)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (width As Integer, height As Integer, stride As Integer, pixelFormat As PixelFormat)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Graphics.BitmapImage : int * int * int * Iot.Device.Graphics.PixelFormat -&gt; Iot.Device.Graphics.BitmapImage" Usage="new Iot.Device.Graphics.BitmapImage (width, height, stride, pixelFormat)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="width" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="height" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="stride" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="pixelFormat" Type="Iot.Device.Graphics.PixelFormat" Index="3" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="width">Width of the image</param>
+        <param name="height">Height of the image</param>
+        <param name="stride">Number of bytes per row</param>
+        <param name="pixelFormat">The pixel format of the data</param>
+        <summary>
+            Initializes a <see cref="T:Iot.Device.Graphics.BitmapImage" /> instance with the specified data, width, height and stride.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsByteSpan">
+      <MemberSignature Language="C#" Value="public abstract Span&lt;byte&gt; AsByteSpan ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Span`1&lt;unsigned int8&gt; AsByteSpan() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BitmapImage.AsByteSpan" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function AsByteSpan () As Span(Of Byte)" />
+      <MemberSignature Language="F#" Value="abstract member AsByteSpan : unit -&gt; Span&lt;byte&gt;" Usage="bitmapImage.AsByteSpan " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Span&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Return the data pointer as a raw span of bytes
+            </summary>
+        <returns>A span of bytes</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -81,6 +147,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -93,6 +160,91 @@
         <summary>
             Clears the image to specific color
             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBitmap">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Graphics.BitmapImage CreateBitmap (int width, int height, Iot.Device.Graphics.PixelFormat pixelFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Graphics.BitmapImage CreateBitmap(int32 width, int32 height, valuetype Iot.Device.Graphics.PixelFormat pixelFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BitmapImage.CreateBitmap(System.Int32,System.Int32,Iot.Device.Graphics.PixelFormat)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateBitmap (width As Integer, height As Integer, pixelFormat As PixelFormat) As BitmapImage" />
+      <MemberSignature Language="F#" Value="static member CreateBitmap : int * int * Iot.Device.Graphics.PixelFormat -&gt; Iot.Device.Graphics.BitmapImage" Usage="Iot.Device.Graphics.BitmapImage.CreateBitmap (width, height, pixelFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Graphics.BitmapImage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="height" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="pixelFormat" Type="Iot.Device.Graphics.PixelFormat" Index="2" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="width">Width of the image, in pixels</param>
+        <param name="height">Height of the image, in pixels</param>
+        <param name="pixelFormat">Desired pixel format</param>
+        <summary>
+            Creates a bitmap using the active factory. This requires an implementation to be registered.
+            See <see cref="T:Iot.Device.Graphics.BitmapImage" /> for details.
+            </summary>
+        <returns>A new bitmap with the provided size</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromFile">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Graphics.BitmapImage CreateFromFile (string filename);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Graphics.BitmapImage CreateFromFile(string filename) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BitmapImage.CreateFromFile(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromFile (filename As String) As BitmapImage" />
+      <MemberSignature Language="F#" Value="static member CreateFromFile : string -&gt; Iot.Device.Graphics.BitmapImage" Usage="Iot.Device.Graphics.BitmapImage.CreateFromFile filename" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Graphics.BitmapImage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="filename">The file to load</param>
+        <summary>
+            Create a bitmap from a file. This requires an implementation to be registered.
+            See <see cref="T:Iot.Device.Graphics.BitmapImage" /> for details.
+            </summary>
+        <returns>A bitmap</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromStream">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Graphics.BitmapImage CreateFromStream (System.IO.Stream data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Graphics.BitmapImage CreateFromStream(class System.IO.Stream data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BitmapImage.CreateFromStream(System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateFromStream (data As Stream) As BitmapImage" />
+      <MemberSignature Language="F#" Value="static member CreateFromStream : System.IO.Stream -&gt; Iot.Device.Graphics.BitmapImage" Usage="Iot.Device.Graphics.BitmapImage.CreateFromStream data" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Graphics.BitmapImage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.IO.Stream" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="data">The data stream</param>
+        <summary>
+            Create a bitmap from an open stream. This requires an implementation to be registered.
+            See <see cref="T:Iot.Device.Graphics.BitmapImage" /> for details.
+            </summary>
+        <returns>A bitmap</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -126,6 +278,108 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BitmapImage.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="bitmapImage.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disposes this instance. Correctly disposing instance of this class is important to prevent memory leaks or overload of the garbage collector.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected abstract void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BitmapImage.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected MustOverride Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit" Usage="bitmapImage.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">True if disposing, false if called from finalizer</param>
+        <summary>
+            Disposes this instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetDrawingApi">
+      <MemberSignature Language="C#" Value="public abstract Iot.Device.Graphics.IGraphics GetDrawingApi ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Iot.Device.Graphics.IGraphics GetDrawingApi() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BitmapImage.GetDrawingApi" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetDrawingApi () As IGraphics" />
+      <MemberSignature Language="F#" Value="abstract member GetDrawingApi : unit -&gt; Iot.Device.Graphics.IGraphics" Usage="bitmapImage.GetDrawingApi " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Graphics.IGraphics</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns an abstraction interface for drawing to this bitmap.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPixel">
+      <MemberSignature Language="C#" Value="public abstract System.Drawing.Color GetPixel (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Drawing.Color GetPixel(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BitmapImage.GetPixel(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetPixel (x As Integer, y As Integer) As Color" />
+      <MemberSignature Language="F#" Value="abstract member GetPixel : int * int -&gt; System.Drawing.Color" Usage="bitmapImage.GetPixel (x, y)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="y" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="x">X coordinate of the pixel</param>
+        <param name="y">Y coordinate of the pixel</param>
+        <summary>
+            Gets the color of the pixel at the given position
+            </summary>
+        <returns>The color of the pixel</returns>
+        <remarks>The use of <see cref="M:Iot.Device.Graphics.BitmapImage.SetPixel(System.Int32,System.Int32,System.Drawing.Color)" /> and <see cref="M:Iot.Device.Graphics.BitmapImage.GetPixel(System.Int32,System.Int32)" /> is usually slow. For fast image updates, grab the underlying
+            raw buffer by calling <see cref="M:Iot.Device.Graphics.BitmapImage.AsByteSpan" /> or use the <see cref="M:Iot.Device.Graphics.BitmapImage.GetDrawingApi" /> method and use high-level drawing functions.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="Height">
       <MemberSignature Language="C#" Value="public int Height { get; }" />
       <MemberSignature Language="ILAsm" Value=".property instance int32 Height" />
@@ -144,6 +398,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -153,6 +408,137 @@
             Height of the image
             </summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Drawing.Color this[int x, int y] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Color Item(int32, int32)" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Graphics.BitmapImage.Item(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public Property Item(x As Integer, y As Integer) As Color" />
+      <MemberSignature Language="F#" Value="member this.Item(int * int) : System.Drawing.Color with get, set" Usage="Iot.Device.Graphics.BitmapImage.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Color</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="y" Type="System.Int32" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="x">Pixel X position</param>
+        <param name="y">Pixel Y position</param>
+        <summary>
+            Accesses the pixel at the given position
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PixelFormat">
+      <MemberSignature Language="C#" Value="public Iot.Device.Graphics.PixelFormat PixelFormat { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Graphics.PixelFormat PixelFormat" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Graphics.BitmapImage.PixelFormat" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PixelFormat As PixelFormat" />
+      <MemberSignature Language="F#" Value="member this.PixelFormat : Iot.Device.Graphics.PixelFormat" Usage="Iot.Device.Graphics.BitmapImage.PixelFormat" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Graphics.PixelFormat</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The format of the image
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterImageFactory">
+      <MemberSignature Language="C#" Value="public static void RegisterImageFactory (Iot.Device.Graphics.IImageFactory factory);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void RegisterImageFactory(class Iot.Device.Graphics.IImageFactory factory) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BitmapImage.RegisterImageFactory(Iot.Device.Graphics.IImageFactory)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub RegisterImageFactory (factory As IImageFactory)" />
+      <MemberSignature Language="F#" Value="static member RegisterImageFactory : Iot.Device.Graphics.IImageFactory -&gt; unit" Usage="Iot.Device.Graphics.BitmapImage.RegisterImageFactory factory" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="factory" Type="Iot.Device.Graphics.IImageFactory" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="factory">The image factory to register</param>
+        <summary>
+            Register an image factory.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveToFile">
+      <MemberSignature Language="C#" Value="public void SaveToFile (string filename, Iot.Device.Graphics.ImageFileType fileType);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SaveToFile(string filename, valuetype Iot.Device.Graphics.ImageFileType fileType) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BitmapImage.SaveToFile(System.String,Iot.Device.Graphics.ImageFileType)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SaveToFile (filename As String, fileType As ImageFileType)" />
+      <MemberSignature Language="F#" Value="member this.SaveToFile : string * Iot.Device.Graphics.ImageFileType -&gt; unit" Usage="bitmapImage.SaveToFile (filename, fileType)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="filename" Type="System.String" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="fileType" Type="Iot.Device.Graphics.ImageFileType" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="filename">The filename to save it to</param>
+        <param name="fileType">The filetype to use.</param>
+        <summary>
+            Saves this bitmap to a file
+            </summary>
+        <remarks>
+            Generally, the method is not checking that the filename extension matches the file type provided.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SaveToStream">
+      <MemberSignature Language="C#" Value="public abstract void SaveToStream (System.IO.Stream stream, Iot.Device.Graphics.ImageFileType format);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SaveToStream(class System.IO.Stream stream, valuetype Iot.Device.Graphics.ImageFileType format) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.BitmapImage.SaveToStream(System.IO.Stream,Iot.Device.Graphics.ImageFileType)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SaveToStream (stream As Stream, format As ImageFileType)" />
+      <MemberSignature Language="F#" Value="abstract member SaveToStream : System.IO.Stream * Iot.Device.Graphics.ImageFileType -&gt; unit" Usage="bitmapImage.SaveToStream (stream, format)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="format" Type="Iot.Device.Graphics.ImageFileType" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="stream">The stream to save the data to</param>
+        <param name="format">The image format</param>
+        <summary>
+            Save the image to a stream
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -174,6 +560,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -190,7 +577,8 @@
         <summary>
             Sets pixel at specific position
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>The use of <see cref="M:Iot.Device.Graphics.BitmapImage.SetPixel(System.Int32,System.Int32,System.Drawing.Color)" /> and <see cref="M:Iot.Device.Graphics.BitmapImage.GetPixel(System.Int32,System.Int32)" /> is usually slow. For fast image updates, grab the underlying
+            raw buffer by calling <see cref="M:Iot.Device.Graphics.BitmapImage.AsByteSpan" /> or use the <see cref="M:Iot.Device.Graphics.BitmapImage.GetDrawingApi" /> method and use high-level drawing functions.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Stride">
@@ -211,6 +599,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -241,6 +630,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>

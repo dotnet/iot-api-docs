@@ -8,6 +8,7 @@
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Iot.Device.Nmea0183.Sentences.NmeaSentence</BaseTypeName>
@@ -18,6 +19,7 @@
             The MWD sequence gives the wind direction and speed in true directions. That means the direction is given in
             degrees from true north and the speed is the true wind speed. Calculating the input data for this sentence
             requires heading or, as a backup, COG. However, with COG, the data is unreliable when the ship is moored.
+            See <see cref="T:Iot.Device.Nmea0183.Sentences.WindSpeedAndAngle" /> for relative wind directions (as measured by the wind instrument)
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -33,6 +35,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="sentence" Type="Iot.Device.Nmea0183.TalkerSentence" />
@@ -58,6 +61,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="talkerId" Type="Iot.Device.Nmea0183.TalkerId" />
@@ -85,6 +89,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="trueWindDirection" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
@@ -92,9 +97,9 @@
         <Parameter Name="windSpeed" Type="System.Nullable&lt;UnitsNet.Speed&gt;" />
       </Parameters>
       <Docs>
-        <param name="trueWindDirection">To be added.</param>
-        <param name="magneticWindDirection">To be added.</param>
-        <param name="windSpeed">To be added.</param>
+        <param name="trueWindDirection">Wind direction relative to true north</param>
+        <param name="magneticWindDirection">Wind direction relative to magnetic north</param>
+        <param name="windSpeed">Wind speed</param>
         <summary>
             Constructs a new MDA sentence
             </summary>
@@ -112,6 +117,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
@@ -135,6 +141,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
@@ -158,6 +165,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -181,6 +189,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -205,6 +214,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -228,6 +238,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
@@ -251,6 +262,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;UnitsNet.Speed&gt;</ReturnType>

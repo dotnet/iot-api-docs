@@ -1,0 +1,139 @@
+<Type Name="ReceivedCanMessage" FullName="Iot.Device.Mcp25xxx.Models.ReceivedCanMessage">
+  <TypeSignature Language="C#" Value="public class ReceivedCanMessage" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ReceivedCanMessage extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Mcp25xxx.Models.ReceivedCanMessage" />
+  <TypeSignature Language="VB.NET" Value="Public Class ReceivedCanMessage" />
+  <TypeSignature Language="F#" Value="type ReceivedCanMessage = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            CAN bus message
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ReceivedCanMessage (Iot.Device.Mcp25xxx.ReceiveBuffer buffer, byte[] rawData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Mcp25xxx.ReceiveBuffer buffer, unsigned int8[] rawData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Models.ReceivedCanMessage.#ctor(Iot.Device.Mcp25xxx.ReceiveBuffer,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (buffer As ReceiveBuffer, rawData As Byte())" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Mcp25xxx.Models.ReceivedCanMessage : Iot.Device.Mcp25xxx.ReceiveBuffer * byte[] -&gt; Iot.Device.Mcp25xxx.Models.ReceivedCanMessage" Usage="new Iot.Device.Mcp25xxx.Models.ReceivedCanMessage (buffer, rawData)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buffer" Type="Iot.Device.Mcp25xxx.ReceiveBuffer" />
+        <Parameter Name="rawData" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="buffer">buffer received this message</param>
+        <param name="rawData">data from buffer</param>
+        <summary>
+            Received CAN message constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Buffer">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mcp25xxx.ReceiveBuffer Buffer { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Mcp25xxx.ReceiveBuffer Buffer" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Models.ReceivedCanMessage.Buffer" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Buffer As ReceiveBuffer" />
+      <MemberSignature Language="F#" Value="member this.Buffer : Iot.Device.Mcp25xxx.ReceiveBuffer" Usage="Iot.Device.Mcp25xxx.Models.ReceivedCanMessage.Buffer" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp25xxx.ReceiveBuffer</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Buffer received this message
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetData">
+      <MemberSignature Language="C#" Value="public byte[] GetData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Models.ReceivedCanMessage.GetData" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetData () As Byte()" />
+      <MemberSignature Language="F#" Value="member this.GetData : unit -&gt; byte[]" Usage="receivedCanMessage.GetData " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            CAN message data
+            </summary>
+        <returns>message data (max 8 bytes)</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Raw data can contain not valid message</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetId">
+      <MemberSignature Language="C#" Value="public byte[] GetId ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance unsigned int8[] GetId() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Models.ReceivedCanMessage.GetId" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetId () As Byte()" />
+      <MemberSignature Language="F#" Value="member this.GetId : unit -&gt; byte[]" Usage="receivedCanMessage.GetId " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            CAN message id
+            </summary>
+        <returns>message id</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Raw data can contain not valid id</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RawData">
+      <MemberSignature Language="C#" Value="public byte[] RawData { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] RawData" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mcp25xxx.Models.ReceivedCanMessage.RawData" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RawData As Byte()" />
+      <MemberSignature Language="F#" Value="member this.RawData : byte[]" Usage="Iot.Device.Mcp25xxx.Models.ReceivedCanMessage.RawData" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Received CAN message
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

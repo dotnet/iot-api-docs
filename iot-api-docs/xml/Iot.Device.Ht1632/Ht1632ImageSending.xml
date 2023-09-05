@@ -8,6 +8,7 @@
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -36,7 +37,7 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="pixel" Type="SixLabors.ImageSharp.PixelFormats.IPixel" />
+        <Parameter Name="pixel" Type="SixLabors.ImageSharp.PixelFormats.IPixel" Index="0" FrameworkAlternate="iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="pixel">Input pixel</param>
@@ -44,6 +45,61 @@
             Lit if average value of RGB is greater than half.
             </summary>
         <returns>True if average value of RGB is greater than half.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LinearBrightnessConvertor">
+      <MemberSignature Language="C#" Value="public static bool LinearBrightnessConvertor (System.Drawing.Color pixel);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig bool LinearBrightnessConvertor(valuetype System.Drawing.Color pixel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ht1632.Ht1632ImageSending.LinearBrightnessConvertor(System.Drawing.Color)" />
+      <MemberSignature Language="VB.NET" Value="Public Function LinearBrightnessConvertor (pixel As Color) As Boolean" />
+      <MemberSignature Language="F#" Value="static member LinearBrightnessConvertor : System.Drawing.Color -&gt; bool" Usage="Iot.Device.Ht1632.Ht1632ImageSending.LinearBrightnessConvertor pixel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pixel" Type="System.Drawing.Color" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="pixel">Input pixel</param>
+        <summary>
+            Lit if average value of RGB is greater than half.
+            </summary>
+        <returns>True if average value of RGB is greater than half.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowImageWith16Com">
+      <MemberSignature Language="C#" Value="public static void ShowImageWith16Com (this Iot.Device.Ht1632.Ht1632 ht1632, Iot.Device.Graphics.BitmapImage image, Iot.Device.Ht1632.Ht1632ImageSending.BrightnessConvertor? brightnessConvertor = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShowImageWith16Com(class Iot.Device.Ht1632.Ht1632 ht1632, class Iot.Device.Graphics.BitmapImage image, class Iot.Device.Ht1632.Ht1632ImageSending/BrightnessConvertor brightnessConvertor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ht1632.Ht1632ImageSending.ShowImageWith16Com(Iot.Device.Ht1632.Ht1632,Iot.Device.Graphics.BitmapImage,Iot.Device.Ht1632.Ht1632ImageSending.BrightnessConvertor)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub ShowImageWith16Com (ht1632 As Ht1632, image As BitmapImage, Optional brightnessConvertor As Ht1632ImageSending.BrightnessConvertor = Nothing)" />
+      <MemberSignature Language="F#" Value="static member ShowImageWith16Com : Iot.Device.Ht1632.Ht1632 * Iot.Device.Graphics.BitmapImage * Iot.Device.Ht1632.Ht1632ImageSending.BrightnessConvertor -&gt; unit" Usage="Iot.Device.Ht1632.Ht1632ImageSending.ShowImageWith16Com (ht1632, image, brightnessConvertor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ht1632" Type="Iot.Device.Ht1632.Ht1632" Index="0" FrameworkAlternate="iot-dotnet-latest" RefType="this" />
+        <Parameter Name="image" Type="Iot.Device.Graphics.BitmapImage" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="brightnessConvertor" Type="Iot.Device.Ht1632.Ht1632ImageSending+BrightnessConvertor" Index="2" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="ht1632">HT1632 device</param>
+        <param name="image">Image to show. Width at least 16 pixels, height at least 24 pixels </param>
+        <param name="brightnessConvertor">Method for whether pixel is lit or not. Use <see cref="M:Iot.Device.Ht1632.Ht1632ImageSending.LinearBrightnessConvertor(System.Drawing.Color)" /> if null.</param>
+        <summary>
+            Show image with 16-Com mode
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -73,9 +129,9 @@
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="ht1632" Type="Iot.Device.Ht1632.Ht1632" RefType="this" />
-        <Parameter Name="image" Type="SixLabors.ImageSharp.Image&lt;TPixel&gt;" />
-        <Parameter Name="brightnessConvertor" Type="Iot.Device.Ht1632.Ht1632ImageSending+BrightnessConvertor" />
+        <Parameter Name="ht1632" Type="Iot.Device.Ht1632.Ht1632" Index="0" FrameworkAlternate="iot-dotnet-2.1" RefType="this" />
+        <Parameter Name="image" Type="SixLabors.ImageSharp.Image&lt;TPixel&gt;" Index="1" FrameworkAlternate="iot-dotnet-2.1" />
+        <Parameter Name="brightnessConvertor" Type="Iot.Device.Ht1632.Ht1632ImageSending+BrightnessConvertor" Index="2" FrameworkAlternate="iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <typeparam name="TPixel">To be added.</typeparam>
@@ -84,6 +140,35 @@
         <param name="brightnessConvertor">Method for whether pixel is lit or not. Use <see cref="M:Iot.Device.Ht1632.Ht1632ImageSending.LinearBrightnessConvertor(SixLabors.ImageSharp.PixelFormats.IPixel)" /> if null.</param>
         <summary>
             Show image with 16-Com mode
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ShowImageWith8Com">
+      <MemberSignature Language="C#" Value="public static void ShowImageWith8Com (this Iot.Device.Ht1632.Ht1632 ht1632, Iot.Device.Graphics.BitmapImage image, Iot.Device.Ht1632.Ht1632ImageSending.BrightnessConvertor? brightnessConvertor = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void ShowImageWith8Com(class Iot.Device.Ht1632.Ht1632 ht1632, class Iot.Device.Graphics.BitmapImage image, class Iot.Device.Ht1632.Ht1632ImageSending/BrightnessConvertor brightnessConvertor) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ht1632.Ht1632ImageSending.ShowImageWith8Com(Iot.Device.Ht1632.Ht1632,Iot.Device.Graphics.BitmapImage,Iot.Device.Ht1632.Ht1632ImageSending.BrightnessConvertor)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Sub ShowImageWith8Com (ht1632 As Ht1632, image As BitmapImage, Optional brightnessConvertor As Ht1632ImageSending.BrightnessConvertor = Nothing)" />
+      <MemberSignature Language="F#" Value="static member ShowImageWith8Com : Iot.Device.Ht1632.Ht1632 * Iot.Device.Graphics.BitmapImage * Iot.Device.Ht1632.Ht1632ImageSending.BrightnessConvertor -&gt; unit" Usage="Iot.Device.Ht1632.Ht1632ImageSending.ShowImageWith8Com (ht1632, image, brightnessConvertor)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ht1632" Type="Iot.Device.Ht1632.Ht1632" Index="0" FrameworkAlternate="iot-dotnet-latest" RefType="this" />
+        <Parameter Name="image" Type="Iot.Device.Graphics.BitmapImage" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="brightnessConvertor" Type="Iot.Device.Ht1632.Ht1632ImageSending+BrightnessConvertor" Index="2" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="ht1632">HT1632 device</param>
+        <param name="image">Image to show. Width at least 8 pixels, height at least 32 pixels </param>
+        <param name="brightnessConvertor">Method for whether pixel is lit or not. Use <see cref="M:Iot.Device.Ht1632.Ht1632ImageSending.LinearBrightnessConvertor(System.Drawing.Color)" /> if null.</param>
+        <summary>
+            Show image with 8-Com mode
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -114,9 +199,9 @@
         </TypeParameter>
       </TypeParameters>
       <Parameters>
-        <Parameter Name="ht1632" Type="Iot.Device.Ht1632.Ht1632" RefType="this" />
-        <Parameter Name="image" Type="SixLabors.ImageSharp.Image&lt;TPixel&gt;" />
-        <Parameter Name="brightnessConvertor" Type="Iot.Device.Ht1632.Ht1632ImageSending+BrightnessConvertor" />
+        <Parameter Name="ht1632" Type="Iot.Device.Ht1632.Ht1632" Index="0" FrameworkAlternate="iot-dotnet-2.1" RefType="this" />
+        <Parameter Name="image" Type="SixLabors.ImageSharp.Image&lt;TPixel&gt;" Index="1" FrameworkAlternate="iot-dotnet-2.1" />
+        <Parameter Name="brightnessConvertor" Type="Iot.Device.Ht1632.Ht1632ImageSending+BrightnessConvertor" Index="2" FrameworkAlternate="iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <typeparam name="TPixel">To be added.</typeparam>

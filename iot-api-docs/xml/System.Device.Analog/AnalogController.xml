@@ -11,6 +11,7 @@
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -42,6 +43,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="numberingScheme" Type="System.Device.Gpio.PinNumberingScheme" />
@@ -68,6 +70,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -80,6 +83,32 @@
         <summary>
             Closes the given pin
             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertAnalogChannelNumberToPinNumber">
+      <MemberSignature Language="C#" Value="public virtual int ConvertAnalogChannelNumberToPinNumber (int analogChannelNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 ConvertAnalogChannelNumberToPinNumber(int32 analogChannelNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogController.ConvertAnalogChannelNumberToPinNumber(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ConvertAnalogChannelNumberToPinNumber (analogChannelNumber As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member ConvertAnalogChannelNumberToPinNumber : int -&gt; int&#xA;override this.ConvertAnalogChannelNumberToPinNumber : int -&gt; int" Usage="analogController.ConvertAnalogChannelNumberToPinNumber analogChannelNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="analogChannelNumber" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="analogChannelNumber">Logical pin numbering of the board</param>
+        <summary>
+            Convert logical pin to caller's pin numbering scheme.
+            </summary>
+        <returns>Pin number of the given analog channel, or -1 if the input channel is not valid.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -102,7 +131,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="logicalPinNumber" Type="System.Int32" />
+        <Parameter Name="logicalPinNumber" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="logicalPinNumber">Logical pin numbering of the board</param>
@@ -110,6 +139,34 @@
             Convert logical pin to caller's pin numbering scheme.
             </summary>
         <returns>Pin number in the scheme of the parent analog controller</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConvertPinNumberToAnalogChannelNumber">
+      <MemberSignature Language="C#" Value="public virtual int ConvertPinNumberToAnalogChannelNumber (int pinNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 ConvertPinNumberToAnalogChannelNumber(int32 pinNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Analog.AnalogController.ConvertPinNumberToAnalogChannelNumber(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function ConvertPinNumberToAnalogChannelNumber (pinNumber As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member ConvertPinNumberToAnalogChannelNumber : int -&gt; int&#xA;override this.ConvertPinNumberToAnalogChannelNumber : int -&gt; int" Usage="analogController.ConvertPinNumberToAnalogChannelNumber pinNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinNumber" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="pinNumber">Pin number</param>
+        <summary>
+            Convert the input pin number to an analog channel number.
+            The analog channel number is typically named A0 - Axx on Arduino boards. E.g. on Uno and Nano boards, A0
+            equals digital pin 14.
+            </summary>
+        <returns>Analog channel number. Returns -1 if the given pin does not support analog input</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -132,7 +189,7 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="pinNumber" Type="System.Int32" />
+        <Parameter Name="pinNumber" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="pinNumber">Pin Number, in the numbering scheme of the analog controller</param>
@@ -160,6 +217,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -185,6 +243,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -214,6 +273,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -222,11 +282,11 @@
         <Parameter Name="pinNumber" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <param name="pinNumber">The analog channel number.</param>
         <summary>
-            Checks if a specific pin is open.
+            Checks if a specific analog channel is open.
             </summary>
-        <returns>The status if the pin is open or closed.</returns>
+        <returns>The status if the channel is open or closed.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -244,6 +304,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Gpio.PinNumberingScheme</ReturnType>
@@ -270,6 +331,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Analog.AnalogInputPin</ReturnType>
@@ -278,7 +340,7 @@
         <Parameter Name="pinNumber" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="pinNumber">The pin number in the controller's numbering scheme.</param>
+        <param name="pinNumber">The pin number to open (not the analog channel!).</param>
         <summary>
             Opens a pin in order for it to be ready to use.
             </summary>
@@ -300,6 +362,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Analog.AnalogInputPin</ReturnType>
@@ -308,11 +371,11 @@
         <Parameter Name="pinNumber" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="pinNumber">Pin number, in the logical pin numbering scheme</param>
+        <param name="pinNumber">The pin number to open (not the analog channel)</param>
         <summary>
             Overriden by derived classes: Returns an instance of the <see cref="T:System.Device.Analog.AnalogInputPin" /> for the specified pin.
             </summary>
-        <returns>An instance of a pin</returns>
+        <returns>An instance of an analog pin</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -330,6 +393,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -356,6 +420,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -386,6 +451,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.ElectricPotential</ReturnType>

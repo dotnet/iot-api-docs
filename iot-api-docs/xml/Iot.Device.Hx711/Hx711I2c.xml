@@ -1,0 +1,574 @@
+<Type Name="Hx711I2c" FullName="Iot.Device.Hx711.Hx711I2c">
+  <TypeSignature Language="C#" Value="public sealed class Hx711I2c : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Hx711I2c extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Hx711.Hx711I2c" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Hx711I2c&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Hx711I2c = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Device.Model.Interface("DFRobot KIT0176: I2C 1kg Weight Sensor Kit")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Device.Model.Interface("DFRobot KIT0176: I2C 1kg Weight Sensor Kit")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            DFRobot KIT0176: I2C 1kg Weight Sensor Kit
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Hx711I2c (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711I2c.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Hx711.Hx711I2c : System.Device.I2c.I2cDevice -&gt; Iot.Device.Hx711.Hx711I2c" Usage="new Iot.Device.Hx711.Hx711I2c i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">To be added.</param>
+        <summary>
+            Hx711I2c - DFRobot KIT0176: I2C 1kg Weight Sensor Kit
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticCalibrationThreshold">
+      <MemberSignature Language="C#" Value="public ushort AutomaticCalibrationThreshold { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int16 AutomaticCalibrationThreshold" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Hx711.Hx711I2c.AutomaticCalibrationThreshold" />
+      <MemberSignature Language="VB.NET" Value="Public Property AutomaticCalibrationThreshold As UShort" />
+      <MemberSignature Language="F#" Value="member this.AutomaticCalibrationThreshold : uint16 with get, set" Usage="Iot.Device.Hx711.Hx711I2c.AutomaticCalibrationThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sets the minimum weight in grams which will trigger calibration after CAL button is pressed.
+            This value should always be less than calibration weight.
+            Value is only relevant when CAL button has been pressed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutomaticCalibrationWeight">
+      <MemberSignature Language="C#" Value="public ushort AutomaticCalibrationWeight { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int16 AutomaticCalibrationWeight" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Hx711.Hx711I2c.AutomaticCalibrationWeight" />
+      <MemberSignature Language="VB.NET" Value="Public Property AutomaticCalibrationWeight As UShort" />
+      <MemberSignature Language="F#" Value="member this.AutomaticCalibrationWeight : uint16 with get, set" Usage="Iot.Device.Hx711.Hx711I2c.AutomaticCalibrationWeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sets the weight (in grams) used for automatic calibration.
+            Value is only relevant when CAL button has been pressed.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalibrationScale">
+      <MemberSignature Language="C#" Value="public float CalibrationScale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 CalibrationScale" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Hx711.Hx711I2c.CalibrationScale" />
+      <MemberSignature Language="VB.NET" Value="Public Property CalibrationScale As Single" />
+      <MemberSignature Language="F#" Value="member this.CalibrationScale : single with get, set" Usage="Iot.Device.Hx711.Hx711I2c.CalibrationScale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Value which scales raw units into grams.
+            Weight in grams = (Raw Reading - Offset) / CalibrationScale.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const int DefaultI2cAddress = 100;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultI2cAddress = (100)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Hx711.Hx711I2c.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Integer  = 100" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : int" Usage="Iot.Device.Hx711.Hx711I2c.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>100</MemberValue>
+      <Docs>
+        <summary>
+            Default address for I2C, only use when pins A0 and A1 are set to 0.
+            Otherwise use GetI2cAddress
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultOffset">
+      <MemberSignature Language="C#" Value="public const float DefaultOffset = 6780606.5;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal float32 DefaultOffset = (6780606.5)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Hx711.Hx711I2c.DefaultOffset" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultOffset As Single  = 6780606.5" />
+      <MemberSignature Language="F#" Value="val mutable DefaultOffset : single" Usage="Iot.Device.Hx711.Hx711I2c.DefaultOffset" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <MemberValue>6780606.5</MemberValue>
+      <Docs>
+        <summary>
+            Arbitrarily picked value for empty scale.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711I2c.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="hx711I2c.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetAutomaticCalibrationScale">
+      <MemberSignature Language="C#" Value="public float GetAutomaticCalibrationScale ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 GetAutomaticCalibrationScale() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711I2c.GetAutomaticCalibrationScale" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAutomaticCalibrationScale () As Single" />
+      <MemberSignature Language="F#" Value="member this.GetAutomaticCalibrationScale : unit -&gt; single" Usage="hx711I2c.GetAutomaticCalibrationScale " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets data from sensor with scale which was determined with automatic calibration made when CAL button was pressed.
+            This value might differ from actual calibration scale used if no measurements have been made after CAL button was pressed.
+            </summary>
+        <returns>Calibration scale</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetI2cAddress">
+      <MemberSignature Language="C#" Value="public static int GetI2cAddress (System.Device.Gpio.PinValue a0, System.Device.Gpio.PinValue a1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetI2cAddress(valuetype System.Device.Gpio.PinValue a0, valuetype System.Device.Gpio.PinValue a1) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711I2c.GetI2cAddress(System.Device.Gpio.PinValue,System.Device.Gpio.PinValue)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetI2cAddress (a0 As PinValue, a1 As PinValue) As Integer" />
+      <MemberSignature Language="F#" Value="static member GetI2cAddress : System.Device.Gpio.PinValue * System.Device.Gpio.PinValue -&gt; int" Usage="Iot.Device.Hx711.Hx711I2c.GetI2cAddress (a0, a1)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="a0" Type="System.Device.Gpio.PinValue" />
+        <Parameter Name="a1" Type="System.Device.Gpio.PinValue" />
+      </Parameters>
+      <Docs>
+        <param name="a0">Value of A0 pin.</param>
+        <param name="a1">Value of A1 pin.</param>
+        <summary>
+            Gets I2C address depending on A0 and A1 pin settings.
+            </summary>
+        <returns>Address of the device.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetRawReading">
+      <MemberSignature Language="C#" Value="public float GetRawReading ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance float32 GetRawReading() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711I2c.GetRawReading" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetRawReading () As Single" />
+      <MemberSignature Language="F#" Value="member this.GetRawReading : unit -&gt; single" Usage="hx711I2c.GetRawReading " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets average raw reading.
+            </summary>
+        <returns>Raw reading value</returns>
+        <remarks>
+          <para>
+            The <see cref="P:Iot.Device.Hx711.Hx711I2c.SampleAveraging" /> and <see cref="P:Iot.Device.Hx711.Hx711I2c.ReadWriteDelay" /> have direct effect on how long this operation takes to complete.
+            </para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetWeight">
+      <MemberSignature Language="C#" Value="public UnitsNet.Mass GetWeight ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Mass GetWeight() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711I2c.GetWeight" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetWeight () As Mass" />
+      <MemberSignature Language="F#" Value="member this.GetWeight : unit -&gt; UnitsNet.Mass" Usage="hx711I2c.GetWeight " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Telemetry("Weight", null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry("Weight", null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Mass</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets weight reading. Tare should be called first.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreCalibrationButton">
+      <MemberSignature Language="C#" Value="public bool IgnoreCalibrationButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreCalibrationButton" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Hx711.Hx711I2c.IgnoreCalibrationButton" />
+      <MemberSignature Language="VB.NET" Value="Public Property IgnoreCalibrationButton As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IgnoreCalibrationButton : bool with get, set" Usage="Iot.Device.Hx711.Hx711I2c.IgnoreCalibrationButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When set to true, CAL button will not have any effect on the current calibration setting.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IgnoreResetButton">
+      <MemberSignature Language="C#" Value="public bool IgnoreResetButton { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IgnoreResetButton" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Hx711.Hx711I2c.IgnoreResetButton" />
+      <MemberSignature Language="VB.NET" Value="Public Property IgnoreResetButton As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IgnoreResetButton : bool with get, set" Usage="Iot.Device.Hx711.Hx711I2c.IgnoreResetButton" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            When set to true, RST button will not change Offset (it won't Tare).
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Offset">
+      <MemberSignature Language="C#" Value="public float Offset { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float32 Offset" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Hx711.Hx711I2c.Offset" />
+      <MemberSignature Language="VB.NET" Value="Public Property Offset As Single" />
+      <MemberSignature Language="F#" Value="member this.Offset : single with get, set" Usage="Iot.Device.Hx711.Hx711I2c.Offset" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Single</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Raw value telling where 0 is.
+            It will be set to current weight when Tare function is used.
+            Value passed must be a raw reading - use <see cref="M:Iot.Device.Hx711.Hx711I2c.GetRawReading" />.
+            This value does not have specific unit but is linearly correlated to weight reading.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadWriteDelay">
+      <MemberSignature Language="C#" Value="public TimeSpan ReadWriteDelay { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan ReadWriteDelay" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Hx711.Hx711I2c.ReadWriteDelay" />
+      <MemberSignature Language="VB.NET" Value="Public Property ReadWriteDelay As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.ReadWriteDelay : TimeSpan with get, set" Usage="Iot.Device.Hx711.Hx711I2c.ReadWriteDelay" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the delay after every read or write operation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The default value is 1ms.
+            </para>
+          <para>
+            The delay has impact on the time it takes for a <see cref="M:Iot.Device.Hx711.Hx711I2c.GetWeight" /> operation to complete.
+            </para>
+          <para>
+            Too small delay may cause ocassional or persistent reading errors.
+            </para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetSensor">
+      <MemberSignature Language="C#" Value="public void ResetSensor ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetSensor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711I2c.ResetSensor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ResetSensor ()" />
+      <MemberSignature Language="F#" Value="member this.ResetSensor : unit -&gt; unit" Usage="hx711I2c.ResetSensor " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Command(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Command(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Re-initializes the sensor and sets arbitrarly chosen calibration values.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SampleAveraging">
+      <MemberSignature Language="C#" Value="public uint SampleAveraging { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 SampleAveraging" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Hx711.Hx711I2c.SampleAveraging" />
+      <MemberSignature Language="VB.NET" Value="Public Property SampleAveraging As UInteger" />
+      <MemberSignature Language="F#" Value="member this.SampleAveraging : uint32 with get, set" Usage="Iot.Device.Hx711.Hx711I2c.SampleAveraging" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the number of samples that will be taken and then averaged when performing a <see cref="M:Iot.Device.Hx711.Hx711I2c.GetWeight" /> operation.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <para>
+            The default value is 20 samples.
+            </para>
+          <para>
+            Larger value gives more accurate <see cref="M:Iot.Device.Hx711.Hx711I2c.GetWeight" /> reading but also increases time it takes for operation to complete.
+            </para>
+        </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="StartCalibration">
+      <MemberSignature Language="C#" Value="public void StartCalibration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartCalibration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711I2c.StartCalibration" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StartCalibration ()" />
+      <MemberSignature Language="F#" Value="member this.StartCalibration : unit -&gt; unit" Usage="hx711I2c.StartCalibration " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Command(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Command(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Equivalent to physically clicking CAL button.
+            When CAL button is pressed or this method is called the LED turns orange
+            then user needs to wait a bit (1-2 seconds) then place calibration weight.
+            Use AutomaticCalibrationWeight to set weight you use for calibration.
+            The calibration is finished when placed weight exceeds AutomaticCalibrationThreshold.
+            After that orange LED flashes 3 times and turns off.
+            It means calibration is successfully finished.
+            If flashing doesn't happen and LED turns off it means calibration didn't succeed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Tare">
+      <MemberSignature Language="C#" Value="public void Tare (bool blinkLed = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Tare(bool blinkLed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711I2c.Tare(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Tare (Optional blinkLed As Boolean = false)" />
+      <MemberSignature Language="F#" Value="member this.Tare : bool -&gt; unit" Usage="hx711I2c.Tare blinkLed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Command(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Command(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="blinkLed" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="blinkLed">When set to true will also blink LED next to RST button.</param>
+        <summary>
+            Read current weight and use it as 0. Equivalent to pressing RST button.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

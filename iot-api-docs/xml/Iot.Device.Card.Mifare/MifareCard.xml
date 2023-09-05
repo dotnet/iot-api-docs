@@ -14,6 +14,7 @@
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -22,7 +23,8 @@
   <Docs>
     <summary>
             A Mifare card class
-            So far only supports the classical 1K cards
+            Supports Mifare Classic 1K and 4K
+            Also supports Mifare Plus 2K and 4K operating in SL1
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -44,6 +46,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="rfid" Type="Iot.Device.Card.CardTransceiver" />
@@ -75,6 +78,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Card.Mifare.AccessType</ReturnType>
@@ -110,6 +114,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte</ReturnType>
@@ -119,6 +124,58 @@
             The block number to authenticate or read or write
             </summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockNumberToBlockGroup">
+      <MemberSignature Language="C#" Value="public static byte BlockNumberToBlockGroup (byte blockNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8 BlockNumberToBlockGroup(unsigned int8 blockNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.BlockNumberToBlockGroup(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function BlockNumberToBlockGroup (blockNumber As Byte) As Byte" />
+      <MemberSignature Language="F#" Value="static member BlockNumberToBlockGroup : byte -&gt; byte" Usage="Iot.Device.Card.Mifare.MifareCard.BlockNumberToBlockGroup blockNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="blockNumber" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="blockNumber">block number</param>
+        <summary>
+            Determine the block group corresponding to a block number
+            </summary>
+        <returns>block group</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BlockNumberToSector">
+      <MemberSignature Language="C#" Value="public static byte BlockNumberToSector (byte blockNumber);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8 BlockNumberToSector(unsigned int8 blockNumber) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.BlockNumberToSector(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function BlockNumberToSector (blockNumber As Byte) As Byte" />
+      <MemberSignature Language="F#" Value="static member BlockNumberToSector : byte -&gt; byte" Usage="Iot.Device.Card.Mifare.MifareCard.BlockNumberToSector blockNumber" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="blockNumber" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="blockNumber">block number</param>
+        <summary>
+            Determine the sector number corresponding to a particular block number
+            </summary>
+        <returns>sector number</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -139,6 +196,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Card.Mifare.MifareCardCapacity</ReturnType>
@@ -168,6 +226,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Card.Mifare.MifareCardCommand</ReturnType>
@@ -198,6 +257,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -225,6 +285,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ReadOnlySpan&lt;System.Byte&gt;</ReturnType>
@@ -234,7 +295,7 @@
             Default block Key A for NDEF card
             </summary>
         <value>To be added.</value>
-        <remarks>See https://www.nxp.com/docs/en/application-note/AN1304.pdf for more information</remarks>
+        <remarks>See https://www.nxp.com/docs/en/application-note/AN10787.pdf for more information</remarks>
       </Docs>
     </Member>
     <Member MemberName="DefaultFirstBlockNdefKeyA">
@@ -252,16 +313,18 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ReadOnlySpan&lt;System.Byte&gt;</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Default first block Key A for NDEF card
+            Default Mifare Application Directory block Key A for NDEF card
+            The MAD is in the first sector on all cards and also sector 16 on 2K and 4K cards
             </summary>
         <value>To be added.</value>
-        <remarks>See https://www.nxp.com/docs/en/application-note/AN1304.pdf for more information</remarks>
+        <remarks>See https://www.nxp.com/docs/en/application-note/AN10787.pdf for more information</remarks>
       </Docs>
     </Member>
     <Member MemberName="DefaultKeyA">
@@ -279,6 +342,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ReadOnlySpan&lt;System.Byte&gt;</ReturnType>
@@ -306,6 +370,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ReadOnlySpan&lt;System.Byte&gt;</ReturnType>
@@ -336,6 +401,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ValueTuple&lt;System.Byte,System.Byte,System.Byte&gt;</ReturnType>
@@ -352,6 +418,40 @@
             Encode with default value the access sector and tailer blocks
             </summary>
         <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EncodeSectorAndBlockTailer">
+      <MemberSignature Language="C#" Value="public (byte B6, byte B7, byte B8) EncodeSectorAndBlockTailer (Iot.Device.Card.Mifare.AccessSector accessSector, Iot.Device.Card.Mifare.AccessType[] accessTypes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.ValueTuple`3&lt;unsigned int8, unsigned int8, unsigned int8&gt; EncodeSectorAndBlockTailer(valuetype Iot.Device.Card.Mifare.AccessSector accessSector, valuetype Iot.Device.Card.Mifare.AccessType[] accessTypes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.EncodeSectorAndBlockTailer(Iot.Device.Card.Mifare.AccessSector,Iot.Device.Card.Mifare.AccessType[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function EncodeSectorAndBlockTailer (accessSector As AccessSector, accessTypes As AccessType()) As ValueTuple(Of Byte, Byte, Byte)" />
+      <MemberSignature Language="F#" Value="member this.EncodeSectorAndBlockTailer : Iot.Device.Card.Mifare.AccessSector * Iot.Device.Card.Mifare.AccessType[] -&gt; ValueTuple&lt;byte, byte, byte&gt;" Usage="mifareCard.EncodeSectorAndBlockTailer (accessSector, accessTypes)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;System.Byte,System.Byte,System.Byte&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "B6", "B7", "B8" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "B6", "B7", "B8" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="accessSector" Type="Iot.Device.Card.Mifare.AccessSector" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="accessTypes" Type="Iot.Device.Card.Mifare.AccessType[]" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="accessSector">The access desired</param>
+        <param name="accessTypes">An array of 3 AccessType determining access of each block</param>
+        <summary>
+            Encode the desired access for the full sector including the block tailer
+            </summary>
+        <returns>The 3 bytes encoding the rights</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -373,7 +473,14 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
+      <Attributes>
+        <Attribute FrameworkAlternate="iot-dotnet-latest">
+          <AttributeName Language="C#">[System.Obsolete("deprecated, use EncodeSectorAndBlockTailer instead")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Obsolete("deprecated, use EncodeSectorAndBlockTailer instead")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
       <ReturnValue>
         <ReturnType>System.ValueTuple&lt;System.Byte,System.Byte,System.Byte&gt;</ReturnType>
         <Attributes>
@@ -415,6 +522,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ValueTuple&lt;System.Byte,System.Byte,System.Byte&gt;</ReturnType>
@@ -455,6 +563,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ValueTuple&lt;System.Byte,System.Byte,System.Byte&gt;</ReturnType>
@@ -494,6 +603,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -533,6 +643,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -543,10 +654,42 @@
       <Docs>
         <param name="keyB">The key B to be used for formatting, if empty, will use the default key B</param>
         <summary>
-            Format the Card to NDEF
+            Format the entire card to NDEF
             </summary>
         <returns>True if success</returns>
         <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">The card size is unknown or the specified KeyB is invalid</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="FormatNdef">
+      <MemberSignature Language="C#" Value="public bool FormatNdef (uint numberOfSectors, ReadOnlySpan&lt;byte&gt; keyB = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool FormatNdef(unsigned int32 numberOfSectors, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; keyB) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.FormatNdef(System.UInt32,System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function FormatNdef (numberOfSectors As UInteger, Optional keyB As ReadOnlySpan(Of Byte) = Nothing) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.FormatNdef : uint32 * ReadOnlySpan&lt;byte&gt; -&gt; bool" Usage="mifareCard.FormatNdef (numberOfSectors, keyB)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numberOfSectors" Type="System.UInt32" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="keyB" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="numberOfSectors">The number of sectors for NDEF, if zero, use the entire card</param>
+        <param name="keyB">The key B to be used for formatting, if empty, will use the default key B</param>
+        <summary>
+            Format a portion of the card to NDEF
+            </summary>
+        <returns>True if success</returns>
+        <remarks>The requested number of sectors are configured as NFC Forum sectors. To reserve some
+            space on the card for other purposes, specify a nonzero value for <paramref name="numberOfSectors" />
+            and then allocate additional applications using <see cref="T:Iot.Device.Card.Mifare.MifareDirectory" /></remarks>
+        <exception cref="T:System.ArgumentException">The card size is unknown or the specified KeyB is invalid</exception>
       </Docs>
     </Member>
     <Member MemberName="GetNumberBlocks">
@@ -564,6 +707,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -592,6 +736,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte</ReturnType>
@@ -623,6 +768,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -651,6 +797,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -658,10 +805,13 @@
       <Parameters />
       <Docs>
         <summary>
-            Check if the card formated to NDEF
+            Check if the card is formatted to NDEF
             </summary>
-        <returns>True if NDEF formated</returns>
-        <remarks>It will only check the first 2 block of the first sector and that the GPB is set properly</remarks>
+        <returns>True if NDEF formatted</returns>
+        <remarks>This checks for a Mifare application directory in sector 0 and
+            (for 2K and 4K cards) sector 16, that there is an NDEF application, that
+            the sector trailer is readable in all sectors in that application, and
+            that the GPB byte is set correctly in the trailers.</remarks>
       </Docs>
     </Member>
     <Member MemberName="IsSectorBlock">
@@ -681,6 +831,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -714,6 +865,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -743,6 +895,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -750,6 +903,32 @@
       <Docs>
         <summary>
             Key B Used for encryption/decryption
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReselectAfterError">
+      <MemberSignature Language="C#" Value="public bool ReselectAfterError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReselectAfterError" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareCard.ReselectAfterError" />
+      <MemberSignature Language="VB.NET" Value="Public Property ReselectAfterError As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReselectAfterError : bool with get, set" Usage="Iot.Device.Card.Mifare.MifareCard.ReselectAfterError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Reselect the card after a card command fails
+            After an error, the card will not respond to any further commands
+            until it is reselected. If this property is false, the caller
+            is responsible for calling ReselectCard when RunMifareCardCommand
+            returns an error (-1).
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -770,6 +949,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -798,6 +978,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -852,6 +1033,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Card.Mifare.AccessSector</ReturnType>
@@ -867,6 +1049,34 @@
             Get the sector tailer access information
             </summary>
         <returns>the access sector rights</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SectorToBlockNumber">
+      <MemberSignature Language="C#" Value="public static byte SectorToBlockNumber (byte sector, byte group = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8 SectorToBlockNumber(unsigned int8 sector, unsigned int8 group) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.SectorToBlockNumber(System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function SectorToBlockNumber (sector As Byte, Optional group As Byte = 0) As Byte" />
+      <MemberSignature Language="F#" Value="static member SectorToBlockNumber : byte * byte -&gt; byte" Usage="Iot.Device.Card.Mifare.MifareCard.SectorToBlockNumber (sector, group)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sector" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="group" Type="System.Byte" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="sector">sector number</param>
+        <param name="group">group (0 to 3, where 3 is the sector trailer)</param>
+        <summary>
+            Determine the first block number of a specified sector and block group
+            </summary>
+        <returns>block number of the first (or only) block in the group</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -887,6 +1097,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -900,11 +1111,15 @@
       </Docs>
     </Member>
     <Member MemberName="SetCapacity">
-      <MemberSignature Language="C#" Value="public void SetCapacity (ushort ATAQ, byte SAK);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCapacity(unsigned int16 ATAQ, unsigned int8 SAK) cil managed" />
+      <MemberSignature Language="C#" Value="public void SetCapacity (ushort ATAQ, byte SAK);" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCapacity(unsigned int16 ATAQ, unsigned int8 SAK) cil managed" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareCard.SetCapacity(System.UInt16,System.Byte)" />
-      <MemberSignature Language="VB.NET" Value="Public Sub SetCapacity (ATAQ As UShort, SAK As Byte)" />
-      <MemberSignature Language="F#" Value="member this.SetCapacity : uint16 * byte -&gt; unit" Usage="mifareCard.SetCapacity (ATAQ, SAK)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetCapacity (ATAQ As UShort, SAK As Byte)" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="F#" Value="member this.SetCapacity : uint16 * byte -&gt; unit" Usage="mifareCard.SetCapacity (ATAQ, SAK)" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+      <MemberSignature Language="C#" Value="public void SetCapacity (ushort ATQA, byte SAK);" FrameworkAlternate="iot-dotnet-latest" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCapacity(unsigned int16 ATQA, unsigned int8 SAK) cil managed" FrameworkAlternate="iot-dotnet-latest" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetCapacity (ATQA As UShort, SAK As Byte)" FrameworkAlternate="iot-dotnet-latest" />
+      <MemberSignature Language="F#" Value="member this.SetCapacity : uint16 * byte -&gt; unit" Usage="mifareCard.SetCapacity (ATQA, SAK)" FrameworkAlternate="iot-dotnet-latest" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
@@ -916,21 +1131,24 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="ATAQ" Type="System.UInt16" />
-        <Parameter Name="SAK" Type="System.Byte" />
+        <Parameter Name="ATAQ" Type="System.UInt16" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="ATQA" Type="System.UInt16" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="SAK" Type="System.Byte" Index="1" />
       </Parameters>
       <Docs>
         <param name="ATAQ">The ATQA response</param>
+        <param name="ATQA">The ATQA response</param>
         <param name="SAK">The SAK response</param>
         <summary>
-            From the ATAQ ans SAK data find common card capacity
+            From the ATQA and SAK data find common card capacity
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>Does not recognize Mifare Plus cards, capacity must be set manually</remarks>
       </Docs>
     </Member>
     <Member MemberName="Target">
@@ -950,6 +1168,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte</ReturnType>
@@ -977,6 +1196,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -990,7 +1210,8 @@
             Try to read a NDEF Message from a Mifare card
             </summary>
         <returns>True if success</returns>
-        <remarks>To be added.</remarks>
+        <remarks>The Mifare application directory indicates the range of sectors used for NDEF. Normally
+            these begin at sector 1.</remarks>
       </Docs>
     </Member>
     <Member MemberName="WriteDataBlock">
@@ -1008,6 +1229,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1039,6 +1261,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -1049,12 +1272,16 @@
       </Parameters>
       <Docs>
         <param name="message">The NDEF Message to write</param>
-        <param name="writeKeyA">True to write with Key A</param>
+        <param name="writeKeyA">True to write with Key A, false to write with Key B</param>
         <summary>
             Write an NDEF Message
             </summary>
         <returns>True if success</returns>
-        <remarks>To be added.</remarks>
+        <remarks>The Mifare application directory indicates range of sectors for NDEF. Normally,
+            these begin at sector 1. The message must fit within the allocated space on the card.</remarks>
+        <exception cref="T:System.ArgumentException">If using KeyB, it must be 6 bytes long</exception>
+        <exception cref="T:System.InvalidOperationException">The card is not formatted for NDEF</exception>
+        <exception cref="T:System.ArgumentOutOfRangeException">The message to be written is larger than the available space on the card</exception>
       </Docs>
     </Member>
   </Members>
