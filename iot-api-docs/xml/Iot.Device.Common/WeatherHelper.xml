@@ -14,6 +14,7 @@
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -73,6 +74,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Density</ReturnType>
@@ -137,6 +139,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>
@@ -153,6 +156,64 @@
             </summary>
         <returns>The actual vapor pressure</returns>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateAirDensity">
+      <MemberSignature Language="C#" Value="public static UnitsNet.Density CalculateAirDensity (UnitsNet.Pressure airPressure, UnitsNet.Temperature temperature);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Density CalculateAirDensity(valuetype UnitsNet.Pressure airPressure, valuetype UnitsNet.Temperature temperature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateAirDensity(UnitsNet.Pressure,UnitsNet.Temperature)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateAirDensity (airPressure As Pressure, temperature As Temperature) As Density" />
+      <MemberSignature Language="F#" Value="static member CalculateAirDensity : UnitsNet.Pressure * UnitsNet.Temperature -&gt; UnitsNet.Density" Usage="Iot.Device.Common.WeatherHelper.CalculateAirDensity (airPressure, temperature)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Density</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="airPressure" Type="UnitsNet.Pressure" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="temperature" Type="UnitsNet.Temperature" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="airPressure">Measured air pressure</param>
+        <param name="temperature">Measured temperature</param>
+        <summary>
+            Simplified air density (not taking humidity into account)
+            </summary>
+        <returns>Approximate standard air density</returns>
+        <remarks>From https://de.wikipedia.org/wiki/Luftdichte </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateAirDensity">
+      <MemberSignature Language="C#" Value="public static UnitsNet.Density CalculateAirDensity (UnitsNet.Pressure airPressure, UnitsNet.Temperature temperature, UnitsNet.RelativeHumidity humidity);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Density CalculateAirDensity(valuetype UnitsNet.Pressure airPressure, valuetype UnitsNet.Temperature temperature, valuetype UnitsNet.RelativeHumidity humidity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateAirDensity(UnitsNet.Pressure,UnitsNet.Temperature,UnitsNet.RelativeHumidity)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateAirDensity (airPressure As Pressure, temperature As Temperature, humidity As RelativeHumidity) As Density" />
+      <MemberSignature Language="F#" Value="static member CalculateAirDensity : UnitsNet.Pressure * UnitsNet.Temperature * UnitsNet.RelativeHumidity -&gt; UnitsNet.Density" Usage="Iot.Device.Common.WeatherHelper.CalculateAirDensity (airPressure, temperature, humidity)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Density</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="airPressure" Type="UnitsNet.Pressure" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="temperature" Type="UnitsNet.Temperature" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="humidity" Type="UnitsNet.RelativeHumidity" Index="2" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="airPressure">Measured air pressure</param>
+        <param name="temperature">Measured temperature</param>
+        <param name="humidity">Measured relative humidity</param>
+        <summary>
+            Calculates the air density
+            </summary>
+        <returns>Approximate standard air density at sea level</returns>
+        <remarks>From https://de.wikipedia.org/wiki/Luftdichte </remarks>
       </Docs>
     </Member>
     <Member MemberName="CalculateAltitude">
@@ -172,6 +233,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Length</ReturnType>
@@ -205,6 +267,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Length</ReturnType>
@@ -240,6 +303,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Length</ReturnType>
@@ -275,6 +339,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Length</ReturnType>
@@ -312,6 +377,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>
@@ -395,6 +461,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>
@@ -440,6 +507,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>
@@ -516,6 +584,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Temperature</ReturnType>
@@ -583,6 +652,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Temperature</ReturnType>
@@ -622,6 +692,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>
@@ -659,6 +730,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>
@@ -695,6 +767,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>
@@ -731,6 +804,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>
@@ -769,6 +843,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Temperature</ReturnType>
@@ -788,6 +863,69 @@
         <returns>The standard temperature at the given altitude, when the given pressure difference is known</returns>
         <remarks>
           <see cref="M:Iot.Device.Common.WeatherHelper.CalculatePressure(UnitsNet.Pressure,UnitsNet.Length,UnitsNet.Temperature)" /> solved for temperature</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateWindchill">
+      <MemberSignature Language="C#" Value="public static UnitsNet.Temperature CalculateWindchill (UnitsNet.Temperature temperature, UnitsNet.Speed windSpeed);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Temperature CalculateWindchill(valuetype UnitsNet.Temperature temperature, valuetype UnitsNet.Speed windSpeed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateWindchill(UnitsNet.Temperature,UnitsNet.Speed)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateWindchill (temperature As Temperature, windSpeed As Speed) As Temperature" />
+      <MemberSignature Language="F#" Value="static member CalculateWindchill : UnitsNet.Temperature * UnitsNet.Speed -&gt; UnitsNet.Temperature" Usage="Iot.Device.Common.WeatherHelper.CalculateWindchill (temperature, windSpeed)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Temperature</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="temperature" Type="UnitsNet.Temperature" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="windSpeed" Type="UnitsNet.Speed" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="temperature">The measured air temperature</param>
+        <param name="windSpeed">The wind speed (measured at 10m above ground)</param>
+        <summary>
+            Calculates the wind chill temperature - this is the perceived temperature in (heavy) winds at cold temperatures.
+            This is only useful at temperatures below about 20°C, above use <see cref="M:Iot.Device.Common.WeatherHelper.CalculateHeatIndex(UnitsNet.Temperature,UnitsNet.RelativeHumidity)" /> instead.
+            Not suitable for wind speeds &lt; 5 km/h.
+            </summary>
+        <returns>The perceived temperature. Note that this is not a real temperature, and the skin will never really reach
+            this temperature. This is more an indication on how fast the skin will reach the air temperature. If the skin
+            reaches a temperature of about -5°C, frostbite might occur.</returns>
+        <remarks>From https://de.wikipedia.org/wiki/Windchill </remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">The wind speed is less than zero</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateWindForce">
+      <MemberSignature Language="C#" Value="public static UnitsNet.Pressure CalculateWindForce (UnitsNet.Density densityOfAir, UnitsNet.Speed windSpeed, double pressureCoefficient = 1);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Pressure CalculateWindForce(valuetype UnitsNet.Density densityOfAir, valuetype UnitsNet.Speed windSpeed, float64 pressureCoefficient) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.WeatherHelper.CalculateWindForce(UnitsNet.Density,UnitsNet.Speed,System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateWindForce (densityOfAir As Density, windSpeed As Speed, Optional pressureCoefficient As Double = 1) As Pressure" />
+      <MemberSignature Language="F#" Value="static member CalculateWindForce : UnitsNet.Density * UnitsNet.Speed * double -&gt; UnitsNet.Pressure" Usage="Iot.Device.Common.WeatherHelper.CalculateWindForce (densityOfAir, windSpeed, pressureCoefficient)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Pressure</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="densityOfAir" Type="UnitsNet.Density" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="windSpeed" Type="UnitsNet.Speed" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="pressureCoefficient" Type="System.Double" Index="2" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="densityOfAir">The denisty of the air, calculated using one of the overloads of <see cref="M:Iot.Device.Common.WeatherHelper.CalculateAirDensity(UnitsNet.Pressure,UnitsNet.Temperature)" /></param>
+        <param name="windSpeed">The speed of the wind</param>
+        <param name="pressureCoefficient">Pressure coefficient for the shape of the object. Use 1 for a rectangular object directly facing the wind</param>
+        <summary>
+            Calculates the wind force on an object.
+            </summary>
+        <returns>The Pressure the wind applies on the object</returns>
+        <remarks>From https://de.wikipedia.org/wiki/Winddruck </remarks>
       </Docs>
     </Member>
     <Member MemberName="GetRelativeHumidityFromActualAirTemperature">
@@ -841,6 +979,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.RelativeHumidity</ReturnType>
@@ -883,6 +1022,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Pressure</ReturnType>

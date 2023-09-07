@@ -1,0 +1,193 @@
+<Type Name="RawPixelContainer" FullName="Iot.Device.Ws28xx.RawPixelContainer">
+  <TypeSignature Language="C#" Value="public abstract class RawPixelContainer" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit RawPixelContainer extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ws28xx.RawPixelContainer" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class RawPixelContainer" />
+  <TypeSignature Language="F#" Value="type RawPixelContainer = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            An abstract class that acts as a data container for device-dependent pixel arrays
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected RawPixelContainer (byte[] data, int width, int height, int stride);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(unsigned int8[] data, int32 width, int32 height, int32 stride) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ws28xx.RawPixelContainer.#ctor(System.Byte[],System.Int32,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (data As Byte(), width As Integer, height As Integer, stride As Integer)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ws28xx.RawPixelContainer : byte[] * int * int * int -&gt; Iot.Device.Ws28xx.RawPixelContainer" Usage="new Iot.Device.Ws28xx.RawPixelContainer (data, width, height, stride)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="data" Type="System.Byte[]" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="stride" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="data">The data array. Should be of size <paramref name="width" /> * <paramref name="height" /> * bytesPerPixel</param>
+        <param name="width">Width of the image, in pixels</param>
+        <param name="height">Height of the image, in pixels</param>
+        <param name="stride">Image width * bytes per pixel (number of bytes per image scanline)</param>
+        <summary>
+            Constructs a container with the given values
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public virtual void Clear (System.Drawing.Color color = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear(valuetype System.Drawing.Color color) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ws28xx.RawPixelContainer.Clear(System.Drawing.Color)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Clear (Optional color As Color = Nothing)" />
+      <MemberSignature Language="F#" Value="abstract member Clear : System.Drawing.Color -&gt; unit&#xA;override this.Clear : System.Drawing.Color -&gt; unit" Usage="rawPixelContainer.Clear color" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="color" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="color">Color to clear the image. Defaults to black.</param>
+        <summary>
+            Clears the image to specific color
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Data">
+      <MemberSignature Language="C#" Value="public Span&lt;byte&gt; Data { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Span`1&lt;unsigned int8&gt; Data" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ws28xx.RawPixelContainer.Data" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Data As Span(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.Data : Span&lt;byte&gt;" Usage="Iot.Device.Ws28xx.RawPixelContainer.Data" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Span&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Retrieves the raw pixels. Addressing and color format is device-dependent!
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public int Height { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Height" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ws28xx.RawPixelContainer.Height" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Height As Integer" />
+      <MemberSignature Language="F#" Value="member this.Height : int" Usage="Iot.Device.Ws28xx.RawPixelContainer.Height" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Image Height
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPixel">
+      <MemberSignature Language="C#" Value="public abstract void SetPixel (int x, int y, System.Drawing.Color c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetPixel(int32 x, int32 y, valuetype System.Drawing.Color c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ws28xx.RawPixelContainer.SetPixel(System.Int32,System.Int32,System.Drawing.Color)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub SetPixel (x As Integer, y As Integer, c As Color)" />
+      <MemberSignature Language="F#" Value="abstract member SetPixel : int * int * System.Drawing.Color -&gt; unit" Usage="rawPixelContainer.SetPixel (x, y, c)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="c" Type="System.Drawing.Color" />
+      </Parameters>
+      <Docs>
+        <param name="x">X coordinate</param>
+        <param name="y">Y coordinate</param>
+        <param name="c">Color to set, will be adjusted to the color format of the target hardware</param>
+        <summary>
+            Sets a pixel to a specific color
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Stride">
+      <MemberSignature Language="C#" Value="public int Stride { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Stride" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ws28xx.RawPixelContainer.Stride" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Stride As Integer" />
+      <MemberSignature Language="F#" Value="member this.Stride : int" Usage="Iot.Device.Ws28xx.RawPixelContainer.Stride" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Image Stride (number of bytes per scanline)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public int Width { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Width" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ws28xx.RawPixelContainer.Width" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Width As Integer" />
+      <MemberSignature Language="F#" Value="member this.Width : int" Usage="Iot.Device.Ws28xx.RawPixelContainer.Width" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Image width
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

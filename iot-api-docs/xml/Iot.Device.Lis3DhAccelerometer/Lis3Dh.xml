@@ -1,0 +1,271 @@
+<Type Name="Lis3Dh" FullName="Iot.Device.Lis3DhAccelerometer.Lis3Dh">
+  <TypeSignature Language="C#" Value="public abstract class Lis3Dh : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Lis3Dh extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Lis3DhAccelerometer.Lis3Dh" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Lis3Dh&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Lis3Dh = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Device.Model.Interface("LIS3DH accelerometer")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Device.Model.Interface("LIS3DH accelerometer")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            LIS3DH accelerometer
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Acceleration">
+      <MemberSignature Language="C#" Value="public System.Numerics.Vector3 Acceleration { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Numerics.Vector3 Acceleration" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Lis3DhAccelerometer.Lis3Dh.Acceleration" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Acceleration As Vector3" />
+      <MemberSignature Language="F#" Value="member this.Acceleration : System.Numerics.Vector3" Usage="Iot.Device.Lis3DhAccelerometer.Lis3Dh.Acceleration" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Telemetry(null, "Acceleration measured in gravitational force")]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry(null, "Acceleration measured in gravitational force")&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Numerics.Vector3</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Acceleration measured in gravitational force
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AccelerationScale">
+      <MemberSignature Language="C#" Value="public Iot.Device.Lis3DhAccelerometer.AccelerationScale AccelerationScale { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Lis3DhAccelerometer.AccelerationScale AccelerationScale" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Lis3DhAccelerometer.Lis3Dh.AccelerationScale" />
+      <MemberSignature Language="VB.NET" Value="Public Property AccelerationScale As AccelerationScale" />
+      <MemberSignature Language="F#" Value="member this.AccelerationScale : Iot.Device.Lis3DhAccelerometer.AccelerationScale with get, set" Usage="Iot.Device.Lis3DhAccelerometer.Lis3Dh.AccelerationScale" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Lis3DhAccelerometer.AccelerationScale</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Acceleration scale
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Create">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Lis3DhAccelerometer.Lis3Dh Create (System.Device.I2c.I2cDevice i2cDevice, Iot.Device.Lis3DhAccelerometer.DataRate dataRate = Iot.Device.Lis3DhAccelerometer.DataRate.DataRate100Hz, Iot.Device.Lis3DhAccelerometer.OperatingMode operatingMode = Iot.Device.Lis3DhAccelerometer.OperatingMode.HighResolutionMode, Iot.Device.Lis3DhAccelerometer.AccelerationScale accelerationScale = Iot.Device.Lis3DhAccelerometer.AccelerationScale.Scale04G);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Lis3DhAccelerometer.Lis3Dh Create(class System.Device.I2c.I2cDevice i2cDevice, valuetype Iot.Device.Lis3DhAccelerometer.DataRate dataRate, valuetype Iot.Device.Lis3DhAccelerometer.OperatingMode operatingMode, valuetype Iot.Device.Lis3DhAccelerometer.AccelerationScale accelerationScale) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Lis3DhAccelerometer.Lis3Dh.Create(System.Device.I2c.I2cDevice,Iot.Device.Lis3DhAccelerometer.DataRate,Iot.Device.Lis3DhAccelerometer.OperatingMode,Iot.Device.Lis3DhAccelerometer.AccelerationScale)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Create (i2cDevice As I2cDevice, Optional dataRate As DataRate = Iot.Device.Lis3DhAccelerometer.DataRate.DataRate100Hz, Optional operatingMode As OperatingMode = Iot.Device.Lis3DhAccelerometer.OperatingMode.HighResolutionMode, Optional accelerationScale As AccelerationScale = Iot.Device.Lis3DhAccelerometer.AccelerationScale.Scale04G) As Lis3Dh" />
+      <MemberSignature Language="F#" Value="static member Create : System.Device.I2c.I2cDevice * Iot.Device.Lis3DhAccelerometer.DataRate * Iot.Device.Lis3DhAccelerometer.OperatingMode * Iot.Device.Lis3DhAccelerometer.AccelerationScale -&gt; Iot.Device.Lis3DhAccelerometer.Lis3Dh" Usage="Iot.Device.Lis3DhAccelerometer.Lis3Dh.Create (i2cDevice, dataRate, operatingMode, accelerationScale)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Lis3DhAccelerometer.Lis3Dh</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="dataRate" Type="Iot.Device.Lis3DhAccelerometer.DataRate" />
+        <Parameter Name="operatingMode" Type="Iot.Device.Lis3DhAccelerometer.OperatingMode" />
+        <Parameter Name="accelerationScale" Type="Iot.Device.Lis3DhAccelerometer.AccelerationScale" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">I2C device</param>
+        <param name="dataRate">Data rate</param>
+        <param name="operatingMode">Operating mode</param>
+        <param name="accelerationScale">Acceleration scale</param>
+        <summary>
+            Creates Lis3Dh instance using I2cDevice
+            </summary>
+        <returns>Lis3Dh instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DataRate">
+      <MemberSignature Language="C#" Value="public Iot.Device.Lis3DhAccelerometer.DataRate DataRate { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Lis3DhAccelerometer.DataRate DataRate" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Lis3DhAccelerometer.Lis3Dh.DataRate" />
+      <MemberSignature Language="VB.NET" Value="Public Property DataRate As DataRate" />
+      <MemberSignature Language="F#" Value="member this.DataRate : Iot.Device.Lis3DhAccelerometer.DataRate with get, set" Usage="Iot.Device.Lis3DhAccelerometer.Lis3Dh.DataRate" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Lis3DhAccelerometer.DataRate</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Data rate
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const int DefaultI2cAddress = 24;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultI2cAddress = (24)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Lis3DhAccelerometer.Lis3Dh.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Integer  = 24" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : int" Usage="Iot.Device.Lis3DhAccelerometer.Lis3Dh.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>24</MemberValue>
+      <Docs>
+        <summary>
+            Default I2C address (SDO/SA0 pin low)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public abstract void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Lis3DhAccelerometer.Lis3Dh.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit" Usage="lis3Dh.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetI2cAddress">
+      <MemberSignature Language="C#" Value="public static int GetI2cAddress (System.Device.Gpio.PinValue sdoPinValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig int32 GetI2cAddress(valuetype System.Device.Gpio.PinValue sdoPinValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Lis3DhAccelerometer.Lis3Dh.GetI2cAddress(System.Device.Gpio.PinValue)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetI2cAddress (sdoPinValue As PinValue) As Integer" />
+      <MemberSignature Language="F#" Value="static member GetI2cAddress : System.Device.Gpio.PinValue -&gt; int" Usage="Iot.Device.Lis3DhAccelerometer.Lis3Dh.GetI2cAddress sdoPinValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sdoPinValue" Type="System.Device.Gpio.PinValue" />
+      </Parameters>
+      <Docs>
+        <param name="sdoPinValue">SDO pin value. Pin may be also called SA0</param>
+        <summary>
+            Gets I2C address depending on SDO/SA0 pin.
+            </summary>
+        <returns>I2C address</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OperatingMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Lis3DhAccelerometer.OperatingMode OperatingMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Lis3DhAccelerometer.OperatingMode OperatingMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Lis3DhAccelerometer.Lis3Dh.OperatingMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property OperatingMode As OperatingMode" />
+      <MemberSignature Language="F#" Value="member this.OperatingMode : Iot.Device.Lis3DhAccelerometer.OperatingMode with get, set" Usage="Iot.Device.Lis3DhAccelerometer.Lis3Dh.OperatingMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Property(null, null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property(null, null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Lis3DhAccelerometer.OperatingMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Operating mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SecondaryI2cAddress">
+      <MemberSignature Language="C#" Value="public const int SecondaryI2cAddress = 24;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 SecondaryI2cAddress = (24)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Lis3DhAccelerometer.Lis3Dh.SecondaryI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const SecondaryI2cAddress As Integer  = 24" />
+      <MemberSignature Language="F#" Value="val mutable SecondaryI2cAddress : int" Usage="Iot.Device.Lis3DhAccelerometer.Lis3Dh.SecondaryI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>24</MemberValue>
+      <Docs>
+        <summary>
+            Secondary I2C address (SDO/SA0 pin high)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

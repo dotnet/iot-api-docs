@@ -1,0 +1,78 @@
+<Type Name="IImageFactory" FullName="Iot.Device.Graphics.IImageFactory">
+  <TypeSignature Language="C#" Value="public interface IImageFactory" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IImageFactory" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Graphics.IImageFactory" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IImageFactory" />
+  <TypeSignature Language="F#" Value="type IImageFactory = interface" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Factory interface for creating bitmaps.
+            An instance of this interface shall be provided by library-specific adapter classes.
+            The class <see cref="T:Iot.Device.Graphics.BitmapImage" /> requires an instance of this interface to work properly.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateBitmap">
+      <MemberSignature Language="C#" Value="public Iot.Device.Graphics.BitmapImage CreateBitmap (int width, int height, Iot.Device.Graphics.PixelFormat pixelFormat);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Iot.Device.Graphics.BitmapImage CreateBitmap(int32 width, int32 height, valuetype Iot.Device.Graphics.PixelFormat pixelFormat) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.IImageFactory.CreateBitmap(System.Int32,System.Int32,Iot.Device.Graphics.PixelFormat)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateBitmap (width As Integer, height As Integer, pixelFormat As PixelFormat) As BitmapImage" />
+      <MemberSignature Language="F#" Value="abstract member CreateBitmap : int * int * Iot.Device.Graphics.PixelFormat -&gt; Iot.Device.Graphics.BitmapImage" Usage="iImageFactory.CreateBitmap (width, height, pixelFormat)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Graphics.BitmapImage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+        <Parameter Name="pixelFormat" Type="Iot.Device.Graphics.PixelFormat" />
+      </Parameters>
+      <Docs>
+        <param name="width">Width of the bitmap, in pixels</param>
+        <param name="height">Height of the bitmap in pixels</param>
+        <param name="pixelFormat">The desired pixel format</param>
+        <summary>
+            Creates a bitmap with the given size and format
+            </summary>
+        <returns>An empty bitmap of the given size</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateFromStream">
+      <MemberSignature Language="C#" Value="public Iot.Device.Graphics.BitmapImage CreateFromStream (System.IO.Stream file);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Iot.Device.Graphics.BitmapImage CreateFromStream(class System.IO.Stream file) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.IImageFactory.CreateFromStream(System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public Function CreateFromStream (file As Stream) As BitmapImage" />
+      <MemberSignature Language="F#" Value="abstract member CreateFromStream : System.IO.Stream -&gt; Iot.Device.Graphics.BitmapImage" Usage="iImageFactory.CreateFromStream file" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Graphics.BitmapImage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="file" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="file">The stream to open</param>
+        <summary>
+            Creates a bitmap from a stream (e.g. an image file)
+            </summary>
+        <returns>A bitmap from the given stream</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,292 @@
+<Type Name="MifareDirectory" FullName="Iot.Device.Card.Mifare.MifareDirectory">
+  <TypeSignature Language="C#" Value="public class MifareDirectory" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MifareDirectory extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Card.Mifare.MifareDirectory" />
+  <TypeSignature Language="VB.NET" Value="Public Class MifareDirectory" />
+  <TypeSignature Language="F#" Value="type MifareDirectory = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Mifare application directory
+            This describes the assignent of sectors on the MifareCard to applications.
+            The on-card directory is described in https://www.nxp.com/docs/en/application-note/AN10787.pdf
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Allocate">
+      <MemberSignature Language="C#" Value="public Iot.Device.Card.Mifare.MifareDirectoryEntry? Allocate (Iot.Device.Card.Mifare.MifareApplicationIdentifier appId, uint numberOfSectors = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Card.Mifare.MifareDirectoryEntry Allocate(valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier appId, unsigned int32 numberOfSectors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareDirectory.Allocate(Iot.Device.Card.Mifare.MifareApplicationIdentifier,System.UInt32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Allocate (appId As MifareApplicationIdentifier, Optional numberOfSectors As UInteger = 0) As MifareDirectoryEntry" />
+      <MemberSignature Language="F#" Value="member this.Allocate : Iot.Device.Card.Mifare.MifareApplicationIdentifier * uint32 -&gt; Iot.Device.Card.Mifare.MifareDirectoryEntry" Usage="mifareDirectory.Allocate (appId, numberOfSectors)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.Mifare.MifareDirectoryEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appId" Type="Iot.Device.Card.Mifare.MifareApplicationIdentifier" />
+        <Parameter Name="numberOfSectors" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="appId">the application to be allocated</param>
+        <param name="numberOfSectors">the number of sectors to be allocated</param>
+        <summary>
+            Allocate sectors in the directory for a specified application
+            This only updates the directory, not the application's data blocks or sector trailers.
+            The directory must be written back to the card with <see cref="M:Iot.Device.Card.Mifare.MifareDirectory.StoreToCard(System.ReadOnlySpan{System.Byte})" />.
+            Specifying an allocation of 0 sectors will cause the largest available contiguous
+            set of sectors to be allocated to this application. If the directory is
+            empty, this allocates everything.
+            </summary>
+        <returns>a directory entry for the new application or null if the allocation fails</returns>
+        <remarks>The allocation is based upon sectors, not blocks. On a 4K card,
+            the first 32 sectors are 4 blocks (3 data blocks plus the sector trailer)
+            and the last 8 sectors are 16 blocks (15 dsata blocks plus the sector trailer).</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculateCrc">
+      <MemberSignature Language="C#" Value="public static byte CalculateCrc (ReadOnlySpan&lt;byte&gt; data);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig unsigned int8 CalculateCrc(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareDirectory.CalculateCrc(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CalculateCrc (data As ReadOnlySpan(Of Byte)) As Byte" />
+      <MemberSignature Language="F#" Value="static member CalculateCrc : ReadOnlySpan&lt;byte&gt; -&gt; byte" Usage="Iot.Device.Card.Mifare.MifareDirectory.CalculateCrc data" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="data">The data bytes in the directory segment</param>
+        <summary>
+            Calculate the CRC byte for a Mifare application directory segment
+            </summary>
+        <returns>Checksum byte</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CardPublisherSector">
+      <MemberSignature Language="C#" Value="public byte CardPublisherSector { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 CardPublisherSector" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareDirectory.CardPublisherSector" />
+      <MemberSignature Language="VB.NET" Value="Public Property CardPublisherSector As Byte" />
+      <MemberSignature Language="F#" Value="member this.CardPublisherSector : byte with get, set" Usage="Iot.Device.Card.Mifare.MifareDirectory.CardPublisherSector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Card publisher sector (if any)
+            If non-zero, this indicates the sector that is allocated to the card publisher.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+          <exception cref="T:System.ArgumentOutOfRangeException">the sector number is too large or is equal to 0x10</exception>
+            According to https://www.nxp.com/docs/en/application-note/AN10787.pdf , 2K and 4K
+            cards can optionally indicate a second card publisher sector in the directory in sector 16.
+            This implementation does not support that configuration: it provides no way to get the
+            second value, and setting this property will change both to the same value.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateEmpty">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Card.Mifare.MifareDirectory CreateEmpty (Iot.Device.Card.Mifare.MifareCard card);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Card.Mifare.MifareDirectory CreateEmpty(class Iot.Device.Card.Mifare.MifareCard card) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareDirectory.CreateEmpty(Iot.Device.Card.Mifare.MifareCard)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateEmpty (card As MifareCard) As MifareDirectory" />
+      <MemberSignature Language="F#" Value="static member CreateEmpty : Iot.Device.Card.Mifare.MifareCard -&gt; Iot.Device.Card.Mifare.MifareDirectory" Usage="Iot.Device.Card.Mifare.MifareDirectory.CreateEmpty card" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.Mifare.MifareDirectory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="card" Type="Iot.Device.Card.Mifare.MifareCard" />
+      </Parameters>
+      <Docs>
+        <param name="card">the card associated with this directory</param>
+        <summary>
+            Create an empty MifareDirectory for a specified MifareCard
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>This allocates a maximum size directory (5 blocks == 80 bytes),
+            which is stored in sector 0, blocks 1 and 2, and (for 2K and 4K cards)
+            in sector 16 blocks 64, 65, and 66. Sectors are marked as free (0);
+            sectors beyond the end of the card are marked as NotApplicable.</remarks>
+        <exception cref="T:System.ArgumentException">the card capacity must be 1K, 2K, or 4K</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Free">
+      <MemberSignature Language="C#" Value="public void Free (Iot.Device.Card.Mifare.MifareDirectoryEntry entry, bool defective = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Free(class Iot.Device.Card.Mifare.MifareDirectoryEntry entry, bool defective) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareDirectory.Free(Iot.Device.Card.Mifare.MifareDirectoryEntry,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Free (entry As MifareDirectoryEntry, Optional defective As Boolean = true)" />
+      <MemberSignature Language="F#" Value="member this.Free : Iot.Device.Card.Mifare.MifareDirectoryEntry * bool -&gt; unit" Usage="mifareDirectory.Free (entry, defective)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="entry" Type="Iot.Device.Card.Mifare.MifareDirectoryEntry" />
+        <Parameter Name="defective" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="entry">the directory entry to be freed</param>
+        <param name="defective">if true, the freed sectors will not be available for reallocation</param>
+        <summary>
+            Free the sectors associated with the specified directory entry
+            This only updates the directory, not the data blocks or sector trailers.
+            The directory must be written back to the card with <see cref="M:Iot.Device.Card.Mifare.MifareDirectory.StoreToCard(System.ReadOnlySpan{System.Byte})" />.
+            If the sectors cannot be reused for some reason, such as if the authentication key
+            has been lost or the sector trailer is read-only, then the sectors should be freed as
+            "defective" so that they will not be available for reallocation.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetApplications">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;Iot.Device.Card.Mifare.MifareDirectoryEntry&gt; GetApplications (Func&lt;Iot.Device.Card.Mifare.MifareApplicationIdentifier,bool&gt;? matchFilter = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;class Iot.Device.Card.Mifare.MifareDirectoryEntry&gt; GetApplications(class System.Func`2&lt;valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier, bool&gt; matchFilter) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareDirectory.GetApplications(System.Func{Iot.Device.Card.Mifare.MifareApplicationIdentifier,System.Boolean})" />
+      <MemberSignature Language="VB.NET" Value="Public Iterator Function GetApplications (Optional matchFilter As Func(Of MifareApplicationIdentifier, Boolean) = Nothing) As IEnumerable(Of MifareDirectoryEntry)" />
+      <MemberSignature Language="F#" Value="member this.GetApplications : Func&lt;Iot.Device.Card.Mifare.MifareApplicationIdentifier, bool&gt; -&gt; seq&lt;Iot.Device.Card.Mifare.MifareDirectoryEntry&gt;" Usage="mifareDirectory.GetApplications matchFilter" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Iot.Device.Card.Mifare.MifareDirectory+&lt;GetApplications&gt;d__11))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Iot.Device.Card.Mifare.MifareDirectory+&lt;GetApplications&gt;d__11))&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;Iot.Device.Card.Mifare.MifareDirectoryEntry&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matchFilter" Type="System.Func&lt;Iot.Device.Card.Mifare.MifareApplicationIdentifier,System.Boolean&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="matchFilter">match condition for each application ID; if null, matches every non-administrative application</param>
+        <summary>
+            Get directory entries for all applications matching a particular filter criterion
+            </summary>
+        <returns>all directory entries that match the filter criterion</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadFromCard">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Card.Mifare.MifareDirectory? LoadFromCard (Iot.Device.Card.Mifare.MifareCard card);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Card.Mifare.MifareDirectory LoadFromCard(class Iot.Device.Card.Mifare.MifareCard card) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareDirectory.LoadFromCard(Iot.Device.Card.Mifare.MifareCard)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function LoadFromCard (card As MifareCard) As MifareDirectory" />
+      <MemberSignature Language="F#" Value="static member LoadFromCard : Iot.Device.Card.Mifare.MifareCard -&gt; Iot.Device.Card.Mifare.MifareDirectory" Usage="Iot.Device.Card.Mifare.MifareDirectory.LoadFromCard card" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.Mifare.MifareDirectory</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="card" Type="Iot.Device.Card.Mifare.MifareCard" />
+      </Parameters>
+      <Docs>
+        <param name="card">the card whose directory is being loaded</param>
+        <summary>
+            Load the MifareDirectory from a specified MifareCard
+            The directory blocks must have the correct Akey and access bytes.
+            The directory CRC must be valid.
+            </summary>
+        <returns>new MifareDirectory if success, null if error</returns>
+        <remarks>This always returns a maximum size directory (5 blocks == 80 bytes),
+            regardless of the card size. Sectors beyond the end of the card are
+            marked as NotApplicable.</remarks>
+        <exception cref="T:System.ArgumentException">the card capacity must be 1K, 2K, or 4K</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StoreToCard">
+      <MemberSignature Language="C#" Value="public bool StoreToCard (ReadOnlySpan&lt;byte&gt; keyB);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool StoreToCard(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; keyB) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareDirectory.StoreToCard(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Function StoreToCard (keyB As ReadOnlySpan(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.StoreToCard : ReadOnlySpan&lt;byte&gt; -&gt; bool" Usage="mifareDirectory.StoreToCard keyB" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="keyB" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="keyB">authentication key B for the directory sectors</param>
+        <summary>
+            Store the MifareDirectory to its MifareCard
+            </summary>
+        <returns>true if successful, false in case of failure</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetApplication">
+      <MemberSignature Language="C#" Value="public Iot.Device.Card.Mifare.MifareDirectoryEntry? TryGetApplication (Iot.Device.Card.Mifare.MifareApplicationIdentifier matchAppId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Card.Mifare.MifareDirectoryEntry TryGetApplication(valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier matchAppId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareDirectory.TryGetApplication(Iot.Device.Card.Mifare.MifareApplicationIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetApplication (matchAppId As MifareApplicationIdentifier) As MifareDirectoryEntry" />
+      <MemberSignature Language="F#" Value="member this.TryGetApplication : Iot.Device.Card.Mifare.MifareApplicationIdentifier -&gt; Iot.Device.Card.Mifare.MifareDirectoryEntry" Usage="mifareDirectory.TryGetApplication matchAppId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.Mifare.MifareDirectoryEntry</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="matchAppId" Type="Iot.Device.Card.Mifare.MifareApplicationIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="matchAppId">application ID of desired application</param>
+        <summary>
+            Try to get a directory entry for a particular application ID
+            </summary>
+        <returns>directory entry for the specified application (or null if it is not present in the directory)</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

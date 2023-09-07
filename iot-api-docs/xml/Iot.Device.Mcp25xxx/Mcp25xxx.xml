@@ -15,6 +15,7 @@
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -86,6 +87,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest" />
@@ -120,6 +122,28 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AbortAllPendingTransmissions">
+      <MemberSignature Language="C#" Value="public void AbortAllPendingTransmissions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void AbortAllPendingTransmissions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.AbortAllPendingTransmissions" />
+      <MemberSignature Language="VB.NET" Value="Public Sub AbortAllPendingTransmissions ()" />
+      <MemberSignature Language="F#" Value="member this.AbortAllPendingTransmissions : unit -&gt; unit" Usage="mcp25xxx.AbortAllPendingTransmissions " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Abort send all messages from buffers, buffers will be empty
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="BitModify">
       <MemberSignature Language="C#" Value="public void BitModify (Iot.Device.Mcp25xxx.Register.Address address, byte mask, byte value);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void BitModify(valuetype Iot.Device.Mcp25xxx.Register.Address address, unsigned int8 mask, unsigned int8 value) cil managed" />
@@ -138,6 +162,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -180,6 +205,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -189,6 +215,78 @@
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
         <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="EnableRollover">
+      <MemberSignature Language="C#" Value="public void EnableRollover ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnableRollover() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.EnableRollover" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EnableRollover ()" />
+      <MemberSignature Language="F#" Value="member this.EnableRollover : unit -&gt; unit" Usage="mcp25xxx.EnableRollover " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            If RXB0 contains a valid message and another valid message is received,
+            an overflow error will not occur and the new message will be moved into RXB1
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmptyTxBuffer">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mcp25xxx.TransmitBuffer GetEmptyTxBuffer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.Mcp25xxx.TransmitBuffer GetEmptyTxBuffer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.GetEmptyTxBuffer" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetEmptyTxBuffer () As TransmitBuffer" />
+      <MemberSignature Language="F#" Value="member this.GetEmptyTxBuffer : unit -&gt; Iot.Device.Mcp25xxx.TransmitBuffer" Usage="mcp25xxx.GetEmptyTxBuffer " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp25xxx.TransmitBuffer</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get witch buffer empty now
+            </summary>
+        <returns>Buffer</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInstructionsAddress">
+      <MemberSignature Language="C#" Value="public Tuple&lt;Iot.Device.Mcp25xxx.Register.Address,Iot.Device.Mcp25xxx.Register.Address&gt; GetInstructionsAddress (Iot.Device.Mcp25xxx.TransmitBuffer transmitBuffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Tuple`2&lt;valuetype Iot.Device.Mcp25xxx.Register.Address, valuetype Iot.Device.Mcp25xxx.Register.Address&gt; GetInstructionsAddress(valuetype Iot.Device.Mcp25xxx.TransmitBuffer transmitBuffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.GetInstructionsAddress(Iot.Device.Mcp25xxx.TransmitBuffer)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetInstructionsAddress (transmitBuffer As TransmitBuffer) As Tuple(Of Address, Address)" />
+      <MemberSignature Language="F#" Value="member this.GetInstructionsAddress : Iot.Device.Mcp25xxx.TransmitBuffer -&gt; Iot.Device.Mcp25xxx.Register.Address * Iot.Device.Mcp25xxx.Register.Address" Usage="mcp25xxx.GetInstructionsAddress transmitBuffer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Tuple&lt;Iot.Device.Mcp25xxx.Register.Address,Iot.Device.Mcp25xxx.Register.Address&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transmitBuffer" Type="Iot.Device.Mcp25xxx.TransmitBuffer" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="transmitBuffer">Type of transmit buffer</param>
+        <summary>
+            Get instructions address from buffer
+            </summary>
+        <returns>Instructions for specific buffer</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="InterruptPin">
@@ -209,6 +307,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Gpio.PinValue</ReturnType>
@@ -218,6 +317,32 @@
             Reads the current value of Interrupt pin.
             </summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsMessageSend">
+      <MemberSignature Language="C#" Value="public bool IsMessageSend (Iot.Device.Mcp25xxx.TransmitBuffer transmitBuffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsMessageSend(valuetype Iot.Device.Mcp25xxx.TransmitBuffer transmitBuffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.IsMessageSend(Iot.Device.Mcp25xxx.TransmitBuffer)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsMessageSend (transmitBuffer As TransmitBuffer) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsMessageSend : Iot.Device.Mcp25xxx.TransmitBuffer -&gt; bool" Usage="mcp25xxx.IsMessageSend transmitBuffer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transmitBuffer" Type="Iot.Device.Mcp25xxx.TransmitBuffer" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="transmitBuffer">buffer type</param>
+        <summary>
+            Check is buffer empty
+            </summary>
+        <returns />
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -239,6 +364,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -275,6 +401,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte</ReturnType>
@@ -288,6 +415,29 @@
             Reads data from the register beginning at the selected address.
             </summary>
         <returns>The value of address read.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadMessages">
+      <MemberSignature Language="C#" Value="public Iot.Device.Mcp25xxx.Models.ReceivedCanMessage[] ReadMessages ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Mcp25xxx.Models.ReceivedCanMessage[] ReadMessages() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.ReadMessages" />
+      <MemberSignature Language="VB.NET" Value="Public Function ReadMessages () As ReceivedCanMessage()" />
+      <MemberSignature Language="F#" Value="member this.ReadMessages : unit -&gt; Iot.Device.Mcp25xxx.Models.ReceivedCanMessage[]" Usage="mcp25xxx.ReadMessages " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Mcp25xxx.Models.ReceivedCanMessage[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Read arrived messages
+            </summary>
+        <returns>List of messages received</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -309,6 +459,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte[]</ReturnType>
@@ -346,6 +497,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Mcp25xxx.ReadStatusResponse</ReturnType>
@@ -377,6 +529,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -414,6 +567,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -444,6 +598,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Gpio.PinValue</ReturnType>
@@ -474,6 +629,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Gpio.PinValue</ReturnType>
@@ -504,6 +660,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Gpio.PinValue</ReturnType>
@@ -534,6 +691,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Mcp25xxx.RxStatusResponse</ReturnType>
@@ -545,6 +703,133 @@
             (standard, extended and/or remote) of the received message.
             </summary>
         <returns>Response from RX STATUS instruction.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendFromBuffer">
+      <MemberSignature Language="C#" Value="public void SendFromBuffer (Iot.Device.Mcp25xxx.TransmitBuffer transmitBuffer);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendFromBuffer(valuetype Iot.Device.Mcp25xxx.TransmitBuffer transmitBuffer) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.SendFromBuffer(Iot.Device.Mcp25xxx.TransmitBuffer)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendFromBuffer (transmitBuffer As TransmitBuffer)" />
+      <MemberSignature Language="F#" Value="member this.SendFromBuffer : Iot.Device.Mcp25xxx.TransmitBuffer -&gt; unit" Usage="mcp25xxx.SendFromBuffer transmitBuffer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transmitBuffer" Type="Iot.Device.Mcp25xxx.TransmitBuffer" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="transmitBuffer">Type of transmit buffer</param>
+        <summary>
+            Command to mcp25xx to send bytes from specific buffer
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendMessage">
+      <MemberSignature Language="C#" Value="public void SendMessage (Iot.Device.Mcp25xxx.Models.SendingCanMessage message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendMessage(class Iot.Device.Mcp25xxx.Models.SendingCanMessage message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.SendMessage(Iot.Device.Mcp25xxx.Models.SendingCanMessage)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendMessage (message As SendingCanMessage)" />
+      <MemberSignature Language="F#" Value="member this.SendMessage : Iot.Device.Mcp25xxx.Models.SendingCanMessage -&gt; unit" Usage="mcp25xxx.SendMessage message" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="Iot.Device.Mcp25xxx.Models.SendingCanMessage" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="message">CAN message</param>
+        <summary>
+            Send message
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendMessageFromBuffer">
+      <MemberSignature Language="C#" Value="public void SendMessageFromBuffer (Iot.Device.Mcp25xxx.TransmitBuffer transmitBuffer, Iot.Device.Mcp25xxx.Models.SendingCanMessage message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendMessageFromBuffer(valuetype Iot.Device.Mcp25xxx.TransmitBuffer transmitBuffer, class Iot.Device.Mcp25xxx.Models.SendingCanMessage message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.SendMessageFromBuffer(Iot.Device.Mcp25xxx.TransmitBuffer,Iot.Device.Mcp25xxx.Models.SendingCanMessage)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendMessageFromBuffer (transmitBuffer As TransmitBuffer, message As SendingCanMessage)" />
+      <MemberSignature Language="F#" Value="member this.SendMessageFromBuffer : Iot.Device.Mcp25xxx.TransmitBuffer * Iot.Device.Mcp25xxx.Models.SendingCanMessage -&gt; unit" Usage="mcp25xxx.SendMessageFromBuffer (transmitBuffer, message)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="transmitBuffer" Type="Iot.Device.Mcp25xxx.TransmitBuffer" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="message" Type="Iot.Device.Mcp25xxx.Models.SendingCanMessage" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="transmitBuffer">Buffer</param>
+        <param name="message">CAN message</param>
+        <summary>
+            Send message from specific buffer
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBitrate">
+      <MemberSignature Language="C#" Value="public void SetBitrate (Iot.Device.Mcp25xxx.FrequencyAndSpeed frequencyAndSpeed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetBitrate(valuetype Iot.Device.Mcp25xxx.FrequencyAndSpeed frequencyAndSpeed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.SetBitrate(Iot.Device.Mcp25xxx.FrequencyAndSpeed)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetBitrate (frequencyAndSpeed As FrequencyAndSpeed)" />
+      <MemberSignature Language="F#" Value="member this.SetBitrate : Iot.Device.Mcp25xxx.FrequencyAndSpeed -&gt; unit" Usage="mcp25xxx.SetBitrate frequencyAndSpeed" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="frequencyAndSpeed" Type="Iot.Device.Mcp25xxx.FrequencyAndSpeed" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="frequencyAndSpeed">CAN bus frequency and speed</param>
+        <summary>
+            The configuration registers (CNF1, CNF2, CNF3) control the bit timing for the CAN bus interface.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetMode">
+      <MemberSignature Language="C#" Value="public void SetMode (Iot.Device.Mcp25xxx.Tests.Register.CanControl.OperationMode operationMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetMode(valuetype Iot.Device.Mcp25xxx.Tests.Register.CanControl.OperationMode operationMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mcp25xxx.Mcp25xxx.SetMode(Iot.Device.Mcp25xxx.Tests.Register.CanControl.OperationMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetMode (operationMode As OperationMode)" />
+      <MemberSignature Language="F#" Value="member this.SetMode : Iot.Device.Mcp25xxx.Tests.Register.CanControl.OperationMode -&gt; unit" Usage="mcp25xxx.SetMode operationMode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="operationMode" Type="Iot.Device.Mcp25xxx.Tests.Register.CanControl.OperationMode" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="operationMode">type of operation Mode</param>
+        <summary>
+            Set mode of operation
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -566,6 +851,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Gpio.PinValue</ReturnType>
@@ -596,6 +882,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Gpio.PinValue</ReturnType>
@@ -626,6 +913,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Gpio.PinValue</ReturnType>
@@ -656,6 +944,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -691,6 +980,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -724,6 +1014,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

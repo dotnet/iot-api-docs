@@ -1,0 +1,200 @@
+<Type Name="MifareDirectoryEntry" FullName="Iot.Device.Card.Mifare.MifareDirectoryEntry">
+  <TypeSignature Language="C#" Value="public class MifareDirectoryEntry" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit MifareDirectoryEntry extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Card.Mifare.MifareDirectoryEntry" />
+  <TypeSignature Language="VB.NET" Value="Public Class MifareDirectoryEntry" />
+  <TypeSignature Language="F#" Value="type MifareDirectoryEntry = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Describes the sectors assigned to a Mifare application in the directory.
+            Sector 0 and (on cards larger than 1K) sector 16 are used for the directory.
+            Mifare applications are assigned a contiguous range of sectors, except
+            that the assignment is discontiguous across sector 16 (which is skipped)
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MifareDirectoryEntry (Iot.Device.Card.Mifare.MifareApplicationIdentifier appId, byte firstSector, uint numberOfSectors);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier appId, unsigned int8 firstSector, unsigned int32 numberOfSectors) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareDirectoryEntry.#ctor(Iot.Device.Card.Mifare.MifareApplicationIdentifier,System.Byte,System.UInt32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (appId As MifareApplicationIdentifier, firstSector As Byte, numberOfSectors As UInteger)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Card.Mifare.MifareDirectoryEntry : Iot.Device.Card.Mifare.MifareApplicationIdentifier * byte * uint32 -&gt; Iot.Device.Card.Mifare.MifareDirectoryEntry" Usage="new Iot.Device.Card.Mifare.MifareDirectoryEntry (appId, firstSector, numberOfSectors)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="appId" Type="Iot.Device.Card.Mifare.MifareApplicationIdentifier" />
+        <Parameter Name="firstSector" Type="System.Byte" />
+        <Parameter Name="numberOfSectors" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="appId">application identifier</param>
+        <param name="firstSector">first sector assigned to this application</param>
+        <param name="numberOfSectors">number of sectors assigned to this application</param>
+        <summary>
+            Constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationIdentifier">
+      <MemberSignature Language="C#" Value="public Iot.Device.Card.Mifare.MifareApplicationIdentifier ApplicationIdentifier { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier ApplicationIdentifier" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareDirectoryEntry.ApplicationIdentifier" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ApplicationIdentifier As MifareApplicationIdentifier" />
+      <MemberSignature Language="F#" Value="member this.ApplicationIdentifier : Iot.Device.Card.Mifare.MifareApplicationIdentifier" Usage="Iot.Device.Card.Mifare.MifareDirectoryEntry.ApplicationIdentifier" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.Mifare.MifareApplicationIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Mifare application identifier
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FirstSector">
+      <MemberSignature Language="C#" Value="public byte FirstSector { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 FirstSector" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareDirectoryEntry.FirstSector" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FirstSector As Byte" />
+      <MemberSignature Language="F#" Value="member this.FirstSector : byte" Usage="Iot.Device.Card.Mifare.MifareDirectoryEntry.FirstSector" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            First assigned sector
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllDataBlocks">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;byte&gt; GetAllDataBlocks ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;unsigned int8&gt; GetAllDataBlocks() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareDirectoryEntry.GetAllDataBlocks" />
+      <MemberSignature Language="VB.NET" Value="Public Iterator Function GetAllDataBlocks () As IEnumerable(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.GetAllDataBlocks : unit -&gt; seq&lt;byte&gt;" Usage="mifareDirectoryEntry.GetAllDataBlocks " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Iot.Device.Card.Mifare.MifareDirectoryEntry+&lt;GetAllDataBlocks&gt;d__13))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Iot.Device.Card.Mifare.MifareDirectoryEntry+&lt;GetAllDataBlocks&gt;d__13))&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get all data blocks that are assigned to this application
+            </summary>
+        <returns>enueration of assigned data block numbers</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetAllSectors">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerable&lt;byte&gt; GetAllSectors ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.IEnumerable`1&lt;unsigned int8&gt; GetAllSectors() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareDirectoryEntry.GetAllSectors" />
+      <MemberSignature Language="VB.NET" Value="Public Iterator Function GetAllSectors () As IEnumerable(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.GetAllSectors : unit -&gt; seq&lt;byte&gt;" Usage="mifareDirectoryEntry.GetAllSectors " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Runtime.CompilerServices.IteratorStateMachine(typeof(Iot.Device.Card.Mifare.MifareDirectoryEntry+&lt;GetAllSectors&gt;d__12))]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.IteratorStateMachine(typeof(Iot.Device.Card.Mifare.MifareDirectoryEntry+&lt;GetAllSectors&gt;d__12))&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerable&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get all sectors that are assigned to this application
+            </summary>
+        <returns>enumeration of assigned sector numbers</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfBlocks">
+      <MemberSignature Language="C#" Value="public uint NumberOfBlocks { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 NumberOfBlocks" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareDirectoryEntry.NumberOfBlocks" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NumberOfBlocks As UInteger" />
+      <MemberSignature Language="F#" Value="member this.NumberOfBlocks : uint32" Usage="Iot.Device.Card.Mifare.MifareDirectoryEntry.NumberOfBlocks" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Number of data blocks
+            This is not simply a multiple of the number of sectors, because the
+            last eight sectors on a 4K card are larger than the first 32.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NumberOfSectors">
+      <MemberSignature Language="C#" Value="public uint NumberOfSectors { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 NumberOfSectors" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareDirectoryEntry.NumberOfSectors" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property NumberOfSectors As UInteger" />
+      <MemberSignature Language="F#" Value="member this.NumberOfSectors : uint32" Usage="Iot.Device.Card.Mifare.MifareDirectoryEntry.NumberOfSectors" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Number of sectors
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

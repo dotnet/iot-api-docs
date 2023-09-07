@@ -1,0 +1,335 @@
+<Type Name="Chsc6440" FullName="Iot.Device.Ili934x.Chsc6440">
+  <TypeSignature Language="C#" Value="public class Chsc6440 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Chsc6440 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ili934x.Chsc6440" />
+  <TypeSignature Language="VB.NET" Value="Public Class Chsc6440&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Chsc6440 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Binding for Chipsemi CHSC6540 capacitive touch screen controller
+            Used for instance on the M5Tough in conjunction with an ILI9342 display controller.
+            Note: The M5Core2, while being very similar to the M5Tough otherwise, has a FT6336U instead.
+            The two chips appear to be similar, but the documentation is poor.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Chsc6440 (System.Device.I2c.I2cDevice device, System.Drawing.Size screenSize, int interruptPin = -1, System.Device.Gpio.GpioController? gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice device, valuetype System.Drawing.Size screenSize, int32 interruptPin, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Chsc6440.#ctor(System.Device.I2c.I2cDevice,System.Drawing.Size,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (device As I2cDevice, screenSize As Size, Optional interruptPin As Integer = -1, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ili934x.Chsc6440 : System.Device.I2c.I2cDevice * System.Drawing.Size * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Ili934x.Chsc6440" Usage="new Iot.Device.Ili934x.Chsc6440 (device, screenSize, interruptPin, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="device" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="screenSize" Type="System.Drawing.Size" />
+        <Parameter Name="interruptPin" Type="System.Int32" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="device">An I2C device</param>
+        <param name="screenSize">Size of the screen. Used to filter out invalid readings</param>
+        <param name="interruptPin">The interrupt pin to use, -1 to disable</param>
+        <param name="gpioController">The gpio controller the interrupt pin is attached to</param>
+        <param name="shouldDispose">True to dispose the gpio controller on close</param>
+        <summary>
+            Create a controller from the given I2C device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const int DefaultI2cAddress = 46;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultI2cAddress = (46)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Ili934x.Chsc6440.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Integer  = 46" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : int" Usage="Iot.Device.Ili934x.Chsc6440.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>46</MemberValue>
+      <Docs>
+        <summary>
+            The default I2C address of this chip
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Chsc6440.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="chsc6440.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Chsc6440.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="chsc6440.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>
+            Dispose of this instance and close connections
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dragging">
+      <MemberSignature Language="C#" Value="public event Action&lt;object,Iot.Device.Ili934x.DragEventArgs&gt;? Dragging;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action`2&lt;object, class Iot.Device.Ili934x.DragEventArgs&gt; Dragging" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Ili934x.Chsc6440.Dragging" />
+      <MemberSignature Language="VB.NET" Value="Public Event Dragging As Action(Of Object, DragEventArgs) " />
+      <MemberSignature Language="F#" Value="member this.Dragging : Action&lt;obj, Iot.Device.Ili934x.DragEventArgs&gt; " Usage="member this.Dragging : System.Action&lt;System.obj, Iot.Device.Ili934x.DragEventArgs&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;System.Object,Iot.Device.Ili934x.DragEventArgs&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This event is fired repeatedly when the user drags over the screen
+            Call <see cref="M:Iot.Device.Ili934x.Chsc6440.EnableEvents" /> to use event handling.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableEvents">
+      <MemberSignature Language="C#" Value="public void EnableEvents ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnableEvents() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Chsc6440.EnableEvents" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EnableEvents ()" />
+      <MemberSignature Language="F#" Value="member this.EnableEvents : unit -&gt; unit" Usage="chsc6440.EnableEvents " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Enables event callback.
+            This starts an internal thread that will fire the <see cref="E:Iot.Device.Ili934x.Chsc6440.Touched" /> and <see cref="E:Iot.Device.Ili934x.Chsc6440.Dragging" /> events
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPrimaryTouchPoint">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point? GetPrimaryTouchPoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Nullable`1&lt;valuetype System.Drawing.Point&gt; GetPrimaryTouchPoint() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Chsc6440.GetPrimaryTouchPoint" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPrimaryTouchPoint () As Nullable(Of Point)" />
+      <MemberSignature Language="F#" Value="member this.GetPrimaryTouchPoint : unit -&gt; Nullable&lt;System.Drawing.Point&gt;" Usage="chsc6440.GetPrimaryTouchPoint " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Drawing.Point&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the primary touch point or null if the screen is not being touched
+            </summary>
+        <returns>A point where the first finger is</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPressed">
+      <MemberSignature Language="C#" Value="public bool IsPressed ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsPressed() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Chsc6440.IsPressed" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsPressed () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsPressed : unit -&gt; bool" Usage="chsc6440.IsPressed " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns true if the interrupt pin is set, meaning something is touching the display
+            </summary>
+        <returns>True if something presses the display, false if not. This queries the interrupt pin if available. Otherwise, an I2C request to the controller is required.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenSize">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size ScreenSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size ScreenSize" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ili934x.Chsc6440.ScreenSize" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ScreenSize As Size" />
+      <MemberSignature Language="F#" Value="member this.ScreenSize : System.Drawing.Size" Usage="Iot.Device.Ili934x.Chsc6440.ScreenSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Size of the screen
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Touched">
+      <MemberSignature Language="C#" Value="public event Action&lt;object,System.Drawing.Point&gt;? Touched;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action`2&lt;object, valuetype System.Drawing.Point&gt; Touched" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Ili934x.Chsc6440.Touched" />
+      <MemberSignature Language="VB.NET" Value="Public Event Touched As Action(Of Object, Point) " />
+      <MemberSignature Language="F#" Value="member this.Touched : Action&lt;obj, System.Drawing.Point&gt; " Usage="member this.Touched : System.Action&lt;System.obj, System.Drawing.Point&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;System.Object,System.Drawing.Point&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This event is fired when the user "clicks" a position
+            Call <see cref="M:Iot.Device.Ili934x.Chsc6440.EnableEvents" /> to use event handling
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TouchSize">
+      <MemberSignature Language="C#" Value="public System.Drawing.Size TouchSize { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Drawing.Size TouchSize" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ili934x.Chsc6440.TouchSize" />
+      <MemberSignature Language="VB.NET" Value="Public Property TouchSize As Size" />
+      <MemberSignature Language="F#" Value="member this.TouchSize : System.Drawing.Size with get, set" Usage="Iot.Device.Ili934x.Chsc6440.TouchSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Size</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The size of the rectangle that is considered a "touch". When the position changes more than this, it is considered a drag.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpdateInterval">
+      <MemberSignature Language="C#" Value="public TimeSpan UpdateInterval { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan UpdateInterval" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ili934x.Chsc6440.UpdateInterval" />
+      <MemberSignature Language="VB.NET" Value="Public Property UpdateInterval As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.UpdateInterval : TimeSpan with get, set" Usage="Iot.Device.Ili934x.Chsc6440.UpdateInterval" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Sets the background thread update interval. Low values can impact performance, but increase the responsiveness.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Zooming">
+      <MemberSignature Language="C#" Value="public event Action&lt;object,System.Drawing.Point[],int,int&gt;? Zooming;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action`4&lt;object, valuetype System.Drawing.Point[], int32, int32&gt; Zooming" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Ili934x.Chsc6440.Zooming" />
+      <MemberSignature Language="VB.NET" Value="Public Event Zooming As Action(Of Object, Point(), Integer, Integer) " />
+      <MemberSignature Language="F#" Value="member this.Zooming : Action&lt;obj, System.Drawing.Point[], int, int&gt; " Usage="member this.Zooming : System.Action&lt;System.obj, System.Drawing.Point[], System.int, System.int&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;System.Object,System.Drawing.Point[],System.Int32,System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The event that is fired when the user zooms (using two fingers)
+            Call <see cref="M:Iot.Device.Ili934x.Chsc6440.EnableEvents" /> to use event handling.
+            The second argument is the list of touch points (always 2 when this function is called), the third and fourth
+            argument are the old and the new distance between the points. So if the value decreases, zooming out is intended.
+            The values are always &gt; 0
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

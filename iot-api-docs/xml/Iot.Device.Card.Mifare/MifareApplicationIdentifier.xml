@@ -1,0 +1,508 @@
+<Type Name="MifareApplicationIdentifier" FullName="Iot.Device.Card.Mifare.MifareApplicationIdentifier">
+  <TypeSignature Language="C#" Value="public struct MifareApplicationIdentifier : IEquatable&lt;Iot.Device.Card.Mifare.MifareApplicationIdentifier&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public sequential ansi sealed beforefieldinit MifareApplicationIdentifier extends System.ValueType implements class System.IEquatable`1&lt;valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier&gt;" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Card.Mifare.MifareApplicationIdentifier" />
+  <TypeSignature Language="VB.NET" Value="Public Structure MifareApplicationIdentifier&#xA;Implements IEquatable(Of MifareApplicationIdentifier)" />
+  <TypeSignature Language="F#" Value="type MifareApplicationIdentifier = struct" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.ValueType</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Iot.Device.Card.Mifare.MifareApplicationIdentifier&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Mifare application identifier as defined in https://www.nxp.com/docs/en/application-note/AN10787.pdf
+            This identifies an application within a Mifare application directory.
+            It is an unsigned 16-bit quantity (2 bytes, little-endian order)
+            The high-order 8 bits identify the function cluster, and
+            the low-order 8 bits define an application code within that cluster
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MifareApplicationIdentifier (ReadOnlySpan&lt;byte&gt; bytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; bytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareApplicationIdentifier.#ctor(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (bytes As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Card.Mifare.MifareApplicationIdentifier : ReadOnlySpan&lt;byte&gt; -&gt; Iot.Device.Card.Mifare.MifareApplicationIdentifier" Usage="new Iot.Device.Card.Mifare.MifareApplicationIdentifier bytes" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">two bytes representing the application identifier</param>
+        <summary>
+            Construct a MifareApplicationIdentifier from a sequence of bytes
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">the input is not 2 bytes long</exception>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MifareApplicationIdentifier (ushort appId);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int16 appId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareApplicationIdentifier.#ctor(System.UInt16)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (appId As UShort)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Card.Mifare.MifareApplicationIdentifier : uint16 -&gt; Iot.Device.Card.Mifare.MifareApplicationIdentifier" Usage="new Iot.Device.Card.Mifare.MifareApplicationIdentifier appId" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="appId" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="appId">application identifier as a ushort</param>
+        <summary>
+            Construct a MifareApplicationIdentifier from an ushort
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdminSectorAdditionalDirectory">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Card.Mifare.MifareApplicationIdentifier AdminSectorAdditionalDirectory;" />
+      <MemberSignature Language="ILAsm" Value=".field public static valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier AdminSectorAdditionalDirectory" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Card.Mifare.MifareApplicationIdentifier.AdminSectorAdditionalDirectory" />
+      <MemberSignature Language="VB.NET" Value="Public Shared AdminSectorAdditionalDirectory As MifareApplicationIdentifier " />
+      <MemberSignature Language="F#" Value=" staticval mutable AdminSectorAdditionalDirectory : Iot.Device.Card.Mifare.MifareApplicationIdentifier" Usage="Iot.Device.Card.Mifare.MifareApplicationIdentifier.AdminSectorAdditionalDirectory" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.Mifare.MifareApplicationIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Identifies an additional directory sector
+            This is currently unused, reserved for future cards
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdminSectorCardHolderInformation">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Card.Mifare.MifareApplicationIdentifier AdminSectorCardHolderInformation;" />
+      <MemberSignature Language="ILAsm" Value=".field public static valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier AdminSectorCardHolderInformation" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Card.Mifare.MifareApplicationIdentifier.AdminSectorCardHolderInformation" />
+      <MemberSignature Language="VB.NET" Value="Public Shared AdminSectorCardHolderInformation As MifareApplicationIdentifier " />
+      <MemberSignature Language="F#" Value=" staticval mutable AdminSectorCardHolderInformation : Iot.Device.Card.Mifare.MifareApplicationIdentifier" Usage="Iot.Device.Card.Mifare.MifareApplicationIdentifier.AdminSectorCardHolderInformation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.Mifare.MifareApplicationIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Identifies a sector containing cardholder information
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdminSectorDefect">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Card.Mifare.MifareApplicationIdentifier AdminSectorDefect;" />
+      <MemberSignature Language="ILAsm" Value=".field public static valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier AdminSectorDefect" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Card.Mifare.MifareApplicationIdentifier.AdminSectorDefect" />
+      <MemberSignature Language="VB.NET" Value="Public Shared AdminSectorDefect As MifareApplicationIdentifier " />
+      <MemberSignature Language="F#" Value=" staticval mutable AdminSectorDefect : Iot.Device.Card.Mifare.MifareApplicationIdentifier" Usage="Iot.Device.Card.Mifare.MifareApplicationIdentifier.AdminSectorDefect" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.Mifare.MifareApplicationIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+             Identifies a bad sector
+             This sector cannot be used, e.g., because the sector trailer is not writeable or
+             the authentication keys are unknown
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdminSectorFree">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Card.Mifare.MifareApplicationIdentifier AdminSectorFree;" />
+      <MemberSignature Language="ILAsm" Value=".field public static valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier AdminSectorFree" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Card.Mifare.MifareApplicationIdentifier.AdminSectorFree" />
+      <MemberSignature Language="VB.NET" Value="Public Shared AdminSectorFree As MifareApplicationIdentifier " />
+      <MemberSignature Language="F#" Value=" staticval mutable AdminSectorFree : Iot.Device.Card.Mifare.MifareApplicationIdentifier" Usage="Iot.Device.Card.Mifare.MifareApplicationIdentifier.AdminSectorFree" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.Mifare.MifareApplicationIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Identifies an unallocated sector
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdminSectorNotApplicable">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Card.Mifare.MifareApplicationIdentifier AdminSectorNotApplicable;" />
+      <MemberSignature Language="ILAsm" Value=".field public static valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier AdminSectorNotApplicable" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Card.Mifare.MifareApplicationIdentifier.AdminSectorNotApplicable" />
+      <MemberSignature Language="VB.NET" Value="Public Shared AdminSectorNotApplicable As MifareApplicationIdentifier " />
+      <MemberSignature Language="F#" Value=" staticval mutable AdminSectorNotApplicable : Iot.Device.Card.Mifare.MifareApplicationIdentifier" Usage="Iot.Device.Card.Mifare.MifareApplicationIdentifier.AdminSectorNotApplicable" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.Mifare.MifareApplicationIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Identifies that a sector does not exist
+            This is used for entries in the directory that are beyond the end of the card,
+            for example, sectors 32 through 39 of a 2K card
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AdminSectorReserved">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Card.Mifare.MifareApplicationIdentifier AdminSectorReserved;" />
+      <MemberSignature Language="ILAsm" Value=".field public static valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier AdminSectorReserved" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Card.Mifare.MifareApplicationIdentifier.AdminSectorReserved" />
+      <MemberSignature Language="VB.NET" Value="Public Shared AdminSectorReserved As MifareApplicationIdentifier " />
+      <MemberSignature Language="F#" Value=" staticval mutable AdminSectorReserved : Iot.Device.Card.Mifare.MifareApplicationIdentifier" Usage="Iot.Device.Card.Mifare.MifareApplicationIdentifier.AdminSectorReserved" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.Mifare.MifareApplicationIdentifier</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Identifies a reserved sector
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ApplicationCode">
+      <MemberSignature Language="C#" Value="public byte ApplicationCode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 ApplicationCode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareApplicationIdentifier.ApplicationCode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ApplicationCode As Byte" />
+      <MemberSignature Language="F#" Value="member this.ApplicationCode : byte" Usage="Iot.Device.Card.Mifare.MifareApplicationIdentifier.ApplicationCode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The application code for this application identifier (low-order 8 bits)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (Span&lt;byte&gt; bytes);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CopyTo(valuetype System.Span`1&lt;unsigned int8&gt; bytes) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareApplicationIdentifier.CopyTo(System.Span{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CopyTo (bytes As Span(Of Byte))" />
+      <MemberSignature Language="F#" Value="member this.CopyTo : Span&lt;byte&gt; -&gt; unit" Usage="mifareApplicationIdentifier.CopyTo bytes" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bytes" Type="System.Span&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="bytes">bytes that will receive the value</param>
+        <summary>
+            Copy the MifareApplicationIdentifier to a sequence of bytes
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">the output span is not 2 bytes long</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public bool Equals (Iot.Device.Card.Mifare.MifareApplicationIdentifier other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareApplicationIdentifier.Equals(Iot.Device.Card.Mifare.MifareApplicationIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Equals (other As MifareApplicationIdentifier) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : Iot.Device.Card.Mifare.MifareApplicationIdentifier -&gt; bool" Usage="mifareApplicationIdentifier.Equals other" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Iot.Device.Card.Mifare.MifareApplicationIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="other">the other MifareApplicationIdentifier to compare</param>
+        <summary>
+            Equality comparison (MifareApplicationIdentifier)
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareApplicationIdentifier.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.Equals : obj -&gt; bool" Usage="mifareApplicationIdentifier.Equals obj" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">the object to compare</param>
+        <summary>
+            Equality comparison (object)
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FunctionCluster">
+      <MemberSignature Language="C#" Value="public byte FunctionCluster { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 FunctionCluster" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareApplicationIdentifier.FunctionCluster" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property FunctionCluster As Byte" />
+      <MemberSignature Language="F#" Value="member this.FunctionCluster : byte" Usage="Iot.Device.Card.Mifare.MifareApplicationIdentifier.FunctionCluster" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The function cluster for this application identifier (high-order 8 bits)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareApplicationIdentifier.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberSignature Language="F#" Value="override this.GetHashCode : unit -&gt; int" Usage="mifareApplicationIdentifier.GetHashCode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Get a hash code for this object
+            </summary>
+        <returns>the hash code</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsAdmin">
+      <MemberSignature Language="C#" Value="public bool IsAdmin { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsAdmin" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.Mifare.MifareApplicationIdentifier.IsAdmin" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsAdmin As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsAdmin : bool" Usage="Iot.Device.Card.Mifare.MifareApplicationIdentifier.IsAdmin" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Indicates if this is an administrative application ID
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Iot.Device.Card.Mifare.MifareApplicationIdentifier lhs, Iot.Device.Card.Mifare.MifareApplicationIdentifier rhs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier lhs, valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier rhs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareApplicationIdentifier.op_Equality(Iot.Device.Card.Mifare.MifareApplicationIdentifier,Iot.Device.Card.Mifare.MifareApplicationIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (lhs As MifareApplicationIdentifier, rhs As MifareApplicationIdentifier) As Boolean" />
+      <MemberSignature Language="F#" Value="static member ( = ) : Iot.Device.Card.Mifare.MifareApplicationIdentifier * Iot.Device.Card.Mifare.MifareApplicationIdentifier -&gt; bool" Usage="lhs = rhs" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lhs" Type="Iot.Device.Card.Mifare.MifareApplicationIdentifier" />
+        <Parameter Name="rhs" Type="Iot.Device.Card.Mifare.MifareApplicationIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="lhs">left hand operand to be compared</param>
+        <param name="rhs">right hand operand to be compared</param>
+        <summary>
+            Equality operator
+            </summary>
+        <returns>true if equal</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator ushort (Iot.Device.Card.Mifare.MifareApplicationIdentifier appId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname unsigned int16 op_Explicit(valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier appId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareApplicationIdentifier.op_Explicit(Iot.Device.Card.Mifare.MifareApplicationIdentifier)~System.UInt16" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Narrowing Operator CType (appId As MifareApplicationIdentifier) As UShort" />
+      <MemberSignature Language="F#" Value="static member op_Explicit : Iot.Device.Card.Mifare.MifareApplicationIdentifier -&gt; uint16" Usage="Iot.Device.Card.Mifare.MifareApplicationIdentifier.op_Explicit appId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appId" Type="Iot.Device.Card.Mifare.MifareApplicationIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="appId">application identifier</param>
+        <summary>
+            Convert a MifareApplicationIdentifier to a ushort
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Explicit">
+      <MemberSignature Language="C#" Value="public static explicit operator Iot.Device.Card.Mifare.MifareApplicationIdentifier (ushort appId);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier op_Explicit(unsigned int16 appId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareApplicationIdentifier.op_Explicit(System.UInt16)~Iot.Device.Card.Mifare.MifareApplicationIdentifier" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Narrowing Operator CType (appId As UShort) As MifareApplicationIdentifier" />
+      <MemberSignature Language="F#" Value="static member op_Explicit : uint16 -&gt; Iot.Device.Card.Mifare.MifareApplicationIdentifier" Usage="Iot.Device.Card.Mifare.MifareApplicationIdentifier.op_Explicit appId" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.Mifare.MifareApplicationIdentifier</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="appId" Type="System.UInt16" />
+      </Parameters>
+      <Docs>
+        <param name="appId">application identifier as a ushort</param>
+        <summary>
+            Convert a ushort to a MifareApplicationIdentifier
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Iot.Device.Card.Mifare.MifareApplicationIdentifier lhs, Iot.Device.Card.Mifare.MifareApplicationIdentifier rhs);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier lhs, valuetype Iot.Device.Card.Mifare.MifareApplicationIdentifier rhs) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareApplicationIdentifier.op_Inequality(Iot.Device.Card.Mifare.MifareApplicationIdentifier,Iot.Device.Card.Mifare.MifareApplicationIdentifier)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (lhs As MifareApplicationIdentifier, rhs As MifareApplicationIdentifier) As Boolean" />
+      <MemberSignature Language="F#" Value="static member op_Inequality : Iot.Device.Card.Mifare.MifareApplicationIdentifier * Iot.Device.Card.Mifare.MifareApplicationIdentifier -&gt; bool" Usage="Iot.Device.Card.Mifare.MifareApplicationIdentifier.op_Inequality (lhs, rhs)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="lhs" Type="Iot.Device.Card.Mifare.MifareApplicationIdentifier" />
+        <Parameter Name="rhs" Type="Iot.Device.Card.Mifare.MifareApplicationIdentifier" />
+      </Parameters>
+      <Docs>
+        <param name="lhs">left hand operand to be compared</param>
+        <param name="rhs">right hand operand to be compared</param>
+        <summary>
+            Inequality operator
+            </summary>
+        <returns>true if not equal</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.Mifare.MifareApplicationIdentifier.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="mifareApplicationIdentifier.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Convert to a string that represents the value in hexadecimal
+            </summary>
+        <returns>the string representation of this application identifier</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

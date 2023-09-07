@@ -1,0 +1,497 @@
+<Type Name="AidToNavigation" FullName="Iot.Device.Nmea0183.Ais.AidToNavigation">
+  <TypeSignature Language="C#" Value="public class AidToNavigation : Iot.Device.Nmea0183.Ais.AisTarget, IEquatable&lt;Iot.Device.Nmea0183.Ais.AidToNavigation&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AidToNavigation extends Iot.Device.Nmea0183.Ais.AisTarget implements class System.IEquatable`1&lt;class Iot.Device.Nmea0183.Ais.AidToNavigation&gt;" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Ais.AidToNavigation" />
+  <TypeSignature Language="VB.NET" Value="Public Class AidToNavigation&#xA;Inherits AisTarget&#xA;Implements IEquatable(Of AidToNavigation)" />
+  <TypeSignature Language="F#" Value="type AidToNavigation = class&#xA;    inherit AisTarget&#xA;    interface IEquatable&lt;AidToNavigation&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Nmea0183.Ais.AisTarget</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Iot.Device.Nmea0183.Ais.AidToNavigation&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            An Aid-To-Navigation or AtoN target.
+            There are two kinds of AtoN targets:
+            - Physical targets. These are Buoys or lighthouses that are equipped with AIS transmitters so they can be easier located.
+            - Virtual targets. The transmitter is located somewhere else, reporting a buoy in open water. No real buoy needs to be there.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AidToNavigation (Iot.Device.Nmea0183.Ais.AidToNavigation original);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Nmea0183.Ais.AidToNavigation original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AidToNavigation.#ctor(Iot.Device.Nmea0183.Ais.AidToNavigation)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (original As AidToNavigation)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="Iot.Device.Nmea0183.Ais.AidToNavigation" />
+      </Parameters>
+      <Docs>
+        <param name="original">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AidToNavigation (uint mmsi);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int32 mmsi) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AidToNavigation.#ctor(System.UInt32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (mmsi As UInteger)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Ais.AidToNavigation : uint32 -&gt; Iot.Device.Nmea0183.Ais.AidToNavigation" Usage="new Iot.Device.Nmea0183.Ais.AidToNavigation mmsi" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="mmsi" Type="System.UInt32" />
+      </Parameters>
+      <Docs>
+        <param name="mmsi">The MMSI</param>
+        <summary>
+            Create an AtoN target
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="&lt;Clone&gt;$">
+      <MemberSignature Language="C#" Value="public override Iot.Device.Nmea0183.Ais.AisTarget &lt;Clone&gt;$ ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class Iot.Device.Nmea0183.Ais.AisTarget &lt;Clone&gt;$() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AidToNavigation.&lt;Clone&gt;$" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function &lt;Clone&gt;$ () As AisTarget" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.AisTarget</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Beam">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length Beam { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Length Beam" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.AidToNavigation.Beam" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Beam As Length" />
+      <MemberSignature Language="F#" Value="member this.Beam : UnitsNet.Length" Usage="Iot.Device.Nmea0183.Ais.AidToNavigation.Beam" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Length</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The beam of the object
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DimensionToBow">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length DimensionToBow { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Length DimensionToBow" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.AidToNavigation.DimensionToBow" />
+      <MemberSignature Language="VB.NET" Value="Public Property DimensionToBow As Length" />
+      <MemberSignature Language="F#" Value="member this.DimensionToBow : UnitsNet.Length with get, set" Usage="Iot.Device.Nmea0183.Ais.AidToNavigation.DimensionToBow" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Length</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Dimension of the target from the transmitter to its bow. Since most AtoN targets are navigational marks, this is usually not set.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DimensionToPort">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length DimensionToPort { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Length DimensionToPort" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.AidToNavigation.DimensionToPort" />
+      <MemberSignature Language="VB.NET" Value="Public Property DimensionToPort As Length" />
+      <MemberSignature Language="F#" Value="member this.DimensionToPort : UnitsNet.Length with get, set" Usage="Iot.Device.Nmea0183.Ais.AidToNavigation.DimensionToPort" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Length</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Dimension of the target from the transmitter to its port side. Since most AtoN targets are navigational marks, this is usually not set.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DimensionToStarboard">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length DimensionToStarboard { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Length DimensionToStarboard" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.AidToNavigation.DimensionToStarboard" />
+      <MemberSignature Language="VB.NET" Value="Public Property DimensionToStarboard As Length" />
+      <MemberSignature Language="F#" Value="member this.DimensionToStarboard : UnitsNet.Length with get, set" Usage="Iot.Device.Nmea0183.Ais.AidToNavigation.DimensionToStarboard" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Length</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Dimension of the target from the transmitter to its starboard side. Since most AtoN targets are navigational marks, this is usually not set.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DimensionToStern">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length DimensionToStern { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Length DimensionToStern" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.AidToNavigation.DimensionToStern" />
+      <MemberSignature Language="VB.NET" Value="Public Property DimensionToStern As Length" />
+      <MemberSignature Language="F#" Value="member this.DimensionToStern : UnitsNet.Length with get, set" Usage="Iot.Device.Nmea0183.Ais.AidToNavigation.DimensionToStern" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Length</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Dimension of the target from the transmitter to its stern. Since most AtoN targets are navigational marks, this is usually not set.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EqualityContract">
+      <MemberSignature Language="C#" Value="protected override Type EqualityContract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EqualityContract" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.AidToNavigation.EqualityContract" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property EqualityContract As Type" />
+      <MemberSignature Language="F#" Value="member this.EqualityContract : Type" Usage="Iot.Device.Nmea0183.Ais.AidToNavigation.EqualityContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public virtual bool Equals (Iot.Device.Nmea0183.Ais.AidToNavigation? other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Iot.Device.Nmea0183.Ais.AidToNavigation other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AidToNavigation.Equals(Iot.Device.Nmea0183.Ais.AidToNavigation)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Equals (other As AidToNavigation) As Boolean" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Iot.Device.Nmea0183.Ais.AidToNavigation" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override sealed bool Equals (Iot.Device.Nmea0183.Ais.AisTarget? other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(class Iot.Device.Nmea0183.Ais.AisTarget other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AidToNavigation.Equals(Iot.Device.Nmea0183.Ais.AisTarget)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable Function Equals (other As AisTarget) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Iot.Device.Nmea0183.Ais.AisTarget" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AidToNavigation.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AidToNavigation.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Length">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length Length { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Length Length" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.AidToNavigation.Length" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Length As Length" />
+      <MemberSignature Language="F#" Value="member this.Length : UnitsNet.Length" Usage="Iot.Device.Nmea0183.Ais.AidToNavigation.Length" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Length</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The length of the object
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NavigationalAidType">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.Ais.NavigationalAidType NavigationalAidType { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nmea0183.Ais.NavigationalAidType NavigationalAidType" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.AidToNavigation.NavigationalAidType" />
+      <MemberSignature Language="VB.NET" Value="Public Property NavigationalAidType As NavigationalAidType" />
+      <MemberSignature Language="F#" Value="member this.NavigationalAidType : Iot.Device.Nmea0183.Ais.NavigationalAidType with get, set" Usage="Iot.Device.Nmea0183.Ais.AidToNavigation.NavigationalAidType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.NavigationalAidType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The type of navigational aid this target indicates.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffPosition">
+      <MemberSignature Language="C#" Value="public bool OffPosition { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool OffPosition" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.AidToNavigation.OffPosition" />
+      <MemberSignature Language="VB.NET" Value="Public Property OffPosition As Boolean" />
+      <MemberSignature Language="F#" Value="member this.OffPosition : bool with get, set" Usage="Iot.Device.Nmea0183.Ais.AidToNavigation.OffPosition" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the beacon is off position. Can only happen for real AtoN targets.
+            If this is true, caution is advised, because the beacon is floating in a wrong
+            position, endangering ships, and it's missing where it should be.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Iot.Device.Nmea0183.Ais.AidToNavigation? left, Iot.Device.Nmea0183.Ais.AidToNavigation? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Iot.Device.Nmea0183.Ais.AidToNavigation left, class Iot.Device.Nmea0183.Ais.AidToNavigation right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AidToNavigation.op_Equality(Iot.Device.Nmea0183.Ais.AidToNavigation,Iot.Device.Nmea0183.Ais.AidToNavigation)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As AidToNavigation, right As AidToNavigation) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Iot.Device.Nmea0183.Ais.AidToNavigation" />
+        <Parameter Name="right" Type="Iot.Device.Nmea0183.Ais.AidToNavigation" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Iot.Device.Nmea0183.Ais.AidToNavigation? left, Iot.Device.Nmea0183.Ais.AidToNavigation? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Iot.Device.Nmea0183.Ais.AidToNavigation left, class Iot.Device.Nmea0183.Ais.AidToNavigation right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AidToNavigation.op_Inequality(Iot.Device.Nmea0183.Ais.AidToNavigation,Iot.Device.Nmea0183.Ais.AidToNavigation)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As AidToNavigation, right As AidToNavigation) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Iot.Device.Nmea0183.Ais.AidToNavigation" />
+        <Parameter Name="right" Type="Iot.Device.Nmea0183.Ais.AidToNavigation" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintMembers">
+      <MemberSignature Language="C#" Value="protected override bool PrintMembers (System.Text.StringBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool PrintMembers(class System.Text.StringBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AidToNavigation.PrintMembers(System.Text.StringBuilder)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function PrintMembers (builder As StringBuilder) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="System.Text.StringBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="builder">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AidToNavigation.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Virtual">
+      <MemberSignature Language="C#" Value="public bool Virtual { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool Virtual" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.AidToNavigation.Virtual" />
+      <MemberSignature Language="VB.NET" Value="Public Property Virtual As Boolean" />
+      <MemberSignature Language="F#" Value="member this.Virtual : bool with get, set" Usage="Iot.Device.Nmea0183.Ais.AidToNavigation.Virtual" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if this is a virtual aid-to-navigation target. There's typically no
+            visible buoy at the given position, and the signal is sent from a remote base station.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

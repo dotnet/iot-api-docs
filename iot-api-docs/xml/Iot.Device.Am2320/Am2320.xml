@@ -1,0 +1,240 @@
+<Type Name="Am2320" FullName="Iot.Device.Am2320.Am2320">
+  <TypeSignature Language="C#" Value="public class Am2320 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Am2320 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Am2320.Am2320" />
+  <TypeSignature Language="VB.NET" Value="Public Class Am2320&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Am2320 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Device.Model.Interface("AM2320 - Temperature and Humidity sensor")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Device.Model.Interface("AM2320 - Temperature and Humidity sensor")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            AM2320 - Temperature and Humidity sensor.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Am2320 (System.Device.I2c.I2cDevice i2c);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2c) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Am2320.Am2320.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2c As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Am2320.Am2320 : System.Device.I2c.I2cDevice -&gt; Iot.Device.Am2320.Am2320" Usage="new Iot.Device.Am2320.Am2320 i2c" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2c" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2c">The <see cref="T:System.Device.I2c.I2cDevice" />.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Am2320.Am2320" /> class.
+            </summary>
+        <remarks>This sensor only works on Standard Mode speed.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const int DefaultI2cAddress = 92;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultI2cAddress = (92)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Am2320.Am2320.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Integer  = 92" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : int" Usage="Iot.Device.Am2320.Am2320.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>92</MemberValue>
+      <Docs>
+        <summary>
+            AM3220 default I2C address.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Am2320.Am2320.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="am2320.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="IsLastReadSuccessful">
+      <MemberSignature Language="C#" Value="public bool IsLastReadSuccessful { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLastReadSuccessful" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Am2320.Am2320.IsLastReadSuccessful" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsLastReadSuccessful As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsLastReadSuccessful : bool" Usage="Iot.Device.Am2320.Am2320.IsLastReadSuccessful" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets a value indicating whether last read went, <c>true</c> for success, <c>false</c> for failure.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MinimumReadPeriod">
+      <MemberSignature Language="C#" Value="public static readonly TimeSpan MinimumReadPeriod;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.TimeSpan MinimumReadPeriod" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Am2320.Am2320.MinimumReadPeriod" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly MinimumReadPeriod As TimeSpan " />
+      <MemberSignature Language="F#" Value=" staticval mutable MinimumReadPeriod : TimeSpan" Usage="Iot.Device.Am2320.Am2320.MinimumReadPeriod" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The minimum read period is 1.5 seconds. Do not read the sensor more often.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetDeviceInformation">
+      <MemberSignature Language="C#" Value="public bool TryGetDeviceInformation (out Iot.Device.Am2320.DeviceInformation? deviceInformation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetDeviceInformation([out] class Iot.Device.Am2320.DeviceInformation&amp; deviceInformation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Am2320.Am2320.TryGetDeviceInformation(Iot.Device.Am2320.DeviceInformation@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetDeviceInformation (ByRef deviceInformation As DeviceInformation) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetDeviceInformation : DeviceInformation -&gt; bool" Usage="am2320.TryGetDeviceInformation deviceInformation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Property("DeviceInformation", null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Property("DeviceInformation", null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="deviceInformation" Type="Iot.Device.Am2320.DeviceInformation" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="deviceInformation">[Out] The Device Information on success.</param>
+        <summary>
+            Gets the device information.
+            </summary>
+        <returns>True on success, false if reading failed.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadHumidity">
+      <MemberSignature Language="C#" Value="public bool TryReadHumidity (out UnitsNet.RelativeHumidity humidity);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadHumidity([out] valuetype UnitsNet.RelativeHumidity&amp; humidity) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Am2320.Am2320.TryReadHumidity(UnitsNet.RelativeHumidity@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadHumidity (ByRef humidity As RelativeHumidity) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadHumidity : RelativeHumidity -&gt; bool" Usage="am2320.TryReadHumidity humidity" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Telemetry("Humidity", null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry("Humidity", null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="humidity" Type="UnitsNet.RelativeHumidity" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="humidity">[Out] The current relative humidity on success.</param>
+        <summary>
+            Gets the last read of relative humidity in percentage.
+            </summary>
+        <returns>True on success, false if reading failed.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadTemperature">
+      <MemberSignature Language="C#" Value="public bool TryReadTemperature (out UnitsNet.Temperature temperature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadTemperature([out] valuetype UnitsNet.Temperature&amp; temperature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Am2320.Am2320.TryReadTemperature(UnitsNet.Temperature@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadTemperature (ByRef temperature As Temperature) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadTemperature : Temperature -&gt; bool" Usage="am2320.TryReadTemperature temperature" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Telemetry("Temperature", null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry("Temperature", null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="temperature" Type="UnitsNet.Temperature" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="temperature">[Out] The current temperature on success.</param>
+        <summary>
+            Gets the last read temperature.
+            </summary>
+        <returns>True on success, false if reading failed.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

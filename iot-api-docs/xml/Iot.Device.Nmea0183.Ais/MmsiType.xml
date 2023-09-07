@@ -1,0 +1,259 @@
+<Type Name="MmsiType" FullName="Iot.Device.Nmea0183.Ais.MmsiType">
+  <TypeSignature Language="C#" Value="public enum MmsiType" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed MmsiType extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Ais.MmsiType" />
+  <TypeSignature Language="VB.NET" Value="Public Enum MmsiType" />
+  <TypeSignature Language="F#" Value="type MmsiType = " />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+             Returned when trying to identify the type of MMSI. A normal 9-digit MMSI is a ship, one that starts
+             with a 0 is a special group code, one starting with 00 is a base station. See <see cref="M:Iot.Device.Nmea0183.Ais.AisTarget.IdentifyMmsiType" /> for details.
+             </summary>
+    <remarks>
+             Any system that uses AIS-Sart, MOB or Epirb type is only activated in case of an emergency. When receiving any message from such
+             a transmitter an alert should be generated and the nearest MRCC should be contacted immediately. Somebody might be in imminent danger!
+            
+             Some of these types are rarely or only in very limited areas used.
+             </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AisSart">
+      <MemberSignature Language="C#" Value="AisSart" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Nmea0183.Ais.MmsiType AisSart = int32(7)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Nmea0183.Ais.MmsiType.AisSart" />
+      <MemberSignature Language="VB.NET" Value="AisSart" />
+      <MemberSignature Language="F#" Value="AisSart = 7" Usage="Iot.Device.Nmea0183.Ais.MmsiType.AisSart" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.MmsiType</ReturnType>
+      </ReturnValue>
+      <MemberValue>7</MemberValue>
+      <Docs>
+        <summary>
+            This is an AIS-SART transponder.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="AtoN">
+      <MemberSignature Language="C#" Value="AtoN" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Nmea0183.Ais.MmsiType AtoN = int32(5)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Nmea0183.Ais.MmsiType.AtoN" />
+      <MemberSignature Language="VB.NET" Value="AtoN" />
+      <MemberSignature Language="F#" Value="AtoN = 5" Usage="Iot.Device.Nmea0183.Ais.MmsiType.AtoN" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.MmsiType</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            Aid-to-navigation AIS transponder. These typically are boys sending out AIS messages, so they can be found in fog.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Auxiliary">
+      <MemberSignature Language="C#" Value="Auxiliary" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Nmea0183.Ais.MmsiType Auxiliary = int32(6)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Nmea0183.Ais.MmsiType.Auxiliary" />
+      <MemberSignature Language="VB.NET" Value="Auxiliary" />
+      <MemberSignature Language="F#" Value="Auxiliary = 6" Usage="Iot.Device.Nmea0183.Ais.MmsiType.Auxiliary" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.MmsiType</ReturnType>
+      </ReturnValue>
+      <MemberValue>6</MemberValue>
+      <Docs>
+        <summary>
+            The vessel is an auxiliary vessel of another.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="BaseStation">
+      <MemberSignature Language="C#" Value="BaseStation" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Nmea0183.Ais.MmsiType BaseStation = int32(3)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Nmea0183.Ais.MmsiType.BaseStation" />
+      <MemberSignature Language="VB.NET" Value="BaseStation" />
+      <MemberSignature Language="F#" Value="BaseStation = 3" Usage="Iot.Device.Nmea0183.Ais.MmsiType.BaseStation" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.MmsiType</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            A base station uses this ID, e.g DSC broadcast messages from rescue coordination centers (M)RCC
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="DiversRadio">
+      <MemberSignature Language="C#" Value="DiversRadio" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Nmea0183.Ais.MmsiType DiversRadio = int32(10)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Nmea0183.Ais.MmsiType.DiversRadio" />
+      <MemberSignature Language="VB.NET" Value="DiversRadio" />
+      <MemberSignature Language="F#" Value="DiversRadio = 10" Usage="Iot.Device.Nmea0183.Ais.MmsiType.DiversRadio" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.MmsiType</ReturnType>
+      </ReturnValue>
+      <MemberValue>10</MemberValue>
+      <Docs>
+        <summary>
+            Handheld radio of a diver
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Epirb">
+      <MemberSignature Language="C#" Value="Epirb" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Nmea0183.Ais.MmsiType Epirb = int32(9)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Nmea0183.Ais.MmsiType.Epirb" />
+      <MemberSignature Language="VB.NET" Value="Epirb" />
+      <MemberSignature Language="F#" Value="Epirb = 9" Usage="Iot.Device.Nmea0183.Ais.MmsiType.Epirb" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.MmsiType</ReturnType>
+      </ReturnValue>
+      <MemberValue>9</MemberValue>
+      <Docs>
+        <summary>
+            Similar to the above: An Epirb with Ais was activated.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Group">
+      <MemberSignature Language="C#" Value="Group" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Nmea0183.Ais.MmsiType Group = int32(2)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Nmea0183.Ais.MmsiType.Group" />
+      <MemberSignature Language="VB.NET" Value="Group" />
+      <MemberSignature Language="F#" Value="Group = 2" Usage="Iot.Device.Nmea0183.Ais.MmsiType.Group" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.MmsiType</ReturnType>
+      </ReturnValue>
+      <MemberValue>2</MemberValue>
+      <Docs>
+        <summary>
+            A group of ships (e.g. all SAR vessels in range)
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Mob">
+      <MemberSignature Language="C#" Value="Mob" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Nmea0183.Ais.MmsiType Mob = int32(8)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Nmea0183.Ais.MmsiType.Mob" />
+      <MemberSignature Language="VB.NET" Value="Mob" />
+      <MemberSignature Language="F#" Value="Mob = 8" Usage="Iot.Device.Nmea0183.Ais.MmsiType.Mob" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.MmsiType</ReturnType>
+      </ReturnValue>
+      <MemberValue>8</MemberValue>
+      <Docs>
+        <summary>
+            An (increasingly popular) AIS-MOB device was activated.
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="SarAircraft">
+      <MemberSignature Language="C#" Value="SarAircraft" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Nmea0183.Ais.MmsiType SarAircraft = int32(4)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Nmea0183.Ais.MmsiType.SarAircraft" />
+      <MemberSignature Language="VB.NET" Value="SarAircraft" />
+      <MemberSignature Language="F#" Value="SarAircraft = 4" Usage="Iot.Device.Nmea0183.Ais.MmsiType.SarAircraft" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.MmsiType</ReturnType>
+      </ReturnValue>
+      <MemberValue>4</MemberValue>
+      <Docs>
+        <summary>
+            A SAR aircraft/helicopter
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Ship">
+      <MemberSignature Language="C#" Value="Ship" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Nmea0183.Ais.MmsiType Ship = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Nmea0183.Ais.MmsiType.Ship" />
+      <MemberSignature Language="VB.NET" Value="Ship" />
+      <MemberSignature Language="F#" Value="Ship = 1" Usage="Iot.Device.Nmea0183.Ais.MmsiType.Ship" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.MmsiType</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            This is the default
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="Unknown">
+      <MemberSignature Language="C#" Value="Unknown" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Nmea0183.Ais.MmsiType Unknown = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Nmea0183.Ais.MmsiType.Unknown" />
+      <MemberSignature Language="VB.NET" Value="Unknown" />
+      <MemberSignature Language="F#" Value="Unknown = 0" Usage="Iot.Device.Nmea0183.Ais.MmsiType.Unknown" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.MmsiType</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            The MMSI uses a reserved range.
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

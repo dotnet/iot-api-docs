@@ -1,0 +1,247 @@
+<Type Name="AisTargetExtensions" FullName="Iot.Device.Nmea0183.Ais.AisTargetExtensions">
+  <TypeSignature Language="C#" Value="public static class AisTargetExtensions" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit AisTargetExtensions extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Ais.AisTargetExtensions" />
+  <TypeSignature Language="VB.NET" Value="Public Module AisTargetExtensions" />
+  <TypeSignature Language="F#" Value="type AisTargetExtensions = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Extension methods on AIS targets
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Age">
+      <MemberSignature Language="C#" Value="public static TimeSpan Age (this Iot.Device.Nmea0183.Ais.AisTarget self, DateTimeOffset toTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.TimeSpan Age(class Iot.Device.Nmea0183.Ais.AisTarget self, valuetype System.DateTimeOffset toTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AisTargetExtensions.Age(Iot.Device.Nmea0183.Ais.AisTarget,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function Age (self As AisTarget, toTime As DateTimeOffset) As TimeSpan" />
+      <MemberSignature Language="F#" Value="static member Age : Iot.Device.Nmea0183.Ais.AisTarget * DateTimeOffset -&gt; TimeSpan" Usage="Iot.Device.Nmea0183.Ais.AisTargetExtensions.Age (self, toTime)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="self" Type="Iot.Device.Nmea0183.Ais.AisTarget" RefType="this" />
+        <Parameter Name="toTime" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="self">The target under investigation</param>
+        <param name="toTime">The time to compare to (often <see cref="P:System.DateTimeOffset.UtcNow" />)</param>
+        <summary>
+            Returns the age of this target, relative to the indicated time.
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistanceTo">
+      <MemberSignature Language="C#" Value="public static UnitsNet.Length DistanceTo (this Iot.Device.Nmea0183.Ais.AisTarget self, Iot.Device.Nmea0183.Ais.AisTarget other);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype UnitsNet.Length DistanceTo(class Iot.Device.Nmea0183.Ais.AisTarget self, class Iot.Device.Nmea0183.Ais.AisTarget other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AisTargetExtensions.DistanceTo(Iot.Device.Nmea0183.Ais.AisTarget,Iot.Device.Nmea0183.Ais.AisTarget)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function DistanceTo (self As AisTarget, other As AisTarget) As Length" />
+      <MemberSignature Language="F#" Value="static member DistanceTo : Iot.Device.Nmea0183.Ais.AisTarget * Iot.Device.Nmea0183.Ais.AisTarget -&gt; UnitsNet.Length" Usage="Iot.Device.Nmea0183.Ais.AisTargetExtensions.DistanceTo (self, other)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Length</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="self" Type="Iot.Device.Nmea0183.Ais.AisTarget" RefType="this" />
+        <Parameter Name="other" Type="Iot.Device.Nmea0183.Ais.AisTarget" />
+      </Parameters>
+      <Docs>
+        <param name="self">First target</param>
+        <param name="other">Other target</param>
+        <summary>
+            Calculates the distance to another target
+            </summary>
+        <returns>The distance between the two targets, based on their last known position</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EstimatePosition">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Nmea0183.Ais.MovingTarget EstimatePosition (this Iot.Device.Nmea0183.Ais.MovingTarget ship, DateTimeOffset time, TimeSpan stepSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Nmea0183.Ais.MovingTarget EstimatePosition(class Iot.Device.Nmea0183.Ais.MovingTarget ship, valuetype System.DateTimeOffset time, valuetype System.TimeSpan stepSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AisTargetExtensions.EstimatePosition(Iot.Device.Nmea0183.Ais.MovingTarget,System.DateTimeOffset,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function EstimatePosition (ship As MovingTarget, time As DateTimeOffset, stepSize As TimeSpan) As MovingTarget" />
+      <MemberSignature Language="F#" Value="static member EstimatePosition : Iot.Device.Nmea0183.Ais.MovingTarget * DateTimeOffset * TimeSpan -&gt; Iot.Device.Nmea0183.Ais.MovingTarget" Usage="Iot.Device.Nmea0183.Ais.AisTargetExtensions.EstimatePosition (ship, time, stepSize)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.MovingTarget</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ship" Type="Iot.Device.Nmea0183.Ais.MovingTarget" RefType="this" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+        <Parameter Name="stepSize" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="ship">The ship to extrapolate</param>
+        <param name="time">The time at which the position shall be estimated. The estimate is better the closer this time is to the last position
+            of the ship.</param>
+        <param name="stepSize">The extrapolation step size. Smaller values will lead to better estimation, but are computationally expensive</param>
+        <summary>
+            Estimates where a ship will at a certain time.
+            </summary>
+        <returns>A <see cref="T:Iot.Device.Nmea0183.Ais.Ship" /> instance with the estimated position and course</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Stepsize is not positive</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="EstimatePosition">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Nmea0183.Ais.MovingTarget EstimatePosition (this Iot.Device.Nmea0183.Ais.MovingTarget ship, TimeSpan extrapolationTime, TimeSpan stepSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Nmea0183.Ais.MovingTarget EstimatePosition(class Iot.Device.Nmea0183.Ais.MovingTarget ship, valuetype System.TimeSpan extrapolationTime, valuetype System.TimeSpan stepSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AisTargetExtensions.EstimatePosition(Iot.Device.Nmea0183.Ais.MovingTarget,System.TimeSpan,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function EstimatePosition (ship As MovingTarget, extrapolationTime As TimeSpan, stepSize As TimeSpan) As MovingTarget" />
+      <MemberSignature Language="F#" Value="static member EstimatePosition : Iot.Device.Nmea0183.Ais.MovingTarget * TimeSpan * TimeSpan -&gt; Iot.Device.Nmea0183.Ais.MovingTarget" Usage="Iot.Device.Nmea0183.Ais.AisTargetExtensions.EstimatePosition (ship, extrapolationTime, stepSize)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.MovingTarget</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ship" Type="Iot.Device.Nmea0183.Ais.MovingTarget" RefType="this" />
+        <Parameter Name="extrapolationTime" Type="System.TimeSpan" />
+        <Parameter Name="stepSize" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="ship">The ship to extrapolate</param>
+        <param name="extrapolationTime">How much time shall pass. Very large values are probably useless, because the ship might start a turn.</param>
+        <param name="stepSize">The extrapolation step size. Smaller values will lead to better estimation, but are computationally expensive</param>
+        <summary>
+            Estimates where a ship will be after some time.
+            </summary>
+        <returns>A <see cref="T:Iot.Device.Nmea0183.Ais.Ship" /> instance with the estimated position and course</returns>
+        <remarks>The reference time is the position/time the last report was received from this ship. To be able to compare two ships, the
+            times still need to be aligned. Use the overload <see cref="M:Iot.Device.Nmea0183.Ais.AisTargetExtensions.EstimatePosition(Iot.Device.Nmea0183.Ais.MovingTarget,System.DateTimeOffset,System.TimeSpan)" /> if you
+            want to estimate the ship position at a certain position in time.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Stepsize is not positive</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEstimatedTrack">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.List&lt;Iot.Device.Nmea0183.Ais.MovingTarget&gt; GetEstimatedTrack (this Iot.Device.Nmea0183.Ais.MovingTarget ship, DateTimeOffset startTime, DateTimeOffset endTime, TimeSpan stepSize);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.List`1&lt;class Iot.Device.Nmea0183.Ais.MovingTarget&gt; GetEstimatedTrack(class Iot.Device.Nmea0183.Ais.MovingTarget ship, valuetype System.DateTimeOffset startTime, valuetype System.DateTimeOffset endTime, valuetype System.TimeSpan stepSize) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AisTargetExtensions.GetEstimatedTrack(Iot.Device.Nmea0183.Ais.MovingTarget,System.DateTimeOffset,System.DateTimeOffset,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function GetEstimatedTrack (ship As MovingTarget, startTime As DateTimeOffset, endTime As DateTimeOffset, stepSize As TimeSpan) As List(Of MovingTarget)" />
+      <MemberSignature Language="F#" Value="static member GetEstimatedTrack : Iot.Device.Nmea0183.Ais.MovingTarget * DateTimeOffset * DateTimeOffset * TimeSpan -&gt; System.Collections.Generic.List&lt;Iot.Device.Nmea0183.Ais.MovingTarget&gt;" Usage="Iot.Device.Nmea0183.Ais.AisTargetExtensions.GetEstimatedTrack (ship, startTime, endTime, stepSize)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Iot.Device.Nmea0183.Ais.MovingTarget&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ship" Type="Iot.Device.Nmea0183.Ais.MovingTarget" RefType="this" />
+        <Parameter Name="startTime" Type="System.DateTimeOffset" />
+        <Parameter Name="endTime" Type="System.DateTimeOffset" />
+        <Parameter Name="stepSize" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="ship">The ship to move</param>
+        <param name="startTime">The time at which the track should start (may be in the past)</param>
+        <param name="endTime">The time at which the track should end</param>
+        <param name="stepSize">The step size of the returned track</param>
+        <summary>
+            Calculate a track estimation for a ship
+            </summary>
+        <returns>A list of targets (for each estimated position from <paramref name="startTime" /> to <paramref name="endTime" />).</returns>
+        <remarks>The calculation of this track may be expensive, when the timespan between start and end is large or stepSize is small. Or when the
+            timespan is far from the time the ship was last seen.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Stepsize is to small or negative</exception>
+        <exception cref="T:System.ArgumentException">Start time is after end time</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativePositionsTo">
+      <MemberSignature Language="C#" Value="public static System.Collections.Generic.List&lt;Iot.Device.Nmea0183.Ais.ShipRelativePosition&gt; RelativePositionsTo (this Iot.Device.Nmea0183.Ais.Ship self, System.Collections.Generic.IEnumerable&lt;Iot.Device.Nmea0183.Ais.AisTarget&gt; others, DateTimeOffset now, Iot.Device.Nmea0183.Ais.TrackEstimationParameters parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class System.Collections.Generic.List`1&lt;class Iot.Device.Nmea0183.Ais.ShipRelativePosition&gt; RelativePositionsTo(class Iot.Device.Nmea0183.Ais.Ship self, class System.Collections.Generic.IEnumerable`1&lt;class Iot.Device.Nmea0183.Ais.AisTarget&gt; others, valuetype System.DateTimeOffset now, class Iot.Device.Nmea0183.Ais.TrackEstimationParameters parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AisTargetExtensions.RelativePositionsTo(Iot.Device.Nmea0183.Ais.Ship,System.Collections.Generic.IEnumerable{Iot.Device.Nmea0183.Ais.AisTarget},System.DateTimeOffset,Iot.Device.Nmea0183.Ais.TrackEstimationParameters)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function RelativePositionsTo (self As Ship, others As IEnumerable(Of AisTarget), now As DateTimeOffset, parameters As TrackEstimationParameters) As List(Of ShipRelativePosition)" />
+      <MemberSignature Language="F#" Value="static member RelativePositionsTo : Iot.Device.Nmea0183.Ais.Ship * seq&lt;Iot.Device.Nmea0183.Ais.AisTarget&gt; * DateTimeOffset * Iot.Device.Nmea0183.Ais.TrackEstimationParameters -&gt; System.Collections.Generic.List&lt;Iot.Device.Nmea0183.Ais.ShipRelativePosition&gt;" Usage="Iot.Device.Nmea0183.Ais.AisTargetExtensions.RelativePositionsTo (self, others, now, parameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Iot.Device.Nmea0183.Ais.ShipRelativePosition&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="self" Type="Iot.Device.Nmea0183.Ais.Ship" RefType="this" />
+        <Parameter Name="others" Type="System.Collections.Generic.IEnumerable&lt;Iot.Device.Nmea0183.Ais.AisTarget&gt;" />
+        <Parameter Name="now" Type="System.DateTimeOffset" />
+        <Parameter Name="parameters" Type="Iot.Device.Nmea0183.Ais.TrackEstimationParameters" />
+      </Parameters>
+      <Docs>
+        <param name="self">The own ship</param>
+        <param name="others">The list of visible AIS targets</param>
+        <param name="now">The current time (or the time the data is valid for)</param>
+        <param name="parameters">Parameters controlling the accuracy and speed of the calculation</param>
+        <summary>
+            Calculates the relative positions and the collision vectors from one ship to a group of targets.
+            The algorithm used is inspired by https://core.ac.uk/download/74237799.pdf
+            </summary>
+        <returns>A list of relative positions between our ship and the targets. Targets without a valid position are skipped.</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Our ship has no valid position</exception>
+        <exception cref="T:System.IO.InvalidDataException">An internal error occurred</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativePositionTo">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Nmea0183.Ais.ShipRelativePosition? RelativePositionTo (this Iot.Device.Nmea0183.Ais.Ship self, Iot.Device.Nmea0183.Ais.AisTarget other, DateTimeOffset now, Iot.Device.Nmea0183.Ais.TrackEstimationParameters parameters);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Nmea0183.Ais.ShipRelativePosition RelativePositionTo(class Iot.Device.Nmea0183.Ais.Ship self, class Iot.Device.Nmea0183.Ais.AisTarget other, valuetype System.DateTimeOffset now, class Iot.Device.Nmea0183.Ais.TrackEstimationParameters parameters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.AisTargetExtensions.RelativePositionTo(Iot.Device.Nmea0183.Ais.Ship,Iot.Device.Nmea0183.Ais.AisTarget,System.DateTimeOffset,Iot.Device.Nmea0183.Ais.TrackEstimationParameters)" />
+      <MemberSignature Language="VB.NET" Value="&lt;Extension()&gt;&#xA;Public Function RelativePositionTo (self As Ship, other As AisTarget, now As DateTimeOffset, parameters As TrackEstimationParameters) As ShipRelativePosition" />
+      <MemberSignature Language="F#" Value="static member RelativePositionTo : Iot.Device.Nmea0183.Ais.Ship * Iot.Device.Nmea0183.Ais.AisTarget * DateTimeOffset * Iot.Device.Nmea0183.Ais.TrackEstimationParameters -&gt; Iot.Device.Nmea0183.Ais.ShipRelativePosition" Usage="Iot.Device.Nmea0183.Ais.AisTargetExtensions.RelativePositionTo (self, other, now, parameters)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.ShipRelativePosition</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="self" Type="Iot.Device.Nmea0183.Ais.Ship" RefType="this" />
+        <Parameter Name="other" Type="Iot.Device.Nmea0183.Ais.AisTarget" />
+        <Parameter Name="now" Type="System.DateTimeOffset" />
+        <Parameter Name="parameters" Type="Iot.Device.Nmea0183.Ais.TrackEstimationParameters" />
+      </Parameters>
+      <Docs>
+        <param name="self">Our own vessel</param>
+        <param name="other">The other ship or target (can also be a stationary target, such as an <see cref="T:Iot.Device.Nmea0183.Ais.AidToNavigation" /> instance)</param>
+        <param name="now">The time at which the comparison occurs. Typically now, but it is also possible to estimate the dangers at another time. When playing
+            back old data, this must correspond to the playback time</param>
+        <param name="parameters">The parameters used for the calculation</param>
+        <summary>
+            Calculates the relative position data set to another vessel.
+            </summary>
+        <returns>An instance of <see cref="T:Iot.Device.Nmea0183.Ais.ShipRelativePosition" /> with all possible fields filled out.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

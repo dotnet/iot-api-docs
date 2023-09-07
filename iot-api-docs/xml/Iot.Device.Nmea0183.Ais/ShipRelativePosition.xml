@@ -1,0 +1,281 @@
+<Type Name="ShipRelativePosition" FullName="Iot.Device.Nmea0183.Ais.ShipRelativePosition">
+  <TypeSignature Language="C#" Value="public class ShipRelativePosition" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ShipRelativePosition extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Ais.ShipRelativePosition" />
+  <TypeSignature Language="VB.NET" Value="Public Class ShipRelativePosition" />
+  <TypeSignature Language="F#" Value="type ShipRelativePosition = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Contains comparative position information between two ships, such as distance, bearing or estimated time to closest encounter.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ShipRelativePosition (Iot.Device.Nmea0183.Ais.AisTarget from, Iot.Device.Nmea0183.Ais.AisTarget to, UnitsNet.Length distance, UnitsNet.Angle bearing, Iot.Device.Nmea0183.Ais.AisSafetyState state, DateTimeOffset calculationTime);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Nmea0183.Ais.AisTarget from, class Iot.Device.Nmea0183.Ais.AisTarget to, valuetype UnitsNet.Length distance, valuetype UnitsNet.Angle bearing, valuetype Iot.Device.Nmea0183.Ais.AisSafetyState state, valuetype System.DateTimeOffset calculationTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.ShipRelativePosition.#ctor(Iot.Device.Nmea0183.Ais.AisTarget,Iot.Device.Nmea0183.Ais.AisTarget,UnitsNet.Length,UnitsNet.Angle,Iot.Device.Nmea0183.Ais.AisSafetyState,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (from As AisTarget, to As AisTarget, distance As Length, bearing As Angle, state As AisSafetyState, calculationTime As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Ais.ShipRelativePosition : Iot.Device.Nmea0183.Ais.AisTarget * Iot.Device.Nmea0183.Ais.AisTarget * UnitsNet.Length * UnitsNet.Angle * Iot.Device.Nmea0183.Ais.AisSafetyState * DateTimeOffset -&gt; Iot.Device.Nmea0183.Ais.ShipRelativePosition" Usage="new Iot.Device.Nmea0183.Ais.ShipRelativePosition (from, to, distance, bearing, state, calculationTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="from" Type="Iot.Device.Nmea0183.Ais.AisTarget" />
+        <Parameter Name="to" Type="Iot.Device.Nmea0183.Ais.AisTarget" />
+        <Parameter Name="distance" Type="UnitsNet.Length" />
+        <Parameter Name="bearing" Type="UnitsNet.Angle" />
+        <Parameter Name="state" Type="Iot.Device.Nmea0183.Ais.AisSafetyState" />
+        <Parameter Name="calculationTime" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="from">Source vessel</param>
+        <param name="to">Target vessel</param>
+        <param name="distance">Current distance between these vessels</param>
+        <param name="bearing">Bearing from first vessel to second</param>
+        <param name="state">Safety state between these vessels</param>
+        <param name="calculationTime">Time this record was calculated</param>
+        <summary>
+            Relative position instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Bearing">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle Bearing { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Angle Bearing" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.ShipRelativePosition.Bearing" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Bearing As Angle" />
+      <MemberSignature Language="F#" Value="member this.Bearing : UnitsNet.Angle" Usage="Iot.Device.Nmea0183.Ais.ShipRelativePosition.Bearing" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Angle</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The bearing between the sips (Compass direction from <see cref="P:Iot.Device.Nmea0183.Ais.ShipRelativePosition.From" /> to <see cref="P:Iot.Device.Nmea0183.Ais.ShipRelativePosition.To" />)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CalculationTime">
+      <MemberSignature Language="C#" Value="public DateTimeOffset CalculationTime { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset CalculationTime" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.ShipRelativePosition.CalculationTime" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CalculationTime As DateTimeOffset" />
+      <MemberSignature Language="F#" Value="member this.CalculationTime : DateTimeOffset" Usage="Iot.Device.Nmea0183.Ais.ShipRelativePosition.CalculationTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.DateTimeOffset</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The time this record was calculated.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClosestPointOfApproach">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length? ClosestPointOfApproach { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Length&gt; ClosestPointOfApproach" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.ShipRelativePosition.ClosestPointOfApproach" />
+      <MemberSignature Language="VB.NET" Value="Public Property ClosestPointOfApproach As Nullable(Of Length)" />
+      <MemberSignature Language="F#" Value="member this.ClosestPointOfApproach : Nullable&lt;UnitsNet.Length&gt; with get, set" Usage="Iot.Device.Nmea0183.Ais.ShipRelativePosition.ClosestPointOfApproach" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Length&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Distance at closest point of approach
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Distance">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length Distance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Length Distance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.ShipRelativePosition.Distance" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Distance As Length" />
+      <MemberSignature Language="F#" Value="member this.Distance : UnitsNet.Length" Usage="Iot.Device.Nmea0183.Ais.ShipRelativePosition.Distance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Length</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The current distance between the ships
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="From">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.Ais.AisTarget From { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Nmea0183.Ais.AisTarget From" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.ShipRelativePosition.From" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property From As AisTarget" />
+      <MemberSignature Language="F#" Value="member this.From : Iot.Device.Nmea0183.Ais.AisTarget" Usage="Iot.Device.Nmea0183.Ais.ShipRelativePosition.From" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.AisTarget</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Ship from which this relative position is seen (typically the own ship, but of course it's also possible to
+            calculate possible collision vectors between arbitrary ships)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativeDirection">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? RelativeDirection { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; RelativeDirection" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.ShipRelativePosition.RelativeDirection" />
+      <MemberSignature Language="VB.NET" Value="Public Property RelativeDirection As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.RelativeDirection : Nullable&lt;UnitsNet.Angle&gt; with get, set" Usage="Iot.Device.Nmea0183.Ais.ShipRelativePosition.RelativeDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Direction in which the other ship is seen from <see cref="P:Iot.Device.Nmea0183.Ais.ShipRelativePosition.From" /> when looking to the bow. A negative value means the other
+            ship is on the port bow, a positive value on the starboard bow. Only available if the source ship has a valid heading.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SafetyState">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.Ais.AisSafetyState SafetyState { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nmea0183.Ais.AisSafetyState SafetyState" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.ShipRelativePosition.SafetyState" />
+      <MemberSignature Language="VB.NET" Value="Public Property SafetyState As AisSafetyState" />
+      <MemberSignature Language="F#" Value="member this.SafetyState : Iot.Device.Nmea0183.Ais.AisSafetyState with get, set" Usage="Iot.Device.Nmea0183.Ais.ShipRelativePosition.SafetyState" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.AisSafetyState</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Safety state
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeOfClosestPointOfApproach">
+      <MemberSignature Language="C#" Value="public DateTimeOffset? TimeOfClosestPointOfApproach { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype System.DateTimeOffset&gt; TimeOfClosestPointOfApproach" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.ShipRelativePosition.TimeOfClosestPointOfApproach" />
+      <MemberSignature Language="VB.NET" Value="Public Property TimeOfClosestPointOfApproach As Nullable(Of DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="member this.TimeOfClosestPointOfApproach : Nullable&lt;DateTimeOffset&gt; with get, set" Usage="Iot.Device.Nmea0183.Ais.ShipRelativePosition.TimeOfClosestPointOfApproach" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.DateTimeOffset&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Time at which the closest point will be reached
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TimeToClosestPointOfApproach">
+      <MemberSignature Language="C#" Value="public TimeSpan? TimeToClosestPointOfApproach (DateTimeOffset now);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Nullable`1&lt;valuetype System.TimeSpan&gt; TimeToClosestPointOfApproach(valuetype System.DateTimeOffset now) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Ais.ShipRelativePosition.TimeToClosestPointOfApproach(System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TimeToClosestPointOfApproach (now As DateTimeOffset) As Nullable(Of TimeSpan)" />
+      <MemberSignature Language="F#" Value="member this.TimeToClosestPointOfApproach : DateTimeOffset -&gt; Nullable&lt;TimeSpan&gt;" Usage="shipRelativePosition.TimeToClosestPointOfApproach now" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.TimeSpan&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="now" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="now">This is the current time</param>
+        <summary>
+            Calculate the time of closes approach with a given "now"
+            </summary>
+        <returns>Time from now to TCPA</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="To">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.Ais.AisTarget To { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Nmea0183.Ais.AisTarget To" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.ShipRelativePosition.To" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property To As AisTarget" />
+      <MemberSignature Language="F#" Value="member this.To : Iot.Device.Nmea0183.Ais.AisTarget" Usage="Iot.Device.Nmea0183.Ais.ShipRelativePosition.To" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Ais.AisTarget</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Ship to which this relative position is calculated
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

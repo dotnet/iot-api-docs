@@ -1,0 +1,222 @@
+<Type Name="GpioPin" FullName="System.Device.Gpio.GpioPin">
+  <TypeSignature Language="C#" Value="public class GpioPin" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit GpioPin extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:System.Device.Gpio.GpioPin" />
+  <TypeSignature Language="VB.NET" Value="Public Class GpioPin" />
+  <TypeSignature Language="F#" Value="type GpioPin = class" />
+  <AssemblyInfo>
+    <AssemblyName>System.Device.Gpio</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents a general-purpose I/O (GPIO) pin.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="GetPinMode">
+      <MemberSignature Language="C#" Value="public virtual System.Device.Gpio.PinMode GetPinMode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Device.Gpio.PinMode GetPinMode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioPin.GetPinMode" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function GetPinMode () As PinMode" />
+      <MemberSignature Language="F#" Value="abstract member GetPinMode : unit -&gt; System.Device.Gpio.PinMode&#xA;override this.GetPinMode : unit -&gt; System.Device.Gpio.PinMode" Usage="gpioPin.GetPinMode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinMode</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the current pin mode for the general-purpose I/O (GPIO) pin. The pin mode specifies whether the pin is configured as an input or an output, and determines how values are driven onto the pin.
+            </summary>
+        <returns>An enumeration value that indicates the current pin mode for the GPIO pin.
+            The pin mode specifies whether the pin is configured as an input or an output, and determines how values are driven onto the pin.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsPinModeSupported">
+      <MemberSignature Language="C#" Value="public virtual bool IsPinModeSupported (System.Device.Gpio.PinMode pinMode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool IsPinModeSupported(valuetype System.Device.Gpio.PinMode pinMode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioPin.IsPinModeSupported(System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function IsPinModeSupported (pinMode As PinMode) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member IsPinModeSupported : System.Device.Gpio.PinMode -&gt; bool&#xA;override this.IsPinModeSupported : System.Device.Gpio.PinMode -&gt; bool" Usage="gpioPin.IsPinModeSupported pinMode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pinMode" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="pinMode">The pin mode that you want to check for support.</param>
+        <summary>
+            Gets whether the general-purpose I/O (GPIO) pin supports the specified pin mode.
+            </summary>
+        <returns>
+          <see langword="true" /> if the GPIO pin supports the pin mode that pinMode specifies; otherwise false.
+            If you specify a pin mode for which this method returns <see langword="false" /> when you call <see cref="M:System.Device.Gpio.GpioPin.SetPinMode(System.Device.Gpio.PinMode)" />, <see cref="M:System.Device.Gpio.GpioPin.SetPinMode(System.Device.Gpio.PinMode)" /> generates an exception.
+            </returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PinNumber">
+      <MemberSignature Language="C#" Value="public virtual int PinNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 PinNumber" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Gpio.GpioPin.PinNumber" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property PinNumber As Integer" />
+      <MemberSignature Language="F#" Value="member this.PinNumber : int" Usage="System.Device.Gpio.GpioPin.PinNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the pin number of the general-purpose I/O (GPIO) pin.
+            </summary>
+        <value>
+            The pin number of the GPIO pin.
+            </value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Read">
+      <MemberSignature Language="C#" Value="public virtual System.Device.Gpio.PinValue Read ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Device.Gpio.PinValue Read() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioPin.Read" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Read () As PinValue" />
+      <MemberSignature Language="F#" Value="abstract member Read : unit -&gt; System.Device.Gpio.PinValue&#xA;override this.Read : unit -&gt; System.Device.Gpio.PinValue" Usage="gpioPin.Read " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinValue</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reads the current value of the general-purpose I/O (GPIO) pin.
+            </summary>
+        <returns>The current value of the GPIO pin. If the pin is configured as an output, this value is the last value written to the pin.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetPinMode">
+      <MemberSignature Language="C#" Value="public virtual void SetPinMode (System.Device.Gpio.PinMode value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetPinMode(valuetype System.Device.Gpio.PinMode value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioPin.SetPinMode(System.Device.Gpio.PinMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetPinMode (value As PinMode)" />
+      <MemberSignature Language="F#" Value="abstract member SetPinMode : System.Device.Gpio.PinMode -&gt; unit&#xA;override this.SetPinMode : System.Device.Gpio.PinMode -&gt; unit" Usage="gpioPin.SetPinMode value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Device.Gpio.PinMode" />
+      </Parameters>
+      <Docs>
+        <param name="value">An enumeration value that specifies pin mode to use for the GPIO pin.
+            The pin mode specifies whether the pin is configured as an input or an output, and determines how values are driven onto the pin.</param>
+        <summary>
+            Sets the pin mode of the general-purpose I/O (GPIO) pin.
+            The pin mode specifies whether the pin is configured as an input or an output, and determines how values are driven onto the pin.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">The GPIO pin does not support the specified pin mode.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Toggle">
+      <MemberSignature Language="C#" Value="public virtual void Toggle ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Toggle() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioPin.Toggle" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Toggle ()" />
+      <MemberSignature Language="F#" Value="abstract member Toggle : unit -&gt; unit&#xA;override this.Toggle : unit -&gt; unit" Usage="gpioPin.Toggle " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Toggles the output of the general purpose I/O (GPIO) pin if the pin is configured as an output.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ValueChanged">
+      <MemberSignature Language="C#" Value="public virtual event System.Device.Gpio.PinChangeEventHandler ValueChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Device.Gpio.PinChangeEventHandler ValueChanged" />
+      <MemberSignature Language="DocId" Value="E:System.Device.Gpio.GpioPin.ValueChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Custom Event ValueChanged As PinChangeEventHandler " />
+      <MemberSignature Language="F#" Value="member this.ValueChanged : System.Device.Gpio.PinChangeEventHandler " Usage="member this.ValueChanged : System.Device.Gpio.PinChangeEventHandler " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.PinChangeEventHandler</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Occurs when the value of the general-purpose I/O (GPIO) pin changes, either because of an external stimulus when the pin is configured as an input, or when a value is written to the pin when the pin in configured as an output.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Write">
+      <MemberSignature Language="C#" Value="public virtual void Write (System.Device.Gpio.PinValue value);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Write(valuetype System.Device.Gpio.PinValue value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.GpioPin.Write(System.Device.Gpio.PinValue)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Write (value As PinValue)" />
+      <MemberSignature Language="F#" Value="abstract member Write : System.Device.Gpio.PinValue -&gt; unit&#xA;override this.Write : System.Device.Gpio.PinValue -&gt; unit" Usage="gpioPin.Write value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Device.Gpio.PinValue" />
+      </Parameters>
+      <Docs>
+        <param name="value">The enumeration value to write to the GPIO pin.
+            <para>If the GPIO pin is configured as an output, the method drives the specified value onto the pin according to the current pin mode for the pin.</para><para>If the GPIO pin is configured as an input, the method updates the latched output value for the pin. The latched output value is driven onto the pin when the configuration for the pin changes to output.</para></param>
+        <summary>
+            Drives the specified value onto the general purpose I/O (GPIO) pin according to the current pin mode for the pin
+            if the pin is configured as an output, or updates the latched output value for the pin if the pin is configured as an input.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">This exception will be thrown on an attempt to write to a pin that hasn't been opened or is not configured as output.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>
