@@ -1,0 +1,444 @@
+<Type Name="ComponentInformation" FullName="System.Device.ComponentInformation">
+  <TypeSignature Language="C#" Value="public class ComponentInformation : IEquatable&lt;System.Device.ComponentInformation&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ComponentInformation extends System.Object implements class System.IEquatable`1&lt;class System.Device.ComponentInformation&gt;" />
+  <TypeSignature Language="DocId" Value="T:System.Device.ComponentInformation" />
+  <TypeSignature Language="VB.NET" Value="Public Class ComponentInformation&#xA;Implements IEquatable(Of ComponentInformation)" />
+  <TypeSignature Language="F#" Value="type ComponentInformation = class&#xA;    interface IEquatable&lt;ComponentInformation&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>System.Device.Gpio</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;System.Device.ComponentInformation&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            A class to provide informational data about system components and active drivers and bindings.
+            An instance of this class is typically obtained by calling QueryComponentInformation on any supported object.
+            The structure represents a tree of connected devices, e.g. a controller and its associated drivers.
+            </summary>
+    <remarks>
+            This class is currently reserved for debugging purposes. Its behavior its and signature are subject to change.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ComponentInformation (System.Device.ComponentInformation original);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class System.Device.ComponentInformation original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.ComponentInformation.#ctor(System.Device.ComponentInformation)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (original As ComponentInformation)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="System.Device.ComponentInformation" />
+      </Parameters>
+      <Docs>
+        <param name="original">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ComponentInformation (object instance, string description);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(object instance, string description) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.ComponentInformation.#ctor(System.Object,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (instance As Object, description As String)" />
+      <MemberSignature Language="F#" Value="new System.Device.ComponentInformation : obj * string -&gt; System.Device.ComponentInformation" Usage="new System.Device.ComponentInformation (instance, description)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="instance" Type="System.Object" />
+        <Parameter Name="description" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="instance">The instance this information belongs to</param>
+        <param name="description">An user-readable name for the object</param>
+        <summary>
+            Create a new instance of <see cref="T:System.Device.ComponentInformation" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="&lt;Clone&gt;$">
+      <MemberSignature Language="C#" Value="public virtual System.Device.ComponentInformation &lt;Clone&gt;$ ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Device.ComponentInformation &lt;Clone&gt;$() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.ComponentInformation.&lt;Clone&gt;$" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function &lt;Clone&gt;$ () As ComponentInformation" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.ComponentInformation</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AddSubComponent">
+      <MemberSignature Language="C#" Value="public virtual void AddSubComponent (System.Device.ComponentInformation subComponent);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void AddSubComponent(class System.Device.ComponentInformation subComponent) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.ComponentInformation.AddSubComponent(System.Device.ComponentInformation)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub AddSubComponent (subComponent As ComponentInformation)" />
+      <MemberSignature Language="F#" Value="abstract member AddSubComponent : System.Device.ComponentInformation -&gt; unit&#xA;override this.AddSubComponent : System.Device.ComponentInformation -&gt; unit" Usage="componentInformation.AddSubComponent subComponent" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="subComponent" Type="System.Device.ComponentInformation" />
+      </Parameters>
+      <Docs>
+        <param name="subComponent">Component to add</param>
+        <summary>
+            Adds another component as subcomponent of this one
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">The component to add is null.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Description">
+      <MemberSignature Language="C#" Value="public string Description { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Description" />
+      <MemberSignature Language="DocId" Value="P:System.Device.ComponentInformation.Description" />
+      <MemberSignature Language="VB.NET" Value="Public Property Description As String" />
+      <MemberSignature Language="F#" Value="member this.Description : string with get, set" Usage="System.Device.ComponentInformation.Description" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The user-friendly name of the object
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EqualityContract">
+      <MemberSignature Language="C#" Value="protected virtual Type EqualityContract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EqualityContract" />
+      <MemberSignature Language="DocId" Value="P:System.Device.ComponentInformation.EqualityContract" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property EqualityContract As Type" />
+      <MemberSignature Language="F#" Value="member this.EqualityContract : Type" Usage="System.Device.ComponentInformation.EqualityContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public virtual bool Equals (System.Device.ComponentInformation? other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class System.Device.ComponentInformation other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.ComponentInformation.Equals(System.Device.ComponentInformation)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Equals (other As ComponentInformation) As Boolean" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="System.Device.ComponentInformation" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.ComponentInformation.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.ComponentInformation.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Instance">
+      <MemberSignature Language="C#" Value="protected object Instance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance object Instance" />
+      <MemberSignature Language="DocId" Value="P:System.Device.ComponentInformation.Instance" />
+      <MemberSignature Language="VB.NET" Value="Protected ReadOnly Property Instance As Object" />
+      <MemberSignature Language="F#" Value="member this.Instance : obj" Usage="System.Device.ComponentInformation.Instance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Object</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The actual instance represented.
+            This should only be used for querying information, not for operations on the object.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Name">
+      <MemberSignature Language="C#" Value="public string Name { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Name" />
+      <MemberSignature Language="DocId" Value="P:System.Device.ComponentInformation.Name" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Name As String" />
+      <MemberSignature Language="F#" Value="member this.Name : string" Usage="System.Device.ComponentInformation.Name" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The name of the type this instance represents.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (System.Device.ComponentInformation? left, System.Device.ComponentInformation? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class System.Device.ComponentInformation left, class System.Device.ComponentInformation right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.ComponentInformation.op_Equality(System.Device.ComponentInformation,System.Device.ComponentInformation)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As ComponentInformation, right As ComponentInformation) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Device.ComponentInformation" />
+        <Parameter Name="right" Type="System.Device.ComponentInformation" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (System.Device.ComponentInformation? left, System.Device.ComponentInformation? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class System.Device.ComponentInformation left, class System.Device.ComponentInformation right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.ComponentInformation.op_Inequality(System.Device.ComponentInformation,System.Device.ComponentInformation)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As ComponentInformation, right As ComponentInformation) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="System.Device.ComponentInformation" />
+        <Parameter Name="right" Type="System.Device.ComponentInformation" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintMembers">
+      <MemberSignature Language="C#" Value="protected virtual bool PrintMembers (System.Text.StringBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool PrintMembers(class System.Text.StringBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.ComponentInformation.PrintMembers(System.Text.StringBuilder)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function PrintMembers (builder As StringBuilder) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="System.Text.StringBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="builder">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Properties">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IDictionary&lt;string,string&gt; Properties { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IDictionary`2&lt;string, string&gt; Properties" />
+      <MemberSignature Language="DocId" Value="P:System.Device.ComponentInformation.Properties" />
+      <MemberSignature Language="VB.NET" Value="Public Property Properties As IDictionary(Of String, String)" />
+      <MemberSignature Language="F#" Value="member this.Properties : System.Collections.Generic.IDictionary&lt;string, string&gt; with get, set" Usage="System.Device.ComponentInformation.Properties" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IDictionary&lt;System.String,System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            A list of additional properties that belong to this object.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubComponents">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IReadOnlyList&lt;System.Device.ComponentInformation&gt; SubComponents { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Collections.Generic.IReadOnlyList`1&lt;class System.Device.ComponentInformation&gt; SubComponents" />
+      <MemberSignature Language="DocId" Value="P:System.Device.ComponentInformation.SubComponents" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property SubComponents As IReadOnlyList(Of ComponentInformation)" />
+      <MemberSignature Language="F#" Value="member this.SubComponents : System.Collections.Generic.IReadOnlyList&lt;System.Device.ComponentInformation&gt;" Usage="System.Device.ComponentInformation.SubComponents" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IReadOnlyList&lt;System.Device.ComponentInformation&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The list of subcomponents.
+            </summary>
+        <value>To be added.</value>
+        <remarks>
+            Note to implementors: Be careful not to generate cycles in the tree!
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SubComponentsToString">
+      <MemberSignature Language="C#" Value="protected virtual void SubComponentsToString (System.Text.StringBuilder output, int ident);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void SubComponentsToString(class System.Text.StringBuilder output, int32 ident) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.ComponentInformation.SubComponentsToString(System.Text.StringBuilder,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub SubComponentsToString (output As StringBuilder, ident As Integer)" />
+      <MemberSignature Language="F#" Value="abstract member SubComponentsToString : System.Text.StringBuilder * int -&gt; unit&#xA;override this.SubComponentsToString : System.Text.StringBuilder * int -&gt; unit" Usage="componentInformation.SubComponentsToString (output, ident)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.Text.StringBuilder" />
+        <Parameter Name="ident" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="output">The stringbuilder to extend</param>
+        <param name="ident">The level of current ident</param>
+        <summary>
+            Provides the string representation of all sub-components
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.ComponentInformation.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="componentInformation.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates a string representation of this object.
+            </summary>
+        <returns>A multi-line string in form of a tree.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

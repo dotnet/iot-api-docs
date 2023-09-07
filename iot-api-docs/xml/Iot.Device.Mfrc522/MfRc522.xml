@@ -12,6 +12,7 @@
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Iot.Device.Card.CardTransceiver</BaseTypeName>
@@ -43,6 +44,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
@@ -76,6 +78,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" />
@@ -109,6 +112,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="serialPort" Type="System.IO.Ports.SerialPort" />
@@ -143,6 +147,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="serialPort" Type="System.String" />
@@ -176,6 +181,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Spi.SpiMode</ReturnType>
@@ -206,6 +212,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -232,6 +239,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -259,6 +267,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Mfrc522.Gain</ReturnType>
@@ -286,6 +295,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -319,10 +329,38 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="atqa" Type="System.Byte[]" />
+        <Parameter Name="atqa" Type="System.Byte[]" Index="0" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="atqa">ATQA buffer must be 2 bytes length and will contain the ATQA answer if there is a card.</param>
+        <summary>
+            Check if a new card is present.
+            </summary>
+        <returns>true if there is a card, else false.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsCardPresent">
+      <MemberSignature Language="C#" Value="public bool IsCardPresent (byte[] atqa, bool reselect = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool IsCardPresent(unsigned int8[] atqa, bool reselect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mfrc522.MfRc522.IsCardPresent(System.Byte[],System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IsCardPresent (atqa As Byte(), Optional reselect As Boolean = false) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsCardPresent : byte[] * bool -&gt; bool" Usage="mfRc522.IsCardPresent (atqa, reselect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="atqa" Type="System.Byte[]" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="reselect" Type="System.Boolean" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="atqa">ATQA buffer must be 2 bytes length and will contain the ATQA answer if there is a card.</param>
+        <param name="reselect">true if this is reselecting an existing card (e.g., after a halt)</param>
         <summary>
             Check if a new card is present.
             </summary>
@@ -345,6 +383,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -363,6 +402,27 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="MaximumReadSize">
+      <MemberSignature Language="C#" Value="public override uint MaximumReadSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 MaximumReadSize" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mfrc522.MfRc522.MaximumReadSize" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property MaximumReadSize As UInteger" />
+      <MemberSignature Language="F#" Value="member this.MaximumReadSize : uint32" Usage="Iot.Device.Mfrc522.MfRc522.MaximumReadSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
     <Member MemberName="MaximumSpiClockFrequency">
       <MemberSignature Language="C#" Value="public const int MaximumSpiClockFrequency = 10000000;" />
       <MemberSignature Language="ILAsm" Value=".field public static literal int32 MaximumSpiClockFrequency = (10000000)" />
@@ -378,6 +438,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -388,6 +449,27 @@
             The maximum speed for SPI transfer speed
             </summary>
         <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumWriteSize">
+      <MemberSignature Language="C#" Value="public override uint MaximumWriteSize { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int32 MaximumWriteSize" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Mfrc522.MfRc522.MaximumWriteSize" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property MaximumWriteSize As UInteger" />
+      <MemberSignature Language="F#" Value="member this.MaximumWriteSize : uint32" Usage="Iot.Device.Mfrc522.MfRc522.MaximumWriteSize" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="MifareAuthenticate">
@@ -405,6 +487,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Mfrc522.Status</ReturnType>
@@ -442,6 +525,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -469,6 +553,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -499,6 +584,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Mfrc522.Status</ReturnType>
@@ -536,6 +622,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Mfrc522.SerialSpeed</ReturnType>
@@ -564,6 +651,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -576,6 +664,28 @@
             terminates when finished.
             </summary>
         <remarks>The SerialSpeedReg register is reset and therefore the serial data rate is set to 9600 baud.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SupportedProtocols">
+      <MemberSignature Language="C#" Value="public const Iot.Device.Card.NfcProtocol SupportedProtocols = 5;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Card.NfcProtocol SupportedProtocols = (5)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Mfrc522.MfRc522.SupportedProtocols" />
+      <MemberSignature Language="VB.NET" Value="Public Const SupportedProtocols As NfcProtocol  = 5" />
+      <MemberSignature Language="F#" Value="val mutable SupportedProtocols : Iot.Device.Card.NfcProtocol" Usage="Iot.Device.Mfrc522.MfRc522.SupportedProtocols" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Card.NfcProtocol</ReturnType>
+      </ReturnValue>
+      <MemberValue>5</MemberValue>
+      <Docs>
+        <summary>
+            The set of NFC protocols that are supported by this transceiver.
+            </summary>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="Transceive">
@@ -598,14 +708,45 @@
         <ReturnType>System.Int32</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="targetNumber" Type="System.Byte" />
-        <Parameter Name="dataToSend" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
-        <Parameter Name="dataFromCard" Type="System.Span&lt;System.Byte&gt;" />
+        <Parameter Name="targetNumber" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="dataToSend" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="1" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="dataFromCard" Type="System.Span&lt;System.Byte&gt;" Index="2" FrameworkAlternate="iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="targetNumber">To be added.</param>
         <param name="dataToSend">To be added.</param>
         <param name="dataFromCard">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Transceive">
+      <MemberSignature Language="C#" Value="public override int Transceive (byte targetNumber, ReadOnlySpan&lt;byte&gt; dataToSend, Span&lt;byte&gt; dataFromCard, Iot.Device.Card.NfcProtocol protocol);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 Transceive(unsigned int8 targetNumber, valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; dataToSend, valuetype System.Span`1&lt;unsigned int8&gt; dataFromCard, valuetype Iot.Device.Card.NfcProtocol protocol) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Mfrc522.MfRc522.Transceive(System.Byte,System.ReadOnlySpan{System.Byte},System.Span{System.Byte},Iot.Device.Card.NfcProtocol)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Transceive (targetNumber As Byte, dataToSend As ReadOnlySpan(Of Byte), dataFromCard As Span(Of Byte), protocol As NfcProtocol) As Integer" />
+      <MemberSignature Language="F#" Value="override this.Transceive : byte * ReadOnlySpan&lt;byte&gt; * Span&lt;byte&gt; * Iot.Device.Card.NfcProtocol -&gt; int" Usage="mfRc522.Transceive (targetNumber, dataToSend, dataFromCard, protocol)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="targetNumber" Type="System.Byte" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="dataToSend" Type="System.ReadOnlySpan&lt;System.Byte&gt;" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="dataFromCard" Type="System.Span&lt;System.Byte&gt;" Index="2" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="protocol" Type="Iot.Device.Card.NfcProtocol" Index="3" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="targetNumber">To be added.</param>
+        <param name="dataToSend">To be added.</param>
+        <param name="dataFromCard">To be added.</param>
+        <param name="protocol">To be added.</param>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
         <remarks>To be added.</remarks>
@@ -627,6 +768,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Version</ReturnType>

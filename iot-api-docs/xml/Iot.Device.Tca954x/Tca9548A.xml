@@ -1,0 +1,550 @@
+<Type Name="Tca9548A" FullName="Iot.Device.Tca954x.Tca9548A">
+  <TypeSignature Language="C#" Value="public class Tca9548A : IDisposable, System.Collections.Generic.ICollection&lt;System.Device.I2c.I2cBus&gt;, System.Collections.Generic.IEnumerable&lt;System.Device.I2c.I2cBus&gt;, System.Collections.Generic.IList&lt;System.Device.I2c.I2cBus&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Tca9548A extends System.Object implements class System.Collections.Generic.ICollection`1&lt;class System.Device.I2c.I2cBus&gt;, class System.Collections.Generic.IEnumerable`1&lt;class System.Device.I2c.I2cBus&gt;, class System.Collections.Generic.IList`1&lt;class System.Device.I2c.I2cBus&gt;, class System.Collections.IEnumerable, class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Tca954x.Tca9548A" />
+  <TypeSignature Language="VB.NET" Value="Public Class Tca9548A&#xA;Implements ICollection(Of I2cBus), IDisposable, IEnumerable(Of I2cBus), IList(Of I2cBus)" />
+  <TypeSignature Language="F#" Value="type Tca9548A = class&#xA;    interface IList&lt;I2cBus&gt;&#xA;    interface ICollection&lt;I2cBus&gt;&#xA;    interface seq&lt;I2cBus&gt;&#xA;    interface IEnumerable&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;System.Device.I2c.I2cBus&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.ICollection&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;System.Device.I2c.I2cBus&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IEnumerable&lt;T&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.Generic.IList&lt;System.Device.I2c.I2cBus&gt;</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.Collections.IEnumerable</InterfaceName>
+    </Interface>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Device.Model.Interface("Tca9548A - 8-Channel I2C Switch/Multiplexer")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Device.Model.Interface("Tca9548A - 8-Channel I2C Switch/Multiplexer")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            Tca9548A - 8-Channel I2C Switch/Multiplexer
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Tca9548A (System.Device.I2c.I2cDevice i2cDevice, System.Device.I2c.I2cBus mainBus, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, class System.Device.I2c.I2cBus mainBus, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tca954x.Tca9548A.#ctor(System.Device.I2c.I2cDevice,System.Device.I2c.I2cBus,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, mainBus As I2cBus, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Tca954x.Tca9548A : System.Device.I2c.I2cDevice * System.Device.I2c.I2cBus * bool -&gt; Iot.Device.Tca954x.Tca9548A" Usage="new Iot.Device.Tca954x.Tca9548A (i2cDevice, mainBus, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="mainBus" Type="System.Device.I2c.I2cBus" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C Device of the Mux itself</param>
+        <param name="mainBus">The bus the mux is connected to</param>
+        <param name="shouldDispose">true to dispose the I2C device at dispose</param>
+        <summary>
+            Creates a Multiplexer Instance
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">Exception thrown if I2C device is null</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Add">
+      <MemberSignature Language="C#" Value="public void Add (System.Device.I2c.I2cBus item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Add(class System.Device.I2c.I2cBus item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tca954x.Tca9548A.Add(System.Device.I2c.I2cBus)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Add (item As I2cBus)" />
+      <MemberSignature Language="F#" Value="abstract member Add : System.Device.I2c.I2cBus -&gt; unit&#xA;override this.Add : System.Device.I2c.I2cBus -&gt; unit" Usage="tca9548A.Add item" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.Add(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Device.I2c.I2cBus" />
+      </Parameters>
+      <Docs>
+        <param name="item">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Clear">
+      <MemberSignature Language="C#" Value="public void Clear ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Clear() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tca954x.Tca9548A.Clear" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Clear ()" />
+      <MemberSignature Language="F#" Value="abstract member Clear : unit -&gt; unit&#xA;override this.Clear : unit -&gt; unit" Usage="tca9548A.Clear " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.Clear</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Contains">
+      <MemberSignature Language="C#" Value="public bool Contains (System.Device.I2c.I2cBus item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Contains(class System.Device.I2c.I2cBus item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tca954x.Tca9548A.Contains(System.Device.I2c.I2cBus)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Contains (item As I2cBus) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member Contains : System.Device.I2c.I2cBus -&gt; bool&#xA;override this.Contains : System.Device.I2c.I2cBus -&gt; bool" Usage="tca9548A.Contains item" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.Contains(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Device.I2c.I2cBus" />
+      </Parameters>
+      <Docs>
+        <param name="item">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="CopyTo">
+      <MemberSignature Language="C#" Value="public void CopyTo (System.Device.I2c.I2cBus[] array, int arrayIndex);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void CopyTo(class System.Device.I2c.I2cBus[] array, int32 arrayIndex) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tca954x.Tca9548A.CopyTo(System.Device.I2c.I2cBus[],System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CopyTo (array As I2cBus(), arrayIndex As Integer)" />
+      <MemberSignature Language="F#" Value="abstract member CopyTo : System.Device.I2c.I2cBus[] * int -&gt; unit&#xA;override this.CopyTo : System.Device.I2c.I2cBus[] * int -&gt; unit" Usage="tca9548A.CopyTo (array, arrayIndex)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.CopyTo(`0[],System.Int32)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="array" Type="System.Device.I2c.I2cBus[]" />
+        <Parameter Name="arrayIndex" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="array">To be added.</param>
+        <param name="arrayIndex">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Count">
+      <MemberSignature Language="C#" Value="public int Count { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Count" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Tca954x.Tca9548A.Count" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Count As Integer" />
+      <MemberSignature Language="F#" Value="member this.Count : int" Usage="Iot.Device.Tca954x.Tca9548A.Count" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.Generic.ICollection`1.Count</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const byte DefaultI2cAddress = 112;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal unsigned int8 DefaultI2cAddress = (112)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Tca954x.Tca9548A.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Byte  = 112" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : byte" Usage="Iot.Device.Tca954x.Tca9548A.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <MemberValue>112</MemberValue>
+      <Docs>
+        <summary>
+            The default I2C Address, page 15 of the main documentation
+            https://www.ti.com/lit/ds/symlink/tca9548a.pdf
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tca954x.Tca9548A.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="tca9548A.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetEnumerator">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.IEnumerator&lt;System.Device.I2c.I2cBus&gt; GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class System.Collections.Generic.IEnumerator`1&lt;class System.Device.I2c.I2cBus&gt; GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tca954x.Tca9548A.GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetEnumerator () As IEnumerator(Of I2cBus)" />
+      <MemberSignature Language="F#" Value="abstract member GetEnumerator : unit -&gt; System.Collections.Generic.IEnumerator&lt;System.Device.I2c.I2cBus&gt;&#xA;override this.GetEnumerator : unit -&gt; System.Collections.Generic.IEnumerator&lt;System.Device.I2c.I2cBus&gt;" Usage="tca9548A.GetEnumerator " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IEnumerable`1.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Device.I2c.I2cBus&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="IndexOf">
+      <MemberSignature Language="C#" Value="public int IndexOf (System.Device.I2c.I2cBus item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 IndexOf(class System.Device.I2c.I2cBus item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tca954x.Tca9548A.IndexOf(System.Device.I2c.I2cBus)" />
+      <MemberSignature Language="VB.NET" Value="Public Function IndexOf (item As I2cBus) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member IndexOf : System.Device.I2c.I2cBus -&gt; int&#xA;override this.IndexOf : System.Device.I2c.I2cBus -&gt; int" Usage="tca9548A.IndexOf item" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IList`1.IndexOf(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Device.I2c.I2cBus" />
+      </Parameters>
+      <Docs>
+        <param name="item">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Insert">
+      <MemberSignature Language="C#" Value="public void Insert (int index, System.Device.I2c.I2cBus item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Insert(int32 index, class System.Device.I2c.I2cBus item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tca954x.Tca9548A.Insert(System.Int32,System.Device.I2c.I2cBus)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Insert (index As Integer, item As I2cBus)" />
+      <MemberSignature Language="F#" Value="abstract member Insert : int * System.Device.I2c.I2cBus -&gt; unit&#xA;override this.Insert : int * System.Device.I2c.I2cBus -&gt; unit" Usage="tca9548A.Insert (index, item)" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IList`1.Insert(System.Int32,`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+        <Parameter Name="item" Type="System.Device.I2c.I2cBus" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <param name="item">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="IsReadOnly">
+      <MemberSignature Language="C#" Value="public bool IsReadOnly { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsReadOnly" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Tca954x.Tca9548A.IsReadOnly" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsReadOnly As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsReadOnly : bool" Usage="Iot.Device.Tca954x.Tca9548A.IsReadOnly" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.Generic.ICollection`1.IsReadOnly</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public System.Device.I2c.I2cBus this[int index] { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Device.I2c.I2cBus Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Tca954x.Tca9548A.Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public ReadOnly Property Item(index As Integer) As I2cBus" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : System.Device.I2c.I2cBus" Usage="Iot.Device.Tca954x.Tca9548A.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.I2c.I2cBus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">channel number</param>
+        <summary>
+            Gets Channel busses of the multiplexer
+            </summary>
+        <value />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public bool Remove (System.Device.I2c.I2cBus item);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Remove(class System.Device.I2c.I2cBus item) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tca954x.Tca9548A.Remove(System.Device.I2c.I2cBus)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Remove (item As I2cBus) As Boolean" />
+      <MemberSignature Language="F#" Value="abstract member Remove : System.Device.I2c.I2cBus -&gt; bool&#xA;override this.Remove : System.Device.I2c.I2cBus -&gt; bool" Usage="tca9548A.Remove item" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.ICollection`1.Remove(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="item" Type="System.Device.I2c.I2cBus" />
+      </Parameters>
+      <Docs>
+        <param name="item">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="RemoveAt">
+      <MemberSignature Language="C#" Value="public void RemoveAt (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void RemoveAt(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tca954x.Tca9548A.RemoveAt(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RemoveAt (index As Integer)" />
+      <MemberSignature Language="F#" Value="abstract member RemoveAt : int -&gt; unit&#xA;override this.RemoveAt : int -&gt; unit" Usage="tca9548A.RemoveAt index" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.Generic.IList`1.RemoveAt(System.Int32)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="SelectChannel">
+      <MemberSignature Language="C#" Value="public void SelectChannel (Iot.Device.Tca954x.MultiplexerChannel multiplexChannels);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SelectChannel(valuetype Iot.Device.Tca954x.MultiplexerChannel multiplexChannels) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tca954x.Tca9548A.SelectChannel(Iot.Device.Tca954x.MultiplexerChannel)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SelectChannel (multiplexChannels As MultiplexerChannel)" />
+      <MemberSignature Language="F#" Value="member this.SelectChannel : Iot.Device.Tca954x.MultiplexerChannel -&gt; unit" Usage="tca9548A.SelectChannel multiplexChannels" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="multiplexChannels" Type="Iot.Device.Tca954x.MultiplexerChannel" />
+      </Parameters>
+      <Docs>
+        <param name="multiplexChannels">The channels to select</param>
+        <summary>
+            Select a group of multiplexer channels.
+            </summary>
+        <remarks>
+            In most cases, a single channel will be selected at a time, but it is possible to write to several channels at once. Reading
+            from multiple channels at once will result in undefined behavior.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.Generic.IList&lt;System.Device.I2c.I2cBus&gt;.Item">
+      <MemberSignature Language="C#" Value="System.Device.I2c.I2cBus System.Collections.Generic.IList&lt;System.Device.I2c.I2cBus&gt;.Item[int index] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Device.I2c.I2cBus System.Collections.Generic.IList&lt;System.Device.I2c.I2cBus&gt;.Item(int32)" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Tca954x.Tca9548A.System#Collections#Generic#IList&lt;System#Device#I2c#I2cBus&gt;#Item(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value=" Property Item(index As Integer) As I2cBus Implements IList(Of I2cBus).Item" />
+      <MemberSignature Language="F#" Value="member this.System.Collections.Generic.IList&lt;System.Device.I2c.I2cBus&gt;.Item(int) : System.Device.I2c.I2cBus with get, set" Usage="System.Collections.Generic.IList&lt;System.Device.I2c.I2cBus&gt;.Item" />
+      <MemberType>Property</MemberType>
+      <Implements>
+        <InterfaceMember>P:System.Collections.Generic.IList`1.Item(System.Int32)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.I2c.I2cBus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">To be added.</param>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="System.Collections.IEnumerable.GetEnumerator">
+      <MemberSignature Language="C#" Value="System.Collections.IEnumerator IEnumerable.GetEnumerator ();" />
+      <MemberSignature Language="ILAsm" Value=".method hidebysig newslot virtual instance class System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tca954x.Tca9548A.System#Collections#IEnumerable#GetEnumerator" />
+      <MemberSignature Language="VB.NET" Value="Function GetEnumerator () As IEnumerator Implements IEnumerable.GetEnumerator" />
+      <MemberSignature Language="F#" Value="abstract member System.Collections.IEnumerable.GetEnumerator : unit -&gt; System.Collections.IEnumerator&#xA;override this.System.Collections.IEnumerable.GetEnumerator : unit -&gt; System.Collections.IEnumerator" Usage="tca9548A.System.Collections.IEnumerable.GetEnumerator " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.Collections.IEnumerable.GetEnumerator</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.IEnumerator</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetSelectedChannel">
+      <MemberSignature Language="C#" Value="public bool TryGetSelectedChannel (out Iot.Device.Tca954x.MultiplexerChannel selectedChannel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetSelectedChannel([out] valuetype Iot.Device.Tca954x.MultiplexerChannel&amp; selectedChannel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tca954x.Tca9548A.TryGetSelectedChannel(Iot.Device.Tca954x.MultiplexerChannel@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetSelectedChannel (ByRef selectedChannel As MultiplexerChannel) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetSelectedChannel : MultiplexerChannel -&gt; bool" Usage="tca9548A.TryGetSelectedChannel selectedChannel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="selectedChannel" Type="Iot.Device.Tca954x.MultiplexerChannel" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="selectedChannel"> selected Multiplexer Channel</param>
+        <summary>
+            Try getting the selected channel on Multiplexer
+            </summary>
+        <returns> true if able to retrieve selected channel</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

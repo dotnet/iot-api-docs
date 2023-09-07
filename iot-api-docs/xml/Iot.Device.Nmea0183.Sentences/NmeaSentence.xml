@@ -8,6 +8,7 @@
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -37,6 +38,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="talker" Type="Iot.Device.Nmea0183.TalkerId" />
@@ -64,6 +66,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -76,17 +79,46 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="AgeTo">
+      <MemberSignature Language="C#" Value="public TimeSpan AgeTo (DateTimeOffset now);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.TimeSpan AgeTo(valuetype System.DateTimeOffset now) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.NmeaSentence.AgeTo(System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Function AgeTo (now As DateTimeOffset) As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.AgeTo : DateTimeOffset -&gt; TimeSpan" Usage="nmeaSentence.AgeTo now" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="now" Type="System.DateTimeOffset" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="now">Time to compare against</param>
+        <summary>
+            The relative age of this sentence against a time stamp.
+            Useful when analyzing recorded data, where "now" should also be a time in the past.
+            </summary>
+        <returns>The time difference</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="DateTime">
-      <MemberSignature Language="C#" Value="public DateTimeOffset DateTime { get; protected set; }" />
+      <MemberSignature Language="C#" Value="public DateTimeOffset DateTime { get; protected set; }" FrameworkAlternate="iot-dotnet-2.1" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype System.DateTimeOffset DateTime" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.NmeaSentence.DateTime" />
       <MemberSignature Language="VB.NET" Value="Public Property DateTime As DateTimeOffset" />
       <MemberSignature Language="F#" Value="member this.DateTime : DateTimeOffset with get, set" Usage="Iot.Device.Nmea0183.Sentences.NmeaSentence.DateTime" />
+      <MemberSignature Language="C#" Value="public DateTimeOffset DateTime { get; set; }" FrameworkAlternate="iot-dotnet-latest" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -110,6 +142,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.TalkerId</ReturnType>
@@ -132,6 +165,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Globalization.Calendar</ReturnType>
@@ -154,6 +188,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.TalkerId</ReturnType>
@@ -177,6 +212,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -206,6 +242,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.DateTimeOffset</ReturnType>
@@ -235,6 +272,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Char&gt;</ReturnType>
@@ -262,6 +300,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
@@ -289,6 +328,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -316,6 +356,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;System.Double&gt;</ReturnType>
@@ -343,6 +384,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -367,6 +409,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
@@ -380,16 +423,20 @@
       </Docs>
     </Member>
     <Member MemberName="TalkerId">
-      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.TalkerId TalkerId { get; }" />
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.TalkerId TalkerId { get; }" FrameworkAlternate="iot-dotnet-2.1" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nmea0183.TalkerId TalkerId" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.NmeaSentence.TalkerId" />
-      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TalkerId As TalkerId" />
-      <MemberSignature Language="F#" Value="member this.TalkerId : Iot.Device.Nmea0183.TalkerId" Usage="Iot.Device.Nmea0183.Sentences.NmeaSentence.TalkerId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TalkerId As TalkerId" FrameworkAlternate="iot-dotnet-2.1" />
+      <MemberSignature Language="F#" Value="member this.TalkerId : Iot.Device.Nmea0183.TalkerId" Usage="Iot.Device.Nmea0183.Sentences.NmeaSentence.TalkerId" FrameworkAlternate="iot-dotnet-2.1" />
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.TalkerId TalkerId { get; init; }" FrameworkAlternate="iot-dotnet-latest" />
+      <MemberSignature Language="VB.NET" Value="Public Property TalkerId As TalkerId" FrameworkAlternate="iot-dotnet-latest" />
+      <MemberSignature Language="F#" Value="member this.TalkerId : Iot.Device.Nmea0183.TalkerId with get, set" Usage="Iot.Device.Nmea0183.Sentences.NmeaSentence.TalkerId" FrameworkAlternate="iot-dotnet-latest" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.TalkerId</ReturnType>
@@ -413,6 +460,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -437,6 +485,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -462,6 +511,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -486,6 +536,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -513,6 +564,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>

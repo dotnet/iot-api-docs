@@ -1,0 +1,394 @@
+<Type Name="Is31fl3731" FullName="Iot.Device.Display.Is31fl3731">
+  <TypeSignature Language="C#" Value="public abstract class Is31fl3731" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Is31fl3731 extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Display.Is31fl3731" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Is31fl3731" />
+  <TypeSignature Language="F#" Value="type Is31fl3731 = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents an IS31FL3731 LED Matrix driver
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Is31fl3731 (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3731.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Display.Is31fl3731 : System.Device.I2c.I2cDevice -&gt; Iot.Device.Display.Is31fl3731" Usage="new Iot.Device.Display.Is31fl3731 i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The <see cref="T:System.Device.I2c.I2cDevice" /> to create with.</param>
+        <summary>
+            Initialize IS31FL3731 device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Is31fl3731 (System.Device.I2c.I2cDevice i2cDevice, int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3731.#ctor(System.Device.I2c.I2cDevice,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, width As Integer, height As Integer)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Display.Is31fl3731 : System.Device.I2c.I2cDevice * int * int -&gt; Iot.Device.Display.Is31fl3731" Usage="new Iot.Device.Display.Is31fl3731 (i2cDevice, width, height)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The <see cref="T:System.Device.I2c.I2cDevice" /> to create with.</param>
+        <param name="width">The width of the LED matrix.</param>
+        <param name="height">The height of the LED matrix.</param>
+        <summary>
+            Initialize IS31FL3731 device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public static readonly int DefaultI2cAddress;" />
+      <MemberSignature Language="ILAsm" Value=".field public static initonly int32 DefaultI2cAddress" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Display.Is31fl3731.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly DefaultI2cAddress As Integer " />
+      <MemberSignature Language="F#" Value=" staticval mutable DefaultI2cAddress : int" Usage="Iot.Device.Display.Is31fl3731.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Default I2C address for device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableAllLeds">
+      <MemberSignature Language="C#" Value="public void DisableAllLeds (byte page = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DisableAllLeds(unsigned int8 page) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3731.DisableAllLeds(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DisableAllLeds (Optional page As Byte = 0)" />
+      <MemberSignature Language="F#" Value="member this.DisableAllLeds : byte -&gt; unit" Usage="is31fl3731.DisableAllLeds page" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="page" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="page">To be added.</param>
+        <summary>
+            Disable all LEDs.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableAllLeds">
+      <MemberSignature Language="C#" Value="public void EnableAllLeds (byte page = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnableAllLeds(unsigned int8 page) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3731.EnableAllLeds(System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EnableAllLeds (Optional page As Byte = 0)" />
+      <MemberSignature Language="F#" Value="member this.EnableAllLeds : byte -&gt; unit" Usage="is31fl3731.EnableAllLeds page" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="page" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="page">To be added.</param>
+        <summary>
+            Enable all LEDs.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="public void Fill (byte brightness = 128, byte page = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Fill(unsigned int8 brightness, unsigned int8 page) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3731.Fill(System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Fill (Optional brightness As Byte = 128, Optional page As Byte = 0)" />
+      <MemberSignature Language="F#" Value="member this.Fill : byte * byte -&gt; unit" Usage="is31fl3731.Fill (brightness, page)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="brightness" Type="System.Byte" />
+        <Parameter Name="page" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="brightness">To be added.</param>
+        <param name="page">To be added.</param>
+        <summary>
+            Fill all LEDs.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetLedAddress">
+      <MemberSignature Language="C#" Value="public abstract int GetLedAddress (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance int32 GetLedAddress(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3731.GetLedAddress(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Function GetLedAddress (x As Integer, y As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="abstract member GetLedAddress : int * int -&gt; int" Usage="is31fl3731.GetLedAddress (x, y)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Specifies the x value.</param>
+        <param name="y">Specifies the y value.</param>
+        <summary>
+            Gets the hardware location for the pixel.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Height">
+      <MemberSignature Language="C#" Value="public readonly int Height;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly int32 Height" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Display.Is31fl3731.Height" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Height As Integer " />
+      <MemberSignature Language="F#" Value="val mutable Height : int" Usage="Iot.Device.Display.Is31fl3731.Height" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Height of LED matrix (y axis).
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public void Initialize ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Initialize() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3731.Initialize" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Initialize ()" />
+      <MemberSignature Language="F#" Value="member this.Initialize : unit -&gt; unit" Usage="is31fl3731.Initialize " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Initialize LED driver.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Item">
+      <MemberSignature Language="C#" Value="public int this[int x, int y] { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Item(int32, int32)" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Display.Is31fl3731.Item(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Default Public Property Item(x As Integer, y As Integer) As Integer" />
+      <MemberSignature Language="F#" Value="member this.Item(int * int) : int with get, set" Usage="Iot.Device.Display.Is31fl3731.Item" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <param name="y">To be added.</param>
+        <summary>
+            Indexer for updating matrix, with PWM register.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3731.Reset" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Reset ()" />
+      <MemberSignature Language="F#" Value="member this.Reset : unit -&gt; unit" Usage="is31fl3731.Reset " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reset device.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetBlinkingRate">
+      <MemberSignature Language="C#" Value="public void SetBlinkingRate (int rate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetBlinkingRate(int32 rate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3731.SetBlinkingRate(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetBlinkingRate (rate As Integer)" />
+      <MemberSignature Language="F#" Value="member this.SetBlinkingRate : int -&gt; unit" Usage="is31fl3731.SetBlinkingRate rate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rate" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rate">Set the blinking rate.</param>
+        <summary>
+            Enable blinking at given rate.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Shutdown">
+      <MemberSignature Language="C#" Value="public void Shutdown (bool shutdown = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Shutdown(bool shutdown) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3731.Shutdown(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Shutdown (Optional shutdown As Boolean = true)" />
+      <MemberSignature Language="F#" Value="member this.Shutdown : bool -&gt; unit" Usage="is31fl3731.Shutdown shutdown" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="shutdown" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="shutdown">Set the showdown mode. `true` sets device into shutdown mode. `false` sets device into normal operation.</param>
+        <summary>
+            Set the shutdown mode.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Width">
+      <MemberSignature Language="C#" Value="public readonly int Width;" />
+      <MemberSignature Language="ILAsm" Value=".field public initonly int32 Width" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Display.Is31fl3731.Width" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Width As Integer " />
+      <MemberSignature Language="F#" Value="val mutable Width : int" Usage="Iot.Device.Display.Is31fl3731.Width" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Width of LED matrix (x axis).
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WritePixel">
+      <MemberSignature Language="C#" Value="public void WritePixel (int x, int y, int brightness, bool enable, bool blink);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void WritePixel(int32 x, int32 y, int32 brightness, bool enable, bool blink) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.Is31fl3731.WritePixel(System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub WritePixel (x As Integer, y As Integer, brightness As Integer, enable As Boolean, blink As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.WritePixel : int * int * int * bool * bool -&gt; unit" Usage="is31fl3731.WritePixel (x, y, brightness, enable, blink)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="brightness" Type="System.Int32" />
+        <Parameter Name="enable" Type="System.Boolean" />
+        <Parameter Name="blink" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="x">To be added.</param>
+        <param name="y">To be added.</param>
+        <param name="brightness">To be added.</param>
+        <param name="enable">To be added.</param>
+        <param name="blink">To be added.</param>
+        <summary>
+            Set value for LED.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -9,6 +9,7 @@
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Iot.Device.Button.ButtonBase</BaseTypeName>
@@ -36,15 +37,47 @@
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="buttonPin" Type="System.Int32" />
-        <Parameter Name="gpio" Type="System.Device.Gpio.GpioController" />
-        <Parameter Name="shouldDispose" Type="System.Boolean" />
-        <Parameter Name="pinMode" Type="System.Device.Gpio.PinMode" />
-        <Parameter Name="debounceTime" Type="System.TimeSpan" />
+        <Parameter Name="buttonPin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="gpio" Type="System.Device.Gpio.GpioController" Index="1" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="2" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="pinMode" Type="System.Device.Gpio.PinMode" Index="3" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="debounceTime" Type="System.TimeSpan" Index="4" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="buttonPin">GPIO pin of the button.</param>
         <param name="pinMode">Pin mode of the system.</param>
+        <param name="gpio">Gpio Controller.</param>
+        <param name="shouldDispose">True to dispose the GpioController.</param>
+        <param name="debounceTime">The amount of time during which the transitions are ignored, or zero</param>
+        <summary>
+            Initialization of the button.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GpioButton (int buttonPin, bool isPullUp = true, bool hasExternalResistor = false, System.Device.Gpio.GpioController? gpio = default, bool shouldDispose = true, TimeSpan debounceTime = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 buttonPin, bool isPullUp, bool hasExternalResistor, class System.Device.Gpio.GpioController gpio, bool shouldDispose, valuetype System.TimeSpan debounceTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Button.GpioButton.#ctor(System.Int32,System.Boolean,System.Boolean,System.Device.Gpio.GpioController,System.Boolean,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (buttonPin As Integer, Optional isPullUp As Boolean = true, Optional hasExternalResistor As Boolean = false, Optional gpio As GpioController = Nothing, Optional shouldDispose As Boolean = true, Optional debounceTime As TimeSpan = Nothing)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Button.GpioButton : int * bool * bool * System.Device.Gpio.GpioController * bool * TimeSpan -&gt; Iot.Device.Button.GpioButton" Usage="new Iot.Device.Button.GpioButton (buttonPin, isPullUp, hasExternalResistor, gpio, shouldDispose, debounceTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buttonPin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="isPullUp" Type="System.Boolean" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="hasExternalResistor" Type="System.Boolean" Index="2" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="gpio" Type="System.Device.Gpio.GpioController" Index="3" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="4" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="debounceTime" Type="System.TimeSpan" Index="5" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="buttonPin">GPIO pin of the button.</param>
+        <param name="isPullUp">True if the Gpio is either pulled up in hardware or in the Gpio configuration (see <paramref name="hasExternalResistor" />. False if instead the Gpio is pulled down.</param>
+        <param name="hasExternalResistor">When False the pull resistor is configured using the Gpio PinMode.InputPullUp or PinMode.InputPullDown (if supported by the board). Otherwise the Gpio is configured as PinMode.Input.</param>
         <param name="gpio">Gpio Controller.</param>
         <param name="shouldDispose">True to dispose the GpioController.</param>
         <param name="debounceTime">The amount of time during which the transitions are ignored, or zero</param>
@@ -68,19 +101,55 @@
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="buttonPin" Type="System.Int32" />
-        <Parameter Name="doublePress" Type="System.TimeSpan" />
-        <Parameter Name="holding" Type="System.TimeSpan" />
-        <Parameter Name="gpio" Type="System.Device.Gpio.GpioController" />
-        <Parameter Name="shouldDispose" Type="System.Boolean" />
-        <Parameter Name="pinMode" Type="System.Device.Gpio.PinMode" />
-        <Parameter Name="debounceTime" Type="System.TimeSpan" />
+        <Parameter Name="buttonPin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="doublePress" Type="System.TimeSpan" Index="1" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="holding" Type="System.TimeSpan" Index="2" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="gpio" Type="System.Device.Gpio.GpioController" Index="3" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="4" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="pinMode" Type="System.Device.Gpio.PinMode" Index="5" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="debounceTime" Type="System.TimeSpan" Index="6" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="buttonPin">GPIO pin of the button.</param>
         <param name="pinMode">Pin mode of the system.</param>
         <param name="doublePress">Max ticks between button presses to count as doublepress.</param>
         <param name="holding">Min ms a button is pressed to count as holding.</param>
+        <param name="gpio">Gpio Controller.</param>
+        <param name="shouldDispose">True to dispose the GpioController.</param>
+        <param name="debounceTime">The amount of time during which the transitions are ignored, or zero</param>
+        <summary>
+            Initialization of the button.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public GpioButton (int buttonPin, TimeSpan doublePress, TimeSpan holding, bool isPullUp = true, bool hasExternalResistor = false, System.Device.Gpio.GpioController? gpio = default, bool shouldDispose = true, TimeSpan debounceTime = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 buttonPin, valuetype System.TimeSpan doublePress, valuetype System.TimeSpan holding, bool isPullUp, bool hasExternalResistor, class System.Device.Gpio.GpioController gpio, bool shouldDispose, valuetype System.TimeSpan debounceTime) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Button.GpioButton.#ctor(System.Int32,System.TimeSpan,System.TimeSpan,System.Boolean,System.Boolean,System.Device.Gpio.GpioController,System.Boolean,System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (buttonPin As Integer, doublePress As TimeSpan, holding As TimeSpan, Optional isPullUp As Boolean = true, Optional hasExternalResistor As Boolean = false, Optional gpio As GpioController = Nothing, Optional shouldDispose As Boolean = true, Optional debounceTime As TimeSpan = Nothing)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Button.GpioButton : int * TimeSpan * TimeSpan * bool * bool * System.Device.Gpio.GpioController * bool * TimeSpan -&gt; Iot.Device.Button.GpioButton" Usage="new Iot.Device.Button.GpioButton (buttonPin, doublePress, holding, isPullUp, hasExternalResistor, gpio, shouldDispose, debounceTime)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="buttonPin" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="doublePress" Type="System.TimeSpan" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="holding" Type="System.TimeSpan" Index="2" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="isPullUp" Type="System.Boolean" Index="3" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="hasExternalResistor" Type="System.Boolean" Index="4" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="gpio" Type="System.Device.Gpio.GpioController" Index="5" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" Index="6" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="debounceTime" Type="System.TimeSpan" Index="7" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="buttonPin">GPIO pin of the button.</param>
+        <param name="doublePress">Max ticks between button presses to count as doublepress.</param>
+        <param name="holding">Min ms a button is pressed to count as holding.</param>
+        <param name="isPullUp">True if the Gpio is either pulled up in hardware or in the Gpio configuration (see <paramref name="hasExternalResistor" />. False if instead the Gpio is pulled down.</param>
+        <param name="hasExternalResistor">When False the pull resistor is configured using the Gpio PinMode.InputPullUp or PinMode.InputPullDown (if supported by the board). Otherwise the Gpio is configured as PinMode.Input.</param>
         <param name="gpio">Gpio Controller.</param>
         <param name="shouldDispose">True to dispose the GpioController.</param>
         <param name="debounceTime">The amount of time during which the transitions are ignored, or zero</param>
@@ -102,6 +171,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -114,6 +184,28 @@
         <summary>
             Internal cleanup.
             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HasExternalResistor">
+      <MemberSignature Language="C#" Value="public bool HasExternalResistor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HasExternalResistor" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Button.GpioButton.HasExternalResistor" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HasExternalResistor As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HasExternalResistor : bool" Usage="Iot.Device.Button.GpioButton.HasExternalResistor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Specify whether the Gpio associated with the button has an external resistor acting as pull-up or pull-down.
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

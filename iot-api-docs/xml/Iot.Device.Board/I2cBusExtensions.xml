@@ -10,6 +10,7 @@
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -35,6 +36,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;System.Int32&gt;</ReturnType>
@@ -66,6 +68,7 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.ValueTuple&lt;System.Collections.Generic.List&lt;System.Int32&gt;,System.Int32,System.Int32&gt;</ReturnType>
@@ -77,7 +80,7 @@
         </Attributes>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="bus" Type="System.Device.I2c.I2cBus" Index="0" FrameworkAlternate="iot-dotnet-latest" RefType="this" />
+        <Parameter Name="bus" Type="System.Device.I2c.I2cBus" RefType="this" Index="0" FrameworkAlternate="iot-dotnet-latest" />
         <Parameter Name="progress" Type="System.IProgress&lt;System.Single&gt;" Index="1" FrameworkAlternate="iot-dotnet-latest" />
         <Parameter Name="lowestAddress" Type="System.Int32" Index="2" FrameworkAlternate="iot-dotnet-latest" />
         <Parameter Name="highestAddress" Type="System.Int32" Index="3" FrameworkAlternate="iot-dotnet-latest" />
@@ -105,12 +108,13 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="data" Type="System.ValueTuple&lt;System.Collections.Generic.List&lt;System.Int32&gt;,System.Int32,System.Int32&gt;" Index="0" FrameworkAlternate="iot-dotnet-latest" RefType="this">
+        <Parameter Name="data" Type="System.ValueTuple&lt;System.Collections.Generic.List&lt;System.Int32&gt;,System.Int32,System.Int32&gt;" RefType="this" Index="0" FrameworkAlternate="iot-dotnet-latest">
           <Attributes>
             <Attribute>
               <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "FoundDevices", "LowestAddress", "HighestAddress" })]</AttributeName>

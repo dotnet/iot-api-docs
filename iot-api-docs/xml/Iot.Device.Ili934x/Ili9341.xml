@@ -1,0 +1,551 @@
+<Type Name="Ili9341" FullName="Iot.Device.Ili934x.Ili9341">
+  <TypeSignature Language="C#" Value="public class Ili9341 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Ili9341 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Ili934x.Ili9341" />
+  <TypeSignature Language="VB.NET" Value="Public Class Ili9341&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Ili9341 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            The ILI9341 is a QVGA (Quarter VGA) driver integrated circuit that is used to control 240×320 VGA LCD screens.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Ili9341 (System.Device.Spi.SpiDevice spiDevice, int dataCommandPin, int resetPin, int backlightPin = -1, int spiBufferSize = 4096, System.Device.Gpio.GpioController? gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.Spi.SpiDevice spiDevice, int32 dataCommandPin, int32 resetPin, int32 backlightPin, int32 spiBufferSize, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9341.#ctor(System.Device.Spi.SpiDevice,System.Int32,System.Int32,System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (spiDevice As SpiDevice, dataCommandPin As Integer, resetPin As Integer, Optional backlightPin As Integer = -1, Optional spiBufferSize As Integer = 4096, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Ili934x.Ili9341 : System.Device.Spi.SpiDevice * int * int * int * int * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Ili934x.Ili9341" Usage="new Iot.Device.Ili934x.Ili9341 (spiDevice, dataCommandPin, resetPin, backlightPin, spiBufferSize, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" />
+        <Parameter Name="dataCommandPin" Type="System.Int32" />
+        <Parameter Name="resetPin" Type="System.Int32" />
+        <Parameter Name="backlightPin" Type="System.Int32" />
+        <Parameter Name="spiBufferSize" Type="System.Int32" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="spiDevice">The SPI device used for communication. This Spi device will be displayed along with the ILI9341 device.</param>
+        <param name="dataCommandPin">The id of the GPIO pin used to control the DC line (data/command). This pin must be provided.</param>
+        <param name="resetPin">The id of the GPIO pin used to control the /RESET line (RST). Can be -1 if not connected</param>
+        <param name="backlightPin">The pin for turning the backlight on and off, or -1 if not connected.</param>
+        <param name="spiBufferSize">The size of the SPI buffer. If data larger than the buffer is sent then it is split up into multiple transmissions. The default value is 4096.</param>
+        <param name="gpioController">The GPIO controller used for communication and controls the the <paramref name="resetPin" /> and the <paramref name="dataCommandPin" />
+            If no Gpio controller is passed in then a default one will be created and disposed when ILI9341 device is disposed.</param>
+        <param name="shouldDispose">True to dispose the Gpio Controller when done</param>
+        <summary>
+            Initializes new instance of ILI9342 device that will communicate using SPI bus.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearScreen">
+      <MemberSignature Language="C#" Value="public void ClearScreen (bool doRefresh = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearScreen(bool doRefresh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9341.ClearScreen(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ClearScreen (Optional doRefresh As Boolean = false)" />
+      <MemberSignature Language="F#" Value="member this.ClearScreen : bool -&gt; unit" Usage="ili9341.ClearScreen doRefresh" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="doRefresh" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="doRefresh">Immediately force an update of the screen. If false, only the backbuffer is cleared.</param>
+        <summary>
+            Clears the screen to black
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearScreen">
+      <MemberSignature Language="C#" Value="public void ClearScreen (System.Drawing.Color color, bool doRefresh = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearScreen(valuetype System.Drawing.Color color, bool doRefresh) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9341.ClearScreen(System.Drawing.Color,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ClearScreen (color As Color, Optional doRefresh As Boolean = false)" />
+      <MemberSignature Language="F#" Value="member this.ClearScreen : System.Drawing.Color * bool -&gt; unit" Usage="ili9341.ClearScreen (color, doRefresh)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="color" Type="System.Drawing.Color" />
+        <Parameter Name="doRefresh" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="color">The color to clear the screen to</param>
+        <param name="doRefresh">Immediately force an update of the screen. If false, only the backbuffer is cleared.</param>
+        <summary>
+            Clears the screen to a specific color
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateBackBuffer">
+      <MemberSignature Language="C#" Value="public virtual Iot.Device.Graphics.BitmapImage CreateBackBuffer ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Iot.Device.Graphics.BitmapImage CreateBackBuffer() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9341.CreateBackBuffer" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function CreateBackBuffer () As BitmapImage" />
+      <MemberSignature Language="F#" Value="abstract member CreateBackBuffer : unit -&gt; Iot.Device.Graphics.BitmapImage&#xA;override this.CreateBackBuffer : unit -&gt; Iot.Device.Graphics.BitmapImage" Usage="ili9341.CreateBackBuffer " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Graphics.BitmapImage</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Creates an image with the correct size and color depth to be sent to the screen
+            </summary>
+        <returns>An image instance</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSpiClockFrequency">
+      <MemberSignature Language="C#" Value="public const int DefaultSpiClockFrequency = 12000000;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultSpiClockFrequency = (12000000)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Ili934x.Ili9341.DefaultSpiClockFrequency" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultSpiClockFrequency As Integer  = 12000000" />
+      <MemberSignature Language="F#" Value="val mutable DefaultSpiClockFrequency : int" Usage="Iot.Device.Ili934x.Ili9341.DefaultSpiClockFrequency" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>12000000</MemberValue>
+      <Docs>
+        <summary>
+            Default frequency for SPI
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultSpiMode">
+      <MemberSignature Language="C#" Value="public const System.Device.Spi.SpiMode DefaultSpiMode = 3;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype System.Device.Spi.SpiMode DefaultSpiMode = (3)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Ili934x.Ili9341.DefaultSpiMode" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultSpiMode As SpiMode  = 3" />
+      <MemberSignature Language="F#" Value="val mutable DefaultSpiMode : System.Device.Spi.SpiMode" Usage="Iot.Device.Ili934x.Ili9341.DefaultSpiMode" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Spi.SpiMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>3</MemberValue>
+      <Docs>
+        <summary>
+            Default mode for SPI
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9341.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="ili9341.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9341.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="ili9341.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc cref="M:Iot.Device.Ili934x.Ili9341.Dispose" />
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBitmap">
+      <MemberSignature Language="C#" Value="public void DrawBitmap (Iot.Device.Graphics.BitmapImage bm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawBitmap(class Iot.Device.Graphics.BitmapImage bm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9341.DrawBitmap(Iot.Device.Graphics.BitmapImage)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DrawBitmap (bm As BitmapImage)" />
+      <MemberSignature Language="F#" Value="member this.DrawBitmap : Iot.Device.Graphics.BitmapImage -&gt; unit" Usage="ili9341.DrawBitmap bm" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bm" Type="Iot.Device.Graphics.BitmapImage" />
+      </Parameters>
+      <Docs>
+        <param name="bm">The bitmap to be sent to the display controller.</param>
+        <summary>
+            Send a bitmap to the Ili9341 display.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBitmap">
+      <MemberSignature Language="C#" Value="public void DrawBitmap (Iot.Device.Graphics.BitmapImage bm, System.Drawing.Rectangle updateRect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawBitmap(class Iot.Device.Graphics.BitmapImage bm, valuetype System.Drawing.Rectangle updateRect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9341.DrawBitmap(Iot.Device.Graphics.BitmapImage,System.Drawing.Rectangle)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DrawBitmap (bm As BitmapImage, updateRect As Rectangle)" />
+      <MemberSignature Language="F#" Value="member this.DrawBitmap : Iot.Device.Graphics.BitmapImage * System.Drawing.Rectangle -&gt; unit" Usage="ili9341.DrawBitmap (bm, updateRect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bm" Type="Iot.Device.Graphics.BitmapImage" />
+        <Parameter Name="updateRect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="bm">The bitmap to be sent to the display controller note that only Pixel Format Format32bppArgb is supported.</param>
+        <param name="updateRect">A rectangle that defines where in the display the bitmap is written. Note that no scaling is done.</param>
+        <summary>
+            Send a bitmap to the Ili9341 display specifying the starting position and destination clipping rectangle.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DrawBitmap">
+      <MemberSignature Language="C#" Value="public void DrawBitmap (Iot.Device.Graphics.BitmapImage bm, System.Drawing.Point sourcePoint, System.Drawing.Rectangle destinationRect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DrawBitmap(class Iot.Device.Graphics.BitmapImage bm, valuetype System.Drawing.Point sourcePoint, valuetype System.Drawing.Rectangle destinationRect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9341.DrawBitmap(Iot.Device.Graphics.BitmapImage,System.Drawing.Point,System.Drawing.Rectangle)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DrawBitmap (bm As BitmapImage, sourcePoint As Point, destinationRect As Rectangle)" />
+      <MemberSignature Language="F#" Value="member this.DrawBitmap : Iot.Device.Graphics.BitmapImage * System.Drawing.Point * System.Drawing.Rectangle -&gt; unit" Usage="ili9341.DrawBitmap (bm, sourcePoint, destinationRect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bm" Type="Iot.Device.Graphics.BitmapImage" />
+        <Parameter Name="sourcePoint" Type="System.Drawing.Point" />
+        <Parameter Name="destinationRect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="bm">The bitmap to be sent to the display controller note that only Pixel Format Format32bppArgb is supported.</param>
+        <param name="sourcePoint">A coordinate point in the source bitmap where copying starts from.</param>
+        <param name="destinationRect">A rectangle that defines where in the display the bitmap is written. Note that no scaling is done.</param>
+        <summary>
+            Send a bitmap to the Ili9341 display specifying the starting position and destination clipping rectangle.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FillRect">
+      <MemberSignature Language="C#" Value="public void FillRect (System.Drawing.Color color, int x, int y, int w, int h);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void FillRect(valuetype System.Drawing.Color color, int32 x, int32 y, int32 w, int32 h) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9341.FillRect(System.Drawing.Color,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub FillRect (color As Color, x As Integer, y As Integer, w As Integer, h As Integer)" />
+      <MemberSignature Language="F#" Value="member this.FillRect : System.Drawing.Color * int * int * int * int -&gt; unit" Usage="ili9341.FillRect (color, x, y, w, h)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="color" Type="System.Drawing.Color" />
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+        <Parameter Name="w" Type="System.Int32" />
+        <Parameter Name="h" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="color">The color to fill the rectangle with.</param>
+        <param name="x">The x co-ordinate of the point to start the rectangle at in pixels.</param>
+        <param name="y">The y co-ordinate of the point to start the rectangle at in pixels.</param>
+        <param name="w">The width of the rectangle in pixels.</param>
+        <param name="h">The height of the rectangle in pixels.</param>
+        <summary>
+            Fill rectangle to the specified color
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fps">
+      <MemberSignature Language="C#" Value="public double Fps { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 Fps" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ili934x.Ili9341.Fps" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Fps As Double" />
+      <MemberSignature Language="F#" Value="member this.Fps : double" Usage="Iot.Device.Ili934x.Ili9341.Fps" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns the last FPS value (frames per second).
+            The value is unfiltered.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitDisplayParameters">
+      <MemberSignature Language="C#" Value="protected virtual void InitDisplayParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void InitDisplayParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9341.InitDisplayParameters" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub InitDisplayParameters ()" />
+      <MemberSignature Language="F#" Value="abstract member InitDisplayParameters : unit -&gt; unit&#xA;override this.InitDisplayParameters : unit -&gt; unit" Usage="ili9341.InitDisplayParameters " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Configure memory and orientation parameters
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResetDisplayAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task ResetDisplayAsync ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task ResetDisplayAsync() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9341.ResetDisplayAsync" />
+      <MemberSignature Language="VB.NET" Value="Public Function ResetDisplayAsync () As Task" />
+      <MemberSignature Language="F#" Value="member this.ResetDisplayAsync : unit -&gt; System.Threading.Tasks.Task" Usage="ili9341.ResetDisplayAsync " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resets the display.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenHeight">
+      <MemberSignature Language="C#" Value="public virtual int ScreenHeight { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ScreenHeight" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ili934x.Ili9341.ScreenHeight" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property ScreenHeight As Integer" />
+      <MemberSignature Language="F#" Value="member this.ScreenHeight : int" Usage="Iot.Device.Ili934x.Ili9341.ScreenHeight" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Height of the screen, in pixels
+            </summary>
+        <value>To be added.</value>
+        <remarks>This is of type int, because all image sizes use int, even though this can never be negative</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenWidth">
+      <MemberSignature Language="C#" Value="public virtual int ScreenWidth { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 ScreenWidth" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Ili934x.Ili9341.ScreenWidth" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable ReadOnly Property ScreenWidth As Integer" />
+      <MemberSignature Language="F#" Value="member this.ScreenWidth : int" Usage="Iot.Device.Ili934x.Ili9341.ScreenWidth" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Width of the screen, in pixels
+            </summary>
+        <value>To be added.</value>
+        <remarks>This is of type int, because all image sizes use int, even though this can never be negative</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendBitmapPixelData">
+      <MemberSignature Language="C#" Value="public void SendBitmapPixelData (Span&lt;byte&gt; pixelData, System.Drawing.Rectangle destinationRect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendBitmapPixelData(valuetype System.Span`1&lt;unsigned int8&gt; pixelData, valuetype System.Drawing.Rectangle destinationRect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9341.SendBitmapPixelData(System.Span{System.Byte},System.Drawing.Rectangle)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendBitmapPixelData (pixelData As Span(Of Byte), destinationRect As Rectangle)" />
+      <MemberSignature Language="F#" Value="member this.SendBitmapPixelData : Span&lt;byte&gt; * System.Drawing.Rectangle -&gt; unit" Usage="ili9341.SendBitmapPixelData (pixelData, destinationRect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pixelData" Type="System.Span&lt;System.Byte&gt;" />
+        <Parameter Name="destinationRect" Type="System.Drawing.Rectangle" />
+      </Parameters>
+      <Docs>
+        <param name="pixelData">The data to be sent to the display.</param>
+        <param name="destinationRect">A rectangle that defines where in the display the data is to be written.</param>
+        <summary>
+            Send an array of pixel data to the display.
+            </summary>
+        <remarks>This directly sends the data, circumventing the screen buffer</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendFrame">
+      <MemberSignature Language="C#" Value="public void SendFrame (bool forceFull = false);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendFrame(bool forceFull) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9341.SendFrame(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendFrame (Optional forceFull As Boolean = false)" />
+      <MemberSignature Language="F#" Value="member this.SendFrame : bool -&gt; unit" Usage="ili9341.SendFrame forceFull" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="forceFull" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="forceFull">To be added.</param>
+        <summary>
+            Updates the display with the current screen buffer.
+            <param name="forceFull">Forces a full update, otherwise only changed screen contents are updated</param></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnBacklightOff">
+      <MemberSignature Language="C#" Value="public void TurnBacklightOff ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TurnBacklightOff() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9341.TurnBacklightOff" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TurnBacklightOff ()" />
+      <MemberSignature Language="F#" Value="member this.TurnBacklightOff : unit -&gt; unit" Usage="ili9341.TurnBacklightOff " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            This command turns the backlight panel off.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnBacklightOn">
+      <MemberSignature Language="C#" Value="public void TurnBacklightOn ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void TurnBacklightOn() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ili934x.Ili9341.TurnBacklightOn" />
+      <MemberSignature Language="VB.NET" Value="Public Sub TurnBacklightOn ()" />
+      <MemberSignature Language="F#" Value="member this.TurnBacklightOn : unit -&gt; unit" Usage="ili9341.TurnBacklightOn " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            This command turns the backlight panel off.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

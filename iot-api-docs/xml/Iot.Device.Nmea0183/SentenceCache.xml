@@ -8,6 +8,7 @@
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -19,7 +20,9 @@
   </Interfaces>
   <Docs>
     <summary>
-            Caches the last sentence(s) of each type and so provides a way of asking for the current position without waiting for the next message
+            Caches the last sentence(s) of each type for later retrieval.
+            This is a helper class for <see cref="T:Iot.Device.Nmea0183.AutopilotController" /> and <see cref="T:Iot.Device.Nmea0183.PositionProvider" />. Use <see cref="T:Iot.Device.Nmea0183.PositionProvider" /> to query the position from
+            the most appropriate messages.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -35,6 +38,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="source" Type="Iot.Device.Nmea0183.NmeaSinkAndSource" />
@@ -58,6 +62,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -84,6 +89,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -110,6 +116,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -133,6 +140,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.Sentences.NmeaSentence</ReturnType>
@@ -161,6 +169,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.Sentences.NmeaSentence</ReturnType>
@@ -180,6 +189,34 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="GetLastSentence">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.Sentences.NmeaSentence? GetLastSentence (string? source, Iot.Device.Nmea0183.SentenceId id);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Nmea0183.Sentences.NmeaSentence GetLastSentence(string source, valuetype Iot.Device.Nmea0183.SentenceId id) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.SentenceCache.GetLastSentence(System.String,Iot.Device.Nmea0183.SentenceId)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetLastSentence (source As String, id As SentenceId) As NmeaSentence" />
+      <MemberSignature Language="F#" Value="member this.GetLastSentence : string * Iot.Device.Nmea0183.SentenceId -&gt; Iot.Device.Nmea0183.Sentences.NmeaSentence" Usage="sentenceCache.GetLastSentence (source, id)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Sentences.NmeaSentence</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="source" Type="System.String" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="id" Type="Iot.Device.Nmea0183.SentenceId" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="source">Source to query</param>
+        <param name="id">Id to query</param>
+        <summary>
+            Gets the last sentence with the given id from the given talker.
+            </summary>
+        <returns>The last sentence of that type and source, null if not found</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="GetSatellitesInView">
       <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Iot.Device.Nmea0183.Sentences.SatelliteInfo&gt; GetSatellitesInView (out int totalNumberOfSatellites);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.List`1&lt;class Iot.Device.Nmea0183.Sentences.SatelliteInfo&gt; GetSatellitesInView([out] int32&amp; totalNumberOfSatellites) cil managed" />
@@ -196,7 +233,7 @@
         <ReturnType>System.Collections.Generic.List&lt;Iot.Device.Nmea0183.Sentences.SatelliteInfo&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="totalNumberOfSatellites" Type="System.Int32" RefType="out" />
+        <Parameter Name="totalNumberOfSatellites" Type="System.Int32" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="totalNumberOfSatellites">Total number of satellites reported.
@@ -206,6 +243,59 @@
             Returns the list of satellites in view
             </summary>
         <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryActiveRouteSentences">
+      <MemberSignature Language="C#" Value="public bool QueryActiveRouteSentences (out System.Collections.Generic.List&lt;Iot.Device.Nmea0183.Sentences.RoutePart&gt; routeParts);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool QueryActiveRouteSentences([out] class System.Collections.Generic.List`1&lt;class Iot.Device.Nmea0183.Sentences.RoutePart&gt;&amp; routeParts) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.SentenceCache.QueryActiveRouteSentences(System.Collections.Generic.List{Iot.Device.Nmea0183.Sentences.RoutePart}@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function QueryActiveRouteSentences (ByRef routeParts As List(Of RoutePart)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.QueryActiveRouteSentences : List -&gt; bool" Usage="sentenceCache.QueryActiveRouteSentences routeParts" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="routeParts" Type="System.Collections.Generic.List&lt;Iot.Device.Nmea0183.Sentences.RoutePart&gt;" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="routeParts">The list of RTE sentences</param>
+        <summary>
+            Returns the last RTE sentences received, to construct the active route.
+            A set of at most 100 elements is returned, with the newest entry first.
+            </summary>
+        <returns>True if a list was found, false if no RTE messages where received</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QuerySatellitesInView">
+      <MemberSignature Language="C#" Value="public bool QuerySatellitesInView (out System.Collections.Generic.List&lt;Iot.Device.Nmea0183.Sentences.SatellitesInView&gt; sats);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool QuerySatellitesInView([out] class System.Collections.Generic.List`1&lt;class Iot.Device.Nmea0183.Sentences.SatellitesInView&gt;&amp; sats) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.SentenceCache.QuerySatellitesInView(System.Collections.Generic.List{Iot.Device.Nmea0183.Sentences.SatellitesInView}@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function QuerySatellitesInView (ByRef sats As List(Of SatellitesInView)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.QuerySatellitesInView : List -&gt; bool" Usage="sentenceCache.QuerySatellitesInView sats" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sats" Type="System.Collections.Generic.List&lt;Iot.Device.Nmea0183.Sentences.SatellitesInView&gt;" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="sats">The result</param>
+        <summary>
+            Returns a list of recently received <see cref="T:Iot.Device.Nmea0183.Sentences.SatellitesInView" /> (GSV) messages.
+            </summary>
+        <returns>True if the list was non-empty</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -220,6 +310,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -249,10 +340,10 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="position" Type="Iot.Device.Common.GeographicPosition" RefType="out" />
-        <Parameter Name="track" Type="UnitsNet.Angle" RefType="out" />
-        <Parameter Name="sog" Type="UnitsNet.Speed" RefType="out" />
-        <Parameter Name="heading" Type="System.Nullable&lt;UnitsNet.Angle&gt;" RefType="out" />
+        <Parameter Name="position" Type="Iot.Device.Common.GeographicPosition" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-2.1" />
+        <Parameter Name="track" Type="UnitsNet.Angle" RefType="out" Index="1" FrameworkAlternate="iot-dotnet-2.1" />
+        <Parameter Name="sog" Type="UnitsNet.Speed" RefType="out" Index="2" FrameworkAlternate="iot-dotnet-2.1" />
+        <Parameter Name="heading" Type="System.Nullable&lt;UnitsNet.Angle&gt;" RefType="out" Index="3" FrameworkAlternate="iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="position">Current position</param>
@@ -283,11 +374,11 @@
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="position" Type="Iot.Device.Common.GeographicPosition" RefType="out" />
-        <Parameter Name="extrapolate" Type="System.Boolean" />
-        <Parameter Name="track" Type="UnitsNet.Angle" RefType="out" />
-        <Parameter Name="sog" Type="UnitsNet.Speed" RefType="out" />
-        <Parameter Name="heading" Type="System.Nullable&lt;UnitsNet.Angle&gt;" RefType="out" />
+        <Parameter Name="position" Type="Iot.Device.Common.GeographicPosition" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-2.1" />
+        <Parameter Name="extrapolate" Type="System.Boolean" Index="1" FrameworkAlternate="iot-dotnet-2.1" />
+        <Parameter Name="track" Type="UnitsNet.Angle" RefType="out" Index="2" FrameworkAlternate="iot-dotnet-2.1" />
+        <Parameter Name="sog" Type="UnitsNet.Speed" RefType="out" Index="3" FrameworkAlternate="iot-dotnet-2.1" />
+        <Parameter Name="heading" Type="System.Nullable&lt;UnitsNet.Angle&gt;" RefType="out" Index="4" FrameworkAlternate="iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="position">Current position</param>
@@ -320,7 +411,7 @@
         <ReturnType>Iot.Device.Nmea0183.AutopilotErrorState</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="routeList" Type="System.Collections.Generic.List&lt;Iot.Device.Nmea0183.RoutePoint&gt;" RefType="out" />
+        <Parameter Name="routeList" Type="System.Collections.Generic.List&lt;Iot.Device.Nmea0183.RoutePoint&gt;" RefType="out" Index="0" FrameworkAlternate="iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="routeList">The list of points along the route</param>
@@ -328,6 +419,42 @@
             Returns the current route
             </summary>
         <returns>The state of the route received</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetLastDinSentence&lt;T&gt;">
+      <MemberSignature Language="C#" Value="public bool TryGetLastDinSentence&lt;T&gt; (int hexId, out T sentence) where T : Iot.Device.Nmea0183.Sentences.NmeaSentence;" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetLastDinSentence&lt;(class Iot.Device.Nmea0183.Sentences.NmeaSentence) T&gt;(int32 hexId, [out] !!T&amp; sentence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.SentenceCache.TryGetLastDinSentence``1(System.Int32,``0@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetLastDinSentence(Of T As NmeaSentence) (hexId As Integer, ByRef sentence As T) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetLastDinSentence : int * 'T -&gt; bool (requires 'T :&gt; Iot.Device.Nmea0183.Sentences.NmeaSentence)" Usage="sentenceCache.TryGetLastDinSentence (hexId, sentence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <TypeParameters>
+        <TypeParameter Name="T">
+          <Constraints>
+            <BaseTypeName>Iot.Device.Nmea0183.Sentences.NmeaSentence</BaseTypeName>
+          </Constraints>
+        </TypeParameter>
+      </TypeParameters>
+      <Parameters>
+        <Parameter Name="hexId" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="sentence" Type="T" RefType="out" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <typeparam name="T">The type of the sentence to query</typeparam>
+        <param name="hexId">The hexadecimal identifier for this sub-message</param>
+        <param name="sentence">Receives the sentence, if any was found</param>
+        <summary>
+            Tries to get a DIN sentence type
+            </summary>
+        <returns>True on success, false if no such message was received</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -342,6 +469,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -365,6 +493,62 @@
             Tries to get a sentence of the given type
             </summary>
         <returns>True on success, false if no such message was received</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetTransducerData">
+      <MemberSignature Language="C#" Value="public bool TryGetTransducerData (string name, out Iot.Device.Nmea0183.Sentences.TransducerDataSet data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetTransducerData(string name, [out] class Iot.Device.Nmea0183.Sentences.TransducerDataSet&amp; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.SentenceCache.TryGetTransducerData(System.String,Iot.Device.Nmea0183.Sentences.TransducerDataSet@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetTransducerData (name As String, ByRef data As TransducerDataSet) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetTransducerData : string * TransducerDataSet -&gt; bool" Usage="sentenceCache.TryGetTransducerData (name, data)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="data" Type="Iot.Device.Nmea0183.Sentences.TransducerDataSet" RefType="out" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the data set. Case sensitive</param>
+        <param name="data">Returns the value if it exists</param>
+        <summary>
+            Gets the last transducer data set (from an XDR sentence, see <see cref="T:Iot.Device.Nmea0183.Sentences.TransducerMeasurement" />) if one with the given name exists.
+            </summary>
+        <returns>True if a value with the given name was found, false otherwise</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryGetWayPoint">
+      <MemberSignature Language="C#" Value="public bool TryGetWayPoint (string name, out Iot.Device.Nmea0183.Sentences.Waypoint wp);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryGetWayPoint(string name, [out] class Iot.Device.Nmea0183.Sentences.Waypoint&amp; wp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.SentenceCache.TryGetWayPoint(System.String,Iot.Device.Nmea0183.Sentences.Waypoint@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryGetWayPoint (name As String, ByRef wp As Waypoint) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryGetWayPoint : string * Waypoint -&gt; bool" Usage="sentenceCache.TryGetWayPoint (name, wp)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="name" Type="System.String" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="wp" Type="Iot.Device.Nmea0183.Sentences.Waypoint" RefType="out" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="name">The name of the waypoint</param>
+        <param name="wp">The return data</param>
+        <summary>
+            Queries the waypoint with the given name
+            </summary>
+        <returns>True if found, false otherwise</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

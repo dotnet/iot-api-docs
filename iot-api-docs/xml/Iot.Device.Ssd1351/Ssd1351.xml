@@ -15,6 +15,7 @@
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -77,6 +78,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="spiDevice" Type="System.Device.Spi.SpiDevice" Index="0" FrameworkAlternate="iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest" />
@@ -120,6 +122,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -153,6 +156,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -182,6 +186,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -202,6 +207,34 @@
         <summary>
             Send filled rectangle to the ssd1351 display.
             </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetBitmapPixelData">
+      <MemberSignature Language="C#" Value="public Span&lt;byte&gt; GetBitmapPixelData (Iot.Device.Graphics.BitmapImage bm, System.Drawing.Rectangle sourceRect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.Span`1&lt;unsigned int8&gt; GetBitmapPixelData(class Iot.Device.Graphics.BitmapImage bm, valuetype System.Drawing.Rectangle sourceRect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd1351.Ssd1351.GetBitmapPixelData(Iot.Device.Graphics.BitmapImage,System.Drawing.Rectangle)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetBitmapPixelData (bm As BitmapImage, sourceRect As Rectangle) As Span(Of Byte)" />
+      <MemberSignature Language="F#" Value="member this.GetBitmapPixelData : Iot.Device.Graphics.BitmapImage * System.Drawing.Rectangle -&gt; Span&lt;byte&gt;" Usage="ssd1351.GetBitmapPixelData (bm, sourceRect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Span&lt;System.Byte&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bm" Type="Iot.Device.Graphics.BitmapImage" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="sourceRect" Type="System.Drawing.Rectangle" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="bm">The bitmap to be sent to the display controller note that only Pixel Format Format32bppArgb is supported.</param>
+        <param name="sourceRect">A rectangle that defines where in the bitmap data is to be converted from.</param>
+        <summary>
+            Convert a bitmap into an array of pixel data suitable for sending to the display
+            </summary>
+        <returns>To be added.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -228,8 +261,8 @@
         <ReturnType>System.Span&lt;System.Byte&gt;</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="bm" Type="System.Drawing.Bitmap" />
-        <Parameter Name="sourceRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="bm" Type="System.Drawing.Bitmap" Index="0" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="sourceRect" Type="System.Drawing.Rectangle" Index="1" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="bm">The bitmap to be sent to the display controller note that only Pixel Format Format32bppArgb is supported.</param>
@@ -259,6 +292,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -289,6 +323,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -319,6 +354,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -349,6 +385,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Threading.Tasks.Task</ReturnType>
@@ -359,6 +396,31 @@
             Resets the display.
             </summary>
         <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendBitmap">
+      <MemberSignature Language="C#" Value="public void SendBitmap (Iot.Device.Graphics.BitmapImage bm);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendBitmap(class Iot.Device.Graphics.BitmapImage bm) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd1351.Ssd1351.SendBitmap(Iot.Device.Graphics.BitmapImage)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendBitmap (bm As BitmapImage)" />
+      <MemberSignature Language="F#" Value="member this.SendBitmap : Iot.Device.Graphics.BitmapImage -&gt; unit" Usage="ssd1351.SendBitmap bm" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bm" Type="Iot.Device.Graphics.BitmapImage" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="bm">The bitmap to be sent to the display controller note that only Pixel Format Format32bppArgb is supported.</param>
+        <summary>
+            Send a bitmap to the ssd1351 display specifying the starting position and destination clipping rectangle.
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -385,10 +447,37 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="bm" Type="System.Drawing.Bitmap" />
+        <Parameter Name="bm" Type="System.Drawing.Bitmap" Index="0" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="bm">The bitmap to be sent to the display controller note that only Pixel Format Format32bppArgb is supported.</param>
+        <summary>
+            Send a bitmap to the ssd1351 display specifying the starting position and destination clipping rectangle.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendBitmap">
+      <MemberSignature Language="C#" Value="public void SendBitmap (Iot.Device.Graphics.BitmapImage bm, System.Drawing.Rectangle updateRect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendBitmap(class Iot.Device.Graphics.BitmapImage bm, valuetype System.Drawing.Rectangle updateRect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd1351.Ssd1351.SendBitmap(Iot.Device.Graphics.BitmapImage,System.Drawing.Rectangle)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendBitmap (bm As BitmapImage, updateRect As Rectangle)" />
+      <MemberSignature Language="F#" Value="member this.SendBitmap : Iot.Device.Graphics.BitmapImage * System.Drawing.Rectangle -&gt; unit" Usage="ssd1351.SendBitmap (bm, updateRect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bm" Type="Iot.Device.Graphics.BitmapImage" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="updateRect" Type="System.Drawing.Rectangle" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="bm">The bitmap to be sent to the display controller note that only Pixel Format Format32bppArgb is supported.</param>
+        <param name="updateRect">A rectangle that defines where in the display the bitmap is written. Note that no scaling is done.</param>
         <summary>
             Send a bitmap to the ssd1351 display specifying the starting position and destination clipping rectangle.
             </summary>
@@ -418,12 +507,41 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="bm" Type="System.Drawing.Bitmap" />
-        <Parameter Name="updateRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="bm" Type="System.Drawing.Bitmap" Index="0" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="updateRect" Type="System.Drawing.Rectangle" Index="1" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="bm">The bitmap to be sent to the display controller note that only Pixel Format Format32bppArgb is supported.</param>
         <param name="updateRect">A rectangle that defines where in the display the bitmap is written. Note that no scaling is done.</param>
+        <summary>
+            Send a bitmap to the ssd1351 display specifying the starting position and destination clipping rectangle.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendBitmap">
+      <MemberSignature Language="C#" Value="public void SendBitmap (Iot.Device.Graphics.BitmapImage bm, System.Drawing.Point sourcePoint, System.Drawing.Rectangle destinationRect);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendBitmap(class Iot.Device.Graphics.BitmapImage bm, valuetype System.Drawing.Point sourcePoint, valuetype System.Drawing.Rectangle destinationRect) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ssd1351.Ssd1351.SendBitmap(Iot.Device.Graphics.BitmapImage,System.Drawing.Point,System.Drawing.Rectangle)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SendBitmap (bm As BitmapImage, sourcePoint As Point, destinationRect As Rectangle)" />
+      <MemberSignature Language="F#" Value="member this.SendBitmap : Iot.Device.Graphics.BitmapImage * System.Drawing.Point * System.Drawing.Rectangle -&gt; unit" Usage="ssd1351.SendBitmap (bm, sourcePoint, destinationRect)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bm" Type="Iot.Device.Graphics.BitmapImage" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="sourcePoint" Type="System.Drawing.Point" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="destinationRect" Type="System.Drawing.Rectangle" Index="2" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="bm">The bitmap to be sent to the display controller note that only Pixel Format Format32bppArgb is supported.</param>
+        <param name="sourcePoint">A coordinate point in the source bitmap where copying starts from.</param>
+        <param name="destinationRect">A rectangle that defines where in the display the bitmap is written. Note that no scaling is done.</param>
         <summary>
             Send a bitmap to the ssd1351 display specifying the starting position and destination clipping rectangle.
             </summary>
@@ -453,9 +571,9 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="bm" Type="System.Drawing.Bitmap" />
-        <Parameter Name="sourcePoint" Type="System.Drawing.Point" />
-        <Parameter Name="destinationRect" Type="System.Drawing.Rectangle" />
+        <Parameter Name="bm" Type="System.Drawing.Bitmap" Index="0" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="sourcePoint" Type="System.Drawing.Point" Index="1" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="destinationRect" Type="System.Drawing.Rectangle" Index="2" FrameworkAlternate="iot-dotnet-1.0;iot-dotnet-1.1;iot-dotnet-1.2;iot-dotnet-1.3;iot-dotnet-1.4;iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="bm">The bitmap to be sent to the display controller note that only Pixel Format Format32bppArgb is supported.</param>
@@ -485,6 +603,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -520,6 +639,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -553,6 +673,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -586,6 +707,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -627,6 +749,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -667,6 +790,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -697,6 +821,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -727,6 +852,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -763,6 +889,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -796,6 +923,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -826,6 +954,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -860,6 +989,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -890,6 +1020,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -925,6 +1056,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -961,6 +1093,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -995,6 +1128,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1034,6 +1168,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1065,6 +1200,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1102,6 +1238,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1136,6 +1273,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1166,6 +1304,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1205,6 +1344,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1239,6 +1379,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1280,6 +1421,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1321,6 +1463,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1355,6 +1498,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1388,6 +1532,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1426,6 +1571,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1456,6 +1602,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -1486,6 +1633,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

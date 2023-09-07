@@ -1,17 +1,23 @@
 <Type Name="Ft232HDevice" FullName="Iot.Device.Ft232H.Ft232HDevice">
-  <TypeSignature Language="C#" Value="public class Ft232HDevice : Iot.Device.FtCommon.FtDevice, IDisposable" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Ft232HDevice extends Iot.Device.FtCommon.FtDevice implements class System.IDisposable" />
+  <TypeSignature Language="C#" Value="public class Ft232HDevice : Iot.Device.FtCommon.FtDevice, IDisposable" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Ft232HDevice extends Iot.Device.FtCommon.FtDevice implements class System.IDisposable" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
   <TypeSignature Language="DocId" Value="T:Iot.Device.Ft232H.Ft232HDevice" />
-  <TypeSignature Language="VB.NET" Value="Public Class Ft232HDevice&#xA;Inherits FtDevice&#xA;Implements IDisposable" />
-  <TypeSignature Language="F#" Value="type Ft232HDevice = class&#xA;    inherit FtDevice&#xA;    interface IDisposable" />
+  <TypeSignature Language="VB.NET" Value="Public Class Ft232HDevice&#xA;Inherits FtDevice&#xA;Implements IDisposable" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+  <TypeSignature Language="F#" Value="type Ft232HDevice = class&#xA;    inherit FtDevice&#xA;    interface IDisposable" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+  <TypeSignature Language="C#" Value="public class Ft232HDevice : Iot.Device.FtCommon.Ftx232HDevice, IDisposable" FrameworkAlternate="iot-dotnet-latest" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Ft232HDevice extends Iot.Device.FtCommon.Ftx232HDevice implements class System.IDisposable" FrameworkAlternate="iot-dotnet-latest" />
+  <TypeSignature Language="VB.NET" Value="Public Class Ft232HDevice&#xA;Inherits Ftx232HDevice&#xA;Implements IDisposable" FrameworkAlternate="iot-dotnet-latest" />
+  <TypeSignature Language="F#" Value="type Ft232HDevice = class&#xA;    inherit Ftx232HDevice&#xA;    interface IDisposable" FrameworkAlternate="iot-dotnet-latest" />
   <AssemblyInfo>
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>2.0.0.0</AssemblyVersion>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Iot.Device.FtCommon.FtDevice</BaseTypeName>
+    <BaseTypeName FrameworkAlternate="iot-dotnet-latest">Iot.Device.FtCommon.Ftx232HDevice</BaseTypeName>
   </Base>
   <Interfaces>
     <Interface>
@@ -37,6 +43,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="ftDevice" Type="Iot.Device.FtCommon.FtDevice" />
@@ -61,6 +68,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="flags" Type="Iot.Device.FtCommon.FtFlag" />
@@ -100,8 +108,8 @@
         <ReturnType>Iot.Device.Board.I2cBusManager</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="busNumber" Type="System.Int32" />
-        <Parameter Name="pins" Type="System.Int32[]" />
+        <Parameter Name="busNumber" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="pins" Type="System.Int32[]" Index="1" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="busNumber">To be added.</param>
@@ -129,8 +137,8 @@
         <ReturnType>System.Device.Spi.SpiDevice</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="settings" Type="System.Device.Spi.SpiConnectionSettings" />
-        <Parameter Name="pins" Type="System.Int32[]" />
+        <Parameter Name="settings" Type="System.Device.Spi.SpiConnectionSettings" Index="0" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
+        <Parameter Name="pins" Type="System.Int32[]" Index="1" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="settings">The SPI settings</param>
@@ -161,7 +169,7 @@
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="disposing" Type="System.Boolean" />
+        <Parameter Name="disposing" Type="System.Boolean" Index="0" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="disposing">To be added.</param>
@@ -212,7 +220,7 @@
         <ReturnType>System.Int32[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="busId" Type="System.Int32" />
+        <Parameter Name="busId" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="busId">To be added.</param>
@@ -239,7 +247,7 @@
         <ReturnType>System.Int32[]</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="connectionSettings" Type="System.Device.Spi.SpiConnectionSettings" />
+        <Parameter Name="connectionSettings" Type="System.Device.Spi.SpiConnectionSettings" Index="0" FrameworkAlternate="iot-dotnet-2.0;iot-dotnet-2.1" />
       </Parameters>
       <Docs>
         <param name="connectionSettings">To be added.</param>
@@ -261,6 +269,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;Iot.Device.Ft232H.Ft232HDevice&gt;</ReturnType>
@@ -286,6 +295,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -302,6 +312,28 @@
         <remarks>Valid pins are ADBUS0 to 7, D0 to 7, ACBUS0 to 7, C0 to 7,
             TCK, SK, CLK, MOSI, MISO, SDA, TDI, DI, TDO, DO,
             TMS, CS, GPIOL0 to 3, GPIOH0 to 7</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="QueryComponentInformation">
+      <MemberSignature Language="C#" Value="public override System.Device.ComponentInformation QueryComponentInformation ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class System.Device.ComponentInformation QueryComponentInformation() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Ft232H.Ft232HDevice.QueryComponentInformation" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function QueryComponentInformation () As ComponentInformation" />
+      <MemberSignature Language="F#" Value="override this.QueryComponentInformation : unit -&gt; System.Device.ComponentInformation" Usage="ft232HDevice.QueryComponentInformation " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.ComponentInformation</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
       </Docs>
     </Member>
     <Member MemberName="TryCreateBestGpioDriver">

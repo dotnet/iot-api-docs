@@ -8,6 +8,7 @@
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -37,11 +38,34 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
         <summary>
             Create an instance of this class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public MagneticDeviationCorrection (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MagneticDeviationCorrection.#ctor(System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (stream As Stream)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.MagneticDeviationCorrection : System.IO.Stream -&gt; Iot.Device.Nmea0183.MagneticDeviationCorrection" Usage="new Iot.Device.Nmea0183.MagneticDeviationCorrection stream" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="stream">The stream to parse</param>
+        <summary>
+            Creates a magnetic deviation correction from the given XML stream
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -57,6 +81,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="fileName" Type="System.String" />
@@ -65,6 +90,33 @@
         <param name="fileName">The file name to parse</param>
         <summary>
             Creates a magnetic deviation correction from the given XML file
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCorrectionTable">
+      <MemberSignature Language="C#" Value="public void CreateCorrectionTable (System.IO.Stream stream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateCorrectionTable(class System.IO.Stream stream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MagneticDeviationCorrection.CreateCorrectionTable(System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CreateCorrectionTable (stream As Stream)" />
+      <MemberSignature Language="F#" Value="member this.CreateCorrectionTable : System.IO.Stream -&gt; unit" Usage="magneticDeviationCorrection.CreateCorrectionTable stream" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="stream" Type="System.IO.Stream" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="stream">The recorded nmea stream (from a logged session)</param>
+        <summary>
+            Tries to calculate a correction from the given recorded file.
+            The recorded file should contain a data set where the vessel is turning two slow circles, one with the clock and one against the clock,
+            in calm conditions and with no current.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -80,6 +132,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -98,6 +151,37 @@
       </Docs>
     </Member>
     <Member MemberName="CreateCorrectionTable">
+      <MemberSignature Language="C#" Value="public void CreateCorrectionTable (System.IO.Stream[] fileSet, DateTimeOffset beginCalibration, DateTimeOffset endCalibration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateCorrectionTable(class System.IO.Stream[] fileSet, valuetype System.DateTimeOffset beginCalibration, valuetype System.DateTimeOffset endCalibration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MagneticDeviationCorrection.CreateCorrectionTable(System.IO.Stream[],System.DateTimeOffset,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub CreateCorrectionTable (fileSet As Stream(), beginCalibration As DateTimeOffset, endCalibration As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="member this.CreateCorrectionTable : System.IO.Stream[] * DateTimeOffset * DateTimeOffset -&gt; unit" Usage="magneticDeviationCorrection.CreateCorrectionTable (fileSet, beginCalibration, endCalibration)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="fileSet" Type="System.IO.Stream[]" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="beginCalibration" Type="System.DateTimeOffset" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="endCalibration" Type="System.DateTimeOffset" Index="2" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="fileSet">The recorded nmea files (from a logged session)</param>
+        <param name="beginCalibration">The start time of the calibration loops</param>
+        <param name="endCalibration">The end time of the calibration loops</param>
+        <summary>
+            Tries to calculate a correction from the given recorded file strems, indicating the timespan where the calibration loops were performed.
+            The recorded file should contain a data set where the vessel is turning two slow circles, one with the clock and one against the clock,
+            in calm conditions and with no current.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateCorrectionTable">
       <MemberSignature Language="C#" Value="public void CreateCorrectionTable (string[] fileSet, DateTimeOffset beginCalibration, DateTimeOffset endCalibration);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void CreateCorrectionTable(string[] fileSet, valuetype System.DateTimeOffset beginCalibration, valuetype System.DateTimeOffset endCalibration) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MagneticDeviationCorrection.CreateCorrectionTable(System.String[],System.DateTimeOffset,System.DateTimeOffset)" />
@@ -108,6 +192,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -122,7 +207,7 @@
         <param name="beginCalibration">The start time of the calibration loops</param>
         <param name="endCalibration">The end time of the calibration loops</param>
         <summary>
-            Tries to calculate a correction from the given recorded file, indicating the timespan where the calibration loops were performed.
+            Tries to calculate a correction from the given recorded files, indicating the timespan where the calibration loops were performed.
             The recorded file should contain a data set where the vessel is turning two slow circles, one with the clock and one against the clock,
             in calm conditions and with no current.
             </summary>
@@ -143,6 +228,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -170,6 +256,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -199,6 +286,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Angle</ReturnType>
@@ -226,6 +314,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.Identification</ReturnType>
@@ -235,6 +324,31 @@
             Returns the identification of the vessel for which the loaded calibration is valid
             </summary>
         <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Load">
+      <MemberSignature Language="C#" Value="public void Load (System.IO.Stream file);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Load(class System.IO.Stream file) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.MagneticDeviationCorrection.Load(System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Load (file As Stream)" />
+      <MemberSignature Language="F#" Value="member this.Load : System.IO.Stream -&gt; unit" Usage="magneticDeviationCorrection.Load file" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="file" Type="System.IO.Stream" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="file">The stream from which to load</param>
+        <summary>
+            Loads a previously saved calibration set
+            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -249,6 +363,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -275,6 +390,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -307,6 +423,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.List&lt;Iot.Device.Nmea0183.Sentences.NmeaSentence&gt;</ReturnType>
@@ -330,6 +447,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Angle</ReturnType>

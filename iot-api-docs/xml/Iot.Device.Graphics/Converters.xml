@@ -1,0 +1,83 @@
+<Type Name="Converters" FullName="Iot.Device.Graphics.Converters">
+  <TypeSignature Language="C#" Value="public static class Converters" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit Converters extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Graphics.Converters" />
+  <TypeSignature Language="VB.NET" Value="Public Class Converters" />
+  <TypeSignature Language="F#" Value="type Converters = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Contains a set of converters from <see cref="T:System.Drawing.Bitmap" /> to <see cref="T:Iot.Device.Graphics.BitmapImage" />, for
+            easy conversion of legacy code that still uses the obsolete System.Drawing library
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AdjustImageDestination">
+      <MemberSignature Language="C#" Value="public static void AdjustImageDestination (Iot.Device.Graphics.BitmapImage image, ref System.Drawing.Point leftTop, ref System.Drawing.Rectangle destination);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig void AdjustImageDestination(class Iot.Device.Graphics.BitmapImage image, valuetype System.Drawing.Point&amp; leftTop, valuetype System.Drawing.Rectangle&amp; destination) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.Converters.AdjustImageDestination(Iot.Device.Graphics.BitmapImage,System.Drawing.Point@,System.Drawing.Rectangle@)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Sub AdjustImageDestination (image As BitmapImage, ByRef leftTop As Point, ByRef destination As Rectangle)" />
+      <MemberSignature Language="F#" Value="static member AdjustImageDestination : Iot.Device.Graphics.BitmapImage * Point * Rectangle -&gt; unit" Usage="Iot.Device.Graphics.Converters.AdjustImageDestination (image, leftTop, destination)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="image" Type="Iot.Device.Graphics.BitmapImage" />
+        <Parameter Name="leftTop" Type="System.Drawing.Point" RefType="ref" />
+        <Parameter Name="destination" Type="System.Drawing.Rectangle" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="image">The input image size</param>
+        <param name="leftTop">[in, out] The top left corner of the input image to show. If at the bottom or right edge of the destination, this will be
+            reset so that the right edge of the input image is at the right edge of the destination</param>
+        <param name="destination">The destination rectangle. If this is larger than the input image, the size will be cropped</param>
+        <summary>
+            Adjusts the target position and size so that a given image can be copied to a target image without scaling and without further cropping.
+            This ensures the destination rectangle, starting at the given point lies within the image.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToBitmapImage">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Graphics.BitmapImage ToBitmapImage (System.Drawing.Bitmap bmp);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Graphics.BitmapImage ToBitmapImage(class System.Drawing.Bitmap bmp) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Graphics.Converters.ToBitmapImage(System.Drawing.Bitmap)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function ToBitmapImage (bmp As Bitmap) As BitmapImage" />
+      <MemberSignature Language="F#" Value="static member ToBitmapImage : System.Drawing.Bitmap -&gt; Iot.Device.Graphics.BitmapImage" Usage="Iot.Device.Graphics.Converters.ToBitmapImage bmp" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Graphics.BitmapImage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="bmp" Type="System.Drawing.Bitmap" />
+      </Parameters>
+      <Docs>
+        <param name="bmp">Input bitmap</param>
+        <summary>
+            Convert a <see cref="T:System.Drawing.Bitmap" /> to a <see cref="T:Iot.Device.Graphics.BitmapImage" /></summary>
+        <returns>An image</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentNullException">
+          <paramref name="bmp" /> is null</exception>
+        <exception cref="T:System.NotSupportedException">The input format is not supported</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

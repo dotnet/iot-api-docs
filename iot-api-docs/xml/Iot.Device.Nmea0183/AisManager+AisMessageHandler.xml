@@ -1,0 +1,33 @@
+<Type Name="AisManager+AisMessageHandler" FullName="Iot.Device.Nmea0183.AisManager+AisMessageHandler">
+  <TypeSignature Language="C#" Value="public delegate void AisManager.AisMessageHandler(bool received, uint sourceMmsi, uint destinationMmsi, string text);" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed AisManager/AisMessageHandler extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.AisManager.AisMessageHandler" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub AisManager.AisMessageHandler(received As Boolean, sourceMmsi As UInteger, destinationMmsi As UInteger, text As String)" />
+  <TypeSignature Language="F#" Value="type AisManager.AisMessageHandler = delegate of bool * uint32 * uint32 * string -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="received" Type="System.Boolean" />
+    <Parameter Name="sourceMmsi" Type="System.UInt32" />
+    <Parameter Name="destinationMmsi" Type="System.UInt32" />
+    <Parameter Name="text" Type="System.String" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="received">True if the message was received from another ship, false if the message is generated internally (e.g. a proximity warning)</param>
+    <param name="sourceMmsi">Source MMSI</param>
+    <param name="destinationMmsi">Destination MMSI. May be 0 for a broadcast message</param>
+    <param name="text">The text of the message.</param>
+    <summary>
+            Delegate for AIS messages
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>
