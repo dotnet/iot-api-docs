@@ -1,0 +1,624 @@
+<Type Name="AutoPilotRemoteController" FullName="Iot.Device.Seatalk1.AutoPilotRemoteController">
+  <TypeSignature Language="C#" Value="public class AutoPilotRemoteController : MarshalByRefObject" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AutoPilotRemoteController extends System.MarshalByRefObject" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Seatalk1.AutoPilotRemoteController" />
+  <TypeSignature Language="VB.NET" Value="Public Class AutoPilotRemoteController&#xA;Inherits MarshalByRefObject" />
+  <TypeSignature Language="F#" Value="type AutoPilotRemoteController = class&#xA;    inherit MarshalByRefObject" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.MarshalByRefObject</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Remote controller for an autopilot connected via Seatalk1. To get an instance of this class, call <see cref="M:Iot.Device.Seatalk1.SeatalkInterface.GetAutopilotRemoteController" />.
+            </summary>
+    <remarks>
+            Type is not disposable, to prevent accidental disposal by clients. They don't get ownership of the instance.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="Alarms">
+      <MemberSignature Language="C#" Value="public Iot.Device.Seatalk1.Messages.AutopilotAlarms Alarms { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Seatalk1.Messages.AutopilotAlarms Alarms" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.AutoPilotRemoteController.Alarms" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Alarms As AutopilotAlarms" />
+      <MemberSignature Language="F#" Value="member this.Alarms : Iot.Device.Seatalk1.Messages.AutopilotAlarms" Usage="Iot.Device.Seatalk1.AutoPilotRemoteController.Alarms" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Seatalk1.Messages.AutopilotAlarms</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Active autopilot alarms
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutopilotDesiredHeading">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? AutopilotDesiredHeading { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; AutopilotDesiredHeading" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.AutoPilotRemoteController.AutopilotDesiredHeading" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AutopilotDesiredHeading As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.AutopilotDesiredHeading : Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Seatalk1.AutoPilotRemoteController.AutopilotDesiredHeading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Desired heading of the autopilot.
+            This value is only valid when the autopilot is active (not standby)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutopilotHeading">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? AutopilotHeading { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; AutopilotHeading" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.AutoPilotRemoteController.AutopilotHeading" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AutopilotHeading As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.AutopilotHeading : Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Seatalk1.AutoPilotRemoteController.AutopilotHeading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Current value of the heading sensor internal to the autopilot (if present).
+            When the autopilot controller has such a sensor, this value is always available, however it is
+            useless on tiler pilots such as ST2000 in standby mode, because that one needs to be removed from the tiller for manual steering and thus
+            will read random values.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutopilotKeysPressed">
+      <MemberSignature Language="C#" Value="public event Action&lt;Iot.Device.Seatalk1.Messages.Keystroke&gt;? AutopilotKeysPressed;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action`1&lt;class Iot.Device.Seatalk1.Messages.Keystroke&gt; AutopilotKeysPressed" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Seatalk1.AutoPilotRemoteController.AutopilotKeysPressed" />
+      <MemberSignature Language="VB.NET" Value="Public Event AutopilotKeysPressed As Action(Of Keystroke) " />
+      <MemberSignature Language="F#" Value="member this.AutopilotKeysPressed : Action&lt;Iot.Device.Seatalk1.Messages.Keystroke&gt; " Usage="member this.AutopilotKeysPressed : System.Action&lt;Iot.Device.Seatalk1.Messages.Keystroke&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;Iot.Device.Seatalk1.Messages.Keystroke&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This event is fired when keys on the controller are pressed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AutopilotType">
+      <MemberSignature Language="C#" Value="public int AutopilotType { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 AutopilotType" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.AutoPilotRemoteController.AutopilotType" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AutopilotType As Integer" />
+      <MemberSignature Language="F#" Value="member this.AutopilotType : int" Usage="Iot.Device.Seatalk1.AutoPilotRemoteController.AutopilotType" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Type of autopilot controller. Known values: 05 for 150G type, 08 for most other types
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CourseComputerStatus">
+      <MemberSignature Language="C#" Value="public Iot.Device.Seatalk1.Messages.CourseComputerWarnings CourseComputerStatus { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Seatalk1.Messages.CourseComputerWarnings CourseComputerStatus" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.AutoPilotRemoteController.CourseComputerStatus" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CourseComputerStatus As CourseComputerWarnings" />
+      <MemberSignature Language="F#" Value="member this.CourseComputerStatus : Iot.Device.Seatalk1.Messages.CourseComputerWarnings" Usage="Iot.Device.Seatalk1.AutoPilotRemoteController.CourseComputerStatus" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Seatalk1.Messages.CourseComputerWarnings</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Warning flags from the course computer
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeadbandMode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Seatalk1.Messages.DeadbandMode DeadbandMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Seatalk1.Messages.DeadbandMode DeadbandMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.AutoPilotRemoteController.DeadbandMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeadbandMode As DeadbandMode" />
+      <MemberSignature Language="F#" Value="member this.DeadbandMode : Iot.Device.Seatalk1.Messages.DeadbandMode" Usage="Iot.Device.Seatalk1.AutoPilotRemoteController.DeadbandMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Seatalk1.Messages.DeadbandMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Current deadband mode. The value is only meaningful in auto mode
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan DefaultTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DefaultTimeout" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.AutoPilotRemoteController.DefaultTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property DefaultTimeout As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.DefaultTimeout : TimeSpan with get, set" Usage="Iot.Device.Seatalk1.AutoPilotRemoteController.DefaultTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Timeout for changing the status
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetCalibrationParameters">
+      <MemberSignature Language="C#" Value="public System.Collections.Generic.List&lt;Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage&gt; GetCalibrationParameters ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Collections.Generic.List`1&lt;class Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage&gt; GetCalibrationParameters() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.AutoPilotRemoteController.GetCalibrationParameters" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetCalibrationParameters () As List(Of AutopilotCalibrationParameterMessage)" />
+      <MemberSignature Language="F#" Value="member this.GetCalibrationParameters : unit -&gt; System.Collections.Generic.List&lt;Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage&gt;" Usage="autoPilotRemoteController.GetCalibrationParameters " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Collections.Generic.List&lt;Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the currently known parameter values.
+            Note: The values can currently only be read out by manually entering the calibration mode once.
+            </summary>
+        <returns>A list of parameter values</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsOperating">
+      <MemberSignature Language="C#" Value="public bool IsOperating { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsOperating" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.AutoPilotRemoteController.IsOperating" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsOperating As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsOperating : bool" Usage="Iot.Device.Seatalk1.AutoPilotRemoteController.IsOperating" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the autopilot is active
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsStandby">
+      <MemberSignature Language="C#" Value="public bool IsStandby { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsStandby" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.AutoPilotRemoteController.IsStandby" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsStandby As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsStandby : bool" Usage="Iot.Device.Seatalk1.AutoPilotRemoteController.IsStandby" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the autopilot is in Standby
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RudderAngle">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? RudderAngle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; RudderAngle" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.AutoPilotRemoteController.RudderAngle" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RudderAngle As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.RudderAngle : Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Seatalk1.AutoPilotRemoteController.RudderAngle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Current rudder angle. Positive for turning to starboard.
+            This value is only available when a rudder position sensor is fitted.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RudderAngleAvailable">
+      <MemberSignature Language="C#" Value="public bool RudderAngleAvailable { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RudderAngleAvailable" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.AutoPilotRemoteController.RudderAngleAvailable" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RudderAngleAvailable As Boolean" />
+      <MemberSignature Language="F#" Value="member this.RudderAngleAvailable : bool" Usage="Iot.Device.Seatalk1.AutoPilotRemoteController.RudderAngleAvailable" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True when the rudder angle is valid. This stays false when either no rudder sensor is fitted or the reported values are apparently wrong.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetDeadbandMode">
+      <MemberSignature Language="C#" Value="public bool SetDeadbandMode (Iot.Device.Seatalk1.Messages.DeadbandMode mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetDeadbandMode(valuetype Iot.Device.Seatalk1.Messages.DeadbandMode mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.AutoPilotRemoteController.SetDeadbandMode(Iot.Device.Seatalk1.Messages.DeadbandMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetDeadbandMode (mode As DeadbandMode) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetDeadbandMode : Iot.Device.Seatalk1.Messages.DeadbandMode -&gt; bool" Usage="autoPilotRemoteController.SetDeadbandMode mode" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="mode" Type="Iot.Device.Seatalk1.Messages.DeadbandMode" />
+      </Parameters>
+      <Docs>
+        <param name="mode">The new mode</param>
+        <summary>
+            Change deadband mode
+            </summary>
+        <returns>True if the value was set, false otherwise. This method fails if the autopilot is in standby mode</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetStatus">
+      <MemberSignature Language="C#" Value="public bool SetStatus (Iot.Device.Nmea0183.Sentences.AutopilotStatus status, ref Iot.Device.Seatalk1.Messages.TurnDirection? directionConfirmation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetStatus(valuetype Iot.Device.Nmea0183.Sentences.AutopilotStatus status, valuetype System.Nullable`1&lt;valuetype Iot.Device.Seatalk1.Messages.TurnDirection&gt;&amp; directionConfirmation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.AutoPilotRemoteController.SetStatus(Iot.Device.Nmea0183.Sentences.AutopilotStatus,System.Nullable{Iot.Device.Seatalk1.Messages.TurnDirection}@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetStatus (status As AutopilotStatus, ByRef directionConfirmation As Nullable(Of TurnDirection)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetStatus : Iot.Device.Nmea0183.Sentences.AutopilotStatus * Nullable -&gt; bool" Usage="autoPilotRemoteController.SetStatus (status, directionConfirmation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="status" Type="Iot.Device.Nmea0183.Sentences.AutopilotStatus" />
+        <Parameter Name="directionConfirmation" Type="System.Nullable&lt;Iot.Device.Seatalk1.Messages.TurnDirection&gt;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="status">The new desired status</param>
+        <param name="directionConfirmation">When changing to track mode, confirm a turn in this direction.</param>
+        <summary>
+            Change the autopilot status.
+            </summary>
+        <returns>True if the desired mode was reached, false if not. Reasons that this could fail are: Operation cancelled by user
+            (user pressed standby while remote control was trying to switch to auto); No data available for change to wind or track mode</returns>
+        <remarks>
+          <paramref name="directionConfirmation" /> should initially be set to null. When requesting a change to track mode, it will return a value
+            indicating the required direction change to return to the track. Then call the method again with that value to confirm the change.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetStatus">
+      <MemberSignature Language="C#" Value="public bool SetStatus (Iot.Device.Nmea0183.Sentences.AutopilotStatus newStatus, TimeSpan timeout, ref Iot.Device.Seatalk1.Messages.TurnDirection? directionConfirmation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SetStatus(valuetype Iot.Device.Nmea0183.Sentences.AutopilotStatus newStatus, valuetype System.TimeSpan timeout, valuetype System.Nullable`1&lt;valuetype Iot.Device.Seatalk1.Messages.TurnDirection&gt;&amp; directionConfirmation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.AutoPilotRemoteController.SetStatus(Iot.Device.Nmea0183.Sentences.AutopilotStatus,System.TimeSpan,System.Nullable{Iot.Device.Seatalk1.Messages.TurnDirection}@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SetStatus (newStatus As AutopilotStatus, timeout As TimeSpan, ByRef directionConfirmation As Nullable(Of TurnDirection)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SetStatus : Iot.Device.Nmea0183.Sentences.AutopilotStatus * TimeSpan * Nullable -&gt; bool" Usage="autoPilotRemoteController.SetStatus (newStatus, timeout, directionConfirmation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="newStatus" Type="Iot.Device.Nmea0183.Sentences.AutopilotStatus" />
+        <Parameter Name="timeout" Type="System.TimeSpan" />
+        <Parameter Name="directionConfirmation" Type="System.Nullable&lt;Iot.Device.Seatalk1.Messages.TurnDirection&gt;" RefType="ref" />
+      </Parameters>
+      <Docs>
+        <param name="newStatus">The status to set</param>
+        <param name="timeout">How long to try. For safety reasons (see remark) the maximum value is limited</param>
+        <param name="directionConfirmation">If entering track mode (<paramref name="newStatus" />==<see cref="F:Iot.Device.Nmea0183.Sentences.AutopilotStatus.Track" />), confirm a turn
+            in the given direction. If left null, will return the required direction for the turn. The method has then to be called again with the parameter set</param>
+        <summary>
+            Attempts to set the Autopilot to the given state.
+            </summary>
+        <returns>True on success, false if the change didn't succeed within the timeout. Also returns false if a change to track mode wasn't confirmed yet.</returns>
+        <remarks>
+            Don't be tempted to attempt to set the mode to Auto with a large timeout, as this could
+            override the user's desire to disable the Autopilot and is therefore VERY DANGEROUS!
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.Sentences.AutopilotStatus Status { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nmea0183.Sentences.AutopilotStatus Status" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.AutoPilotRemoteController.Status" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Status As AutopilotStatus" />
+      <MemberSignature Language="F#" Value="member this.Status : Iot.Device.Nmea0183.Sentences.AutopilotStatus" Usage="Iot.Device.Seatalk1.AutoPilotRemoteController.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Sentences.AutopilotStatus</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Current status of the autopilot
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.AutoPilotRemoteController.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberSignature Language="F#" Value="override this.ToString : unit -&gt; string" Usage="autoPilotRemoteController.ToString " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns a textual representation of the current AP status
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnBy">
+      <MemberSignature Language="C#" Value="public bool TurnBy (UnitsNet.Angle degrees, Iot.Device.Seatalk1.Messages.TurnDirection direction, System.Threading.CancellationToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TurnBy(valuetype UnitsNet.Angle degrees, valuetype Iot.Device.Seatalk1.Messages.TurnDirection direction, valuetype System.Threading.CancellationToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.AutoPilotRemoteController.TurnBy(UnitsNet.Angle,Iot.Device.Seatalk1.Messages.TurnDirection,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TurnBy (degrees As Angle, direction As TurnDirection, token As CancellationToken) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TurnBy : UnitsNet.Angle * Iot.Device.Seatalk1.Messages.TurnDirection * System.Threading.CancellationToken -&gt; bool" Usage="autoPilotRemoteController.TurnBy (degrees, direction, token)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="degrees" Type="UnitsNet.Angle" />
+        <Parameter Name="direction" Type="Iot.Device.Seatalk1.Messages.TurnDirection" />
+        <Parameter Name="token" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="degrees">Degrees to turn, unsigned</param>
+        <param name="direction">Direction to turn</param>
+        <param name="token">Cancellation token</param>
+        <summary>
+            Turn by a certain value
+            </summary>
+        <returns>True on success, false otherwise</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnByAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; TurnByAsync (UnitsNet.Angle degrees, Iot.Device.Seatalk1.Messages.TurnDirection direction, System.Threading.CancellationToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; TurnByAsync(valuetype UnitsNet.Angle degrees, valuetype Iot.Device.Seatalk1.Messages.TurnDirection direction, valuetype System.Threading.CancellationToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.AutoPilotRemoteController.TurnByAsync(UnitsNet.Angle,Iot.Device.Seatalk1.Messages.TurnDirection,System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TurnByAsync (degrees As Angle, direction As TurnDirection, token As CancellationToken) As Task(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.TurnByAsync : UnitsNet.Angle * Iot.Device.Seatalk1.Messages.TurnDirection * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;bool&gt;" Usage="autoPilotRemoteController.TurnByAsync (degrees, direction, token)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="degrees" Type="UnitsNet.Angle" />
+        <Parameter Name="direction" Type="Iot.Device.Seatalk1.Messages.TurnDirection" />
+        <Parameter Name="token" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="degrees">Degrees to turn, unsigned</param>
+        <param name="direction">Direction to turn</param>
+        <param name="token">Cancellation token</param>
+        <summary>
+            Turn by a certain value
+            </summary>
+        <returns>True on success, false otherwise</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnDirection">
+      <MemberSignature Language="C#" Value="public Iot.Device.Seatalk1.Messages.TurnDirection TurnDirection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Seatalk1.Messages.TurnDirection TurnDirection" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.AutoPilotRemoteController.TurnDirection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TurnDirection As TurnDirection" />
+      <MemberSignature Language="F#" Value="member this.TurnDirection : Iot.Device.Seatalk1.Messages.TurnDirection" Usage="Iot.Device.Seatalk1.AutoPilotRemoteController.TurnDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Seatalk1.Messages.TurnDirection</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Current turning direction of the boat. Depending on the type, this may be derived from heading changes and therefore not really reliable.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnTo">
+      <MemberSignature Language="C#" Value="public bool TurnTo (UnitsNet.Angle degrees, Iot.Device.Seatalk1.Messages.TurnDirection? direction);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TurnTo(valuetype UnitsNet.Angle degrees, valuetype System.Nullable`1&lt;valuetype Iot.Device.Seatalk1.Messages.TurnDirection&gt; direction) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.AutoPilotRemoteController.TurnTo(UnitsNet.Angle,System.Nullable{Iot.Device.Seatalk1.Messages.TurnDirection})" />
+      <MemberSignature Language="VB.NET" Value="Public Function TurnTo (degrees As Angle, direction As Nullable(Of TurnDirection)) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TurnTo : UnitsNet.Angle * Nullable&lt;Iot.Device.Seatalk1.Messages.TurnDirection&gt; -&gt; bool" Usage="autoPilotRemoteController.TurnTo (degrees, direction)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="degrees" Type="UnitsNet.Angle" />
+        <Parameter Name="direction" Type="System.Nullable&lt;Iot.Device.Seatalk1.Messages.TurnDirection&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="degrees">New desired heading</param>
+        <param name="direction">Desired turn direction. Pass null for taking the default (shorter) turn.</param>
+        <summary>
+            Turns to the desired heading
+            </summary>
+        <returns>True on success, false otherwise</returns>
+        <remarks>This operation can take a significant time</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnTo">
+      <MemberSignature Language="C#" Value="public bool TurnTo (UnitsNet.Angle degrees, Iot.Device.Seatalk1.Messages.TurnDirection? direction, System.Threading.CancellationToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TurnTo(valuetype UnitsNet.Angle degrees, valuetype System.Nullable`1&lt;valuetype Iot.Device.Seatalk1.Messages.TurnDirection&gt; direction, valuetype System.Threading.CancellationToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.AutoPilotRemoteController.TurnTo(UnitsNet.Angle,System.Nullable{Iot.Device.Seatalk1.Messages.TurnDirection},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TurnTo (degrees As Angle, direction As Nullable(Of TurnDirection), token As CancellationToken) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TurnTo : UnitsNet.Angle * Nullable&lt;Iot.Device.Seatalk1.Messages.TurnDirection&gt; * System.Threading.CancellationToken -&gt; bool" Usage="autoPilotRemoteController.TurnTo (degrees, direction, token)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="degrees" Type="UnitsNet.Angle" />
+        <Parameter Name="direction" Type="System.Nullable&lt;Iot.Device.Seatalk1.Messages.TurnDirection&gt;" />
+        <Parameter Name="token" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="degrees">New desired heading</param>
+        <param name="direction">Desired turn direction. Pass null for taking the default (shorter) turn.</param>
+        <param name="token">Cancellation token</param>
+        <summary>
+            Turns to the desired heading
+            </summary>
+        <returns>True on success, false otherwise</returns>
+        <remarks>This operation can take a significant time</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnToAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;bool&gt; TurnToAsync (UnitsNet.Angle degrees, Iot.Device.Seatalk1.Messages.TurnDirection? direction, System.Threading.CancellationToken token);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;bool&gt; TurnToAsync(valuetype UnitsNet.Angle degrees, valuetype System.Nullable`1&lt;valuetype Iot.Device.Seatalk1.Messages.TurnDirection&gt; direction, valuetype System.Threading.CancellationToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.AutoPilotRemoteController.TurnToAsync(UnitsNet.Angle,System.Nullable{Iot.Device.Seatalk1.Messages.TurnDirection},System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TurnToAsync (degrees As Angle, direction As Nullable(Of TurnDirection), token As CancellationToken) As Task(Of Boolean)" />
+      <MemberSignature Language="F#" Value="member this.TurnToAsync : UnitsNet.Angle * Nullable&lt;Iot.Device.Seatalk1.Messages.TurnDirection&gt; * System.Threading.CancellationToken -&gt; System.Threading.Tasks.Task&lt;bool&gt;" Usage="autoPilotRemoteController.TurnToAsync (degrees, direction, token)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Boolean&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="degrees" Type="UnitsNet.Angle" />
+        <Parameter Name="direction" Type="System.Nullable&lt;Iot.Device.Seatalk1.Messages.TurnDirection&gt;" />
+        <Parameter Name="token" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="degrees">New desired heading</param>
+        <param name="direction">Desired turn direction</param>
+        <param name="token">Cancellation token</param>
+        <summary>
+            Same as <see cref="M:Iot.Device.Seatalk1.AutoPilotRemoteController.TurnTo(UnitsNet.Angle,System.Nullable{Iot.Device.Seatalk1.Messages.TurnDirection})" />, except in async mode
+            </summary>
+        <returns>True on success, false otherwise</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

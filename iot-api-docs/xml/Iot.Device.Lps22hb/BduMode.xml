@@ -1,0 +1,67 @@
+<Type Name="BduMode" FullName="Iot.Device.Lps22hb.BduMode">
+  <TypeSignature Language="C#" Value="public enum BduMode" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed BduMode extends System.Enum" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Lps22hb.BduMode" />
+  <TypeSignature Language="VB.NET" Value="Public Enum BduMode" />
+  <TypeSignature Language="F#" Value="type BduMode = " />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Enum</BaseTypeName>
+  </Base>
+  <Docs>
+    <summary>
+            The BDU (Block Data Update) bit is located is used to inhibit the
+            update of the output registers between the reading of upper, middle and lower register
+            parts
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="BlockDataUpdate">
+      <MemberSignature Language="C#" Value="BlockDataUpdate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Lps22hb.BduMode BlockDataUpdate = int32(1)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Lps22hb.BduMode.BlockDataUpdate" />
+      <MemberSignature Language="VB.NET" Value="BlockDataUpdate" />
+      <MemberSignature Language="F#" Value="BlockDataUpdate = 1" Usage="Iot.Device.Lps22hb.BduMode.BlockDataUpdate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Lps22hb.BduMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>1</MemberValue>
+      <Docs>
+        <summary>
+            BDU activated the content of the output registers is not updated
+            until the PRESS_OUT_H register has been read in order to avoid output data corruption
+            </summary>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinuousUpdate">
+      <MemberSignature Language="C#" Value="ContinuousUpdate" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal valuetype Iot.Device.Lps22hb.BduMode ContinuousUpdate = int32(0)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Lps22hb.BduMode.ContinuousUpdate" />
+      <MemberSignature Language="VB.NET" Value="ContinuousUpdate" />
+      <MemberSignature Language="F#" Value="ContinuousUpdate = 0" Usage="Iot.Device.Lps22hb.BduMode.ContinuousUpdate" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Lps22hb.BduMode</ReturnType>
+      </ReturnValue>
+      <MemberValue>0</MemberValue>
+      <Docs>
+        <summary>
+            BDU disable: the lower, middle and upper register parts are updated continuously
+            </summary>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

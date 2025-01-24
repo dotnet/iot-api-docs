@@ -1,0 +1,411 @@
+<Type Name="ProcessRunner" FullName="Iot.Device.Common.ProcessRunner">
+  <TypeSignature Language="C#" Value="public class ProcessRunner : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProcessRunner extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Common.ProcessRunner" />
+  <TypeSignature Language="VB.NET" Value="Public Class ProcessRunner&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type ProcessRunner = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Controls an external process
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProcessRunner (Iot.Device.Common.ProcessSettings processSettings);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Common.ProcessSettings processSettings) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.ProcessRunner.#ctor(Iot.Device.Common.ProcessSettings)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (processSettings As ProcessSettings)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Common.ProcessRunner : Iot.Device.Common.ProcessSettings -&gt; Iot.Device.Common.ProcessRunner" Usage="new Iot.Device.Common.ProcessRunner processSettings" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="processSettings" Type="Iot.Device.Common.ProcessSettings" />
+      </Parameters>
+      <Docs>
+        <param name="processSettings">To be added.</param>
+        <summary>
+            Creates an instance of the ProcessRunner by getting the
+            Process Settings
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinuousRunAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&gt; ContinuousRunAsync (string argsString, System.IO.Pipelines.PipeWriter target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Threading.Tasks.Task&gt; ContinuousRunAsync(string argsString, class System.IO.Pipelines.PipeWriter target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.ProcessRunner.ContinuousRunAsync(System.String,System.IO.Pipelines.PipeWriter)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ContinuousRunAsync (argsString As String, target As PipeWriter) As Task(Of Task)" />
+      <MemberSignature Language="F#" Value="member this.ContinuousRunAsync : string * System.IO.Pipelines.PipeWriter -&gt; System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&gt;" Usage="processRunner.ContinuousRunAsync (argsString, target)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="argsString" Type="System.String" />
+        <Parameter Name="target" Type="System.IO.Pipelines.PipeWriter" />
+      </Parameters>
+      <Docs>
+        <param name="argsString">A string will the complete command line of the process.</param>
+        <param name="target">The pipe that will receive the output of the process.</param>
+        <summary>
+            Runs the execute on a separate thread
+            </summary>
+        <returns>A task that represent the new thread communicating with the process.
+            The returned value is the task that represents the output being copied to the target pipe</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinuousRunAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&gt; ContinuousRunAsync (string argsString, System.IO.Stream? target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Threading.Tasks.Task&gt; ContinuousRunAsync(string argsString, class System.IO.Stream target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.ProcessRunner.ContinuousRunAsync(System.String,System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ContinuousRunAsync (argsString As String, target As Stream) As Task(Of Task)" />
+      <MemberSignature Language="F#" Value="member this.ContinuousRunAsync : string * System.IO.Stream -&gt; System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&gt;" Usage="processRunner.ContinuousRunAsync (argsString, target)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="argsString" Type="System.String" />
+        <Parameter Name="target" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="argsString">A string will the complete command line of the process.</param>
+        <param name="target">The stream that will receive the output of the process.</param>
+        <summary>
+            Runs the execute on a separate thread
+            </summary>
+        <returns>A task that represent the new thread communicating with the process.
+            The returned value is the task that represents the output being copied to the target stream</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinuousRunAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&gt; ContinuousRunAsync (string[] arguments, System.IO.Pipelines.PipeWriter target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Threading.Tasks.Task&gt; ContinuousRunAsync(string[] arguments, class System.IO.Pipelines.PipeWriter target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.ProcessRunner.ContinuousRunAsync(System.String[],System.IO.Pipelines.PipeWriter)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ContinuousRunAsync (arguments As String(), target As PipeWriter) As Task(Of Task)" />
+      <MemberSignature Language="F#" Value="member this.ContinuousRunAsync : string[] * System.IO.Pipelines.PipeWriter -&gt; System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&gt;" Usage="processRunner.ContinuousRunAsync (arguments, target)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.String[]" />
+        <Parameter Name="target" Type="System.IO.Pipelines.PipeWriter" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">The array of command line arguments.</param>
+        <param name="target">The pipe that will receive the output of the process.</param>
+        <summary>
+            Runs the execute on a separate thread
+            </summary>
+        <returns>A task that represent the new thread communicating with the process.
+            The returned value is the task that represents the output being copied to the target pipe</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ContinuousRunAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&gt; ContinuousRunAsync (string[] arguments, System.IO.Stream? target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;class System.Threading.Tasks.Task&gt; ContinuousRunAsync(string[] arguments, class System.IO.Stream target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.ProcessRunner.ContinuousRunAsync(System.String[],System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ContinuousRunAsync (arguments As String(), target As Stream) As Task(Of Task)" />
+      <MemberSignature Language="F#" Value="member this.ContinuousRunAsync : string[] * System.IO.Stream -&gt; System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&gt;" Usage="processRunner.ContinuousRunAsync (arguments, target)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.Threading.Tasks.Task&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.String[]" />
+        <Parameter Name="target" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">The array of command line arguments.</param>
+        <param name="target">The stream that will receive the output of the process.</param>
+        <summary>
+            Runs the execute on a separate thread
+            </summary>
+        <returns>A task that represent the new thread communicating with the process.
+            The returned value is the task that represents the output being copied to the target stream</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.ProcessRunner.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="processRunner.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Dispose the active running process
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task ExecuteAsync (string argsString, System.IO.Pipelines.PipeWriter target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task ExecuteAsync(string argsString, class System.IO.Pipelines.PipeWriter target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.ProcessRunner.ExecuteAsync(System.String,System.IO.Pipelines.PipeWriter)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ExecuteAsync (argsString As String, target As PipeWriter) As Task" />
+      <MemberSignature Language="F#" Value="member this.ExecuteAsync : string * System.IO.Pipelines.PipeWriter -&gt; System.Threading.Tasks.Task" Usage="processRunner.ExecuteAsync (argsString, target)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="argsString" Type="System.String" />
+        <Parameter Name="target" Type="System.IO.Pipelines.PipeWriter" />
+      </Parameters>
+      <Docs>
+        <param name="argsString">A string will the complete command line of the process.</param>
+        <param name="target">The pipe that will receive the output of the process.</param>
+        <summary>
+            Execute the process with a number of arguments. The target Pipe
+            receive the stdout of the process
+            </summary>
+        <returns>A task that will be completed as soon as the process terminates.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task ExecuteAsync (string argsString, System.IO.Stream? target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task ExecuteAsync(string argsString, class System.IO.Stream target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.ProcessRunner.ExecuteAsync(System.String,System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ExecuteAsync (argsString As String, target As Stream) As Task" />
+      <MemberSignature Language="F#" Value="member this.ExecuteAsync : string * System.IO.Stream -&gt; System.Threading.Tasks.Task" Usage="processRunner.ExecuteAsync (argsString, target)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="argsString" Type="System.String" />
+        <Parameter Name="target" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="argsString">A string will the complete command line of the process.</param>
+        <param name="target">The stream that will receive the output of the process.</param>
+        <summary>
+            Execute the process with a number of arguments.
+            The target Stream receives the stdout of the process, if any.
+            If the process is not expected to return any output (for example when
+            the app directly writes one or more files), the stream can be null
+            </summary>
+        <returns>A task that will be completed as soon as the process terminates.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task ExecuteAsync (string[] arguments, System.IO.Stream? target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task ExecuteAsync(string[] arguments, class System.IO.Stream target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.ProcessRunner.ExecuteAsync(System.String[],System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ExecuteAsync (arguments As String(), target As Stream) As Task" />
+      <MemberSignature Language="F#" Value="member this.ExecuteAsync : string[] * System.IO.Stream -&gt; System.Threading.Tasks.Task" Usage="processRunner.ExecuteAsync (arguments, target)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.String[]" />
+        <Parameter Name="target" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">The array of command line arguments.</param>
+        <param name="target">The stream that will receive the output of the process.</param>
+        <summary>
+            Execute the process with a number of arguments. The target
+            Stream receives the stdout of the process
+            </summary>
+        <returns>A task that will be completed as soon as the process terminates.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteReadOutputAsStringAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; ExecuteReadOutputAsStringAsync (string argsString);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;string&gt; ExecuteReadOutputAsStringAsync(string argsString) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.ProcessRunner.ExecuteReadOutputAsStringAsync(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function ExecuteReadOutputAsStringAsync (argsString As String) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ExecuteReadOutputAsStringAsync : string -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="processRunner.ExecuteReadOutputAsStringAsync argsString" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="argsString" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="argsString">A string will the complete command line of the process.</param>
+        <summary>
+            Execute the process with the given arguments and
+            returns the output as a string, decoded as UTF8
+            </summary>
+        <returns>A task that represents the read operation.
+            The returned value represents the output of the process encoded as a UTF8 string.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExecuteReadOutputAsStringAsync">
+      <MemberSignature Language="C#" Value="public System.Threading.Tasks.Task&lt;string&gt; ExecuteReadOutputAsStringAsync (string[] arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Threading.Tasks.Task`1&lt;string&gt; ExecuteReadOutputAsStringAsync(string[] arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.ProcessRunner.ExecuteReadOutputAsStringAsync(System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function ExecuteReadOutputAsStringAsync (arguments As String()) As Task(Of String)" />
+      <MemberSignature Language="F#" Value="member this.ExecuteReadOutputAsStringAsync : string[] -&gt; System.Threading.Tasks.Task&lt;string&gt;" Usage="processRunner.ExecuteReadOutputAsStringAsync arguments" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Threading.Tasks.Task&lt;System.String&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">The array of command line arguments.</param>
+        <summary>
+            Execute the process with the given arguments and returns the
+            output as a string, decoded as UTF8
+            </summary>
+        <returns>A task that represents the read operation.
+            The returned value represents the output of the process encoded as a UTF8 string.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetFullCommandLine">
+      <MemberSignature Language="C#" Value="public string GetFullCommandLine (string[] arguments);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string GetFullCommandLine(string[] arguments) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.ProcessRunner.GetFullCommandLine(System.String[])" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetFullCommandLine (arguments As String()) As String" />
+      <MemberSignature Language="F#" Value="member this.GetFullCommandLine : string[] -&gt; string" Usage="processRunner.GetFullCommandLine arguments" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="arguments" Type="System.String[]" />
+      </Parameters>
+      <Docs>
+        <param name="arguments">The array of command line arguments.</param>
+        <summary>
+          <summary>
+            Retrieves the full command line equivalent to the one run from this class.
+            The working directory is either ProcessSettings.WorkingDirectory or, if null,
+            the Environment.CurrentDirectory.
+            The working directory is important when referring to files from the command line.
+            </summary>
+        </summary>
+        <returns>Returns the full command that can be executed on the terminal.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Kill">
+      <MemberSignature Language="C#" Value="public void Kill ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Kill() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Common.ProcessRunner.Kill" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Kill ()" />
+      <MemberSignature Language="F#" Value="member this.Kill : unit -&gt; unit" Usage="processRunner.Kill " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Kill the process
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PId">
+      <MemberSignature Language="C#" Value="public int? PId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;int32&gt; PId" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Common.ProcessRunner.PId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property PId As Nullable(Of Integer)" />
+      <MemberSignature Language="F#" Value="member this.PId : Nullable&lt;int&gt;" Usage="Iot.Device.Common.ProcessRunner.PId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;System.Int32&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the PID of the process that is running or null
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

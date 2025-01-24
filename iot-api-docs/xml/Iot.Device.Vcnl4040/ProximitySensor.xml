@@ -1,0 +1,338 @@
+<Type Name="ProximitySensor" FullName="Iot.Device.Vcnl4040.ProximitySensor">
+  <TypeSignature Language="C#" Value="public class ProximitySensor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProximitySensor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Vcnl4040.ProximitySensor" />
+  <TypeSignature Language="VB.NET" Value="Public Class ProximitySensor" />
+  <TypeSignature Language="F#" Value="type ProximitySensor = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Vcnl4040.ProximitySensor" /> class.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="ActiveForceMode">
+      <MemberSignature Language="C#" Value="public bool ActiveForceMode { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ActiveForceMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.ProximitySensor.ActiveForceMode" />
+      <MemberSignature Language="VB.NET" Value="Public Property ActiveForceMode As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ActiveForceMode : bool with get, set" Usage="Iot.Device.Vcnl4040.ProximitySensor.ActiveForceMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the state of the active force mode for proximity measurement.
+            When the sensor is operated in Active Force Mode, an explicit request for a measurement
+            is required before a current measurement value can be read.
+            This is in contrast to normal operation, where measurements are continuous.
+            This significantly reduces power consumption, as the IR LED is only activated for each
+            individual measurement.
+            Important: In Active Force Mode, the interrupt function is not available,
+            as no measurement is performed, and therefore, threshold checks are not possible.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigureEmitter">
+      <MemberSignature Language="C#" Value="public void ConfigureEmitter (Iot.Device.Vcnl4040.EmitterConfiguration configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ConfigureEmitter(class Iot.Device.Vcnl4040.EmitterConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.ProximitySensor.ConfigureEmitter(Iot.Device.Vcnl4040.EmitterConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ConfigureEmitter (configuration As EmitterConfiguration)" />
+      <MemberSignature Language="F#" Value="member this.ConfigureEmitter : Iot.Device.Vcnl4040.EmitterConfiguration -&gt; unit" Usage="proximitySensor.ConfigureEmitter configuration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configuration" Type="Iot.Device.Vcnl4040.EmitterConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="configuration">To be added.</param>
+        <summary>
+            Configures the IR LED emitter.
+            Refer to <see cref="T:Iot.Device.Vcnl4040.EmitterConfiguration" /> for more information on the parameters.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConfigureReceiver">
+      <MemberSignature Language="C#" Value="public void ConfigureReceiver (Iot.Device.Vcnl4040.ReceiverConfiguration configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ConfigureReceiver(class Iot.Device.Vcnl4040.ReceiverConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.ProximitySensor.ConfigureReceiver(Iot.Device.Vcnl4040.ReceiverConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ConfigureReceiver (configuration As ReceiverConfiguration)" />
+      <MemberSignature Language="F#" Value="member this.ConfigureReceiver : Iot.Device.Vcnl4040.ReceiverConfiguration -&gt; unit" Usage="proximitySensor.ConfigureReceiver configuration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configuration" Type="Iot.Device.Vcnl4040.ReceiverConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="configuration">To be added.</param>
+        <summary>
+            Configures the IR receiver.
+            Refer to <see cref="T:Iot.Device.Vcnl4040.ReceiverConfiguration" /> for more information on the parameters.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DisableInterrupts">
+      <MemberSignature Language="C#" Value="public void DisableInterrupts ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DisableInterrupts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.ProximitySensor.DisableInterrupts" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DisableInterrupts ()" />
+      <MemberSignature Language="F#" Value="member this.DisableInterrupts : unit -&gt; unit" Usage="proximitySensor.DisableInterrupts " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disables the interrupts or logic output.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Distance">
+      <MemberSignature Language="C#" Value="public int Distance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 Distance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.ProximitySensor.Distance" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Distance As Integer" />
+      <MemberSignature Language="F#" Value="member this.Distance : int" Usage="Iot.Device.Vcnl4040.ProximitySensor.Distance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current proximity sensor reading.
+            Note: if active force mode is enabled reading this property implicitly triggers
+            the measurement for once cycle.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableInterrupts">
+      <MemberSignature Language="C#" Value="public void EnableInterrupts (ProximityInterruptConfiguration configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnableInterrupts(ProximityInterruptConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.ProximitySensor.EnableInterrupts(ProximityInterruptConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EnableInterrupts (configuration As ProximityInterruptConfiguration)" />
+      <MemberSignature Language="F#" Value="member this.EnableInterrupts : ProximityInterruptConfiguration -&gt; unit" Usage="proximitySensor.EnableInterrupts configuration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configuration" Type="ProximityInterruptConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="configuration">To be added.</param>
+        <summary>
+            Configures the interrupt parameters and enables the interrupt (INT-pin function).
+            Refer to <see cref="T:ProximityInterruptConfiguration" /> for more information on the parameters.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown if upper threshold is less than lower threshold.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown if Interrupt function of the ambient light sensor is enabled.
+            Refer to <see cref="T:ProximityInterruptConfiguration" /> for more information.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetEmitterConfiguration">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vcnl4040.EmitterConfiguration GetEmitterConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Vcnl4040.EmitterConfiguration GetEmitterConfiguration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.ProximitySensor.GetEmitterConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetEmitterConfiguration () As EmitterConfiguration" />
+      <MemberSignature Language="F#" Value="member this.GetEmitterConfiguration : unit -&gt; Iot.Device.Vcnl4040.EmitterConfiguration" Usage="proximitySensor.GetEmitterConfiguration " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.EmitterConfiguration</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the current emitter configuration from the device.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInterruptConfiguration">
+      <MemberSignature Language="C#" Value="public ProximityInterruptConfiguration GetInterruptConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance ProximityInterruptConfiguration GetInterruptConfiguration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.ProximitySensor.GetInterruptConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetInterruptConfiguration () As ProximityInterruptConfiguration" />
+      <MemberSignature Language="F#" Value="member this.GetInterruptConfiguration : unit -&gt; ProximityInterruptConfiguration" Usage="proximitySensor.GetInterruptConfiguration " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ProximityInterruptConfiguration</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the interrupt configuration from the device.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetReceiverConfiguration">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vcnl4040.ReceiverConfiguration GetReceiverConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Vcnl4040.ReceiverConfiguration GetReceiverConfiguration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.ProximitySensor.GetReceiverConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetReceiverConfiguration () As ReceiverConfiguration" />
+      <MemberSignature Language="F#" Value="member this.GetReceiverConfiguration : unit -&gt; Iot.Device.Vcnl4040.ReceiverConfiguration" Usage="proximitySensor.GetReceiverConfiguration " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.ReceiverConfiguration</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the current receiver configuration from the device.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInterruptEnabled">
+      <MemberSignature Language="C#" Value="public bool IsInterruptEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInterruptEnabled" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.ProximitySensor.IsInterruptEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsInterruptEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsInterruptEnabled : bool" Usage="Iot.Device.Vcnl4040.ProximitySensor.IsInterruptEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the proximity sensor interrupts are enabled.
+            Important: will also return TRUE if in proximity detection mode,
+            as this is a specific interrupt function.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsLogicOutputEnabled">
+      <MemberSignature Language="C#" Value="public bool IsLogicOutputEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsLogicOutputEnabled" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.ProximitySensor.IsLogicOutputEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsLogicOutputEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsLogicOutputEnabled : bool" Usage="Iot.Device.Vcnl4040.ProximitySensor.IsLogicOutputEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether the proximity detection logic output is enabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerOn">
+      <MemberSignature Language="C#" Value="public bool PowerOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PowerOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.ProximitySensor.PowerOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property PowerOn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.PowerOn : bool with get, set" Usage="Iot.Device.Vcnl4040.ProximitySensor.PowerOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or sets the power state (power on, shutdown) of the proximity sensor.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WhiteChannelReading">
+      <MemberSignature Language="C#" Value="public int WhiteChannelReading { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 WhiteChannelReading" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.ProximitySensor.WhiteChannelReading" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property WhiteChannelReading As Integer" />
+      <MemberSignature Language="F#" Value="member this.WhiteChannelReading : int" Usage="Iot.Device.Vcnl4040.ProximitySensor.WhiteChannelReading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current measurement value from the white channel of the proximity sensor.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

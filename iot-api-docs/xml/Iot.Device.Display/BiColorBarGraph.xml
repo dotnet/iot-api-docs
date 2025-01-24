@@ -8,6 +8,7 @@
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Iot.Device.Display.Ht16k33</BaseTypeName>
@@ -30,7 +31,7 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
@@ -53,7 +54,7 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -66,6 +67,29 @@
       </Docs>
     </Member>
     <Member MemberName="Fill">
+      <MemberSignature Language="C#" Value="public void Fill (Iot.Device.Display.BarColor color);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Fill(valuetype Iot.Device.Display.BarColor color) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Display.BiColorBarGraph.Fill(Iot.Device.Display.BarColor)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Fill (color As BarColor)" />
+      <MemberSignature Language="F#" Value="member this.Fill : Iot.Device.Display.BarColor -&gt; unit" Usage="biColorBarGraph.Fill color" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>2.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="color" Type="Iot.Device.Display.BarColor" Index="0" FrameworkAlternate="iot-dotnet-2.2" />
+      </Parameters>
+      <Docs>
+        <param name="color">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Fill">
       <MemberSignature Language="C#" Value="public void Fill (Iot.Device.Display.LedColor color);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Fill(valuetype Iot.Device.Display.LedColor color) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Display.BiColorBarGraph.Fill(Iot.Device.Display.LedColor)" />
@@ -74,13 +98,13 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="color" Type="Iot.Device.Display.LedColor" />
+        <Parameter Name="color" Type="Iot.Device.Display.LedColor" Index="0" FrameworkAlternate="iot-dotnet-latest" />
       </Parameters>
       <Docs>
         <param name="color">To be added.</param>
@@ -100,7 +124,7 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -113,19 +137,24 @@
       </Docs>
     </Member>
     <Member MemberName="Item">
-      <MemberSignature Language="C#" Value="public Iot.Device.Display.LedColor this[int index] { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Display.LedColor Item(int32)" />
+      <MemberSignature Language="C#" Value="public Iot.Device.Display.BarColor this[int index] { get; set; }" FrameworkAlternate="iot-dotnet-2.2" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Display.BarColor Item(int32)" FrameworkAlternate="iot-dotnet-2.2" />
       <MemberSignature Language="DocId" Value="P:Iot.Device.Display.BiColorBarGraph.Item(System.Int32)" />
-      <MemberSignature Language="VB.NET" Value="Default Public Property Item(index As Integer) As LedColor" />
-      <MemberSignature Language="F#" Value="member this.Item(int) : Iot.Device.Display.LedColor with get, set" Usage="Iot.Device.Display.BiColorBarGraph.Item" />
+      <MemberSignature Language="VB.NET" Value="Default Public Property Item(index As Integer) As BarColor" FrameworkAlternate="iot-dotnet-2.2" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Iot.Device.Display.BarColor with get, set" Usage="Iot.Device.Display.BiColorBarGraph.Item" FrameworkAlternate="iot-dotnet-2.2" />
+      <MemberSignature Language="C#" Value="public Iot.Device.Display.LedColor this[int index] { get; set; }" FrameworkAlternate="iot-dotnet-latest" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Display.LedColor Item(int32)" FrameworkAlternate="iot-dotnet-latest" />
+      <MemberSignature Language="VB.NET" Value="Default Public Property Item(index As Integer) As LedColor" FrameworkAlternate="iot-dotnet-latest" />
+      <MemberSignature Language="F#" Value="member this.Item(int) : Iot.Device.Display.LedColor with get, set" Usage="Iot.Device.Display.BiColorBarGraph.Item" FrameworkAlternate="iot-dotnet-latest" />
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
-        <ReturnType>Iot.Device.Display.LedColor</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-2.2">Iot.Device.Display.BarColor</ReturnType>
+        <ReturnType FrameworkAlternate="iot-dotnet-latest">Iot.Device.Display.LedColor</ReturnType>
       </ReturnValue>
       <Parameters>
         <Parameter Name="index" Type="System.Int32" />
@@ -149,7 +178,7 @@
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>

@@ -1,0 +1,247 @@
+<Type Name="M5ToughPowerControl" FullName="Iot.Device.M5Stack.M5ToughPowerControl">
+  <TypeSignature Language="C#" Value="public class M5ToughPowerControl : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit M5ToughPowerControl extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.M5Stack.M5ToughPowerControl" />
+  <TypeSignature Language="VB.NET" Value="Public Class M5ToughPowerControl&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type M5ToughPowerControl = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            High-level abstraction for the AXP192 in an M5Tough enclosure.
+            This binding knows the hardware connections from the ESP32 CPU to the AXP192 and the connected hardware and directly offers to toggle named devices (e.g. switch the
+            display backlight on and off.
+            </summary>
+    <remarks>
+            This binding is useful together with the Arduino/Firmata binding or the Arduino Compiler.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public M5ToughPowerControl (Iot.Device.Board.Board board);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Board.Board board) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.M5Stack.M5ToughPowerControl.#ctor(Iot.Device.Board.Board)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (board As Board)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.M5Stack.M5ToughPowerControl : Iot.Device.Board.Board -&gt; Iot.Device.M5Stack.M5ToughPowerControl" Usage="new Iot.Device.M5Stack.M5ToughPowerControl board" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="board" Type="Iot.Device.Board.Board" />
+      </Parameters>
+      <Docs>
+        <param name="board">The board connection (typically an instance of ArduinoBoard)</param>
+        <summary>
+            Create an instance of this class
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Beep">
+      <MemberSignature Language="C#" Value="public void Beep (TimeSpan duration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Beep(valuetype System.TimeSpan duration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.M5Stack.M5ToughPowerControl.Beep(System.TimeSpan)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Beep (duration As TimeSpan)" />
+      <MemberSignature Language="F#" Value="member this.Beep : TimeSpan -&gt; unit" Usage="m5ToughPowerControl.Beep duration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="duration" Type="System.TimeSpan" />
+      </Parameters>
+      <Docs>
+        <param name="duration">The duration of the beep</param>
+        <summary>
+            Beeps using the speaker for the given time, using a fixed frequency
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.M5Stack.M5ToughPowerControl.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="m5ToughPowerControl.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.M5Stack.M5ToughPowerControl.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="m5ToughPowerControl.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">True to dispose managed resources, false to dispose only unmanaged resources</param>
+        <summary>
+            Default dispose implementation
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableSpeaker">
+      <MemberSignature Language="C#" Value="public bool EnableSpeaker { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool EnableSpeaker" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.M5Stack.M5ToughPowerControl.EnableSpeaker" />
+      <MemberSignature Language="VB.NET" Value="Public Property EnableSpeaker As Boolean" />
+      <MemberSignature Language="F#" Value="member this.EnableSpeaker : bool with get, set" Usage="Iot.Device.M5Stack.M5ToughPowerControl.EnableSpeaker" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True to enable the speaker, false to mute it.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPowerControlData">
+      <MemberSignature Language="C#" Value="public Iot.Device.Axp192.PowerControlData GetPowerControlData ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Axp192.PowerControlData GetPowerControlData() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.M5Stack.M5ToughPowerControl.GetPowerControlData" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPowerControlData () As PowerControlData" />
+      <MemberSignature Language="F#" Value="member this.GetPowerControlData : unit -&gt; Iot.Device.Axp192.PowerControlData" Usage="m5ToughPowerControl.GetPowerControlData " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Axp192.PowerControlData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets a data set of current power parameters (power consumption, battery level, etc.)
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Init">
+      <MemberSignature Language="C#" Value="protected virtual void Init ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Init() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.M5Stack.M5ToughPowerControl.Init" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Init ()" />
+      <MemberSignature Language="F#" Value="abstract member Init : unit -&gt; unit&#xA;override this.Init : unit -&gt; unit" Usage="m5ToughPowerControl.Init " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Configures the AXP hardware to default operational settings.
+            Enables the LCD and sets the default charging mode for the optional battery.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetLcdVoltage">
+      <MemberSignature Language="C#" Value="public virtual void SetLcdVoltage (UnitsNet.ElectricPotential voltage);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void SetLcdVoltage(valuetype UnitsNet.ElectricPotential voltage) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.M5Stack.M5ToughPowerControl.SetLcdVoltage(UnitsNet.ElectricPotential)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub SetLcdVoltage (voltage As ElectricPotential)" />
+      <MemberSignature Language="F#" Value="abstract member SetLcdVoltage : UnitsNet.ElectricPotential -&gt; unit&#xA;override this.SetLcdVoltage : UnitsNet.ElectricPotential -&gt; unit" Usage="m5ToughPowerControl.SetLcdVoltage voltage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="voltage" Type="UnitsNet.ElectricPotential" />
+      </Parameters>
+      <Docs>
+        <param name="voltage">The voltage to set</param>
+        <summary>
+            Set LCD backlight voltage. Valid values range from 1.8 - 3.3V. Low values switch off the backlight completely
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Sleep">
+      <MemberSignature Language="C#" Value="public void Sleep (bool enterSleep);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Sleep(bool enterSleep) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.M5Stack.M5ToughPowerControl.Sleep(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Sleep (enterSleep As Boolean)" />
+      <MemberSignature Language="F#" Value="member this.Sleep : bool -&gt; unit" Usage="m5ToughPowerControl.Sleep enterSleep" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="enterSleep" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="enterSleep">True to enter sleep, false to recover from sleep.</param>
+        <summary>
+            Enter and leave low-power mode.
+            The physical power button that is normally used to recover the AXP from sleep mode is not accessible on the M5Tough when the case is closed.
+            After setting the AXP to sleep, we send the CPU to sleep as well. It will only wake up on tapping the screen.
+            </summary>
+        <remarks>After recovering from sleep mode, some peripheral devices might need to be restarted (such as the display controller)</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

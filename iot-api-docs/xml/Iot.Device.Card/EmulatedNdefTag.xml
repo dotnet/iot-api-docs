@@ -1,0 +1,262 @@
+<Type Name="EmulatedNdefTag" FullName="Iot.Device.Card.EmulatedNdefTag">
+  <TypeSignature Language="C#" Value="public class EmulatedNdefTag" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EmulatedNdefTag extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Card.EmulatedNdefTag" />
+  <TypeSignature Language="VB.NET" Value="Public Class EmulatedNdefTag" />
+  <TypeSignature Language="F#" Value="type EmulatedNdefTag = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Emulated Tag card. so far, implementation only for PN532.
+            See https://nfc-forum.org/uploads/specifications/97-NFCForum-TS-T4T-1.2.pdf.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EmulatedNdefTag (Iot.Device.Pn532.Pn532 pn532, byte[] nfId = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Pn532.Pn532 pn532, unsigned int8[] nfId) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.EmulatedNdefTag.#ctor(Iot.Device.Pn532.Pn532,System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pn532 As Pn532, Optional nfId As Byte() = Nothing)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Card.EmulatedNdefTag : Iot.Device.Pn532.Pn532 * byte[] -&gt; Iot.Device.Card.EmulatedNdefTag" Usage="new Iot.Device.Card.EmulatedNdefTag (pn532, nfId)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pn532" Type="Iot.Device.Pn532.Pn532" />
+        <Parameter Name="nfId" Type="System.Byte[]" />
+      </Parameters>
+      <Docs>
+        <param name="pn532">A PN532 card reader</param>
+        <param name="nfId">The NDEF ID. It must be 3 bytes long.</param>
+        <summary>
+            Constructor for EmulatedTag.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CardStatusChanged">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;EmulatedTag.CardStatus&gt;? CardStatusChanged;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;valuetype EmulatedTag.CardStatus&gt; CardStatusChanged" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Card.EmulatedNdefTag.CardStatusChanged" />
+      <MemberSignature Language="VB.NET" Value="Public Event CardStatusChanged As EventHandler(Of CardStatus) " />
+      <MemberSignature Language="F#" Value="member this.CardStatusChanged : EventHandler&lt;EmulatedTag.CardStatus&gt; " Usage="member this.CardStatusChanged : System.EventHandler&lt;EmulatedTag.CardStatus&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;EmulatedTag.CardStatus&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event sent when the satus of the card has changed.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Initialize">
+      <MemberSignature Language="C#" Value="public (Iot.Device.Pn532.AsTarget.TargetModeInitialized? ModeInitialized, byte[] Data) Initialize (System.Threading.CancellationToken token = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype System.ValueTuple`2&lt;class Iot.Device.Pn532.AsTarget.TargetModeInitialized, unsigned int8[]&gt; Initialize(valuetype System.Threading.CancellationToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.EmulatedNdefTag.Initialize(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Initialize (Optional token As CancellationToken = Nothing) As ValueTuple(Of TargetModeInitialized, Byte())" />
+      <MemberSignature Language="F#" Value="member this.Initialize : System.Threading.CancellationToken -&gt; ValueTuple&lt;Iot.Device.Pn532.AsTarget.TargetModeInitialized, byte[]&gt;" Usage="emulatedNdefTag.Initialize token" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.ValueTuple&lt;Iot.Device.Pn532.AsTarget.TargetModeInitialized,System.Byte[]&gt;</ReturnType>
+        <Attributes>
+          <Attribute>
+            <AttributeName Language="C#">[System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "ModeInitialized", "Data" })]</AttributeName>
+            <AttributeName Language="F#">[&lt;System.Runtime.CompilerServices.TupleElementNames(new System.String[] { "ModeInitialized", "Data" })&gt;]</AttributeName>
+          </Attribute>
+        </Attributes>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">A cancellation token to stop the listen operation.</param>
+        <summary>
+            Initialize the PN532 as a target.
+            </summary>
+        <returns>A tuple containing the initialization details and the data sent by the initiator.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="InitializeAndListen">
+      <MemberSignature Language="C#" Value="public Iot.Device.Pn532.ErrorCode InitializeAndListen (System.Threading.CancellationToken token = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.Pn532.ErrorCode InitializeAndListen(valuetype System.Threading.CancellationToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.EmulatedNdefTag.InitializeAndListen(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function InitializeAndListen (Optional token As CancellationToken = Nothing) As ErrorCode" />
+      <MemberSignature Language="F#" Value="member this.InitializeAndListen : System.Threading.CancellationToken -&gt; Iot.Device.Pn532.ErrorCode" Usage="emulatedNdefTag.InitializeAndListen token" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Pn532.ErrorCode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">A cancellation token to stop the listen operation.</param>
+        <summary>
+            Initializes the reader as a target and Listen for a card.
+            </summary>
+        <returns>True is success and operation was done properly.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Listen">
+      <MemberSignature Language="C#" Value="public Iot.Device.Pn532.ErrorCode Listen (System.Threading.CancellationToken token = default);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype Iot.Device.Pn532.ErrorCode Listen(valuetype System.Threading.CancellationToken token) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Card.EmulatedNdefTag.Listen(System.Threading.CancellationToken)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Listen (Optional token As CancellationToken = Nothing) As ErrorCode" />
+      <MemberSignature Language="F#" Value="member this.Listen : System.Threading.CancellationToken -&gt; Iot.Device.Pn532.ErrorCode" Usage="emulatedNdefTag.Listen token" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Pn532.ErrorCode</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="token" Type="System.Threading.CancellationToken" />
+      </Parameters>
+      <Docs>
+        <param name="token">A cancellation token to stop the listen operation.</param>
+        <summary>
+            Initializes the reader as a target and Listen for a card.
+            </summary>
+        <returns>True is success and operation was done properly.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MaximumNdefLength">
+      <MemberSignature Language="C#" Value="public ushort MaximumNdefLength { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int16 MaximumNdefLength" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.EmulatedNdefTag.MaximumNdefLength" />
+      <MemberSignature Language="VB.NET" Value="Public Property MaximumNdefLength As UShort" />
+      <MemberSignature Language="F#" Value="member this.MaximumNdefLength : uint16 with get, set" Usage="Iot.Device.Card.EmulatedNdefTag.MaximumNdefLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the maximum NDEF length. Default is 0xFFFE.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NdefId">
+      <MemberSignature Language="C#" Value="public byte[] NdefId { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] NdefId" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.EmulatedNdefTag.NdefId" />
+      <MemberSignature Language="VB.NET" Value="Public Property NdefId As Byte()" />
+      <MemberSignature Language="F#" Value="member this.NdefId : byte[] with get, set" Usage="Iot.Device.Card.EmulatedNdefTag.NdefId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the NDEF ID. It must be 3 bytes long.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NdefMessage">
+      <MemberSignature Language="C#" Value="public Iot.Device.Ndef.NdefMessage NdefMessage { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Ndef.NdefMessage NdefMessage" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.EmulatedNdefTag.NdefMessage" />
+      <MemberSignature Language="VB.NET" Value="Public Property NdefMessage As NdefMessage" />
+      <MemberSignature Language="F#" Value="member this.NdefMessage : Iot.Device.Ndef.NdefMessage with get, set" Usage="Iot.Device.Card.EmulatedNdefTag.NdefMessage" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Ndef.NdefMessage</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the NDEF message.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NdefReceived">
+      <MemberSignature Language="C#" Value="public event EventHandler&lt;Iot.Device.Ndef.NdefMessage&gt;? NdefReceived;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.EventHandler`1&lt;class Iot.Device.Ndef.NdefMessage&gt; NdefReceived" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Card.EmulatedNdefTag.NdefReceived" />
+      <MemberSignature Language="VB.NET" Value="Public Event NdefReceived As EventHandler(Of NdefMessage) " />
+      <MemberSignature Language="F#" Value="member this.NdefReceived : EventHandler&lt;Iot.Device.Ndef.NdefMessage&gt; " Usage="member this.NdefReceived : System.EventHandler&lt;Iot.Device.Ndef.NdefMessage&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.EventHandler&lt;Iot.Device.Ndef.NdefMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Event sent when a new NDEF message is received.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReadOnly">
+      <MemberSignature Language="C#" Value="public bool ReadOnly { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReadOnly" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Card.EmulatedNdefTag.ReadOnly" />
+      <MemberSignature Language="VB.NET" Value="Public Property ReadOnly As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReadOnly : bool with get, set" Usage="Iot.Device.Card.EmulatedNdefTag.ReadOnly" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the read only flag. Default is false.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Iot.Device.Nmea0183.NmeaSinkAndSource</BaseTypeName>
@@ -32,7 +33,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="interfaceName" Type="System.String" />
@@ -57,7 +58,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="interfaceName" Type="System.String" />
@@ -72,6 +73,40 @@
         <param name="ownMmsi">The MMSI of the own ship</param>
         <param name="ownShipName">The name of the own ship</param>
         <summary>
+            Creates an instance of an <see cref="T:Iot.Device.Nmea0183.AisManager" /> using an internal positon provider.
+            </summary>
+        <remarks>
+            For the position update to work, the AisManager must be externally fed with parsed NMEA sentences.
+            Raw position sequences are not sufficient.
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AisManager (string interfaceName, bool throwOnUnknownMessage, uint ownMmsi, string ownShipName, Iot.Device.Nmea0183.PositionProvider? externalPositionProvider);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string interfaceName, bool throwOnUnknownMessage, unsigned int32 ownMmsi, string ownShipName, class Iot.Device.Nmea0183.PositionProvider externalPositionProvider) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.AisManager.#ctor(System.String,System.Boolean,System.UInt32,System.String,Iot.Device.Nmea0183.PositionProvider)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (interfaceName As String, throwOnUnknownMessage As Boolean, ownMmsi As UInteger, ownShipName As String, externalPositionProvider As PositionProvider)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.AisManager : string * bool * uint32 * string * Iot.Device.Nmea0183.PositionProvider -&gt; Iot.Device.Nmea0183.AisManager" Usage="new Iot.Device.Nmea0183.AisManager (interfaceName, throwOnUnknownMessage, ownMmsi, ownShipName, externalPositionProvider)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="interfaceName" Type="System.String" />
+        <Parameter Name="throwOnUnknownMessage" Type="System.Boolean" />
+        <Parameter Name="ownMmsi" Type="System.UInt32" />
+        <Parameter Name="ownShipName" Type="System.String" />
+        <Parameter Name="externalPositionProvider" Type="Iot.Device.Nmea0183.PositionProvider" />
+      </Parameters>
+      <Docs>
+        <param name="interfaceName">Name of the manager, used for message routing</param>
+        <param name="throwOnUnknownMessage">True if an exception should be thrown when parsing an unknown message type. This parameter
+            is mainly intended for test scenarios where a data stream should be scanned for rare messages</param>
+        <param name="ownMmsi">The MMSI of the own ship</param>
+        <param name="ownShipName">The name of the own ship</param>
+        <param name="externalPositionProvider">External position provider (e.g. the one from a <see cref="T:Iot.Device.Nmea0183.MessageRouter" />)</param>
+        <summary>
             Creates an instance of an <see cref="T:Iot.Device.Nmea0183.AisManager" /></summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -85,7 +120,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -99,27 +134,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="CleanupLatency">
-      <MemberSignature Language="C#" Value="public static readonly TimeSpan CleanupLatency;" />
-      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.TimeSpan CleanupLatency" />
-      <MemberSignature Language="DocId" Value="F:Iot.Device.Nmea0183.AisManager.CleanupLatency" />
-      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly CleanupLatency As TimeSpan " />
-      <MemberSignature Language="F#" Value=" staticval mutable CleanupLatency : TimeSpan" Usage="Iot.Device.Nmea0183.AisManager.CleanupLatency" />
-      <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.TimeSpan</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Controls how often lost targets are removed completely from the target list. The timespan after which a target is considered lost
-            is controlled via <see cref="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.TargetLostTimeout" /></summary>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="ClearWarnings">
       <MemberSignature Language="C#" Value="public void ClearWarnings ();" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ClearWarnings() cil managed" />
@@ -129,7 +143,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -142,30 +156,6 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
-    <Member MemberName="DeleteTargetAfterTimeout">
-      <MemberSignature Language="C#" Value="public TimeSpan DeleteTargetAfterTimeout { get; set; }" />
-      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DeleteTargetAfterTimeout" />
-      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.AisManager.DeleteTargetAfterTimeout" />
-      <MemberSignature Language="VB.NET" Value="Public Property DeleteTargetAfterTimeout As TimeSpan" />
-      <MemberSignature Language="F#" Value="member this.DeleteTargetAfterTimeout : TimeSpan with get, set" Usage="Iot.Device.Nmea0183.AisManager.DeleteTargetAfterTimeout" />
-      <MemberType>Property</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.TimeSpan</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            If a target has not been updated for this time, it is deleted from the list of targets.
-            Additionally, client software should consider targets as lost whose <see cref="P:Iot.Device.Nmea0183.Ais.AisTarget.LastSeen" /> value is older than a minute or so.
-            A value of 0 or less means infinite.
-            </summary>
-        <value>To be added.</value>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
     <Member MemberName="DimensionToBow">
       <MemberSignature Language="C#" Value="public UnitsNet.Length DimensionToBow { get; set; }" />
       <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Length DimensionToBow" />
@@ -175,7 +165,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Length</ReturnType>
@@ -196,7 +186,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Length</ReturnType>
@@ -217,7 +207,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Length</ReturnType>
@@ -238,7 +228,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Length</ReturnType>
@@ -259,7 +249,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -292,7 +282,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
@@ -315,7 +305,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -342,7 +332,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -371,7 +361,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;T&gt;</ReturnType>
@@ -402,7 +392,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.Ais.AisTarget</ReturnType>
@@ -428,7 +418,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerable&lt;Iot.Device.Nmea0183.Ais.AisTarget&gt;</ReturnType>
@@ -442,6 +432,28 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="OnAisWarning">
+      <MemberSignature Language="C#" Value="public event Iot.Device.Nmea0183.AisManager.AisWarning? OnAisWarning;" />
+      <MemberSignature Language="ILAsm" Value=".event class Iot.Device.Nmea0183.AisManager/AisWarning OnAisWarning" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Nmea0183.AisManager.OnAisWarning" />
+      <MemberSignature Language="VB.NET" Value="Public Event OnAisWarning As AisManager.AisWarning " />
+      <MemberSignature Language="F#" Value="member this.OnAisWarning : Iot.Device.Nmea0183.AisManager.AisWarning " Usage="member this.OnAisWarning : Iot.Device.Nmea0183.AisManager.AisWarning " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.AisManager+AisWarning</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This event is fired when an AIS warning occurs. Requires <see cref="M:Iot.Device.Nmea0183.AisManager.EnableAisAlarms(System.Boolean,Iot.Device.Nmea0183.Ais.TrackEstimationParameters)" /> to be set.
+            Arguments are: MMSI of other vessel, current time, textual warning message and the reference to the other target (which includes further details)
+            Messages are suppressed for the longer of <see cref="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.WarningRepeatTimeout" /> or the specific vessels <see cref="P:Iot.Device.Nmea0183.Ais.AisTarget.SuppressionTime" /></summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="OnMessage">
       <MemberSignature Language="C#" Value="public event Iot.Device.Nmea0183.AisManager.AisMessageHandler? OnMessage;" />
       <MemberSignature Language="ILAsm" Value=".event class Iot.Device.Nmea0183.AisManager/AisMessageHandler OnMessage" />
@@ -451,14 +463,15 @@
       <MemberType>Event</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.AisManager+AisMessageHandler</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            This event fires when a new message (individual or broadcast) is received and also when the <see cref="T:Iot.Device.Nmea0183.AisManager" /> generates own messages.
+            This event fires when a new message (individual or broadcast) is received. Warnings generated by the component will also be fired here (in addition
+            to being delivered with <see cref="E:Iot.Device.Nmea0183.AisManager.OnAisWarning" />.
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -472,7 +485,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.UInt32</ReturnType>
@@ -494,7 +507,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -507,6 +520,50 @@
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
+    <Member MemberName="PreferredPositionSource">
+      <MemberSignature Language="C#" Value="public string? PreferredPositionSource { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string PreferredPositionSource" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.AisManager.PreferredPositionSource" />
+      <MemberSignature Language="VB.NET" Value="Public Property PreferredPositionSource As String" />
+      <MemberSignature Language="F#" Value="member this.PreferredPositionSource : string with get, set" Usage="Iot.Device.Nmea0183.AisManager.PreferredPositionSource" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Set to the name of a GNSS source to prefer this for getting the current position.
+            Will fall back to all if not successful (and alternatives are available)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RelativePositionsUpdated">
+      <MemberSignature Language="C#" Value="public event Action? RelativePositionsUpdated;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action RelativePositionsUpdated" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Nmea0183.AisManager.RelativePositionsUpdated" />
+      <MemberSignature Language="VB.NET" Value="Public Event RelativePositionsUpdated As Action " />
+      <MemberSignature Language="F#" Value="member this.RelativePositionsUpdated : Action " Usage="member this.RelativePositionsUpdated : System.Action " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Action</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This event fires after the ship relative positions have been updated (AIS alarms must be enabled)
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
     <Member MemberName="SendBroadcastMessage">
       <MemberSignature Language="C#" Value="public void SendBroadcastMessage (uint sourceMmsi, string text);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SendBroadcastMessage(unsigned int32 sourceMmsi, string text) cil managed" />
@@ -516,7 +573,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -545,7 +602,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -573,7 +630,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.Sentences.NmeaSentence</ReturnType>
@@ -603,7 +660,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -614,7 +671,7 @@
         <Parameter Name="messageText" Type="System.String" />
       </Parameters>
       <Docs>
-        <param name="messageId">Identifies the message. Messages with the same ID are only sent once, until the timeout elapses</param>
+        <param name="messageId">Obsolete message identifier - ignored</param>
         <param name="sourceMmsi">Source MMSI, can be 0 if irrelevant/unknown</param>
         <param name="messageText">The text of the message. Supports only the AIS 6-bit character set.</param>
         <summary>
@@ -625,30 +682,64 @@
       </Docs>
     </Member>
     <Member MemberName="SendWarningMessage">
-      <MemberSignature Language="C#" Value="public bool SendWarningMessage (string messageId, uint sourceMmsi, string messageText, DateTimeOffset now);" />
-      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SendWarningMessage(string messageId, unsigned int32 sourceMmsi, string messageText, valuetype System.DateTimeOffset now) cil managed" />
-      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.AisManager.SendWarningMessage(System.String,System.UInt32,System.String,System.DateTimeOffset)" />
-      <MemberSignature Language="VB.NET" Value="Public Function SendWarningMessage (messageId As String, sourceMmsi As UInteger, messageText As String, now As DateTimeOffset) As Boolean" />
-      <MemberSignature Language="F#" Value="member this.SendWarningMessage : string * uint32 * string * DateTimeOffset -&gt; bool" Usage="aisManager.SendWarningMessage (messageId, sourceMmsi, messageText, now)" />
+      <MemberSignature Language="C#" Value="public bool SendWarningMessage (Iot.Device.Nmea0183.AisMessageId messageId, uint sourceMmsi, string messageText, Iot.Device.Nmea0183.Ais.AisTarget? target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SendWarningMessage(class Iot.Device.Nmea0183.AisMessageId messageId, unsigned int32 sourceMmsi, string messageText, class Iot.Device.Nmea0183.Ais.AisTarget target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.AisManager.SendWarningMessage(Iot.Device.Nmea0183.AisMessageId,System.UInt32,System.String,Iot.Device.Nmea0183.Ais.AisTarget)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SendWarningMessage (messageId As AisMessageId, sourceMmsi As UInteger, messageText As String, target As AisTarget) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SendWarningMessage : Iot.Device.Nmea0183.AisMessageId * uint32 * string * Iot.Device.Nmea0183.Ais.AisTarget -&gt; bool" Usage="aisManager.SendWarningMessage (messageId, sourceMmsi, messageText, target)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="messageId" Type="System.String" />
+        <Parameter Name="messageId" Type="Iot.Device.Nmea0183.AisMessageId" />
+        <Parameter Name="sourceMmsi" Type="System.UInt32" />
+        <Parameter Name="messageText" Type="System.String" />
+        <Parameter Name="target" Type="Iot.Device.Nmea0183.Ais.AisTarget" />
+      </Parameters>
+      <Docs>
+        <param name="messageId">Identifies the message. Messages with the same ID are only sent once, until the timeout elapses</param>
+        <param name="sourceMmsi">Source MMSI, can be 0 if irrelevant/unknown</param>
+        <param name="messageText">The text of the message. Supports only the AIS 6-bit character set.</param>
+        <param name="target">The AIS target this warning is about</param>
+        <summary>
+            Sends a message with the given <paramref name="messageText" /> as an AIS broadcast message
+            </summary>
+        <returns>True if the message was sent, false otherwise</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SendWarningMessage">
+      <MemberSignature Language="C#" Value="public bool SendWarningMessage (Iot.Device.Nmea0183.AisMessageId messageId, uint sourceMmsi, string messageText, DateTimeOffset now, Iot.Device.Nmea0183.Ais.AisTarget? target);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool SendWarningMessage(class Iot.Device.Nmea0183.AisMessageId messageId, unsigned int32 sourceMmsi, string messageText, valuetype System.DateTimeOffset now, class Iot.Device.Nmea0183.Ais.AisTarget target) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.AisManager.SendWarningMessage(Iot.Device.Nmea0183.AisMessageId,System.UInt32,System.String,System.DateTimeOffset,Iot.Device.Nmea0183.Ais.AisTarget)" />
+      <MemberSignature Language="VB.NET" Value="Public Function SendWarningMessage (messageId As AisMessageId, sourceMmsi As UInteger, messageText As String, now As DateTimeOffset, target As AisTarget) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SendWarningMessage : Iot.Device.Nmea0183.AisMessageId * uint32 * string * DateTimeOffset * Iot.Device.Nmea0183.Ais.AisTarget -&gt; bool" Usage="aisManager.SendWarningMessage (messageId, sourceMmsi, messageText, now, target)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="messageId" Type="Iot.Device.Nmea0183.AisMessageId" />
         <Parameter Name="sourceMmsi" Type="System.UInt32" />
         <Parameter Name="messageText" Type="System.String" />
         <Parameter Name="now" Type="System.DateTimeOffset" />
+        <Parameter Name="target" Type="Iot.Device.Nmea0183.Ais.AisTarget" />
       </Parameters>
       <Docs>
         <param name="messageId">Identifies the message. Messages with the same ID are only sent once, until the timeout elapses</param>
         <param name="sourceMmsi">Source MMSI, can be 0 if irrelevant/unknown</param>
         <param name="messageText">The text of the message. Supports only the AIS 6-bit character set.</param>
         <param name="now">The current time (to verify the timeout against)</param>
+        <param name="target">The AIS target this warning is about. May be null for generic messages</param>
         <summary>
             Sends a message with the given <paramref name="messageText" /> as an AIS broadcast message
             </summary>
@@ -665,7 +756,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -686,7 +777,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -707,7 +798,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.Ais.TrackEstimationParameters</ReturnType>
@@ -729,7 +820,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -745,28 +836,6 @@
             Tries to retrieve the target with the given MMSI from the database
             </summary>
         <returns>True if the target was found, false otherwise</returns>
-        <remarks>To be added.</remarks>
-      </Docs>
-    </Member>
-    <Member MemberName="WarningRepeatTimeout">
-      <MemberSignature Language="C#" Value="public static readonly TimeSpan WarningRepeatTimeout;" />
-      <MemberSignature Language="ILAsm" Value=".field public static initonly valuetype System.TimeSpan WarningRepeatTimeout" />
-      <MemberSignature Language="DocId" Value="F:Iot.Device.Nmea0183.AisManager.WarningRepeatTimeout" />
-      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly WarningRepeatTimeout As TimeSpan " />
-      <MemberSignature Language="F#" Value=" staticval mutable WarningRepeatTimeout : TimeSpan" Usage="Iot.Device.Nmea0183.AisManager.WarningRepeatTimeout" />
-      <MemberType>Field</MemberType>
-      <AssemblyInfo>
-        <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
-      </AssemblyInfo>
-      <ReturnValue>
-        <ReturnType>System.TimeSpan</ReturnType>
-      </ReturnValue>
-      <Docs>
-        <summary>
-            Time between repeats of the same warning. If this is set to a short value, the same proximity warning will be shown very often,
-            which is typically annoying.
-            </summary>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

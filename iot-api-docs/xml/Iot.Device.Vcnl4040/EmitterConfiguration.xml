@@ -1,0 +1,421 @@
+<Type Name="EmitterConfiguration" FullName="Iot.Device.Vcnl4040.EmitterConfiguration">
+  <TypeSignature Language="C#" Value="public class EmitterConfiguration : IEquatable&lt;Iot.Device.Vcnl4040.EmitterConfiguration&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit EmitterConfiguration extends System.Object implements class System.IEquatable`1&lt;class Iot.Device.Vcnl4040.EmitterConfiguration&gt;" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Vcnl4040.EmitterConfiguration" />
+  <TypeSignature Language="VB.NET" Value="Public Class EmitterConfiguration&#xA;Implements IEquatable(Of EmitterConfiguration)" />
+  <TypeSignature Language="F#" Value="type EmitterConfiguration = class&#xA;    interface IEquatable&lt;EmitterConfiguration&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Iot.Device.Vcnl4040.EmitterConfiguration&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <param name="Current">IR LED peak current. The peak current can set between 50 and 200 mA.
+            The higher the current the longer the detection range.
+            Important: a high peak current may significantly affect supply voltage stability!</param>
+    <param name="DutyRatio">On/off ratio for the IR LED.
+            During the pulse the selected peak current (<see cref="P:Iot.Device.Vcnl4040.EmitterConfiguration.Current" />) is provided to the IR LED.
+            A lower value (e.g. 1/40) results in a higher measurement speed and lower (interrupt) response time,
+            but also in a higher average current.</param>
+    <param name="IntegrationTime">Integration time for measurement.
+            The longer the integration time the higher is the IR LED pulse length (with same duty ratio),
+            resulting in a higher sensitivity of the detector.
+            The optimal setting depends on the reflection properties of the surface of the object being measured.</param>
+    <param name="MultiPulses">Number of consecutive pulses within a measurement interval.
+            An amount of n-1 additional pulses is emitted. This increases measurement sensitivity/range.</param>
+    <summary>
+            Represents the set of parameters defining the emitter (IR LED) configuration
+            for the proximity sensor.
+            Additional information about the effects of the parameters and their respective values can be
+            found in the official application note and the binding documentation (README.md file).
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected EmitterConfiguration (Iot.Device.Vcnl4040.EmitterConfiguration original);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Vcnl4040.EmitterConfiguration original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.EmitterConfiguration.#ctor(Iot.Device.Vcnl4040.EmitterConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (original As EmitterConfiguration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="Iot.Device.Vcnl4040.EmitterConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="original">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EmitterConfiguration (Iot.Device.Vcnl4040.Definitions.PsLedCurrent Current, Iot.Device.Vcnl4040.Definitions.PsDuty DutyRatio, Iot.Device.Vcnl4040.Definitions.PsIntegrationTime IntegrationTime, Iot.Device.Vcnl4040.Definitions.PsMultiPulse MultiPulses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Vcnl4040.Definitions.PsLedCurrent Current, valuetype Iot.Device.Vcnl4040.Definitions.PsDuty DutyRatio, valuetype Iot.Device.Vcnl4040.Definitions.PsIntegrationTime IntegrationTime, valuetype Iot.Device.Vcnl4040.Definitions.PsMultiPulse MultiPulses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.EmitterConfiguration.#ctor(Iot.Device.Vcnl4040.Definitions.PsLedCurrent,Iot.Device.Vcnl4040.Definitions.PsDuty,Iot.Device.Vcnl4040.Definitions.PsIntegrationTime,Iot.Device.Vcnl4040.Definitions.PsMultiPulse)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Current As PsLedCurrent, DutyRatio As PsDuty, IntegrationTime As PsIntegrationTime, MultiPulses As PsMultiPulse)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Vcnl4040.EmitterConfiguration : Iot.Device.Vcnl4040.Definitions.PsLedCurrent * Iot.Device.Vcnl4040.Definitions.PsDuty * Iot.Device.Vcnl4040.Definitions.PsIntegrationTime * Iot.Device.Vcnl4040.Definitions.PsMultiPulse -&gt; Iot.Device.Vcnl4040.EmitterConfiguration" Usage="new Iot.Device.Vcnl4040.EmitterConfiguration (Current, DutyRatio, IntegrationTime, MultiPulses)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="Current" Type="Iot.Device.Vcnl4040.Definitions.PsLedCurrent" />
+        <Parameter Name="DutyRatio" Type="Iot.Device.Vcnl4040.Definitions.PsDuty" />
+        <Parameter Name="IntegrationTime" Type="Iot.Device.Vcnl4040.Definitions.PsIntegrationTime" />
+        <Parameter Name="MultiPulses" Type="Iot.Device.Vcnl4040.Definitions.PsMultiPulse" />
+      </Parameters>
+      <Docs>
+        <param name="Current">IR LED peak current. The peak current can set between 50 and 200 mA.
+            The higher the current the longer the detection range.
+            Important: a high peak current may significantly affect supply voltage stability!</param>
+        <param name="DutyRatio">On/off ratio for the IR LED.
+            During the pulse the selected peak current (<see cref="P:Iot.Device.Vcnl4040.EmitterConfiguration.Current" />) is provided to the IR LED.
+            A lower value (e.g. 1/40) results in a higher measurement speed and lower (interrupt) response time,
+            but also in a higher average current.</param>
+        <param name="IntegrationTime">Integration time for measurement.
+            The longer the integration time the higher is the IR LED pulse length (with same duty ratio),
+            resulting in a higher sensitivity of the detector.
+            The optimal setting depends on the reflection properties of the surface of the object being measured.</param>
+        <param name="MultiPulses">Number of consecutive pulses within a measurement interval.
+            An amount of n-1 additional pulses is emitted. This increases measurement sensitivity/range.</param>
+        <summary>
+            Represents the set of parameters defining the emitter (IR LED) configuration
+            for the proximity sensor.
+            Additional information about the effects of the parameters and their respective values can be
+            found in the official application note and the binding documentation (README.md file).
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="&lt;Clone&gt;$">
+      <MemberSignature Language="C#" Value="public virtual Iot.Device.Vcnl4040.EmitterConfiguration &lt;Clone&gt;$ ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Iot.Device.Vcnl4040.EmitterConfiguration &lt;Clone&gt;$() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.EmitterConfiguration.&lt;Clone&gt;$" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function &lt;Clone&gt;$ () As EmitterConfiguration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.EmitterConfiguration</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Current">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vcnl4040.Definitions.PsLedCurrent Current { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Vcnl4040.Definitions.PsLedCurrent Current" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.EmitterConfiguration.Current" />
+      <MemberSignature Language="VB.NET" Value="Public Property Current As PsLedCurrent" />
+      <MemberSignature Language="F#" Value="member this.Current : Iot.Device.Vcnl4040.Definitions.PsLedCurrent with get, set" Usage="Iot.Device.Vcnl4040.EmitterConfiguration.Current" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.Definitions.PsLedCurrent</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>IR LED peak current. The peak current can set between 50 and 200 mA.
+            The higher the current the longer the detection range.
+            Important: a high peak current may significantly affect supply voltage stability!</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deconstruct">
+      <MemberSignature Language="C#" Value="public void Deconstruct (out Iot.Device.Vcnl4040.Definitions.PsLedCurrent Current, out Iot.Device.Vcnl4040.Definitions.PsDuty DutyRatio, out Iot.Device.Vcnl4040.Definitions.PsIntegrationTime IntegrationTime, out Iot.Device.Vcnl4040.Definitions.PsMultiPulse MultiPulses);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Deconstruct([out] valuetype Iot.Device.Vcnl4040.Definitions.PsLedCurrent&amp; Current, [out] valuetype Iot.Device.Vcnl4040.Definitions.PsDuty&amp; DutyRatio, [out] valuetype Iot.Device.Vcnl4040.Definitions.PsIntegrationTime&amp; IntegrationTime, [out] valuetype Iot.Device.Vcnl4040.Definitions.PsMultiPulse&amp; MultiPulses) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.EmitterConfiguration.Deconstruct(Iot.Device.Vcnl4040.Definitions.PsLedCurrent@,Iot.Device.Vcnl4040.Definitions.PsDuty@,Iot.Device.Vcnl4040.Definitions.PsIntegrationTime@,Iot.Device.Vcnl4040.Definitions.PsMultiPulse@)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Deconstruct (ByRef Current As PsLedCurrent, ByRef DutyRatio As PsDuty, ByRef IntegrationTime As PsIntegrationTime, ByRef MultiPulses As PsMultiPulse)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="Current" Type="Iot.Device.Vcnl4040.Definitions.PsLedCurrent" RefType="out" />
+        <Parameter Name="DutyRatio" Type="Iot.Device.Vcnl4040.Definitions.PsDuty" RefType="out" />
+        <Parameter Name="IntegrationTime" Type="Iot.Device.Vcnl4040.Definitions.PsIntegrationTime" RefType="out" />
+        <Parameter Name="MultiPulses" Type="Iot.Device.Vcnl4040.Definitions.PsMultiPulse" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="Current">To be added.</param>
+        <param name="DutyRatio">To be added.</param>
+        <param name="IntegrationTime">To be added.</param>
+        <param name="MultiPulses">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DutyRatio">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vcnl4040.Definitions.PsDuty DutyRatio { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Vcnl4040.Definitions.PsDuty DutyRatio" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.EmitterConfiguration.DutyRatio" />
+      <MemberSignature Language="VB.NET" Value="Public Property DutyRatio As PsDuty" />
+      <MemberSignature Language="F#" Value="member this.DutyRatio : Iot.Device.Vcnl4040.Definitions.PsDuty with get, set" Usage="Iot.Device.Vcnl4040.EmitterConfiguration.DutyRatio" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.Definitions.PsDuty</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>On/off ratio for the IR LED.
+            During the pulse the selected peak current (<see cref="P:Iot.Device.Vcnl4040.EmitterConfiguration.Current" />) is provided to the IR LED.
+            A lower value (e.g. 1/40) results in a higher measurement speed and lower (interrupt) response time,
+            but also in a higher average current.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EqualityContract">
+      <MemberSignature Language="C#" Value="protected virtual Type EqualityContract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EqualityContract" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.EmitterConfiguration.EqualityContract" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property EqualityContract As Type" />
+      <MemberSignature Language="F#" Value="member this.EqualityContract : Type" Usage="Iot.Device.Vcnl4040.EmitterConfiguration.EqualityContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public virtual bool Equals (Iot.Device.Vcnl4040.EmitterConfiguration? other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Iot.Device.Vcnl4040.EmitterConfiguration other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.EmitterConfiguration.Equals(Iot.Device.Vcnl4040.EmitterConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Equals (other As EmitterConfiguration) As Boolean" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Iot.Device.Vcnl4040.EmitterConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.EmitterConfiguration.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.EmitterConfiguration.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntegrationTime">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vcnl4040.Definitions.PsIntegrationTime IntegrationTime { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Vcnl4040.Definitions.PsIntegrationTime IntegrationTime" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.EmitterConfiguration.IntegrationTime" />
+      <MemberSignature Language="VB.NET" Value="Public Property IntegrationTime As PsIntegrationTime" />
+      <MemberSignature Language="F#" Value="member this.IntegrationTime : Iot.Device.Vcnl4040.Definitions.PsIntegrationTime with get, set" Usage="Iot.Device.Vcnl4040.EmitterConfiguration.IntegrationTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.Definitions.PsIntegrationTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Integration time for measurement.
+            The longer the integration time the higher is the IR LED pulse length (with same duty ratio),
+            resulting in a higher sensitivity of the detector.
+            The optimal setting depends on the reflection properties of the surface of the object being measured.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MultiPulses">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vcnl4040.Definitions.PsMultiPulse MultiPulses { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Vcnl4040.Definitions.PsMultiPulse MultiPulses" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.EmitterConfiguration.MultiPulses" />
+      <MemberSignature Language="VB.NET" Value="Public Property MultiPulses As PsMultiPulse" />
+      <MemberSignature Language="F#" Value="member this.MultiPulses : Iot.Device.Vcnl4040.Definitions.PsMultiPulse with get, set" Usage="Iot.Device.Vcnl4040.EmitterConfiguration.MultiPulses" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.Definitions.PsMultiPulse</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Number of consecutive pulses within a measurement interval.
+            An amount of n-1 additional pulses is emitted. This increases measurement sensitivity/range.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Iot.Device.Vcnl4040.EmitterConfiguration? left, Iot.Device.Vcnl4040.EmitterConfiguration? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Iot.Device.Vcnl4040.EmitterConfiguration left, class Iot.Device.Vcnl4040.EmitterConfiguration right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.EmitterConfiguration.op_Equality(Iot.Device.Vcnl4040.EmitterConfiguration,Iot.Device.Vcnl4040.EmitterConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As EmitterConfiguration, right As EmitterConfiguration) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Iot.Device.Vcnl4040.EmitterConfiguration" />
+        <Parameter Name="right" Type="Iot.Device.Vcnl4040.EmitterConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Iot.Device.Vcnl4040.EmitterConfiguration? left, Iot.Device.Vcnl4040.EmitterConfiguration? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Iot.Device.Vcnl4040.EmitterConfiguration left, class Iot.Device.Vcnl4040.EmitterConfiguration right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.EmitterConfiguration.op_Inequality(Iot.Device.Vcnl4040.EmitterConfiguration,Iot.Device.Vcnl4040.EmitterConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As EmitterConfiguration, right As EmitterConfiguration) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Iot.Device.Vcnl4040.EmitterConfiguration" />
+        <Parameter Name="right" Type="Iot.Device.Vcnl4040.EmitterConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintMembers">
+      <MemberSignature Language="C#" Value="protected virtual bool PrintMembers (System.Text.StringBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool PrintMembers(class System.Text.StringBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.EmitterConfiguration.PrintMembers(System.Text.StringBuilder)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function PrintMembers (builder As StringBuilder) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="System.Text.StringBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="builder">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.EmitterConfiguration.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

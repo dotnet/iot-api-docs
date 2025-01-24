@@ -1,0 +1,223 @@
+<Type Name="IPointingDevice" FullName="Iot.Device.Gui.IPointingDevice">
+  <TypeSignature Language="C#" Value="public interface IPointingDevice : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public interface auto ansi abstract IPointingDevice implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Gui.IPointingDevice" />
+  <TypeSignature Language="VB.NET" Value="Public Interface IPointingDevice&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type IPointingDevice = interface&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Interface representing a (virtual) pointing device.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="AbsoluteCoordinates">
+      <MemberSignature Language="C#" Value="public bool AbsoluteCoordinates { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool AbsoluteCoordinates" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Gui.IPointingDevice.AbsoluteCoordinates" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AbsoluteCoordinates As Boolean" />
+      <MemberSignature Language="F#" Value="member this.AbsoluteCoordinates : bool" Usage="Iot.Device.Gui.IPointingDevice.AbsoluteCoordinates" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Returns true if this device expects absolute coordinates, false if it requires relative coordinates
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonDown">
+      <MemberSignature Language="C#" Value="public void ButtonDown (Iot.Device.Gui.MouseButton buttons);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ButtonDown(valuetype Iot.Device.Gui.MouseButton buttons) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Gui.IPointingDevice.ButtonDown(Iot.Device.Gui.MouseButton)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ButtonDown (buttons As MouseButton)" />
+      <MemberSignature Language="F#" Value="abstract member ButtonDown : Iot.Device.Gui.MouseButton -&gt; unit" Usage="iPointingDevice.ButtonDown buttons" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buttons" Type="Iot.Device.Gui.MouseButton" />
+      </Parameters>
+      <Docs>
+        <param name="buttons">Buttons to press</param>
+        <summary>
+            Press (and start holding) the given buttons
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ButtonUp">
+      <MemberSignature Language="C#" Value="public void ButtonUp (Iot.Device.Gui.MouseButton buttons);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ButtonUp(valuetype Iot.Device.Gui.MouseButton buttons) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Gui.IPointingDevice.ButtonUp(Iot.Device.Gui.MouseButton)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ButtonUp (buttons As MouseButton)" />
+      <MemberSignature Language="F#" Value="abstract member ButtonUp : Iot.Device.Gui.MouseButton -&gt; unit" Usage="iPointingDevice.ButtonUp buttons" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buttons" Type="Iot.Device.Gui.MouseButton" />
+      </Parameters>
+      <Docs>
+        <param name="buttons">Buttons to release</param>
+        <summary>
+            Release the given buttons
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Click">
+      <MemberSignature Language="C#" Value="public void Click (Iot.Device.Gui.MouseButton buttons);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Click(valuetype Iot.Device.Gui.MouseButton buttons) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Gui.IPointingDevice.Click(Iot.Device.Gui.MouseButton)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Click (buttons As MouseButton)" />
+      <MemberSignature Language="F#" Value="abstract member Click : Iot.Device.Gui.MouseButton -&gt; unit" Usage="iPointingDevice.Click buttons" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="buttons" Type="Iot.Device.Gui.MouseButton" />
+      </Parameters>
+      <Docs>
+        <param name="buttons">Button(s) to press</param>
+        <summary>
+            Click once with the given buttons
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetPosition">
+      <MemberSignature Language="C#" Value="public System.Drawing.Point GetPosition ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance valuetype System.Drawing.Point GetPosition() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Gui.IPointingDevice.GetPosition" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetPosition () As Point" />
+      <MemberSignature Language="F#" Value="abstract member GetPosition : unit -&gt; System.Drawing.Point" Usage="iPointingDevice.GetPosition " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Drawing.Point</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Returns the current position (always absolute)
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveBy">
+      <MemberSignature Language="C#" Value="public void MoveBy (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MoveBy(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Gui.IPointingDevice.MoveBy(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub MoveBy (x As Integer, y As Integer)" />
+      <MemberSignature Language="F#" Value="abstract member MoveBy : int * int -&gt; unit" Usage="iPointingDevice.MoveBy (x, y)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">Move by this amount in x</param>
+        <param name="y">Move by this amount in y</param>
+        <summary>
+            Move the cursor by the given amount
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveTo">
+      <MemberSignature Language="C#" Value="public void MoveTo (System.Drawing.Point point);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MoveTo(valuetype System.Drawing.Point point) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Gui.IPointingDevice.MoveTo(System.Drawing.Point)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub MoveTo (point As Point)" />
+      <MemberSignature Language="F#" Value="abstract member MoveTo : System.Drawing.Point -&gt; unit" Usage="iPointingDevice.MoveTo point" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="point" Type="System.Drawing.Point" />
+      </Parameters>
+      <Docs>
+        <param name="point">Absolute position on screen to move cursor to</param>
+        <summary>
+            Move the cursor to the given position
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MoveTo">
+      <MemberSignature Language="C#" Value="public void MoveTo (int x, int y);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void MoveTo(int32 x, int32 y) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Gui.IPointingDevice.MoveTo(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub MoveTo (x As Integer, y As Integer)" />
+      <MemberSignature Language="F#" Value="abstract member MoveTo : int * int -&gt; unit" Usage="iPointingDevice.MoveTo (x, y)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="x" Type="System.Int32" />
+        <Parameter Name="y" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="x">X position of cursor</param>
+        <param name="y">Y position of cursor</param>
+        <summary>
+            Move the cursor to the given position
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

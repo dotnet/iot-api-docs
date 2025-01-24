@@ -1,0 +1,301 @@
+<Type Name="Hx711" FullName="Iot.Device.Hx711.Hx711">
+  <TypeSignature Language="C#" Value="public sealed class Hx711 : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Hx711 extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Hx711.Hx711" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Hx711&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Hx711 = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Hx711 - Weight scale Module
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Hx711 (int pinDout, int pinPdSck, Iot.Device.Hx711.Hx711Options? options = default, System.Device.Gpio.GpioController? gpioController = default, System.Device.Gpio.PinNumberingScheme pinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 pinDout, int32 pinPdSck, class Iot.Device.Hx711.Hx711Options options, class System.Device.Gpio.GpioController gpioController, valuetype System.Device.Gpio.PinNumberingScheme pinNumberingScheme, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711.#ctor(System.Int32,System.Int32,Iot.Device.Hx711.Hx711Options,System.Device.Gpio.GpioController,System.Device.Gpio.PinNumberingScheme,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (pinDout As Integer, pinPdSck As Integer, Optional options As Hx711Options = Nothing, Optional gpioController As GpioController = Nothing, Optional pinNumberingScheme As PinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Hx711.Hx711 : int * int * Iot.Device.Hx711.Hx711Options * System.Device.Gpio.GpioController * System.Device.Gpio.PinNumberingScheme * bool -&gt; Iot.Device.Hx711.Hx711" Usage="new Iot.Device.Hx711.Hx711 (pinDout, pinPdSck, options, gpioController, pinNumberingScheme, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pinDout" Type="System.Int32" />
+        <Parameter Name="pinPdSck" Type="System.Int32" />
+        <Parameter Name="options" Type="Iot.Device.Hx711.Hx711Options" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="pinNumberingScheme" Type="System.Device.Gpio.PinNumberingScheme" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pinDout">Trigger pulse output. (Digital OUTput)</param>
+        <param name="pinPdSck">Trigger pulse input. (Power Down control and Serial Clock input)</param>
+        <param name="options">How to use the Hx711 module.</param>
+        <param name="gpioController">GPIO controller related with the pins.</param>
+        <param name="pinNumberingScheme">Scheme and numeration used by controller.</param>
+        <param name="shouldDispose">True to dispose the Gpio Controller.</param>
+        <summary>
+            Creates a new instance of the Hx711 module.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ConversionRatio">
+      <MemberSignature Language="C#" Value="public double ConversionRatio { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance float64 ConversionRatio" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Hx711.Hx711.ConversionRatio" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ConversionRatio As Double" />
+      <MemberSignature Language="F#" Value="member this.ConversionRatio : double" Usage="Iot.Device.Hx711.Hx711.ConversionRatio" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Double</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Conversion ratio between Hx711 units and grams
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="hx711.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetWeight">
+      <MemberSignature Language="C#" Value="public UnitsNet.Mass GetWeight (int numberOfReads = 3);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance valuetype UnitsNet.Mass GetWeight(int32 numberOfReads) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711.GetWeight(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetWeight (Optional numberOfReads As Integer = 3) As Mass" />
+      <MemberSignature Language="F#" Value="member this.GetWeight : int -&gt; UnitsNet.Mass" Usage="hx711.GetWeight numberOfReads" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Mass</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numberOfReads" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="numberOfReads">Number of readings to take from which to average, to get a more accurate value.</param>
+        <summary>
+            Read the weight from the Hx711 through channel A to which the load cell is connected,
+            range and precision depend on load cell connected.
+            </summary>
+        <returns>Return a weigh read from Hx711</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerDown">
+      <MemberSignature Language="C#" Value="public void PowerDown ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PowerDown() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711.PowerDown" />
+      <MemberSignature Language="VB.NET" Value="Public Sub PowerDown ()" />
+      <MemberSignature Language="F#" Value="member this.PowerDown : unit -&gt; unit" Usage="hx711.PowerDown " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Power down Hx711
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerUp">
+      <MemberSignature Language="C#" Value="public void PowerUp ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void PowerUp() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711.PowerUp" />
+      <MemberSignature Language="VB.NET" Value="Public Sub PowerUp ()" />
+      <MemberSignature Language="F#" Value="member this.PowerUp : unit -&gt; unit" Usage="hx711.PowerUp " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Power up Hx711 and set it ready to work
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711.Reset" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Reset ()" />
+      <MemberSignature Language="F#" Value="member this.Reset : unit -&gt; unit" Usage="hx711.Reset " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            PowerDown and restart component
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SetCalibration">
+      <MemberSignature Language="C#" Value="public void SetCalibration (UnitsNet.Mass knowWeight, int numberOfReads = 15);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetCalibration(valuetype UnitsNet.Mass knowWeight, int32 numberOfReads) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711.SetCalibration(UnitsNet.Mass,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetCalibration (knowWeight As Mass, Optional numberOfReads As Integer = 15)" />
+      <MemberSignature Language="F#" Value="member this.SetCalibration : UnitsNet.Mass * int -&gt; unit" Usage="hx711.SetCalibration (knowWeight, numberOfReads)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="knowWeight" Type="UnitsNet.Mass" />
+        <Parameter Name="numberOfReads" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="knowWeight">Known weight currently on load cell and detected by the Hx711.</param>
+        <param name="numberOfReads">Number of readings to take from which to average, to get a more accurate value.</param>
+        <summary>
+            Load cells always return different values also based on their range and sensitivity.
+            For this reason, a first calibration step with a known weight is required.
+            You can repeat it several times to get a more precise value.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Throw if know weight have invalid value</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="SetConversionRatio">
+      <MemberSignature Language="C#" Value="public void SetConversionRatio (double conversionRatio);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void SetConversionRatio(float64 conversionRatio) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711.SetConversionRatio(System.Double)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub SetConversionRatio (conversionRatio As Double)" />
+      <MemberSignature Language="F#" Value="member this.SetConversionRatio : double -&gt; unit" Usage="hx711.SetConversionRatio conversionRatio" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="conversionRatio" Type="System.Double" />
+      </Parameters>
+      <Docs>
+        <param name="conversionRatio">Conversion ratio between Hx711 units and grams</param>
+        <summary>
+            If you already know the reference unit between the Hx711 value and grams, you can set it and skip the calibration.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">Throw if know weight have invalid value</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="Tare">
+      <MemberSignature Language="C#" Value="public void Tare (int numberOfReads = 15);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Tare(int32 numberOfReads) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Hx711.Hx711.Tare(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Tare (Optional numberOfReads As Integer = 15)" />
+      <MemberSignature Language="F#" Value="member this.Tare : int -&gt; unit" Usage="hx711.Tare numberOfReads" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="numberOfReads" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="numberOfReads">Number of readings to take from which to average, to get a more accurate value.</param>
+        <summary>
+            Sets tare for channel A for compatibility purposes
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TareValue">
+      <MemberSignature Language="C#" Value="public UnitsNet.Mass TareValue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Mass TareValue" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Hx711.Hx711.TareValue" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TareValue As Mass" />
+      <MemberSignature Language="F#" Value="member this.TareValue : UnitsNet.Mass" Usage="Iot.Device.Hx711.Hx711.TareValue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Mass</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Weight set as tare
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

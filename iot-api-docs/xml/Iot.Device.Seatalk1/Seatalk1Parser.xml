@@ -1,0 +1,188 @@
+<Type Name="Seatalk1Parser" FullName="Iot.Device.Seatalk1.Seatalk1Parser">
+  <TypeSignature Language="C#" Value="public sealed class Seatalk1Parser : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi sealed beforefieldinit Seatalk1Parser extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Seatalk1.Seatalk1Parser" />
+  <TypeSignature Language="VB.NET" Value="Public NotInheritable Class Seatalk1Parser&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Seatalk1Parser = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Decodes a Seatalk1 Message stream
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Seatalk1Parser (System.IO.Stream inputStream);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.IO.Stream inputStream) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Seatalk1Parser.#ctor(System.IO.Stream)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (inputStream As Stream)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Seatalk1.Seatalk1Parser : System.IO.Stream -&gt; Iot.Device.Seatalk1.Seatalk1Parser" Usage="new Iot.Device.Seatalk1.Seatalk1Parser inputStream" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="inputStream" Type="System.IO.Stream" />
+      </Parameters>
+      <Docs>
+        <param name="inputStream">The input stream. Must be non-null and readable</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Seatalk1.Seatalk1Parser" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Seatalk1Parser.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="seatalk1Parser.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="IsBufferEmpty">
+      <MemberSignature Language="C#" Value="public bool IsBufferEmpty { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsBufferEmpty" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.Seatalk1Parser.IsBufferEmpty" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsBufferEmpty As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsBufferEmpty : bool" Usage="Iot.Device.Seatalk1.Seatalk1Parser.IsBufferEmpty" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the input buffer is currently empty
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="NewMessageDecoded">
+      <MemberSignature Language="C#" Value="public event Action&lt;Iot.Device.Seatalk1.Messages.SeatalkMessage&gt;? NewMessageDecoded;" />
+      <MemberSignature Language="ILAsm" Value=".event class System.Action`1&lt;class Iot.Device.Seatalk1.Messages.SeatalkMessage&gt; NewMessageDecoded" />
+      <MemberSignature Language="DocId" Value="E:Iot.Device.Seatalk1.Seatalk1Parser.NewMessageDecoded" />
+      <MemberSignature Language="VB.NET" Value="Public Event NewMessageDecoded As Action(Of SeatalkMessage) " />
+      <MemberSignature Language="F#" Value="member this.NewMessageDecoded : Action&lt;Iot.Device.Seatalk1.Messages.SeatalkMessage&gt; " Usage="member this.NewMessageDecoded : System.Action&lt;Iot.Device.Seatalk1.Messages.SeatalkMessage&gt; " />
+      <MemberType>Event</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Action&lt;Iot.Device.Seatalk1.Messages.SeatalkMessage&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This event is fired when a new message was decoded
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RegisterMessageType">
+      <MemberSignature Language="C#" Value="public void RegisterMessageType (Iot.Device.Seatalk1.Messages.SeatalkMessage message);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void RegisterMessageType(class Iot.Device.Seatalk1.Messages.SeatalkMessage message) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Seatalk1Parser.RegisterMessageType(Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub RegisterMessageType (message As SeatalkMessage)" />
+      <MemberSignature Language="F#" Value="member this.RegisterMessageType : Iot.Device.Seatalk1.Messages.SeatalkMessage -&gt; unit" Usage="seatalk1Parser.RegisterMessageType message" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="message" Type="Iot.Device.Seatalk1.Messages.SeatalkMessage" />
+      </Parameters>
+      <Docs>
+        <param name="message">An instance of the new message type</param>
+        <summary>
+            Register a new message type
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">The definition of the message seems incorrect</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StartDecode">
+      <MemberSignature Language="C#" Value="public void StartDecode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StartDecode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Seatalk1Parser.StartDecode" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StartDecode ()" />
+      <MemberSignature Language="F#" Value="member this.StartDecode : unit -&gt; unit" Usage="seatalk1Parser.StartDecode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Starts the thread to decode packets
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.InvalidOperationException">The parser is already running</exception>
+        <exception cref="T:System.ObjectDisposedException">The parser has already been disposed. The parser cannot currently be restarted.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="StopDecode">
+      <MemberSignature Language="C#" Value="public void StopDecode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void StopDecode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Seatalk1Parser.StopDecode" />
+      <MemberSignature Language="VB.NET" Value="Public Sub StopDecode ()" />
+      <MemberSignature Language="F#" Value="member this.StopDecode : unit -&gt; unit" Usage="seatalk1Parser.StopDecode " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Terminates the decoding thread.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

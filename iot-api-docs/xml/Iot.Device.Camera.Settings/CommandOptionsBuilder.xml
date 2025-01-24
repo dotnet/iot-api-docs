@@ -1,0 +1,579 @@
+<Type Name="CommandOptionsBuilder" FullName="Iot.Device.Camera.Settings.CommandOptionsBuilder">
+  <TypeSignature Language="C#" Value="public class CommandOptionsBuilder" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit CommandOptionsBuilder extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Camera.Settings.CommandOptionsBuilder" />
+  <TypeSignature Language="VB.NET" Value="Public Class CommandOptionsBuilder" />
+  <TypeSignature Language="F#" Value="type CommandOptionsBuilder = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Build the command line options using a fluent API.
+            The provided values are NOT validated by this builder.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public CommandOptionsBuilder (bool includeOutputToStdio = true);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(bool includeOutputToStdio) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.#ctor(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (Optional includeOutputToStdio As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Camera.Settings.CommandOptionsBuilder : bool -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="new Iot.Device.Camera.Settings.CommandOptionsBuilder includeOutputToStdio" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="includeOutputToStdio" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="includeOutputToStdio">True to redirect the stdio output to the given stream.</param>
+        <summary>
+            Allow to easily build the command line options needed to capture pictures or videos.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Get">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Camera.Settings.CommandOption Get (Iot.Device.Camera.Settings.Command command);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Camera.Settings.CommandOption Get(valuetype Iot.Device.Camera.Settings.Command command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.Get(Iot.Device.Camera.Settings.Command)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function Get (command As Command) As CommandOption" />
+      <MemberSignature Language="F#" Value="static member Get : Iot.Device.Camera.Settings.Command -&gt; Iot.Device.Camera.Settings.CommandOption" Usage="Iot.Device.Camera.Settings.CommandOptionsBuilder.Get command" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOption</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="Iot.Device.Camera.Settings.Command" />
+      </Parameters>
+      <Docs>
+        <param name="command">The command to retrieve.</param>
+        <summary>
+            Gets the CommmandOption, given the matching Command field.
+            </summary>
+        <returns>The command option.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetArguments">
+      <MemberSignature Language="C#" Value="public string[] GetArguments ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance string[] GetArguments() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.GetArguments" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetArguments () As String()" />
+      <MemberSignature Language="F#" Value="member this.GetArguments : unit -&gt; string[]" Usage="commandOptionsBuilder.GetArguments " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Retrieves all the command line options and values in a string array.
+            </summary>
+        <returns>An array of strings with all the command options accumulated in this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetByCategory">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Camera.Settings.CommandOption GetByCategory (Iot.Device.Camera.Settings.CommandCategory category, Iot.Device.Camera.Settings.Command command);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Camera.Settings.CommandOption GetByCategory(valuetype Iot.Device.Camera.Settings.CommandCategory category, valuetype Iot.Device.Camera.Settings.Command command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.GetByCategory(Iot.Device.Camera.Settings.CommandCategory,Iot.Device.Camera.Settings.Command)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetByCategory (category As CommandCategory, command As Command) As CommandOption" />
+      <MemberSignature Language="F#" Value="static member GetByCategory : Iot.Device.Camera.Settings.CommandCategory * Iot.Device.Camera.Settings.Command -&gt; Iot.Device.Camera.Settings.CommandOption" Usage="Iot.Device.Camera.Settings.CommandOptionsBuilder.GetByCategory (category, command)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOption</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="category" Type="Iot.Device.Camera.Settings.CommandCategory" />
+        <Parameter Name="command" Type="Iot.Device.Camera.Settings.Command" />
+      </Parameters>
+      <Docs>
+        <param name="category">The category of the command to retrieve.</param>
+        <param name="command">The command to retrieve.</param>
+        <summary>
+            Gets the CommmandOption, given the matching CommandCategory and Command fields.
+            </summary>
+        <returns>An instance of the CommandOption.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Remove">
+      <MemberSignature Language="C#" Value="public Iot.Device.Camera.Settings.CommandOptionsBuilder Remove (Iot.Device.Camera.Settings.CommandOption command);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Camera.Settings.CommandOptionsBuilder Remove(class Iot.Device.Camera.Settings.CommandOption command) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.Remove(Iot.Device.Camera.Settings.CommandOption)" />
+      <MemberSignature Language="VB.NET" Value="Public Function Remove (command As CommandOption) As CommandOptionsBuilder" />
+      <MemberSignature Language="F#" Value="member this.Remove : Iot.Device.Camera.Settings.CommandOption -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="commandOptionsBuilder.Remove command" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOptionsBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="command" Type="Iot.Device.Camera.Settings.CommandOption" />
+      </Parameters>
+      <Docs>
+        <param name="command">The command to remove.</param>
+        <summary>
+            Remove the specified option.
+            </summary>
+        <returns>A reference to this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="With">
+      <MemberSignature Language="C#" Value="public Iot.Device.Camera.Settings.CommandOptionsBuilder With (Iot.Device.Camera.Settings.CommandOptionAndValue optionAndValue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Camera.Settings.CommandOptionsBuilder With(class Iot.Device.Camera.Settings.CommandOptionAndValue optionAndValue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.With(Iot.Device.Camera.Settings.CommandOptionAndValue)" />
+      <MemberSignature Language="VB.NET" Value="Public Function With (optionAndValue As CommandOptionAndValue) As CommandOptionsBuilder" />
+      <MemberSignature Language="F#" Value="member this.With : Iot.Device.Camera.Settings.CommandOptionAndValue -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="commandOptionsBuilder.With optionAndValue" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOptionsBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="optionAndValue" Type="Iot.Device.Camera.Settings.CommandOptionAndValue" />
+      </Parameters>
+      <Docs>
+        <param name="optionAndValue">The command option and its value to be added to the current instance.</param>
+        <summary>
+            Adds the option specified in the argument.
+            </summary>
+        <returns>A reference to this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithCamera">
+      <MemberSignature Language="C#" Value="public Iot.Device.Camera.Settings.CommandOptionsBuilder WithCamera (int index);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Camera.Settings.CommandOptionsBuilder WithCamera(int32 index) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithCamera(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithCamera (index As Integer) As CommandOptionsBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithCamera : int -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="commandOptionsBuilder.WithCamera index" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOptionsBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="index" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="index">The index of the camera to be used.</param>
+        <summary>
+            Tells the app to use the camera with the specified index.
+            The indexes are obtained from the output when WithListCameras is used.
+            </summary>
+        <returns>A reference to this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithContinuousStreaming">
+      <MemberSignature Language="C#" Value="public Iot.Device.Camera.Settings.CommandOptionsBuilder WithContinuousStreaming (int ms = 0);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Camera.Settings.CommandOptionsBuilder WithContinuousStreaming(int32 ms) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithContinuousStreaming(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithContinuousStreaming (Optional ms As Integer = 0) As CommandOptionsBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithContinuousStreaming : int -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="commandOptionsBuilder.WithContinuousStreaming ms" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOptionsBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ms" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ms">The length of the capture operation in milliseconds.</param>
+        <summary>
+            Adds the options to capture the stream for the given amount of milliseconds.
+            The value 0 (default) will capture indefinitely until the process gets stopped.
+            This option makes only sense for videos.
+            </summary>
+        <returns>A reference to this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithH264VideoOptions">
+      <MemberSignature Language="C#" Value="public Iot.Device.Camera.Settings.CommandOptionsBuilder WithH264VideoOptions (string profile, string level, int intra = 60);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Camera.Settings.CommandOptionsBuilder WithH264VideoOptions(string profile, string level, int32 intra) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithH264VideoOptions(System.String,System.String,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithH264VideoOptions (profile As String, level As String, Optional intra As Integer = 60) As CommandOptionsBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithH264VideoOptions : string * string * int -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="commandOptionsBuilder.WithH264VideoOptions (profile, level, intra)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOptionsBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="profile" Type="System.String" />
+        <Parameter Name="level" Type="System.String" />
+        <Parameter Name="intra" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="profile">The H264 profile used by the hardware encoder: baseline, main or high.</param>
+        <param name="level">The level of the H264 protocol: 4, 4.1 or 4.2.</param>
+        <param name="intra">The frequency of I (Intra) frames (number of frames).</param>
+        <summary>
+            Adds the option to capture a video stream in H.264 format.
+            This method will automatically set H264 and the 'inline' option that writes the H264 header to
+            every Intra frame. The frequency of Intra frames can be changed.
+            </summary>
+        <returns>A reference to this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithHflip">
+      <MemberSignature Language="C#" Value="public Iot.Device.Camera.Settings.CommandOptionsBuilder WithHflip ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Camera.Settings.CommandOptionsBuilder WithHflip() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithHflip" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithHflip () As CommandOptionsBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithHflip : unit -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="commandOptionsBuilder.WithHflip " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOptionsBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Adds the option to mirror horizontally.
+            </summary>
+        <returns>A reference to this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithImageQuality">
+      <MemberSignature Language="C#" Value="public Iot.Device.Camera.Settings.CommandOptionsBuilder WithImageQuality (decimal sharpness, decimal contrast, decimal brightness, decimal saturation);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Camera.Settings.CommandOptionsBuilder WithImageQuality(valuetype System.Decimal sharpness, valuetype System.Decimal contrast, valuetype System.Decimal brightness, valuetype System.Decimal saturation) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithImageQuality(System.Decimal,System.Decimal,System.Decimal,System.Decimal)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithImageQuality (Optional sharpness As Decimal, Optional contrast As Decimal, Optional brightness As Decimal, Optional saturation As Decimal) As CommandOptionsBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithImageQuality : decimal * decimal * decimal * decimal -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="commandOptionsBuilder.WithImageQuality (sharpness, contrast, brightness, saturation)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOptionsBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="sharpness" Type="System.Decimal" />
+        <Parameter Name="contrast" Type="System.Decimal" />
+        <Parameter Name="brightness" Type="System.Decimal" />
+        <Parameter Name="saturation" Type="System.Decimal" />
+      </Parameters>
+      <Docs>
+        <param name="sharpness">The sharpness value (must be positive, typically no more than 2.0).</param>
+        <param name="contrast">The contrast value (must be zero or positive, typically no more than 2.0).</param>
+        <param name="brightness">The brightness value (must be between -1.0=black and 1.0=white).</param>
+        <param name="saturation">The saturation value (0 is gray, 1.0 is the default, larger values are saturated).</param>
+        <summary>
+            Adds the image quality options.
+            </summary>
+        <returns>A reference to this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithListCameras">
+      <MemberSignature Language="C#" Value="public Iot.Device.Camera.Settings.CommandOptionsBuilder WithListCameras ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Camera.Settings.CommandOptionsBuilder WithListCameras() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithListCameras" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithListCameras () As CommandOptionsBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithListCameras : unit -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="commandOptionsBuilder.WithListCameras " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOptionsBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Tells the app to output the text with all the installed cameras and their characteristics.
+            </summary>
+        <returns>A reference to this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithMJPEGVideoOptions">
+      <MemberSignature Language="C#" Value="public Iot.Device.Camera.Settings.CommandOptionsBuilder WithMJPEGVideoOptions (int quality);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Camera.Settings.CommandOptionsBuilder WithMJPEGVideoOptions(int32 quality) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithMJPEGVideoOptions(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithMJPEGVideoOptions (quality As Integer) As CommandOptionsBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithMJPEGVideoOptions : int -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="commandOptionsBuilder.WithMJPEGVideoOptions quality" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOptionsBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="quality" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="quality">The quality of each MJPEG picture: 100 is maximum quality and 50 is the default.</param>
+        <summary>
+            Adds the option to capture a video stream in MJPEG format.
+            </summary>
+        <returns>A reference to this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithOutput">
+      <MemberSignature Language="C#" Value="public Iot.Device.Camera.Settings.CommandOptionsBuilder WithOutput (string output);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Camera.Settings.CommandOptionsBuilder WithOutput(string output) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithOutput(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithOutput (output As String) As CommandOptionsBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithOutput : string -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="commandOptionsBuilder.WithOutput output" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOptionsBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="output" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="output">A valid option, URL or filename.</param>
+        <summary>
+            Tells the app to output the binary content towards the specified output.
+            </summary>
+        <returns>A reference to this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithPictureOptions">
+      <MemberSignature Language="C#" Value="public Iot.Device.Camera.Settings.CommandOptionsBuilder WithPictureOptions (int quality = 93, string encoding = &quot;jpg&quot;);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Camera.Settings.CommandOptionsBuilder WithPictureOptions(int32 quality, string encoding) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithPictureOptions(System.Int32,System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithPictureOptions (Optional quality As Integer = 93, Optional encoding As String = &quot;jpg&quot;) As CommandOptionsBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithPictureOptions : int * string -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="commandOptionsBuilder.WithPictureOptions (quality, encoding)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOptionsBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="quality" Type="System.Int32" />
+        <Parameter Name="encoding" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="quality">0 to 100, default is 93.</param>
+        <param name="encoding">One of the following strings: jpg, png, bmp, rgb, yuv420.</param>
+        <summary>
+            Adds the option to take a still picture.
+            </summary>
+        <returns>A reference to this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithResolution">
+      <MemberSignature Language="C#" Value="public Iot.Device.Camera.Settings.CommandOptionsBuilder WithResolution (int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Camera.Settings.CommandOptionsBuilder WithResolution(int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithResolution(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithResolution (width As Integer, height As Integer) As CommandOptionsBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithResolution : int * int -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="commandOptionsBuilder.WithResolution (width, height)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOptionsBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="width">The width of the image.</param>
+        <param name="height">The heighy of the image.</param>
+        <summary>
+            Adds the resolution options.
+            </summary>
+        <returns>A reference to this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithTimelapse">
+      <MemberSignature Language="C#" Value="public Iot.Device.Camera.Settings.CommandOptionsBuilder WithTimelapse (int ms);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Camera.Settings.CommandOptionsBuilder WithTimelapse(int32 ms) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithTimelapse(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithTimelapse (ms As Integer) As CommandOptionsBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithTimelapse : int -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="commandOptionsBuilder.WithTimelapse ms" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOptionsBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ms" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ms">The interval in milliseconds.</param>
+        <summary>
+            This option is only valid on still pictures.
+            It captures a new image every interval (specified in milliseconds).
+            The format of the filename should use the counter. For example: "image%d.jpg".
+            </summary>
+        <returns>A reference to this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithTimeout">
+      <MemberSignature Language="C#" Value="public Iot.Device.Camera.Settings.CommandOptionsBuilder WithTimeout (int ms = 1);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Camera.Settings.CommandOptionsBuilder WithTimeout(int32 ms) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithTimeout(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithTimeout (Optional ms As Integer = 1) As CommandOptionsBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithTimeout : int -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="commandOptionsBuilder.WithTimeout ms" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOptionsBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="ms" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="ms">The time after which a still picture is captured, in milliseconds.</param>
+        <summary>
+            Sets the timeout option to 1ms which is the minimum delay to take a still picture.
+            When capturing pictures, the value '0' will continue to capture indefinitely which is rarely desired.
+            Instead, to capture a single still picture immediately, use the value '1' (1ms delay).
+            </summary>
+        <returns>A reference to this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithTuningFile">
+      <MemberSignature Language="C#" Value="public Iot.Device.Camera.Settings.CommandOptionsBuilder WithTuningFile (string path);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Camera.Settings.CommandOptionsBuilder WithTuningFile(string path) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithTuningFile(System.String)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithTuningFile (path As String) As CommandOptionsBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithTuningFile : string -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="commandOptionsBuilder.WithTuningFile path" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOptionsBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="path" Type="System.String" />
+      </Parameters>
+      <Docs>
+        <param name="path"> The path to the tuning file.</param>
+        <summary>
+            Adds the option to load a tuning file for the camera
+            </summary>
+        <returns>A reference to this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithVflip">
+      <MemberSignature Language="C#" Value="public Iot.Device.Camera.Settings.CommandOptionsBuilder WithVflip ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Camera.Settings.CommandOptionsBuilder WithVflip() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithVflip" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithVflip () As CommandOptionsBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithVflip : unit -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="commandOptionsBuilder.WithVflip " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOptionsBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Adds the option to mirror vertically.
+            </summary>
+        <returns>A reference to this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WithVideoFramerate">
+      <MemberSignature Language="C#" Value="public Iot.Device.Camera.Settings.CommandOptionsBuilder WithVideoFramerate (int rate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Camera.Settings.CommandOptionsBuilder WithVideoFramerate(int32 rate) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithVideoFramerate(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function WithVideoFramerate (rate As Integer) As CommandOptionsBuilder" />
+      <MemberSignature Language="F#" Value="member this.WithVideoFramerate : int -&gt; Iot.Device.Camera.Settings.CommandOptionsBuilder" Usage="commandOptionsBuilder.WithVideoFramerate rate" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Camera.Settings.CommandOptionsBuilder</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rate" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="rate">The number of frames per second, if not specified uses the camera default</param>
+        <summary>
+            Adds the option to capture a video stream at a certain Framerate.
+            </summary>
+        <returns>A reference to this instance.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

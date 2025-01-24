@@ -1,0 +1,258 @@
+<Type Name="HeadingAndTrackControlStatus" FullName="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus">
+  <TypeSignature Language="C#" Value="public class HeadingAndTrackControlStatus : Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HeadingAndTrackControlStatus extends Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus" />
+  <TypeSignature Language="VB.NET" Value="Public Class HeadingAndTrackControlStatus&#xA;Inherits HeadingAndTrackControl" />
+  <TypeSignature Language="F#" Value="type HeadingAndTrackControlStatus = class&#xA;    inherit HeadingAndTrackControl" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            This is the status reply from the autopilot. It is similar to the HTC message <see cref="T:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl" /> with 4 extra fields.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HeadingAndTrackControlStatus (Iot.Device.Nmea0183.TalkerSentence sentence, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Nmea0183.TalkerSentence sentence, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sentence As TalkerSentence, time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus : Iot.Device.Nmea0183.TalkerSentence * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus" Usage="new Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus (sentence, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sentence" Type="Iot.Device.Nmea0183.TalkerSentence" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="sentence">To be added.</param>
+        <param name="time">To be added.</param>
+        <summary>
+            Internal constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HeadingAndTrackControlStatus (Iot.Device.Nmea0183.TalkerId talkerId, System.Collections.Generic.IEnumerable&lt;string&gt; fields, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Nmea0183.TalkerId talkerId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; fields, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (talkerId As TalkerId, fields As IEnumerable(Of String), time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus : Iot.Device.Nmea0183.TalkerId * seq&lt;string&gt; * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus" Usage="new Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus (talkerId, fields, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="talkerId" Type="Iot.Device.Nmea0183.TalkerId" />
+        <Parameter Name="fields" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="talkerId">To be added.</param>
+        <param name="fields">To be added.</param>
+        <param name="time">To be added.</param>
+        <summary>
+            Decoding constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HeadingAndTrackControlStatus (string status, UnitsNet.Angle? commandedRudderAngle, string commandedRudderDirection, string turnMode, UnitsNet.Angle? rudderLimit, UnitsNet.Angle? offHeadingLimit, UnitsNet.Length? turnRadius, UnitsNet.RotationalSpeed? rateOfTurn, UnitsNet.Angle? desiredHeading, UnitsNet.Length? offTrackLimit, UnitsNet.Angle? commandedTrack, bool headingIsTrue, bool rudderLimitExceeded, bool headingLimitExceeded, bool trackLimitExceeded, UnitsNet.Angle? actualHeading);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string status, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; commandedRudderAngle, string commandedRudderDirection, string turnMode, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; rudderLimit, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; offHeadingLimit, valuetype System.Nullable`1&lt;valuetype UnitsNet.Length&gt; turnRadius, valuetype System.Nullable`1&lt;valuetype UnitsNet.RotationalSpeed&gt; rateOfTurn, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; desiredHeading, valuetype System.Nullable`1&lt;valuetype UnitsNet.Length&gt; offTrackLimit, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; commandedTrack, bool headingIsTrue, bool rudderLimitExceeded, bool headingLimitExceeded, bool trackLimitExceeded, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; actualHeading) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.#ctor(System.String,System.Nullable{UnitsNet.Angle},System.String,System.String,System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Length},System.Nullable{UnitsNet.RotationalSpeed},System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Length},System.Nullable{UnitsNet.Angle},System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Nullable{UnitsNet.Angle})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (status As String, commandedRudderAngle As Nullable(Of Angle), commandedRudderDirection As String, turnMode As String, rudderLimit As Nullable(Of Angle), offHeadingLimit As Nullable(Of Angle), turnRadius As Nullable(Of Length), rateOfTurn As Nullable(Of RotationalSpeed), desiredHeading As Nullable(Of Angle), offTrackLimit As Nullable(Of Length), commandedTrack As Nullable(Of Angle), headingIsTrue As Boolean, rudderLimitExceeded As Boolean, headingLimitExceeded As Boolean, trackLimitExceeded As Boolean, actualHeading As Nullable(Of Angle))" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus : string * Nullable&lt;UnitsNet.Angle&gt; * string * string * Nullable&lt;UnitsNet.Angle&gt; * Nullable&lt;UnitsNet.Angle&gt; * Nullable&lt;UnitsNet.Length&gt; * Nullable&lt;UnitsNet.RotationalSpeed&gt; * Nullable&lt;UnitsNet.Angle&gt; * Nullable&lt;UnitsNet.Length&gt; * Nullable&lt;UnitsNet.Angle&gt; * bool * bool * bool * bool * Nullable&lt;UnitsNet.Angle&gt; -&gt; Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus" Usage="new Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus (status, commandedRudderAngle, commandedRudderDirection, turnMode, rudderLimit, offHeadingLimit, turnRadius, rateOfTurn, desiredHeading, offTrackLimit, commandedTrack, headingIsTrue, rudderLimitExceeded, headingLimitExceeded, trackLimitExceeded, actualHeading)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="status" Type="System.String" />
+        <Parameter Name="commandedRudderAngle" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+        <Parameter Name="commandedRudderDirection" Type="System.String" />
+        <Parameter Name="turnMode" Type="System.String" />
+        <Parameter Name="rudderLimit" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+        <Parameter Name="offHeadingLimit" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+        <Parameter Name="turnRadius" Type="System.Nullable&lt;UnitsNet.Length&gt;" />
+        <Parameter Name="rateOfTurn" Type="System.Nullable&lt;UnitsNet.RotationalSpeed&gt;" />
+        <Parameter Name="desiredHeading" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+        <Parameter Name="offTrackLimit" Type="System.Nullable&lt;UnitsNet.Length&gt;" />
+        <Parameter Name="commandedTrack" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+        <Parameter Name="headingIsTrue" Type="System.Boolean" />
+        <Parameter Name="rudderLimitExceeded" Type="System.Boolean" />
+        <Parameter Name="headingLimitExceeded" Type="System.Boolean" />
+        <Parameter Name="trackLimitExceeded" Type="System.Boolean" />
+        <Parameter Name="actualHeading" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="status">Status of Autopilot</param>
+        <param name="commandedRudderAngle">Commanded rudder angle</param>
+        <param name="commandedRudderDirection">Rudder direction</param>
+        <param name="turnMode">Turn mode</param>
+        <param name="rudderLimit">Rudder limit</param>
+        <param name="offHeadingLimit">Off-Heading limit</param>
+        <param name="turnRadius">Desired turn radius</param>
+        <param name="rateOfTurn">Desired rate of turn</param>
+        <param name="desiredHeading">Desired heading</param>
+        <param name="offTrackLimit">Desired off-track limit</param>
+        <param name="commandedTrack">Commanded track direction</param>
+        <param name="headingIsTrue">Heading uses true angles</param>
+        <param name="rudderLimitExceeded">True if rudder limit is exceeded</param>
+        <param name="headingLimitExceeded">True if the heading is out of limits</param>
+        <param name="trackLimitExceeded">True if the track limits are exceeded</param>
+        <param name="actualHeading">Heading from the Autopilot's onw heading sensor</param>
+        <summary>
+            Initialize a new instance of this type.
+            See the individual properties for further explanation to the parameters.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ActualHeading">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? ActualHeading { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; ActualHeading" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.ActualHeading" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ActualHeading As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.ActualHeading : Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.ActualHeading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The actual heading, from the Autopilot's own heading sensor
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeadingLimitExceeded">
+      <MemberSignature Language="C#" Value="public bool HeadingLimitExceeded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HeadingLimitExceeded" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.HeadingLimitExceeded" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HeadingLimitExceeded As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HeadingLimitExceeded : bool" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.HeadingLimitExceeded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the heading limit is exceeded
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Nmea0183.SentenceId Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype Iot.Device.Nmea0183.SentenceId Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Id As SentenceId" />
+      <MemberSignature Language="F#" Value="static member Id : Iot.Device.Nmea0183.SentenceId" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This sentence's id
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RudderLimitExceeded">
+      <MemberSignature Language="C#" Value="public bool RudderLimitExceeded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool RudderLimitExceeded" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.RudderLimitExceeded" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RudderLimitExceeded As Boolean" />
+      <MemberSignature Language="F#" Value="member this.RudderLimitExceeded : bool" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.RudderLimitExceeded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the rudder limit is exceeded
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToNmeaParameterList">
+      <MemberSignature Language="C#" Value="public override string ToNmeaParameterList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToNmeaParameterList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.ToNmeaParameterList" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToNmeaParameterList () As String" />
+      <MemberSignature Language="F#" Value="override this.ToNmeaParameterList : unit -&gt; string" Usage="headingAndTrackControlStatus.ToNmeaParameterList " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="TrackLimitExceeded">
+      <MemberSignature Language="C#" Value="public bool TrackLimitExceeded { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool TrackLimitExceeded" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.TrackLimitExceeded" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TrackLimitExceeded As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TrackLimitExceeded : bool" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.TrackLimitExceeded" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if the track limit is exceeded
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

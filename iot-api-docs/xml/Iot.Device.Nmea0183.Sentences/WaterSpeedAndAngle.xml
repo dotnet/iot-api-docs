@@ -9,6 +9,7 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Iot.Device.Nmea0183.Sentences.NmeaSentence</BaseTypeName>
@@ -32,7 +33,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="sentence" Type="Iot.Device.Nmea0183.TalkerSentence" />
@@ -58,7 +59,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="talkerId" Type="Iot.Device.Nmea0183.TalkerId" />
@@ -76,6 +77,32 @@
       </Docs>
     </Member>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public WaterSpeedAndAngle (UnitsNet.Angle? headingTrue, UnitsNet.Angle? headingMagnetic, UnitsNet.Speed speed);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; headingTrue, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; headingMagnetic, valuetype UnitsNet.Speed speed) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.WaterSpeedAndAngle.#ctor(System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Angle},UnitsNet.Speed)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (headingTrue As Nullable(Of Angle), headingMagnetic As Nullable(Of Angle), speed As Speed)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.WaterSpeedAndAngle : Nullable&lt;UnitsNet.Angle&gt; * Nullable&lt;UnitsNet.Angle&gt; * UnitsNet.Speed -&gt; Iot.Device.Nmea0183.Sentences.WaterSpeedAndAngle" Usage="new Iot.Device.Nmea0183.Sentences.WaterSpeedAndAngle (headingTrue, headingMagnetic, speed)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="headingTrue" Type="System.Nullable&lt;UnitsNet.Angle&gt;" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="headingMagnetic" Type="System.Nullable&lt;UnitsNet.Angle&gt;" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="speed" Type="UnitsNet.Speed" Index="2" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="headingTrue">To be added.</param>
+        <param name="headingMagnetic">To be added.</param>
+        <param name="speed">To be added.</param>
+        <summary>
+            Constructs a new MWV sentence
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public WaterSpeedAndAngle (UnitsNet.Angle headingTrue, UnitsNet.Angle headingMagnetic, UnitsNet.Speed speed);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype UnitsNet.Angle headingTrue, valuetype UnitsNet.Angle headingMagnetic, valuetype UnitsNet.Speed speed) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.WaterSpeedAndAngle.#ctor(UnitsNet.Angle,UnitsNet.Angle,UnitsNet.Speed)" />
@@ -86,12 +113,11 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
-        <Parameter Name="headingTrue" Type="UnitsNet.Angle" />
-        <Parameter Name="headingMagnetic" Type="UnitsNet.Angle" />
-        <Parameter Name="speed" Type="UnitsNet.Speed" />
+        <Parameter Name="headingTrue" Type="UnitsNet.Angle" Index="0" FrameworkAlternate="iot-dotnet-2.1;iot-dotnet-2.2" />
+        <Parameter Name="headingMagnetic" Type="UnitsNet.Angle" Index="1" FrameworkAlternate="iot-dotnet-2.1;iot-dotnet-2.2" />
+        <Parameter Name="speed" Type="UnitsNet.Speed" Index="2" FrameworkAlternate="iot-dotnet-2.1;iot-dotnet-2.2" />
       </Parameters>
       <Docs>
         <param name="headingTrue">To be added.</param>
@@ -114,7 +140,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
@@ -138,7 +164,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
@@ -162,7 +188,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
@@ -186,7 +212,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -210,7 +236,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Speed</ReturnType>
@@ -234,7 +260,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -259,7 +285,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

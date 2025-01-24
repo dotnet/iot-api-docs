@@ -1,0 +1,233 @@
+<Type Name="Vcnl4040Device" FullName="Iot.Device.Vcnl4040.Vcnl4040Device">
+  <TypeSignature Language="C#" Value="public class Vcnl4040Device : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Vcnl4040Device extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Vcnl4040.Vcnl4040Device" />
+  <TypeSignature Language="VB.NET" Value="Public Class Vcnl4040Device&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Vcnl4040Device = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents a VCNL4040 device
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Vcnl4040Device (System.Device.I2c.I2cDevice i2cDevice);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.Vcnl4040Device.#ctor(System.Device.I2c.I2cDevice)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Vcnl4040.Vcnl4040Device : System.Device.I2c.I2cDevice -&gt; Iot.Device.Vcnl4040.Vcnl4040Device" Usage="new Iot.Device.Vcnl4040.Vcnl4040Device i2cDevice" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">To be added.</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Vcnl4040.Vcnl4040Device" /> binding.
+            It checks communication and compatibility basing on the device identifier.
+            After that it resets the device by setting all registers to the default values.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AmbientLightSensor">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vcnl4040.AmbientLightSensor AmbientLightSensor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Vcnl4040.AmbientLightSensor AmbientLightSensor" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.Vcnl4040Device.AmbientLightSensor" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property AmbientLightSensor As AmbientLightSensor" />
+      <MemberSignature Language="F#" Value="member this.AmbientLightSensor : Iot.Device.Vcnl4040.AmbientLightSensor" Usage="Iot.Device.Vcnl4040.Vcnl4040Device.AmbientLightSensor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.AmbientLightSensor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the ambient light sensor of the VCNL4040 device.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const int DefaultI2cAddress = 96;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultI2cAddress = (96)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Vcnl4040.Vcnl4040Device.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Integer  = 96" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : int" Usage="Iot.Device.Vcnl4040.Vcnl4040Device.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>96</MemberValue>
+      <Docs>
+        <summary>
+            I2C bus address
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeviceId">
+      <MemberSignature Language="C#" Value="public int DeviceId { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 DeviceId" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.Vcnl4040Device.DeviceId" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DeviceId As Integer" />
+      <MemberSignature Language="F#" Value="member this.DeviceId : int" Usage="Iot.Device.Vcnl4040.Vcnl4040Device.DeviceId" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the device identifier.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.Vcnl4040Device.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="vcnl4040Device.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetAndClearInterruptFlags">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vcnl4040.InterruptFlags GetAndClearInterruptFlags ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Vcnl4040.InterruptFlags GetAndClearInterruptFlags() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.Vcnl4040Device.GetAndClearInterruptFlags" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetAndClearInterruptFlags () As InterruptFlags" />
+      <MemberSignature Language="F#" Value="member this.GetAndClearInterruptFlags : unit -&gt; Iot.Device.Vcnl4040.InterruptFlags" Usage="vcnl4040Device.GetAndClearInterruptFlags " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.InterruptFlags</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets and clears (by reading) the interrupt flags.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ProximitySensor">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vcnl4040.ProximitySensor ProximitySensor { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class Iot.Device.Vcnl4040.ProximitySensor ProximitySensor" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.Vcnl4040Device.ProximitySensor" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ProximitySensor As ProximitySensor" />
+      <MemberSignature Language="F#" Value="member this.ProximitySensor : Iot.Device.Vcnl4040.ProximitySensor" Usage="Iot.Device.Vcnl4040.Vcnl4040Device.ProximitySensor" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.ProximitySensor</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get the proximity sensor of the VCNL4040 device.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Reset">
+      <MemberSignature Language="C#" Value="public void Reset ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Reset() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.Vcnl4040Device.Reset" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Reset ()" />
+      <MemberSignature Language="F#" Value="member this.Reset : unit -&gt; unit" Usage="vcnl4040Device.Reset " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Resets the device to defaults.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VerifyDevice">
+      <MemberSignature Language="C#" Value="public void VerifyDevice ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void VerifyDevice() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.Vcnl4040Device.VerifyDevice" />
+      <MemberSignature Language="VB.NET" Value="Public Sub VerifyDevice ()" />
+      <MemberSignature Language="F#" Value="member this.VerifyDevice : unit -&gt; unit" Usage="vcnl4040Device.VerifyDevice " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Verifies whether a functional I2C connection to the device exists and checks the identification for
+            device recognition. An exception is raised, if the communication doesn't work or the identification is incorrect.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.IO.IOException">Non-functional I2C communication.</exception>
+        <exception cref="T:System.NotSupportedException">Incompatible device detected.</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

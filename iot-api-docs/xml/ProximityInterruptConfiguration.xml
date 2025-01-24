@@ -1,0 +1,464 @@
+<Type Name="ProximityInterruptConfiguration" FullName="ProximityInterruptConfiguration">
+  <TypeSignature Language="C#" Value="public class ProximityInterruptConfiguration : IEquatable&lt;ProximityInterruptConfiguration&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit ProximityInterruptConfiguration extends System.Object implements class System.IEquatable`1&lt;ProximityInterruptConfiguration&gt;" />
+  <TypeSignature Language="DocId" Value="T:ProximityInterruptConfiguration" />
+  <TypeSignature Language="VB.NET" Value="Public Class ProximityInterruptConfiguration&#xA;Implements IEquatable(Of ProximityInterruptConfiguration)" />
+  <TypeSignature Language="F#" Value="type ProximityInterruptConfiguration = class&#xA;    interface IEquatable&lt;ProximityInterruptConfiguration&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;ProximityInterruptConfiguration&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <param name="LowerThreshold">Value for the lower proximity threshold.
+            The lower and upper threshold together define the proximity zone (hysteresis).
+            The lower threshold defines the boundary of the furthest distance.
+            An interrupt is triggered when a detected object, coming from above the zone (higher value),
+            passes this boundary (decreasing value), i.e., the object is moving away.</param>
+    <param name="UpperThreshold">Value for the upper proximity threshold.
+            The lower and upper thresholds together define the proximity zone (hysteresis).
+            The upper threshold defines the boundary of the closest distance.
+            An interrupt is triggered when a detected object, coming from below the zone (lower value),
+            passes this boundary (increasing value), i.e., the object is approaching.</param>
+    <param name="Persistence">Interrupt persistence setting.</param>
+    <param name="SmartPersistenceEnabled">Enables the smart persistence function.</param>
+    <param name="Mode">Interrupt mode defining triggering events or logic output.
+            In regular interrupt mode, an interrupt (INT-pin function) can be triggered when the lower threshold
+            is undershot (object moving away from the proximity zone), when the upper threshold is exceeded
+            (object approaching from the proximity zone), or in both cases.
+            In these instances, the corresponding flags are set.
+            Alternatively, the Logic Output mode can be selected. In this mode, the INT pin is automatically controlled.
+            The pin is set (INT = L) when an object approaches above the upper threshold.
+            It is reset (INT = H) when the object moves away above the lower threshold.
+            In this mode, the interrupt flags are NOT set. Detection in the host software is not possible.
+            </param>
+    <summary>
+            Represents the set of parameters defining the interrupt configuration for the proximity sensor.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected ProximityInterruptConfiguration (ProximityInterruptConfiguration original);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(ProximityInterruptConfiguration original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:ProximityInterruptConfiguration.#ctor(ProximityInterruptConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (original As ProximityInterruptConfiguration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="ProximityInterruptConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="original">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public ProximityInterruptConfiguration (ushort LowerThreshold, ushort UpperThreshold, Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence Persistence, bool SmartPersistenceEnabled, Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode Mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(unsigned int16 LowerThreshold, unsigned int16 UpperThreshold, valuetype Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence Persistence, bool SmartPersistenceEnabled, valuetype Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode Mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:ProximityInterruptConfiguration.#ctor(System.UInt16,System.UInt16,Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence,System.Boolean,Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (LowerThreshold As UShort, UpperThreshold As UShort, Persistence As PsInterruptPersistence, SmartPersistenceEnabled As Boolean, Mode As ProximityInterruptMode)" />
+      <MemberSignature Language="F#" Value="new ProximityInterruptConfiguration : uint16 * uint16 * Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence * bool * Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode -&gt; ProximityInterruptConfiguration" Usage="new ProximityInterruptConfiguration (LowerThreshold, UpperThreshold, Persistence, SmartPersistenceEnabled, Mode)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="LowerThreshold" Type="System.UInt16" />
+        <Parameter Name="UpperThreshold" Type="System.UInt16" />
+        <Parameter Name="Persistence" Type="Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence" />
+        <Parameter Name="SmartPersistenceEnabled" Type="System.Boolean" />
+        <Parameter Name="Mode" Type="Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode" />
+      </Parameters>
+      <Docs>
+        <param name="LowerThreshold">Value for the lower proximity threshold.
+            The lower and upper threshold together define the proximity zone (hysteresis).
+            The lower threshold defines the boundary of the furthest distance.
+            An interrupt is triggered when a detected object, coming from above the zone (higher value),
+            passes this boundary (decreasing value), i.e., the object is moving away.</param>
+        <param name="UpperThreshold">Value for the upper proximity threshold.
+            The lower and upper thresholds together define the proximity zone (hysteresis).
+            The upper threshold defines the boundary of the closest distance.
+            An interrupt is triggered when a detected object, coming from below the zone (lower value),
+            passes this boundary (increasing value), i.e., the object is approaching.</param>
+        <param name="Persistence">Interrupt persistence setting.</param>
+        <param name="SmartPersistenceEnabled">Enables the smart persistence function.</param>
+        <param name="Mode">Interrupt mode defining triggering events or logic output.
+            In regular interrupt mode, an interrupt (INT-pin function) can be triggered when the lower threshold
+            is undershot (object moving away from the proximity zone), when the upper threshold is exceeded
+            (object approaching from the proximity zone), or in both cases.
+            In these instances, the corresponding flags are set.
+            Alternatively, the Logic Output mode can be selected. In this mode, the INT pin is automatically controlled.
+            The pin is set (INT = L) when an object approaches above the upper threshold.
+            It is reset (INT = H) when the object moves away above the lower threshold.
+            In this mode, the interrupt flags are NOT set. Detection in the host software is not possible.
+            </param>
+        <summary>
+            Represents the set of parameters defining the interrupt configuration for the proximity sensor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="&lt;Clone&gt;$">
+      <MemberSignature Language="C#" Value="public virtual ProximityInterruptConfiguration &lt;Clone&gt;$ ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance ProximityInterruptConfiguration &lt;Clone&gt;$() cil managed" />
+      <MemberSignature Language="DocId" Value="M:ProximityInterruptConfiguration.&lt;Clone&gt;$" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function &lt;Clone&gt;$ () As ProximityInterruptConfiguration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>ProximityInterruptConfiguration</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deconstruct">
+      <MemberSignature Language="C#" Value="public void Deconstruct (out ushort LowerThreshold, out ushort UpperThreshold, out Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence Persistence, out bool SmartPersistenceEnabled, out Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode Mode);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Deconstruct([out] unsigned int16&amp; LowerThreshold, [out] unsigned int16&amp; UpperThreshold, [out] valuetype Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence&amp; Persistence, [out] bool&amp; SmartPersistenceEnabled, [out] valuetype Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode&amp; Mode) cil managed" />
+      <MemberSignature Language="DocId" Value="M:ProximityInterruptConfiguration.Deconstruct(System.UInt16@,System.UInt16@,Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence@,System.Boolean@,Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode@)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Deconstruct (ByRef LowerThreshold As UShort, ByRef UpperThreshold As UShort, ByRef Persistence As PsInterruptPersistence, ByRef SmartPersistenceEnabled As Boolean, ByRef Mode As ProximityInterruptMode)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="LowerThreshold" Type="System.UInt16" RefType="out" />
+        <Parameter Name="UpperThreshold" Type="System.UInt16" RefType="out" />
+        <Parameter Name="Persistence" Type="Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence" RefType="out" />
+        <Parameter Name="SmartPersistenceEnabled" Type="System.Boolean" RefType="out" />
+        <Parameter Name="Mode" Type="Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="LowerThreshold">To be added.</param>
+        <param name="UpperThreshold">To be added.</param>
+        <param name="Persistence">To be added.</param>
+        <param name="SmartPersistenceEnabled">To be added.</param>
+        <param name="Mode">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EqualityContract">
+      <MemberSignature Language="C#" Value="protected virtual Type EqualityContract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EqualityContract" />
+      <MemberSignature Language="DocId" Value="P:ProximityInterruptConfiguration.EqualityContract" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property EqualityContract As Type" />
+      <MemberSignature Language="F#" Value="member this.EqualityContract : Type" Usage="ProximityInterruptConfiguration.EqualityContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public virtual bool Equals (ProximityInterruptConfiguration? other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(ProximityInterruptConfiguration other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:ProximityInterruptConfiguration.Equals(ProximityInterruptConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Equals (other As ProximityInterruptConfiguration) As Boolean" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="ProximityInterruptConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:ProximityInterruptConfiguration.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:ProximityInterruptConfiguration.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LowerThreshold">
+      <MemberSignature Language="C#" Value="public ushort LowerThreshold { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int16 LowerThreshold" />
+      <MemberSignature Language="DocId" Value="P:ProximityInterruptConfiguration.LowerThreshold" />
+      <MemberSignature Language="VB.NET" Value="Public Property LowerThreshold As UShort" />
+      <MemberSignature Language="F#" Value="member this.LowerThreshold : uint16 with get, set" Usage="ProximityInterruptConfiguration.LowerThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Value for the lower proximity threshold.
+            The lower and upper threshold together define the proximity zone (hysteresis).
+            The lower threshold defines the boundary of the furthest distance.
+            An interrupt is triggered when a detected object, coming from above the zone (higher value),
+            passes this boundary (decreasing value), i.e., the object is moving away.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Mode">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode Mode { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode Mode" />
+      <MemberSignature Language="DocId" Value="P:ProximityInterruptConfiguration.Mode" />
+      <MemberSignature Language="VB.NET" Value="Public Property Mode As ProximityInterruptMode" />
+      <MemberSignature Language="F#" Value="member this.Mode : Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode with get, set" Usage="ProximityInterruptConfiguration.Mode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Interrupt mode defining triggering events or logic output.
+            In regular interrupt mode, an interrupt (INT-pin function) can be triggered when the lower threshold
+            is undershot (object moving away from the proximity zone), when the upper threshold is exceeded
+            (object approaching from the proximity zone), or in both cases.
+            In these instances, the corresponding flags are set.
+            Alternatively, the Logic Output mode can be selected. In this mode, the INT pin is automatically controlled.
+            The pin is set (INT = L) when an object approaches above the upper threshold.
+            It is reset (INT = H) when the object moves away above the lower threshold.
+            In this mode, the interrupt flags are NOT set. Detection in the host software is not possible.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (ProximityInterruptConfiguration? left, ProximityInterruptConfiguration? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(ProximityInterruptConfiguration left, ProximityInterruptConfiguration right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:ProximityInterruptConfiguration.op_Equality(ProximityInterruptConfiguration,ProximityInterruptConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As ProximityInterruptConfiguration, right As ProximityInterruptConfiguration) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="ProximityInterruptConfiguration" />
+        <Parameter Name="right" Type="ProximityInterruptConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (ProximityInterruptConfiguration? left, ProximityInterruptConfiguration? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(ProximityInterruptConfiguration left, ProximityInterruptConfiguration right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:ProximityInterruptConfiguration.op_Inequality(ProximityInterruptConfiguration,ProximityInterruptConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As ProximityInterruptConfiguration, right As ProximityInterruptConfiguration) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="ProximityInterruptConfiguration" />
+        <Parameter Name="right" Type="ProximityInterruptConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Persistence">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence Persistence { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence Persistence" />
+      <MemberSignature Language="DocId" Value="P:ProximityInterruptConfiguration.Persistence" />
+      <MemberSignature Language="VB.NET" Value="Public Property Persistence As PsInterruptPersistence" />
+      <MemberSignature Language="F#" Value="member this.Persistence : Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence with get, set" Usage="ProximityInterruptConfiguration.Persistence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Interrupt persistence setting.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintMembers">
+      <MemberSignature Language="C#" Value="protected virtual bool PrintMembers (System.Text.StringBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool PrintMembers(class System.Text.StringBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:ProximityInterruptConfiguration.PrintMembers(System.Text.StringBuilder)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function PrintMembers (builder As StringBuilder) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="System.Text.StringBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="builder">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="SmartPersistenceEnabled">
+      <MemberSignature Language="C#" Value="public bool SmartPersistenceEnabled { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool SmartPersistenceEnabled" />
+      <MemberSignature Language="DocId" Value="P:ProximityInterruptConfiguration.SmartPersistenceEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property SmartPersistenceEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.SmartPersistenceEnabled : bool with get, set" Usage="ProximityInterruptConfiguration.SmartPersistenceEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Enables the smart persistence function.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:ProximityInterruptConfiguration.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpperThreshold">
+      <MemberSignature Language="C#" Value="public ushort UpperThreshold { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int16 UpperThreshold" />
+      <MemberSignature Language="DocId" Value="P:ProximityInterruptConfiguration.UpperThreshold" />
+      <MemberSignature Language="VB.NET" Value="Public Property UpperThreshold As UShort" />
+      <MemberSignature Language="F#" Value="member this.UpperThreshold : uint16 with get, set" Usage="ProximityInterruptConfiguration.UpperThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.UInt16</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Value for the upper proximity threshold.
+            The lower and upper thresholds together define the proximity zone (hysteresis).
+            The upper threshold defines the boundary of the closest distance.
+            An interrupt is triggered when a detected object, coming from below the zone (lower value),
+            passes this boundary (increasing value), i.e., the object is approaching.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,0 +1,342 @@
+<Type Name="Tm16xxBase" FullName="Iot.Device.Tm16xx.Tm16xxBase">
+  <TypeSignature Language="C#" Value="public abstract class Tm16xxBase" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Tm16xxBase extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Tm16xx.Tm16xxBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Tm16xxBase" />
+  <TypeSignature Language="F#" Value="type Tm16xxBase = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents Titanmec led devices. This is an abstract class.
+            </summary>
+    <remarks>
+      <para>Not all derived classes support all methods declared in this abstract class. Check the document before use.</para>
+      <para>Some derived class may need to be disposed after use.</para>
+    </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Tm16xxBase ();" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tm16xx.Tm16xxBase.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CharacterOrder">
+      <MemberSignature Language="C#" Value="public abstract byte[] CharacterOrder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] CharacterOrder" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Tm16xx.Tm16xxBase.CharacterOrder" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property CharacterOrder As Byte()" />
+      <MemberSignature Language="F#" Value="member this.CharacterOrder : byte[] with get, set" Usage="Iot.Device.Tm16xx.Tm16xxBase.CharacterOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the order of characters.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ClearDisplay">
+      <MemberSignature Language="C#" Value="public abstract void ClearDisplay ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void ClearDisplay() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tm16xx.Tm16xxBase.ClearDisplay" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub ClearDisplay ()" />
+      <MemberSignature Language="F#" Value="abstract member ClearDisplay : unit -&gt; unit" Usage="tm16xxBase.ClearDisplay " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Clears the display.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public virtual void Display (params Iot.Device.Tm16xx.Character[] characters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Display(valuetype Iot.Device.Tm16xx.Character[] characters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tm16xx.Tm16xxBase.Display(Iot.Device.Tm16xx.Character[])" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Display (ParamArray characters As Character())" />
+      <MemberSignature Language="F#" Value="abstract member Display : Iot.Device.Tm16xx.Character[] -&gt; unit&#xA;override this.Display : Iot.Device.Tm16xx.Character[] -&gt; unit" Usage="tm16xxBase.Display characters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="characters" Type="Iot.Device.Tm16xx.Character[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="characters">The character array to display. Size of the array has to be equal or less than the count of the supported characters on the led board.</param>
+        <summary>
+            Displays a series of pre-build characters.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public virtual void Display (params byte[] rawData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Display(unsigned int8[] rawData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tm16xx.Tm16xxBase.Display(System.Byte[])" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Display (ParamArray rawData As Byte())" />
+      <MemberSignature Language="F#" Value="abstract member Display : byte[] -&gt; unit&#xA;override this.Display : byte[] -&gt; unit" Usage="tm16xxBase.Display rawData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawData" Type="System.Byte[]">
+          <Attributes>
+            <Attribute>
+              <AttributeName Language="C#">[System.ParamArray]</AttributeName>
+              <AttributeName Language="F#">[&lt;System.ParamArray&gt;]</AttributeName>
+            </Attribute>
+          </Attributes>
+        </Parameter>
+      </Parameters>
+      <Docs>
+        <param name="rawData">The raw data array to display. Size of the array has to be equal or less than the count of the supported characters on the led board.</param>
+        <summary>
+            Displays a series of raw data. Each byte represents a character.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public virtual void Display (ReadOnlySpan&lt;Iot.Device.Tm16xx.Character&gt; characters);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Display(valuetype System.ReadOnlySpan`1&lt;valuetype Iot.Device.Tm16xx.Character&gt; characters) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tm16xx.Tm16xxBase.Display(System.ReadOnlySpan{Iot.Device.Tm16xx.Character})" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Display (characters As ReadOnlySpan(Of Character))" />
+      <MemberSignature Language="F#" Value="abstract member Display : ReadOnlySpan&lt;Iot.Device.Tm16xx.Character&gt; -&gt; unit&#xA;override this.Display : ReadOnlySpan&lt;Iot.Device.Tm16xx.Character&gt; -&gt; unit" Usage="tm16xxBase.Display characters" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="characters" Type="System.ReadOnlySpan&lt;Iot.Device.Tm16xx.Character&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="characters">The characters to display. Size of the array has to be equal or less than the count of the supported characters on the led board.</param>
+        <summary>
+            Displays a series of pre-build characters.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public abstract void Display (ReadOnlySpan&lt;byte&gt; rawData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Display(valuetype System.ReadOnlySpan`1&lt;unsigned int8&gt; rawData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tm16xx.Tm16xxBase.Display(System.ReadOnlySpan{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Display (rawData As ReadOnlySpan(Of Byte))" />
+      <MemberSignature Language="F#" Value="abstract member Display : ReadOnlySpan&lt;byte&gt; -&gt; unit" Usage="tm16xxBase.Display rawData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="rawData" Type="System.ReadOnlySpan&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="rawData">The raw data to display. Size of the array has to be equal or less than the count of the supported characters on the led board.</param>
+        <summary>
+            Displays a series of raw data. Each byte represents a character.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public virtual void Display (byte characterPosition, Iot.Device.Tm16xx.Character character);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Display(unsigned int8 characterPosition, valuetype Iot.Device.Tm16xx.Character character) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tm16xx.Tm16xxBase.Display(System.Byte,Iot.Device.Tm16xx.Character)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Sub Display (characterPosition As Byte, character As Character)" />
+      <MemberSignature Language="F#" Value="abstract member Display : byte * Iot.Device.Tm16xx.Character -&gt; unit&#xA;override this.Display : byte * Iot.Device.Tm16xx.Character -&gt; unit" Usage="tm16xxBase.Display (characterPosition, character)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="characterPosition" Type="System.Byte" />
+        <Parameter Name="character" Type="Iot.Device.Tm16xx.Character" />
+      </Parameters>
+      <Docs>
+        <param name="characterPosition">The position to display.</param>
+        <param name="character">The character to display.</param>
+        <summary>
+            Displays a pre-build character on the specified position.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Display">
+      <MemberSignature Language="C#" Value="public abstract void Display (byte characterPosition, byte rawData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Display(unsigned int8 characterPosition, unsigned int8 rawData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tm16xx.Tm16xxBase.Display(System.Byte,System.Byte)" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Sub Display (characterPosition As Byte, rawData As Byte)" />
+      <MemberSignature Language="F#" Value="abstract member Display : byte * byte -&gt; unit" Usage="tm16xxBase.Display (characterPosition, rawData)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="characterPosition" Type="System.Byte" />
+        <Parameter Name="rawData" Type="System.Byte" />
+      </Parameters>
+      <Docs>
+        <param name="characterPosition">The position to display.</param>
+        <param name="rawData">The raw data to display.</param>
+        <summary>
+            Displays a raw data byte on the specified position.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsScreenOn">
+      <MemberSignature Language="C#" Value="public abstract bool IsScreenOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsScreenOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Tm16xx.Tm16xxBase.IsScreenOn" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property IsScreenOn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsScreenOn : bool with get, set" Usage="Iot.Device.Tm16xx.Tm16xxBase.IsScreenOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the switch of the screen.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LedSegment">
+      <MemberSignature Language="C#" Value="public abstract Iot.Device.Tm16xx.LedSegment LedSegment { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Tm16xx.LedSegment LedSegment" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Tm16xx.Tm16xxBase.LedSegment" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property LedSegment As LedSegment" />
+      <MemberSignature Language="F#" Value="member this.LedSegment : Iot.Device.Tm16xx.LedSegment with get, set" Usage="Iot.Device.Tm16xx.Tm16xxBase.LedSegment" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Tm16xx.LedSegment</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the segment mode.
+            </summary>
+        <value>To be added.</value>
+        <remarks>Not all derived classes support supports all kinds of segment mode. Check the document before use.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenBrightness">
+      <MemberSignature Language="C#" Value="public abstract byte ScreenBrightness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 ScreenBrightness" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Tm16xx.Tm16xxBase.ScreenBrightness" />
+      <MemberSignature Language="VB.NET" Value="Public MustOverride Property ScreenBrightness As Byte" />
+      <MemberSignature Language="F#" Value="member this.ScreenBrightness : byte with get, set" Usage="Iot.Device.Tm16xx.Tm16xxBase.ScreenBrightness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the brightness.
+            </summary>
+        <value>To be added.</value>
+        <remarks>The value range, the mapping of value and brightness are not consistent in different devices. Check the document before use.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ThrowWhenIoError">
+      <MemberSignature Language="C#" Value="public virtual bool ThrowWhenIoError { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ThrowWhenIoError" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Tm16xx.Tm16xxBase.ThrowWhenIoError" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Property ThrowWhenIoError As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ThrowWhenIoError : bool with get, set" Usage="Iot.Device.Tm16xx.Tm16xxBase.ThrowWhenIoError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets whether exception should be thrown when IO error occurred.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

@@ -1,12 +1,13 @@
 <Type Name="TrackEstimationParameters" FullName="Iot.Device.Nmea0183.Ais.TrackEstimationParameters">
   <TypeSignature Language="C#" Value="public class TrackEstimationParameters : IEquatable&lt;Iot.Device.Nmea0183.Ais.TrackEstimationParameters&gt;" />
-  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit TrackEstimationParameters extends System.Object implements class System.IEquatable`1&lt;class Iot.Device.Nmea0183.Ais.TrackEstimationParameters&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi serializable beforefieldinit TrackEstimationParameters extends System.Object implements class System.IEquatable`1&lt;class Iot.Device.Nmea0183.Ais.TrackEstimationParameters&gt;" />
   <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Ais.TrackEstimationParameters" />
   <TypeSignature Language="VB.NET" Value="Public Class TrackEstimationParameters&#xA;Implements IEquatable(Of TrackEstimationParameters)" />
   <TypeSignature Language="F#" Value="type TrackEstimationParameters = class&#xA;    interface IEquatable&lt;TrackEstimationParameters&gt;" />
   <AssemblyInfo>
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -16,9 +17,15 @@
       <InterfaceName>System.IEquatable&lt;Iot.Device.Nmea0183.Ais.TrackEstimationParameters&gt;</InterfaceName>
     </Interface>
   </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Serializable]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Serializable&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
   <Docs>
     <summary>
-            Configurable parameters that define the behavior of the AIS target movement estimation.
+            Configurable parameters that define the behavior of the AIS Manager: Movement estimation, Warning distances, etc.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -31,7 +38,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -47,7 +54,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="original" Type="Iot.Device.Nmea0183.Ais.TrackEstimationParameters" />
@@ -66,7 +73,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.Ais.TrackEstimationParameters</ReturnType>
@@ -87,14 +94,61 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Time span between AIS safety checks
+            Time span between AIS safety checks. Default: 5 seconds
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CleanupLatency">
+      <MemberSignature Language="C#" Value="public TimeSpan CleanupLatency { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan CleanupLatency" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.CleanupLatency" />
+      <MemberSignature Language="VB.NET" Value="Public Property CleanupLatency As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.CleanupLatency : TimeSpan with get, set" Usage="Iot.Device.Nmea0183.Ais.TrackEstimationParameters.CleanupLatency" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Controls how often lost targets are removed completely from the target list. The timespan after which a target is considered lost
+            is controlled via <see cref="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.TargetLostTimeout" />. Default: 25 minutes
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DeleteTargetAfterTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan DeleteTargetAfterTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan DeleteTargetAfterTimeout" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.DeleteTargetAfterTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property DeleteTargetAfterTimeout As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.DeleteTargetAfterTimeout : TimeSpan with get, set" Usage="Iot.Device.Nmea0183.Ais.TrackEstimationParameters.DeleteTargetAfterTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            If a target has not been updated for this time, it is deleted from the list of valid targets.
+            Additionally, client software should consider targets as lost whose <see cref="P:Iot.Device.Nmea0183.Ais.AisTarget.LastSeen" /> value is older than 5 minutes or so.
+            A value of 0 or less means infinite. Default: 20 minutes.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -109,14 +163,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            How much to calculate ahead
+            How much to calculate ahead. Default: 1 hour
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -131,7 +185,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Type</ReturnType>
@@ -153,7 +207,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -176,7 +230,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -199,7 +253,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -220,14 +274,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Maximum age of our own position to consider it valid
+            Maximum age of our own position to consider it valid. Default: 20 seconds.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -242,14 +296,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Default step size
+            Default step size. Default: 10 seconds
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -263,7 +317,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -288,7 +342,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -313,7 +367,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -337,14 +391,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            How much time to calculate back
+            How much time to calculate backwards. Default: 20 minutes
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -359,7 +413,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
@@ -367,7 +421,7 @@
       <Docs>
         <summary>
             Maximum age of the position record for a given ship to consider it valid.
-            If this is set to a high value, there's a risk of calculating TCPA/CPA based on outdated data.
+            If this is set to a high value, there's a risk of calculating TCPA/CPA based on outdated data. Default: 5 minutes
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -381,7 +435,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -390,6 +444,52 @@
       <Docs>
         <summary>To be added.</summary>
         <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VesselLostMinSpeed">
+      <MemberSignature Language="C#" Value="public UnitsNet.Speed? VesselLostMinSpeed { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Speed&gt; VesselLostMinSpeed" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.VesselLostMinSpeed" />
+      <MemberSignature Language="VB.NET" Value="Public Property VesselLostMinSpeed As Nullable(Of Speed)" />
+      <MemberSignature Language="F#" Value="member this.VesselLostMinSpeed : Nullable&lt;UnitsNet.Speed&gt; with get, set" Usage="Iot.Device.Nmea0183.Ais.TrackEstimationParameters.VesselLostMinSpeed" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Speed&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Even if a vessel is lost within <see cref="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.VesselLostWarningRange" />, do not warn if
+            the last known speed was less than this. This prevents a lot of warnings from
+            people switching off their AIS while moored. Set to null to disable. Default: 0.5 knots
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="VesselLostWarningRange">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length VesselLostWarningRange { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Length VesselLostWarningRange" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.VesselLostWarningRange" />
+      <MemberSignature Language="VB.NET" Value="Public Property VesselLostWarningRange As Length" />
+      <MemberSignature Language="F#" Value="member this.VesselLostWarningRange : UnitsNet.Length with get, set" Usage="Iot.Device.Nmea0183.Ais.TrackEstimationParameters.VesselLostWarningRange" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Length</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Warn if a vessel is lost within this range. Default: 1 nm
+            </summary>
+        <value>To be added.</value>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>
@@ -402,14 +502,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            True to issue a warning if no position data for the own ship is available
+            True to issue a warning if no position data for the own ship is available. Default: true
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -424,14 +524,37 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.Length</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Minimum CPA distance to issue a warning.
+            Minimum CPA distance to issue a warning. Default: 1 nm.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="WarningRepeatTimeout">
+      <MemberSignature Language="C#" Value="public TimeSpan WarningRepeatTimeout { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.TimeSpan WarningRepeatTimeout" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.WarningRepeatTimeout" />
+      <MemberSignature Language="VB.NET" Value="Public Property WarningRepeatTimeout As TimeSpan" />
+      <MemberSignature Language="F#" Value="member this.WarningRepeatTimeout : TimeSpan with get, set" Usage="Iot.Device.Nmea0183.Ais.TrackEstimationParameters.WarningRepeatTimeout" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.TimeSpan</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Time between repeats of the same warning. If this is set to a short value, the same proximity warning will be shown very often,
+            which is typically annoying. Default: 10 minutes.
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>
@@ -446,14 +569,14 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.TimeSpan</ReturnType>
       </ReturnValue>
       <Docs>
         <summary>
-            Minimum TCPA to issue a warning (when <see cref="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.WarningDistance" /> is also reached)
+            Minimum TCPA to issue a warning (when <see cref="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.WarningDistance" /> is also reached). Default: 10 minutes
             </summary>
         <value>To be added.</value>
         <remarks>To be added.</remarks>

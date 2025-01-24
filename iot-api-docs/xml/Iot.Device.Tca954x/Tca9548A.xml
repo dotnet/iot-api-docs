@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Object</BaseTypeName>
@@ -56,7 +57,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
@@ -86,7 +87,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -113,7 +114,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -137,7 +138,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -165,7 +166,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -194,7 +195,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -215,7 +216,7 @@
       <MemberType>Field</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Byte</ReturnType>
@@ -241,7 +242,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -251,6 +252,59 @@
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
         <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetChannel">
+      <MemberSignature Language="C#" Value="public System.Device.I2c.I2cBus GetChannel (Iot.Device.Tca954x.MultiplexerChannel channel);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Device.I2c.I2cBus GetChannel(valuetype Iot.Device.Tca954x.MultiplexerChannel channel) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tca954x.Tca9548A.GetChannel(Iot.Device.Tca954x.MultiplexerChannel)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetChannel (channel As MultiplexerChannel) As I2cBus" />
+      <MemberSignature Language="F#" Value="member this.GetChannel : Iot.Device.Tca954x.MultiplexerChannel -&gt; System.Device.I2c.I2cBus" Usage="tca9548A.GetChannel channel" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.I2c.I2cBus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channel" Type="Iot.Device.Tca954x.MultiplexerChannel" />
+      </Parameters>
+      <Docs>
+        <param name="channel">A single channel value</param>
+        <summary>
+            Returns the given channel
+            </summary>
+        <returns>The given channel as <see cref="T:System.Device.I2c.I2cBus" /> instance</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentOutOfRangeException">The channel value is not valid or represents more than one channel</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetChannel">
+      <MemberSignature Language="C#" Value="public System.Device.I2c.I2cBus GetChannel (int channelNo);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class System.Device.I2c.I2cBus GetChannel(int32 channelNo) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tca954x.Tca9548A.GetChannel(System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetChannel (channelNo As Integer) As I2cBus" />
+      <MemberSignature Language="F#" Value="member this.GetChannel : int -&gt; System.Device.I2c.I2cBus" Usage="tca9548A.GetChannel channelNo" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.I2c.I2cBus</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="channelNo" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="channelNo">The channel number (0-7)</param>
+        <summary>
+            Returns the given channel.
+            </summary>
+        <returns>An <see cref="T:System.Device.I2c.I2cBus" /> representing the provided channel</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="GetEnumerator">
@@ -265,7 +319,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.Generic.IEnumerator&lt;System.Device.I2c.I2cBus&gt;</ReturnType>
@@ -290,7 +344,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -318,7 +372,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -347,7 +401,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -368,7 +422,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.I2c.I2cBus</ReturnType>
@@ -397,7 +451,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -425,7 +479,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -449,7 +503,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -480,7 +534,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.I2c.I2cBus</ReturnType>
@@ -507,7 +561,7 @@
       </Implements>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Collections.IEnumerator</ReturnType>
@@ -529,7 +583,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -538,11 +592,12 @@
         <Parameter Name="selectedChannel" Type="Iot.Device.Tca954x.MultiplexerChannel" RefType="out" />
       </Parameters>
       <Docs>
-        <param name="selectedChannel"> selected Multiplexer Channel</param>
+        <param name="selectedChannel">Selected Multiplexer Channel</param>
         <summary>
             Try getting the selected channel on Multiplexer
             </summary>
-        <returns> true if able to retrieve selected channel</returns>
+        <returns>True if able to retrieve selected channel. Returns false otherwise. Also
+            returns false if more than one channel is selected.</returns>
         <remarks>To be added.</remarks>
       </Docs>
     </Member>

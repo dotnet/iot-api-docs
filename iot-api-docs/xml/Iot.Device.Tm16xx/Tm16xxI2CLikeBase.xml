@@ -1,0 +1,253 @@
+<Type Name="Tm16xxI2CLikeBase" FullName="Iot.Device.Tm16xx.Tm16xxI2CLikeBase">
+  <TypeSignature Language="C#" Value="public abstract class Tm16xxI2CLikeBase : Iot.Device.Tm16xx.Tm16xxBase, IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract beforefieldinit Tm16xxI2CLikeBase extends Iot.Device.Tm16xx.Tm16xxBase implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Tm16xx.Tm16xxI2CLikeBase" />
+  <TypeSignature Language="VB.NET" Value="Public MustInherit Class Tm16xxI2CLikeBase&#xA;Inherits Tm16xxBase&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Tm16xxI2CLikeBase = class&#xA;    inherit Tm16xxBase&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Tm16xx.Tm16xxBase</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents some Titanmec led devices which use I2C like communication protocol. This is an abstract class.
+            </summary>
+    <remarks>The communication protocol of some Titanmec led devices is like I2C, using one cable for data and one for clock, but not following the standard of I2C.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Tm16xxI2CLikeBase (int pinClk, int pinDio, int clockWidthMicroseconds);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(int32 pinClk, int32 pinDio, int32 clockWidthMicroseconds) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.#ctor(System.Int32,System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (pinClk As Integer, pinDio As Integer, clockWidthMicroseconds As Integer)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Tm16xx.Tm16xxI2CLikeBase : int * int * int -&gt; Iot.Device.Tm16xx.Tm16xxI2CLikeBase" Usage="new Iot.Device.Tm16xx.Tm16xxI2CLikeBase (pinClk, pinDio, clockWidthMicroseconds)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pinClk" Type="System.Int32" />
+        <Parameter Name="pinDio" Type="System.Int32" />
+        <Parameter Name="clockWidthMicroseconds" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="pinClk">The clock pin.</param>
+        <param name="pinDio">The data pin.</param>
+        <param name="clockWidthMicroseconds">Waiting time between clock up and down.</param>
+        <summary>
+            Initializes an instance with new Gpio controller which will be disposed with this object. Pin numbering scheme is set to logical.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Tm16xxI2CLikeBase (int pinClk, int pinDio, int clockWidthMicroseconds, System.Device.Gpio.GpioController controller);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(int32 pinClk, int32 pinDio, int32 clockWidthMicroseconds, class System.Device.Gpio.GpioController controller) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.#ctor(System.Int32,System.Int32,System.Int32,System.Device.Gpio.GpioController)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (pinClk As Integer, pinDio As Integer, clockWidthMicroseconds As Integer, controller As GpioController)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Tm16xx.Tm16xxI2CLikeBase : int * int * int * System.Device.Gpio.GpioController -&gt; Iot.Device.Tm16xx.Tm16xxI2CLikeBase" Usage="new Iot.Device.Tm16xx.Tm16xxI2CLikeBase (pinClk, pinDio, clockWidthMicroseconds, controller)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pinClk" Type="System.Int32" />
+        <Parameter Name="pinDio" Type="System.Int32" />
+        <Parameter Name="clockWidthMicroseconds" Type="System.Int32" />
+        <Parameter Name="controller" Type="System.Device.Gpio.GpioController" />
+      </Parameters>
+      <Docs>
+        <param name="pinClk">The clock pin.</param>
+        <param name="pinDio">The data pin.</param>
+        <param name="clockWidthMicroseconds">Waiting time between clock up and down.</param>
+        <param name="controller">The instance of the Gpio controller which will not be disposed with this object.</param>
+        <summary>
+            Initializes an instance with Gpio controller specified.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Tm16xxI2CLikeBase (int pinClk, int pinDio, int clockWidthMicroseconds, System.Device.Gpio.PinNumberingScheme pinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(int32 pinClk, int32 pinDio, int32 clockWidthMicroseconds, valuetype System.Device.Gpio.PinNumberingScheme pinNumberingScheme) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.#ctor(System.Int32,System.Int32,System.Int32,System.Device.Gpio.PinNumberingScheme)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (pinClk As Integer, pinDio As Integer, clockWidthMicroseconds As Integer, Optional pinNumberingScheme As PinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Tm16xx.Tm16xxI2CLikeBase : int * int * int * System.Device.Gpio.PinNumberingScheme -&gt; Iot.Device.Tm16xx.Tm16xxI2CLikeBase" Usage="new Iot.Device.Tm16xx.Tm16xxI2CLikeBase (pinClk, pinDio, clockWidthMicroseconds, pinNumberingScheme)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pinClk" Type="System.Int32" />
+        <Parameter Name="pinDio" Type="System.Int32" />
+        <Parameter Name="clockWidthMicroseconds" Type="System.Int32" />
+        <Parameter Name="pinNumberingScheme" Type="System.Device.Gpio.PinNumberingScheme" />
+      </Parameters>
+      <Docs>
+        <param name="pinClk">The clock pin.</param>
+        <param name="pinDio">The data pin.</param>
+        <param name="clockWidthMicroseconds">Waiting time between clock up and down.</param>
+        <param name="pinNumberingScheme">Uses the logical or physical pin layout for new created Gpio controller.</param>
+        <summary>
+            Initializes an instance with new Gpio controller which will be disposed with this object.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected Tm16xxI2CLikeBase (int pinClk, int pinDio, int clockWidthMicroseconds, System.Device.Gpio.PinNumberingScheme pinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical, System.Device.Gpio.GpioController? gpioController = default, bool shouldDispose = true);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(int32 pinClk, int32 pinDio, int32 clockWidthMicroseconds, valuetype System.Device.Gpio.PinNumberingScheme pinNumberingScheme, class System.Device.Gpio.GpioController gpioController, bool shouldDispose) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.#ctor(System.Int32,System.Int32,System.Int32,System.Device.Gpio.PinNumberingScheme,System.Device.Gpio.GpioController,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (pinClk As Integer, pinDio As Integer, clockWidthMicroseconds As Integer, Optional pinNumberingScheme As PinNumberingScheme = System.Device.Gpio.PinNumberingScheme.Logical, Optional gpioController As GpioController = Nothing, Optional shouldDispose As Boolean = true)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Tm16xx.Tm16xxI2CLikeBase : int * int * int * System.Device.Gpio.PinNumberingScheme * System.Device.Gpio.GpioController * bool -&gt; Iot.Device.Tm16xx.Tm16xxI2CLikeBase" Usage="new Iot.Device.Tm16xx.Tm16xxI2CLikeBase (pinClk, pinDio, clockWidthMicroseconds, pinNumberingScheme, gpioController, shouldDispose)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="pinClk" Type="System.Int32" />
+        <Parameter Name="pinDio" Type="System.Int32" />
+        <Parameter Name="clockWidthMicroseconds" Type="System.Int32" />
+        <Parameter Name="pinNumberingScheme" Type="System.Device.Gpio.PinNumberingScheme" />
+        <Parameter Name="gpioController" Type="System.Device.Gpio.GpioController" />
+        <Parameter Name="shouldDispose" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="pinClk">The clock pin.</param>
+        <param name="pinDio">The data pin.</param>
+        <param name="clockWidthMicroseconds">Waiting time between clock up and down.</param>
+        <param name="pinNumberingScheme">Uses the logical or physical pin layout for new created Gpio controller.</param>
+        <param name="gpioController">The instance of the gpio controller. Set to <see langword="null" /> to create a new one.</param>
+        <param name="shouldDispose">Sets to <see langword="true" /> to dispose the Gpio controller with this object. If the <paramref name="gpioController" /> is set to <see langword="null" />, this parameter will be ignored and the new created Gpio controller will always be disposed with this object.</param>
+        <summary>
+            Initializes an instance.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CharacterOrder">
+      <MemberSignature Language="C#" Value="public override byte[] CharacterOrder { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8[] CharacterOrder" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.CharacterOrder" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property CharacterOrder As Byte()" />
+      <MemberSignature Language="F#" Value="member this.CharacterOrder : byte[] with get, set" Usage="Iot.Device.Tm16xx.Tm16xxI2CLikeBase.CharacterOrder" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="tm16xxI2CLikeBase.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="protected virtual void Dispose (bool disposing);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance void Dispose(bool disposing) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.Dispose(System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Sub Dispose (disposing As Boolean)" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : bool -&gt; unit&#xA;override this.Dispose : bool -&gt; unit" Usage="tm16xxI2CLikeBase.Dispose disposing" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="disposing" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="disposing">True to dispose.</param>
+        <summary>
+            Disposes the class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsScreenOn">
+      <MemberSignature Language="C#" Value="public override bool IsScreenOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsScreenOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.IsScreenOn" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property IsScreenOn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsScreenOn : bool with get, set" Usage="Iot.Device.Tm16xx.Tm16xxI2CLikeBase.IsScreenOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ScreenBrightness">
+      <MemberSignature Language="C#" Value="public override byte ScreenBrightness { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 ScreenBrightness" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.ScreenBrightness" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Property ScreenBrightness As Byte" />
+      <MemberSignature Language="F#" Value="member this.ScreenBrightness : byte with get, set" Usage="Iot.Device.Tm16xx.Tm16xxI2CLikeBase.ScreenBrightness" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+  </Members>
+</Type>

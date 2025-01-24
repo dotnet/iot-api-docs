@@ -1,9 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Framework Name="iot-dotnet-latest">
   <Assemblies>
-    <Assembly Name="Iot.Device.Bindings" Version="3.0.0.0" />
-    <Assembly Name="System.Device.Gpio" Version="3.0.0.0" />
+    <Assembly Name="Iot.Device.Bindings" Version="3.2.0.0" />
+    <Assembly Name="System.Device.Gpio" Version="3.2.0.0" />
   </Assemblies>
+  <Namespace Name="EmulatedTag">
+    <Type Name="EmulatedTag.CardStatus" Id="T:EmulatedTag.CardStatus">
+      <Member Id="F:EmulatedTag.CardStatus.Activated" />
+      <Member Id="F:EmulatedTag.CardStatus.Deselected" />
+      <Member Id="F:EmulatedTag.CardStatus.Released" />
+    </Type>
+  </Namespace>
   <Namespace Name="Iot.Device.Adc">
     <Type Name="Iot.Device.Adc.Ina219" Id="T:Iot.Device.Adc.Ina219">
       <Member Id="M:Iot.Device.Adc.Ina219.#ctor(System.Device.I2c.I2cConnectionSettings)" />
@@ -355,6 +362,7 @@
       <Member Id="M:Iot.Device.Arduino.ArduinoBoard.Initialize" />
       <Member Id="M:Iot.Device.Arduino.ArduinoBoard.Ping(System.Int32)" />
       <Member Id="M:Iot.Device.Arduino.ArduinoBoard.QueryComponentInformation" />
+      <Member Id="M:Iot.Device.Arduino.ArduinoBoard.RemoveCommandHandler``1(``0)" />
       <Member Id="M:Iot.Device.Arduino.ArduinoBoard.SetAnalogPinSamplingInterval(System.TimeSpan)" />
       <Member Id="M:Iot.Device.Arduino.ArduinoBoard.SetPinMode(System.Int32,Iot.Device.Arduino.SupportedMode)" />
       <Member Id="M:Iot.Device.Arduino.ArduinoBoard.SetSystemVariable(Iot.Device.Arduino.SystemVariable,System.Int32)" />
@@ -544,6 +552,8 @@
       <Member Id="M:Iot.Device.Axp192.Axp192.ClearCoulombCounter" />
       <Member Id="M:Iot.Device.Axp192.Axp192.DisableAllIRQ" />
       <Member Id="M:Iot.Device.Axp192.Axp192.DisableCoulombCounter" />
+      <Member Id="M:Iot.Device.Axp192.Axp192.Dispose" />
+      <Member Id="M:Iot.Device.Axp192.Axp192.Dispose(System.Boolean)" />
       <Member Id="M:Iot.Device.Axp192.Axp192.EnableButtonPressed(Iot.Device.Axp192.ButtonPressed)" />
       <Member Id="M:Iot.Device.Axp192.Axp192.EnableCoulombCounter" />
       <Member Id="M:Iot.Device.Axp192.Axp192.EnableDCDC1(System.Boolean)" />
@@ -562,25 +572,33 @@
       <Member Id="M:Iot.Device.Axp192.Axp192.GetInputPowerStatus" />
       <Member Id="M:Iot.Device.Axp192.Axp192.GetInputVoltage" />
       <Member Id="M:Iot.Device.Axp192.Axp192.GetInternalTemperature" />
+      <Member Id="M:Iot.Device.Axp192.Axp192.GetPowerControlData" />
       <Member Id="M:Iot.Device.Axp192.Axp192.GetUsbCurrentInput" />
       <Member Id="M:Iot.Device.Axp192.Axp192.GetUsbVoltageInput" />
       <Member Id="M:Iot.Device.Axp192.Axp192.IsBatteryConnected" />
       <Member Id="M:Iot.Device.Axp192.Axp192.IsTemperatureWarning" />
       <Member Id="M:Iot.Device.Axp192.Axp192.PowerOff" />
       <Member Id="M:Iot.Device.Axp192.Axp192.Read6BytesStorage(System.Span{System.Byte})" />
+      <Member Id="M:Iot.Device.Axp192.Axp192.ReadGpioValue(System.Int32)" />
       <Member Id="M:Iot.Device.Axp192.Axp192.SetAdcState(System.Boolean)" />
       <Member Id="M:Iot.Device.Axp192.Axp192.SetBackupBatteryChargingControl(System.Boolean,Iot.Device.Axp192.BackupBatteryCharingVoltage,Iot.Device.Axp192.BackupBatteryChargingCurrent)" />
       <Member Id="M:Iot.Device.Axp192.Axp192.SetBatteryHighTemperatureThreshold(UnitsNet.ElectricPotential)" />
       <Member Id="M:Iot.Device.Axp192.Axp192.SetButtonBehavior(Iot.Device.Axp192.LongPressTiming,Iot.Device.Axp192.ShortPressTiming,System.Boolean,Iot.Device.Axp192.SignalDelayAfterPowerUp,Iot.Device.Axp192.ShutdownTiming)" />
       <Member Id="M:Iot.Device.Axp192.Axp192.SetChargingFunctions(System.Boolean,Iot.Device.Axp192.ChargingVoltage,Iot.Device.Axp192.ChargingCurrent,Iot.Device.Axp192.ChargingStopThreshold)" />
-      <Member Id="M:Iot.Device.Axp192.Axp192.SetGPIO0(Iot.Device.Axp192.Gpio0Behavior,System.Byte)" />
-      <Member Id="M:Iot.Device.Axp192.Axp192.SetLDO2Output(System.Byte)" />
-      <Member Id="M:Iot.Device.Axp192.Axp192.SetLDO3Output(System.Byte)" />
+      <Member Id="M:Iot.Device.Axp192.Axp192.SetDcVoltage(System.Int32,UnitsNet.ElectricPotential)" />
+      <Member Id="M:Iot.Device.Axp192.Axp192.SetGPIO0(Iot.Device.Axp192.Gpio0Behavior)" />
+      <Member Id="M:Iot.Device.Axp192.Axp192.SetGPIO1(Iot.Device.Axp192.GpioBehavior)" />
+      <Member Id="M:Iot.Device.Axp192.Axp192.SetGPIO2(Iot.Device.Axp192.GpioBehavior)" />
+      <Member Id="M:Iot.Device.Axp192.Axp192.SetGPIO4(Iot.Device.Axp192.GpioBehavior)" />
+      <Member Id="M:Iot.Device.Axp192.Axp192.SetLdoEnable(System.Int32,System.Boolean)" />
+      <Member Id="M:Iot.Device.Axp192.Axp192.SetLdoOutput(System.Int32,UnitsNet.ElectricPotential)" />
       <Member Id="M:Iot.Device.Axp192.Axp192.SetShutdownBatteryDetectionControl(System.Boolean,System.Boolean,Iot.Device.Axp192.ShutdownBatteryPinFunction,System.Boolean,Iot.Device.Axp192.ShutdownBatteryTiming)" />
       <Member Id="M:Iot.Device.Axp192.Axp192.SetSleep" />
+      <Member Id="M:Iot.Device.Axp192.Axp192.SetSleep(System.Boolean,System.Boolean)" />
       <Member Id="M:Iot.Device.Axp192.Axp192.SetVbusSettings(System.Boolean,System.Boolean,Iot.Device.Axp192.VholdVoltage,System.Boolean,Iot.Device.Axp192.VbusCurrentLimit)" />
       <Member Id="M:Iot.Device.Axp192.Axp192.StopCoulombCounter" />
       <Member Id="M:Iot.Device.Axp192.Axp192.Write6BytesStorage(System.ReadOnlySpan{System.Byte})" />
+      <Member Id="M:Iot.Device.Axp192.Axp192.WriteGpioValue(System.Int32,System.Device.Gpio.PinValue)" />
       <Member Id="P:Iot.Device.Axp192.Axp192.AdcFrequency" />
       <Member Id="P:Iot.Device.Axp192.Axp192.AdcPinCurrent" />
       <Member Id="P:Iot.Device.Axp192.Axp192.AdcPinCurrentSetting" />
@@ -611,7 +629,8 @@
       <Member Id="F:Iot.Device.Axp192.BatteryStatus.Charging" />
       <Member Id="F:Iot.Device.Axp192.BatteryStatus.ChargingCurrentLessThanExpected" />
       <Member Id="F:Iot.Device.Axp192.BatteryStatus.ModeB" />
-      <Member Id="F:Iot.Device.Axp192.BatteryStatus.Overwinered" />
+      <Member Id="F:Iot.Device.Axp192.BatteryStatus.None" />
+      <Member Id="F:Iot.Device.Axp192.BatteryStatus.Overheated" />
     </Type>
     <Type Name="Iot.Device.Axp192.ButtonPressed" Id="T:Iot.Device.Axp192.ButtonPressed">
       <Member Id="F:Iot.Device.Axp192.ButtonPressed.LongPressed" />
@@ -652,8 +671,17 @@
       <Member Id="F:Iot.Device.Axp192.Gpio0Behavior.Floating" />
       <Member Id="F:Iot.Device.Axp192.Gpio0Behavior.LowNoiseLDO" />
       <Member Id="F:Iot.Device.Axp192.Gpio0Behavior.LowOutput" />
-      <Member Id="F:Iot.Device.Axp192.Gpio0Behavior.MnosLeakOpenOutput" />
+      <Member Id="F:Iot.Device.Axp192.Gpio0Behavior.NmosLeakOpenOutput" />
       <Member Id="F:Iot.Device.Axp192.Gpio0Behavior.UniversalInputFunction" />
+    </Type>
+    <Type Name="Iot.Device.Axp192.GpioBehavior" Id="T:Iot.Device.Axp192.GpioBehavior">
+      <Member Id="F:Iot.Device.Axp192.GpioBehavior.AdcInput" />
+      <Member Id="F:Iot.Device.Axp192.GpioBehavior.Floating" />
+      <Member Id="F:Iot.Device.Axp192.GpioBehavior.LowOutput" />
+      <Member Id="F:Iot.Device.Axp192.GpioBehavior.NmosLeakOpenOutput" />
+      <Member Id="F:Iot.Device.Axp192.GpioBehavior.PwmOut" />
+      <Member Id="F:Iot.Device.Axp192.GpioBehavior.Reserved" />
+      <Member Id="F:Iot.Device.Axp192.GpioBehavior.UniversalInputFunction" />
     </Type>
     <Type Name="Iot.Device.Axp192.LdoDcPinsEnabled" Id="T:Iot.Device.Axp192.LdoDcPinsEnabled">
       <Member Id="F:Iot.Device.Axp192.LdoDcPinsEnabled.All" />
@@ -687,6 +715,24 @@
       <Member Id="F:Iot.Device.Axp192.PinOutputVoltage.V3_2" />
       <Member Id="F:Iot.Device.Axp192.PinOutputVoltage.V3_3" />
     </Type>
+    <Type Name="Iot.Device.Axp192.PowerControlData" Id="T:Iot.Device.Axp192.PowerControlData">
+      <Member Id="M:Iot.Device.Axp192.PowerControlData.#ctor" />
+      <Member Id="M:Iot.Device.Axp192.PowerControlData.GetBatteryStatusAsText" />
+      <Member Id="M:Iot.Device.Axp192.PowerControlData.ToString" />
+      <Member Id="P:Iot.Device.Axp192.PowerControlData.BatteryChargingCurrent" />
+      <Member Id="P:Iot.Device.Axp192.PowerControlData.BatteryChargingStatus" />
+      <Member Id="P:Iot.Device.Axp192.PowerControlData.BatteryDischargeCurrent" />
+      <Member Id="P:Iot.Device.Axp192.PowerControlData.BatteryInstantaneousPower" />
+      <Member Id="P:Iot.Device.Axp192.PowerControlData.BatteryLevel" />
+      <Member Id="P:Iot.Device.Axp192.PowerControlData.BatteryPresent" />
+      <Member Id="P:Iot.Device.Axp192.PowerControlData.BatteryVoltage" />
+      <Member Id="P:Iot.Device.Axp192.PowerControlData.InputCurrent" />
+      <Member Id="P:Iot.Device.Axp192.PowerControlData.InputStatus" />
+      <Member Id="P:Iot.Device.Axp192.PowerControlData.InputUsbCurrent" />
+      <Member Id="P:Iot.Device.Axp192.PowerControlData.InputUsbVoltage" />
+      <Member Id="P:Iot.Device.Axp192.PowerControlData.InputVoltage" />
+      <Member Id="P:Iot.Device.Axp192.PowerControlData.Temperature" />
+    </Type>
     <Type Name="Iot.Device.Axp192.PowerStatus" Id="T:Iot.Device.Axp192.PowerStatus">
       <Member Id="F:Iot.Device.Axp192.PowerStatus.AcinAvailable" />
       <Member Id="F:Iot.Device.Axp192.PowerStatus.AcinExists" />
@@ -694,8 +740,8 @@
       <Member Id="F:Iot.Device.Axp192.PowerStatus.AcinVbusStartupSource" />
       <Member Id="F:Iot.Device.Axp192.PowerStatus.BatteryCharged" />
       <Member Id="F:Iot.Device.Axp192.PowerStatus.VbusAvailable" />
+      <Member Id="F:Iot.Device.Axp192.PowerStatus.VbusExists" />
       <Member Id="F:Iot.Device.Axp192.PowerStatus.VbusLargeVhold" />
-      <Member Id="F:Iot.Device.Axp192.PowerStatus.VbuxExists" />
     </Type>
     <Type Name="Iot.Device.Axp192.ShortPressTiming" Id="T:Iot.Device.Axp192.ShortPressTiming">
       <Member Id="F:Iot.Device.Axp192.ShortPressTiming.Ms128" />
@@ -2207,13 +2253,274 @@
       <Member Id="M:Iot.Device.Buzzer.Buzzer.StopPlaying" />
     </Type>
   </Namespace>
+  <Namespace Name="Iot.Device.Camera">
+    <Type Name="Iot.Device.Camera.CameraInfo" Id="T:Iot.Device.Camera.CameraInfo">
+      <Member Id="M:Iot.Device.Camera.CameraInfo.#ctor(Iot.Device.Camera.CameraInfo)" />
+      <Member Id="M:Iot.Device.Camera.CameraInfo.#ctor(System.Int32,System.String,System.String,System.String)" />
+      <Member Id="M:Iot.Device.Camera.CameraInfo.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Camera.CameraInfo.Deconstruct(System.Int32@,System.String@,System.String@,System.String@)" />
+      <Member Id="M:Iot.Device.Camera.CameraInfo.Equals(Iot.Device.Camera.CameraInfo)" />
+      <Member Id="M:Iot.Device.Camera.CameraInfo.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Camera.CameraInfo.From(System.String)" />
+      <Member Id="M:Iot.Device.Camera.CameraInfo.GetHashCode" />
+      <Member Id="M:Iot.Device.Camera.CameraInfo.op_Equality(Iot.Device.Camera.CameraInfo,Iot.Device.Camera.CameraInfo)" />
+      <Member Id="M:Iot.Device.Camera.CameraInfo.op_Inequality(Iot.Device.Camera.CameraInfo,Iot.Device.Camera.CameraInfo)" />
+      <Member Id="M:Iot.Device.Camera.CameraInfo.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Camera.CameraInfo.ToString" />
+      <Member Id="P:Iot.Device.Camera.CameraInfo.DevicePath" />
+      <Member Id="P:Iot.Device.Camera.CameraInfo.EqualityContract" />
+      <Member Id="P:Iot.Device.Camera.CameraInfo.Index" />
+      <Member Id="P:Iot.Device.Camera.CameraInfo.MaxResolution" />
+      <Member Id="P:Iot.Device.Camera.CameraInfo.Name" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Iot.Device.Camera.Settings">
+    <Type Name="Iot.Device.Camera.Settings.Command" Id="T:Iot.Device.Camera.Settings.Command">
+      <Member Id="F:Iot.Device.Camera.Settings.Command.AutofocusMode" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.AutofocusOnCapture" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.AutofocusRange" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.AutofocusSpeed" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.AutofocusWindow" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Awb" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Awbgains" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Bitrate" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Brightness" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Camera" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Circular" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Codec" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Config" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Contrast" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Datetime" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Denoise" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Encoding" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Ev" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Exif" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Exposure" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Flush" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Framerate" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Frames" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Framestart" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Fullscreen" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Gain" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Hdr" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Height" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Help" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Hflip" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.InfoText" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Initial" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Inline" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Intra" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Keypress" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Latest" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.LensPosition" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Level" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.ListCameras" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Listen" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.LoresHeight" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.LoresWidth" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Metering" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Mode" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Nopreview" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Output" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.PostProcessFile" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Preview" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Profile" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.QtPreview" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Quality" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Raw" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Rawfull" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Restart" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Roi" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Rotation" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Saturation" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Segment" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Sharpness" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Shutter" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Signal" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Split" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Thumb" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Timelapse" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Timeout" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Timestamp" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.TuningFile" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Version" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Vflip" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.ViewfinderHeight" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.ViewfinderMode" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.ViewfinderWidth" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Width" />
+      <Member Id="F:Iot.Device.Camera.Settings.Command.Wrap" />
+    </Type>
+    <Type Name="Iot.Device.Camera.Settings.CommandCategory" Id="T:Iot.Device.Camera.Settings.CommandCategory">
+      <Member Id="F:Iot.Device.Camera.Settings.CommandCategory.CameraControl" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandCategory.CameraResolution" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandCategory.Common" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandCategory.Output" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandCategory.PostProcessing" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandCategory.Preview" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandCategory.Still" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandCategory.Video" />
+    </Type>
+    <Type Name="Iot.Device.Camera.Settings.CommandInputType" Id="T:Iot.Device.Camera.Settings.CommandInputType">
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.AutofocusMode" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.AutofocusRange" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.AutofocusSpeed" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.Codec" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.Decimal" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.DecimalOrString" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.DecimalPair" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.Denoise" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.Encoding" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.Exposure" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.Filename" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.FormattableString" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.H264Level" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.H264Profile" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.IndexOfCamera" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.Initial" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.Int" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.ListeningTcpUri" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.Megabytes" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.Metering" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.Microseconds" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.Milliseconds" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.Output" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.Rotate0Or180" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.SensorMode" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.String" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.Void" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.WhiteBalance" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.Whq" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandInputType.Xywh" />
+    </Type>
+    <Type Name="Iot.Device.Camera.Settings.CommandOption" Id="T:Iot.Device.Camera.Settings.CommandOption">
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOption.#ctor(Iot.Device.Camera.Settings.CommandCategory,Iot.Device.Camera.Settings.Command,System.String,System.String,Iot.Device.Camera.Settings.CommandInputType,Iot.Device.Camera.Settings.CommandOutputType)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOption.#ctor(Iot.Device.Camera.Settings.CommandOption)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOption.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOption.Deconstruct(Iot.Device.Camera.Settings.CommandCategory@,Iot.Device.Camera.Settings.Command@,System.String@,System.String@,Iot.Device.Camera.Settings.CommandInputType@,Iot.Device.Camera.Settings.CommandOutputType@)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOption.Equals(Iot.Device.Camera.Settings.CommandOption)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOption.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOption.GetHashCode" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOption.op_Equality(Iot.Device.Camera.Settings.CommandOption,Iot.Device.Camera.Settings.CommandOption)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOption.op_Inequality(Iot.Device.Camera.Settings.CommandOption,Iot.Device.Camera.Settings.CommandOption)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOption.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOption.ToString" />
+      <Member Id="P:Iot.Device.Camera.Settings.CommandOption.Category" />
+      <Member Id="P:Iot.Device.Camera.Settings.CommandOption.Command" />
+      <Member Id="P:Iot.Device.Camera.Settings.CommandOption.EqualityContract" />
+      <Member Id="P:Iot.Device.Camera.Settings.CommandOption.Help" />
+      <Member Id="P:Iot.Device.Camera.Settings.CommandOption.InputType" />
+      <Member Id="P:Iot.Device.Camera.Settings.CommandOption.Option" />
+      <Member Id="P:Iot.Device.Camera.Settings.CommandOption.OutputType" />
+    </Type>
+    <Type Name="Iot.Device.Camera.Settings.CommandOptionAndValue" Id="T:Iot.Device.Camera.Settings.CommandOptionAndValue">
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionAndValue.#ctor(Iot.Device.Camera.Settings.CommandOption,System.String)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionAndValue.#ctor(Iot.Device.Camera.Settings.CommandOptionAndValue)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionAndValue.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionAndValue.Create(Iot.Device.Camera.Settings.Command,System.String)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionAndValue.Deconstruct(Iot.Device.Camera.Settings.CommandOption@,System.String@)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionAndValue.Equals(Iot.Device.Camera.Settings.CommandOptionAndValue)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionAndValue.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionAndValue.GetHashCode" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionAndValue.op_Equality(Iot.Device.Camera.Settings.CommandOptionAndValue,Iot.Device.Camera.Settings.CommandOptionAndValue)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionAndValue.op_Inequality(Iot.Device.Camera.Settings.CommandOptionAndValue,Iot.Device.Camera.Settings.CommandOptionAndValue)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionAndValue.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionAndValue.ToString" />
+      <Member Id="P:Iot.Device.Camera.Settings.CommandOptionAndValue.EqualityContract" />
+      <Member Id="P:Iot.Device.Camera.Settings.CommandOptionAndValue.Option" />
+      <Member Id="P:Iot.Device.Camera.Settings.CommandOptionAndValue.Value" />
+    </Type>
+    <Type Name="Iot.Device.Camera.Settings.CommandOptionsBuilder" Id="T:Iot.Device.Camera.Settings.CommandOptionsBuilder">
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.#ctor(System.Boolean)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.Get(Iot.Device.Camera.Settings.Command)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.GetArguments" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.GetByCategory(Iot.Device.Camera.Settings.CommandCategory,Iot.Device.Camera.Settings.Command)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.Remove(Iot.Device.Camera.Settings.CommandOption)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.With(Iot.Device.Camera.Settings.CommandOptionAndValue)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithCamera(System.Int32)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithContinuousStreaming(System.Int32)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithH264VideoOptions(System.String,System.String,System.Int32)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithHflip" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithImageQuality(System.Decimal,System.Decimal,System.Decimal,System.Decimal)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithListCameras" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithMJPEGVideoOptions(System.Int32)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithOutput(System.String)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithPictureOptions(System.Int32,System.String)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithResolution(System.Int32,System.Int32)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithTimelapse(System.Int32)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithTimeout(System.Int32)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithTuningFile(System.String)" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithVflip" />
+      <Member Id="M:Iot.Device.Camera.Settings.CommandOptionsBuilder.WithVideoFramerate(System.Int32)" />
+    </Type>
+    <Type Name="Iot.Device.Camera.Settings.CommandOutputType" Id="T:Iot.Device.Camera.Settings.CommandOutputType">
+      <Member Id="F:Iot.Device.Camera.Settings.CommandOutputType.IndexOfCamera" />
+      <Member Id="F:Iot.Device.Camera.Settings.CommandOutputType.Void" />
+    </Type>
+    <Type Name="Iot.Device.Camera.Settings.LibcameraAppsSettings" Id="T:Iot.Device.Camera.Settings.LibcameraAppsSettings">
+      <Member Id="M:Iot.Device.Camera.Settings.LibcameraAppsSettings.#ctor" />
+      <Member Id="P:Iot.Device.Camera.Settings.LibcameraAppsSettings.DefaultOptions" />
+    </Type>
+    <Type Name="Iot.Device.Camera.Settings.ProcessSettingsFactory" Id="T:Iot.Device.Camera.Settings.ProcessSettingsFactory">
+      <Member Id="F:Iot.Device.Camera.Settings.ProcessSettingsFactory.LibcameraStill" />
+      <Member Id="F:Iot.Device.Camera.Settings.ProcessSettingsFactory.LibcameraVid" />
+      <Member Id="F:Iot.Device.Camera.Settings.ProcessSettingsFactory.RaspiStill" />
+      <Member Id="F:Iot.Device.Camera.Settings.ProcessSettingsFactory.RaspiVid" />
+      <Member Id="M:Iot.Device.Camera.Settings.ProcessSettingsFactory.CreateForLibcamerastill" />
+      <Member Id="M:Iot.Device.Camera.Settings.ProcessSettingsFactory.CreateForLibcamerastillAndStderr" />
+      <Member Id="M:Iot.Device.Camera.Settings.ProcessSettingsFactory.CreateForLibcameravid" />
+      <Member Id="M:Iot.Device.Camera.Settings.ProcessSettingsFactory.CreateForRaspistill" />
+      <Member Id="M:Iot.Device.Camera.Settings.ProcessSettingsFactory.CreateForRaspivid" />
+    </Type>
+  </Namespace>
   <Namespace Name="Iot.Device.Card">
+    <Type Name="Iot.Device.Card.ApduCommands" Id="T:Iot.Device.Card.ApduCommands">
+      <Member Id="F:Iot.Device.Card.ApduCommands.ApplicationBlock" />
+      <Member Id="F:Iot.Device.Card.ApduCommands.ApplicationUnBlock" />
+      <Member Id="F:Iot.Device.Card.ApduCommands.CardBlock" />
+      <Member Id="F:Iot.Device.Card.ApduCommands.ExternalAuthenticate" />
+      <Member Id="F:Iot.Device.Card.ApduCommands.GenerateApplicationCryptogram" />
+      <Member Id="F:Iot.Device.Card.ApduCommands.GetBytesToRead" />
+      <Member Id="F:Iot.Device.Card.ApduCommands.GetChallenge" />
+      <Member Id="F:Iot.Device.Card.ApduCommands.GetData" />
+      <Member Id="F:Iot.Device.Card.ApduCommands.GetProcessingOptions" />
+      <Member Id="F:Iot.Device.Card.ApduCommands.InternalAuthenticate" />
+      <Member Id="F:Iot.Device.Card.ApduCommands.PersonalIdentificationNumberChangeUnblock" />
+      <Member Id="F:Iot.Device.Card.ApduCommands.ReadBinary" />
+      <Member Id="F:Iot.Device.Card.ApduCommands.ReadRecord" />
+      <Member Id="F:Iot.Device.Card.ApduCommands.Select" />
+      <Member Id="F:Iot.Device.Card.ApduCommands.UpdateBinary" />
+      <Member Id="F:Iot.Device.Card.ApduCommands.Verify" />
+      <Member Id="M:Iot.Device.Card.ApduCommands.#ctor" />
+    </Type>
+    <Type Name="Iot.Device.Card.ApduReturnCommands" Id="T:Iot.Device.Card.ApduReturnCommands">
+      <Member Id="F:Iot.Device.Card.ApduReturnCommands.CommandComplete" />
+      <Member Id="F:Iot.Device.Card.ApduReturnCommands.EndOfFileBefore" />
+      <Member Id="F:Iot.Device.Card.ApduReturnCommands.FunctionNotSupported" />
+      <Member Id="F:Iot.Device.Card.ApduReturnCommands.MemoryFailure" />
+      <Member Id="F:Iot.Device.Card.ApduReturnCommands.SecurityNotSatisfied" />
+      <Member Id="F:Iot.Device.Card.ApduReturnCommands.TagNotFound" />
+      <Member Id="F:Iot.Device.Card.ApduReturnCommands.WrongLength" />
+      <Member Id="M:Iot.Device.Card.ApduReturnCommands.#ctor" />
+    </Type>
     <Type Name="Iot.Device.Card.CardTransceiver" Id="T:Iot.Device.Card.CardTransceiver">
       <Member Id="M:Iot.Device.Card.CardTransceiver.#ctor" />
       <Member Id="M:Iot.Device.Card.CardTransceiver.ReselectTarget(System.Byte)" />
       <Member Id="M:Iot.Device.Card.CardTransceiver.Transceive(System.Byte,System.ReadOnlySpan{System.Byte},System.Span{System.Byte},Iot.Device.Card.NfcProtocol)" />
       <Member Id="P:Iot.Device.Card.CardTransceiver.MaximumReadSize" />
       <Member Id="P:Iot.Device.Card.CardTransceiver.MaximumWriteSize" />
+    </Type>
+    <Type Name="Iot.Device.Card.EmulatedNdefTag" Id="T:Iot.Device.Card.EmulatedNdefTag">
+      <Member Id="E:Iot.Device.Card.EmulatedNdefTag.CardStatusChanged" />
+      <Member Id="E:Iot.Device.Card.EmulatedNdefTag.NdefReceived" />
+      <Member Id="M:Iot.Device.Card.EmulatedNdefTag.#ctor(Iot.Device.Pn532.Pn532,System.Byte[])" />
+      <Member Id="M:Iot.Device.Card.EmulatedNdefTag.Initialize(System.Threading.CancellationToken)" />
+      <Member Id="M:Iot.Device.Card.EmulatedNdefTag.InitializeAndListen(System.Threading.CancellationToken)" />
+      <Member Id="M:Iot.Device.Card.EmulatedNdefTag.Listen(System.Threading.CancellationToken)" />
+      <Member Id="P:Iot.Device.Card.EmulatedNdefTag.MaximumNdefLength" />
+      <Member Id="P:Iot.Device.Card.EmulatedNdefTag.NdefId" />
+      <Member Id="P:Iot.Device.Card.EmulatedNdefTag.NdefMessage" />
+      <Member Id="P:Iot.Device.Card.EmulatedNdefTag.ReadOnly" />
     </Type>
     <Type Name="Iot.Device.Card.ErrorType" Id="T:Iot.Device.Card.ErrorType">
       <Member Id="F:Iot.Device.Card.ErrorType.BytesStillAvailable" />
@@ -2846,6 +3153,30 @@
       <Member Id="M:Iot.Device.Common.LogDispatcher.GetLogger(System.String)" />
       <Member Id="P:Iot.Device.Common.LogDispatcher.LoggerFactory" />
     </Type>
+    <Type Name="Iot.Device.Common.ProcessRunner" Id="T:Iot.Device.Common.ProcessRunner">
+      <Member Id="M:Iot.Device.Common.ProcessRunner.#ctor(Iot.Device.Common.ProcessSettings)" />
+      <Member Id="M:Iot.Device.Common.ProcessRunner.ContinuousRunAsync(System.String,System.IO.Pipelines.PipeWriter)" />
+      <Member Id="M:Iot.Device.Common.ProcessRunner.ContinuousRunAsync(System.String,System.IO.Stream)" />
+      <Member Id="M:Iot.Device.Common.ProcessRunner.ContinuousRunAsync(System.String[],System.IO.Pipelines.PipeWriter)" />
+      <Member Id="M:Iot.Device.Common.ProcessRunner.ContinuousRunAsync(System.String[],System.IO.Stream)" />
+      <Member Id="M:Iot.Device.Common.ProcessRunner.Dispose" />
+      <Member Id="M:Iot.Device.Common.ProcessRunner.ExecuteAsync(System.String,System.IO.Pipelines.PipeWriter)" />
+      <Member Id="M:Iot.Device.Common.ProcessRunner.ExecuteAsync(System.String,System.IO.Stream)" />
+      <Member Id="M:Iot.Device.Common.ProcessRunner.ExecuteAsync(System.String[],System.IO.Stream)" />
+      <Member Id="M:Iot.Device.Common.ProcessRunner.ExecuteReadOutputAsStringAsync(System.String)" />
+      <Member Id="M:Iot.Device.Common.ProcessRunner.ExecuteReadOutputAsStringAsync(System.String[])" />
+      <Member Id="M:Iot.Device.Common.ProcessRunner.GetFullCommandLine(System.String[])" />
+      <Member Id="M:Iot.Device.Common.ProcessRunner.Kill" />
+      <Member Id="P:Iot.Device.Common.ProcessRunner.PId" />
+    </Type>
+    <Type Name="Iot.Device.Common.ProcessSettings" Id="T:Iot.Device.Common.ProcessSettings">
+      <Member Id="M:Iot.Device.Common.ProcessSettings.#ctor" />
+      <Member Id="P:Iot.Device.Common.ProcessSettings.BufferSize" />
+      <Member Id="P:Iot.Device.Common.ProcessSettings.CaptureStderrInsteadOfStdout" />
+      <Member Id="P:Iot.Device.Common.ProcessSettings.Filename" />
+      <Member Id="P:Iot.Device.Common.ProcessSettings.MaxMillisecondsToWaitAfterProcessCompletes" />
+      <Member Id="P:Iot.Device.Common.ProcessSettings.WorkingDirectory" />
+    </Type>
     <Type Name="Iot.Device.Common.SimpleConsoleLogger" Id="T:Iot.Device.Common.SimpleConsoleLogger">
       <Member Id="M:Iot.Device.Common.SimpleConsoleLogger.#ctor(System.String)" />
       <Member Id="M:Iot.Device.Common.SimpleConsoleLogger.#ctor(System.String,Microsoft.Extensions.Logging.LogLevel)" />
@@ -3115,6 +3446,91 @@
       <Member Id="F:Iot.Device.Display.Font.Symbol_Underscore" />
       <Member Id="F:Iot.Device.Display.Font.Whitespace" />
     </Type>
+    <Type Name="Iot.Device.Display.Font14" Id="T:Iot.Device.Display.Font14">
+      <Member Id="F:Iot.Device.Display.Font14.Digit_0" />
+      <Member Id="F:Iot.Device.Display.Font14.Digit_1" />
+      <Member Id="F:Iot.Device.Display.Font14.Digit_2" />
+      <Member Id="F:Iot.Device.Display.Font14.Digit_3" />
+      <Member Id="F:Iot.Device.Display.Font14.Digit_4" />
+      <Member Id="F:Iot.Device.Display.Font14.Digit_5" />
+      <Member Id="F:Iot.Device.Display.Font14.Digit_6" />
+      <Member Id="F:Iot.Device.Display.Font14.Digit_7" />
+      <Member Id="F:Iot.Device.Display.Font14.Digit_8" />
+      <Member Id="F:Iot.Device.Display.Font14.Digit_9" />
+      <Member Id="F:Iot.Device.Display.Font14.Digit_A" />
+      <Member Id="F:Iot.Device.Display.Font14.Digit_B" />
+      <Member Id="F:Iot.Device.Display.Font14.Digit_C" />
+      <Member Id="F:Iot.Device.Display.Font14.Digit_D" />
+      <Member Id="F:Iot.Device.Display.Font14.Digit_E" />
+      <Member Id="F:Iot.Device.Display.Font14.Digit_F" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_a" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_A" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_b" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_B" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_c" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_C" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_d" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_D" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_e" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_E" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_f" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_F" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_g" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_G" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_h" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_H" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_i" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_I" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_j" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_J" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_k" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_K" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_l" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_L" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_m" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_M" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_n" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_N" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_o" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_O" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_p" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_P" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_q" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_Q" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_r" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_R" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_s" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_S" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_t" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_T" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_u" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_U" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_v" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_V" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_w" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_W" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_x" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_X" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_y" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_Y" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_z" />
+      <Member Id="F:Iot.Device.Display.Font14.Letter_Z" />
+      <Member Id="F:Iot.Device.Display.Font14.Symbol_Asterisk" />
+      <Member Id="F:Iot.Device.Display.Font14.Symbol_BackSlash" />
+      <Member Id="F:Iot.Device.Display.Font14.Symbol_Degree" />
+      <Member Id="F:Iot.Device.Display.Font14.Symbol_Equals" />
+      <Member Id="F:Iot.Device.Display.Font14.Symbol_ForwardSlash" />
+      <Member Id="F:Iot.Device.Display.Font14.Symbol_FullStop" />
+      <Member Id="F:Iot.Device.Display.Font14.Symbol_LeftSquareBracket" />
+      <Member Id="F:Iot.Device.Display.Font14.Symbol_Minus" />
+      <Member Id="F:Iot.Device.Display.Font14.Symbol_Percent" />
+      <Member Id="F:Iot.Device.Display.Font14.Symbol_Pipe" />
+      <Member Id="F:Iot.Device.Display.Font14.Symbol_Plus" />
+      <Member Id="F:Iot.Device.Display.Font14.Symbol_QuestionMark" />
+      <Member Id="F:Iot.Device.Display.Font14.Symbol_RightSquareBracket" />
+      <Member Id="F:Iot.Device.Display.Font14.Symbol_Underscore" />
+      <Member Id="F:Iot.Device.Display.Font14.Whitespace" />
+    </Type>
     <Type Name="Iot.Device.Display.FontHelper" Id="T:Iot.Device.Display.FontHelper">
       <Member Id="F:Iot.Device.Display.FontHelper.HexadecimalMask" />
       <Member Id="M:Iot.Device.Display.FontHelper.ConvertHexDigits(System.Span{System.Byte})" />
@@ -3181,6 +3597,7 @@
       <Member Id="M:Iot.Device.Display.Is31fl3731.Reset" />
       <Member Id="M:Iot.Device.Display.Is31fl3731.SetBlinkingRate(System.Int32)" />
       <Member Id="M:Iot.Device.Display.Is31fl3731.Shutdown(System.Boolean)" />
+      <Member Id="M:Iot.Device.Display.Is31fl3731.WriteAllPixels(System.Int32[0:,0:])" />
       <Member Id="M:Iot.Device.Display.Is31fl3731.WritePixel(System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean)" />
       <Member Id="P:Iot.Device.Display.Is31fl3731.Item(System.Int32,System.Int32)" />
     </Type>
@@ -3189,6 +3606,20 @@
       <Member Id="M:Iot.Device.Display.ISevenSegmentDisplay.Write(System.ReadOnlySpan{Iot.Device.Display.Segment},System.Int32)" />
       <Member Id="P:Iot.Device.Display.ISevenSegmentDisplay.Item(System.Int32)" />
       <Member Id="P:Iot.Device.Display.ISevenSegmentDisplay.NumberOfDigits" />
+    </Type>
+    <Type Name="Iot.Device.Display.Large4Digit14SegmentDisplay" Id="T:Iot.Device.Display.Large4Digit14SegmentDisplay">
+      <Member Id="M:Iot.Device.Display.Large4Digit14SegmentDisplay.#ctor(System.Device.I2c.I2cDevice)" />
+      <Member Id="M:Iot.Device.Display.Large4Digit14SegmentDisplay.Clear" />
+      <Member Id="M:Iot.Device.Display.Large4Digit14SegmentDisplay.Flush" />
+      <Member Id="M:Iot.Device.Display.Large4Digit14SegmentDisplay.Write(System.Int32,Iot.Device.Display.Alignment)" />
+      <Member Id="M:Iot.Device.Display.Large4Digit14SegmentDisplay.Write(System.ReadOnlySpan{Iot.Device.Display.Font14},System.Int32)" />
+      <Member Id="M:Iot.Device.Display.Large4Digit14SegmentDisplay.Write(System.ReadOnlySpan{Iot.Device.Display.Segment14},System.Int32)" />
+      <Member Id="M:Iot.Device.Display.Large4Digit14SegmentDisplay.Write(System.ReadOnlySpan{System.Byte},System.Int32)" />
+      <Member Id="M:Iot.Device.Display.Large4Digit14SegmentDisplay.Write(System.String,Iot.Device.Display.Alignment)" />
+      <Member Id="M:Iot.Device.Display.Large4Digit14SegmentDisplay.WriteChar(System.Char,System.Int32)" />
+      <Member Id="M:Iot.Device.Display.Large4Digit14SegmentDisplay.WriteHex(System.Byte[])" />
+      <Member Id="P:Iot.Device.Display.Large4Digit14SegmentDisplay.Item(System.Int32)" />
+      <Member Id="P:Iot.Device.Display.Large4Digit14SegmentDisplay.NumberOfDigits" />
     </Type>
     <Type Name="Iot.Device.Display.Large4Digit7SegmentDisplay" Id="T:Iot.Device.Display.Large4Digit7SegmentDisplay">
       <Member Id="M:Iot.Device.Display.Large4Digit7SegmentDisplay.#ctor(System.Device.I2c.I2cDevice)" />
@@ -3262,11 +3693,13 @@
       <Member Id="F:Iot.Device.Display.Pcd8544.ScreenBufferByteSize" />
       <Member Id="M:Iot.Device.Display.Pcd8544.#ctor(System.Int32,System.Device.Spi.SpiDevice,System.Int32,System.Device.Pwm.PwmChannel,System.Device.Gpio.GpioController,System.Boolean)" />
       <Member Id="M:Iot.Device.Display.Pcd8544.#ctor(System.Int32,System.Device.Spi.SpiDevice,System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <Member Id="M:Iot.Device.Display.Pcd8544.CanConvertFromPixelFormat(Iot.Device.Graphics.PixelFormat)" />
       <Member Id="M:Iot.Device.Display.Pcd8544.Clear" />
       <Member Id="M:Iot.Device.Display.Pcd8544.CreateCustomCharacter(System.Int32,System.Byte[])" />
       <Member Id="M:Iot.Device.Display.Pcd8544.CreateCustomCharacter(System.Int32,System.ReadOnlySpan{System.Byte})" />
-      <Member Id="M:Iot.Device.Display.Pcd8544.Dispose" />
+      <Member Id="M:Iot.Device.Display.Pcd8544.Dispose(System.Boolean)" />
       <Member Id="M:Iot.Device.Display.Pcd8544.Draw" />
+      <Member Id="M:Iot.Device.Display.Pcd8544.DrawBitmap(Iot.Device.Graphics.BitmapImage)" />
       <Member Id="M:Iot.Device.Display.Pcd8544.DrawLine(System.Drawing.Point,System.Drawing.Point,System.Boolean)" />
       <Member Id="M:Iot.Device.Display.Pcd8544.DrawLine(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean)" />
       <Member Id="M:Iot.Device.Display.Pcd8544.DrawPoint(System.Drawing.Point,System.Boolean)" />
@@ -3274,6 +3707,7 @@
       <Member Id="M:Iot.Device.Display.Pcd8544.DrawRectangle(System.Drawing.Point,System.Drawing.Size,System.Boolean,System.Boolean)" />
       <Member Id="M:Iot.Device.Display.Pcd8544.DrawRectangle(System.Drawing.Rectangle,System.Boolean,System.Boolean)" />
       <Member Id="M:Iot.Device.Display.Pcd8544.DrawRectangle(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Boolean)" />
+      <Member Id="M:Iot.Device.Display.Pcd8544.GetBackBufferCompatibleImage" />
       <Member Id="M:Iot.Device.Display.Pcd8544.SetByteMap(System.ReadOnlySpan{System.Byte})" />
       <Member Id="M:Iot.Device.Display.Pcd8544.SetCursorPosition(System.Int32,System.Int32)" />
       <Member Id="M:Iot.Device.Display.Pcd8544.Write(System.Char[])" />
@@ -3288,8 +3722,11 @@
       <Member Id="P:Iot.Device.Display.Pcd8544.DisplayOn" />
       <Member Id="P:Iot.Device.Display.Pcd8544.Enabled" />
       <Member Id="P:Iot.Device.Display.Pcd8544.InvertedColors" />
+      <Member Id="P:Iot.Device.Display.Pcd8544.NativePixelFormat" />
       <Member Id="P:Iot.Device.Display.Pcd8544.NumberOfCustomCharactersSupported" />
       <Member Id="P:Iot.Device.Display.Pcd8544.PixelScreenSize" />
+      <Member Id="P:Iot.Device.Display.Pcd8544.ScreenHeight" />
+      <Member Id="P:Iot.Device.Display.Pcd8544.ScreenWidth" />
       <Member Id="P:Iot.Device.Display.Pcd8544.Size" />
       <Member Id="P:Iot.Device.Display.Pcd8544.Temperature" />
       <Member Id="P:Iot.Device.Display.Pcd8544.UnderlineCursorVisible" />
@@ -3309,6 +3746,30 @@
       <Member Id="F:Iot.Device.Display.Segment.Top" />
       <Member Id="F:Iot.Device.Display.Segment.TopLeft" />
       <Member Id="F:Iot.Device.Display.Segment.TopRight" />
+    </Type>
+    <Type Name="Iot.Device.Display.Segment14" Id="T:Iot.Device.Display.Segment14">
+      <Member Id="F:Iot.Device.Display.Segment14.BackSlash" />
+      <Member Id="F:Iot.Device.Display.Segment14.Bottom" />
+      <Member Id="F:Iot.Device.Display.Segment14.BottomLeft" />
+      <Member Id="F:Iot.Device.Display.Segment14.BottomRight" />
+      <Member Id="F:Iot.Device.Display.Segment14.Center" />
+      <Member Id="F:Iot.Device.Display.Segment14.East" />
+      <Member Id="F:Iot.Device.Display.Segment14.ForwardSlash" />
+      <Member Id="F:Iot.Device.Display.Segment14.FullStop" />
+      <Member Id="F:Iot.Device.Display.Segment14.Left" />
+      <Member Id="F:Iot.Device.Display.Segment14.Middle" />
+      <Member Id="F:Iot.Device.Display.Segment14.None" />
+      <Member Id="F:Iot.Device.Display.Segment14.North" />
+      <Member Id="F:Iot.Device.Display.Segment14.NorthEast" />
+      <Member Id="F:Iot.Device.Display.Segment14.NorthWest" />
+      <Member Id="F:Iot.Device.Display.Segment14.Right" />
+      <Member Id="F:Iot.Device.Display.Segment14.South" />
+      <Member Id="F:Iot.Device.Display.Segment14.SouthEast" />
+      <Member Id="F:Iot.Device.Display.Segment14.SouthWest" />
+      <Member Id="F:Iot.Device.Display.Segment14.Top" />
+      <Member Id="F:Iot.Device.Display.Segment14.TopLeft" />
+      <Member Id="F:Iot.Device.Display.Segment14.TopRight" />
+      <Member Id="F:Iot.Device.Display.Segment14.West" />
     </Type>
     <Type Name="Iot.Device.Display.ShowdownMode" Id="T:Iot.Device.Display.ShowdownMode">
       <Member Id="F:Iot.Device.Display.ShowdownMode.Normal" />
@@ -3559,16 +4020,27 @@
     <Type Name="Iot.Device.FtCommon.FtDeviceType" Id="T:Iot.Device.FtCommon.FtDeviceType">
       <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft2232" />
       <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft2232H" />
+      <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft2232HA" />
+      <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft2232HP" />
+      <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft2233HP" />
       <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft232BOrFt245B" />
       <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft232H" />
+      <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft232HP" />
       <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft232ROrFt245R" />
+      <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft233HP" />
       <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft4222HMode0or2With2Interfaces" />
       <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft4222HMode1or2With4Interfaces" />
       <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft4222HMode3With1Interface" />
       <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft4222OtpProgrammerBoard" />
       <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft4232H" />
+      <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft4232HA" />
+      <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft4232HP" />
+      <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft4233HP" />
       <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft8U100Ax" />
       <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft8U232AmOrFTtU245Am" />
+      <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft900" />
+      <Member Id="F:Iot.Device.FtCommon.FtDeviceType.Ft930" />
+      <Member Id="F:Iot.Device.FtCommon.FtDeviceType.FtUmftpd3A" />
       <Member Id="F:Iot.Device.FtCommon.FtDeviceType.FtXSeries" />
       <Member Id="F:Iot.Device.FtCommon.FtDeviceType.UnknownDevice" />
     </Type>
@@ -4084,6 +4556,18 @@
     <Type Name="Iot.Device.Graphics.Font5x8" Id="T:Iot.Device.Graphics.Font5x8">
       <Member Id="M:Iot.Device.Graphics.Font5x8.#ctor" />
     </Type>
+    <Type Name="Iot.Device.Graphics.GraphicDisplay" Id="T:Iot.Device.Graphics.GraphicDisplay">
+      <Member Id="M:Iot.Device.Graphics.GraphicDisplay.#ctor" />
+      <Member Id="M:Iot.Device.Graphics.GraphicDisplay.CanConvertFromPixelFormat(Iot.Device.Graphics.PixelFormat)" />
+      <Member Id="M:Iot.Device.Graphics.GraphicDisplay.ClearScreen" />
+      <Member Id="M:Iot.Device.Graphics.GraphicDisplay.Dispose" />
+      <Member Id="M:Iot.Device.Graphics.GraphicDisplay.Dispose(System.Boolean)" />
+      <Member Id="M:Iot.Device.Graphics.GraphicDisplay.DrawBitmap(Iot.Device.Graphics.BitmapImage)" />
+      <Member Id="M:Iot.Device.Graphics.GraphicDisplay.GetBackBufferCompatibleImage" />
+      <Member Id="P:Iot.Device.Graphics.GraphicDisplay.NativePixelFormat" />
+      <Member Id="P:Iot.Device.Graphics.GraphicDisplay.ScreenHeight" />
+      <Member Id="P:Iot.Device.Graphics.GraphicDisplay.ScreenWidth" />
+    </Type>
     <Type Name="Iot.Device.Graphics.IGraphics" Id="T:Iot.Device.Graphics.IGraphics" />
     <Type Name="Iot.Device.Graphics.IImageFactory" Id="T:Iot.Device.Graphics.IImageFactory">
       <Member Id="M:Iot.Device.Graphics.IImageFactory.CreateBitmap(System.Int32,System.Int32,Iot.Device.Graphics.PixelFormat)" />
@@ -4122,6 +4606,8 @@
       <Member Id="M:Iot.Device.Graphics.LcdCharacterEncodingFactory.SpecialLettersForCulture(System.Globalization.CultureInfo,System.Collections.Generic.Dictionary{System.Char,System.Byte})" />
     </Type>
     <Type Name="Iot.Device.Graphics.PixelFormat" Id="T:Iot.Device.Graphics.PixelFormat">
+      <Member Id="F:Iot.Device.Graphics.PixelFormat.Format16bppRgb565" />
+      <Member Id="F:Iot.Device.Graphics.PixelFormat.Format1bppBw" />
       <Member Id="F:Iot.Device.Graphics.PixelFormat.Format32bppArgb" />
       <Member Id="F:Iot.Device.Graphics.PixelFormat.Format32bppXrgb" />
       <Member Id="F:Iot.Device.Graphics.PixelFormat.Unspecified" />
@@ -4327,6 +4813,36 @@
       <Member Id="P:Iot.Device.GrovePiDevice.Sensors.UltrasonicSensor.SensorName" />
       <Member Id="P:Iot.Device.GrovePiDevice.Sensors.UltrasonicSensor.SupportedPorts" />
       <Member Id="P:Iot.Device.GrovePiDevice.Sensors.UltrasonicSensor.Value" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Iot.Device.Gui">
+    <Type Name="Iot.Device.Gui.IPointingDevice" Id="T:Iot.Device.Gui.IPointingDevice">
+      <Member Id="M:Iot.Device.Gui.IPointingDevice.ButtonDown(Iot.Device.Gui.MouseButton)" />
+      <Member Id="M:Iot.Device.Gui.IPointingDevice.ButtonUp(Iot.Device.Gui.MouseButton)" />
+      <Member Id="M:Iot.Device.Gui.IPointingDevice.Click(Iot.Device.Gui.MouseButton)" />
+      <Member Id="M:Iot.Device.Gui.IPointingDevice.GetPosition" />
+      <Member Id="M:Iot.Device.Gui.IPointingDevice.MoveBy(System.Int32,System.Int32)" />
+      <Member Id="M:Iot.Device.Gui.IPointingDevice.MoveTo(System.Drawing.Point)" />
+      <Member Id="M:Iot.Device.Gui.IPointingDevice.MoveTo(System.Int32,System.Int32)" />
+      <Member Id="P:Iot.Device.Gui.IPointingDevice.AbsoluteCoordinates" />
+    </Type>
+    <Type Name="Iot.Device.Gui.MouseButton" Id="T:Iot.Device.Gui.MouseButton">
+      <Member Id="F:Iot.Device.Gui.MouseButton.Left" />
+      <Member Id="F:Iot.Device.Gui.MouseButton.Middle" />
+      <Member Id="F:Iot.Device.Gui.MouseButton.None" />
+      <Member Id="F:Iot.Device.Gui.MouseButton.Right" />
+    </Type>
+    <Type Name="Iot.Device.Gui.ScreenCapture" Id="T:Iot.Device.Gui.ScreenCapture">
+      <Member Id="M:Iot.Device.Gui.ScreenCapture.#ctor" />
+      <Member Id="M:Iot.Device.Gui.ScreenCapture.Dispose" />
+      <Member Id="M:Iot.Device.Gui.ScreenCapture.Dispose(System.Boolean)" />
+      <Member Id="M:Iot.Device.Gui.ScreenCapture.GetScreenContents" />
+      <Member Id="M:Iot.Device.Gui.ScreenCapture.GetScreenContents(System.Drawing.Rectangle)" />
+      <Member Id="M:Iot.Device.Gui.ScreenCapture.ScreenSize" />
+    </Type>
+    <Type Name="Iot.Device.Gui.VirtualPointingDevice" Id="T:Iot.Device.Gui.VirtualPointingDevice">
+      <Member Id="M:Iot.Device.Gui.VirtualPointingDevice.CreateAbsolute(System.Int32,System.Int32)" />
+      <Member Id="M:Iot.Device.Gui.VirtualPointingDevice.CreateRelative" />
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.HardwareMonitor">
@@ -4559,6 +5075,23 @@
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.Hx711">
+    <Type Name="Iot.Device.Hx711.Hx711" Id="T:Iot.Device.Hx711.Hx711">
+      <Member Id="M:Iot.Device.Hx711.Hx711.#ctor(System.Int32,System.Int32,Iot.Device.Hx711.Hx711Options,System.Device.Gpio.GpioController,System.Device.Gpio.PinNumberingScheme,System.Boolean)" />
+      <Member Id="M:Iot.Device.Hx711.Hx711.Dispose" />
+      <Member Id="M:Iot.Device.Hx711.Hx711.GetWeight(System.Int32)" />
+      <Member Id="M:Iot.Device.Hx711.Hx711.PowerDown" />
+      <Member Id="M:Iot.Device.Hx711.Hx711.PowerUp" />
+      <Member Id="M:Iot.Device.Hx711.Hx711.Reset" />
+      <Member Id="M:Iot.Device.Hx711.Hx711.SetCalibration(UnitsNet.Mass,System.Int32)" />
+      <Member Id="M:Iot.Device.Hx711.Hx711.SetConversionRatio(System.Double)" />
+      <Member Id="M:Iot.Device.Hx711.Hx711.Tare(System.Int32)" />
+      <Member Id="P:Iot.Device.Hx711.Hx711.ConversionRatio" />
+      <Member Id="P:Iot.Device.Hx711.Hx711.TareValue" />
+    </Type>
+    <Type Name="Iot.Device.Hx711.Hx711CalibrationNotDoneException" Id="T:Iot.Device.Hx711.Hx711CalibrationNotDoneException">
+      <Member Id="M:Iot.Device.Hx711.Hx711CalibrationNotDoneException.#ctor" />
+      <Member Id="M:Iot.Device.Hx711.Hx711CalibrationNotDoneException.#ctor(System.Exception)" />
+    </Type>
     <Type Name="Iot.Device.Hx711.Hx711I2c" Id="T:Iot.Device.Hx711.Hx711I2c">
       <Member Id="F:Iot.Device.Hx711.Hx711I2c.DefaultI2cAddress" />
       <Member Id="F:Iot.Device.Hx711.Hx711I2c.DefaultOffset" />
@@ -4579,6 +5112,17 @@
       <Member Id="P:Iot.Device.Hx711.Hx711I2c.Offset" />
       <Member Id="P:Iot.Device.Hx711.Hx711I2c.ReadWriteDelay" />
       <Member Id="P:Iot.Device.Hx711.Hx711I2c.SampleAveraging" />
+    </Type>
+    <Type Name="Iot.Device.Hx711.Hx711Mode" Id="T:Iot.Device.Hx711.Hx711Mode">
+      <Member Id="F:Iot.Device.Hx711.Hx711Mode.ChannelAGain128" />
+      <Member Id="F:Iot.Device.Hx711.Hx711Mode.ChannelAGain64" />
+      <Member Id="F:Iot.Device.Hx711.Hx711Mode.ChannelBGain32" />
+    </Type>
+    <Type Name="Iot.Device.Hx711.Hx711Options" Id="T:Iot.Device.Hx711.Hx711Options">
+      <Member Id="M:Iot.Device.Hx711.Hx711Options.#ctor" />
+      <Member Id="M:Iot.Device.Hx711.Hx711Options.#ctor(Iot.Device.Hx711.Hx711Mode,System.Boolean)" />
+      <Member Id="P:Iot.Device.Hx711.Hx711Options.Mode" />
+      <Member Id="P:Iot.Device.Hx711.Hx711Options.UseByteLittleEndian" />
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.Ili934x">
@@ -4608,15 +5152,15 @@
       <Member Id="F:Iot.Device.Ili934x.Ili9341.DefaultSpiClockFrequency" />
       <Member Id="F:Iot.Device.Ili934x.Ili9341.DefaultSpiMode" />
       <Member Id="M:Iot.Device.Ili934x.Ili9341.#ctor(System.Device.Spi.SpiDevice,System.Int32,System.Int32,System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
+      <Member Id="M:Iot.Device.Ili934x.Ili9341.CanConvertFromPixelFormat(Iot.Device.Graphics.PixelFormat)" />
+      <Member Id="M:Iot.Device.Ili934x.Ili9341.ClearScreen" />
       <Member Id="M:Iot.Device.Ili934x.Ili9341.ClearScreen(System.Boolean)" />
       <Member Id="M:Iot.Device.Ili934x.Ili9341.ClearScreen(System.Drawing.Color,System.Boolean)" />
-      <Member Id="M:Iot.Device.Ili934x.Ili9341.CreateBackBuffer" />
-      <Member Id="M:Iot.Device.Ili934x.Ili9341.Dispose" />
       <Member Id="M:Iot.Device.Ili934x.Ili9341.Dispose(System.Boolean)" />
       <Member Id="M:Iot.Device.Ili934x.Ili9341.DrawBitmap(Iot.Device.Graphics.BitmapImage)" />
-      <Member Id="M:Iot.Device.Ili934x.Ili9341.DrawBitmap(Iot.Device.Graphics.BitmapImage,System.Drawing.Point,System.Drawing.Rectangle)" />
-      <Member Id="M:Iot.Device.Ili934x.Ili9341.DrawBitmap(Iot.Device.Graphics.BitmapImage,System.Drawing.Rectangle)" />
+      <Member Id="M:Iot.Device.Ili934x.Ili9341.DrawBitmap(Iot.Device.Graphics.BitmapImage,System.Drawing.Point,System.Drawing.Rectangle,System.Boolean)" />
       <Member Id="M:Iot.Device.Ili934x.Ili9341.FillRect(System.Drawing.Color,System.Int32,System.Int32,System.Int32,System.Int32)" />
+      <Member Id="M:Iot.Device.Ili934x.Ili9341.GetBackBufferCompatibleImage" />
       <Member Id="M:Iot.Device.Ili934x.Ili9341.InitDisplayParameters" />
       <Member Id="M:Iot.Device.Ili934x.Ili9341.ResetDisplayAsync" />
       <Member Id="M:Iot.Device.Ili934x.Ili9341.SendBitmapPixelData(System.Span{System.Byte},System.Drawing.Rectangle)" />
@@ -4624,6 +5168,7 @@
       <Member Id="M:Iot.Device.Ili934x.Ili9341.TurnBacklightOff" />
       <Member Id="M:Iot.Device.Ili934x.Ili9341.TurnBacklightOn" />
       <Member Id="P:Iot.Device.Ili934x.Ili9341.Fps" />
+      <Member Id="P:Iot.Device.Ili934x.Ili9341.NativePixelFormat" />
       <Member Id="P:Iot.Device.Ili934x.Ili9341.ScreenHeight" />
       <Member Id="P:Iot.Device.Ili934x.Ili9341.ScreenWidth" />
     </Type>
@@ -4996,6 +5541,34 @@
       <Member Id="F:Iot.Device.Lp55231.MiscFlags.PwmCyclePowersaveEnable" />
     </Type>
   </Namespace>
+  <Namespace Name="Iot.Device.Lps22hb">
+    <Type Name="Iot.Device.Lps22hb.BduMode" Id="T:Iot.Device.Lps22hb.BduMode">
+      <Member Id="F:Iot.Device.Lps22hb.BduMode.BlockDataUpdate" />
+      <Member Id="F:Iot.Device.Lps22hb.BduMode.ContinuousUpdate" />
+    </Type>
+    <Type Name="Iot.Device.Lps22hb.LowPassFilter" Id="T:Iot.Device.Lps22hb.LowPassFilter">
+      <Member Id="F:Iot.Device.Lps22hb.LowPassFilter.Disable" />
+      <Member Id="F:Iot.Device.Lps22hb.LowPassFilter.Odr20" />
+      <Member Id="F:Iot.Device.Lps22hb.LowPassFilter.Odr9" />
+    </Type>
+    <Type Name="Iot.Device.Lps22hb.Lps22hb" Id="T:Iot.Device.Lps22hb.Lps22hb">
+      <Member Id="F:Iot.Device.Lps22hb.Lps22hb.DefaultI2cAddress" />
+      <Member Id="M:Iot.Device.Lps22hb.Lps22hb.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Lps22hb.OutputRate,Iot.Device.Lps22hb.LowPassFilter,Iot.Device.Lps22hb.BduMode)" />
+      <Member Id="M:Iot.Device.Lps22hb.Lps22hb.Dispose" />
+      <Member Id="M:Iot.Device.Lps22hb.Lps22hb.ResetDevice" />
+      <Member Id="M:Iot.Device.Lps22hb.Lps22hb.TryRead" />
+      <Member Id="M:Iot.Device.Lps22hb.Lps22hb.TryReadPressure(UnitsNet.Pressure@)" />
+      <Member Id="M:Iot.Device.Lps22hb.Lps22hb.TryReadTemperature(UnitsNet.Temperature@)" />
+    </Type>
+    <Type Name="Iot.Device.Lps22hb.OutputRate" Id="T:Iot.Device.Lps22hb.OutputRate">
+      <Member Id="F:Iot.Device.Lps22hb.OutputRate.DataRate10Hz" />
+      <Member Id="F:Iot.Device.Lps22hb.OutputRate.DataRate1Hz" />
+      <Member Id="F:Iot.Device.Lps22hb.OutputRate.DataRate25Hz" />
+      <Member Id="F:Iot.Device.Lps22hb.OutputRate.DataRate50Hz" />
+      <Member Id="F:Iot.Device.Lps22hb.OutputRate.DataRate75Hz" />
+      <Member Id="F:Iot.Device.Lps22hb.OutputRate.PowerDownMode" />
+    </Type>
+  </Namespace>
   <Namespace Name="Iot.Device.Lps25h">
     <Type Name="Iot.Device.Lps25h.Lps25h" Id="T:Iot.Device.Lps25h.Lps25h">
       <Member Id="M:Iot.Device.Lps25h.Lps25h.#ctor(System.Device.I2c.I2cDevice)" />
@@ -5032,6 +5605,19 @@
       <Member Id="F:Iot.Device.Lsm9Ds1.MagneticInductionScale.Scale08G" />
       <Member Id="F:Iot.Device.Lsm9Ds1.MagneticInductionScale.Scale12G" />
       <Member Id="F:Iot.Device.Lsm9Ds1.MagneticInductionScale.Scale16G" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Iot.Device.M5Stack">
+    <Type Name="Iot.Device.M5Stack.M5ToughPowerControl" Id="T:Iot.Device.M5Stack.M5ToughPowerControl">
+      <Member Id="M:Iot.Device.M5Stack.M5ToughPowerControl.#ctor(Iot.Device.Board.Board)" />
+      <Member Id="M:Iot.Device.M5Stack.M5ToughPowerControl.Beep(System.TimeSpan)" />
+      <Member Id="M:Iot.Device.M5Stack.M5ToughPowerControl.Dispose" />
+      <Member Id="M:Iot.Device.M5Stack.M5ToughPowerControl.Dispose(System.Boolean)" />
+      <Member Id="M:Iot.Device.M5Stack.M5ToughPowerControl.GetPowerControlData" />
+      <Member Id="M:Iot.Device.M5Stack.M5ToughPowerControl.Init" />
+      <Member Id="M:Iot.Device.M5Stack.M5ToughPowerControl.SetLcdVoltage(UnitsNet.ElectricPotential)" />
+      <Member Id="M:Iot.Device.M5Stack.M5ToughPowerControl.Sleep(System.Boolean)" />
+      <Member Id="P:Iot.Device.M5Stack.M5ToughPowerControl.EnableSpeaker" />
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.Magnetometer">
@@ -5257,6 +5843,8 @@
       <Member Id="M:Iot.Device.Mcp23xxx.Mcp23x1x.#ctor(Iot.Device.Mcp23xxx.Mcp23xxx.BusAdapter,System.Int32,System.Int32,System.Int32,System.Device.Gpio.GpioController,System.Boolean)" />
       <Member Id="M:Iot.Device.Mcp23xxx.Mcp23x1x.ReadByte(Iot.Device.Mcp23xxx.Register,Iot.Device.Mcp23xxx.Port)" />
       <Member Id="M:Iot.Device.Mcp23xxx.Mcp23x1x.ReadInterrupt(Iot.Device.Mcp23xxx.Port)" />
+      <Member Id="M:Iot.Device.Mcp23xxx.Mcp23x1x.ReadPortA" />
+      <Member Id="M:Iot.Device.Mcp23xxx.Mcp23x1x.ReadPortB" />
       <Member Id="M:Iot.Device.Mcp23xxx.Mcp23x1x.ReadUInt16(Iot.Device.Mcp23xxx.Register)" />
       <Member Id="M:Iot.Device.Mcp23xxx.Mcp23x1x.WriteByte(Iot.Device.Mcp23xxx.Register,System.Byte,Iot.Device.Mcp23xxx.Port)" />
       <Member Id="M:Iot.Device.Mcp23xxx.Mcp23x1x.WriteUInt16(Iot.Device.Mcp23xxx.Register,System.UInt16)" />
@@ -5269,8 +5857,10 @@
       <Member Id="M:Iot.Device.Mcp23xxx.Mcp23xxx.ClosePin(System.Int32)" />
       <Member Id="M:Iot.Device.Mcp23xxx.Mcp23xxx.ConvertPinNumberToLogicalNumberingScheme(System.Int32)" />
       <Member Id="M:Iot.Device.Mcp23xxx.Mcp23xxx.Disable" />
+      <Member Id="M:Iot.Device.Mcp23xxx.Mcp23xxx.DisableInterruptOnChange(System.Int32)" />
       <Member Id="M:Iot.Device.Mcp23xxx.Mcp23xxx.Dispose(System.Boolean)" />
       <Member Id="M:Iot.Device.Mcp23xxx.Mcp23xxx.Enable" />
+      <Member Id="M:Iot.Device.Mcp23xxx.Mcp23xxx.EnableInterruptOnChange(System.Int32,System.Device.Gpio.PinEventTypes)" />
       <Member Id="M:Iot.Device.Mcp23xxx.Mcp23xxx.GetPinMode(System.Int32)" />
       <Member Id="M:Iot.Device.Mcp23xxx.Mcp23xxx.InternalRead(Iot.Device.Mcp23xxx.Register,System.Span{System.Byte},Iot.Device.Mcp23xxx.Port)" />
       <Member Id="M:Iot.Device.Mcp23xxx.Mcp23xxx.InternalReadByte(Iot.Device.Mcp23xxx.Register,Iot.Device.Mcp23xxx.Port)" />
@@ -7098,6 +7688,7 @@
     </Type>
     <Type Name="Iot.Device.Nmea0183.Ais.AisSafetyState" Id="T:Iot.Device.Nmea0183.Ais.AisSafetyState">
       <Member Id="F:Iot.Device.Nmea0183.Ais.AisSafetyState.Dangerous" />
+      <Member Id="F:Iot.Device.Nmea0183.Ais.AisSafetyState.FarAway" />
       <Member Id="F:Iot.Device.Nmea0183.Ais.AisSafetyState.Lost" />
       <Member Id="F:Iot.Device.Nmea0183.Ais.AisSafetyState.Safe" />
       <Member Id="F:Iot.Device.Nmea0183.Ais.AisSafetyState.Unknown" />
@@ -7111,6 +7702,7 @@
       <Member Id="M:Iot.Device.Nmea0183.Ais.AisTarget.FormatMmsi" />
       <Member Id="M:Iot.Device.Nmea0183.Ais.AisTarget.GetHashCode" />
       <Member Id="M:Iot.Device.Nmea0183.Ais.AisTarget.IdentifyMmsiType" />
+      <Member Id="M:Iot.Device.Nmea0183.Ais.AisTarget.NameOrMssi" />
       <Member Id="M:Iot.Device.Nmea0183.Ais.AisTarget.op_Equality(Iot.Device.Nmea0183.Ais.AisTarget,Iot.Device.Nmea0183.Ais.AisTarget)" />
       <Member Id="M:Iot.Device.Nmea0183.Ais.AisTarget.op_Inequality(Iot.Device.Nmea0183.Ais.AisTarget,Iot.Device.Nmea0183.Ais.AisTarget)" />
       <Member Id="M:Iot.Device.Nmea0183.Ais.AisTarget.PrintMembers(System.Text.StringBuilder)" />
@@ -7122,6 +7714,7 @@
       <Member Id="P:Iot.Device.Nmea0183.Ais.AisTarget.Name" />
       <Member Id="P:Iot.Device.Nmea0183.Ais.AisTarget.Position" />
       <Member Id="P:Iot.Device.Nmea0183.Ais.AisTarget.RelativePosition" />
+      <Member Id="P:Iot.Device.Nmea0183.Ais.AisTarget.SuppressionTime" />
     </Type>
     <Type Name="Iot.Device.Nmea0183.Ais.AisTargetExtensions" Id="T:Iot.Device.Nmea0183.Ais.AisTargetExtensions">
       <Member Id="M:Iot.Device.Nmea0183.Ais.AisTargetExtensions.Age(Iot.Device.Nmea0183.Ais.AisTarget,System.DateTimeOffset)" />
@@ -7413,23 +8006,29 @@
       <Member Id="M:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.PrintMembers(System.Text.StringBuilder)" />
       <Member Id="M:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.ToString" />
       <Member Id="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.AisSafetyCheckInterval" />
+      <Member Id="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.CleanupLatency" />
+      <Member Id="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.DeleteTargetAfterTimeout" />
       <Member Id="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.EndTimeOffset" />
       <Member Id="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.EqualityContract" />
       <Member Id="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.MaximumPositionAge" />
       <Member Id="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.NormalStepSize" />
       <Member Id="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.StartTimeOffset" />
       <Member Id="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.TargetLostTimeout" />
+      <Member Id="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.VesselLostMinSpeed" />
+      <Member Id="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.VesselLostWarningRange" />
       <Member Id="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.WarnIfGnssMissing" />
       <Member Id="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.WarningDistance" />
+      <Member Id="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.WarningRepeatTimeout" />
       <Member Id="P:Iot.Device.Nmea0183.Ais.TrackEstimationParameters.WarningTime" />
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.Nmea0183">
     <Type Name="Iot.Device.Nmea0183.AisManager" Id="T:Iot.Device.Nmea0183.AisManager">
+      <Member Id="E:Iot.Device.Nmea0183.AisManager.OnAisWarning" />
       <Member Id="E:Iot.Device.Nmea0183.AisManager.OnMessage" />
-      <Member Id="F:Iot.Device.Nmea0183.AisManager.CleanupLatency" />
-      <Member Id="F:Iot.Device.Nmea0183.AisManager.WarningRepeatTimeout" />
+      <Member Id="E:Iot.Device.Nmea0183.AisManager.RelativePositionsUpdated" />
       <Member Id="M:Iot.Device.Nmea0183.AisManager.#ctor(System.String,System.Boolean,System.UInt32,System.String)" />
+      <Member Id="M:Iot.Device.Nmea0183.AisManager.#ctor(System.String,System.Boolean,System.UInt32,System.String,Iot.Device.Nmea0183.PositionProvider)" />
       <Member Id="M:Iot.Device.Nmea0183.AisManager.#ctor(System.String,System.UInt32,System.String)" />
       <Member Id="M:Iot.Device.Nmea0183.AisManager.ClearWarnings" />
       <Member Id="M:Iot.Device.Nmea0183.AisManager.EnableAisAlarms(System.Boolean,Iot.Device.Nmea0183.Ais.TrackEstimationParameters)" />
@@ -7441,13 +8040,13 @@
       <Member Id="M:Iot.Device.Nmea0183.AisManager.SendBroadcastMessage(System.UInt32,System.String)" />
       <Member Id="M:Iot.Device.Nmea0183.AisManager.SendSentence(Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.Sentences.NmeaSentence)" />
       <Member Id="M:Iot.Device.Nmea0183.AisManager.SendShipPositionReport(Iot.Device.Nmea0183.Ais.AisTransceiverClass,Iot.Device.Nmea0183.Ais.Ship)" />
+      <Member Id="M:Iot.Device.Nmea0183.AisManager.SendWarningMessage(Iot.Device.Nmea0183.AisMessageId,System.UInt32,System.String,Iot.Device.Nmea0183.Ais.AisTarget)" />
+      <Member Id="M:Iot.Device.Nmea0183.AisManager.SendWarningMessage(Iot.Device.Nmea0183.AisMessageId,System.UInt32,System.String,System.DateTimeOffset,Iot.Device.Nmea0183.Ais.AisTarget)" />
       <Member Id="M:Iot.Device.Nmea0183.AisManager.SendWarningMessage(System.String,System.UInt32,System.String)" />
-      <Member Id="M:Iot.Device.Nmea0183.AisManager.SendWarningMessage(System.String,System.UInt32,System.String,System.DateTimeOffset)" />
       <Member Id="M:Iot.Device.Nmea0183.AisManager.StartDecode" />
       <Member Id="M:Iot.Device.Nmea0183.AisManager.StopDecode" />
       <Member Id="M:Iot.Device.Nmea0183.AisManager.TryGetTarget(System.UInt32,Iot.Device.Nmea0183.Ais.AisTarget@)" />
       <Member Id="P:Iot.Device.Nmea0183.AisManager.AutoSendWarnings" />
-      <Member Id="P:Iot.Device.Nmea0183.AisManager.DeleteTargetAfterTimeout" />
       <Member Id="P:Iot.Device.Nmea0183.AisManager.DimensionToBow" />
       <Member Id="P:Iot.Device.Nmea0183.AisManager.DimensionToPort" />
       <Member Id="P:Iot.Device.Nmea0183.AisManager.DimensionToStarboard" />
@@ -7455,9 +8054,35 @@
       <Member Id="P:Iot.Device.Nmea0183.AisManager.GeneratedSentencesId" />
       <Member Id="P:Iot.Device.Nmea0183.AisManager.OwnMmsi" />
       <Member Id="P:Iot.Device.Nmea0183.AisManager.OwnShipName" />
+      <Member Id="P:Iot.Device.Nmea0183.AisManager.PreferredPositionSource" />
       <Member Id="P:Iot.Device.Nmea0183.AisManager.TrackEstimationParameters" />
     </Type>
     <Type Name="Iot.Device.Nmea0183.AisManager/AisMessageHandler" Id="T:Iot.Device.Nmea0183.AisManager.AisMessageHandler" />
+    <Type Name="Iot.Device.Nmea0183.AisManager/AisWarning" Id="T:Iot.Device.Nmea0183.AisManager.AisWarning" />
+    <Type Name="Iot.Device.Nmea0183.AisMessageId" Id="T:Iot.Device.Nmea0183.AisMessageId">
+      <Member Id="M:Iot.Device.Nmea0183.AisMessageId.#ctor(Iot.Device.Nmea0183.AisMessageId)" />
+      <Member Id="M:Iot.Device.Nmea0183.AisMessageId.#ctor(Iot.Device.Nmea0183.AisWarningType,System.UInt32)" />
+      <Member Id="M:Iot.Device.Nmea0183.AisMessageId.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Nmea0183.AisMessageId.Deconstruct(Iot.Device.Nmea0183.AisWarningType@,System.UInt32@)" />
+      <Member Id="M:Iot.Device.Nmea0183.AisMessageId.Equals(Iot.Device.Nmea0183.AisMessageId)" />
+      <Member Id="M:Iot.Device.Nmea0183.AisMessageId.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Nmea0183.AisMessageId.GetHashCode" />
+      <Member Id="M:Iot.Device.Nmea0183.AisMessageId.op_Equality(Iot.Device.Nmea0183.AisMessageId,Iot.Device.Nmea0183.AisMessageId)" />
+      <Member Id="M:Iot.Device.Nmea0183.AisMessageId.op_Inequality(Iot.Device.Nmea0183.AisMessageId,Iot.Device.Nmea0183.AisMessageId)" />
+      <Member Id="M:Iot.Device.Nmea0183.AisMessageId.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Nmea0183.AisMessageId.ToString" />
+      <Member Id="P:Iot.Device.Nmea0183.AisMessageId.EqualityContract" />
+      <Member Id="P:Iot.Device.Nmea0183.AisMessageId.Mmsi" />
+      <Member Id="P:Iot.Device.Nmea0183.AisMessageId.Type" />
+    </Type>
+    <Type Name="Iot.Device.Nmea0183.AisWarningType" Id="T:Iot.Device.Nmea0183.AisWarningType">
+      <Member Id="F:Iot.Device.Nmea0183.AisWarningType.DangerousVessel" />
+      <Member Id="F:Iot.Device.Nmea0183.AisWarningType.ExceptionalTargetSeen" />
+      <Member Id="F:Iot.Device.Nmea0183.AisWarningType.NoGnss" />
+      <Member Id="F:Iot.Device.Nmea0183.AisWarningType.None" />
+      <Member Id="F:Iot.Device.Nmea0183.AisWarningType.UserMessage" />
+      <Member Id="F:Iot.Device.Nmea0183.AisWarningType.VesselLost" />
+    </Type>
     <Type Name="Iot.Device.Nmea0183.AutopilotController" Id="T:Iot.Device.Nmea0183.AutopilotController">
       <Member Id="M:Iot.Device.Nmea0183.AutopilotController.#ctor(Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.SentenceCache)" />
       <Member Id="M:Iot.Device.Nmea0183.AutopilotController.ActivateRoute(Iot.Device.Nmea0183.Route)" />
@@ -7570,6 +8195,7 @@
       <Member Id="P:Iot.Device.Nmea0183.MagneticReading.TimeStamp" />
     </Type>
     <Type Name="Iot.Device.Nmea0183.MessageRouter" Id="T:Iot.Device.Nmea0183.MessageRouter">
+      <Member Id="F:Iot.Device.Nmea0183.MessageRouter.AisManager" />
       <Member Id="F:Iot.Device.Nmea0183.MessageRouter.LocalMessageSource" />
       <Member Id="F:Iot.Device.Nmea0183.MessageRouter.LoggingSinkName" />
       <Member Id="M:Iot.Device.Nmea0183.MessageRouter.#ctor(Iot.Device.Nmea0183.LoggingConfiguration)" />
@@ -7782,6 +8408,7 @@
       <Member Id="P:Iot.Device.Nmea0183.TalkerId.LoranC" />
       <Member Id="P:Iot.Device.Nmea0183.TalkerId.Proprietary" />
       <Member Id="P:Iot.Device.Nmea0183.TalkerId.RadarAndOrArpa" />
+      <Member Id="P:Iot.Device.Nmea0183.TalkerId.Seatalk" />
       <Member Id="P:Iot.Device.Nmea0183.TalkerId.SounderDepth" />
       <Member Id="P:Iot.Device.Nmea0183.TalkerId.SounderScanning" />
       <Member Id="P:Iot.Device.Nmea0183.TalkerId.TimekeeperAtomicClock" />
@@ -7811,6 +8438,18 @@
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.Nmea0183.Sentences">
+    <Type Name="Iot.Device.Nmea0183.Sentences.AutopilotStatus" Id="T:Iot.Device.Nmea0183.Sentences.AutopilotStatus">
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.AutopilotStatus.Auto" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.AutopilotStatus.Calibration" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.AutopilotStatus.InactiveTrack" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.AutopilotStatus.InactiveWind" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.AutopilotStatus.Offline" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.AutopilotStatus.RudderControl" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.AutopilotStatus.Standby" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.AutopilotStatus.Track" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.AutopilotStatus.Undefined" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.AutopilotStatus.Wind" />
+    </Type>
     <Type Name="Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint" Id="T:Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint">
       <Member Id="M:Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
       <Member Id="M:Iot.Device.Nmea0183.Sentences.BearingAndDistanceToWayPoint.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
@@ -7860,7 +8499,7 @@
     </Type>
     <Type Name="Iot.Device.Nmea0183.Sentences.EngineData" Id="T:Iot.Device.Nmea0183.Sentences.EngineData">
       <Member Id="M:Iot.Device.Nmea0183.Sentences.EngineData.#ctor(Iot.Device.Nmea0183.Sentences.EngineData)" />
-      <Member Id="M:Iot.Device.Nmea0183.Sentences.EngineData.#ctor(System.Int32,System.Int32,UnitsNet.RotationalSpeed,UnitsNet.Ratio,System.TimeSpan,System.Nullable{UnitsNet.Temperature})" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.EngineData.#ctor(System.Int32,Iot.Device.Nmea0183.Sentences.EngineStatus,System.Int32,UnitsNet.RotationalSpeed,UnitsNet.Ratio,System.TimeSpan,System.Nullable{UnitsNet.Temperature})" />
       <Member Id="M:Iot.Device.Nmea0183.Sentences.EngineData.&lt;Clone&gt;$" />
       <Member Id="M:Iot.Device.Nmea0183.Sentences.EngineData.Equals(Iot.Device.Nmea0183.Sentences.EngineData)" />
       <Member Id="M:Iot.Device.Nmea0183.Sentences.EngineData.Equals(System.Object)" />
@@ -7877,9 +8516,11 @@
       <Member Id="P:Iot.Device.Nmea0183.Sentences.EngineData.OperatingTime" />
       <Member Id="P:Iot.Device.Nmea0183.Sentences.EngineData.Pitch" />
       <Member Id="P:Iot.Device.Nmea0183.Sentences.EngineData.Revolutions" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.EngineData.Status" />
     </Type>
     <Type Name="Iot.Device.Nmea0183.Sentences.EngineRevolutions" Id="T:Iot.Device.Nmea0183.Sentences.EngineRevolutions">
       <Member Id="M:Iot.Device.Nmea0183.Sentences.EngineRevolutions.#ctor(Iot.Device.Nmea0183.Sentences.RotationSource,UnitsNet.RotationalSpeed,System.Int32,UnitsNet.Ratio)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.EngineRevolutions.#ctor(Iot.Device.Nmea0183.TalkerId,Iot.Device.Nmea0183.Sentences.EngineData)" />
       <Member Id="M:Iot.Device.Nmea0183.Sentences.EngineRevolutions.#ctor(Iot.Device.Nmea0183.TalkerId,Iot.Device.Nmea0183.Sentences.RotationSource,UnitsNet.RotationalSpeed,System.Int32,UnitsNet.Ratio)" />
       <Member Id="M:Iot.Device.Nmea0183.Sentences.EngineRevolutions.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
       <Member Id="M:Iot.Device.Nmea0183.Sentences.EngineRevolutions.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
@@ -7891,6 +8532,62 @@
       <Member Id="P:Iot.Device.Nmea0183.Sentences.EngineRevolutions.ReplacesOlderInstance" />
       <Member Id="P:Iot.Device.Nmea0183.Sentences.EngineRevolutions.RotationalSpeed" />
       <Member Id="P:Iot.Device.Nmea0183.Sentences.EngineRevolutions.RotationSource" />
+    </Type>
+    <Type Name="Iot.Device.Nmea0183.Sentences.EngineStatus" Id="T:Iot.Device.Nmea0183.Sentences.EngineStatus">
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.ChargeIndicator" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.CheckEngine" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.EgrSystem" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.EngineCommError" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.EngineEmergencyStopMode" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.EngineShuttingDown" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.HighBoostPressure" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.LowCoolantLevel" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.LowFuelPressure" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.LowOilLevel" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.LowOilPressure" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.LowSystemVoltage" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.MaintenanceNeeded" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.NeutralStartProtect" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.None" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.OverTemperature" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.PowerReduction" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.PreheatIndicator" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.RevLimitExceeded" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.SecondaryThrottle" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.ThrottlePositionSensor" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.WarningLevel1" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.WarningLevel2" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.WaterFlow" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.EngineStatus.WaterInFuel" />
+    </Type>
+    <Type Name="Iot.Device.Nmea0183.Sentences.FluidData" Id="T:Iot.Device.Nmea0183.Sentences.FluidData">
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.FluidData.#ctor(Iot.Device.Nmea0183.Sentences.FluidData)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.FluidData.#ctor(Iot.Device.Nmea0183.Sentences.FluidType,UnitsNet.Ratio,UnitsNet.Volume,System.Int32,System.Boolean)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.FluidData.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.FluidData.Equals(Iot.Device.Nmea0183.Sentences.FluidData)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.FluidData.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.FluidData.GetHashCode" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.FluidData.op_Equality(Iot.Device.Nmea0183.Sentences.FluidData,Iot.Device.Nmea0183.Sentences.FluidData)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.FluidData.op_Inequality(Iot.Device.Nmea0183.Sentences.FluidData,Iot.Device.Nmea0183.Sentences.FluidData)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.FluidData.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.FluidData.ToString" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.FluidData.EqualityContract" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.FluidData.HighLevelIsGood" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.FluidData.Level" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.FluidData.TankNumber" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.FluidData.Type" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.FluidData.Volume" />
+    </Type>
+    <Type Name="Iot.Device.Nmea0183.Sentences.FluidType" Id="T:Iot.Device.Nmea0183.Sentences.FluidType">
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.FluidType.BlackWater" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.FluidType.Error" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.FluidType.Fuel" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.FluidType.FuelGasoline" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.FluidType.GrayWater" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.FluidType.LiveWell" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.FluidType.Oil" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.FluidType.Unavailable" />
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.FluidType.Water" />
     </Type>
     <Type Name="Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData" Id="T:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData">
       <Member Id="M:Iot.Device.Nmea0183.Sentences.GlobalPositioningSystemFixData.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
@@ -7933,6 +8630,40 @@
       <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.HeadingTrue" />
       <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.Id" />
       <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndDeclination.ReplacesOlderInstance" />
+    </Type>
+    <Type Name="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl" Id="T:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl">
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.#ctor(System.String,System.Nullable{UnitsNet.Angle},System.String,System.String,System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Length},System.Nullable{UnitsNet.RotationalSpeed},System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Length},System.Nullable{UnitsNet.Angle},System.Boolean)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.AsAngle(System.Nullable{System.Double})" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.FromAngle(System.Nullable{UnitsNet.Angle})" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.ToNmeaParameterList" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.ToReadableContent" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.CommandedRudderAngle" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.CommandedRudderDirection" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.CommandedTrack" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.DesiredHeading" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.HeadingIsTrue" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.Id" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.OffHeadingLimit" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.OffTrackLimit" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.RateOfTurn" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.ReplacesOlderInstance" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.RudderLimit" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.Status" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.TurnMode" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.TurnRadius" />
+    </Type>
+    <Type Name="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus" Id="T:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus">
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.#ctor(System.String,System.Nullable{UnitsNet.Angle},System.String,System.String,System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Length},System.Nullable{UnitsNet.RotationalSpeed},System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Length},System.Nullable{UnitsNet.Angle},System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Nullable{UnitsNet.Angle})" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.ToNmeaParameterList" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.ActualHeading" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.HeadingLimitExceeded" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.Id" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.RudderLimitExceeded" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControlStatus.TrackLimitExceeded" />
     </Type>
     <Type Name="Iot.Device.Nmea0183.Sentences.HeadingMagnetic" Id="T:Iot.Device.Nmea0183.Sentences.HeadingMagnetic">
       <Member Id="M:Iot.Device.Nmea0183.Sentences.HeadingMagnetic.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
@@ -8072,6 +8803,17 @@
       <Member Id="P:Iot.Device.Nmea0183.Sentences.RoutePart.TotalSequences" />
       <Member Id="P:Iot.Device.Nmea0183.Sentences.RoutePart.WaypointNames" />
     </Type>
+    <Type Name="Iot.Device.Nmea0183.Sentences.RudderSensorAngle" Id="T:Iot.Device.Nmea0183.Sentences.RudderSensorAngle">
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.RudderSensorAngle.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.RudderSensorAngle.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.RudderSensorAngle.#ctor(UnitsNet.Angle,System.Nullable{UnitsNet.Angle})" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.RudderSensorAngle.ToNmeaParameterList" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.RudderSensorAngle.ToReadableContent" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.RudderSensorAngle.Id" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.RudderSensorAngle.Port" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.RudderSensorAngle.ReplacesOlderInstance" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.RudderSensorAngle.Starboard" />
+    </Type>
     <Type Name="Iot.Device.Nmea0183.Sentences.SatelliteInfo" Id="T:Iot.Device.Nmea0183.Sentences.SatelliteInfo">
       <Member Id="M:Iot.Device.Nmea0183.Sentences.SatelliteInfo.#ctor(System.String)" />
       <Member Id="P:Iot.Device.Nmea0183.Sentences.SatelliteInfo.Azimuth" />
@@ -8095,9 +8837,9 @@
     <Type Name="Iot.Device.Nmea0183.Sentences.SeaSmartEngineDetail" Id="T:Iot.Device.Nmea0183.Sentences.SeaSmartEngineDetail">
       <Member Id="F:Iot.Device.Nmea0183.Sentences.SeaSmartEngineDetail.HexId" />
       <Member Id="M:Iot.Device.Nmea0183.Sentences.SeaSmartEngineDetail.#ctor(Iot.Device.Nmea0183.Sentences.EngineData)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.SeaSmartEngineDetail.#ctor(Iot.Device.Nmea0183.Sentences.EngineStatus,System.TimeSpan,UnitsNet.Temperature,System.Int32)" />
       <Member Id="M:Iot.Device.Nmea0183.Sentences.SeaSmartEngineDetail.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
       <Member Id="M:Iot.Device.Nmea0183.Sentences.SeaSmartEngineDetail.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
-      <Member Id="M:Iot.Device.Nmea0183.Sentences.SeaSmartEngineDetail.#ctor(System.Boolean,System.TimeSpan,UnitsNet.Temperature,System.Int32)" />
       <Member Id="M:Iot.Device.Nmea0183.Sentences.SeaSmartEngineDetail.ToNmeaParameterList" />
       <Member Id="M:Iot.Device.Nmea0183.Sentences.SeaSmartEngineDetail.ToReadableContent" />
       <Member Id="P:Iot.Device.Nmea0183.Sentences.SeaSmartEngineDetail.EngineNumber" />
@@ -8122,6 +8864,32 @@
       <Member Id="P:Iot.Device.Nmea0183.Sentences.SeaSmartEngineFast.PropellerPitch" />
       <Member Id="P:Iot.Device.Nmea0183.Sentences.SeaSmartEngineFast.ReplacesOlderInstance" />
       <Member Id="P:Iot.Device.Nmea0183.Sentences.SeaSmartEngineFast.RotationalSpeed" />
+    </Type>
+    <Type Name="Iot.Device.Nmea0183.Sentences.SeaSmartFluidLevel" Id="T:Iot.Device.Nmea0183.Sentences.SeaSmartFluidLevel">
+      <Member Id="F:Iot.Device.Nmea0183.Sentences.SeaSmartFluidLevel.HexId" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.SeaSmartFluidLevel.#ctor(Iot.Device.Nmea0183.Sentences.FluidData)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.SeaSmartFluidLevel.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.SeaSmartFluidLevel.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.SeaSmartFluidLevel.ToNmeaParameterList" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.SeaSmartFluidLevel.ToReadableContent" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.SeaSmartFluidLevel.Identifier" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.SeaSmartFluidLevel.Level" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.SeaSmartFluidLevel.MessageTimeStamp" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.SeaSmartFluidLevel.ReplacesOlderInstance" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.SeaSmartFluidLevel.TankNumber" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.SeaSmartFluidLevel.TankVolume" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.SeaSmartFluidLevel.Type" />
+    </Type>
+    <Type Name="Iot.Device.Nmea0183.Sentences.SeatalkNmeaMessage" Id="T:Iot.Device.Nmea0183.Sentences.SeatalkNmeaMessage">
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.SeatalkNmeaMessage.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.SeatalkNmeaMessage.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.SeatalkNmeaMessage.#ctor(System.Byte[])" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.SeatalkNmeaMessage.#ctor(System.Byte[],System.DateTimeOffset)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.SeatalkNmeaMessage.ToNmeaParameterList" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.SeatalkNmeaMessage.ToReadableContent" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.SeatalkNmeaMessage.Datagram" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.SeatalkNmeaMessage.Id" />
+      <Member Id="P:Iot.Device.Nmea0183.Sentences.SeatalkNmeaMessage.ReplacesOlderInstance" />
     </Type>
     <Type Name="Iot.Device.Nmea0183.Sentences.TimeDate" Id="T:Iot.Device.Nmea0183.Sentences.TimeDate">
       <Member Id="M:Iot.Device.Nmea0183.Sentences.TimeDate.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
@@ -8172,7 +8940,7 @@
     <Type Name="Iot.Device.Nmea0183.Sentences.WaterSpeedAndAngle" Id="T:Iot.Device.Nmea0183.Sentences.WaterSpeedAndAngle">
       <Member Id="M:Iot.Device.Nmea0183.Sentences.WaterSpeedAndAngle.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
       <Member Id="M:Iot.Device.Nmea0183.Sentences.WaterSpeedAndAngle.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
-      <Member Id="M:Iot.Device.Nmea0183.Sentences.WaterSpeedAndAngle.#ctor(UnitsNet.Angle,UnitsNet.Angle,UnitsNet.Speed)" />
+      <Member Id="M:Iot.Device.Nmea0183.Sentences.WaterSpeedAndAngle.#ctor(System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Angle},UnitsNet.Speed)" />
       <Member Id="M:Iot.Device.Nmea0183.Sentences.WaterSpeedAndAngle.ToNmeaParameterList" />
       <Member Id="M:Iot.Device.Nmea0183.Sentences.WaterSpeedAndAngle.ToReadableContent" />
       <Member Id="P:Iot.Device.Nmea0183.Sentences.WaterSpeedAndAngle.HeadingMagnetic" />
@@ -8915,10 +9683,10 @@
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.Pn532.AsTarget">
-    <Type Name="Iot.Device.Pn532.AsTarget.TargetBaudRateInialized" Id="T:Iot.Device.Pn532.AsTarget.TargetBaudRateInialized">
-      <Member Id="F:Iot.Device.Pn532.AsTarget.TargetBaudRateInialized.B106kbps" />
-      <Member Id="F:Iot.Device.Pn532.AsTarget.TargetBaudRateInialized.B212kbps" />
-      <Member Id="F:Iot.Device.Pn532.AsTarget.TargetBaudRateInialized.B424kbps" />
+    <Type Name="Iot.Device.Pn532.AsTarget.TargetBaudRateInitialized" Id="T:Iot.Device.Pn532.AsTarget.TargetBaudRateInitialized">
+      <Member Id="F:Iot.Device.Pn532.AsTarget.TargetBaudRateInitialized.B106kbps" />
+      <Member Id="F:Iot.Device.Pn532.AsTarget.TargetBaudRateInitialized.B212kbps" />
+      <Member Id="F:Iot.Device.Pn532.AsTarget.TargetBaudRateInitialized.B424kbps" />
     </Type>
     <Type Name="Iot.Device.Pn532.AsTarget.TargetFeliCaParameters" Id="T:Iot.Device.Pn532.AsTarget.TargetFeliCaParameters">
       <Member Id="M:Iot.Device.Pn532.AsTarget.TargetFeliCaParameters.#ctor" />
@@ -8958,6 +9726,22 @@
       <Member Id="P:Iot.Device.Pn532.AsTarget.TargetPiccParameters.GeneralTarget" />
       <Member Id="P:Iot.Device.Pn532.AsTarget.TargetPiccParameters.HistoricalTarget" />
       <Member Id="P:Iot.Device.Pn532.AsTarget.TargetPiccParameters.NfcId3" />
+    </Type>
+    <Type Name="Iot.Device.Pn532.AsTarget.TargetState" Id="T:Iot.Device.Pn532.AsTarget.TargetState">
+      <Member Id="F:Iot.Device.Pn532.AsTarget.TargetState.NfcipActivated" />
+      <Member Id="F:Iot.Device.Pn532.AsTarget.TargetState.NfcipDeselected" />
+      <Member Id="F:Iot.Device.Pn532.AsTarget.TargetState.NfcipReleased" />
+      <Member Id="F:Iot.Device.Pn532.AsTarget.TargetState.PiccActivated" />
+      <Member Id="F:Iot.Device.Pn532.AsTarget.TargetState.PiccDeselected" />
+      <Member Id="F:Iot.Device.Pn532.AsTarget.TargetState.PiccReleased" />
+    </Type>
+    <Type Name="Iot.Device.Pn532.AsTarget.TargetStatus" Id="T:Iot.Device.Pn532.AsTarget.TargetStatus">
+      <Member Id="P:Iot.Device.Pn532.AsTarget.TargetStatus.IsActivated" />
+      <Member Id="P:Iot.Device.Pn532.AsTarget.TargetStatus.IsDeselected" />
+      <Member Id="P:Iot.Device.Pn532.AsTarget.TargetStatus.IsReleased" />
+      <Member Id="P:Iot.Device.Pn532.AsTarget.TargetStatus.SpeedInitiator" />
+      <Member Id="P:Iot.Device.Pn532.AsTarget.TargetStatus.SpeedTarget" />
+      <Member Id="P:Iot.Device.Pn532.AsTarget.TargetStatus.State" />
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.Pn532">
@@ -9042,6 +9826,7 @@
       <Member Id="M:Iot.Device.Pn532.Pn532.AutoPoll(System.Byte,System.UInt16,Iot.Device.Pn532.ListPassive.PollingType[])" />
       <Member Id="M:Iot.Device.Pn532.Pn532.DeselectTarget(System.Byte)" />
       <Member Id="M:Iot.Device.Pn532.Pn532.Dispose" />
+      <Member Id="M:Iot.Device.Pn532.Pn532.GetStatusAsTarget" />
       <Member Id="M:Iot.Device.Pn532.Pn532.InitAsTarget(Iot.Device.Pn532.AsTarget.TargetModeInitialization,Iot.Device.Pn532.AsTarget.TargetMifareParameters,Iot.Device.Pn532.AsTarget.TargetFeliCaParameters,Iot.Device.Pn532.AsTarget.TargetPiccParameters)" />
       <Member Id="M:Iot.Device.Pn532.Pn532.ListPassiveTarget(Iot.Device.Pn532.ListPassive.MaxTarget,Iot.Device.Pn532.ListPassive.TargetBaudRate)" />
       <Member Id="M:Iot.Device.Pn532.Pn532.ListPassiveTarget(Iot.Device.Pn532.ListPassive.MaxTarget,Iot.Device.Pn532.ListPassive.TargetBaudRate,System.ReadOnlySpan{System.Byte})" />
@@ -9581,7 +10366,386 @@
       <Member Id="P:Iot.Device.Scd4x.Scd4x.Temperature" />
     </Type>
   </Namespace>
+  <Namespace Name="Iot.Device.Seatalk1">
+    <Type Name="Iot.Device.Seatalk1.AutoPilotRemoteController" Id="T:Iot.Device.Seatalk1.AutoPilotRemoteController">
+      <Member Id="E:Iot.Device.Seatalk1.AutoPilotRemoteController.AutopilotKeysPressed" />
+      <Member Id="M:Iot.Device.Seatalk1.AutoPilotRemoteController.GetCalibrationParameters" />
+      <Member Id="M:Iot.Device.Seatalk1.AutoPilotRemoteController.SetDeadbandMode(Iot.Device.Seatalk1.Messages.DeadbandMode)" />
+      <Member Id="M:Iot.Device.Seatalk1.AutoPilotRemoteController.SetStatus(Iot.Device.Nmea0183.Sentences.AutopilotStatus,System.Nullable{Iot.Device.Seatalk1.Messages.TurnDirection}@)" />
+      <Member Id="M:Iot.Device.Seatalk1.AutoPilotRemoteController.SetStatus(Iot.Device.Nmea0183.Sentences.AutopilotStatus,System.TimeSpan,System.Nullable{Iot.Device.Seatalk1.Messages.TurnDirection}@)" />
+      <Member Id="M:Iot.Device.Seatalk1.AutoPilotRemoteController.ToString" />
+      <Member Id="M:Iot.Device.Seatalk1.AutoPilotRemoteController.TurnBy(UnitsNet.Angle,Iot.Device.Seatalk1.Messages.TurnDirection,System.Threading.CancellationToken)" />
+      <Member Id="M:Iot.Device.Seatalk1.AutoPilotRemoteController.TurnByAsync(UnitsNet.Angle,Iot.Device.Seatalk1.Messages.TurnDirection,System.Threading.CancellationToken)" />
+      <Member Id="M:Iot.Device.Seatalk1.AutoPilotRemoteController.TurnTo(UnitsNet.Angle,System.Nullable{Iot.Device.Seatalk1.Messages.TurnDirection})" />
+      <Member Id="M:Iot.Device.Seatalk1.AutoPilotRemoteController.TurnTo(UnitsNet.Angle,System.Nullable{Iot.Device.Seatalk1.Messages.TurnDirection},System.Threading.CancellationToken)" />
+      <Member Id="M:Iot.Device.Seatalk1.AutoPilotRemoteController.TurnToAsync(UnitsNet.Angle,System.Nullable{Iot.Device.Seatalk1.Messages.TurnDirection},System.Threading.CancellationToken)" />
+      <Member Id="P:Iot.Device.Seatalk1.AutoPilotRemoteController.Alarms" />
+      <Member Id="P:Iot.Device.Seatalk1.AutoPilotRemoteController.AutopilotDesiredHeading" />
+      <Member Id="P:Iot.Device.Seatalk1.AutoPilotRemoteController.AutopilotHeading" />
+      <Member Id="P:Iot.Device.Seatalk1.AutoPilotRemoteController.AutopilotType" />
+      <Member Id="P:Iot.Device.Seatalk1.AutoPilotRemoteController.CourseComputerStatus" />
+      <Member Id="P:Iot.Device.Seatalk1.AutoPilotRemoteController.DeadbandMode" />
+      <Member Id="P:Iot.Device.Seatalk1.AutoPilotRemoteController.DefaultTimeout" />
+      <Member Id="P:Iot.Device.Seatalk1.AutoPilotRemoteController.IsOperating" />
+      <Member Id="P:Iot.Device.Seatalk1.AutoPilotRemoteController.IsStandby" />
+      <Member Id="P:Iot.Device.Seatalk1.AutoPilotRemoteController.RudderAngle" />
+      <Member Id="P:Iot.Device.Seatalk1.AutoPilotRemoteController.RudderAngleAvailable" />
+      <Member Id="P:Iot.Device.Seatalk1.AutoPilotRemoteController.Status" />
+      <Member Id="P:Iot.Device.Seatalk1.AutoPilotRemoteController.TurnDirection" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Seatalk1Parser" Id="T:Iot.Device.Seatalk1.Seatalk1Parser">
+      <Member Id="E:Iot.Device.Seatalk1.Seatalk1Parser.NewMessageDecoded" />
+      <Member Id="M:Iot.Device.Seatalk1.Seatalk1Parser.#ctor(System.IO.Stream)" />
+      <Member Id="M:Iot.Device.Seatalk1.Seatalk1Parser.Dispose" />
+      <Member Id="M:Iot.Device.Seatalk1.Seatalk1Parser.RegisterMessageType(Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Seatalk1Parser.StartDecode" />
+      <Member Id="M:Iot.Device.Seatalk1.Seatalk1Parser.StopDecode" />
+      <Member Id="P:Iot.Device.Seatalk1.Seatalk1Parser.IsBufferEmpty" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.SeatalkInterface" Id="T:Iot.Device.Seatalk1.SeatalkInterface">
+      <Member Id="E:Iot.Device.Seatalk1.SeatalkInterface.MessageReceived" />
+      <Member Id="M:Iot.Device.Seatalk1.SeatalkInterface.#ctor" />
+      <Member Id="M:Iot.Device.Seatalk1.SeatalkInterface.#ctor(System.String)" />
+      <Member Id="M:Iot.Device.Seatalk1.SeatalkInterface.Dispose" />
+      <Member Id="M:Iot.Device.Seatalk1.SeatalkInterface.Dispose(System.Boolean)" />
+      <Member Id="M:Iot.Device.Seatalk1.SeatalkInterface.GetAutopilotRemoteController" />
+      <Member Id="M:Iot.Device.Seatalk1.SeatalkInterface.SendDatagram(System.Byte[])" />
+      <Member Id="M:Iot.Device.Seatalk1.SeatalkInterface.SendMessage(Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.SeatalkInterface.SendMessageAsync(Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.SeatalkInterface.SetLampIntensity(Iot.Device.Seatalk1.Messages.DisplayBacklightLevel)" />
+      <Member Id="M:Iot.Device.Seatalk1.SeatalkInterface.StartDecode" />
+      <Member Id="M:Iot.Device.Seatalk1.SeatalkInterface.WatchDog" />
+      <Member Id="P:Iot.Device.Seatalk1.SeatalkInterface.Parser" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.SeatalkToNmeaConverter" Id="T:Iot.Device.Seatalk1.SeatalkToNmeaConverter">
+      <Member Id="M:Iot.Device.Seatalk1.SeatalkToNmeaConverter.#ctor(System.String,System.String)" />
+      <Member Id="M:Iot.Device.Seatalk1.SeatalkToNmeaConverter.SendSentence(Iot.Device.Nmea0183.NmeaSinkAndSource,Iot.Device.Nmea0183.Sentences.NmeaSentence)" />
+      <Member Id="M:Iot.Device.Seatalk1.SeatalkToNmeaConverter.StartDecode" />
+      <Member Id="M:Iot.Device.Seatalk1.SeatalkToNmeaConverter.StopDecode" />
+      <Member Id="P:Iot.Device.Seatalk1.SeatalkToNmeaConverter.SentencesToTranslate" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Iot.Device.Seatalk1.Messages">
+    <Type Name="Iot.Device.Seatalk1.Messages.ApparentWindAngle" Id="T:Iot.Device.Seatalk1.Messages.ApparentWindAngle">
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindAngle.#ctor" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindAngle.#ctor(Iot.Device.Seatalk1.Messages.ApparentWindAngle)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindAngle.#ctor(UnitsNet.Angle)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindAngle.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindAngle.CreateDatagram" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindAngle.CreateNewMessage(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindAngle.Equals(Iot.Device.Seatalk1.Messages.ApparentWindAngle)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindAngle.Equals(Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindAngle.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindAngle.GetHashCode" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindAngle.op_Equality(Iot.Device.Seatalk1.Messages.ApparentWindAngle,Iot.Device.Seatalk1.Messages.ApparentWindAngle)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindAngle.op_Inequality(Iot.Device.Seatalk1.Messages.ApparentWindAngle,Iot.Device.Seatalk1.Messages.ApparentWindAngle)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindAngle.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindAngle.ToString" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.ApparentWindAngle.ApparentAngle" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.ApparentWindAngle.CommandByte" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.ApparentWindAngle.EqualityContract" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.ApparentWindAngle.ExpectedLength" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.ApparentWindSpeed" Id="T:Iot.Device.Seatalk1.Messages.ApparentWindSpeed">
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.#ctor" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.#ctor(Iot.Device.Seatalk1.Messages.ApparentWindSpeed)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.#ctor(UnitsNet.Speed)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.CreateDatagram" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.CreateNewMessage(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.Equals(Iot.Device.Seatalk1.Messages.ApparentWindSpeed)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.Equals(Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.GetHashCode" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.op_Equality(Iot.Device.Seatalk1.Messages.ApparentWindSpeed,Iot.Device.Seatalk1.Messages.ApparentWindSpeed)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.op_Inequality(Iot.Device.Seatalk1.Messages.ApparentWindSpeed,Iot.Device.Seatalk1.Messages.ApparentWindSpeed)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.ToString" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.ApparentSpeed" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.CommandByte" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.EqualityContract" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.ApparentWindSpeed.ExpectedLength" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.AutopilotAlarms" Id="T:Iot.Device.Seatalk1.Messages.AutopilotAlarms">
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotAlarms.None" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotAlarms.OffCourse" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotAlarms.WindShift" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.AutopilotButtons" Id="T:Iot.Device.Seatalk1.Messages.AutopilotButtons">
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotButtons.Auto" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotButtons.Disp" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotButtons.LongPress" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotButtons.MinusOne" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotButtons.MinusTen" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotButtons.None" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotButtons.PlusOne" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotButtons.PlusTen" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotButtons.StandBy" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter" Id="T:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter">
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.AutoAdapt" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.AutoAdaptLatitude" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.AutoRelease" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.AutoTackAngle" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.AutoTrim" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.BoatType" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.CalLock" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.CounterRudder" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.DriveType" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.EnteringCalibration" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.None" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.OffCourseLimit" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.PowerSteer" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.Response" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.RudderAlignment" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.RudderDamping" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.RudderGain" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.RudderLimit" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.Speed" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.TurnRateLimit" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.Variation" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameter.WindTrim" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage" Id="T:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage">
+      <Member Id="M:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.#ctor" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.#ctor(Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.CreateDatagram" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.CreateNewMessage(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.Equals(Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.Equals(Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.GetHashCode" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.op_Equality(Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage,Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.op_Inequality(Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage,Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.ToString" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.CommandByte" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.CurrentSetting" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.EqualityContract" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.ExpectedLength" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.MaxValue" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.MinValue" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.AutopilotCalibrationParameterMessage.Parameter" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition" Id="T:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition">
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.#ctor" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.#ctor(Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.CreateDatagram" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.CreateNewMessage(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.Equals(Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.Equals(Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.GetHashCode" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.op_Equality(Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition,Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.op_Inequality(Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition,Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.ToString" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.CommandByte" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.CompassHeading" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.EqualityContract" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.ExpectedLength" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.RudderPosition" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAndRudderPosition.TurnDirection" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse" Id="T:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse">
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.#ctor" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.#ctor(Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.CreateDatagram" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.CreateNewMessage(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.Equals(Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.Equals(Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.GetHashCode" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.MatchesMessageType(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.op_Equality(Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse,Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.op_Inequality(Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse,Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.ToString" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.Alarms" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.AutoPilotCourse" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.AutopilotStatus" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.AutoPilotType" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.CommandByte" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.CompassHeading" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.EqualityContract" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.ExpectedLength" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.RudderPosition" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse.TurnDirection" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt" Id="T:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt">
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt.#ctor" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt.#ctor(Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt.Equals(Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourse)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt.Equals(Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt.GetHashCode" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt.op_Equality(Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt,Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt.op_Inequality(Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt,Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt.ToString" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt.CommandByte" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CompassHeadingAutopilotCourseAlt.EqualityContract" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.CourseComputerStatus" Id="T:Iot.Device.Seatalk1.Messages.CourseComputerStatus">
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CourseComputerStatus.#ctor" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CourseComputerStatus.#ctor(Iot.Device.Seatalk1.Messages.CourseComputerStatus)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CourseComputerStatus.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CourseComputerStatus.CreateDatagram" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CourseComputerStatus.CreateNewMessage(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CourseComputerStatus.Equals(Iot.Device.Seatalk1.Messages.CourseComputerStatus)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CourseComputerStatus.Equals(Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CourseComputerStatus.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CourseComputerStatus.GetHashCode" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CourseComputerStatus.MatchesMessageType(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CourseComputerStatus.op_Equality(Iot.Device.Seatalk1.Messages.CourseComputerStatus,Iot.Device.Seatalk1.Messages.CourseComputerStatus)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CourseComputerStatus.op_Inequality(Iot.Device.Seatalk1.Messages.CourseComputerStatus,Iot.Device.Seatalk1.Messages.CourseComputerStatus)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CourseComputerStatus.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.CourseComputerStatus.ToString" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CourseComputerStatus.CommandByte" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CourseComputerStatus.EqualityContract" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CourseComputerStatus.ExpectedLength" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.CourseComputerStatus.Warnings" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.CourseComputerWarnings" Id="T:Iot.Device.Seatalk1.Messages.CourseComputerWarnings">
+      <Member Id="F:Iot.Device.Seatalk1.Messages.CourseComputerWarnings.CourseChangeToPort" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.CourseComputerWarnings.DriveFailure" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.CourseComputerWarnings.DriveReleaseFailure" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.CourseComputerWarnings.None" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.DeadbandMode" Id="T:Iot.Device.Seatalk1.Messages.DeadbandMode">
+      <Member Id="F:Iot.Device.Seatalk1.Messages.DeadbandMode.Automatic" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.DeadbandMode.Minimal" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.DeadbandMode.None" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.DeadbandSetting" Id="T:Iot.Device.Seatalk1.Messages.DeadbandSetting">
+      <Member Id="M:Iot.Device.Seatalk1.Messages.DeadbandSetting.#ctor" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.DeadbandSetting.#ctor(Iot.Device.Seatalk1.Messages.DeadbandSetting)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.DeadbandSetting.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.DeadbandSetting.CreateDatagram" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.DeadbandSetting.CreateNewMessage(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.DeadbandSetting.Equals(Iot.Device.Seatalk1.Messages.DeadbandSetting)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.DeadbandSetting.Equals(Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.DeadbandSetting.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.DeadbandSetting.GetHashCode" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.DeadbandSetting.MatchesMessageType(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.DeadbandSetting.op_Equality(Iot.Device.Seatalk1.Messages.DeadbandSetting,Iot.Device.Seatalk1.Messages.DeadbandSetting)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.DeadbandSetting.op_Inequality(Iot.Device.Seatalk1.Messages.DeadbandSetting,Iot.Device.Seatalk1.Messages.DeadbandSetting)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.DeadbandSetting.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.DeadbandSetting.ToString" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.DeadbandSetting.CommandByte" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.DeadbandSetting.EqualityContract" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.DeadbandSetting.ExpectedLength" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.DeadbandSetting.Mode" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.DisplayBacklightLevel" Id="T:Iot.Device.Seatalk1.Messages.DisplayBacklightLevel">
+      <Member Id="F:Iot.Device.Seatalk1.Messages.DisplayBacklightLevel.Level1" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.DisplayBacklightLevel.Level2" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.DisplayBacklightLevel.Level3" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.DisplayBacklightLevel.Off" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.Keystroke" Id="T:Iot.Device.Seatalk1.Messages.Keystroke">
+      <Member Id="M:Iot.Device.Seatalk1.Messages.Keystroke.#ctor" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.Keystroke.#ctor(Iot.Device.Seatalk1.Messages.AutopilotButtons,System.Int32)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.Keystroke.#ctor(Iot.Device.Seatalk1.Messages.Keystroke)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.Keystroke.#ctor(System.Byte,System.Int32)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.Keystroke.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.Keystroke.CreateDatagram" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.Keystroke.CreateNewMessage(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.Keystroke.Equals(Iot.Device.Seatalk1.Messages.Keystroke)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.Keystroke.Equals(Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.Keystroke.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.Keystroke.GetHashCode" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.Keystroke.MatchesMessageType(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.Keystroke.op_Equality(Iot.Device.Seatalk1.Messages.Keystroke,Iot.Device.Seatalk1.Messages.Keystroke)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.Keystroke.op_Inequality(Iot.Device.Seatalk1.Messages.Keystroke,Iot.Device.Seatalk1.Messages.Keystroke)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.Keystroke.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.Keystroke.ToString" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.Keystroke.ButtonsPressed" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.Keystroke.CommandByte" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.Keystroke.EqualityContract" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.Keystroke.ExpectedLength" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.Keystroke.KeyCode" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.Keystroke.Source" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.NavigationToWaypoint" Id="T:Iot.Device.Seatalk1.Messages.NavigationToWaypoint">
+      <Member Id="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.#ctor" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.#ctor(Iot.Device.Seatalk1.Messages.NavigationToWaypoint)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.#ctor(System.Nullable{UnitsNet.Length},System.Nullable{UnitsNet.Angle},System.Boolean,System.Nullable{UnitsNet.Length})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.CreateDatagram" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.CreateNewMessage(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.Equals(Iot.Device.Seatalk1.Messages.NavigationToWaypoint)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.Equals(Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.GetHashCode" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.MatchesMessageType(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.op_Equality(Iot.Device.Seatalk1.Messages.NavigationToWaypoint,Iot.Device.Seatalk1.Messages.NavigationToWaypoint)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.op_Inequality(Iot.Device.Seatalk1.Messages.NavigationToWaypoint,Iot.Device.Seatalk1.Messages.NavigationToWaypoint)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.ToString" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.BearingIsTrue" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.BearingToDestination" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.CommandByte" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.CrossTrackError" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.DistanceToDestination" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.EqualityContract" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.ExpectedLength" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.SeatalkMessage" Id="T:Iot.Device.Seatalk1.Messages.SeatalkMessage">
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SeatalkMessage.#ctor" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SeatalkMessage.#ctor(Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SeatalkMessage.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SeatalkMessage.CreateDatagram" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SeatalkMessage.CreateNewMessage(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SeatalkMessage.Equals(Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SeatalkMessage.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SeatalkMessage.GetHashCode" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SeatalkMessage.MatchesMessageType(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SeatalkMessage.op_Equality(Iot.Device.Seatalk1.Messages.SeatalkMessage,Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SeatalkMessage.op_Inequality(Iot.Device.Seatalk1.Messages.SeatalkMessage,Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SeatalkMessage.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SeatalkMessage.ToString" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SeatalkMessage.VerifyPacket(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.SeatalkMessage.CommandByte" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.SeatalkMessage.EqualityContract" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.SeatalkMessage.ExpectedLength" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.SeatalkMessage.Logger" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.SetLampIntensity" Id="T:Iot.Device.Seatalk1.Messages.SetLampIntensity">
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SetLampIntensity.#ctor" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SetLampIntensity.#ctor(Iot.Device.Seatalk1.Messages.DisplayBacklightLevel)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SetLampIntensity.#ctor(Iot.Device.Seatalk1.Messages.SetLampIntensity)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SetLampIntensity.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SetLampIntensity.CreateDatagram" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SetLampIntensity.CreateNewMessage(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SetLampIntensity.Equals(Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SetLampIntensity.Equals(Iot.Device.Seatalk1.Messages.SetLampIntensity)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SetLampIntensity.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SetLampIntensity.GetHashCode" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SetLampIntensity.MatchesMessageType(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SetLampIntensity.op_Equality(Iot.Device.Seatalk1.Messages.SetLampIntensity,Iot.Device.Seatalk1.Messages.SetLampIntensity)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SetLampIntensity.op_Inequality(Iot.Device.Seatalk1.Messages.SetLampIntensity,Iot.Device.Seatalk1.Messages.SetLampIntensity)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SetLampIntensity.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Seatalk1.Messages.SetLampIntensity.ToString" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.SetLampIntensity.CommandByte" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.SetLampIntensity.EqualityContract" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.SetLampIntensity.ExpectedLength" />
+      <Member Id="P:Iot.Device.Seatalk1.Messages.SetLampIntensity.Intensity" />
+    </Type>
+    <Type Name="Iot.Device.Seatalk1.Messages.TurnDirection" Id="T:Iot.Device.Seatalk1.Messages.TurnDirection">
+      <Member Id="F:Iot.Device.Seatalk1.Messages.TurnDirection.Port" />
+      <Member Id="F:Iot.Device.Seatalk1.Messages.TurnDirection.Starboard" />
+    </Type>
+  </Namespace>
   <Namespace Name="Iot.Device.Seesaw">
+    <Type Name="Iot.Device.Seesaw.NeopixelSpeed" Id="T:Iot.Device.Seesaw.NeopixelSpeed">
+      <Member Id="F:Iot.Device.Seesaw.NeopixelSpeed.Speed_400Mhz" />
+      <Member Id="F:Iot.Device.Seesaw.NeopixelSpeed.Speed_800MHz" />
+    </Type>
     <Type Name="Iot.Device.Seesaw.Seesaw" Id="T:Iot.Device.Seesaw.Seesaw">
       <Member Id="M:Iot.Device.Seesaw.Seesaw.#ctor(System.Device.I2c.I2cDevice)" />
       <Member Id="M:Iot.Device.Seesaw.Seesaw.AnalogRead(System.Byte)" />
@@ -9606,6 +10770,11 @@
       <Member Id="M:Iot.Device.Seesaw.Seesaw.SetGpioPinMode(System.Byte,System.Device.Gpio.PinMode)" />
       <Member Id="M:Iot.Device.Seesaw.Seesaw.SetGpioPinModeBulk(System.UInt64,System.Device.Gpio.PinMode)" />
       <Member Id="M:Iot.Device.Seesaw.Seesaw.SetI2cAddress(System.Byte)" />
+      <Member Id="M:Iot.Device.Seesaw.Seesaw.SetNeopixelBuffer(System.ReadOnlySpan{System.Byte},System.UInt16)" />
+      <Member Id="M:Iot.Device.Seesaw.Seesaw.SetNeopixelBufferLength(System.UInt16)" />
+      <Member Id="M:Iot.Device.Seesaw.Seesaw.SetNeopixelPin(System.Byte)" />
+      <Member Id="M:Iot.Device.Seesaw.Seesaw.SetNeopixelShow" />
+      <Member Id="M:Iot.Device.Seesaw.Seesaw.SetNeopixelSpeed(Iot.Device.Seesaw.NeopixelSpeed)" />
       <Member Id="M:Iot.Device.Seesaw.Seesaw.SoftwareReset" />
       <Member Id="M:Iot.Device.Seesaw.Seesaw.TouchRead(System.Byte)" />
       <Member Id="M:Iot.Device.Seesaw.Seesaw.Write(Iot.Device.Seesaw.Seesaw.SeesawModule,Iot.Device.Seesaw.Seesaw.SeesawFunction,System.ReadOnlySpan{System.Byte})" />
@@ -9641,6 +10810,11 @@
       <Member Id="F:Iot.Device.Seesaw.Seesaw.SeesawFunction.GpioIntflag" />
       <Member Id="F:Iot.Device.Seesaw.Seesaw.SeesawFunction.GpioPullenclr" />
       <Member Id="F:Iot.Device.Seesaw.Seesaw.SeesawFunction.GpioPullenset" />
+      <Member Id="F:Iot.Device.Seesaw.Seesaw.SeesawFunction.NeopixelBuffer" />
+      <Member Id="F:Iot.Device.Seesaw.Seesaw.SeesawFunction.NeopixelBufferLength" />
+      <Member Id="F:Iot.Device.Seesaw.Seesaw.SeesawFunction.NeopixelPin" />
+      <Member Id="F:Iot.Device.Seesaw.Seesaw.SeesawFunction.NeopixelShow" />
+      <Member Id="F:Iot.Device.Seesaw.Seesaw.SeesawFunction.NeopixelSpeed" />
       <Member Id="F:Iot.Device.Seesaw.Seesaw.SeesawFunction.StatusHwId" />
       <Member Id="F:Iot.Device.Seesaw.Seesaw.SeesawFunction.StatusOptions" />
       <Member Id="F:Iot.Device.Seesaw.Seesaw.SeesawFunction.StatusSwrst" />
@@ -10304,28 +11478,38 @@
   </Namespace>
   <Namespace Name="Iot.Device.Ssd13xx">
     <Type Name="Iot.Device.Ssd13xx.Ssd1306" Id="T:Iot.Device.Ssd13xx.Ssd1306">
-      <Member Id="M:Iot.Device.Ssd13xx.Ssd1306.#ctor(System.Device.I2c.I2cDevice)" />
+      <Member Id="M:Iot.Device.Ssd13xx.Ssd1306.#ctor(System.Device.I2c.I2cDevice,System.Int32,System.Int32)" />
       <Member Id="M:Iot.Device.Ssd13xx.Ssd1306.SendCommand(Iot.Device.Ssd13xx.Commands.ISharedCommand)" />
       <Member Id="M:Iot.Device.Ssd13xx.Ssd1306.SendCommand(Iot.Device.Ssd13xx.Commands.ISsd1306Command)" />
+      <Member Id="M:Iot.Device.Ssd13xx.Ssd1306.SetStartAddress" />
     </Type>
     <Type Name="Iot.Device.Ssd13xx.Ssd1327" Id="T:Iot.Device.Ssd13xx.Ssd1327">
-      <Member Id="M:Iot.Device.Ssd13xx.Ssd1327.#ctor(System.Device.I2c.I2cDevice)" />
-      <Member Id="M:Iot.Device.Ssd13xx.Ssd1327.ClearDisplay" />
+      <Member Id="M:Iot.Device.Ssd13xx.Ssd1327.#ctor(System.Device.I2c.I2cDevice,System.Int32,System.Int32)" />
+      <Member Id="M:Iot.Device.Ssd13xx.Ssd1327.ClearScreen" />
       <Member Id="M:Iot.Device.Ssd13xx.Ssd1327.SendCommand(Iot.Device.Ssd13xx.Commands.ISharedCommand)" />
       <Member Id="M:Iot.Device.Ssd13xx.Ssd1327.SendCommand(Iot.Device.Ssd13xx.Commands.ISsd1327Command)" />
       <Member Id="M:Iot.Device.Ssd13xx.Ssd1327.SendCommand(System.Byte)" />
-      <Member Id="M:Iot.Device.Ssd13xx.Ssd1327.SendData(System.Byte)" />
       <Member Id="M:Iot.Device.Ssd13xx.Ssd1327.SetColumnAddress(System.Byte,System.Byte)" />
       <Member Id="M:Iot.Device.Ssd13xx.Ssd1327.SetRowAddress(System.Byte,System.Byte)" />
+      <Member Id="M:Iot.Device.Ssd13xx.Ssd1327.SetStartAddress" />
     </Type>
     <Type Name="Iot.Device.Ssd13xx.Ssd13xx" Id="T:Iot.Device.Ssd13xx.Ssd13xx">
       <Member Id="F:Iot.Device.Ssd13xx.Ssd13xx._i2cDevice" />
-      <Member Id="M:Iot.Device.Ssd13xx.Ssd13xx.#ctor(System.Device.I2c.I2cDevice,System.Int32)" />
-      <Member Id="M:Iot.Device.Ssd13xx.Ssd13xx.Dispose" />
+      <Member Id="M:Iot.Device.Ssd13xx.Ssd13xx.#ctor(System.Device.I2c.I2cDevice,System.Int32,System.Int32)" />
+      <Member Id="M:Iot.Device.Ssd13xx.Ssd13xx.CanConvertFromPixelFormat(Iot.Device.Graphics.PixelFormat)" />
+      <Member Id="M:Iot.Device.Ssd13xx.Ssd13xx.Dispose(System.Boolean)" />
+      <Member Id="M:Iot.Device.Ssd13xx.Ssd13xx.DrawBitmap(Iot.Device.Graphics.BitmapImage)" />
+      <Member Id="M:Iot.Device.Ssd13xx.Ssd13xx.EnableDisplay(System.Boolean)" />
+      <Member Id="M:Iot.Device.Ssd13xx.Ssd13xx.GetBackBufferCompatibleImage" />
       <Member Id="M:Iot.Device.Ssd13xx.Ssd13xx.SendCommand(Iot.Device.Ssd13xx.Commands.ISharedCommand)" />
       <Member Id="M:Iot.Device.Ssd13xx.Ssd13xx.SendData(System.Span{System.Byte})" />
+      <Member Id="M:Iot.Device.Ssd13xx.Ssd13xx.SetStartAddress" />
       <Member Id="M:Iot.Device.Ssd13xx.Ssd13xx.SliceGenericBuffer(System.Int32)" />
       <Member Id="M:Iot.Device.Ssd13xx.Ssd13xx.SliceGenericBuffer(System.Int32,System.Int32)" />
+      <Member Id="P:Iot.Device.Ssd13xx.Ssd13xx.BrightnessThreshold" />
+      <Member Id="P:Iot.Device.Ssd13xx.Ssd13xx.NativePixelFormat" />
+      <Member Id="P:Iot.Device.Ssd13xx.Ssd13xx.ScreenHeight" />
+      <Member Id="P:Iot.Device.Ssd13xx.Ssd13xx.ScreenWidth" />
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.Tca954x">
@@ -10348,6 +11532,8 @@
       <Member Id="M:Iot.Device.Tca954x.Tca9548A.Contains(System.Device.I2c.I2cBus)" />
       <Member Id="M:Iot.Device.Tca954x.Tca9548A.CopyTo(System.Device.I2c.I2cBus[],System.Int32)" />
       <Member Id="M:Iot.Device.Tca954x.Tca9548A.Dispose" />
+      <Member Id="M:Iot.Device.Tca954x.Tca9548A.GetChannel(Iot.Device.Tca954x.MultiplexerChannel)" />
+      <Member Id="M:Iot.Device.Tca954x.Tca9548A.GetChannel(System.Int32)" />
       <Member Id="M:Iot.Device.Tca954x.Tca9548A.GetEnumerator" />
       <Member Id="M:Iot.Device.Tca954x.Tca9548A.IndexOf(System.Device.I2c.I2cBus)" />
       <Member Id="M:Iot.Device.Tca954x.Tca9548A.Insert(System.Int32,System.Device.I2c.I2cBus)" />
@@ -10439,45 +11625,89 @@
       <Member Id="M:Iot.Device.Tlc1543.Tlc1543.ReadPreviousAndChargeChannel(Iot.Device.Tlc1543.Channel)" />
     </Type>
   </Namespace>
-  <Namespace Name="Iot.Device.Tm1637">
-    <Type Name="Iot.Device.Tm1637.Character" Id="T:Iot.Device.Tm1637.Character">
-      <Member Id="F:Iot.Device.Tm1637.Character.A" />
-      <Member Id="F:Iot.Device.Tm1637.Character.B" />
-      <Member Id="F:Iot.Device.Tm1637.Character.C" />
-      <Member Id="F:Iot.Device.Tm1637.Character.D" />
-      <Member Id="F:Iot.Device.Tm1637.Character.Digit0" />
-      <Member Id="F:Iot.Device.Tm1637.Character.Digit1" />
-      <Member Id="F:Iot.Device.Tm1637.Character.Digit2" />
-      <Member Id="F:Iot.Device.Tm1637.Character.Digit3" />
-      <Member Id="F:Iot.Device.Tm1637.Character.Digit4" />
-      <Member Id="F:Iot.Device.Tm1637.Character.Digit5" />
-      <Member Id="F:Iot.Device.Tm1637.Character.Digit6" />
-      <Member Id="F:Iot.Device.Tm1637.Character.Digit7" />
-      <Member Id="F:Iot.Device.Tm1637.Character.Digit8" />
-      <Member Id="F:Iot.Device.Tm1637.Character.Digit9" />
-      <Member Id="F:Iot.Device.Tm1637.Character.Dot" />
-      <Member Id="F:Iot.Device.Tm1637.Character.E" />
-      <Member Id="F:Iot.Device.Tm1637.Character.F" />
-      <Member Id="F:Iot.Device.Tm1637.Character.Minus" />
-      <Member Id="F:Iot.Device.Tm1637.Character.Nothing" />
-      <Member Id="F:Iot.Device.Tm1637.Character.SegmentBottom" />
-      <Member Id="F:Iot.Device.Tm1637.Character.SegmentBottomLeft" />
-      <Member Id="F:Iot.Device.Tm1637.Character.SegmentBottomRight" />
-      <Member Id="F:Iot.Device.Tm1637.Character.SegmentMiddle" />
-      <Member Id="F:Iot.Device.Tm1637.Character.SegmentTop" />
-      <Member Id="F:Iot.Device.Tm1637.Character.SegmentTopLeft" />
-      <Member Id="F:Iot.Device.Tm1637.Character.SegmentTopRight" />
+  <Namespace Name="Iot.Device.Tm16xx">
+    <Type Name="Iot.Device.Tm16xx.Character" Id="T:Iot.Device.Tm16xx.Character">
+      <Member Id="F:Iot.Device.Tm16xx.Character.A" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.B" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.C" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.D" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.Digit0" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.Digit1" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.Digit2" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.Digit3" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.Digit4" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.Digit5" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.Digit6" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.Digit7" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.Digit8" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.Digit9" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.Dot" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.E" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.F" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.Minus" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.Nothing" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.SegmentBottom" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.SegmentBottomLeft" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.SegmentBottomRight" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.SegmentMiddle" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.SegmentTop" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.SegmentTopLeft" />
+      <Member Id="F:Iot.Device.Tm16xx.Character.SegmentTopRight" />
     </Type>
-    <Type Name="Iot.Device.Tm1637.Tm1637" Id="T:Iot.Device.Tm1637.Tm1637">
-      <Member Id="M:Iot.Device.Tm1637.Tm1637.#ctor(System.Int32,System.Int32,System.Device.Gpio.PinNumberingScheme,System.Device.Gpio.GpioController,System.Boolean)" />
-      <Member Id="M:Iot.Device.Tm1637.Tm1637.ClearDisplay" />
-      <Member Id="M:Iot.Device.Tm1637.Tm1637.Display(System.Byte,Iot.Device.Tm1637.Character)" />
-      <Member Id="M:Iot.Device.Tm1637.Tm1637.Display(System.ReadOnlySpan{Iot.Device.Tm1637.Character})" />
-      <Member Id="M:Iot.Device.Tm1637.Tm1637.Dispose" />
-      <Member Id="P:Iot.Device.Tm1637.Tm1637.Brightness" />
-      <Member Id="P:Iot.Device.Tm1637.Tm1637.CharacterOrder" />
-      <Member Id="P:Iot.Device.Tm1637.Tm1637.MaxCharacters" />
-      <Member Id="P:Iot.Device.Tm1637.Tm1637.ScreenOn" />
+    <Type Name="Iot.Device.Tm16xx.LedSegment" Id="T:Iot.Device.Tm16xx.LedSegment">
+      <Member Id="F:Iot.Device.Tm16xx.LedSegment.Led16Segment" />
+      <Member Id="F:Iot.Device.Tm16xx.LedSegment.Led7Segment" />
+      <Member Id="F:Iot.Device.Tm16xx.LedSegment.Led8Segment" />
+    </Type>
+    <Type Name="Iot.Device.Tm16xx.Tm1637" Id="T:Iot.Device.Tm16xx.Tm1637">
+      <Member Id="M:Iot.Device.Tm16xx.Tm1637.#ctor(System.Int32,System.Int32)" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm1637.#ctor(System.Int32,System.Int32,System.Device.Gpio.GpioController)" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm1637.#ctor(System.Int32,System.Int32,System.Device.Gpio.PinNumberingScheme)" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm1637.#ctor(System.Int32,System.Int32,System.Device.Gpio.PinNumberingScheme,System.Device.Gpio.GpioController,System.Boolean)" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm1637.ClearDisplay" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm1637.Display(System.Byte,System.Byte)" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm1637.Display(System.ReadOnlySpan{System.Byte})" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm1637.SetScreen(System.Byte,System.Boolean,System.Boolean)" />
+      <Member Id="P:Iot.Device.Tm16xx.Tm1637.Brightness" />
+      <Member Id="P:Iot.Device.Tm16xx.Tm1637.LedSegment" />
+      <Member Id="P:Iot.Device.Tm16xx.Tm1637.ScreenOn" />
+    </Type>
+    <Type Name="Iot.Device.Tm16xx.Tm1650" Id="T:Iot.Device.Tm16xx.Tm1650">
+      <Member Id="M:Iot.Device.Tm16xx.Tm1650.#ctor(System.Int32,System.Int32)" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm1650.#ctor(System.Int32,System.Int32,System.Device.Gpio.GpioController)" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm1650.#ctor(System.Int32,System.Int32,System.Device.Gpio.PinNumberingScheme)" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm1650.#ctor(System.Int32,System.Int32,System.Device.Gpio.PinNumberingScheme,System.Device.Gpio.GpioController,System.Boolean)" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm1650.ClearDisplay" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm1650.Display(System.Byte,System.Byte)" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm1650.Display(System.ReadOnlySpan{System.Byte})" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm1650.SetScreen(System.Byte,System.Boolean,System.Boolean)" />
+      <Member Id="P:Iot.Device.Tm16xx.Tm1650.LedSegment" />
+    </Type>
+    <Type Name="Iot.Device.Tm16xx.Tm16xxBase" Id="T:Iot.Device.Tm16xx.Tm16xxBase">
+      <Member Id="M:Iot.Device.Tm16xx.Tm16xxBase.#ctor" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm16xxBase.ClearDisplay" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm16xxBase.Display(Iot.Device.Tm16xx.Character[])" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm16xxBase.Display(System.Byte,Iot.Device.Tm16xx.Character)" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm16xxBase.Display(System.Byte,System.Byte)" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm16xxBase.Display(System.Byte[])" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm16xxBase.Display(System.ReadOnlySpan{Iot.Device.Tm16xx.Character})" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm16xxBase.Display(System.ReadOnlySpan{System.Byte})" />
+      <Member Id="P:Iot.Device.Tm16xx.Tm16xxBase.CharacterOrder" />
+      <Member Id="P:Iot.Device.Tm16xx.Tm16xxBase.IsScreenOn" />
+      <Member Id="P:Iot.Device.Tm16xx.Tm16xxBase.LedSegment" />
+      <Member Id="P:Iot.Device.Tm16xx.Tm16xxBase.ScreenBrightness" />
+      <Member Id="P:Iot.Device.Tm16xx.Tm16xxBase.ThrowWhenIoError" />
+    </Type>
+    <Type Name="Iot.Device.Tm16xx.Tm16xxI2CLikeBase" Id="T:Iot.Device.Tm16xx.Tm16xxI2CLikeBase">
+      <Member Id="M:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.#ctor(System.Int32,System.Int32,System.Int32)" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.#ctor(System.Int32,System.Int32,System.Int32,System.Device.Gpio.GpioController)" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.#ctor(System.Int32,System.Int32,System.Int32,System.Device.Gpio.PinNumberingScheme)" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.#ctor(System.Int32,System.Int32,System.Int32,System.Device.Gpio.PinNumberingScheme,System.Device.Gpio.GpioController,System.Boolean)" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.Dispose" />
+      <Member Id="M:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.Dispose(System.Boolean)" />
+      <Member Id="P:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.CharacterOrder" />
+      <Member Id="P:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.IsScreenOn" />
+      <Member Id="P:Iot.Device.Tm16xx.Tm16xxI2CLikeBase.ScreenBrightness" />
     </Type>
   </Namespace>
   <Namespace Name="Iot.Device.Tsl256x">
@@ -10672,6 +11902,191 @@
       <Member Id="P:Iot.Device.Usb.VariableSupplyObject.Power" />
     </Type>
   </Namespace>
+  <Namespace Name="Iot.Device.Vcnl4040">
+    <Type Name="Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration" Id="T:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration">
+      <Member Id="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.#ctor(Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration)" />
+      <Member Id="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.#ctor(UnitsNet.Illuminance,UnitsNet.Illuminance,Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence)" />
+      <Member Id="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.Deconstruct(UnitsNet.Illuminance@,UnitsNet.Illuminance@,Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence@)" />
+      <Member Id="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.Equals(Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration)" />
+      <Member Id="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.GetHashCode" />
+      <Member Id="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.op_Equality(Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration,Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration)" />
+      <Member Id="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.op_Inequality(Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration,Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration)" />
+      <Member Id="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.ToString" />
+      <Member Id="P:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.EqualityContract" />
+      <Member Id="P:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.LowerThreshold" />
+      <Member Id="P:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.Persistence" />
+      <Member Id="P:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.UpperThreshold" />
+    </Type>
+    <Type Name="Iot.Device.Vcnl4040.AmbientLightSensor" Id="T:Iot.Device.Vcnl4040.AmbientLightSensor">
+      <Member Id="M:Iot.Device.Vcnl4040.AmbientLightSensor.DisableInterrupts" />
+      <Member Id="M:Iot.Device.Vcnl4040.AmbientLightSensor.EnableInterrupts(Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration)" />
+      <Member Id="M:Iot.Device.Vcnl4040.AmbientLightSensor.GetInterruptConfiguration" />
+      <Member Id="P:Iot.Device.Vcnl4040.AmbientLightSensor.Illuminance" />
+      <Member Id="P:Iot.Device.Vcnl4040.AmbientLightSensor.IntegrationTime" />
+      <Member Id="P:Iot.Device.Vcnl4040.AmbientLightSensor.IsInterruptEnabled" />
+      <Member Id="P:Iot.Device.Vcnl4040.AmbientLightSensor.LoadReductionModeEnabled" />
+      <Member Id="P:Iot.Device.Vcnl4040.AmbientLightSensor.PowerOn" />
+      <Member Id="P:Iot.Device.Vcnl4040.AmbientLightSensor.Range" />
+      <Member Id="P:Iot.Device.Vcnl4040.AmbientLightSensor.RangeAsIlluminance" />
+      <Member Id="P:Iot.Device.Vcnl4040.AmbientLightSensor.Resolution" />
+      <Member Id="P:Iot.Device.Vcnl4040.AmbientLightSensor.ResolutionAsIlluminance" />
+    </Type>
+    <Type Name="Iot.Device.Vcnl4040.EmitterConfiguration" Id="T:Iot.Device.Vcnl4040.EmitterConfiguration">
+      <Member Id="M:Iot.Device.Vcnl4040.EmitterConfiguration.#ctor(Iot.Device.Vcnl4040.Definitions.PsLedCurrent,Iot.Device.Vcnl4040.Definitions.PsDuty,Iot.Device.Vcnl4040.Definitions.PsIntegrationTime,Iot.Device.Vcnl4040.Definitions.PsMultiPulse)" />
+      <Member Id="M:Iot.Device.Vcnl4040.EmitterConfiguration.#ctor(Iot.Device.Vcnl4040.EmitterConfiguration)" />
+      <Member Id="M:Iot.Device.Vcnl4040.EmitterConfiguration.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Vcnl4040.EmitterConfiguration.Deconstruct(Iot.Device.Vcnl4040.Definitions.PsLedCurrent@,Iot.Device.Vcnl4040.Definitions.PsDuty@,Iot.Device.Vcnl4040.Definitions.PsIntegrationTime@,Iot.Device.Vcnl4040.Definitions.PsMultiPulse@)" />
+      <Member Id="M:Iot.Device.Vcnl4040.EmitterConfiguration.Equals(Iot.Device.Vcnl4040.EmitterConfiguration)" />
+      <Member Id="M:Iot.Device.Vcnl4040.EmitterConfiguration.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Vcnl4040.EmitterConfiguration.GetHashCode" />
+      <Member Id="M:Iot.Device.Vcnl4040.EmitterConfiguration.op_Equality(Iot.Device.Vcnl4040.EmitterConfiguration,Iot.Device.Vcnl4040.EmitterConfiguration)" />
+      <Member Id="M:Iot.Device.Vcnl4040.EmitterConfiguration.op_Inequality(Iot.Device.Vcnl4040.EmitterConfiguration,Iot.Device.Vcnl4040.EmitterConfiguration)" />
+      <Member Id="M:Iot.Device.Vcnl4040.EmitterConfiguration.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Vcnl4040.EmitterConfiguration.ToString" />
+      <Member Id="P:Iot.Device.Vcnl4040.EmitterConfiguration.Current" />
+      <Member Id="P:Iot.Device.Vcnl4040.EmitterConfiguration.DutyRatio" />
+      <Member Id="P:Iot.Device.Vcnl4040.EmitterConfiguration.EqualityContract" />
+      <Member Id="P:Iot.Device.Vcnl4040.EmitterConfiguration.IntegrationTime" />
+      <Member Id="P:Iot.Device.Vcnl4040.EmitterConfiguration.MultiPulses" />
+    </Type>
+    <Type Name="Iot.Device.Vcnl4040.InterruptFlags" Id="T:Iot.Device.Vcnl4040.InterruptFlags">
+      <Member Id="M:Iot.Device.Vcnl4040.InterruptFlags.#ctor(Iot.Device.Vcnl4040.InterruptFlags)" />
+      <Member Id="M:Iot.Device.Vcnl4040.InterruptFlags.#ctor(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)" />
+      <Member Id="M:Iot.Device.Vcnl4040.InterruptFlags.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Vcnl4040.InterruptFlags.Deconstruct(System.Boolean@,System.Boolean@,System.Boolean@,System.Boolean@,System.Boolean@)" />
+      <Member Id="M:Iot.Device.Vcnl4040.InterruptFlags.Equals(Iot.Device.Vcnl4040.InterruptFlags)" />
+      <Member Id="M:Iot.Device.Vcnl4040.InterruptFlags.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Vcnl4040.InterruptFlags.GetHashCode" />
+      <Member Id="M:Iot.Device.Vcnl4040.InterruptFlags.op_Equality(Iot.Device.Vcnl4040.InterruptFlags,Iot.Device.Vcnl4040.InterruptFlags)" />
+      <Member Id="M:Iot.Device.Vcnl4040.InterruptFlags.op_Inequality(Iot.Device.Vcnl4040.InterruptFlags,Iot.Device.Vcnl4040.InterruptFlags)" />
+      <Member Id="M:Iot.Device.Vcnl4040.InterruptFlags.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Vcnl4040.InterruptFlags.ToString" />
+      <Member Id="P:Iot.Device.Vcnl4040.InterruptFlags.AlsHigh" />
+      <Member Id="P:Iot.Device.Vcnl4040.InterruptFlags.AlsLow" />
+      <Member Id="P:Iot.Device.Vcnl4040.InterruptFlags.EqualityContract" />
+      <Member Id="P:Iot.Device.Vcnl4040.InterruptFlags.PsAway" />
+      <Member Id="P:Iot.Device.Vcnl4040.InterruptFlags.PsClose" />
+      <Member Id="P:Iot.Device.Vcnl4040.InterruptFlags.PsProtectionMode" />
+    </Type>
+    <Type Name="Iot.Device.Vcnl4040.ProximitySensor" Id="T:Iot.Device.Vcnl4040.ProximitySensor">
+      <Member Id="M:Iot.Device.Vcnl4040.ProximitySensor.ConfigureEmitter(Iot.Device.Vcnl4040.EmitterConfiguration)" />
+      <Member Id="M:Iot.Device.Vcnl4040.ProximitySensor.ConfigureReceiver(Iot.Device.Vcnl4040.ReceiverConfiguration)" />
+      <Member Id="M:Iot.Device.Vcnl4040.ProximitySensor.DisableInterrupts" />
+      <Member Id="M:Iot.Device.Vcnl4040.ProximitySensor.EnableInterrupts(ProximityInterruptConfiguration)" />
+      <Member Id="M:Iot.Device.Vcnl4040.ProximitySensor.GetEmitterConfiguration" />
+      <Member Id="M:Iot.Device.Vcnl4040.ProximitySensor.GetInterruptConfiguration" />
+      <Member Id="M:Iot.Device.Vcnl4040.ProximitySensor.GetReceiverConfiguration" />
+      <Member Id="P:Iot.Device.Vcnl4040.ProximitySensor.ActiveForceMode" />
+      <Member Id="P:Iot.Device.Vcnl4040.ProximitySensor.Distance" />
+      <Member Id="P:Iot.Device.Vcnl4040.ProximitySensor.IsInterruptEnabled" />
+      <Member Id="P:Iot.Device.Vcnl4040.ProximitySensor.IsLogicOutputEnabled" />
+      <Member Id="P:Iot.Device.Vcnl4040.ProximitySensor.PowerOn" />
+      <Member Id="P:Iot.Device.Vcnl4040.ProximitySensor.WhiteChannelReading" />
+    </Type>
+    <Type Name="Iot.Device.Vcnl4040.ReceiverConfiguration" Id="T:Iot.Device.Vcnl4040.ReceiverConfiguration">
+      <Member Id="M:Iot.Device.Vcnl4040.ReceiverConfiguration.#ctor(Iot.Device.Vcnl4040.ReceiverConfiguration)" />
+      <Member Id="M:Iot.Device.Vcnl4040.ReceiverConfiguration.#ctor(System.Boolean,System.UInt16,System.Boolean,System.Boolean)" />
+      <Member Id="M:Iot.Device.Vcnl4040.ReceiverConfiguration.&lt;Clone&gt;$" />
+      <Member Id="M:Iot.Device.Vcnl4040.ReceiverConfiguration.Deconstruct(System.Boolean@,System.UInt16@,System.Boolean@,System.Boolean@)" />
+      <Member Id="M:Iot.Device.Vcnl4040.ReceiverConfiguration.Equals(Iot.Device.Vcnl4040.ReceiverConfiguration)" />
+      <Member Id="M:Iot.Device.Vcnl4040.ReceiverConfiguration.Equals(System.Object)" />
+      <Member Id="M:Iot.Device.Vcnl4040.ReceiverConfiguration.GetHashCode" />
+      <Member Id="M:Iot.Device.Vcnl4040.ReceiverConfiguration.op_Equality(Iot.Device.Vcnl4040.ReceiverConfiguration,Iot.Device.Vcnl4040.ReceiverConfiguration)" />
+      <Member Id="M:Iot.Device.Vcnl4040.ReceiverConfiguration.op_Inequality(Iot.Device.Vcnl4040.ReceiverConfiguration,Iot.Device.Vcnl4040.ReceiverConfiguration)" />
+      <Member Id="M:Iot.Device.Vcnl4040.ReceiverConfiguration.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:Iot.Device.Vcnl4040.ReceiverConfiguration.ToString" />
+      <Member Id="P:Iot.Device.Vcnl4040.ReceiverConfiguration.CancellationLevel" />
+      <Member Id="P:Iot.Device.Vcnl4040.ReceiverConfiguration.EqualityContract" />
+      <Member Id="P:Iot.Device.Vcnl4040.ReceiverConfiguration.ExtendedOutputRange" />
+      <Member Id="P:Iot.Device.Vcnl4040.ReceiverConfiguration.SunlightCancellationEnabled" />
+      <Member Id="P:Iot.Device.Vcnl4040.ReceiverConfiguration.WhiteChannelEnabled" />
+    </Type>
+    <Type Name="Iot.Device.Vcnl4040.Vcnl4040Device" Id="T:Iot.Device.Vcnl4040.Vcnl4040Device">
+      <Member Id="F:Iot.Device.Vcnl4040.Vcnl4040Device.DefaultI2cAddress" />
+      <Member Id="M:Iot.Device.Vcnl4040.Vcnl4040Device.#ctor(System.Device.I2c.I2cDevice)" />
+      <Member Id="M:Iot.Device.Vcnl4040.Vcnl4040Device.Dispose" />
+      <Member Id="M:Iot.Device.Vcnl4040.Vcnl4040Device.GetAndClearInterruptFlags" />
+      <Member Id="M:Iot.Device.Vcnl4040.Vcnl4040Device.Reset" />
+      <Member Id="M:Iot.Device.Vcnl4040.Vcnl4040Device.VerifyDevice" />
+      <Member Id="P:Iot.Device.Vcnl4040.Vcnl4040Device.AmbientLightSensor" />
+      <Member Id="P:Iot.Device.Vcnl4040.Vcnl4040Device.DeviceId" />
+      <Member Id="P:Iot.Device.Vcnl4040.Vcnl4040Device.ProximitySensor" />
+    </Type>
+  </Namespace>
+  <Namespace Name="Iot.Device.Vcnl4040.Definitions">
+    <Type Name="Iot.Device.Vcnl4040.Definitions.AlsIntegrationTime" Id="T:Iot.Device.Vcnl4040.Definitions.AlsIntegrationTime">
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.AlsIntegrationTime.Time160ms" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.AlsIntegrationTime.Time320ms" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.AlsIntegrationTime.Time640ms" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.AlsIntegrationTime.Time80ms" />
+    </Type>
+    <Type Name="Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence" Id="T:Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence">
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence.Persistence1" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence.Persistence2" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence.Persistence4" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence.Persistence8" />
+    </Type>
+    <Type Name="Iot.Device.Vcnl4040.Definitions.AlsRange" Id="T:Iot.Device.Vcnl4040.Definitions.AlsRange">
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.AlsRange.Range1638" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.AlsRange.Range3276" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.AlsRange.Range6553" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.AlsRange.Range819" />
+    </Type>
+    <Type Name="Iot.Device.Vcnl4040.Definitions.AlsResolution" Id="T:Iot.Device.Vcnl4040.Definitions.AlsResolution">
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.AlsResolution.Resolution_0_0125" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.AlsResolution.Resolution_0_025" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.AlsResolution.Resolution_0_05" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.AlsResolution.Resolution_0_1" />
+    </Type>
+    <Type Name="Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode" Id="T:Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode">
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode.AwayInterrupt" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode.CloseInterrupt" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode.CloseOrAwayInterrupt" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode.LogicOutput" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode.Nothing" />
+    </Type>
+    <Type Name="Iot.Device.Vcnl4040.Definitions.PsDuty" Id="T:Iot.Device.Vcnl4040.Definitions.PsDuty">
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsDuty.Duty160" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsDuty.Duty320" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsDuty.Duty40" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsDuty.Duty80" />
+    </Type>
+    <Type Name="Iot.Device.Vcnl4040.Definitions.PsIntegrationTime" Id="T:Iot.Device.Vcnl4040.Definitions.PsIntegrationTime">
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsIntegrationTime.Time1_0" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsIntegrationTime.Time1_5" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsIntegrationTime.Time2_0" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsIntegrationTime.Time2_5" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsIntegrationTime.Time3_0" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsIntegrationTime.Time3_5" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsIntegrationTime.Time4_0" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsIntegrationTime.Time8_0" />
+    </Type>
+    <Type Name="Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence" Id="T:Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence">
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence.Persistence1" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence.Persistence2" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence.Persistence3" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence.Persistence4" />
+    </Type>
+    <Type Name="Iot.Device.Vcnl4040.Definitions.PsLedCurrent" Id="T:Iot.Device.Vcnl4040.Definitions.PsLedCurrent">
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsLedCurrent.I100mA" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsLedCurrent.I120mA" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsLedCurrent.I140mA" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsLedCurrent.I160mA" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsLedCurrent.I180mA" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsLedCurrent.I200mA" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsLedCurrent.I50mA" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsLedCurrent.I75mA" />
+    </Type>
+    <Type Name="Iot.Device.Vcnl4040.Definitions.PsMultiPulse" Id="T:Iot.Device.Vcnl4040.Definitions.PsMultiPulse">
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsMultiPulse.Pulse1" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsMultiPulse.Pulse2" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsMultiPulse.Pulse4" />
+      <Member Id="F:Iot.Device.Vcnl4040.Definitions.PsMultiPulse.Pulse8" />
+    </Type>
+  </Namespace>
   <Namespace Name="Iot.Device.Vl53L0X">
     <Type Name="Iot.Device.Vl53L0X.Information" Id="T:Iot.Device.Vl53L0X.Information">
       <Member Id="M:Iot.Device.Vl53L0X.Information.#ctor(System.Byte,System.Version,System.String,System.UInt32,System.UInt32)" />
@@ -10828,6 +12243,27 @@
       <Member Id="P:Iot.Device.Ws28xx.Ws28xx.Image" />
     </Type>
   </Namespace>
+  <Namespace Name="">
+    <Type Name="ProximityInterruptConfiguration" Id="T:ProximityInterruptConfiguration">
+      <Member Id="M:ProximityInterruptConfiguration.#ctor(ProximityInterruptConfiguration)" />
+      <Member Id="M:ProximityInterruptConfiguration.#ctor(System.UInt16,System.UInt16,Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence,System.Boolean,Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode)" />
+      <Member Id="M:ProximityInterruptConfiguration.&lt;Clone&gt;$" />
+      <Member Id="M:ProximityInterruptConfiguration.Deconstruct(System.UInt16@,System.UInt16@,Iot.Device.Vcnl4040.Definitions.PsInterruptPersistence@,System.Boolean@,Iot.Device.Vcnl4040.Definitions.ProximityInterruptMode@)" />
+      <Member Id="M:ProximityInterruptConfiguration.Equals(ProximityInterruptConfiguration)" />
+      <Member Id="M:ProximityInterruptConfiguration.Equals(System.Object)" />
+      <Member Id="M:ProximityInterruptConfiguration.GetHashCode" />
+      <Member Id="M:ProximityInterruptConfiguration.op_Equality(ProximityInterruptConfiguration,ProximityInterruptConfiguration)" />
+      <Member Id="M:ProximityInterruptConfiguration.op_Inequality(ProximityInterruptConfiguration,ProximityInterruptConfiguration)" />
+      <Member Id="M:ProximityInterruptConfiguration.PrintMembers(System.Text.StringBuilder)" />
+      <Member Id="M:ProximityInterruptConfiguration.ToString" />
+      <Member Id="P:ProximityInterruptConfiguration.EqualityContract" />
+      <Member Id="P:ProximityInterruptConfiguration.LowerThreshold" />
+      <Member Id="P:ProximityInterruptConfiguration.Mode" />
+      <Member Id="P:ProximityInterruptConfiguration.Persistence" />
+      <Member Id="P:ProximityInterruptConfiguration.SmartPersistenceEnabled" />
+      <Member Id="P:ProximityInterruptConfiguration.UpperThreshold" />
+    </Type>
+  </Namespace>
   <Namespace Name="System.Device.Analog">
     <Type Name="System.Device.Analog.AnalogController" Id="T:System.Device.Analog.AnalogController">
       <Member Id="M:System.Device.Analog.AnalogController.#ctor(System.Device.Gpio.PinNumberingScheme)" />
@@ -10900,6 +12336,11 @@
     </Type>
   </Namespace>
   <Namespace Name="System.Device.Gpio.Drivers">
+    <Type Name="System.Device.Gpio.Drivers.GpiodException" Id="T:System.Device.Gpio.Drivers.GpiodException">
+      <Member Id="M:System.Device.Gpio.Drivers.GpiodException.#ctor" />
+      <Member Id="M:System.Device.Gpio.Drivers.GpiodException.#ctor(System.String)" />
+      <Member Id="M:System.Device.Gpio.Drivers.GpiodException.#ctor(System.String,System.Exception)" />
+    </Type>
     <Type Name="System.Device.Gpio.Drivers.HummingBoardDriver" Id="T:System.Device.Gpio.Drivers.HummingBoardDriver">
       <Member Id="M:System.Device.Gpio.Drivers.HummingBoardDriver.#ctor" />
       <Member Id="M:System.Device.Gpio.Drivers.HummingBoardDriver.AddCallbackForPinValueChangedEvent(System.Int32,System.Device.Gpio.PinEventTypes,System.Device.Gpio.PinChangeEventHandler)" />
@@ -10920,10 +12361,12 @@
     </Type>
     <Type Name="System.Device.Gpio.Drivers.LibGpiodDriver" Id="T:System.Device.Gpio.Drivers.LibGpiodDriver">
       <Member Id="M:System.Device.Gpio.Drivers.LibGpiodDriver.#ctor(System.Int32)" />
+      <Member Id="M:System.Device.Gpio.Drivers.LibGpiodDriver.#ctor(System.Int32,System.Device.Gpio.Drivers.LibGpiodDriverVersion)" />
       <Member Id="M:System.Device.Gpio.Drivers.LibGpiodDriver.AddCallbackForPinValueChangedEvent(System.Int32,System.Device.Gpio.PinEventTypes,System.Device.Gpio.PinChangeEventHandler)" />
       <Member Id="M:System.Device.Gpio.Drivers.LibGpiodDriver.ClosePin(System.Int32)" />
       <Member Id="M:System.Device.Gpio.Drivers.LibGpiodDriver.ConvertPinNumberToLogicalNumberingScheme(System.Int32)" />
       <Member Id="M:System.Device.Gpio.Drivers.LibGpiodDriver.Dispose(System.Boolean)" />
+      <Member Id="M:System.Device.Gpio.Drivers.LibGpiodDriver.GetAvailableVersions" />
       <Member Id="M:System.Device.Gpio.Drivers.LibGpiodDriver.GetPinMode(System.Int32)" />
       <Member Id="M:System.Device.Gpio.Drivers.LibGpiodDriver.IsPinModeSupported(System.Int32,System.Device.Gpio.PinMode)" />
       <Member Id="M:System.Device.Gpio.Drivers.LibGpiodDriver.OpenPin(System.Int32)" />
@@ -10936,6 +12379,11 @@
       <Member Id="M:System.Device.Gpio.Drivers.LibGpiodDriver.WaitForEvent(System.Int32,System.Device.Gpio.PinEventTypes,System.Threading.CancellationToken)" />
       <Member Id="M:System.Device.Gpio.Drivers.LibGpiodDriver.Write(System.Int32,System.Device.Gpio.PinValue)" />
       <Member Id="P:System.Device.Gpio.Drivers.LibGpiodDriver.PinCount" />
+      <Member Id="P:System.Device.Gpio.Drivers.LibGpiodDriver.Version" />
+    </Type>
+    <Type Name="System.Device.Gpio.Drivers.LibGpiodDriverVersion" Id="T:System.Device.Gpio.Drivers.LibGpiodDriverVersion">
+      <Member Id="F:System.Device.Gpio.Drivers.LibGpiodDriverVersion.V1" />
+      <Member Id="F:System.Device.Gpio.Drivers.LibGpiodDriverVersion.V2" />
     </Type>
     <Type Name="System.Device.Gpio.Drivers.OrangePiPCDriver" Id="T:System.Device.Gpio.Drivers.OrangePiPCDriver">
       <Member Id="M:System.Device.Gpio.Drivers.OrangePiPCDriver.#ctor" />
@@ -11059,6 +12507,7 @@
       <Member Id="M:System.Device.Gpio.GpioDriver.ConvertPinNumberToLogicalNumberingScheme(System.Int32)" />
       <Member Id="M:System.Device.Gpio.GpioDriver.Dispose" />
       <Member Id="M:System.Device.Gpio.GpioDriver.Dispose(System.Boolean)" />
+      <Member Id="M:System.Device.Gpio.GpioDriver.Finalize" />
       <Member Id="M:System.Device.Gpio.GpioDriver.GetPinMode(System.Int32)" />
       <Member Id="M:System.Device.Gpio.GpioDriver.IsPinModeSupported(System.Int32,System.Device.Gpio.PinMode)" />
       <Member Id="M:System.Device.Gpio.GpioDriver.OpenPin(System.Int32)" />
@@ -11143,6 +12592,9 @@
     </Type>
     <Type Name="System.Device.I2c.I2cConnectionSettings" Id="T:System.Device.I2c.I2cConnectionSettings">
       <Member Id="M:System.Device.I2c.I2cConnectionSettings.#ctor(System.Int32,System.Int32)" />
+      <Member Id="M:System.Device.I2c.I2cConnectionSettings.Equals(System.Device.I2c.I2cConnectionSettings)" />
+      <Member Id="M:System.Device.I2c.I2cConnectionSettings.Equals(System.Object)" />
+      <Member Id="M:System.Device.I2c.I2cConnectionSettings.GetHashCode" />
       <Member Id="P:System.Device.I2c.I2cConnectionSettings.BusId" />
       <Member Id="P:System.Device.I2c.I2cConnectionSettings.DeviceAddress" />
     </Type>

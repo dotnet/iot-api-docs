@@ -1,0 +1,519 @@
+<Type Name="NavigationToWaypoint" FullName="Iot.Device.Seatalk1.Messages.NavigationToWaypoint">
+  <TypeSignature Language="C#" Value="public class NavigationToWaypoint : Iot.Device.Seatalk1.Messages.SeatalkMessage, IEquatable&lt;Iot.Device.Seatalk1.Messages.NavigationToWaypoint&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit NavigationToWaypoint extends Iot.Device.Seatalk1.Messages.SeatalkMessage implements class System.IEquatable`1&lt;class Iot.Device.Seatalk1.Messages.NavigationToWaypoint&gt;" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Seatalk1.Messages.NavigationToWaypoint" />
+  <TypeSignature Language="VB.NET" Value="Public Class NavigationToWaypoint&#xA;Inherits SeatalkMessage&#xA;Implements IEquatable(Of NavigationToWaypoint)" />
+  <TypeSignature Language="F#" Value="type NavigationToWaypoint = class&#xA;    inherit SeatalkMessage&#xA;    interface IEquatable&lt;NavigationToWaypoint&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Seatalk1.Messages.SeatalkMessage</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Iot.Device.Seatalk1.Messages.NavigationToWaypoint&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Navigation-to-waypoint message from a navigation computer
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NavigationToWaypoint ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.#ctor" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New ()" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters />
+      <Docs>
+        <summary>
+            Default constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected NavigationToWaypoint (Iot.Device.Seatalk1.Messages.NavigationToWaypoint original);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Seatalk1.Messages.NavigationToWaypoint original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.#ctor(Iot.Device.Seatalk1.Messages.NavigationToWaypoint)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (original As NavigationToWaypoint)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="Iot.Device.Seatalk1.Messages.NavigationToWaypoint" />
+      </Parameters>
+      <Docs>
+        <param name="original">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public NavigationToWaypoint (UnitsNet.Length? crossTrackError, UnitsNet.Angle? bearingToDestination, bool bearingIsTrue, UnitsNet.Length? distanceToDestination);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype System.Nullable`1&lt;valuetype UnitsNet.Length&gt; crossTrackError, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; bearingToDestination, bool bearingIsTrue, valuetype System.Nullable`1&lt;valuetype UnitsNet.Length&gt; distanceToDestination) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.#ctor(System.Nullable{UnitsNet.Length},System.Nullable{UnitsNet.Angle},System.Boolean,System.Nullable{UnitsNet.Length})" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (crossTrackError As Nullable(Of Length), bearingToDestination As Nullable(Of Angle), bearingIsTrue As Boolean, distanceToDestination As Nullable(Of Length))" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Seatalk1.Messages.NavigationToWaypoint : Nullable&lt;UnitsNet.Length&gt; * Nullable&lt;UnitsNet.Angle&gt; * bool * Nullable&lt;UnitsNet.Length&gt; -&gt; Iot.Device.Seatalk1.Messages.NavigationToWaypoint" Usage="new Iot.Device.Seatalk1.Messages.NavigationToWaypoint (crossTrackError, bearingToDestination, bearingIsTrue, distanceToDestination)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="crossTrackError" Type="System.Nullable&lt;UnitsNet.Length&gt;" />
+        <Parameter Name="bearingToDestination" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+        <Parameter Name="bearingIsTrue" Type="System.Boolean" />
+        <Parameter Name="distanceToDestination" Type="System.Nullable&lt;UnitsNet.Length&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="crossTrackError">Cross track error. Positive if right of desired track</param>
+        <param name="bearingToDestination">Bearing to destination</param>
+        <param name="bearingIsTrue">The bearing is true, false if it is magnetic</param>
+        <param name="distanceToDestination">Distance to destination</param>
+        <summary>
+            Construct a new instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="&lt;Clone&gt;$">
+      <MemberSignature Language="C#" Value="public override Iot.Device.Seatalk1.Messages.SeatalkMessage &lt;Clone&gt;$ ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class Iot.Device.Seatalk1.Messages.SeatalkMessage &lt;Clone&gt;$() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.&lt;Clone&gt;$" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function &lt;Clone&gt;$ () As SeatalkMessage" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Seatalk1.Messages.SeatalkMessage</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BearingIsTrue">
+      <MemberSignature Language="C#" Value="public bool BearingIsTrue { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool BearingIsTrue" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.BearingIsTrue" />
+      <MemberSignature Language="VB.NET" Value="Public Property BearingIsTrue As Boolean" />
+      <MemberSignature Language="F#" Value="member this.BearingIsTrue : bool with get, set" Usage="Iot.Device.Seatalk1.Messages.NavigationToWaypoint.BearingIsTrue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            The bearing value is true (means: It is relative to true north)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="BearingToDestination">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? BearingToDestination { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; BearingToDestination" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.BearingToDestination" />
+      <MemberSignature Language="VB.NET" Value="Public Property BearingToDestination As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.BearingToDestination : Nullable&lt;UnitsNet.Angle&gt; with get, set" Usage="Iot.Device.Seatalk1.Messages.NavigationToWaypoint.BearingToDestination" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Bearing to destination waypoint.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandByte">
+      <MemberSignature Language="C#" Value="public override byte CommandByte { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 CommandByte" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.CommandByte" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property CommandByte As Byte" />
+      <MemberSignature Language="F#" Value="member this.CommandByte : byte" Usage="Iot.Device.Seatalk1.Messages.NavigationToWaypoint.CommandByte" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateDatagram">
+      <MemberSignature Language="C#" Value="public override byte[] CreateDatagram ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance unsigned int8[] CreateDatagram() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.CreateDatagram" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function CreateDatagram () As Byte()" />
+      <MemberSignature Language="F#" Value="override this.CreateDatagram : unit -&gt; byte[]" Usage="navigationToWaypoint.CreateDatagram " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="CreateNewMessage">
+      <MemberSignature Language="C#" Value="public override Iot.Device.Seatalk1.Messages.SeatalkMessage CreateNewMessage (System.Collections.Generic.IReadOnlyList&lt;byte&gt; data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance class Iot.Device.Seatalk1.Messages.SeatalkMessage CreateNewMessage(class System.Collections.Generic.IReadOnlyList`1&lt;unsigned int8&gt; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.CreateNewMessage(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function CreateNewMessage (data As IReadOnlyList(Of Byte)) As SeatalkMessage" />
+      <MemberSignature Language="F#" Value="override this.CreateNewMessage : System.Collections.Generic.IReadOnlyList&lt;byte&gt; -&gt; Iot.Device.Seatalk1.Messages.SeatalkMessage" Usage="navigationToWaypoint.CreateNewMessage data" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Seatalk1.Messages.SeatalkMessage</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.Generic.IReadOnlyList&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="data">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="CrossTrackError">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length? CrossTrackError { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Length&gt; CrossTrackError" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.CrossTrackError" />
+      <MemberSignature Language="VB.NET" Value="Public Property CrossTrackError As Nullable(Of Length)" />
+      <MemberSignature Language="F#" Value="member this.CrossTrackError : Nullable&lt;UnitsNet.Length&gt; with get, set" Usage="Iot.Device.Seatalk1.Messages.NavigationToWaypoint.CrossTrackError" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Length&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Cross track error. Positive if right of track
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DistanceToDestination">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length? DistanceToDestination { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Length&gt; DistanceToDestination" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.DistanceToDestination" />
+      <MemberSignature Language="VB.NET" Value="Public Property DistanceToDestination As Nullable(Of Length)" />
+      <MemberSignature Language="F#" Value="member this.DistanceToDestination : Nullable&lt;UnitsNet.Length&gt; with get, set" Usage="Iot.Device.Seatalk1.Messages.NavigationToWaypoint.DistanceToDestination" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Length&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Distance to destination
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EqualityContract">
+      <MemberSignature Language="C#" Value="protected override Type EqualityContract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EqualityContract" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.EqualityContract" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides ReadOnly Property EqualityContract As Type" />
+      <MemberSignature Language="F#" Value="member this.EqualityContract : Type" Usage="Iot.Device.Seatalk1.Messages.NavigationToWaypoint.EqualityContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public virtual bool Equals (Iot.Device.Seatalk1.Messages.NavigationToWaypoint? other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Iot.Device.Seatalk1.Messages.NavigationToWaypoint other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.Equals(Iot.Device.Seatalk1.Messages.NavigationToWaypoint)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Equals (other As NavigationToWaypoint) As Boolean" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Iot.Device.Seatalk1.Messages.NavigationToWaypoint" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override sealed bool Equals (Iot.Device.Seatalk1.Messages.SeatalkMessage? other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(class Iot.Device.Seatalk1.Messages.SeatalkMessage other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.Equals(Iot.Device.Seatalk1.Messages.SeatalkMessage)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides NotOverridable Function Equals (other As SeatalkMessage) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Iot.Device.Seatalk1.Messages.SeatalkMessage" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ExpectedLength">
+      <MemberSignature Language="C#" Value="public override byte ExpectedLength { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance unsigned int8 ExpectedLength" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.ExpectedLength" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ExpectedLength As Byte" />
+      <MemberSignature Language="F#" Value="member this.ExpectedLength : byte" Usage="Iot.Device.Seatalk1.Messages.NavigationToWaypoint.ExpectedLength" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Byte</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="MatchesMessageType">
+      <MemberSignature Language="C#" Value="public override bool MatchesMessageType (System.Collections.Generic.IReadOnlyList&lt;byte&gt; data);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool MatchesMessageType(class System.Collections.Generic.IReadOnlyList`1&lt;unsigned int8&gt; data) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.MatchesMessageType(System.Collections.Generic.IReadOnlyList{System.Byte})" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function MatchesMessageType (data As IReadOnlyList(Of Byte)) As Boolean" />
+      <MemberSignature Language="F#" Value="override this.MatchesMessageType : System.Collections.Generic.IReadOnlyList&lt;byte&gt; -&gt; bool" Usage="navigationToWaypoint.MatchesMessageType data" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="data" Type="System.Collections.Generic.IReadOnlyList&lt;System.Byte&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="data">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Iot.Device.Seatalk1.Messages.NavigationToWaypoint? left, Iot.Device.Seatalk1.Messages.NavigationToWaypoint? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Iot.Device.Seatalk1.Messages.NavigationToWaypoint left, class Iot.Device.Seatalk1.Messages.NavigationToWaypoint right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.op_Equality(Iot.Device.Seatalk1.Messages.NavigationToWaypoint,Iot.Device.Seatalk1.Messages.NavigationToWaypoint)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As NavigationToWaypoint, right As NavigationToWaypoint) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Iot.Device.Seatalk1.Messages.NavigationToWaypoint" />
+        <Parameter Name="right" Type="Iot.Device.Seatalk1.Messages.NavigationToWaypoint" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Iot.Device.Seatalk1.Messages.NavigationToWaypoint? left, Iot.Device.Seatalk1.Messages.NavigationToWaypoint? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Iot.Device.Seatalk1.Messages.NavigationToWaypoint left, class Iot.Device.Seatalk1.Messages.NavigationToWaypoint right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.op_Inequality(Iot.Device.Seatalk1.Messages.NavigationToWaypoint,Iot.Device.Seatalk1.Messages.NavigationToWaypoint)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As NavigationToWaypoint, right As NavigationToWaypoint) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Iot.Device.Seatalk1.Messages.NavigationToWaypoint" />
+        <Parameter Name="right" Type="Iot.Device.Seatalk1.Messages.NavigationToWaypoint" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintMembers">
+      <MemberSignature Language="C#" Value="protected override bool PrintMembers (System.Text.StringBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig virtual instance bool PrintMembers(class System.Text.StringBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.PrintMembers(System.Text.StringBuilder)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overrides Function PrintMembers (builder As StringBuilder) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="System.Text.StringBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="builder">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Seatalk1.Messages.NavigationToWaypoint.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

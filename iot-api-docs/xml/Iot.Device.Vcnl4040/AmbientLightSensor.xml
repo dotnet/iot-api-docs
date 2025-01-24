@@ -1,0 +1,337 @@
+<Type Name="AmbientLightSensor" FullName="Iot.Device.Vcnl4040.AmbientLightSensor">
+  <TypeSignature Language="C#" Value="public class AmbientLightSensor" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AmbientLightSensor extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Vcnl4040.AmbientLightSensor" />
+  <TypeSignature Language="VB.NET" Value="Public Class AmbientLightSensor" />
+  <TypeSignature Language="F#" Value="type AmbientLightSensor = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Represents the ambient light sensor component of the VCNL4040 device.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="DisableInterrupts">
+      <MemberSignature Language="C#" Value="public void DisableInterrupts ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void DisableInterrupts() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.AmbientLightSensor.DisableInterrupts" />
+      <MemberSignature Language="VB.NET" Value="Public Sub DisableInterrupts ()" />
+      <MemberSignature Language="F#" Value="member this.DisableInterrupts : unit -&gt; unit" Usage="ambientLightSensor.DisableInterrupts " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Disables the interrupts (INT-pin function).
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EnableInterrupts">
+      <MemberSignature Language="C#" Value="public void EnableInterrupts (Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration configuration);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void EnableInterrupts(class Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration configuration) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.AmbientLightSensor.EnableInterrupts(Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub EnableInterrupts (configuration As AmbientLightInterruptConfiguration)" />
+      <MemberSignature Language="F#" Value="member this.EnableInterrupts : Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration -&gt; unit" Usage="ambientLightSensor.EnableInterrupts configuration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="configuration" Type="Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="configuration">To be added.</param>
+        <summary>
+            Configures the interrupt parameters and enables the interrupt (INT-pin function).
+            Refer to <see cref="T:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration" /> for more information on the parameters.
+            Note: even in Load Reduction Mode the actual integration time setting from the device is
+                  used. This would implicitly update the local copy if an inconsistency should prevail.
+                  Refer to <see cref="P:Iot.Device.Vcnl4040.AmbientLightSensor.LoadReductionModeEnabled" /> for further information.
+            </summary>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.ArgumentException">Thrown if any threshold exceeds the limit defined by the range (integration time),
+            or lower threshold is higher than the upper one, or a threshold is negative.</exception>
+        <exception cref="T:System.InvalidOperationException">Thrown if the proximity logic output of the proximity sensor is enabled.
+            Refer to <see cref="T:ProximityInterruptConfiguration" /> for more information.</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="GetInterruptConfiguration">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration GetInterruptConfiguration ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance class Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration GetInterruptConfiguration() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.AmbientLightSensor.GetInterruptConfiguration" />
+      <MemberSignature Language="VB.NET" Value="Public Function GetInterruptConfiguration () As AmbientLightInterruptConfiguration" />
+      <MemberSignature Language="F#" Value="member this.GetInterruptConfiguration : unit -&gt; Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration" Usage="ambientLightSensor.GetInterruptConfiguration " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Gets the current interrupt configuration from the device.
+            Note: even in Load Reduction Mode the actual integration time setting from the device is
+                  used. This would implicitly update the local copy if an inconsistency should prevail.
+                  Refer to <see cref="P:Iot.Device.Vcnl4040.AmbientLightSensor.LoadReductionModeEnabled" /> for further information.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Illuminance">
+      <MemberSignature Language="C#" Value="public UnitsNet.Illuminance Illuminance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Illuminance Illuminance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.AmbientLightSensor.Illuminance" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Illuminance As Illuminance" />
+      <MemberSignature Language="F#" Value="member this.Illuminance : UnitsNet.Illuminance" Usage="Iot.Device.Vcnl4040.AmbientLightSensor.Illuminance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Illuminance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the current ambient light sensor reading.
+            The device internal count is converted into a measurement value in Lux
+            using the configured resolution.
+            Note: the resolution is an indirect parameter derived from the integration time, as described in the datasheet.
+            Note: the documentation for the Load Reduction Mode should be considered.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IntegrationTime">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vcnl4040.Definitions.AlsIntegrationTime IntegrationTime { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Vcnl4040.Definitions.AlsIntegrationTime IntegrationTime" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.AmbientLightSensor.IntegrationTime" />
+      <MemberSignature Language="VB.NET" Value="Public Property IntegrationTime As AlsIntegrationTime" />
+      <MemberSignature Language="F#" Value="member this.IntegrationTime : Iot.Device.Vcnl4040.Definitions.AlsIntegrationTime with get, set" Usage="Iot.Device.Vcnl4040.AmbientLightSensor.IntegrationTime" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.Definitions.AlsIntegrationTime</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the ambient light sensor integration time.
+            Note: Changing the integration time implicitly results in an adjustment of the resolution and range.
+                  Range and resolution are parameters that indirectly depend on the integration time.
+                  The specific relationship is specified in the datasheet.
+            Important: when setting the integration time, possibly configured interrupts are implicitly deactivated.
+                       This is done to prevent accidentally using invalid threshold levels.
+                       Interrupts must be explicitly configured and re-enabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="IsInterruptEnabled">
+      <MemberSignature Language="C#" Value="public bool IsInterruptEnabled { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool IsInterruptEnabled" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.AmbientLightSensor.IsInterruptEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property IsInterruptEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.IsInterruptEnabled : bool" Usage="Iot.Device.Vcnl4040.AmbientLightSensor.IsInterruptEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets whether interrupt function (INT-pin function) is enabled.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LoadReductionModeEnabled">
+      <MemberSignature Language="C#" Value="public bool LoadReductionModeEnabled { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool LoadReductionModeEnabled" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.AmbientLightSensor.LoadReductionModeEnabled" />
+      <MemberSignature Language="VB.NET" Value="Public Property LoadReductionModeEnabled As Boolean" />
+      <MemberSignature Language="F#" Value="member this.LoadReductionModeEnabled : bool with get, set" Usage="Iot.Device.Vcnl4040.AmbientLightSensor.LoadReductionModeEnabled" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Enables or disables the load reduction mode.
+            If the Load Reduction Mode is enabled, the binding uses a local copy of the last set
+            value for the integration time to calculate the measurement value. Otherwise, the
+            current integration time is read from the device each time a measurement is queried.
+            This causes additional load on the I2C bus, which may be relevant at a high query frequency.
+            In Load Reduction Mode, this query is eliminated. However, if the integration time setting
+            is changed without using the corresponding property of the binding, it may lead to inconsistency
+            resulting in incorrect measurement value calculation.
+            Therefore, it is crucial that any changes are made exclusively through the binding.
+            The Load Reduction Mode should only be used when the bus load is relevant.
+            The default state is that it is turned off.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PowerOn">
+      <MemberSignature Language="C#" Value="public bool PowerOn { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool PowerOn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.AmbientLightSensor.PowerOn" />
+      <MemberSignature Language="VB.NET" Value="Public Property PowerOn As Boolean" />
+      <MemberSignature Language="F#" Value="member this.PowerOn : bool with get, set" Usage="Iot.Device.Vcnl4040.AmbientLightSensor.PowerOn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Get or sets the power state of the ambient light sensor.
+            The default setting is that the sensor is turned off.
+            The sensor can be configured while in the off state.
+            To query measurements, the sensor must be activated.
+            The time until the first value is available depends on the set integration time.
+            In the off state, the measurement value is not updated.
+            The sensor can be turned on and off at any time.
+            The configuration remains unaffected by this.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Range">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vcnl4040.Definitions.AlsRange Range { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Vcnl4040.Definitions.AlsRange Range" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.AmbientLightSensor.Range" />
+      <MemberSignature Language="VB.NET" Value="Public Property Range As AlsRange" />
+      <MemberSignature Language="F#" Value="member this.Range : Iot.Device.Vcnl4040.Definitions.AlsRange with get, set" Usage="Iot.Device.Vcnl4040.AmbientLightSensor.Range" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.Definitions.AlsRange</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the detection range.
+            Note: The range is a parameter that depends on the integration time.
+                  Changing the range, therefore, implicitly adjusts the integration time and
+                  consequently deactivates any set interrupts.
+                  Refer to the description of the <see cref="P:Iot.Device.Vcnl4040.AmbientLightSensor.IntegrationTime" /> property for more information.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RangeAsIlluminance">
+      <MemberSignature Language="C#" Value="public UnitsNet.Illuminance RangeAsIlluminance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Illuminance RangeAsIlluminance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.AmbientLightSensor.RangeAsIlluminance" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RangeAsIlluminance As Illuminance" />
+      <MemberSignature Language="F#" Value="member this.RangeAsIlluminance : UnitsNet.Illuminance" Usage="Iot.Device.Vcnl4040.AmbientLightSensor.RangeAsIlluminance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Illuminance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the range as illuminance value.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Resolution">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vcnl4040.Definitions.AlsResolution Resolution { get; set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Vcnl4040.Definitions.AlsResolution Resolution" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.AmbientLightSensor.Resolution" />
+      <MemberSignature Language="VB.NET" Value="Public Property Resolution As AlsResolution" />
+      <MemberSignature Language="F#" Value="member this.Resolution : Iot.Device.Vcnl4040.Definitions.AlsResolution with get, set" Usage="Iot.Device.Vcnl4040.AmbientLightSensor.Resolution" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.Definitions.AlsResolution</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets or sets the resolution.
+            Note: The resolution is a parameter that depends on the integration time.
+                  Changing the resolution, therefore, implicitly adjusts the integration time and
+                  consequently deactivates any set interrupts.
+                  Refer to the description of the <see cref="P:Iot.Device.Vcnl4040.AmbientLightSensor.IntegrationTime" /> property for more information.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ResolutionAsIlluminance">
+      <MemberSignature Language="C#" Value="public UnitsNet.Illuminance ResolutionAsIlluminance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Illuminance ResolutionAsIlluminance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.AmbientLightSensor.ResolutionAsIlluminance" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property ResolutionAsIlluminance As Illuminance" />
+      <MemberSignature Language="F#" Value="member this.ResolutionAsIlluminance : UnitsNet.Illuminance" Usage="Iot.Device.Vcnl4040.AmbientLightSensor.ResolutionAsIlluminance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Illuminance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Gets the resolution as illuminance value.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

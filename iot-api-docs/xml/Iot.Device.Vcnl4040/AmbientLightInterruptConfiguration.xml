@@ -1,0 +1,381 @@
+<Type Name="AmbientLightInterruptConfiguration" FullName="Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration">
+  <TypeSignature Language="C#" Value="public class AmbientLightInterruptConfiguration : IEquatable&lt;Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit AmbientLightInterruptConfiguration extends System.Object implements class System.IEquatable`1&lt;class Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration&gt;" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration" />
+  <TypeSignature Language="VB.NET" Value="Public Class AmbientLightInterruptConfiguration&#xA;Implements IEquatable(Of AmbientLightInterruptConfiguration)" />
+  <TypeSignature Language="F#" Value="type AmbientLightInterruptConfiguration = class&#xA;    interface IEquatable&lt;AmbientLightInterruptConfiguration&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <param name="LowerThreshold">Threshold for the lower illuminance value.
+            An interrupt is triggered when this threshold is undershot starting from a higher value.</param>
+    <param name="UpperThreshold">Threshold for the upper brightness value.
+            An interrupt is triggered when this threshold is exceeded starting from a lower value.</param>
+    <param name="Persistence">Persistence value. This value indicates how many consecutive measurements
+            must meet the threshold criterion (lower or upper).
+            This feature suppresses short-term measurement jumps and acts like a low-pass filter.
+            However, it extends the time until an interrupt is triggered after the necessary illuminance has been reached.
+            Latency = Integration Time * Persistence Value.</param>
+    <summary>
+            Represents the set of parameters determining the interrupt configuration for the ambient light sensor.
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected AmbientLightInterruptConfiguration (Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration original);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.#ctor(Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (original As AmbientLightInterruptConfiguration)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="original">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public AmbientLightInterruptConfiguration (UnitsNet.Illuminance LowerThreshold, UnitsNet.Illuminance UpperThreshold, Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence Persistence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype UnitsNet.Illuminance LowerThreshold, valuetype UnitsNet.Illuminance UpperThreshold, valuetype Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence Persistence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.#ctor(UnitsNet.Illuminance,UnitsNet.Illuminance,Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (LowerThreshold As Illuminance, UpperThreshold As Illuminance, Persistence As AlsInterruptPersistence)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration : UnitsNet.Illuminance * UnitsNet.Illuminance * Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence -&gt; Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration" Usage="new Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration (LowerThreshold, UpperThreshold, Persistence)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="LowerThreshold" Type="UnitsNet.Illuminance" />
+        <Parameter Name="UpperThreshold" Type="UnitsNet.Illuminance" />
+        <Parameter Name="Persistence" Type="Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence" />
+      </Parameters>
+      <Docs>
+        <param name="LowerThreshold">Threshold for the lower illuminance value.
+            An interrupt is triggered when this threshold is undershot starting from a higher value.</param>
+        <param name="UpperThreshold">Threshold for the upper brightness value.
+            An interrupt is triggered when this threshold is exceeded starting from a lower value.</param>
+        <param name="Persistence">Persistence value. This value indicates how many consecutive measurements
+            must meet the threshold criterion (lower or upper).
+            This feature suppresses short-term measurement jumps and acts like a low-pass filter.
+            However, it extends the time until an interrupt is triggered after the necessary illuminance has been reached.
+            Latency = Integration Time * Persistence Value.</param>
+        <summary>
+            Represents the set of parameters determining the interrupt configuration for the ambient light sensor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="&lt;Clone&gt;$">
+      <MemberSignature Language="C#" Value="public virtual Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration &lt;Clone&gt;$ ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration &lt;Clone&gt;$() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.&lt;Clone&gt;$" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function &lt;Clone&gt;$ () As AmbientLightInterruptConfiguration" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Deconstruct">
+      <MemberSignature Language="C#" Value="public void Deconstruct (out UnitsNet.Illuminance LowerThreshold, out UnitsNet.Illuminance UpperThreshold, out Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence Persistence);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void Deconstruct([out] valuetype UnitsNet.Illuminance&amp; LowerThreshold, [out] valuetype UnitsNet.Illuminance&amp; UpperThreshold, [out] valuetype Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence&amp; Persistence) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.Deconstruct(UnitsNet.Illuminance@,UnitsNet.Illuminance@,Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence@)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Deconstruct (ByRef LowerThreshold As Illuminance, ByRef UpperThreshold As Illuminance, ByRef Persistence As AlsInterruptPersistence)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="LowerThreshold" Type="UnitsNet.Illuminance" RefType="out" />
+        <Parameter Name="UpperThreshold" Type="UnitsNet.Illuminance" RefType="out" />
+        <Parameter Name="Persistence" Type="Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="LowerThreshold">To be added.</param>
+        <param name="UpperThreshold">To be added.</param>
+        <param name="Persistence">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EqualityContract">
+      <MemberSignature Language="C#" Value="protected virtual Type EqualityContract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EqualityContract" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.EqualityContract" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property EqualityContract As Type" />
+      <MemberSignature Language="F#" Value="member this.EqualityContract : Type" Usage="Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.EqualityContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public virtual bool Equals (Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration? other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.Equals(Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Equals (other As AmbientLightInterruptConfiguration) As Boolean" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="LowerThreshold">
+      <MemberSignature Language="C#" Value="public UnitsNet.Illuminance LowerThreshold { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Illuminance LowerThreshold" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.LowerThreshold" />
+      <MemberSignature Language="VB.NET" Value="Public Property LowerThreshold As Illuminance" />
+      <MemberSignature Language="F#" Value="member this.LowerThreshold : UnitsNet.Illuminance with get, set" Usage="Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.LowerThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Illuminance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Threshold for the lower illuminance value.
+            An interrupt is triggered when this threshold is undershot starting from a higher value.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration? left, Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration left, class Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.op_Equality(Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration,Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As AmbientLightInterruptConfiguration, right As AmbientLightInterruptConfiguration) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration" />
+        <Parameter Name="right" Type="Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration? left, Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration left, class Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.op_Inequality(Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration,Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As AmbientLightInterruptConfiguration, right As AmbientLightInterruptConfiguration) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration" />
+        <Parameter Name="right" Type="Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Persistence">
+      <MemberSignature Language="C#" Value="public Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence Persistence { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence Persistence" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.Persistence" />
+      <MemberSignature Language="VB.NET" Value="Public Property Persistence As AlsInterruptPersistence" />
+      <MemberSignature Language="F#" Value="member this.Persistence : Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence with get, set" Usage="Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.Persistence" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Vcnl4040.Definitions.AlsInterruptPersistence</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Persistence value. This value indicates how many consecutive measurements
+            must meet the threshold criterion (lower or upper).
+            This feature suppresses short-term measurement jumps and acts like a low-pass filter.
+            However, it extends the time until an interrupt is triggered after the necessary illuminance has been reached.
+            Latency = Integration Time * Persistence Value.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintMembers">
+      <MemberSignature Language="C#" Value="protected virtual bool PrintMembers (System.Text.StringBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool PrintMembers(class System.Text.StringBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.PrintMembers(System.Text.StringBuilder)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function PrintMembers (builder As StringBuilder) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="System.Text.StringBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="builder">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="UpperThreshold">
+      <MemberSignature Language="C#" Value="public UnitsNet.Illuminance UpperThreshold { get; init; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Illuminance UpperThreshold" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.UpperThreshold" />
+      <MemberSignature Language="VB.NET" Value="Public Property UpperThreshold As Illuminance" />
+      <MemberSignature Language="F#" Value="member this.UpperThreshold : UnitsNet.Illuminance with get, set" Usage="Iot.Device.Vcnl4040.AmbientLightInterruptConfiguration.UpperThreshold" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Illuminance</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>Threshold for the upper brightness value.
+            An interrupt is triggered when this threshold is exceeded starting from a lower value.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

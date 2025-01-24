@@ -9,6 +9,7 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Iot.Device.Nmea0183.Sentences.NmeaSentence</BaseTypeName>
@@ -23,6 +24,30 @@
   </Docs>
   <Members>
     <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public EngineRevolutions (Iot.Device.Nmea0183.TalkerId talker, Iot.Device.Nmea0183.Sentences.EngineData engineData);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Nmea0183.TalkerId talker, class Iot.Device.Nmea0183.Sentences.EngineData engineData) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.EngineRevolutions.#ctor(Iot.Device.Nmea0183.TalkerId,Iot.Device.Nmea0183.Sentences.EngineData)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (talker As TalkerId, engineData As EngineData)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.EngineRevolutions : Iot.Device.Nmea0183.TalkerId * Iot.Device.Nmea0183.Sentences.EngineData -&gt; Iot.Device.Nmea0183.Sentences.EngineRevolutions" Usage="new Iot.Device.Nmea0183.Sentences.EngineRevolutions (talker, engineData)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="talker" Type="Iot.Device.Nmea0183.TalkerId" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="engineData" Type="Iot.Device.Nmea0183.Sentences.EngineData" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="talker">Custom talker Id</param>
+        <param name="engineData">Engine data set</param>
+        <summary>
+            Constructs an RPM sentence from an <see cref="T:Iot.Device.Nmea0183.Sentences.EngineData" /> instance
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
       <MemberSignature Language="C#" Value="public EngineRevolutions (Iot.Device.Nmea0183.TalkerSentence sentence, DateTimeOffset time);" />
       <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Nmea0183.TalkerSentence sentence, valuetype System.DateTimeOffset time) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.EngineRevolutions.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
@@ -33,7 +58,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="sentence" Type="Iot.Device.Nmea0183.TalkerSentence" />
@@ -59,7 +84,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="talkerId" Type="Iot.Device.Nmea0183.TalkerId" />
@@ -87,7 +112,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="source" Type="Iot.Device.Nmea0183.Sentences.RotationSource" />
@@ -96,12 +121,12 @@
         <Parameter Name="pitch" Type="UnitsNet.Ratio" />
       </Parameters>
       <Docs>
-        <param name="source">To be added.</param>
-        <param name="speed">To be added.</param>
-        <param name="engineNumber">To be added.</param>
-        <param name="pitch">To be added.</param>
+        <param name="source">RPM source, typically <see cref="F:Iot.Device.Nmea0183.Sentences.RotationSource.Engine" /></param>
+        <param name="speed">Engine rotational speed</param>
+        <param name="engineNumber">Engine Number, counting from 1</param>
+        <param name="pitch">Propeller pitch, if applicable</param>
         <summary>
-            Constructs a new MWV sentence
+            Constructs a new RPM sentence
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -115,7 +140,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="talker" Type="Iot.Device.Nmea0183.TalkerId" Index="0" FrameworkAlternate="iot-dotnet-latest" />
@@ -125,13 +150,13 @@
         <Parameter Name="pitch" Type="UnitsNet.Ratio" Index="4" FrameworkAlternate="iot-dotnet-latest" />
       </Parameters>
       <Docs>
-        <param name="talker">To be added.</param>
-        <param name="source">To be added.</param>
-        <param name="speed">To be added.</param>
-        <param name="engineNumber">To be added.</param>
-        <param name="pitch">To be added.</param>
+        <param name="talker">Custom talker Id</param>
+        <param name="source">RPM source, typically <see cref="F:Iot.Device.Nmea0183.Sentences.RotationSource.Engine" /></param>
+        <param name="speed">Engine rotational speed</param>
+        <param name="engineNumber">Engine Number, counting from 1</param>
+        <param name="pitch">Propeller pitch, if applicable</param>
         <summary>
-            Constructs a new MWV sentence
+            Constructs a new RPM sentence
             </summary>
         <remarks>To be added.</remarks>
       </Docs>
@@ -147,7 +172,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -171,7 +196,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
@@ -195,7 +220,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Nullable&lt;UnitsNet.Ratio&gt;</ReturnType>
@@ -219,7 +244,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -243,7 +268,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>UnitsNet.RotationalSpeed</ReturnType>
@@ -267,7 +292,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.Sentences.RotationSource</ReturnType>
@@ -291,7 +316,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>
@@ -316,7 +341,7 @@
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.String</ReturnType>

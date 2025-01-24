@@ -1,0 +1,218 @@
+<Type Name="Lps22hb" FullName="Iot.Device.Lps22hb.Lps22hb">
+  <TypeSignature Language="C#" Value="public class Lps22hb : IDisposable" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit Lps22hb extends System.Object implements class System.IDisposable" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Lps22hb.Lps22hb" />
+  <TypeSignature Language="VB.NET" Value="Public Class Lps22hb&#xA;Implements IDisposable" />
+  <TypeSignature Language="F#" Value="type Lps22hb = class&#xA;    interface IDisposable" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IDisposable</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Attributes>
+    <Attribute>
+      <AttributeName Language="C#">[System.Device.Model.Interface("LPS22HB - Piezoresistive pressure and thermometer sensor")]</AttributeName>
+      <AttributeName Language="F#">[&lt;System.Device.Model.Interface("LPS22HB - Piezoresistive pressure and thermometer sensor")&gt;]</AttributeName>
+    </Attribute>
+  </Attributes>
+  <Docs>
+    <summary>
+            LPS22HB - Piezoresistive pressure and thermometer sensor
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public Lps22hb (System.Device.I2c.I2cDevice i2cDevice, Iot.Device.Lps22hb.OutputRate outputRate = Iot.Device.Lps22hb.OutputRate.DataRate25Hz, Iot.Device.Lps22hb.LowPassFilter lowPassFilter = Iot.Device.Lps22hb.LowPassFilter.Odr9, Iot.Device.Lps22hb.BduMode bdu = Iot.Device.Lps22hb.BduMode.BlockDataUpdate);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class System.Device.I2c.I2cDevice i2cDevice, valuetype Iot.Device.Lps22hb.OutputRate outputRate, valuetype Iot.Device.Lps22hb.LowPassFilter lowPassFilter, valuetype Iot.Device.Lps22hb.BduMode bdu) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Lps22hb.Lps22hb.#ctor(System.Device.I2c.I2cDevice,Iot.Device.Lps22hb.OutputRate,Iot.Device.Lps22hb.LowPassFilter,Iot.Device.Lps22hb.BduMode)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (i2cDevice As I2cDevice, Optional outputRate As OutputRate = Iot.Device.Lps22hb.OutputRate.DataRate25Hz, Optional lowPassFilter As LowPassFilter = Iot.Device.Lps22hb.LowPassFilter.Odr9, Optional bdu As BduMode = Iot.Device.Lps22hb.BduMode.BlockDataUpdate)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Lps22hb.Lps22hb : System.Device.I2c.I2cDevice * Iot.Device.Lps22hb.OutputRate * Iot.Device.Lps22hb.LowPassFilter * Iot.Device.Lps22hb.BduMode -&gt; Iot.Device.Lps22hb.Lps22hb" Usage="new Iot.Device.Lps22hb.Lps22hb (i2cDevice, outputRate, lowPassFilter, bdu)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="i2cDevice" Type="System.Device.I2c.I2cDevice" />
+        <Parameter Name="outputRate" Type="Iot.Device.Lps22hb.OutputRate" />
+        <Parameter Name="lowPassFilter" Type="Iot.Device.Lps22hb.LowPassFilter" />
+        <Parameter Name="bdu" Type="Iot.Device.Lps22hb.BduMode" />
+      </Parameters>
+      <Docs>
+        <param name="i2cDevice">The I2C device used for communication.</param>
+        <param name="outputRate">Output data rate</param>
+        <param name="lowPassFilter">Use internal low-pass filter</param>
+        <param name="bdu">Block data update</param>
+        <summary>
+            Initializes a new instance of the <see cref="T:Iot.Device.Lps22hb.Lps22hb" /> class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DefaultI2cAddress">
+      <MemberSignature Language="C#" Value="public const int DefaultI2cAddress = 92;" />
+      <MemberSignature Language="ILAsm" Value=".field public static literal int32 DefaultI2cAddress = (92)" />
+      <MemberSignature Language="DocId" Value="F:Iot.Device.Lps22hb.Lps22hb.DefaultI2cAddress" />
+      <MemberSignature Language="VB.NET" Value="Public Const DefaultI2cAddress As Integer  = 92" />
+      <MemberSignature Language="F#" Value="val mutable DefaultI2cAddress : int" Usage="Iot.Device.Lps22hb.Lps22hb.DefaultI2cAddress" />
+      <MemberType>Field</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <MemberValue>92</MemberValue>
+      <Docs>
+        <summary>
+            Default I2C address
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Dispose">
+      <MemberSignature Language="C#" Value="public void Dispose ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance void Dispose() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Lps22hb.Lps22hb.Dispose" />
+      <MemberSignature Language="VB.NET" Value="Public Sub Dispose ()" />
+      <MemberSignature Language="F#" Value="abstract member Dispose : unit -&gt; unit&#xA;override this.Dispose : unit -&gt; unit" Usage="lps22hb.Dispose " />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IDisposable.Dispose</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ResetDevice">
+      <MemberSignature Language="C#" Value="public void ResetDevice ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance void ResetDevice() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Lps22hb.Lps22hb.ResetDevice" />
+      <MemberSignature Language="VB.NET" Value="Public Sub ResetDevice ()" />
+      <MemberSignature Language="F#" Value="member this.ResetDevice : unit -&gt; unit" Usage="lps22hb.ResetDevice " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Void</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Reset the device
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryRead">
+      <MemberSignature Language="C#" Value="public bool TryRead ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryRead() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Lps22hb.Lps22hb.TryRead" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryRead () As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryRead : unit -&gt; bool" Usage="lps22hb.TryRead " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            TryRead
+            </summary>
+        <returns />
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadPressure">
+      <MemberSignature Language="C#" Value="public bool TryReadPressure (out UnitsNet.Pressure pressure);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadPressure([out] valuetype UnitsNet.Pressure&amp; pressure) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Lps22hb.Lps22hb.TryReadPressure(UnitsNet.Pressure@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadPressure (ByRef pressure As Pressure) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadPressure : Pressure -&gt; bool" Usage="lps22hb.TryReadPressure pressure" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Telemetry("Pressure", null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry("Pressure", null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="pressure" Type="UnitsNet.Pressure" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="pressure">
+            Contains the measured pressure  on success.
+            </param>
+        <summary>
+            Reads the pressure. A return value indicates whether the reading succeeded.
+            </summary>
+        <returns>True on success, false if reading failed.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TryReadTemperature">
+      <MemberSignature Language="C#" Value="public bool TryReadTemperature (out UnitsNet.Temperature temperature);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig instance bool TryReadTemperature([out] valuetype UnitsNet.Temperature&amp; temperature) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Lps22hb.Lps22hb.TryReadTemperature(UnitsNet.Temperature@)" />
+      <MemberSignature Language="VB.NET" Value="Public Function TryReadTemperature (ByRef temperature As Temperature) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.TryReadTemperature : Temperature -&gt; bool" Usage="lps22hb.TryReadTemperature temperature" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Attributes>
+        <Attribute>
+          <AttributeName Language="C#">[System.Device.Model.Telemetry("Temperature", null)]</AttributeName>
+          <AttributeName Language="F#">[&lt;System.Device.Model.Telemetry("Temperature", null)&gt;]</AttributeName>
+        </Attribute>
+      </Attributes>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="temperature" Type="UnitsNet.Temperature" RefType="out" />
+      </Parameters>
+      <Docs>
+        <param name="temperature">Contains the measured temperature on success.</param>
+        <summary>
+            Read temperature. A return value indicates whether the reading succeeded.
+            </summary>
+        <returns>True on success, false if reading failed.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

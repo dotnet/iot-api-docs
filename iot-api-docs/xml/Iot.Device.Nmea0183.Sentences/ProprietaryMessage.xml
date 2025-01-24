@@ -7,6 +7,7 @@
   <AssemblyInfo>
     <AssemblyName>Iot.Device.Bindings</AssemblyName>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>Iot.Device.Nmea0183.Sentences.NmeaSentence</BaseTypeName>
@@ -30,7 +31,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters />
       <Docs>
@@ -49,7 +50,7 @@
       <MemberType>Constructor</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="talker" Type="Iot.Device.Nmea0183.TalkerId" />
@@ -75,7 +76,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
@@ -97,7 +98,7 @@
       <MemberType>Property</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -119,7 +120,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -138,15 +139,15 @@
       </Docs>
     </Member>
     <Member MemberName="ReadFromHexString">
-      <MemberSignature Language="C#" Value="protected bool ReadFromHexString (string input, int start, int length, bool inverseEndianess, out int value);" />
-      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool ReadFromHexString(string input, int32 start, int32 length, bool inverseEndianess, [out] int32&amp; value) cil managed" />
+      <MemberSignature Language="C#" Value="protected bool ReadFromHexString (string input, int start, int length, bool inverseEndianness, out int value);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig instance bool ReadFromHexString(string input, int32 start, int32 length, bool inverseEndianness, [out] int32&amp; value) cil managed" />
       <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.ProprietaryMessage.ReadFromHexString(System.String,System.Int32,System.Int32,System.Boolean,System.Int32@)" />
-      <MemberSignature Language="VB.NET" Value="Protected Function ReadFromHexString (input As String, start As Integer, length As Integer, inverseEndianess As Boolean, ByRef value As Integer) As Boolean" />
-      <MemberSignature Language="F#" Value="member this.ReadFromHexString : string * int * int * bool * int -&gt; bool" Usage="proprietaryMessage.ReadFromHexString (input, start, length, inverseEndianess, value)" />
+      <MemberSignature Language="VB.NET" Value="Protected Function ReadFromHexString (input As String, start As Integer, length As Integer, inverseEndianness As Boolean, ByRef value As Integer) As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReadFromHexString : string * int * int * bool * int -&gt; bool" Usage="proprietaryMessage.ReadFromHexString (input, start, length, inverseEndianness, value)" />
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>Iot.Device.Bindings</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -155,14 +156,14 @@
         <Parameter Name="input" Type="System.String" />
         <Parameter Name="start" Type="System.Int32" />
         <Parameter Name="length" Type="System.Int32" />
-        <Parameter Name="inverseEndianess" Type="System.Boolean" />
+        <Parameter Name="inverseEndianness" Type="System.Boolean" />
         <Parameter Name="value" Type="System.Int32" RefType="out" />
       </Parameters>
       <Docs>
         <param name="input">Input string</param>
         <param name="start">Start offset of required number</param>
         <param name="length">Length of required number. Must be 2, 4 or 8</param>
-        <param name="inverseEndianess">True to inverse the endianess of the number (reverse the partial string)</param>
+        <param name="inverseEndianness">True to inverse the endianness of the number (reverse the partial string)</param>
         <param name="value">The output value</param>
         <summary>
             Decodes a value from a longer hex string (PRDIN messages contain one blob of stringly-typed hex numbers)

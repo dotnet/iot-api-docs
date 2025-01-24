@@ -1,0 +1,80 @@
+<Type Name="VirtualPointingDevice" FullName="Iot.Device.Gui.VirtualPointingDevice">
+  <TypeSignature Language="C#" Value="public static class VirtualPointingDevice" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi abstract sealed beforefieldinit VirtualPointingDevice extends System.Object" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Gui.VirtualPointingDevice" />
+  <TypeSignature Language="VB.NET" Value="Public Class VirtualPointingDevice" />
+  <TypeSignature Language="F#" Value="type VirtualPointingDevice = class" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            Supports creation of virtual pointing devices for various operating systems
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName="CreateAbsolute">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Gui.IPointingDevice CreateAbsolute (int width, int height);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Gui.IPointingDevice CreateAbsolute(int32 width, int32 height) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Gui.VirtualPointingDevice.CreateAbsolute(System.Int32,System.Int32)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateAbsolute (width As Integer, height As Integer) As IPointingDevice" />
+      <MemberSignature Language="F#" Value="static member CreateAbsolute : int * int -&gt; Iot.Device.Gui.IPointingDevice" Usage="Iot.Device.Gui.VirtualPointingDevice.CreateAbsolute (width, height)" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Gui.IPointingDevice</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="width" Type="System.Int32" />
+        <Parameter Name="height" Type="System.Int32" />
+      </Parameters>
+      <Docs>
+        <param name="width">Width of the input area (screen size)</param>
+        <param name="height">Height of the input area (screen size)</param>
+        <summary>
+            Create a pointing device that uses absolute coordinates (e.g. to simulate a touchscreen)
+            </summary>
+        <returns>A pointing device</returns>
+        <remarks>
+            To obtain the size of the virtual screen <see cref="M:Iot.Device.Gui.ScreenCapture.ScreenSize" /> can be used.
+            </remarks>
+        <exception cref="T:System.NotImplementedException">This operation is not currently implemented</exception>
+        <exception cref="T:System.PlatformNotSupportedException">The operation is not supported on this platform</exception>
+      </Docs>
+    </Member>
+    <Member MemberName="CreateRelative">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Gui.IPointingDevice CreateRelative ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig class Iot.Device.Gui.IPointingDevice CreateRelative() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Gui.VirtualPointingDevice.CreateRelative" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function CreateRelative () As IPointingDevice" />
+      <MemberSignature Language="F#" Value="static member CreateRelative : unit -&gt; Iot.Device.Gui.IPointingDevice" Usage="Iot.Device.Gui.VirtualPointingDevice.CreateRelative " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Gui.IPointingDevice</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            Create a pointing device that uses relative coordinates (e.g. to simulate a traditional mouse or a joystick)
+            </summary>
+        <returns>A pointing device</returns>
+        <remarks>To be added.</remarks>
+        <exception cref="T:System.NotImplementedException">This operation is not currently implemented</exception>
+        <exception cref="T:System.PlatformNotSupportedException">The operation is not supported on this platform</exception>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

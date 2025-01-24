@@ -1,0 +1,537 @@
+<Type Name="HeadingAndTrackControl" FullName="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl">
+  <TypeSignature Language="C#" Value="public class HeadingAndTrackControl : Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit HeadingAndTrackControl extends Iot.Device.Nmea0183.Sentences.NmeaSentence" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl" />
+  <TypeSignature Language="VB.NET" Value="Public Class HeadingAndTrackControl&#xA;Inherits NmeaSentence" />
+  <TypeSignature Language="F#" Value="type HeadingAndTrackControl = class&#xA;    inherit NmeaSentence" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>Iot.Device.Nmea0183.Sentences.NmeaSentence</BaseTypeName>
+  </Base>
+  <Interfaces />
+  <Docs>
+    <summary>
+            HTC sequence. This is used to control an attached auto-pilot.
+            Documentation of this sentence is very poor, and one has to dig deep
+            to find information about it.
+            Since the actual encoding might be autopilot-dependent, this message outputs all values in raw format.
+            </summary>
+    <remarks>
+            This class is preliminary and pending verification.
+            </remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HeadingAndTrackControl (Iot.Device.Nmea0183.TalkerSentence sentence, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Nmea0183.TalkerSentence sentence, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.#ctor(Iot.Device.Nmea0183.TalkerSentence,System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (sentence As TalkerSentence, time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl : Iot.Device.Nmea0183.TalkerSentence * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl" Usage="new Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl (sentence, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="sentence" Type="Iot.Device.Nmea0183.TalkerSentence" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="sentence">To be added.</param>
+        <param name="time">To be added.</param>
+        <summary>
+            Internal constructor
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HeadingAndTrackControl (Iot.Device.Nmea0183.TalkerId talkerId, System.Collections.Generic.IEnumerable&lt;string&gt; fields, DateTimeOffset time);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Nmea0183.TalkerId talkerId, class System.Collections.Generic.IEnumerable`1&lt;string&gt; fields, valuetype System.DateTimeOffset time) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.#ctor(Iot.Device.Nmea0183.TalkerId,System.Collections.Generic.IEnumerable{System.String},System.DateTimeOffset)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (talkerId As TalkerId, fields As IEnumerable(Of String), time As DateTimeOffset)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl : Iot.Device.Nmea0183.TalkerId * seq&lt;string&gt; * DateTimeOffset -&gt; Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl" Usage="new Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl (talkerId, fields, time)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="talkerId" Type="Iot.Device.Nmea0183.TalkerId" />
+        <Parameter Name="fields" Type="System.Collections.Generic.IEnumerable&lt;System.String&gt;" />
+        <Parameter Name="time" Type="System.DateTimeOffset" />
+      </Parameters>
+      <Docs>
+        <param name="talkerId">To be added.</param>
+        <param name="fields">To be added.</param>
+        <param name="time">To be added.</param>
+        <summary>
+            Parsing constructor.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public HeadingAndTrackControl (string status, UnitsNet.Angle? commandedRudderAngle, string commandedRudderDirection, string turnMode, UnitsNet.Angle? rudderLimit, UnitsNet.Angle? offHeadingLimit, UnitsNet.Length? turnRadius, UnitsNet.RotationalSpeed? rateOfTurn, UnitsNet.Angle? desiredHeading, UnitsNet.Length? offTrackLimit, UnitsNet.Angle? commandedTrack, bool headingIsTrue);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(string status, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; commandedRudderAngle, string commandedRudderDirection, string turnMode, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; rudderLimit, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; offHeadingLimit, valuetype System.Nullable`1&lt;valuetype UnitsNet.Length&gt; turnRadius, valuetype System.Nullable`1&lt;valuetype UnitsNet.RotationalSpeed&gt; rateOfTurn, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; desiredHeading, valuetype System.Nullable`1&lt;valuetype UnitsNet.Length&gt; offTrackLimit, valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; commandedTrack, bool headingIsTrue) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.#ctor(System.String,System.Nullable{UnitsNet.Angle},System.String,System.String,System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Length},System.Nullable{UnitsNet.RotationalSpeed},System.Nullable{UnitsNet.Angle},System.Nullable{UnitsNet.Length},System.Nullable{UnitsNet.Angle},System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (status As String, commandedRudderAngle As Nullable(Of Angle), commandedRudderDirection As String, turnMode As String, rudderLimit As Nullable(Of Angle), offHeadingLimit As Nullable(Of Angle), turnRadius As Nullable(Of Length), rateOfTurn As Nullable(Of RotationalSpeed), desiredHeading As Nullable(Of Angle), offTrackLimit As Nullable(Of Length), commandedTrack As Nullable(Of Angle), headingIsTrue As Boolean)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl : string * Nullable&lt;UnitsNet.Angle&gt; * string * string * Nullable&lt;UnitsNet.Angle&gt; * Nullable&lt;UnitsNet.Angle&gt; * Nullable&lt;UnitsNet.Length&gt; * Nullable&lt;UnitsNet.RotationalSpeed&gt; * Nullable&lt;UnitsNet.Angle&gt; * Nullable&lt;UnitsNet.Length&gt; * Nullable&lt;UnitsNet.Angle&gt; * bool -&gt; Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl" Usage="new Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl (status, commandedRudderAngle, commandedRudderDirection, turnMode, rudderLimit, offHeadingLimit, turnRadius, rateOfTurn, desiredHeading, offTrackLimit, commandedTrack, headingIsTrue)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="status" Type="System.String" />
+        <Parameter Name="commandedRudderAngle" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+        <Parameter Name="commandedRudderDirection" Type="System.String" />
+        <Parameter Name="turnMode" Type="System.String" />
+        <Parameter Name="rudderLimit" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+        <Parameter Name="offHeadingLimit" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+        <Parameter Name="turnRadius" Type="System.Nullable&lt;UnitsNet.Length&gt;" />
+        <Parameter Name="rateOfTurn" Type="System.Nullable&lt;UnitsNet.RotationalSpeed&gt;" />
+        <Parameter Name="desiredHeading" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+        <Parameter Name="offTrackLimit" Type="System.Nullable&lt;UnitsNet.Length&gt;" />
+        <Parameter Name="commandedTrack" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+        <Parameter Name="headingIsTrue" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="status">Status of Autopilot (see <see cref="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.Status" />)</param>
+        <param name="commandedRudderAngle">Commanded rudder angle</param>
+        <param name="commandedRudderDirection">Rudder direction</param>
+        <param name="turnMode">Turn mode</param>
+        <param name="rudderLimit">Rudder limit</param>
+        <param name="offHeadingLimit">Off-Heading limit</param>
+        <param name="turnRadius">Desired turn radius</param>
+        <param name="rateOfTurn">Desired rate of turn</param>
+        <param name="desiredHeading">Desired heading</param>
+        <param name="offTrackLimit">Desired off-track limit</param>
+        <param name="commandedTrack">Commanded track direction</param>
+        <param name="headingIsTrue">Heading uses true angles</param>
+        <summary>
+            Initialize a new instance of this type.
+            See the individual properties for further explanation to the parameters.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="AsAngle">
+      <MemberSignature Language="C#" Value="protected static UnitsNet.Angle? AsAngle (double? value);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; AsAngle(valuetype System.Nullable`1&lt;float64&gt; value) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.AsAngle(System.Nullable{System.Double})" />
+      <MemberSignature Language="VB.NET" Value="Protected Shared Function AsAngle (value As Nullable(Of Double)) As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="static member AsAngle : Nullable&lt;double&gt; -&gt; Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.AsAngle value" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="value" Type="System.Nullable&lt;System.Double&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="value">Input angle</param>
+        <summary>
+            Get a nullable double field as angle
+            </summary>
+        <returns>An angle or null, if the input is null</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandedRudderAngle">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? CommandedRudderAngle { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; CommandedRudderAngle" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.CommandedRudderAngle" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CommandedRudderAngle As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.CommandedRudderAngle : Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.CommandedRudderAngle" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Angle for directly controlling the rudder. Unsigned. (See <see cref="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.CommandedRudderDirection" />)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandedRudderDirection">
+      <MemberSignature Language="C#" Value="public string CommandedRudderDirection { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string CommandedRudderDirection" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.CommandedRudderDirection" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CommandedRudderDirection As String" />
+      <MemberSignature Language="F#" Value="member this.CommandedRudderDirection : string" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.CommandedRudderDirection" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Commanded rudder direction "L" or "R" for port/starboard.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="CommandedTrack">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? CommandedTrack { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; CommandedTrack" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.CommandedTrack" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property CommandedTrack As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.CommandedTrack : Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.CommandedTrack" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Commanded track
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="DesiredHeading">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? DesiredHeading { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; DesiredHeading" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.DesiredHeading" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property DesiredHeading As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.DesiredHeading : Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.DesiredHeading" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Heading to steer.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="FromAngle">
+      <MemberSignature Language="C#" Value="protected static string FromAngle (UnitsNet.Angle? angle);" />
+      <MemberSignature Language="ILAsm" Value=".method familystatic hidebysig string FromAngle(valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; angle) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.FromAngle(System.Nullable{UnitsNet.Angle})" />
+      <MemberSignature Language="VB.NET" Value="Protected Shared Function FromAngle (angle As Nullable(Of Angle)) As String" />
+      <MemberSignature Language="F#" Value="static member FromAngle : Nullable&lt;UnitsNet.Angle&gt; -&gt; string" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.FromAngle angle" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="angle" Type="System.Nullable&lt;UnitsNet.Angle&gt;" />
+      </Parameters>
+      <Docs>
+        <param name="angle">Angle to translate</param>
+        <summary>
+            Translate as nullable angle to a value in degrees with one digit
+            </summary>
+        <returns>The translated angle or just a comma</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HeadingIsTrue">
+      <MemberSignature Language="C#" Value="public bool HeadingIsTrue { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HeadingIsTrue" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.HeadingIsTrue" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HeadingIsTrue As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HeadingIsTrue : bool" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.HeadingIsTrue" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if all angles are true, otherwise false.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Id">
+      <MemberSignature Language="C#" Value="public static Iot.Device.Nmea0183.SentenceId Id { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property valuetype Iot.Device.Nmea0183.SentenceId Id" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.Id" />
+      <MemberSignature Language="VB.NET" Value="Public Shared ReadOnly Property Id As SentenceId" />
+      <MemberSignature Language="F#" Value="static member Id : Iot.Device.Nmea0183.SentenceId" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.Id" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.SentenceId</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            This sentence's id
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffHeadingLimit">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? OffHeadingLimit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; OffHeadingLimit" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.OffHeadingLimit" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OffHeadingLimit As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.OffHeadingLimit : Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.OffHeadingLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Maximum off-heading limit (in heading control mode)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="OffTrackLimit">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length? OffTrackLimit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Length&gt; OffTrackLimit" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.OffTrackLimit" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property OffTrackLimit As Nullable(Of Length)" />
+      <MemberSignature Language="F#" Value="member this.OffTrackLimit : Nullable&lt;UnitsNet.Length&gt;" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.OffTrackLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Length&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Off-track warning limit, unsigned.
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="RateOfTurn">
+      <MemberSignature Language="C#" Value="public UnitsNet.RotationalSpeed? RateOfTurn { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.RotationalSpeed&gt; RateOfTurn" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.RateOfTurn" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RateOfTurn As Nullable(Of RotationalSpeed)" />
+      <MemberSignature Language="F#" Value="member this.RateOfTurn : Nullable&lt;UnitsNet.RotationalSpeed&gt;" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.RateOfTurn" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.RotationalSpeed&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Desired turn rate (when <see cref="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.TurnMode" /> is "T")
+            Base unit is degrees/second
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ReplacesOlderInstance">
+      <MemberSignature Language="C#" Value="public override bool ReplacesOlderInstance { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool ReplacesOlderInstance" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.ReplacesOlderInstance" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides ReadOnly Property ReplacesOlderInstance As Boolean" />
+      <MemberSignature Language="F#" Value="member this.ReplacesOlderInstance : bool" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.ReplacesOlderInstance" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="RudderLimit">
+      <MemberSignature Language="C#" Value="public UnitsNet.Angle? RudderLimit { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Angle&gt; RudderLimit" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.RudderLimit" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property RudderLimit As Nullable(Of Angle)" />
+      <MemberSignature Language="F#" Value="member this.RudderLimit : Nullable&lt;UnitsNet.Angle&gt;" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.RudderLimit" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Angle&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Maximum rudder angle
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Status">
+      <MemberSignature Language="C#" Value="public string Status { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string Status" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.Status" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Status As String" />
+      <MemberSignature Language="F#" Value="member this.Status : string" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.Status" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Autopilot status. Known values:
+            M = Manual
+            S = Stand-alone heading control
+            H = Heading control with external source
+            T = Track control
+            R = Direct rudder control
+            Anything else = ???
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToNmeaParameterList">
+      <MemberSignature Language="C#" Value="public override string ToNmeaParameterList ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToNmeaParameterList() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.ToNmeaParameterList" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToNmeaParameterList () As String" />
+      <MemberSignature Language="F#" Value="override this.ToNmeaParameterList : unit -&gt; string" Usage="headingAndTrackControl.ToNmeaParameterList " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="ToReadableContent">
+      <MemberSignature Language="C#" Value="public override string ToReadableContent ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToReadableContent() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.ToReadableContent" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToReadableContent () As String" />
+      <MemberSignature Language="F#" Value="override this.ToReadableContent : unit -&gt; string" Usage="headingAndTrackControl.ToReadableContent " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+        <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="TurnMode">
+      <MemberSignature Language="C#" Value="public string TurnMode { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance string TurnMode" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.TurnMode" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TurnMode As String" />
+      <MemberSignature Language="F#" Value="member this.TurnMode : string" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.TurnMode" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Turn mode (probably only valid for very expensive autopilots)
+            Known values:
+            R = Radius controlled
+            T = Turn rate controlled
+            N = Neither
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TurnRadius">
+      <MemberSignature Language="C#" Value="public UnitsNet.Length? TurnRadius { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Nullable`1&lt;valuetype UnitsNet.Length&gt; TurnRadius" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.TurnRadius" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TurnRadius As Nullable(Of Length)" />
+      <MemberSignature Language="F#" Value="member this.TurnRadius : Nullable&lt;UnitsNet.Length&gt;" Usage="Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.TurnRadius" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Nullable&lt;UnitsNet.Length&gt;</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Desired turn Radius (when <see cref="P:Iot.Device.Nmea0183.Sentences.HeadingAndTrackControl.TurnMode" /> is "R")
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

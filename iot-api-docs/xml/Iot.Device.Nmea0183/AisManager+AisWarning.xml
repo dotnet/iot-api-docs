@@ -1,0 +1,35 @@
+<Type Name="AisManager+AisWarning" FullName="Iot.Device.Nmea0183.AisManager+AisWarning">
+  <TypeSignature Language="C#" Value="public delegate void AisManager.AisWarning(AisMessageId id, uint sourceMmsi, DateTimeOffset now, string message, AisTarget? source);" />
+  <TypeSignature Language="ILAsm" Value=".class nested public auto ansi sealed AisManager/AisWarning extends System.MulticastDelegate" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.AisManager.AisWarning" />
+  <TypeSignature Language="VB.NET" Value="Public Delegate Sub AisManager.AisWarning(id As AisMessageId, sourceMmsi As UInteger, now As DateTimeOffset, message As String, source As AisTarget)" />
+  <TypeSignature Language="F#" Value="type AisManager.AisWarning = delegate of AisMessageId * uint32 * DateTimeOffset * string * AisTarget -&gt; unit" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Delegate</BaseTypeName>
+  </Base>
+  <Parameters>
+    <Parameter Name="id" Type="Iot.Device.Nmea0183.AisMessageId" />
+    <Parameter Name="sourceMmsi" Type="System.UInt32" />
+    <Parameter Name="now" Type="System.DateTimeOffset" />
+    <Parameter Name="message" Type="System.String" />
+    <Parameter Name="source" Type="Iot.Device.Nmea0183.Ais.AisTarget" />
+  </Parameters>
+  <ReturnValue>
+    <ReturnType>System.Void</ReturnType>
+  </ReturnValue>
+  <Docs>
+    <param name="id">Message id. To identify the message type (e.g. for suppression)</param>
+    <param name="sourceMmsi">The source MMSI. May be 0 in case of a warning by the own infrastructure</param>
+    <param name="now">The current time</param>
+    <param name="message">The message text</param>
+    <param name="source">The source, if any</param>
+    <summary>
+            A delegate for use in the <see cref="E:Iot.Device.Nmea0183.AisManager.OnAisWarning" /> callback
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+</Type>

@@ -1,0 +1,390 @@
+<Type Name="FluidData" FullName="Iot.Device.Nmea0183.Sentences.FluidData">
+  <TypeSignature Language="C#" Value="public class FluidData : IEquatable&lt;Iot.Device.Nmea0183.Sentences.FluidData&gt;" />
+  <TypeSignature Language="ILAsm" Value=".class public auto ansi beforefieldinit FluidData extends System.Object implements class System.IEquatable`1&lt;class Iot.Device.Nmea0183.Sentences.FluidData&gt;" />
+  <TypeSignature Language="DocId" Value="T:Iot.Device.Nmea0183.Sentences.FluidData" />
+  <TypeSignature Language="VB.NET" Value="Public Class FluidData&#xA;Implements IEquatable(Of FluidData)" />
+  <TypeSignature Language="F#" Value="type FluidData = class&#xA;    interface IEquatable&lt;FluidData&gt;" />
+  <AssemblyInfo>
+    <AssemblyName>Iot.Device.Bindings</AssemblyName>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
+  </AssemblyInfo>
+  <Base>
+    <BaseTypeName>System.Object</BaseTypeName>
+  </Base>
+  <Interfaces>
+    <Interface>
+      <InterfaceName>System.IEquatable&lt;Iot.Device.Nmea0183.Sentences.FluidData&gt;</InterfaceName>
+    </Interface>
+  </Interfaces>
+  <Docs>
+    <summary>
+            Represents the level of a fluid in a particular tank
+            </summary>
+    <remarks>To be added.</remarks>
+  </Docs>
+  <Members>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="protected FluidData (Iot.Device.Nmea0183.Sentences.FluidData original);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig specialname rtspecialname instance void .ctor(class Iot.Device.Nmea0183.Sentences.FluidData original) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.FluidData.#ctor(Iot.Device.Nmea0183.Sentences.FluidData)" />
+      <MemberSignature Language="VB.NET" Value="Protected Sub New (original As FluidData)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="original" Type="Iot.Device.Nmea0183.Sentences.FluidData" />
+      </Parameters>
+      <Docs>
+        <param name="original">To be added.</param>
+        <summary>To be added.</summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public FluidData (Iot.Device.Nmea0183.Sentences.FluidType type, UnitsNet.Ratio level, UnitsNet.Volume volume, int tankNumber, bool highLevelIsGood);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(valuetype Iot.Device.Nmea0183.Sentences.FluidType type, valuetype UnitsNet.Ratio level, valuetype UnitsNet.Volume volume, int32 tankNumber, bool highLevelIsGood) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.FluidData.#ctor(Iot.Device.Nmea0183.Sentences.FluidType,UnitsNet.Ratio,UnitsNet.Volume,System.Int32,System.Boolean)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (type As FluidType, level As Ratio, volume As Volume, tankNumber As Integer, highLevelIsGood As Boolean)" />
+      <MemberSignature Language="F#" Value="new Iot.Device.Nmea0183.Sentences.FluidData : Iot.Device.Nmea0183.Sentences.FluidType * UnitsNet.Ratio * UnitsNet.Volume * int * bool -&gt; Iot.Device.Nmea0183.Sentences.FluidData" Usage="new Iot.Device.Nmea0183.Sentences.FluidData (type, level, volume, tankNumber, highLevelIsGood)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="type" Type="Iot.Device.Nmea0183.Sentences.FluidType" />
+        <Parameter Name="level" Type="UnitsNet.Ratio" />
+        <Parameter Name="volume" Type="UnitsNet.Volume" />
+        <Parameter Name="tankNumber" Type="System.Int32" />
+        <Parameter Name="highLevelIsGood" Type="System.Boolean" />
+      </Parameters>
+      <Docs>
+        <param name="type">The type of fluid</param>
+        <param name="level">The level of the fluid (0-100%)</param>
+        <param name="volume">The total volume of the tank</param>
+        <param name="tankNumber">The number of the tank (if multiple tanks for the same type of fluid are present)</param>
+        <param name="highLevelIsGood">True if it is "good" to have a full tank (e.g. water, diesel), false if it is better to have
+            an empty tank (e.g. wastewater)</param>
+        <summary>
+            Constructs a new instance of this class.
+            </summary>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="&lt;Clone&gt;$">
+      <MemberSignature Language="C#" Value="public virtual Iot.Device.Nmea0183.Sentences.FluidData &lt;Clone&gt;$ ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance class Iot.Device.Nmea0183.Sentences.FluidData &lt;Clone&gt;$() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.FluidData.&lt;Clone&gt;$" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function &lt;Clone&gt;$ () As FluidData" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Sentences.FluidData</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="EqualityContract">
+      <MemberSignature Language="C#" Value="protected virtual Type EqualityContract { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance class System.Type EqualityContract" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.FluidData.EqualityContract" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable ReadOnly Property EqualityContract As Type" />
+      <MemberSignature Language="F#" Value="member this.EqualityContract : Type" Usage="Iot.Device.Nmea0183.Sentences.FluidData.EqualityContract" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Type</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>To be added.</summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public virtual bool Equals (Iot.Device.Nmea0183.Sentences.FluidData? other);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig newslot virtual instance bool Equals(class Iot.Device.Nmea0183.Sentences.FluidData other) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.FluidData.Equals(Iot.Device.Nmea0183.Sentences.FluidData)" />
+      <MemberSignature Language="VB.NET" Value="Public Overridable Function Equals (other As FluidData) As Boolean" />
+      <MemberType>Method</MemberType>
+      <Implements>
+        <InterfaceMember>M:System.IEquatable`1.Equals(`0)</InterfaceMember>
+      </Implements>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="other" Type="Iot.Device.Nmea0183.Sentences.FluidData" />
+      </Parameters>
+      <Docs>
+        <param name="other">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Equals">
+      <MemberSignature Language="C#" Value="public override bool Equals (object? obj);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance bool Equals(object obj) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.FluidData.Equals(System.Object)" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function Equals (obj As Object) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="obj" Type="System.Object" />
+      </Parameters>
+      <Docs>
+        <param name="obj">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="GetHashCode">
+      <MemberSignature Language="C#" Value="public override int GetHashCode ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance int32 GetHashCode() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.FluidData.GetHashCode" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function GetHashCode () As Integer" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="HighLevelIsGood">
+      <MemberSignature Language="C#" Value="public bool HighLevelIsGood { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance bool HighLevelIsGood" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.FluidData.HighLevelIsGood" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property HighLevelIsGood As Boolean" />
+      <MemberSignature Language="F#" Value="member this.HighLevelIsGood : bool" Usage="Iot.Device.Nmea0183.Sentences.FluidData.HighLevelIsGood" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            True if it is "good" to have a full tank (e.g. water, diesel), false if it is better to have
+            an empty tank (e.g. wastewater)
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Level">
+      <MemberSignature Language="C#" Value="public UnitsNet.Ratio Level { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Ratio Level" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.FluidData.Level" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Level As Ratio" />
+      <MemberSignature Language="F#" Value="member this.Level : UnitsNet.Ratio" Usage="Iot.Device.Nmea0183.Sentences.FluidData.Level" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Ratio</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Tank level
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Equality">
+      <MemberSignature Language="C#" Value="public static bool operator == (Iot.Device.Nmea0183.Sentences.FluidData? left, Iot.Device.Nmea0183.Sentences.FluidData? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Equality(class Iot.Device.Nmea0183.Sentences.FluidData left, class Iot.Device.Nmea0183.Sentences.FluidData right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.FluidData.op_Equality(Iot.Device.Nmea0183.Sentences.FluidData,Iot.Device.Nmea0183.Sentences.FluidData)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator == (left As FluidData, right As FluidData) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Iot.Device.Nmea0183.Sentences.FluidData" />
+        <Parameter Name="right" Type="Iot.Device.Nmea0183.Sentences.FluidData" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="op_Inequality">
+      <MemberSignature Language="C#" Value="public static bool operator != (Iot.Device.Nmea0183.Sentences.FluidData? left, Iot.Device.Nmea0183.Sentences.FluidData? right);" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig specialname bool op_Inequality(class Iot.Device.Nmea0183.Sentences.FluidData left, class Iot.Device.Nmea0183.Sentences.FluidData right) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.FluidData.op_Inequality(Iot.Device.Nmea0183.Sentences.FluidData,Iot.Device.Nmea0183.Sentences.FluidData)" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Operator != (left As FluidData, right As FluidData) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="left" Type="Iot.Device.Nmea0183.Sentences.FluidData" />
+        <Parameter Name="right" Type="Iot.Device.Nmea0183.Sentences.FluidData" />
+      </Parameters>
+      <Docs>
+        <param name="left">To be added.</param>
+        <param name="right">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="PrintMembers">
+      <MemberSignature Language="C#" Value="protected virtual bool PrintMembers (System.Text.StringBuilder builder);" />
+      <MemberSignature Language="ILAsm" Value=".method familyhidebysig newslot virtual instance bool PrintMembers(class System.Text.StringBuilder builder) cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.FluidData.PrintMembers(System.Text.StringBuilder)" />
+      <MemberSignature Language="VB.NET" Value="Protected Overridable Function PrintMembers (builder As StringBuilder) As Boolean" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Boolean</ReturnType>
+      </ReturnValue>
+      <Parameters>
+        <Parameter Name="builder" Type="System.Text.StringBuilder" />
+      </Parameters>
+      <Docs>
+        <param name="builder">To be added.</param>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="TankNumber">
+      <MemberSignature Language="C#" Value="public int TankNumber { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance int32 TankNumber" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.FluidData.TankNumber" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property TankNumber As Integer" />
+      <MemberSignature Language="F#" Value="member this.TankNumber : int" Usage="Iot.Device.Nmea0183.Sentences.FluidData.TankNumber" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Int32</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Number of the tank, useful if several tanks for the same type of fluid exist
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="ToString">
+      <MemberSignature Language="C#" Value="public override string ToString ();" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig virtual instance string ToString() cil managed" />
+      <MemberSignature Language="DocId" Value="M:Iot.Device.Nmea0183.Sentences.FluidData.ToString" />
+      <MemberSignature Language="VB.NET" Value="Public Overrides Function ToString () As String" />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.String</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>To be added.</summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Type">
+      <MemberSignature Language="C#" Value="public Iot.Device.Nmea0183.Sentences.FluidType Type { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype Iot.Device.Nmea0183.Sentences.FluidType Type" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.FluidData.Type" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Type As FluidType" />
+      <MemberSignature Language="F#" Value="member this.Type : Iot.Device.Nmea0183.Sentences.FluidType" Usage="Iot.Device.Nmea0183.Sentences.FluidData.Type" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>Iot.Device.Nmea0183.Sentences.FluidType</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Type of fluid in the tank
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+    <Member MemberName="Volume">
+      <MemberSignature Language="C#" Value="public UnitsNet.Volume Volume { get; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype UnitsNet.Volume Volume" />
+      <MemberSignature Language="DocId" Value="P:Iot.Device.Nmea0183.Sentences.FluidData.Volume" />
+      <MemberSignature Language="VB.NET" Value="Public ReadOnly Property Volume As Volume" />
+      <MemberSignature Language="F#" Value="member this.Volume : UnitsNet.Volume" Usage="Iot.Device.Nmea0183.Sentences.FluidData.Volume" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>Iot.Device.Bindings</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>UnitsNet.Volume</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Total volume of the tank
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
+      </Docs>
+    </Member>
+  </Members>
+</Type>

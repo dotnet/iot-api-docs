@@ -16,6 +16,7 @@
     <AssemblyVersion>2.1.0.0</AssemblyVersion>
     <AssemblyVersion>2.2.0.0</AssemblyVersion>
     <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <AssemblyVersion>3.2.0.0</AssemblyVersion>
   </AssemblyInfo>
   <Base>
     <BaseTypeName>System.Device.Gpio.Drivers.UnixDriver</BaseTypeName>
@@ -23,9 +24,8 @@
   <Interfaces />
   <Docs>
     <summary>
-            This driver uses the Libgpiod library to get user-level access to the gpio ports.
-            It superseeds the SysFsDriver, but requires that libgpiod is installed. To do so, run
-            "sudo apt install -y libgpiod-dev".
+            This driver uses libgpiod to get user-level access to the GPIO ports.
+            It supersedes the SysFsDriver, but requires that libgpiod is installed.
             </summary>
     <remarks>To be added.</remarks>
   </Docs>
@@ -48,17 +48,46 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <Parameters>
         <Parameter Name="gpioChip" Type="System.Int32" />
       </Parameters>
       <Docs>
-        <param name="gpioChip">Number of the gpio Chip. Default 0</param>
+        <param name="gpioChip">The number of the GPIO chip to drive</param>
         <summary>
-            Construct an instance
+            Creates an instance of the LibGpiodDriver
             </summary>
-        <remarks>To be added.</remarks>
+        <remarks>
+            The driver version is chosen based on the installed libgpiod version on the system. To select a specific library version use the
+            other constructor or specify the environment variable DOTNET_IOT_LIBGPIOD_DRIVER_VERSION, see documentation
+            </remarks>
+      </Docs>
+    </Member>
+    <Member MemberName=".ctor">
+      <MemberSignature Language="C#" Value="public LibGpiodDriver (int gpioChip, System.Device.Gpio.Drivers.LibGpiodDriverVersion driverVersion);" />
+      <MemberSignature Language="ILAsm" Value=".method public hidebysig specialname rtspecialname instance void .ctor(int32 gpioChip, valuetype System.Device.Gpio.Drivers.LibGpiodDriverVersion driverVersion) cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.LibGpiodDriver.#ctor(System.Int32,System.Device.Gpio.Drivers.LibGpiodDriverVersion)" />
+      <MemberSignature Language="VB.NET" Value="Public Sub New (gpioChip As Integer, driverVersion As LibGpiodDriverVersion)" />
+      <MemberSignature Language="F#" Value="new System.Device.Gpio.Drivers.LibGpiodDriver : int * System.Device.Gpio.Drivers.LibGpiodDriverVersion -&gt; System.Device.Gpio.Drivers.LibGpiodDriver" Usage="new System.Device.Gpio.Drivers.LibGpiodDriver (gpioChip, driverVersion)" />
+      <MemberType>Constructor</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <Parameters>
+        <Parameter Name="gpioChip" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-latest" />
+        <Parameter Name="driverVersion" Type="System.Device.Gpio.Drivers.LibGpiodDriverVersion" Index="1" FrameworkAlternate="iot-dotnet-latest" />
+      </Parameters>
+      <Docs>
+        <param name="gpioChip">The number of the GPIO chip to drive</param>
+        <param name="driverVersion">Version of the libgpiod driver to create</param>
+        <summary>
+            Creates an instance of the LigGpiodDriver that targets specific version/s of libgpiod
+            <see cref="F:System.Device.Gpio.Drivers.LibGpiodDriverVersion.V1" /> supports libgpiod.so.1.x to libgpiod.so.2.x
+            and <see cref="F:System.Device.Gpio.Drivers.LibGpiodDriverVersion.V2" /> supports libgpiod.so.3.x
+            </summary>
+        <remarks>Alternatively, specify the environment variable DOTNET_IOT_LIBGPIOD_DRIVER_VERSION, see documentation</remarks>
       </Docs>
     </Member>
     <Member MemberName="AddCallbackForPinValueChangedEvent">
@@ -79,7 +108,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -116,7 +145,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -149,7 +178,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -183,7 +212,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -196,6 +225,30 @@
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
         <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="GetAvailableVersions">
+      <MemberSignature Language="C#" Value="public static System.Device.Gpio.Drivers.LibGpiodDriverVersion[] GetAvailableVersions ();" />
+      <MemberSignature Language="ILAsm" Value=".method public static hidebysig valuetype System.Device.Gpio.Drivers.LibGpiodDriverVersion[] GetAvailableVersions() cil managed" />
+      <MemberSignature Language="DocId" Value="M:System.Device.Gpio.Drivers.LibGpiodDriver.GetAvailableVersions" />
+      <MemberSignature Language="VB.NET" Value="Public Shared Function GetAvailableVersions () As LibGpiodDriverVersion()" />
+      <MemberSignature Language="F#" Value="static member GetAvailableVersions : unit -&gt; System.Device.Gpio.Drivers.LibGpiodDriverVersion[]" Usage="System.Device.Gpio.Drivers.LibGpiodDriver.GetAvailableVersions " />
+      <MemberType>Method</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.Drivers.LibGpiodDriverVersion[]</ReturnType>
+      </ReturnValue>
+      <Parameters />
+      <Docs>
+        <summary>
+            A collection of driver versions that correspond to the installed versions of libgpiod on this system. Each driver is dependent
+            on specific libgpiod version/s. If the collection is empty, it indicates that libgpiod might not be installed or could not be detected.
+            </summary>
+        <returns>To be added.</returns>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="GetPinMode">
@@ -216,7 +269,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Gpio.PinMode</ReturnType>
@@ -250,7 +303,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Boolean</ReturnType>
@@ -286,7 +339,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -319,7 +372,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Int32</ReturnType>
@@ -340,7 +393,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Device.Gpio</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.ComponentInformation</ReturnType>
@@ -371,7 +424,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Gpio.PinValue</ReturnType>
@@ -405,7 +458,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -440,7 +493,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -470,15 +523,15 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
       </ReturnValue>
       <Parameters>
-        <Parameter Name="pinNumber" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest" />
-        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" Index="1" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest" />
-        <Parameter Name="initialValue" Type="System.Device.Gpio.PinValue" Index="2" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest" />
+        <Parameter Name="pinNumber" Type="System.Int32" Index="0" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest;iot-dotnet-2.2" />
+        <Parameter Name="mode" Type="System.Device.Gpio.PinMode" Index="1" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest;iot-dotnet-2.2" />
+        <Parameter Name="initialValue" Type="System.Device.Gpio.PinValue" Index="2" FrameworkAlternate="iot-dotnet-1.5;iot-dotnet-2.0;iot-dotnet-2.1;iot-dotnet-latest;iot-dotnet-2.2" />
       </Parameters>
       <Docs>
         <param name="pinNumber">To be added.</param>
@@ -498,7 +551,7 @@
       <MemberType>Method</MemberType>
       <AssemblyInfo>
         <AssemblyName>System.Device.Gpio</AssemblyName>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
@@ -511,6 +564,28 @@
         <summary>To be added.</summary>
         <remarks>To be added.</remarks>
         <inheritdoc />
+      </Docs>
+    </Member>
+    <Member MemberName="Version">
+      <MemberSignature Language="C#" Value="public System.Device.Gpio.Drivers.LibGpiodDriverVersion Version { get; protected set; }" />
+      <MemberSignature Language="ILAsm" Value=".property instance valuetype System.Device.Gpio.Drivers.LibGpiodDriverVersion Version" />
+      <MemberSignature Language="DocId" Value="P:System.Device.Gpio.Drivers.LibGpiodDriver.Version" />
+      <MemberSignature Language="VB.NET" Value="Public Property Version As LibGpiodDriverVersion" />
+      <MemberSignature Language="F#" Value="member this.Version : System.Device.Gpio.Drivers.LibGpiodDriverVersion with get, set" Usage="System.Device.Gpio.Drivers.LibGpiodDriver.Version" />
+      <MemberType>Property</MemberType>
+      <AssemblyInfo>
+        <AssemblyName>System.Device.Gpio</AssemblyName>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
+      </AssemblyInfo>
+      <ReturnValue>
+        <ReturnType>System.Device.Gpio.Drivers.LibGpiodDriverVersion</ReturnType>
+      </ReturnValue>
+      <Docs>
+        <summary>
+            Version of the libgpiod driver
+            </summary>
+        <value>To be added.</value>
+        <remarks>To be added.</remarks>
       </Docs>
     </Member>
     <Member MemberName="WaitForEvent">
@@ -531,7 +606,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Device.Gpio.WaitForEventResult</ReturnType>
@@ -569,7 +644,7 @@
         <AssemblyVersion>2.0.0.0</AssemblyVersion>
         <AssemblyVersion>2.1.0.0</AssemblyVersion>
         <AssemblyVersion>2.2.0.0</AssemblyVersion>
-        <AssemblyVersion>3.0.0.0</AssemblyVersion>
+        <AssemblyVersion>3.2.0.0</AssemblyVersion>
       </AssemblyInfo>
       <ReturnValue>
         <ReturnType>System.Void</ReturnType>
